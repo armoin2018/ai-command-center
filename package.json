@@ -1,0 +1,693 @@
+{
+  "name": "ai-command-center",
+  "displayName": "AI Command Center",
+  "description": "Centralize AI-powered development workflows with integrated planning, instruction management, and external service integrations",
+  "version": "1.0.39",
+  "publisher": "ai-command-center",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Notebooks"
+  ],
+  "keywords": [
+    "planning",
+    "epic",
+    "story",
+    "task",
+    "jira",
+    "ai",
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armoin2018/ai-command-center"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "aicc.createEpic",
+        "title": "AI Command Center: Create Epic"
+      },
+      {
+        "command": "aicc.createStory",
+        "title": "AI Command Center: Create Story"
+      },
+      {
+        "command": "aicc.createTask",
+        "title": "AI Command Center: Create Task"
+      },
+      {
+        "command": "aicc.openPlanningPanel",
+        "title": "AI Command Center: Open Planning Panel"
+      },
+      {
+        "command": "aicc.exportToJira",
+        "title": "AI Command Center: Export to Jira"
+      },
+      {
+        "command": "aicc.config.validate",
+        "title": "AI Command Center: Validate Configuration"
+      },
+      {
+        "command": "aicc.config.showHealth",
+        "title": "AI Command Center: Show Configuration Health"
+      },
+      {
+        "command": "aicc.config.applyPreset",
+        "title": "AI Command Center: Apply Configuration Preset"
+      },
+      {
+        "command": "aicc.config.showRecommendations",
+        "title": "AI Command Center: Show Configuration Recommendations"
+      },
+      {
+        "command": "aicc.config.exportConfig",
+        "title": "AI Command Center: Export Configuration"
+      },
+      {
+        "command": "aicc.config.reload",
+        "title": "AI Command Center: Reload Configuration"
+      },
+      {
+        "command": "aicc.config.comparePresets",
+        "title": "AI Command Center: Compare Configuration Presets"
+      },
+      {
+        "command": "aicc.config.showVersion",
+        "title": "AI Command Center: Show Configuration Version"
+      },
+      {
+        "command": "aicc.config.showHealthUI",
+        "title": "AI Command Center: Show Configuration Health (Visual)"
+      },
+      {
+        "command": "aicc.config.showHierarchy",
+        "title": "AI Command Center: Show Configuration Hierarchy"
+      },
+      {
+        "command": "aicc.config.initializeHierarchy",
+        "title": "AI Command Center: Initialize Configuration Hierarchy"
+      },
+      {
+        "command": "aicc.config.editLevel",
+        "title": "AI Command Center: Edit Configuration Level"
+      },
+      {
+        "command": "aicc.init.execute",
+        "title": "AI Command Center: Execute Init Operations"
+      },
+      {
+        "command": "aicc.init.createExample",
+        "title": "AI Command Center: Create Example Init Map"
+      },
+      {
+        "command": "aicc.init.validate",
+        "title": "AI Command Center: Validate Init Map"
+      },
+      {
+        "command": "aicc.init.undo",
+        "title": "AI Command Center: Undo Last Init Operation"
+      },
+      {
+        "command": "aicc.init.showLog",
+        "title": "AI Command Center: Show Init Operations Log"
+      },
+      {
+        "command": "aicc.fileProtection.showLogs",
+        "title": "AI Command Center: Show File Operation Logs"
+      },
+      {
+        "command": "aicc.fileProtection.listBackups",
+        "title": "AI Command Center: List File Backups"
+      },
+      {
+        "command": "aicc.fileProtection.restoreBackup",
+        "title": "AI Command Center: Restore from Backup"
+      },
+      {
+        "command": "aicc.fileProtection.configure",
+        "title": "AI Command Center: Configure File Protection"
+      },
+      {
+        "command": "aicc.undo.showHistory",
+        "title": "AI Command Center: Show Undo History"
+      },
+      {
+        "command": "aicc.undo.last",
+        "title": "AI Command Center: Undo Last Operation"
+      },
+      {
+        "command": "aicc.undo.panel",
+        "title": "AI Command Center: Open Undo Panel"
+      },
+      {
+        "command": "aicc.undo.since",
+        "title": "AI Command Center: Undo Since Timestamp"
+      },
+      {
+        "command": "aicc.mermaid.preview",
+        "title": "AI Command Center: Preview Mermaid Diagram"
+      },
+      {
+        "command": "aicc.mermaid.previewSelection",
+        "title": "AI Command Center: Preview Selected Mermaid Code"
+      },
+      {
+        "command": "aicc.convertPlantUML",
+        "title": "AI Command Center: Convert PlantUML to Mermaid"
+      },
+      {
+        "command": "aicc.convertPlantUMLSelection",
+        "title": "AI Command Center: Convert Selected PlantUML to Mermaid"
+      },
+      {
+        "command": "aicc.planning.useTemplate",
+        "title": "AI Command Center: Use Planning Template"
+      },
+      {
+        "command": "aicc.planning.listTemplates",
+        "title": "AI Command Center: List Planning Templates"
+      },
+      {
+        "command": "aicc.search.global",
+        "title": "AI Command Center: Global Search"
+      },
+      {
+        "command": "aicc.search.byType",
+        "title": "AI Command Center: Search by Type"
+      },
+      {
+        "command": "aicc.mcp.start",
+        "title": "AI Command Center: Start MCP Server"
+      },
+      {
+        "command": "aicc.mcp.stop",
+        "title": "AI Command Center: Stop MCP Server"
+      },
+      {
+        "command": "aicc.mcp.restart",
+        "title": "AI Command Center: Restart MCP Server"
+      },
+      {
+        "command": "aicc.mcp.generateSSL",
+        "title": "AI Command Center: Generate SSL Certificate for MCP Server"
+      },
+      {
+        "command": "aicc.mcp.generateClaudeConfig",
+        "title": "AI Command Center: Generate Claude Desktop Config"
+      },
+      {
+        "command": "aicc.jira.initialize",
+        "title": "AI Command Center: Initialize Jira Integration"
+      },
+      {
+        "command": "aicc.jira.testConnection",
+        "title": "AI Command Center: Test Jira Connection"
+      },
+      {
+        "command": "aicc.jira.sync",
+        "title": "AI Command Center: Sync with Jira"
+      },
+      {
+        "command": "aicc.jira.syncPush",
+        "title": "AI Command Center: Push to Jira"
+      },
+      {
+        "command": "aicc.jira.syncPull",
+        "title": "AI Command Center: Pull from Jira"
+      },
+      {
+        "command": "aicc.jira.configure",
+        "title": "AI Command Center: Configure Jira Integration"
+      },
+      {
+        "command": "aicc.jira.viewSyncStatus",
+        "title": "AI Command Center: View Jira Sync Status"
+      },
+      {
+        "command": "aicc.jira.viewMappings",
+        "title": "AI Command Center: View Jira Mappings"
+      },
+      {
+        "command": "aicc.jira.resolveConflicts",
+        "title": "AI Command Center: Resolve Jira Conflicts"
+      },
+      {
+        "command": "aicc.jira.disable",
+        "title": "AI Command Center: Disable Jira Integration"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aicc-sidebar",
+          "title": "AI Command Center",
+          "icon": "$(rocket)"
+        }
+      ]
+    },
+    "views": {
+      "aicc-sidebar": [
+        {
+          "id": "aicc.planningTreeView",
+          "name": "Planning Tree",
+          "icon": "$(folder-library)",
+          "contextualTitle": "AI Command Center"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "aicc.openPlanningPanel",
+          "when": "view == aicc.planningTreeView",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "aicc.createEpic",
+        "key": "cmd+shift+e",
+        "mac": "cmd+shift+e",
+        "win": "ctrl+shift+e",
+        "linux": "ctrl+shift+e",
+        "when": "editorTextFocus || !editorFocus"
+      },
+      {
+        "command": "aicc.createStory",
+        "key": "cmd+shift+s",
+        "mac": "cmd+shift+s",
+        "win": "ctrl+shift+s",
+        "linux": "ctrl+shift+s",
+        "when": "editorTextFocus || !editorFocus"
+      },
+      {
+        "command": "aicc.createTask",
+        "key": "cmd+shift+t",
+        "mac": "cmd+shift+t",
+        "win": "ctrl+shift+t",
+        "linux": "ctrl+shift+t",
+        "when": "editorTextFocus || !editorFocus"
+      },
+      {
+        "command": "aicc.openPlanningPanel",
+        "key": "cmd+shift+p",
+        "mac": "cmd+shift+p",
+        "win": "ctrl+shift+p",
+        "linux": "ctrl+shift+p",
+        "when": "!editorFocus"
+      },
+      {
+        "command": "aicc.search.global",
+        "key": "cmd+shift+f",
+        "mac": "cmd+shift+f",
+        "win": "ctrl+shift+f",
+        "linux": "ctrl+shift+f",
+        "when": "editorTextFocus || !editorFocus"
+      }
+    ],
+    "configuration": {
+      "title": "AI Command Center",
+      "properties": {
+        "aicc.planPath": {
+          "type": "string",
+          "default": ".project/plan",
+          "description": "Directory path for planning artifacts (relative to workspace root)",
+          "order": 1
+        },
+        "aicc.autoSaveInterval": {
+          "type": "number",
+          "default": 30,
+          "minimum": 0,
+          "description": "Auto-save interval in seconds (0 = disabled)",
+          "order": 2
+        },
+        "aicc.storyPointScale": {
+          "type": "string",
+          "default": "fibonacci",
+          "enum": [
+            "fibonacci",
+            "linear"
+          ],
+          "enumDescriptions": [
+            "Fibonacci scale: 1, 2, 3, 5, 8, 13, 21",
+            "Linear scale: 1, 2, 3, 4, 5, 6, 7, 8"
+          ],
+          "description": "Story point estimation scale",
+          "order": 3
+        },
+        "aicc.sprintDurationWeeks": {
+          "type": "number",
+          "default": 2,
+          "minimum": 1,
+          "maximum": 4,
+          "description": "Default sprint duration in weeks",
+          "order": 4
+        },
+        "aicc.logLevel": {
+          "type": "string",
+          "default": "info",
+          "enum": [
+            "debug",
+            "info",
+            "warn",
+            "error"
+          ],
+          "enumDescriptions": [
+            "Debug: Verbose logging for development",
+            "Info: General informational messages",
+            "Warn: Warning messages only",
+            "Error: Error messages only"
+          ],
+          "description": "Logging level for AI Command Center",
+          "order": 10
+        },
+        "aicc.fileLoggingEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable logging to file (in addition to Output Channel)",
+          "order": 11
+        },
+        "aicc.retentionDays": {
+          "type": "number",
+          "default": 7,
+          "minimum": 1,
+          "maximum": 30,
+          "description": "Log file retention period in days",
+          "order": 12
+        },
+        "aicc.maxFileSizeMB": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 50,
+          "description": "Maximum log file size in MB before rotation",
+          "order": 13
+        },
+        "aicc.jira.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Jira integration",
+          "order": 20
+        },
+        "aicc.jira.baseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Jira Cloud base URL (e.g., https://your-domain.atlassian.net)",
+          "order": 21
+        },
+        "aicc.jira.email": {
+          "type": "string",
+          "default": "",
+          "description": "Jira account email for API authentication",
+          "order": 22
+        },
+        "aicc.jira.apiToken": {
+          "type": "string",
+          "default": "",
+          "description": "Jira API token for authentication (stored securely)",
+          "order": 23
+        },
+        "aicc.jira.projectKey": {
+          "type": "string",
+          "default": "",
+          "description": "Default Jira project key (e.g., PROJ)",
+          "order": 24
+        },
+        "aicc.jira.syncStrategy": {
+          "type": "string",
+          "default": "bidirectional",
+          "enum": [
+            "push",
+            "pull",
+            "bidirectional"
+          ],
+          "enumDescriptions": [
+            "Push: Only push local changes to Jira",
+            "Pull: Only pull Jira changes to local",
+            "Bidirectional: Sync both ways with conflict detection"
+          ],
+          "description": "Jira synchronization strategy",
+          "order": 25
+        },
+        "aicc.jira.conflictResolution": {
+          "type": "string",
+          "default": "manual",
+          "enum": [
+            "local-wins",
+            "remote-wins",
+            "manual",
+            "merge"
+          ],
+          "enumDescriptions": [
+            "Local Wins: Always keep local changes",
+            "Remote Wins: Always keep Jira changes",
+            "Manual: Prompt user to resolve conflicts",
+            "Merge: Attempt automatic merge"
+          ],
+          "description": "Conflict resolution strategy",
+          "order": 26
+        },
+        "aicc.jira.autoSync": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable automatic synchronization with Jira",
+          "order": 27
+        },
+        "aicc.jira.syncInterval": {
+          "type": "number",
+          "default": 15,
+          "minimum": 5,
+          "maximum": 120,
+          "description": "Auto-sync interval in minutes (only when autoSync is enabled)",
+          "order": 28
+        },
+        "aicc.jira.webhookEnabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Jira webhook for real-time updates",
+          "order": 29
+        },
+        "aicc.confluence.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Confluence integration",
+          "order": 30
+        },
+        "aicc.confluence.baseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Confluence base URL (e.g., https://your-domain.atlassian.net/wiki)",
+          "order": 31
+        },
+        "aicc.mcp.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP (Model Context Protocol) server",
+          "order": 40
+        },
+        "aicc.mcp.transport": {
+          "type": "string",
+          "default": "stdio",
+          "enum": [
+            "stdio",
+            "http",
+            "https",
+            "websocket"
+          ],
+          "enumDescriptions": [
+            "Standard I/O: For local AI agents (Claude Desktop, etc.)",
+            "HTTP: For remote AI agents and web-based connections (unencrypted)",
+            "HTTPS: For remote AI agents with SSL/TLS encryption",
+            "WebSocket: For real-time bidirectional communication"
+          ],
+          "description": "MCP server transport protocol",
+          "order": 41
+        },
+        "aicc.mcp.port": {
+          "type": "number",
+          "default": 3000,
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "Port number for HTTP transport (only used when transport is 'http')",
+          "order": 42
+        },
+        "aicc.mcp.logging.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP server logging",
+          "order": 43
+        },
+        "aicc.mcp.logging.level": {
+          "type": "string",
+          "default": "info",
+          "enum": [
+            "debug",
+            "info",
+            "warn",
+            "error"
+          ],
+          "enumDescriptions": [
+            "Debug: Verbose MCP server logging",
+            "Info: General MCP informational messages",
+            "Warn: MCP warning messages only",
+            "Error: MCP error messages only"
+          ],
+          "description": "MCP server log level",
+          "order": 44
+        },
+        "aicc.mcp.tools.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP tools (create, update, delete, search operations)",
+          "order": 45
+        },
+        "aicc.mcp.tools.timeout": {
+          "type": "number",
+          "default": 30000,
+          "minimum": 1000,
+          "maximum": 60000,
+          "description": "Tool execution timeout in milliseconds",
+          "order": 46
+        },
+        "aicc.mcp.resources.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP resources (planning tree, epic details, etc.)",
+          "order": 47
+        },
+        "aicc.mcp.resources.cacheSize": {
+          "type": "number",
+          "default": 100,
+          "minimum": 0,
+          "maximum": 1000,
+          "description": "Number of resources to cache for faster access",
+          "order": 48
+        },
+        "aicc.mcp.prompts.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP prompts (epic creation, sprint planning, etc.)",
+          "order": 49
+        },
+        "aicc.mcp.ssl.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable SSL/TLS for MCP server (auto-enables when transport is 'https')",
+          "order": 50
+        },
+        "aicc.mcp.ssl.certPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to SSL certificate file (leave empty to auto-generate self-signed certificate)",
+          "order": 51
+        },
+        "aicc.mcp.ssl.keyPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to SSL private key file (leave empty to auto-generate)",
+          "order": 52
+        },
+        "aicc.mcp.localhostOnly": {
+          "type": "boolean",
+          "default": true,
+          "description": "Restrict MCP server to localhost connections only (recommended for security)",
+          "order": 53
+        },
+        "aicc.mcp.host": {
+          "type": "string",
+          "default": "localhost",
+          "description": "Hostname or IP address to bind MCP server (requires aicc.mcp.localhostOnly to be false for non-localhost)",
+          "order": 54
+        },
+        "aicc.mcp.websocket.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable WebSocket transport for real-time bidirectional communication",
+          "order": 55
+        },
+        "aicc.mcp.websocket.port": {
+          "type": "number",
+          "default": 3001,
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "Port number for WebSocket server (only used when transport is 'websocket')",
+          "order": 56
+        },
+        "aicc.ui.showWelcomeMessage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show welcome message on extension activation",
+          "order": 57
+        },
+        "aicc.ui.theme": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "light",
+            "dark",
+            "auto"
+          ],
+          "enumDescriptions": [
+            "Light theme",
+            "Dark theme",
+            "Auto: Match VS Code theme"
+          ],
+          "description": "UI theme for planning panel",
+          "order": 51
+        },
+        "aicc.ui.confirmDelete": {
+          "type": "boolean",
+          "default": true,
+          "description": "Confirm destructive actions (delete epic/story/task)",
+          "order": 52
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "npm run compile:extension && npm run compile:webview && npm run copy:defaults",
+    "compile:extension": "webpack --mode production --config webpack.extension.config.js",
+    "compile:extension:dev": "webpack --mode development --config webpack.extension.config.js",
+    "compile:webview": "cd webview && npm run build",
+    "copy:defaults": "mkdir -p dist/defaults && cp src/defaults/aicc.yaml dist/defaults/ 2>/dev/null || true",
+    "watch": "webpack --watch --mode development --config webpack.extension.config.js",
+    "watch:webview": "cd webview && npm run watch",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/runTest.js",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package",
+    "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.85.0",
+    "@types/winston": "^2.4.4",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.54.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "axios": "^1.6.5",
+    "js-yaml": "^4.1.1",
+    "winston": "^3.19.0",
+    "ws": "^8.16.0"
+  }
+}
