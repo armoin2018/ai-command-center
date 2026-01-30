@@ -1,0 +1,85 @@
+<!-- Story List Component -->
+<div class="story-list-container">
+    <div class="story-list-header">
+        <h4 class="story-list-title">
+            <i class="bi bi-book"></i>
+            Stories
+        </h4>
+        <div class="story-list-actions">
+            <button class="btn btn-sm btn-primary story-add">
+                <i class="bi bi-plus-circle"></i>
+                Add Story
+            </button>
+        </div>
+    </div>
+    
+    <div class="story-list-filters mb-3">
+        <div class="input-group input-group-sm">
+            <span class="input-group-text">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control story-search" placeholder="Search stories...">
+        </div>
+        <select class="form-select form-select-sm story-filter-status mt-2">
+            <option value="">All Statuses</option>
+            <option value="todo">To Do</option>
+            <option value="ready">Ready</option>
+            <option value="in-progress">In Progress</option>
+            <option value="review">Review</option>
+            <option value="done">Done</option>
+        </select>
+    </div>
+    
+    <div class="story-list-loading d-none">
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <span>Loading stories...</span>
+    </div>
+    
+    <div class="story-list-error alert alert-danger d-none"></div>
+    
+    <div class="story-list-content">
+        <!-- Story items will be inserted here -->
+    </div>
+    
+    <div class="story-list-empty text-center text-muted py-4 d-none">
+        <i class="bi bi-inbox fs-1"></i>
+        <p class="mt-2">No stories found</p>
+    </div>
+</div>
+
+<!-- Story Item Template -->
+<template id="story-item-template">
+    <div class="story-item card mb-2" data-story-id="">
+        <div class="card-body">
+            <div class="story-item-header">
+                <h6 class="story-item-title mb-1">
+                    <span class="story-item-id-prefix"></span>
+                    <span class="story-item-title-text"></span>
+                </h6>
+                <span class="story-status badge"></span>
+            </div>
+            <p class="story-item-description small text-muted mb-2"></p>
+            <div class="story-item-footer">
+                <div class="story-item-meta">
+                    <span class="badge bg-secondary story-tasks-badge">
+                        <i class="bi bi-check-square"></i>
+                        <span class="story-tasks-count">0</span> tasks
+                    </span>
+                </div>
+                <div class="story-item-actions">
+                    <button class="btn btn-sm btn-link story-item-edit" title="Edit">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-link story-item-delete" title="Delete">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button class="btn btn-sm btn-link story-item-view" title="View">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

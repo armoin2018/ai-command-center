@@ -1,0 +1,133 @@
+/**
+ * Component Reference Styles
+ * 
+ * Styles for the component reference labels that help identify UI components.
+ * Enable via: Settings > AI Command Center > Show Component References
+ */
+
+/* Wrapper for components with reference labels */
+.component-ref-wrapper {
+    position: relative;
+}
+
+/* Reference label */
+.component-ref-label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    background-color: rgba(255, 193, 7, 0.95);
+    color: #1a1a1a;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+    border-radius: 3px;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: help;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.component-ref-label:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 193, 7, 1);
+}
+
+/* Reference badge */
+.ref-badge {
+    background-color: #1a1a1a;
+    color: #ffc107;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Reference ID */
+.ref-id {
+    letter-spacing: 0.3px;
+}
+
+/* Position variants */
+.ref-position-top-left {
+    top: 2px;
+    left: 2px;
+}
+
+.ref-position-top-right {
+    top: 2px;
+    right: 2px;
+}
+
+.ref-position-bottom-left {
+    bottom: 2px;
+    left: 2px;
+}
+
+.ref-position-bottom-right {
+    bottom: 2px;
+    right: 2px;
+}
+
+.ref-position-top-center {
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ref-position-top-center:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Inline reference badge (for smaller elements) */
+.inline-ref-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 4px;
+    margin-left: 4px;
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #1a1a1a;
+    font-size: 9px;
+    font-weight: 600;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    border-radius: 2px;
+    cursor: help;
+    vertical-align: middle;
+}
+
+.inline-ref-badge:hover {
+    background-color: rgba(255, 193, 7, 1);
+}
+
+/* Dark theme adjustments */
+body.theme-dark .component-ref-label,
+body.theme-detected-dark .component-ref-label {
+    background-color: rgba(255, 193, 7, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-dark .inline-ref-badge,
+body.theme-detected-dark .inline-ref-badge {
+    background-color: rgba(255, 193, 7, 0.85);
+}
+
+/* High contrast theme */
+body.theme-high-contrast .component-ref-label {
+    background-color: #ffff00;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+body.theme-high-contrast .ref-badge {
+    background-color: #000000;
+    color: #ffff00;
+}
+
+body.theme-high-contrast .inline-ref-badge {
+    background-color: #ffff00;
+    color: #000000;
+    border: 1px solid #000000;
+}

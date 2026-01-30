@@ -1,0 +1,205 @@
+/**
+ * Collaborative Editing Indicators Styles
+ */
+
+.collaborative-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    background-color: var(--vscode-editor-background);
+    border-left: 3px solid var(--vscode-focusBorder);
+    font-size: 12px;
+}
+
+.lock-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--vscode-editorWarning-foreground);
+}
+
+.lock-icon {
+    font-size: 14px;
+}
+
+.lock-text {
+    font-weight: 500;
+}
+
+.concurrent-editors {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--vscode-editorInfo-foreground);
+}
+
+.editor-icon {
+    font-size: 14px;
+}
+
+.editor-text {
+    flex: 1;
+}
+
+.join-edit-btn {
+    padding: 2px 8px;
+    font-size: 11px;
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.join-edit-btn:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.editing-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--vscode-testing-iconPassed);
+}
+
+.status-icon {
+    font-size: 12px;
+}
+
+.status-text {
+    font-style: italic;
+}
+
+/* Conflict Dialog */
+.conflict-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.conflict-dialog {
+    background-color: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+}
+
+.conflict-dialog-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.conflict-dialog-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--vscode-editorWarning-foreground);
+}
+
+.conflict-dialog-body {
+    padding: 16px;
+}
+
+.conflict-dialog-body p {
+    margin: 0 0 12px 0;
+    color: var(--vscode-foreground);
+}
+
+.editor-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.editor-list li {
+    padding: 6px 12px;
+    background-color: var(--vscode-list-hoverBackground);
+    margin-bottom: 4px;
+    border-radius: 3px;
+    font-family: var(--vscode-editor-font-family);
+}
+
+.conflict-warning {
+    padding: 12px;
+    background-color: var(--vscode-inputValidation-warningBackground);
+    border-left: 3px solid var(--vscode-editorWarning-foreground);
+    border-radius: 3px;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.conflict-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+    border-top: 1px solid var(--vscode-panel-border);
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.btn-primary:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.btn-secondary {
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+}
+
+.btn-secondary:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+/* Pulse animation for active editors */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.concurrent-editors .editor-icon {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .conflict-dialog {
+        max-width: 95%;
+    }
+
+    .conflict-dialog-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}

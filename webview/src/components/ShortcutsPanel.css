@@ -1,0 +1,184 @@
+/* Shortcuts Panel Styles */
+
+.shortcuts-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.shortcuts-panel {
+    background-color: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.shortcuts-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.shortcuts-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--vscode-foreground);
+}
+
+.shortcuts-close {
+    background: none;
+    border: none;
+    color: var(--vscode-foreground);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.shortcuts-close:hover {
+    opacity: 1;
+}
+
+.shortcuts-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.shortcuts-category {
+    margin-bottom: 32px;
+}
+
+.shortcuts-category:last-child {
+    margin-bottom: 0;
+}
+
+.shortcuts-category-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--vscode-descriptionForeground);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px 0;
+}
+
+.shortcuts-list {
+    display: grid;
+    gap: 8px;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.shortcut-item:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.shortcut-key {
+    display: inline-block;
+    min-width: 140px;
+    padding: 4px 8px;
+    background-color: var(--vscode-keybindingLabel-background);
+    border: 1px solid var(--vscode-keybindingLabel-border);
+    border-radius: 4px;
+    font-family: var(--vscode-editor-font-family);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--vscode-keybindingLabel-foreground);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut-description {
+    flex: 1;
+    font-size: 14px;
+    color: var(--vscode-foreground);
+}
+
+.shortcuts-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--vscode-panel-border);
+    background-color: var(--vscode-editorWidget-background);
+}
+
+.shortcuts-tip {
+    margin: 0;
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    text-align: center;
+}
+
+.shortcuts-tip kbd {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: var(--vscode-keybindingLabel-background);
+    border: 1px solid var(--vscode-keybindingLabel-border);
+    border-radius: 3px;
+    font-family: var(--vscode-editor-font-family);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--vscode-keybindingLabel-foreground);
+}
+
+/* Scrollbar styling */
+.shortcuts-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.shortcuts-content::-webkit-scrollbar-track {
+    background: var(--vscode-editor-background);
+}
+
+.shortcuts-content::-webkit-scrollbar-thumb {
+    background: var(--vscode-scrollbarSlider-background);
+    border-radius: 5px;
+}
+
+.shortcuts-content::-webkit-scrollbar-thumb:hover {
+    background: var(--vscode-scrollbarSlider-hoverBackground);
+}

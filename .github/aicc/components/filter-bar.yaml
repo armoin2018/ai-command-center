@@ -1,0 +1,128 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: filter-bar
+  name: Filter Bar
+  description: Search input with toggle filters for case sensitivity and refresh
+  category: Input
+  tags: [filter, search, input, toolbar]
+  version: 1.0.0
+spec:
+  props:
+    placeholder:
+      type: string
+      default: "Filter by ID, title, or description (regex)"
+      description: Input placeholder text
+    value:
+      type: string
+      default: ""
+      description: Current filter value
+    showCaseToggle:
+      type: boolean
+      default: true
+      description: Show case insensitive toggle button
+    showRefresh:
+      type: boolean
+      default: true
+      description: Show refresh button
+    caseInsensitive:
+      type: boolean
+      default: true
+      description: Initial case sensitivity state
+  
+  events:
+    - name: filter-input
+      description: Emitted when filter text changes
+      payload:
+        value: string
+    - name: case-toggle
+      description: Emitted when case sensitivity toggled
+      payload:
+        caseInsensitive: boolean
+    - name: refresh
+      description: Emitted when refresh button clicked
+  
+  template: |
+    <div class="filter-bar">
+      <input 
+        type="text" 
+        class="filter-input" 
+        placeholder="{{placeholder}}" 
+        value="{{value}}" 
+        oninput="onFilterInput(this.value)">
+      {{#if showCaseToggle}}
+      <button 
+        id="case-toggle" 
+        class="filter-toggle {{#if caseInsensitive}}active{{/if}}" 
+        onclick="toggleCaseInsensitive()" 
+        title="Case Insensitive">
+        <span class="codicon codicon-case-sensitive"></span>
+      </button>
+      {{/if}}
+      {{#if showRefresh}}
+      <button 
+        class="filter-toggle" 
+        onclick="refresh()" 
+        title="Refresh">
+        <span class="codicon codicon-refresh"></span>
+      </button>
+      {{/if}}
+    </div>
+  
+  styles: |
+    .filter-bar {
+      display: flex;
+      gap: 0;
+      margin-bottom: 12px;
+      align-items: stretch;
+    }
+    .filter-input {
+      flex: 1;
+      padding: 6px 10px;
+      border: 1px solid var(--vscode-input-border);
+      background: var(--vscode-input-background);
+      color: var(--vscode-input-foreground);
+      border-radius: 4px 0 0 4px;
+      font-size: 12px;
+      border-right: none;
+    }
+    .filter-input:focus {
+      outline: 1px solid var(--vscode-focusBorder);
+    }
+    .filter-toggle {
+      padding: 6px 10px;
+      border: 1px solid var(--vscode-input-border);
+      background: var(--vscode-input-background);
+      color: var(--vscode-foreground);
+      border-radius: 0;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+    }
+    .filter-toggle:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+    .filter-toggle:hover {
+      background: var(--vscode-list-hoverBackground);
+    }
+    .filter-toggle.active {
+      background: var(--vscode-button-background);
+      color: var(--vscode-button-foreground);
+    }
+  
+  examples:
+    - name: Basic Filter
+      description: Simple filter with all features
+      props:
+        placeholder: "Search items..."
+        showCaseToggle: true
+        showRefresh: true
+      code: |
+        <filter-bar 
+          placeholder="Search items..."
+          showCaseToggle="true"
+          showRefresh="true">
+        </filter-bar>

@@ -1,0 +1,136 @@
+# Default AI Kit Configuration
+# Contains the default repositories for AI Kits
+
+version: "1.0.0"
+
+# Default repository settings
+defaults:
+  branch: dev
+  autoUpdate: false
+  checkInterval: 86400 # seconds (24 hours)
+
+# Pre-configured AI Kit repositories
+repositories:
+  # Official AI-ley Development Toolkit
+  - id: ai-ley-official
+    name: AI-ley Official
+    description: Official AI-ley development toolkit with instructions, personas, and workflows
+    url: https://github.com/armoin2018/ai-ley
+    branch: dev
+    enabled: true
+    featured: true
+    categories:
+      - instructions
+      - personas
+      - workflows
+      - templates
+    tags:
+      - official
+      - core
+      - development
+
+# Agent system definitions
+agenticSystems:
+  - id: generic
+    name: Generic (Manual)
+    description: Generic configuration for manual installation
+    icon: folder
+    enabled: true
+
+  - id: githubCopilot
+    name: GitHub Copilot
+    description: Configuration for GitHub Copilot agent
+    icon: github
+    enabled: true
+    configPath: .github/copilot
+
+  - id: claude
+    name: Claude (Anthropic)
+    description: Configuration for Claude/Anthropic agents
+    icon: robot
+    enabled: true
+    configPath: .claude
+
+  - id: gemini
+    name: Gemini (Google)
+    description: Configuration for Google Gemini agents
+    icon: sparkle
+    enabled: true
+    configPath: .gemini
+
+  - id: cursor
+    name: Cursor
+    description: Configuration for Cursor AI
+    icon: edit
+    enabled: true
+    configPath: .cursor
+
+  - id: windsurf
+    name: Windsurf
+    description: Configuration for Windsurf AI
+    icon: cloud
+    enabled: true
+    configPath: .windsurf
+
+  - id: cline
+    name: Cline
+    description: Configuration for Cline AI
+    icon: terminal
+    enabled: true
+    configPath: .cline
+
+  - id: roo
+    name: Roo
+    description: Configuration for Roo AI
+    icon: squirrel
+    enabled: true
+    configPath: .roo
+
+  - id: codex
+    name: Codex (OpenAI)
+    description: Configuration for OpenAI Codex
+    icon: code
+    enabled: true
+    configPath: .codex
+
+  - id: opencode
+    name: OpenCode
+    description: Configuration for OpenCode AI
+    icon: bracket
+    enabled: true
+    configPath: .opencode
+
+  - id: metis
+    name: Metis
+    description: Configuration for Metis AI
+    icon: lightbulb
+    enabled: true
+    configPath: .metis
+
+# Installation settings
+installation:
+  # Default installation target
+  targetPath: .github/ai-ley
+  
+  # Backup existing files before overwriting
+  backup: true
+  
+  # Merge strategy for conflicts
+  mergeStrategy: prompt # prompt, overwrite, skip, merge
+  
+  # File patterns to always exclude from installation
+  excludePatterns:
+    - "*.bak"
+    - ".git/**"
+    - ".gitignore"
+    - "node_modules/**"
+    - ".DS_Store"
+
+# UI settings for the AI Kit Loader panel
+ui:
+  showCategories: true
+  showDescriptions: true
+  showVersions: true
+  confirmBeforeInstall: true
+  confirmBeforeUninstall: true
+  showProgress: true

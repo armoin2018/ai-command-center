@@ -1,0 +1,173 @@
+/* Print Stylesheet for AI Command Center */
+/* Optimized for printing tree structures */
+
+@media print {
+    /* Hide non-essential UI elements */
+    .toolbar,
+    .filter-bar,
+    .settings-bar,
+    .shortcuts-panel,
+    .context-menu,
+    .details-panel {
+        display: none !important;
+    }
+
+    /* Reset page layout */
+    body {
+        background: white;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10mm;
+    }
+
+    /* Optimize page breaks */
+    .tree-node {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .tree-node-content {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* Ensure tree structure is visible */
+    .tree-view-container {
+        width: 100%;
+        overflow: visible;
+    }
+
+    /* Collapse indicators become static text */
+    .tree-node-toggle {
+        display: none;
+    }
+
+    /* Show all nodes (expand all for printing) */
+    .tree-node.collapsed {
+        display: block;
+    }
+
+    /* Adjust indentation for print */
+    .tree-node {
+        margin-left: calc(var(--tree-indent, 0) * 15px);
+    }
+
+    /* Status badges - use borders instead of colors */
+    .tree-node-status {
+        border: 1px solid #333;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    /* Add page header */
+    @page {
+        margin: 15mm;
+        size: A4;
+        
+        @top-center {
+            content: "AI Command Center - Planning Tree";
+            font-weight: bold;
+            font-size: 12pt;
+        }
+        
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-size: 10pt;
+        }
+    }
+
+    /* First page header */
+    .print-header {
+        display: block !important;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .print-header h1 {
+        margin: 0;
+        font-size: 18pt;
+    }
+
+    .print-header .metadata {
+        margin-top: 5px;
+        font-size: 10pt;
+        color: #666;
+    }
+
+    /* Statistics summary for print */
+    .stats-panel {
+        display: block !important;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+
+    .stats-panel h3 {
+        margin: 0 0 10px 0;
+        font-size: 12pt;
+    }
+
+    /* Tree node styling for print */
+    .tree-node-content {
+        display: flex;
+        align-items: center;
+        padding: 4px 0;
+        font-size: 11pt;
+    }
+
+    .tree-node-icon {
+        margin-right: 5px;
+    }
+
+    .tree-node-name {
+        font-weight: 500;
+    }
+
+    .tree-node-metadata {
+        margin-left: 10px;
+    }
+
+    /* Simplify icons for print */
+    .tree-node-icon::before {
+        content: attr(data-type);
+    }
+
+    /* Remove background colors */
+    .tree-node.selected,
+    .tree-node:hover {
+        background: none;
+    }
+
+    /* Add subtle borders for hierarchy */
+    .tree-node[data-level="0"] {
+        border-left: 3px solid #000;
+        padding-left: 5px;
+    }
+
+    .tree-node[data-level="1"] {
+        border-left: 2px solid #666;
+        padding-left: 5px;
+    }
+
+    .tree-node[data-level="2"] {
+        border-left: 1px solid #999;
+        padding-left: 5px;
+    }
+
+    /* Footer with summary */
+    .print-footer {
+        display: block !important;
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        font-size: 9pt;
+        color: #666;
+    }
+}

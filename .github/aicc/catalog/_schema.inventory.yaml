@@ -1,0 +1,112 @@
+# AI Kit Inventory Schema
+# This file documents the schema for inventory.yaml files in AI Kit repositories
+# Location: .github/{{repo}}/inventory.yaml
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "aicc-inventory-v1"
+version: "1.0.0"
+
+# Inventory Metadata
+inventory:
+  name: string # Required: Human-readable name of this AI Kit
+  version: string # Required: Semantic version
+  description: string # Required: Description of what this kit provides
+  author: string # Optional: Author or organization
+  license: string # Optional: License type
+  homepage: string # Optional: URL to documentation
+  repository: string # Required: GitHub repository URL
+
+# Agent System Configurations
+# Maps folders in this repo to target locations for each agentic system
+agenticSystems:
+  type: array
+  items:
+    system:
+      id: string # Required: System identifier (must match predefined list)
+      name: string # Required: Human-readable name
+      description: string # Optional: Description of this system's configuration
+      enabled: boolean # Default: true
+      folderMappings:
+        type: array
+        items:
+          mapping:
+            source: string # Required: Source folder path in this repo
+            target: string # Required: Target folder path in workspace
+            description: string # Optional: Description of what this folder contains
+            overwrite: boolean # Default: false - Whether to overwrite existing files
+            merge: boolean # Default: true - Whether to merge with existing folder
+            filePatterns: # Optional: Glob patterns to include/exclude
+              include:
+                type: array
+                items: string
+                default: ["**/*"]
+              exclude:
+                type: array
+                items: string
+                default: []
+
+# Available System IDs (predefined)
+# - generic: Generic configuration (manual installation)
+# - githubCopilot: GitHub Copilot agent configuration
+# - claude: Claude/Anthropic agent configuration
+# - gemini: Google Gemini agent configuration
+# - cursor: Cursor AI agent configuration
+# - windsurf: Windsurf AI agent configuration
+# - cline: Cline AI agent configuration
+# - roo: Roo AI agent configuration
+# - codex: OpenAI Codex agent configuration
+# - opencode: OpenCode agent configuration
+# - metis: Metis AI agent configuration
+
+# Categories for organizing kit contents
+categories:
+  type: array
+  items:
+    category:
+      id: string # Required: Category identifier
+      name: string # Required: Display name
+      description: string # Optional: Category description
+      icon: string # Optional: Codicon icon name
+      order: number # Optional: Sort order
+
+# Kit Contents - Detailed inventory of what's included
+contents:
+  type: array
+  items:
+    item:
+      id: string # Required: Unique item identifier
+      name: string # Required: Display name
+      category: string # Required: Category ID reference
+      description: string # Optional: Description
+      path: string # Required: Path to the file/folder in this repo
+      type: # Required: Content type
+        enum:
+          - instruction
+          - persona
+          - template
+          - workflow
+          - config
+          - prompt
+          - tool
+          - other
+      targetSystems: # Optional: Which systems this item applies to
+        type: array
+        items: string # System IDs, empty means all
+        default: [] # Empty = applies to all systems
+      dependencies: # Optional: Other items this depends on
+        type: array
+        items: string # Item IDs
+
+# Installation hooks
+hooks:
+  preInstall: string # Optional: Script to run before installation
+  postInstall: string # Optional: Script to run after installation
+  preUninstall: string # Optional: Script to run before uninstallation
+  postUninstall: string # Optional: Script to run after uninstallation
+
+# Compatibility requirements
+compatibility:
+  minVersion: string # Optional: Minimum AICC extension version
+  maxVersion: string # Optional: Maximum AICC extension version
+  vscodeVersion: string # Optional: Required VS Code version
+  nodeVersion: string # Optional: Required Node.js version

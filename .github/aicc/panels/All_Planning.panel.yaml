@@ -1,0 +1,302 @@
+# Planning Panel - Available to all agents
+# Displays the project planning hierarchy with filtering and editing capabilities
+
+panel:
+  id: planning
+  name: Planning
+  scope: all
+  icon: layers
+  order: 1
+  enabled: true
+  description: Project planning view with epics, stories, tasks, and bugs
+
+layout:
+  type: single
+  sections:
+    - id: main
+      name: null
+      flex: 1
+
+components:
+  # Status Badges Row - Color-coded counts for each status
+  - type: status-badges
+    section: main
+    order: 1
+    config:
+      badges:
+        - status: backlog
+          color: "#6c757d"
+          icon: inbox
+        - status: ready
+          color: "#17a2b8"
+          icon: check-all
+        - status: in-progress
+          color: "#007bff"
+          icon: play-circle
+        - status: blocked
+          color: "#dc3545"
+          icon: error
+        - status: review
+          color: "#fd7e14"
+          icon: eye
+        - status: done
+          color: "#28a745"
+          icon: pass
+      clickable: true
+      multiSelect: true
+    dataSource:
+      type: mcp
+      endpoint: /api/planning/status-counts
+      refreshTrigger: plan-update
+
+  # Filter Bar - Regex filter with toggle options
+  - type: filter-bar
+    section: main
+    order: 2
+    config:
+      placeholder: "Filter by ID, title, or description... (regex supported)"
+      regexEnabled: true
+      caseSensitive: false
+      filterFields:
+        - id
+        - summary
+        - description
+        - assignee
+        - agent
+      toggles:
+        - id: show-archived
+          label: Show Archived
+          icon: archive
+          default: false
+        - id: my-items-only
+          label: My Items
+          icon: account
+          default: false
+        - id: current-sprint
+          label: Current Sprint
+          icon: calendar
+          default: true
+
+  # Accordion List - Hierarchical view of planning items
+  - type: accordion-list
+    section: main
+    order: 3
+    config:
+      hierarchy:
+        - type: epic
+          icon: layers
+          expandable: true
+          defaultExpanded: false
+          showCount: true
+        - type: story
+          icon: bookmark
+          expandable: true
+          defaultExpanded: false
+          showCount: true
+          parent: epic
+        - type: task
+          icon: circle-outline
+          expandable: false
+          parent: story
+        - type: bug
+          icon: bug
+          expandable: false
+          parent: story
+      displayFields:
+        title: summary
+        subtitle: id
+        status: status
+        assignee: assignee
+        agent: agent
+      sortOptions:
+        - field: order
+          label: Priority
+        - field: status
+          label: Status
+        - field: updatedAt
+          label: Recently Updated
+        - field: id
+          label: ID
+      defaultSort: order
+      clickAction: select
+      doubleClickAction: open-detail
+      contextMenu: true
+    dataSource:
+      type: mcp
+      endpoint: /api/planning/items
+      refreshTrigger: plan-update
+
+  # Inline Form Panel - Shows when item is selected
+  - type: form-panel
+    section: main
+    order: 4
+    config:
+      showWhen: item-selected
+      position: inline
+      fields:
+        - id: id
+          type: text
+          label: ID
+          readonly: true
+        - id: summary
+          type: text
+          label: Summary
+          required: true
+        - id: description
+          type: textarea
+          label: Description
+          rows: 4
+        - id: status
+          type: select
+          label: Status
+          options:
+            - value: backlog
+              label: Backlog
+            - value: ready
+              label: Ready
+            - value: in-progress
+              label: In Progress
+            - value: blocked
+              label: Blocked
+            - value: review
+              label: Review
+            - value: done
+              label: Done
+        - id: assignee
+          type: tagify
+          label: Assignee
+          maxTags: 1
+          suggestions:
+            source: mcp
+            endpoint: /api/users
+        - id: agent
+          type: select
+          label: Agent
+          options:
+            - value: Architect
+            - value: Orchestrator
+            - value: Developer
+            - value: Reviewer
+            - value: Tester
+        - id: instructions
+          type: tagify
+          label: Instructions
+          suggestions:
+            source: mcp
+            endpoint: /api/instructions
+        - id: personas
+          type: tagify
+          label: Personas
+          suggestions:
+            source: mcp
+            endpoint: /api/personas
+        - id: linkedRelationships
+          type: tagify
+          label: Linked Items
+          suggestions:
+            source: mcp
+            endpoint: /api/planning/items/ids
+      actions:
+        - id: save
+          label: Save
+          style: primary
+          command: aicc.planning.saveItem
+        - id: cancel
+          label: Cancel
+          style: secondary
+          command: aicc.planning.cancelEdit
+    dataSource:
+      type: mcp
+      endpoint: /api/planning/items/{selectedId}
+      refreshTrigger: item-select
+
+  # Comments Panel - Show item comments
+  - type: comments-panel
+    section: main
+    order: 5
+    config:
+      showWhen: item-selected
+      position: inline
+      allowAdd: true
+      allowEdit: true
+      allowDelete: true
+      showAuthor: true
+      showTimestamp: true
+      markdownEnabled: true
+    dataSource:
+      type: mcp
+      endpoint: /api/planning/items/{selectedId}/comments
+      refreshTrigger: item-select
+
+actions:
+  - id: create-epic
+    label: Create Epic
+    icon: add
+    command: aicc.planning.createEpic
+    position: header
+    style: primary
+
+  - id: create-story
+    label: Create Story
+    icon: add
+    command: aicc.planning.createStory
+    position: header
+    style: secondary
+
+  - id: create-task
+    label: Create Task
+    icon: add
+    command: aicc.planning.createTask
+    position: header
+    style: secondary
+
+  - id: create-bug
+    label: Create Bug
+    icon: add
+    command: aicc.planning.createBug
+    position: header
+    style: secondary
+
+  - id: refresh
+    label: Refresh
+    icon: refresh
+    command: aicc.planning.refresh
+    position: header
+    style: link
+
+  - id: sync-jira
+    label: Sync with Jira
+    icon: sync
+    command: aicc.jira.sync
+    position: header
+    style: link
+    condition: jira.enabled
+
+  - id: run-selected
+    label: Run
+    icon: play
+    command: aicc.ailey.run
+    args:
+      - "${selectedItem.id}"
+    position: footer
+    style: primary
+    condition: item-selected
+
+  - id: open-in-editor
+    label: Open Source
+    icon: go-to-file
+    command: aicc.planning.openSource
+    args:
+      - "${selectedItem.path}"
+    position: footer
+    style: secondary
+    condition: item-selected
+
+events:
+  onLoad: aicc.planning.loadPlan
+  onRefresh: aicc.planning.refresh
+  onError: aicc.showError
+
+permissions:
+  - planning:read
+  - planning:write

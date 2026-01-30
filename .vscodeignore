@@ -1,0 +1,80 @@
+# Source files
+src/**
+!src/defaults/**
+*.ts
+*.tsx
+!dist/**
+!out/defaults/**
+
+# WebView source and build artifacts
+webview/src/**
+webview/public/**
+webview/node_modules/**
+webview/*.json
+webview/*.config.js
+webview/*.lock
+
+# Cache and temporary files
+.cache/**
+*.cache
+
+# Node modules - IMPORTANT: Keep root node_modules for runtime dependencies
+# Only exclude webview's node_modules (above) to keep package size down
+
+# Build config
+tsconfig*.json
+webpack*.config.js
+*.tsbuildinfo
+
+# Development
+.vscode/**
+.vscode-test/**
+.git/**
+.gitignore
+.DS_Store
+*.bak
+*.log
+
+# AI-LEY directory (development only)
+.ai-ley/**
+.github/**
+
+# Documentation (keep only essential)
+docs/**
+AGENT*.md
+*_GUIDE.md
+*_SUMMARY.md
+*_IMPLEMENTATION*.md
+SESSION_*.md
+REQUIREMENTS*.md
+ASSETS.md
+PACKAGING.md
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Scripts
+*.sh
+convert_*.py
+
+# Project files
+.project/**
+.my/**
+
+# Old build output (now using dist)
+out/**
+convert_*.js
+
+# Project files
+.project/**
+!.project/defaults/**
+
+# Tests
+**/*.test.*
+test/**
+
+# Logs
+logs/**
+
+# Package files
+package-lock.json
+webview/package-lock.json

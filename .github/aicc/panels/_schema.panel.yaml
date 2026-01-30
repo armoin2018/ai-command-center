@@ -1,0 +1,123 @@
+# Panel YAML Schema Definition
+# This file documents the schema for *.panel.yaml files
+# Naming convention: {Scope}_{PanelName}.panel.yaml
+#   - Scope: "All" for all agents, or agent name (e.g., "Architect", "Orchestrator")
+#   - PanelName: Display name of the panel/tab
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "aicc-panel-v1"
+version: "1.0.0"
+
+# Panel Metadata
+panel:
+  # Unique identifier for the panel
+  id: string # Required: kebab-case identifier (e.g., "planning", "ai-kit-loader")
+  
+  # Display name shown in the tab
+  name: string # Required: Human-readable name (e.g., "Planning", "AI Kit Loader")
+  
+  # Scope determines visibility
+  scope: 
+    type: string
+    enum: ["all", "agent-specific"]
+    default: "all"
+  
+  # Agent filter (only used when scope is "agent-specific")
+  agent: string # Optional: Agent ID that this panel is specific to
+  
+  # Icon from VS Code Codicon set
+  icon: string # Required: Codicon name without $() (e.g., "layers", "package")
+  
+  # Sort order in tab bar (lower = more left)
+  order: number # Required: Integer for tab ordering
+  
+  # Whether panel is enabled
+  enabled: boolean # Default: true
+  
+  # Description shown in tooltips
+  description: string # Optional: Panel description
+
+# Layout configuration
+layout:
+  # Layout type
+  type:
+    enum: ["single", "split-horizontal", "split-vertical", "grid"]
+    default: "single"
+  
+  # Sections within the panel
+  sections:
+    type: array
+    items:
+      section:
+        id: string # Required: Section identifier
+        name: string # Optional: Section header name
+        flex: number # Flex grow value for sizing (default: 1)
+        minHeight: string # CSS min-height value
+        maxHeight: string # CSS max-height value
+        collapsible: boolean # Whether section can be collapsed
+        collapsed: boolean # Initial collapsed state
+
+# Components to render in the panel
+components:
+  type: array
+  items:
+    component:
+      # Component type from available component library
+      type:
+        enum:
+          - "status-badges"      # Color-coded status count badges
+          - "filter-bar"         # Regex filter with options
+          - "accordion-list"     # Collapsible hierarchical list
+          - "form-panel"         # Editable form fields
+          - "repo-selector"      # Repository/branch selector
+          - "installed-list"     # List with action buttons
+          - "comments-panel"     # Comments display and input
+          - "tagify-input"       # Tag input with autocomplete
+          - "select-dropdown"    # Dropdown select
+          - "button-group"       # Group of action buttons
+          - "info-display"       # Read-only information display
+          - "custom"             # Custom component via component ID
+      
+      # Target section ID (for multi-section layouts)
+      section: string # Optional: Section ID to place component in
+      
+      # Component-specific configuration
+      config: object # Varies by component type
+      
+      # Data source for the component
+      dataSource:
+        type:
+          enum: ["mcp", "local", "vscode", "static"]
+        endpoint: string # MCP endpoint path or local method
+        refreshTrigger: string # Event that triggers refresh (e.g., "plan-update")
+      
+      # Component ordering within section
+      order: number
+
+# Actions available in the panel
+actions:
+  type: array
+  items:
+    action:
+      id: string # Action identifier
+      label: string # Button/menu label
+      icon: string # Codicon icon
+      command: string # VS Code command ID to execute
+      args: array # Arguments to pass to command
+      position:
+        enum: ["header", "footer", "inline", "context-menu"]
+      style:
+        enum: ["primary", "secondary", "success", "warning", "danger", "link"]
+      condition: string # Expression for when action is available
+
+# Event handlers
+events:
+  onLoad: string # Command to run when panel loads
+  onUnload: string # Command to run when panel unloads
+  onRefresh: string # Command to run when data refreshes
+  onError: string # Command to run on error
+
+# Permissions required
+permissions:
+  type: array
+  items: string # Permission identifiers (e.g., "jira:read", "git:write")

@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.dev/schemas/component.schema.json",
+  "title": "AICC Component Registry Schema",
+  "description": "Schema for registering reusable UI components",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": {
+      "type": "string",
+      "default": "v1"
+    },
+    "kind": {
+      "type": "string",
+      "const": "Component"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["name", "id"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable component name"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique component identifier (kebab-case)",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["layout", "data-display", "input", "navigation", "feedback", "utility"]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": ["template"],
+      "properties": {
+        "template": {
+          "type": "string",
+          "description": "HTML template (can use template literals)"
+        },
+        "props": {
+          "type": "object",
+          "description": "Component properties schema",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["string", "number", "boolean", "object", "array"]
+              },
+              "default": {},
+              "required": {
+                "type": "boolean"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "description": "Events emitted by component",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "payload": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "styles": {
+          "type": "string",
+          "description": "Component-specific CSS"
+        },
+        "examples": {
+          "type": "array",
+          "description": "Usage examples",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

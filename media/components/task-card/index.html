@@ -1,0 +1,44 @@
+<!-- Task Card Component -->
+<div class="task-card card">
+    <div class="card-body">
+        <div class="task-header">
+            <div class="task-checkbox">
+                <input type="checkbox" class="form-check-input task-complete-toggle">
+            </div>
+            <div class="task-main">
+                <h6 class="task-title mb-1"></h6>
+                <div class="task-id text-muted small"></div>
+            </div>
+            <span class="task-status badge"></span>
+        </div>
+        
+        <p class="task-description small text-muted mt-2"></p>
+        
+        <div class="task-metadata">
+            <div class="task-meta-item" data-meta="assignee">
+                <i class="bi bi-person"></i>
+                <span class="task-assignee">Unassigned</span>
+            </div>
+            <div class="task-meta-item" data-meta="priority">
+                <i class="bi bi-exclamation-circle"></i>
+                <span class="task-priority"></span>
+            </div>
+            <div class="task-meta-item" data-meta="estimated">
+                <i class="bi bi-clock"></i>
+                <span class="task-estimated"></span>
+            </div>
+        </div>
+        
+        <div class="task-actions mt-2">
+            <button class="btn btn-sm btn-link task-edit" title="Edit">
+                <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-sm btn-link task-delete" title="Delete">
+                <i class="bi bi-trash"></i>
+            </button>
+            <button class="btn btn-sm btn-link task-assign" title="Assign">
+                <i class="bi bi-person-plus"></i>
+            </button>
+        </div>
+    </div>
+</div>

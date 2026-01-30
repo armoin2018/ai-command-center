@@ -1,0 +1,287 @@
+.custom-fields-panel {
+    padding: 20px;
+    background: var(--vscode-editor-background);
+    overflow-y: auto;
+    height: 100%;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.header-actions button {
+    padding: 6px 12px;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.header-actions button:hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+}
+
+.btn-primary {
+    background: var(--vscode-button-background) !important;
+    color: var(--vscode-button-foreground) !important;
+}
+
+.btn-primary:hover {
+    background: var(--vscode-button-hoverBackground) !important;
+}
+
+.btn-danger {
+    background: var(--vscode-errorForeground) !important;
+    color: white !important;
+}
+
+.fields-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field-card {
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.field-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.field-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.field-actions button {
+    padding: 4px 10px;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.field-actions button:hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+}
+
+.field-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.field-type {
+    display: inline-block;
+    padding: 4px 8px;
+    background: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.required-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: var(--vscode-errorForeground);
+    color: white;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.field-description {
+    margin: 0;
+    font-size: 13px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.applies-to,
+.field-options {
+    font-size: 13px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.applies-to strong,
+.field-options strong {
+    color: var(--vscode-foreground);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state p {
+    margin: 0 0 20px 0;
+    color: var(--vscode-descriptionForeground);
+    font-size: 15px;
+}
+
+.field-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.field-form {
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.field-form h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--vscode-focusBorder);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--vscode-panel-border);
+}
+
+.form-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+}
+
+.form-actions button:hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+}
+
+@media (max-width: 768px) {
+    .panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .field-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .field-form {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}

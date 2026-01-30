@@ -1,0 +1,337 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.dev/schemas/panel.schema.json",
+  "title": "AICC Panel Schema",
+  "description": "Schema definition for AI Command Center UI panels (surfaces)",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": {
+      "type": "string",
+      "description": "Schema version (e.g., 'v1', 'v1beta1')",
+      "pattern": "^v[0-9]+(alpha|beta)?[0-9]*$",
+      "default": "v1"
+    },
+    "kind": {
+      "type": "string",
+      "const": "Panel",
+      "description": "Resource type identifier"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["name", "id"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable panel name",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique panel identifier (kebab-case)",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "description": {
+          "type": "string",
+          "description": "Panel description for documentation"
+        },
+        "version": {
+          "type": "string",
+          "description": "Panel configuration version (semver)",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "default": "1.0.0"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Codicon name for panel icon",
+          "default": "layers"
+        },
+        "labels": {
+          "type": "object",
+          "description": "Key-value labels for categorization",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "annotations": {
+          "type": "object",
+          "description": "Additional metadata annotations",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": ["layout"],
+      "properties": {
+        "layout": {
+          "type": "object",
+          "description": "Panel layout configuration",
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["tabs", "split", "grid", "stack"],
+              "description": "Layout manager type"
+            },
+            "orientation": {
+              "type": "string",
+              "enum": ["horizontal", "vertical"],
+              "description": "Orientation for split/stack layouts"
+            },
+            "columns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12,
+              "description": "Number of columns for grid layout"
+            },
+            "gap": {
+              "type": "string",
+              "description": "Gap size (CSS value)",
+              "default": "12px"
+            }
+          }
+        },
+        "tabs": {
+          "type": "array",
+          "description": "Tab references for tabs layout",
+          "items": {
+            "type": "object",
+            "required": ["tabRef"],
+            "properties": {
+              "tabRef": {
+                "type": "string",
+                "description": "Reference to tab definition file (relative path)",
+                "pattern": "^(\\.github/aicc/tabs/.*\\.yaml|\\.my/aicc/tabs/.*\\.yaml)$"
+              },
+              "order": {
+                "type": "integer",
+                "description": "Display order (lower = first)",
+                "default": 0
+              },
+              "condition": {
+                "type": "string",
+                "description": "JavaScript expression to conditionally show tab"
+              }
+            }
+          }
+        },
+        "regions": {
+          "type": "array",
+          "description": "Layout regions for split/grid layouts",
+          "items": {
+            "type": "object",
+            "required": ["id", "component"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Region identifier"
+              },
+              "component": {
+                "type": "string",
+                "description": "Component reference"
+              },
+              "size": {
+                "type": "string",
+                "description": "Region size (CSS value or flex ratio)"
+              },
+              "minSize": {
+                "type": "string",
+                "description": "Minimum size (CSS value)"
+              },
+              "maxSize": {
+                "type": "string",
+                "description": "Maximum size (CSS value)"
+              }
+            }
+          }
+        },
+        "header": {
+          "type": "object",
+          "description": "Panel header configuration",
+          "properties": {
+            "show": {
+              "type": "boolean",
+              "default": true
+            },
+            "title": {
+              "type": "string",
+              "description": "Header title (can use template variables)"
+            },
+            "actions": {
+              "type": "array",
+              "description": "Header action buttons",
+              "items": {
+                "$ref": "#/definitions/Action"
+              }
+            }
+          }
+        },
+        "footer": {
+          "type": "object",
+          "description": "Panel footer configuration",
+          "properties": {
+            "show": {
+              "type": "boolean",
+              "default": true
+            },
+            "leftActions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Action"
+              }
+            },
+            "rightActions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Action"
+              }
+            }
+          }
+        },
+        "dataBindings": {
+          "type": "object",
+          "description": "Global data bindings for panel",
+          "additionalProperties": {
+            "$ref": "#/definitions/DataBinding"
+          }
+        },
+        "theme": {
+          "type": "object",
+          "description": "Panel-specific theme overrides",
+          "properties": {
+            "cssVariables": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "cssClasses": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Action": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Action identifier"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["button", "dropdown", "toggle", "select"],
+          "description": "Action control type"
+        },
+        "label": {
+          "type": "string",
+          "description": "Action label text"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Codicon name"
+        },
+        "tooltip": {
+          "type": "string",
+          "description": "Tooltip text"
+        },
+        "command": {
+          "type": "string",
+          "description": "VS Code command to execute"
+        },
+        "style": {
+          "type": "string",
+          "enum": ["primary", "secondary", "success", "warning", "danger"],
+          "default": "secondary"
+        },
+        "options": {
+          "type": "array",
+          "description": "Options for dropdown/select",
+          "items": {
+            "type": "object",
+            "required": ["value", "label"],
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "condition": {
+          "type": "string",
+          "description": "Condition for showing action"
+        }
+      }
+    },
+    "DataBinding": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["rest", "graphql", "sdk", "command", "state"],
+          "description": "Data source type"
+        },
+        "endpoint": {
+          "type": "string",
+          "description": "API endpoint or command"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+          "default": "GET"
+        },
+        "params": {
+          "type": "object",
+          "description": "Request parameters (can use template expressions)",
+          "additionalProperties": true
+        },
+        "transform": {
+          "type": "string",
+          "description": "JavaScript function to transform response data"
+        },
+        "cache": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "ttl": {
+              "type": "integer",
+              "description": "Time to live in seconds"
+            }
+          }
+        },
+        "poll": {
+          "type": "object",
+          "description": "Auto-refresh configuration",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "interval": {
+              "type": "integer",
+              "description": "Poll interval in milliseconds"
+            }
+          }
+        }
+      }
+    }
+  }
+}

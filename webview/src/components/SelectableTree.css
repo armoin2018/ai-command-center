@@ -1,0 +1,137 @@
+/* Selectable Tree */
+.selectable-tree {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Selection Toolbar */
+.selection-toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background-color: var(--vscode-editorGroupHeader-tabsBackground);
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.select-btn {
+    padding: 4px 12px;
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.select-btn:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+/* Tree Nodes */
+.tree-nodes {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.selectable-node {
+    user-select: none;
+}
+
+.node-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.node-row:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.node-row.selected {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+}
+
+.node-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.expand-button {
+    background: none;
+    border: none;
+    color: var(--vscode-foreground);
+    cursor: pointer;
+    padding: 2px 4px;
+    font-size: 10px;
+}
+
+.node-type-badge {
+    font-size: 14px;
+}
+
+.node-name {
+    flex: 1;
+    font-size: 13px;
+}
+
+.node-status {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+}
+
+.node-status.completed {
+    background-color: #4caf50;
+    color: white;
+}
+
+.node-status.in-progress {
+    background-color: #2196f3;
+    color: white;
+}
+
+.node-status.blocked {
+    background-color: #f44336;
+    color: white;
+}
+
+.node-priority {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.node-priority.critical {
+    color: #f44336;
+}
+
+.node-priority.high {
+    color: #ff9800;
+}
+
+.node-priority.medium {
+    color: #2196f3;
+}
+
+.node-priority.low {
+    color: #4caf50;
+}
+
+.node-points {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.node-children {
+    margin-left: 20px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Test User",
+  "age": 30,
+  "email": "test@example.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "USA"
+  },
+  "hobbies": [
+    "reading",
+    "coding",
+    "hiking"
+  ],
+  "active": true
+}

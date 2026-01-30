@@ -1,0 +1,401 @@
+/**
+ * Filter Bar Component Script
+ * jQuery-style with Bootstrap forms and Tagify
+ */
+
+(function() {
+    'use strict';
+
+    class FilterBarComponent {
+        constructor(container, apiClient) {
+            this.$container = $(container);
+            this.apiClient = apiClient;
+            this.filters = {
+                search: '',
+                status: [],
+                priority: [],
+                type: '',
+                assignee: [],
+                dateFrom: null,
+                dateTo: null,
+                tags: []
+            };
+            this.tagifyInstances = {};
+            
+            // Wait for libraries
+            if (typeof Tagify === 'undefined') {
+                window.AICC.onLibrariesLoaded(() => this.init());
+            } else {
+                this.init();
+            }
+        }
+
+        init() {
+            this.initializeTagify();
+            this.bindEvents();
+            this.loadFilterOptions();
+        }
+
+        initializeTagify() {
+            // Status tagify with Bootstrap integration
+            const statusInput = this.$container.find('.filter-status')[0];
+            if (statusInput) {
+                this.tagifyInstances.status = new Tagify(statusInput, {
+                    whitelist: ['todo', 'ready', 'in-progress', 'review', 'done', 'blocked'],
+                    dropdown: {
+                        maxItems: 20,
+                        classname: 'tagify__dropdown--bootstrap',
+                        enabled: 0,
+                        closeOnSelect: false
+                    },
+                    placeholder: 'Select statuses...'
+                });
+                this.tagifyInstances.status.on('change', () => this.handleFilterChange('status'));
+            }
+
+            // Priority tagify
+            const priorityInput = this.$container.find('.filter-priority')[0];
+            if (priorityInput) {
+                this.tagifyInstances.priority = new Tagify(priorityInput, {
+                    whitelist: ['low', 'medium', 'high', 'critical'],
+                    dropdown: {
+                        maxItems: 20,
+                        classname: 'tagify__dropdown--bootstrap',
+                        enabled: 0,
+                        closeOnSelect: false
+                    },
+                    placeholder: 'Select priorities...'
+                });
+                this.tagifyInstances.priority.on('change', () => this.handleFilterChange('priority'));
+            }
+
+            // Assignee tagify (free text or from whitelist)
+            const assigneeInput = this.$container.find('.filter-assignee')[0];
+            if (assigneeInput) {
+                this.tagifyInstances.assignee = new Tagify(assigneeInput, {
+                    dropdown: {
+                        maxItems: 20,
+                        classname: 'tagify__dropdown--bootstrap',
+                        enabled: 0,
+                        closeOnSelect: false
+                    },
+                    placeholder: 'Select assignees...'
+                });
+                this.tagifyInstances.assignee.on('change', () => this.handleFilterChange('assignee'));
+            }
+
+            // Tags tagify
+            const tagsInput = this.$container.find('.filter-tags')[0];
+            if (tagsInput) {
+                this.tagifyInstances.tags = new Tagify(tagsInput, {
+                    dropdown: {
+                        maxItems: 20,
+                        classname: 'tagify__dropdown--bootstrap',
+                        enabled: 0,
+                        closeOnSelect: false
+                    },
+                    placeholder: 'Select tags...'
+                });
+                this.tagifyInstances.tags.on('change', () => this.handleFilterChange('tags'));
+            }
+        }
+
+        bindEvents() {
+            // Search input with lodash debounce
+            this.$container.on('input', '.filter-search', _.debounce((e) => {
+                this.filters.search = $(e.target).val();
+                this.handleFilterChange('search');
+            }, 300));
+
+            // Type select using jQuery change
+            this.$container.on('change', '.filter-type', (e) => {
+                this.filters.type = $(e.target).val();
+                this.handleFilterChange('type');
+            });
+
+            // Date filters using jQuery
+            this.$container.on('change', '.filter-date-from', (e) => {
+                const value = $(e.target).val();
+                this.filters.dateFrom = value ? new Date(value) : null;
+                this.handleFilterChange('dateFrom');
+            });
+
+            this.$container.on('change', '.filter-date-to', (e) => {
+                const value = $(e.target).val();
+                this.filters.dateTo = value ? new Date(value) : null;
+                this.handleFilterChange('dateTo');
+            });
+
+            // Clear all filters with jQuery
+            this.$container.on('click', '.filter-clear, .filter-clear-active', (e) => {
+                e.preventDefault();
+                this.clearAllFilters();
+            });
+
+            // Toggle collapse with jQuery animation
+            this.$container.on('click', '.filter-toggle', (e) => {
+                e.preventDefault();
+                const $content = this.$container.find('.filter-bar-content');
+                const $icon = $(e.currentTarget).find('i');
+                
+                $content.slideToggle(300);
+                $icon.toggleClass('bi-chevron-up bi-chevron-down');
+            });
+
+            // Remove individual filter chips
+            this.$container.on('click', '.filter-chip-remove', (e) => {
+                e.preventDefault();
+                const $chip = $(e.currentTarget).closest('.filter-chip');
+                const filterType = $chip.data('filter-type');
+                const filterValue = $chip.data('filter-value');
+                
+                this.removeFilter(filterType, filterValue);
+            });
+        }
+
+        async loadFilterOptions() {
+            try {
+                // Load available assignees, tags from API if available
+                if (this.apiClient && this.apiClient.getFilterOptions) {
+                    const options = await this.apiClient.getFilterOptions();
+                    
+                    if (options.assignees) {
+                        this.tagifyInstances.assignee?.settings.whitelist.push(...options.assignees);
+                    }
+                    
+                    if (options.tags) {
+                        this.tagifyInstances.tags?.settings.whitelist.push(...options.tags);
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load filter options:', error);
+            }
+        }
+
+        handleFilterChange(filterType) {
+            // Update filter values from tagify instances
+            if (filterType === 'status' && this.tagifyInstances.status) {
+                this.filters.status = this.tagifyInstances.status.value.map(item => item.value);
+            } else if (filterType === 'priority' && this.tagifyInstances.priority) {
+                this.filters.priority = this.tagifyInstances.priority.value.map(item => item.value);
+            } else if (filterType === 'assignee' && this.tagifyInstances.assignee) {
+                this.filters.assignee = this.tagifyInstances.assignee.value.map(item => item.value);
+            } else if (filterType === 'tags' && this.tagifyInstances.tags) {
+                this.filters.tags = this.tagifyInstances.tags.value.map(item => item.value);
+            }
+
+            this.updateActiveFilters();
+            this.emitFilterChange();
+        }
+
+        updateActiveFilters() {
+            const activeFiltersDiv = this.container.querySelector('.active-filters');
+            const chipsContainer = this.container.querySelector('.filter-chips');
+            
+            // Clear existing chips
+            chipsContainer.innerHTML = '';
+            
+            let hasFilters = false;
+
+
+        updateActiveFilters() {
+            const $activeFiltersDiv = this.$container.find('.active-filters');
+            const $chipsContainer = this.$container.find('.filter-chips');
+            
+            // Clear existing chips using jQuery
+            $chipsContainer.empty();
+            
+            let hasFilters = false;
+
+            // Add chips for each active filter
+            if (this.filters.search) {
+                hasFilters = true;
+                $chipsContainer.append(this.createFilterChip('Search', this.filters.search, 'search'));
+            }
+
+            if (this.filters.status.length > 0) {
+                hasFilters = true;
+                this.filters.status.forEach(status => {
+                    $chipsContainer.append(this.createFilterChip('Status', status, 'status', status));
+                });
+            }
+
+            if (this.filters.priority.length > 0) {
+                hasFilters = true;
+                this.filters.priority.forEach(priority => {
+                    $chipsContainer.append(this.createFilterChip('Priority', priority, 'priority', priority));
+                });
+            }
+
+            if (this.filters.type) {
+                hasFilters = true;
+                $chipsContainer.append(this.createFilterChip('Type', this.filters.type, 'type'));
+            }
+
+            if (this.filters.assignee.length > 0) {
+                hasFilters = true;
+                this.filters.assignee.forEach(assignee => {
+                    $chipsContainer.append(this.createFilterChip('Assignee', assignee, 'assignee', assignee));
+                });
+            }
+
+            if (this.filters.dateFrom) {
+                hasFilters = true;
+                $chipsContainer.append(this.createFilterChip('From', moment(this.filters.dateFrom).format('MMM D, YYYY'), 'dateFrom'));
+            }
+
+            if (this.filters.dateTo) {
+                hasFilters = true;
+                $chipsContainer.append(this.createFilterChip('To', moment(this.filters.dateTo).format('MMM D, YYYY'), 'dateTo'));
+            }
+
+            if (this.filters.tags.length > 0) {
+                hasFilters = true;
+                this.filters.tags.forEach(tag => {
+                    $chipsContainer.append(this.createFilterChip('Tag', tag, 'tags', tag));
+                });
+            }
+
+            // Show/hide with jQuery
+            $activeFiltersDiv.toggle(hasFilters);
+        }
+
+        createFilterChip(label, value, filterType, tagValue = null) {
+            // Create chip using jQuery
+            const $chip = $('<div>')
+                .addClass('badge bg-secondary me-1 mb-1 filter-chip')
+                .attr('data-filter-type', filterType)
+                .attr('data-filter-value', tagValue || value)
+                .html(`
+                    <span class="filter-chip-label">${label}:</span>
+                    <span class="filter-chip-value">${value}</span>
+                    <button class="btn-close btn-close-white filter-chip-remove ms-1" style="font-size: 0.7em;"></button>
+                `);
+
+            return $chip;
+        }
+
+        removeFilter(filterType, tagValue = null) {
+            if (filterType === 'search') {
+                this.filters.search = '';
+                this.$container.find('.filter-search').val('');
+            } else if (filterType === 'type') {
+                this.filters.type = '';
+                this.$container.find('.filter-type').val('');
+            } else if (filterType === 'dateFrom') {
+                this.filters.dateFrom = null;
+                this.$container.find('.filter-date-from').val('');
+            } else if (filterType === 'dateTo') {
+                this.filters.dateTo = null;
+                this.$container.find('.filter-date-to').val('');
+            } else if (tagValue !== null) {
+                // Remove specific tag value
+                const tagify = this.tagifyInstances[filterType];
+                if (tagify) {
+                    const tagToRemove = tagify.value.find(t => t.value === tagValue);
+                    if (tagToRemove) {
+                        tagify.removeTag(tagToRemove);
+                    }
+                }
+            }
+
+            this.handleFilterChange(filterType);
+        }
+
+        clearAllFilters() {
+            // Clear all filter values
+            this.filters = {
+                search: '',
+                status: [],
+                priority: [],
+                type: '',
+                assignee: [],
+                dateFrom: null,
+                dateTo: null,
+                tags: []
+            };
+
+            // Clear UI using jQuery
+            this.$container.find('.filter-search').val('');
+            this.$container.find('.filter-type').val('');
+            this.$container.find('.filter-date-from').val('');
+            this.$container.find('.filter-date-to').val('');
+
+            // Clear tagify instances
+            Object.values(this.tagifyInstances).forEach(tagify => {
+                if (tagify) {
+                    tagify.removeAllTags();
+                }
+            });
+
+            this.updateActiveFilters();
+            this.emitFilterChange();
+        }
+
+        getFilters() {
+            return { ...this.filters };
+        }
+
+        setFilters(filters) {
+            Object.assign(this.filters, filters);
+            this.updateUI();
+            this.updateActiveFilters();
+        }
+
+        updateUI() {
+            // Update UI to reflect current filter state using jQuery
+            this.$container.find('.filter-search').val(this.filters.search || '');
+            this.$container.find('.filter-type').val(this.filters.type || '');
+            this.$container.find('.filter-date-from').val(this.filters.dateFrom ? 
+                moment(this.filters.dateFrom).format('YYYY-MM-DD') : '');
+            this.$container.find('.filter-date-to').val(this.filters.dateTo ? 
+                moment(this.filters.dateTo).format('YYYY-MM-DD') : '');
+
+            // Update tagify instances
+            if (this.filters.status.length > 0 && this.tagifyInstances.status) {
+                this.tagifyInstances.status.addTags(this.filters.status);
+            }
+            if (this.filters.priority.length > 0 && this.tagifyInstances.priority) {
+                this.tagifyInstances.priority.addTags(this.filters.priority);
+            }
+            if (this.filters.assignee.length > 0 && this.tagifyInstances.assignee) {
+                this.tagifyInstances.assignee.addTags(this.filters.assignee);
+            }
+            if (this.filters.tags.length > 0 && this.tagifyInstances.tags) {
+                this.tagifyInstances.tags.addTags(this.filters.tags);
+            }
+        }
+
+        emitFilterChange() {
+            const event = new CustomEvent('filterBar:change', {
+                detail: { filters: this.getFilters() },
+                bubbles: true
+            });
+            this.$container[0].dispatchEvent(event);
+        }
+
+        on(eventName, handler) {
+            this.$container.on(`filterBar:${eventName}`, (e) => {
+                handler(e.originalEvent.detail);
+            });
+        }
+
+        // jQuery-style helper methods
+        show() {
+            this.$container.fadeIn(300);
+            return this;
+        }
+
+        hide() {
+            this.$container.fadeOut(300);
+            return this;
+        }
+
+        toggle() {
+            this.$container.fadeToggle(300);
+            return this;
+        }
+    }
+
+    window.FilterBarComponent = FilterBarComponent;
+})();

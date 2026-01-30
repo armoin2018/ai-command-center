@@ -1,0 +1,152 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: component-grid
+  name: Component Grid
+  description: Grid layout displaying component catalog with live demos
+  category: Display
+  tags: [grid, catalog, components, demo]
+  version: 1.0.0
+spec:
+  props:
+    components:
+      type: array
+      default: []
+      description: Array of component metadata
+      items:
+        type: object
+        properties:
+          id: string
+          name: string
+          description: string
+          category: string
+          tags: array
+          version: string
+    columns:
+      type: number
+      default: 2
+      description: Number of grid columns
+    showDemo:
+      type: boolean
+      default: true
+      description: Show live demo previews
+  
+  events:
+    - name: component-click
+      description: Emitted when component card clicked
+      payload:
+        componentId: string
+  
+  template: |
+    <div class="component-grid" style="grid-template-columns: repeat({{columns}}, 1fr);">
+      {{#each components}}
+      <div class="component-card" onclick="viewComponent('{{id}}')">
+        <div class="component-header">
+          <span class="component-name">{{name}}</span>
+          <span class="component-version">v{{version}}</span>
+        </div>
+        <div class="component-category">{{category}}</div>
+        <div class="component-description">{{description}}</div>
+        {{#if tags.length}}
+        <div class="component-tags">
+          {{#each tags}}
+          <span class="tag">{{this}}</span>
+          {{/each}}
+        </div>
+        {{/if}}
+        {{#if @root.showDemo}}
+        <div class="component-demo-preview">
+          <span class="codicon codicon-eye"></span> View Demo
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  
+  styles: |
+    .component-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .component-card {
+      padding: 12px;
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 4px;
+      background: var(--vscode-list-inactiveSelectionBackground);
+      cursor: pointer;
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+    .component-card:hover {
+      border-color: var(--vscode-button-background);
+      background: var(--vscode-list-hoverBackground);
+    }
+    .component-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .component-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .component-version {
+      font-size: 10px;
+      color: var(--vscode-descriptionForeground);
+    }
+    .component-category {
+      font-size: 10px;
+      color: var(--vscode-textLink-foreground);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .component-description {
+      font-size: 12px;
+      color: var(--vscode-descriptionForeground);
+      margin-bottom: 8px;
+    }
+    .component-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .tag {
+      padding: 2px 6px;
+      background: var(--vscode-badge-background);
+      color: var(--vscode-badge-foreground);
+      border-radius: 3px;
+      font-size: 9px;
+    }
+    .component-demo-preview {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--vscode-textLink-foreground);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--vscode-panel-border);
+    }
+  
+  examples:
+    - name: Component Catalog
+      description: Browse all registered components
+      props:
+        components:
+          - id: "status-badges"
+            name: "Status Badges"
+            description: "Status indicator badges with counts"
+            category: "Display"
+            tags: ["status", "badge", "counter"]
+            version: "1.0.0"
+          - id: "filter-bar"
+            name: "Filter Bar"
+            description: "Search and filter controls"
+            category: "Input"
+            tags: ["filter", "search", "input"]
+            version: "1.0.0"
+        columns: 2
+        showDemo: true
+      code: |
+        <component-grid components="{{catalog}}" columns="2" showDemo="true"></component-grid>

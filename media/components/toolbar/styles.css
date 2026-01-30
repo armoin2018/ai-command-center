@@ -1,0 +1,39 @@
+/* Toolbar Component Styles */
+
+.navbar {
+    border-bottom: 1px solid var(--vscode-panel-border, #e0e0e0);
+    background: var(--vscode-editor-background, #ffffff) !important;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    color: var(--vscode-editor-foreground, #333);
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--vscode-editor-foreground, #333) !important;
+}
+
+.nav-link:hover {
+    background: var(--vscode-list-hoverBackground, #f3f3f3);
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    background: var(--vscode-editor-background, #fff);
+    border: 1px solid var(--vscode-panel-border, #e0e0e0);
+}
+
+.dropdown-item {
+    color: var(--vscode-editor-foreground, #333);
+}
+
+.dropdown-item:hover {
+    background: var(--vscode-list-hoverBackground, #f3f3f3);
+}
+
+.dropdown-item i {
+    width: 20px;
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,84 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: info-grid
+  name: Info Grid
+  description: Responsive grid displaying key-value information pairs
+  category: Display
+  tags: [grid, info, properties, metadata]
+  version: 1.0.0
+spec:
+  props:
+    fields:
+      type: array
+      required: true
+      description: Array of field definitions
+      items:
+        type: object
+        properties:
+          label: string
+          value: string
+          highlight: boolean
+    columns:
+      type: number
+      default: 3
+      description: Number of columns (responsive)
+    minColumnWidth:
+      type: string
+      default: "200px"
+      description: Minimum column width for responsive layout
+  
+  template: |
+    <div class="info-grid" style="grid-template-columns: repeat(auto-fill, minmax({{minColumnWidth}}, 1fr));">
+      {{#each fields}}
+      <div class="info-item {{#if highlight}}highlight{{/if}}">
+        <span class="info-label">{{label}}:</span>
+        <span class="info-value">{{value}}</span>
+      </div>
+      {{/each}}
+    </div>
+  
+  styles: |
+    .info-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .info-item {
+      padding: 6px;
+      background: var(--vscode-list-inactiveSelectionBackground);
+      border-radius: 4px;
+    }
+    .info-item.highlight {
+      background: var(--vscode-list-activeSelectionBackground);
+    }
+    .info-label {
+      font-size: 10px;
+      color: var(--vscode-descriptionForeground);
+      text-transform: uppercase;
+      display: block;
+    }
+    .info-value {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  
+  examples:
+    - name: Item Metadata
+      description: Display planning item metadata
+      props:
+        fields:
+          - label: "ID"
+            value: "EPIC-001"
+          - label: "Status"
+            value: "In Progress"
+            highlight: true
+          - label: "Priority"
+            value: "High"
+          - label: "Type"
+            value: "Epic"
+          - label: "Assignee"
+            value: "John Doe"
+          - label: "Story Points"
+            value: "13"
+      code: |
+        <info-grid fields="{{itemFields}}" columns="3"></info-grid>

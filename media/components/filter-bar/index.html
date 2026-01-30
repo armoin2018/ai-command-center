@@ -1,0 +1,80 @@
+<!-- Filter Bar Component -->
+<div class="filter-bar">
+    <div class="filter-bar-header d-flex justify-content-between align-items-center mb-2">
+        <h6 class="mb-0">Filters</h6>
+        <div class="filter-actions">
+            <button class="btn btn-sm btn-link filter-clear" title="Clear all filters">
+                <i class="bi bi-x-circle"></i> Clear
+            </button>
+            <button class="btn btn-sm btn-link filter-toggle" title="Collapse/expand filters">
+                <i class="bi bi-chevron-up"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="filter-bar-content">
+        <!-- Search -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Search</label>
+            <input type="text" class="form-control form-control-sm filter-search" placeholder="Search items...">
+        </div>
+
+        <!-- Status Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Status</label>
+            <input type="text" class="filter-status" placeholder="Select statuses...">
+        </div>
+
+        <!-- Priority Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Priority</label>
+            <input type="text" class="filter-priority" placeholder="Select priorities...">
+        </div>
+
+        <!-- Type Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Type</label>
+            <select class="form-select form-select-sm filter-type">
+                <option value="">All Types</option>
+                <option value="epic">Epics</option>
+                <option value="story">Stories</option>
+                <option value="task">Tasks</option>
+                <option value="bug">Bugs</option>
+            </select>
+        </div>
+
+        <!-- Assignee Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Assignee</label>
+            <input type="text" class="filter-assignee" placeholder="Select assignees...">
+        </div>
+
+        <!-- Date Range Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Created Date</label>
+            <div class="row g-2">
+                <div class="col">
+                    <input type="date" class="form-control form-control-sm filter-date-from" placeholder="From">
+                </div>
+                <div class="col">
+                    <input type="date" class="form-control form-control-sm filter-date-to" placeholder="To">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tags Filter -->
+        <div class="filter-group mb-3">
+            <label class="form-label small">Tags</label>
+            <input type="text" class="filter-tags" placeholder="Select tags...">
+        </div>
+
+        <!-- Active Filters Display -->
+        <div class="active-filters mt-3 d-none">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-muted">Active Filters:</small>
+                <button class="btn btn-sm btn-link p-0 filter-clear-active">Clear All</button>
+            </div>
+            <div class="filter-chips"></div>
+        </div>
+    </div>
+</div>

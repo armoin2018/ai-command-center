@@ -1,0 +1,237 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: accordion-list
+  name: Accordion List
+  description: Hierarchical expandable list with nested items
+  category: Display
+  tags: [accordion, list, hierarchical, tree, expandable]
+  version: 1.0.0
+spec:
+  props:
+    items:
+      type: array
+      required: true
+      description: Array of items to display
+      items:
+        type: object
+        properties:
+          id: string
+          type: string
+          status: string
+          priority: string
+          summary: string
+          description: string
+          projectNumber: string
+          children: array
+    expandedItems:
+      type: array
+      default: []
+      description: Array of item IDs that are expanded
+    showActions:
+      type: boolean
+      default: true
+      description: Show action buttons for each item
+    depth:
+      type: number
+      default: 0
+      description: Current nesting depth (for recursion)
+  
+  events:
+    - name: toggle-expand
+      description: Emitted when item is expanded/collapsed
+      payload:
+        itemId: string
+    - name: status-update
+      description: Emitted when status dropdown changed
+      payload:
+        itemId: string
+        status: string
+    - name: action-click
+      description: Emitted when action button clicked
+      payload:
+        itemId: string
+        action: string
+  
+  template: |
+    <div class="accordion-list">
+      {{#each items}}
+      <div class="accordion-item {{#if expanded}}expanded{{/if}}" data-type="{{type}}" data-id="{{id}}">
+        <div class="accordion-header" onclick="toggleExpand('{{id}}')">
+          {{#if @root.depth}}
+          <span style="display:inline-block;width:{{multiply @root.depth 20}}px;"></span>
+          {{/if}}
+          
+          {{#if children}}
+          <span class="codicon codicon-chevron-right expand-icon"></span>
+          {{else}}
+          <span style="width:16px;display:inline-block;"></span>
+          {{/if}}
+          
+          <span class="status-bullet" style="background-color:{{statusColor}}" title="{{status}}"></span>
+          <span class="codicon codicon-{{typeIcon}} accordion-icon"></span>
+          
+          <span class="accordion-title">
+            <span class="id">{{projectNumber}}</span>
+            <span class="summary">{{summary}}</span>
+          </span>
+          
+          {{#if priorityIcon}}
+          <span class="priority-icon" title="{{priority}}">{{priorityIcon}}</span>
+          {{/if}}
+          
+          {{#if @root.showActions}}
+          <div class="accordion-actions" onclick="event.stopPropagation()">
+            <select class="status-dropdown" style="border-color:{{statusColor}}" onchange="updateStatus('{{id}}', this.value)">
+              <option value="todo" {{#if (eq status 'todo')}}selected{{/if}}>todo</option>
+              <option value="open" {{#if (eq status 'open')}}selected{{/if}}>open</option>
+              <option value="in-progress" {{#if (eq status 'in-progress')}}selected{{/if}}>in-progress</option>
+              <option value="ready" {{#if (eq status 'ready')}}selected{{/if}}>ready</option>
+              <option value="done" {{#if (eq status 'done')}}selected{{/if}}>done</option>
+              <option value="hold" {{#if (eq status 'hold')}}selected{{/if}}>hold</option>
+              <option value="error" {{#if (eq status 'error')}}selected{{/if}}>error</option>
+            </select>
+            <button class="accordion-btn" onclick="editItem('{{id}}')" title="Edit">
+              <span class="codicon codicon-edit"></span>
+            </button>
+            <button class="accordion-btn" onclick="showInfo('{{id}}')" title="Info">
+              <span class="codicon codicon-info"></span>
+            </button>
+            <button class="accordion-btn" onclick="showConnections('{{id}}')" title="Connections">
+              <span class="codicon codicon-link"></span>
+            </button>
+            <button class="accordion-btn" onclick="showRepo('{{id}}')" title="Repository">
+              <span class="codicon codicon-github"></span>
+            </button>
+            <button class="accordion-btn" onclick="showComments('{{id}}')" title="Comments">
+              <span class="codicon codicon-comment"></span>
+            </button>
+            <button class="accordion-btn" onclick="runItem('{{id}}')" title="Run">
+              <span class="codicon codicon-play"></span>
+            </button>
+          </div>
+          {{/if}}
+        </div>
+        
+        <div class="accordion-content" id="content-{{id}}">
+          <div class="item-description">{{description}}</div>
+          {{#if children}}
+          <div class="children-list">
+            <!-- Recursive rendering handled by renderer -->
+          </div>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  
+  styles: |
+    .accordion-list {
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .accordion-item {
+      border-bottom: 1px solid var(--vscode-panel-border);
+      background: var(--vscode-list-inactiveSelectionBackground);
+      position: relative;
+    }
+    .accordion-item:last-child { border-bottom: none; }
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      gap: 8px;
+    }
+    .accordion-header:hover {
+      background: var(--vscode-list-hoverBackground);
+    }
+    .accordion-icon { width: 16px; text-align: center; }
+    .status-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .priority-icon {
+      display: flex;
+      align-items: center;
+      margin-left: 4px;
+    }
+    .accordion-title {
+      flex: 1;
+      font-size: 13px;
+      display: flex;
+      gap: 6px;
+      overflow: hidden;
+    }
+    .accordion-title .id {
+      color: var(--vscode-textLink-foreground);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .accordion-title .summary {
+      color: var(--vscode-editor-foreground);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .accordion-actions {
+      display: flex;
+      gap: 4px;
+    }
+    .accordion-btn {
+      background: none;
+      border: none;
+      padding: 4px 6px;
+      cursor: pointer;
+      border-radius: 3px;
+      color: var(--vscode-foreground);
+      font-size: 14px;
+    }
+    .accordion-btn:hover {
+      background: var(--vscode-toolbar-hoverBackground);
+    }
+    .status-dropdown {
+      padding: 2px 6px;
+      font-size: 11px;
+      border-radius: 3px;
+      border: 1px solid var(--vscode-input-border);
+      background: var(--vscode-input-background);
+      color: var(--vscode-input-foreground);
+    }
+    .accordion-content {
+      display: none;
+      padding: 12px;
+      background: var(--vscode-editor-background);
+      border-top: 1px solid var(--vscode-panel-border);
+    }
+    .accordion-item.expanded .accordion-content { display: block; }
+    .accordion-item.expanded .expand-icon { transform: rotate(90deg); }
+    .item-description {
+      margin-bottom: 12px;
+      color: var(--vscode-descriptionForeground);
+      font-size: 12px;
+      white-space: pre-wrap;
+    }
+    .children-list {
+      margin-top: 8px;
+      border-left: 2px solid var(--vscode-panel-border);
+      padding-left: 8px;
+    }
+  
+  examples:
+    - name: Planning Items
+      description: Hierarchical list of planning items
+      props:
+        items:
+          - id: "epic-1"
+            type: "epic"
+            status: "in-progress"
+            priority: "high"
+            summary: "Implement Schema UI"
+            projectNumber: "E-001"
+            children: ["story-1", "story-2"]
+      code: |
+        <accordion-list items="{{planItems}}" expandedItems="{{expanded}}"></accordion-list>

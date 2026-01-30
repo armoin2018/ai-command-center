@@ -1,0 +1,158 @@
+apiVersion: v1
+kind: Component
+metadata:
+  name: Status Badges
+  id: status-badges
+  description: Clickable status badge grid for filtering items by status
+  version: 1.0.0
+  category: data-display
+  tags: [status, filter, badge, interactive]
+
+spec:
+  template: |
+    <div class="status-badges" style="position:relative;">
+      {{#if showComponentRef}}
+      <span class="component-ref visible" style="top:-10px;right:0;" data-ref="{{componentRef}}">{{componentRef}}</span>
+      {{/if}}
+      {{#each statuses}}
+      <div class="status-badge {{#if this.active}}active{{/if}}" 
+           style="border-color:{{this.color}};" 
+           onclick="{{onclick this.id}}">
+        <div class="count" style="background-color:{{this.color}};">{{this.count}}</div>
+        <div class="label">{{this.label}}</div>
+      </div>
+      {{/each}}
+    </div>
+  
+  props:
+    statuses:
+      type: array
+      required: true
+      description: Array of status objects with id, label, color, and sourceKeys
+    
+    selectable:
+      type: boolean
+      default: true
+      description: Allow clicking badges to filter
+    
+    multiSelect:
+      type: boolean
+      default: true
+      description: Allow multiple badge selection
+    
+    showComponentRef:
+      type: boolean
+      default: false
+      description: Show component reference label
+    
+    componentRef:
+      type: string
+      default: "SEC-STATUS-BADGES"
+      description: Component reference identifier
+  
+  events:
+    - name: statusToggle
+      description: Fired when a status badge is clicked
+      payload:
+        statusId: string
+        active: boolean
+    
+    - name: selectionChange
+      description: Fired when selection changes
+      payload:
+        activeStatuses: array
+  
+  styles: |
+    .status-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .status-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border: 2px solid;
+      background: transparent;
+      transition: background-color 0.15s, transform 0.1s;
+    }
+    
+    .status-badge:hover { transform: scale(1.02); }
+    
+    .status-badge.active {
+      background-color: var(--vscode-list-activeSelectionBackground);
+    }
+    
+    .status-badge .count {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 12px;
+      color: white;
+    }
+    
+    .status-badge .label {
+      font-size: 8px;
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+  
+  examples:
+    - name: Basic Usage
+      description: Simple status badges with counts
+      props:
+        statuses:
+          - id: todo
+            label: TODO
+            color: "#eab308"
+            count: 5
+          - id: done
+            label: DONE
+            color: "#22c55e"
+            count: 12
+      code: |
+        <status-badges 
+          :statuses="statusData"
+          :selectable="true"
+          @statusToggle="handleToggle">
+        </status-badges>
+    
+    - name: With Multi-Select
+      description: Allow selecting multiple statuses
+      props:
+        statuses:
+          - id: todo
+            label: TODO
+            color: "#eab308"
+            count: 5
+            active: true
+          - id: in-progress
+            label: IN PROGRESS
+            color: "#14b8a6"
+            count: 3
+            active: true
+          - id: done
+            label: DONE
+            color: "#22c55e"
+            count: 12
+            active: false
+        multiSelect: true
+      code: |
+        <status-badges 
+          :statuses="statusData"
+          :multiSelect="true"
+          @selectionChange="handleSelectionChange">
+        </status-badges>

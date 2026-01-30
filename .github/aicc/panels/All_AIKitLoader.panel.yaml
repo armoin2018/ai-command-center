@@ -1,0 +1,261 @@
+# AI Kit Loader Panel - Available to all agents
+# Manages downloading and installing AI Kit repositories
+
+panel:
+  id: ai-kit-loader
+  name: AI Kit Loader
+  scope: all
+  icon: package
+  order: 2
+  enabled: true
+  description: Download and install AI Kits from GitHub repositories
+
+layout:
+  type: split-horizontal
+  sections:
+    - id: available
+      name: Available AI Kits
+      flex: 1
+      collapsible: true
+      collapsed: false
+    - id: installed
+      name: Installed AI Kits
+      flex: 1
+      collapsible: true
+      collapsed: false
+
+components:
+  # Repository Selector - Pick a repo and branch
+  - type: repo-selector
+    section: available
+    order: 1
+    config:
+      label: "AI Kit Repository"
+      showBranch: true
+      defaultBranch: dev
+      allowCustom: true
+      recentRepos: 5
+      presets:
+        - name: AI-ley Official
+          repo: armoin2018/ai-ley
+          branch: dev
+          description: Official AI-ley development toolkit
+    dataSource:
+      type: mcp
+      endpoint: /api/ai-kits/repos
+      refreshTrigger: repo-update
+
+  # Available Kits List - Show folders from inventory
+  - type: accordion-list
+    section: available
+    order: 2
+    config:
+      hierarchy:
+        - type: category
+          icon: folder
+          expandable: true
+          defaultExpanded: true
+        - type: kit
+          icon: package
+          expandable: false
+          parent: category
+      displayFields:
+        title: name
+        subtitle: description
+        badge: targetPath
+      sortOptions:
+        - field: name
+          label: Name
+        - field: category
+          label: Category
+      defaultSort: name
+      clickAction: select
+      multiSelect: true
+      contextMenu: true
+    dataSource:
+      type: mcp
+      endpoint: /api/ai-kits/available
+      refreshTrigger: repo-change
+
+  # Target Agent System Selector
+  - type: select-dropdown
+    section: available
+    order: 3
+    config:
+      label: Target Agent System
+      placeholder: "Select target agent..."
+      options:
+        - value: generic
+          label: Generic (Manual)
+        - value: githubCopilot
+          label: GitHub Copilot
+        - value: claude
+          label: Claude (Anthropic)
+        - value: gemini
+          label: Gemini (Google)
+        - value: cursor
+          label: Cursor
+        - value: windsurf
+          label: Windsurf
+        - value: cline
+          label: Cline
+        - value: roo
+          label: Roo
+        - value: codex
+          label: Codex (OpenAI)
+        - value: opencode
+          label: OpenCode
+        - value: metis
+          label: Metis
+      defaultValue: githubCopilot
+      showIcons: true
+    dataSource:
+      type: static
+
+  # Action Buttons for Available
+  - type: button-group
+    section: available
+    order: 4
+    config:
+      layout: horizontal
+      align: right
+      buttons:
+        - id: preview
+          label: Preview
+          icon: eye
+          style: secondary
+          command: aicc.aiKits.preview
+          condition: item-selected
+        - id: install
+          label: Install Selected
+          icon: cloud-download
+          style: primary
+          command: aicc.aiKits.install
+          condition: item-selected
+
+  # Installed Kits List
+  - type: installed-list
+    section: installed
+    order: 1
+    config:
+      displayFields:
+        title: name
+        subtitle: installedPath
+        badge: version
+        status: status
+      statusColors:
+        active: "#28a745"
+        outdated: "#fd7e14"
+        error: "#dc3545"
+      itemActions:
+        - id: update
+          icon: sync
+          tooltip: Check for updates
+          command: aicc.aiKits.checkUpdate
+        - id: uninstall
+          icon: trash
+          tooltip: Uninstall
+          command: aicc.aiKits.uninstall
+          confirm: true
+        - id: open
+          icon: folder-opened
+          tooltip: Open in Explorer
+          command: aicc.aiKits.openFolder
+      sortOptions:
+        - field: name
+          label: Name
+        - field: installedAt
+          label: Install Date
+        - field: status
+          label: Status
+      defaultSort: name
+    dataSource:
+      type: mcp
+      endpoint: /api/ai-kits/installed
+      refreshTrigger: kit-install
+
+  # Installed Kit Info Panel
+  - type: info-display
+    section: installed
+    order: 2
+    config:
+      showWhen: item-selected
+      fields:
+        - id: name
+          label: Name
+          icon: package
+        - id: version
+          label: Version
+          icon: versions
+        - id: sourceRepo
+          label: Source
+          icon: github
+        - id: sourceBranch
+          label: Branch
+          icon: git-branch
+        - id: installedAt
+          label: Installed
+          icon: calendar
+          format: datetime
+        - id: installedPath
+          label: Location
+          icon: folder
+          copyable: true
+        - id: fileCount
+          label: Files
+          icon: files
+        - id: description
+          label: Description
+          icon: info
+          multiline: true
+
+  # Action Buttons for Installed
+  - type: button-group
+    section: installed
+    order: 3
+    config:
+      layout: horizontal
+      align: right
+      buttons:
+        - id: update-all
+          label: Update All
+          icon: sync
+          style: secondary
+          command: aicc.aiKits.updateAll
+        - id: export
+          label: Export Config
+          icon: export
+          style: link
+          command: aicc.aiKits.exportConfig
+
+actions:
+  - id: add-repo
+    label: Add Repository
+    icon: add
+    command: aicc.aiKits.addRepo
+    position: header
+    style: primary
+
+  - id: refresh-repos
+    label: Refresh
+    icon: refresh
+    command: aicc.aiKits.refreshRepos
+    position: header
+    style: link
+
+  - id: settings
+    label: Settings
+    icon: gear
+    command: aicc.aiKits.openSettings
+    position: header
+    style: link
+
+events:
+  onLoad: aicc.aiKits.loadInventory
+  onRefresh: aicc.aiKits.refreshInventory
+  onError: aicc.showError
+
+permissions:
+  - ai-kits:read
+  - ai-kits:write
+  - git:read

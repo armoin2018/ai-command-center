@@ -1,0 +1,132 @@
+apiVersion: v1
+kind: Panel
+metadata:
+  name: AI Command Center Main Panel
+  id: aicc-main
+  description: Primary panel for AI Command Center with tabbed interface
+  version: 1.0.0
+  icon: layers
+  labels:
+    category: main
+    surface: secondary
+  annotations:
+    sourceFile: src/views/secondaryPanelProvider.ts
+    componentRef: SECONDARY-PANEL
+
+spec:
+  layout:
+    type: tabs
+    gap: 0px
+  
+  header:
+    show: true
+    title: AI Command Center
+    actions:
+      - id: settings
+        type: button
+        icon: gear
+        tooltip: Settings
+        command: workbench.action.openSettings
+        style: secondary
+      
+      - id: toggle-component-refs
+        type: toggle
+        icon: tag
+        tooltip: Toggle Component References
+        command: aicc.toggleComponentRefs
+        style: secondary
+      
+      - id: debug
+        type: button
+        icon: bug
+        tooltip: Debug
+        command: workbench.action.toggleDevTools
+        style: secondary
+      
+      - id: help
+        type: button
+        icon: question
+        tooltip: Help
+        command: aicc.showHelp
+        style: secondary
+  
+  tabs:
+    - tabRef: .github/aicc/tabs/All_Planning.yaml
+      order: 0
+    
+    - tabRef: .github/aicc/tabs/All_AIKitLoader.yaml
+      order: 1
+    
+    - tabRef: .github/aicc/tabs/All_ComponentCatalog.yaml
+      order: 2
+      condition: "settings.developerMode === true"
+  
+  footer:
+    show: true
+    leftActions:
+      - id: agent-select
+        type: select
+        label: Agent
+        tooltip: Select active AI agent
+        options:
+          - value: orchestrator
+            label: AI-ley Orchestrator
+          - value: architect
+            label: Architect
+          - value: developer
+            label: Developer
+          - value: reviewer
+            label: Reviewer
+          - value: tester
+            label: Tester
+        command: aicc.setActiveAgent
+        style: secondary
+    
+    rightActions:
+      - id: save-all
+        type: button
+        label: "Save All ({{pendingChanges}})"
+        icon: save
+        tooltip: Save All Changes
+        command: aicc.saveAllChanges
+        style: success
+      
+      - id: run-next
+        type: button
+        label: Run Next
+        icon: play
+        tooltip: Run Next Task
+        command: aicc.ailey.runNext
+        style: primary
+  
+  dataBindings:
+    planDocument:
+      source: command
+      endpoint: aicc.getPlanDocument
+      cache:
+        enabled: true
+        ttl: 30
+    
+    statusCounts:
+      source: command
+      endpoint: aicc.getStatusCounts
+      cache:
+        enabled: true
+        ttl: 30
+    
+    componentRefsVisible:
+      source: state
+      endpoint: ui.showComponentReferences
+  
+  theme:
+    cssVariables:
+      --header-height: 48px
+      --tabs-height: 36px
+      --footer-height: 40px
+      --status-todo: "#eab308"
+      --status-open: "#3b82f6"
+      --status-done: "#22c55e"
+      --status-in-progress: "#14b8a6"
+      --status-ready: "#f97316"
+      --status-error: "#ff0000"
+      --status-hold: "#6b7280"

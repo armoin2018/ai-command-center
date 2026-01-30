@@ -2,7 +2,7 @@
   "name": "ai-command-center",
   "displayName": "AI Command Center",
   "description": "Centralize AI-powered development workflows with integrated planning, instruction management, and external service integrations",
-  "version": "1.0.40",
+  "version": "1.1.15",
   "publisher": "ai-command-center",
   "license": "MIT",
   "engines": {
@@ -33,23 +33,75 @@
     "commands": [
       {
         "command": "aicc.createEpic",
-        "title": "AI Command Center: Create Epic"
+        "title": "AI Command Center: Create Epic",
+        "icon": "$(plus)",
+        "category": "AI Command Center"
       },
       {
         "command": "aicc.createStory",
-        "title": "AI Command Center: Create Story"
+        "title": "AI Command Center: Create Story",
+        "icon": "$(file-add)",
+        "category": "AI Command Center"
       },
       {
         "command": "aicc.createTask",
-        "title": "AI Command Center: Create Task"
+        "title": "AI Command Center: Create Task",
+        "icon": "$(checklist)",
+        "category": "AI Command Center"
       },
       {
         "command": "aicc.openPlanningPanel",
-        "title": "AI Command Center: Open Planning Panel"
+        "title": "AI Command Center: Open Planning Panel",
+        "icon": "$(layout)"
       },
       {
         "command": "aicc.exportToJira",
         "title": "AI Command Center: Export to Jira"
+      },
+      {
+        "command": "aicc.planning.refresh",
+        "title": "Refresh",
+        "icon": "$(sync)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.edit",
+        "title": "Edit",
+        "icon": "$(pencil)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.delete",
+        "title": "Delete",
+        "icon": "$(close)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.copyId",
+        "title": "Copy ID",
+        "icon": "$(copy)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.copyAsMarkdown",
+        "title": "Copy as Markdown",
+        "icon": "$(file-code)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.setStatusNotStarted",
+        "title": "Not Started",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.setStatusInProgress",
+        "title": "In Progress",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.planning.setStatusDone",
+        "title": "Done",
+        "category": "AI Command Center"
       },
       {
         "command": "aicc.config.validate",
@@ -200,8 +252,8 @@
         "title": "AI Command Center: Generate SSL Certificate for MCP Server"
       },
       {
-        "command": "aicc.mcp.generateClaudeConfig",
-        "title": "AI Command Center: Generate Claude Desktop Config"
+        "command": "aicc.mcp.exportConfig",
+        "title": "AI Command Center: Export MCP Configuration"
       },
       {
         "command": "aicc.jira.initialize",
@@ -242,6 +294,129 @@
       {
         "command": "aicc.jira.disable",
         "title": "AI Command Center: Disable Jira Integration"
+      },
+      {
+        "command": "aicc.generateAssetTreeMap",
+        "title": "AI Command Center: Generate Asset Tree Map",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showAssetStats",
+        "title": "AI Command Center: Show Asset Statistics",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.exportAssetTreeJson",
+        "title": "AI Command Center: Export Asset Tree as JSON",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.runSyntheticTests",
+        "title": "AI Command Center: Run Synthetic Tests",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.quickHealthCheck",
+        "title": "AI Command Center: Quick Health Check",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.openSettings",
+        "title": "AI Command Center: Open Settings",
+        "icon": "$(gear)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showDebugPanel",
+        "title": "AI Command Center: Show Debug Panel",
+        "icon": "$(bug)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showHelp",
+        "title": "AI Command Center: Show Help",
+        "icon": "$(question)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.saveAllChanges",
+        "title": "AI Command Center: Save All Changes",
+        "icon": "$(save-all)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.runNextItem",
+        "title": "AI Command Center: Run Next Item",
+        "icon": "$(play)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.updateItemStatus",
+        "title": "AI Command Center: Update Item Status",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.runItem",
+        "title": "AI Command Center: Run Item",
+        "icon": "$(play-circle)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.editItem",
+        "title": "AI Command Center: Edit Item",
+        "icon": "$(pencil)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showItemInfo",
+        "title": "AI Command Center: Show Item Info",
+        "icon": "$(info)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showItemConnections",
+        "title": "AI Command Center: Show Item Connections",
+        "icon": "$(git-branch)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showItemRepo",
+        "title": "AI Command Center: Show Item Repository",
+        "icon": "$(repo)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showItemComments",
+        "title": "AI Command Center: Show Item Comments",
+        "icon": "$(comment)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.installAIKit",
+        "title": "AI Command Center: Install AI Kit",
+        "icon": "$(cloud-download)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.uninstallAIKit",
+        "title": "AI Command Center: Uninstall AI Kit",
+        "icon": "$(trash)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.refreshAIKits",
+        "title": "AI Command Center: Refresh AI Kits",
+        "icon": "$(sync)",
+        "category": "AI Command Center"
+      }
+    ],
+    "chatParticipants": [
+      {
+        "id": "aicc.agent",
+        "fullName": "AI Command Center Agent",
+        "name": "aicc",
+        "description": "AI Command Center planning and instruction management agent",
+        "isSticky": true
       }
     ],
     "viewsContainers": {
@@ -249,7 +424,14 @@
         {
           "id": "aicc-sidebar",
           "title": "AI Command Center",
-          "icon": "$(rocket)"
+          "icon": "$(project)"
+        }
+      ],
+      "panel": [
+        {
+          "id": "aicc-panel",
+          "title": "AI Command Center",
+          "icon": "$(layers)"
         }
       ]
     },
@@ -257,21 +439,114 @@
       "aicc-sidebar": [
         {
           "id": "aicc.planningTreeView",
-          "name": "Planning Tree",
-          "icon": "$(folder-library)",
-          "contextualTitle": "AI Command Center"
+          "name": "Planning",
+          "icon": "$(list-tree)",
+          "contextualTitle": "AI Command Center Planning"
+        }
+      ],
+      "aicc-panel": [
+        {
+          "id": "aicc.secondaryPanel",
+          "type": "webview",
+          "name": "Planning Panel",
+          "icon": "$(layers)",
+          "contextualTitle": "AI Command Center Panel",
+          "visibility": "visible"
         }
       ]
     },
+    "viewsWelcome": [
+      {
+        "view": "aicc.planningTreeView",
+        "contents": "Welcome to AI Command Center!\n\nCreate your first Epic to get started with planning.\n[Create Epic](command:aicc.createEpic)\n\nOr open the full planning panel:\n[Open Planning Panel](command:aicc.openPlanningPanel)"
+      }
+    ],
     "menus": {
       "view/title": [
         {
+          "command": "aicc.createEpic",
+          "when": "view == aicc.planningTreeView",
+          "group": "navigation@1"
+        },
+        {
           "command": "aicc.openPlanningPanel",
           "when": "view == aicc.planningTreeView",
-          "group": "navigation"
+          "group": "navigation@2"
+        },
+        {
+          "command": "aicc.planning.refresh",
+          "when": "view == aicc.planningTreeView",
+          "group": "navigation@3"
+        },
+        {
+          "command": "aicc.config.showHealth",
+          "when": "view == aicc.planningTreeView",
+          "group": "1_actions@1"
+        },
+        {
+          "command": "aicc.runSyntheticTests",
+          "when": "view == aicc.planningTreeView",
+          "group": "1_actions@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "aicc.planning.edit",
+          "when": "view == aicc.planningTreeView && viewItem =~ /epic|story|task/",
+          "group": "1_edit@1"
+        },
+        {
+          "command": "aicc.planning.delete",
+          "when": "view == aicc.planningTreeView && viewItem =~ /epic|story|task/",
+          "group": "1_edit@2"
+        },
+        {
+          "submenu": "aicc.planning.changeStatus",
+          "when": "view == aicc.planningTreeView && viewItem =~ /epic|story|task/",
+          "group": "2_status@1"
+        },
+        {
+          "command": "aicc.createStory",
+          "when": "view == aicc.planningTreeView && viewItem == epic",
+          "group": "3_create@1"
+        },
+        {
+          "command": "aicc.createTask",
+          "when": "view == aicc.planningTreeView && viewItem == story",
+          "group": "3_create@1"
+        },
+        {
+          "command": "aicc.planning.copyId",
+          "when": "view == aicc.planningTreeView && viewItem =~ /epic|story|task/",
+          "group": "4_clipboard@1"
+        },
+        {
+          "command": "aicc.planning.copyAsMarkdown",
+          "when": "view == aicc.planningTreeView && viewItem =~ /epic|story|task/",
+          "group": "4_clipboard@2"
+        }
+      ],
+      "aicc.planning.changeStatus": [
+        {
+          "command": "aicc.planning.setStatusNotStarted",
+          "group": "status@1"
+        },
+        {
+          "command": "aicc.planning.setStatusInProgress",
+          "group": "status@2"
+        },
+        {
+          "command": "aicc.planning.setStatusDone",
+          "group": "status@3"
         }
       ]
     },
+    "submenus": [
+      {
+        "id": "aicc.planning.changeStatus",
+        "label": "Change Status"
+      }
+    ],
     "keybindings": [
       {
         "command": "aicc.createEpic",
@@ -649,16 +924,25 @@
           "default": true,
           "description": "Confirm destructive actions (delete epic/story/task)",
           "order": 52
+        },
+        "aicc.ui.showComponentReferences": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show component reference labels on UI elements (useful for development and debugging)",
+          "order": 60
         }
       }
     }
   },
   "scripts": {
-    "compile": "npm run compile:extension && npm run compile:webview && npm run copy:defaults",
+    "compile": "npm run compile:extension && npm run compile:webview && npm run copy:assets",
     "compile:extension": "webpack --mode production --config webpack.extension.config.js",
     "compile:extension:dev": "webpack --mode development --config webpack.extension.config.js",
     "compile:webview": "cd webview && npm run build",
     "copy:defaults": "mkdir -p dist/defaults && cp src/defaults/aicc.yaml dist/defaults/ 2>/dev/null || true",
+    "copy:schemas": "mkdir -p dist/.github/aicc/schemas && cp -r .github/aicc/schemas/*.json dist/.github/aicc/schemas/ 2>/dev/null || true",
+    "copy:swagger": "mkdir -p dist/swagger-ui && cp -r node_modules/swagger-ui-dist/*.{js,css,map,json,png} dist/swagger-ui/ 2>/dev/null || true",
+    "copy:assets": "npm run copy:defaults && npm run copy:schemas && npm run copy:swagger",
     "watch": "webpack --watch --mode development --config webpack.extension.config.js",
     "watch:webview": "cd webview && npm run watch",
     "pretest": "npm run compile",
@@ -674,10 +958,10 @@
     "@types/vscode": "^1.85.0",
     "@types/winston": "^2.4.4",
     "@types/ws": "^8.5.10",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "@vscode/vsce": "^2.22.0",
-    "eslint": "^8.54.0",
+    "eslint": "^9.39.2",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.0",
     "webpack": "^5.90.0",
@@ -687,6 +971,7 @@
     "@modelcontextprotocol/sdk": "^1.25.2",
     "axios": "^1.6.5",
     "js-yaml": "^4.1.1",
+    "swagger-ui-dist": "^5.11.0",
     "winston": "^3.19.0",
     "ws": "^8.16.0"
   }

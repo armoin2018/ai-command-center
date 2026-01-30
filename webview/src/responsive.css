@@ -1,0 +1,347 @@
+/* Mobile Responsive Design */
+/* Breakpoints: mobile (< 768px), tablet (768px - 1024px), desktop (> 1024px) */
+
+/* Mobile styles (< 768px) */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    /* Toolbar adjustments */
+    .toolbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .toolbar-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .toolbar button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Filter bar mobile */
+    .filter-bar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+        width: 100%;
+    }
+
+    /* Tree view mobile */
+    .tree-container {
+        overflow-x: auto;
+    }
+
+    .tree-node-content {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .tree-node-metadata {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    /* Details panel mobile */
+    .details-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .details-panel-header {
+        padding: 12px;
+    }
+
+    .details-panel-content {
+        padding: 12px;
+    }
+
+    /* Stats panel mobile */
+    .stats-panel {
+        padding: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Context menu mobile */
+    .context-menu {
+        min-width: 200px;
+        max-width: 90vw;
+    }
+
+    /* Shortcuts panel mobile */
+    .shortcuts-panel-content {
+        max-width: 95vw;
+        max-height: 90vh;
+        padding: 16px;
+    }
+
+    .shortcuts-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Theme selector mobile */
+    .theme-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .theme-selector__select {
+        width: 100%;
+    }
+
+    /* Settings bar mobile */
+    .settings-bar {
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* Touch-friendly tap targets */
+    .tree-node-toggle,
+    button,
+    .tree-node-content {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Hide less critical elements on mobile */
+    .tree-node-icon {
+        display: none;
+    }
+}
+
+/* Tablet styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    /* Two-column layout for stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust details panel width */
+    .details-panel {
+        max-width: 500px;
+    }
+
+    /* Tree node spacing */
+    .tree-node-content {
+        padding: 8px 12px;
+    }
+}
+
+/* Desktop optimizations (> 1024px) */
+@media (min-width: 1025px) {
+    /* Multi-column stats */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Side-by-side layout option */
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .main.single-column {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hover effects for desktop */
+    .tree-node:hover {
+        background-color: var(--vscode-list-hoverBackground);
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .shortcuts-panel-content {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .details-panel {
+        max-height: 90vh;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger tap targets */
+    .tree-node-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    /* Disable hover effects */
+    .tree-node:hover,
+    button:hover {
+        background-color: inherit;
+        opacity: 1;
+    }
+
+    /* Show touch feedback instead */
+    .tree-node:active {
+        background-color: var(--vscode-list-activeSelectionBackground);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    /* Larger scroll indicators */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        min-height: 40px;
+    }
+}
+
+/* High DPI display adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Crisper borders and shadows */
+    .tree-node,
+    .details-panel,
+    .context-menu {
+        border-width: 0.5px;
+    }
+
+    /* Slightly larger fonts for readability */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Keep essential transitions for feedback */
+    button:active,
+    .tree-node:active {
+        transition-duration: 0.1s !important;
+    }
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --aicc-accent-color: #0e639c;
+        --aicc-accent-hover: #1177bb;
+    }
+
+    /* Improve contrast for dark mode */
+    .tree-node-status {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Light mode specific adjustments */
+@media (prefers-color-scheme: light) {
+    body.theme-auto {
+        --aicc-accent-color: #007acc;
+        --aicc-accent-hover: #005a9e;
+    }
+
+    /* Improve contrast for light mode */
+    .tree-node-status {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Print-specific mobile adjustments */
+@media print and (max-width: 767px) {
+    .container {
+        padding: 5mm;
+    }
+
+    .tree-node {
+        page-break-inside: avoid;
+    }
+
+    /* Force single column */
+    .main {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Collapsible panels for mobile */
+@media (max-width: 767px) {
+    .stats-panel {
+        max-height: 300px;
+        overflow-y: auto;
+        transition: max-height 0.3s ease;
+    }
+
+    .stats-panel.collapsed {
+        max-height: 50px;
+    }
+
+    .stats-panel-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .stats-panel-toggle {
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .stats-panel.collapsed .stats-panel-toggle {
+        transform: rotate(180deg);
+    }
+
+    /* Stackable cards */
+    .details-panel-content .form-group {
+        margin-bottom: 16px;
+    }
+
+    .details-panel-content label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .details-panel-content input,
+    .details-panel-content textarea,
+    .details-panel-content select {
+        width: 100%;
+    }
+}

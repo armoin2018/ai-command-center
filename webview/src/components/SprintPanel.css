@@ -1,0 +1,516 @@
+.sprint-panel {
+    padding: 20px;
+    background: var(--vscode-editor-background);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sprint-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.active-sprint-badge {
+    padding: 6px 12px;
+    background: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.velocity-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 4px;
+}
+
+.velocity-label {
+    font-size: 13px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.velocity-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--vscode-textLink-foreground);
+}
+
+.btn-primary {
+    padding: 8px 16px;
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--vscode-button-hoverBackground);
+}
+
+.sprint-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.sprint-tabs button {
+    padding: 10px 16px;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sprint-tabs button:hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+}
+
+.sprint-tabs button.active {
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.sprint-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sprint-board {
+    height: 100%;
+}
+
+.sprints-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.sprint-card {
+    background: var(--vscode-panel-background);
+    border: 2px solid var(--vscode-panel-border);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sprint-card.active {
+    border-color: var(--vscode-textLink-foreground);
+}
+
+.sprint-card.completed {
+    opacity: 0.7;
+}
+
+.sprint-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.sprint-card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-badge.planning {
+    background: #3b82f6;
+    color: white;
+}
+
+.status-badge.active {
+    background: #22c55e;
+    color: white;
+}
+
+.status-badge.completed {
+    background: #6b7280;
+    color: white;
+}
+
+.sprint-goal {
+    font-size: 13px;
+    color: var(--vscode-descriptionForeground);
+    font-style: italic;
+}
+
+.sprint-dates {
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.sprint-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--vscode-panel-border);
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--vscode-input-background);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--vscode-button-background);
+    transition: width 0.3s;
+}
+
+.completion-rate {
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    text-align: center;
+}
+
+.health-indicator {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.health-indicator.on-track {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.health-indicator.at-risk {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.health-indicator.behind {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.complete-sprint-btn {
+    padding: 8px;
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.complete-sprint-btn:hover {
+    background: var(--vscode-button-hoverBackground);
+}
+
+.burndown-chart,
+.velocity-chart,
+.sprint-retrospective {
+    padding: 20px;
+    background: var(--vscode-panel-background);
+    border-radius: 8px;
+}
+
+.burndown-chart h3,
+.velocity-chart h3,
+.sprint-retrospective h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.burndown-chart canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 4px;
+}
+
+.velocity-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: var(--vscode-input-background);
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--vscode-textLink-foreground);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.velocity-bars {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    min-height: 200px;
+}
+
+.velocity-bar-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.velocity-bar {
+    width: 100%;
+    height: 180px;
+    background: var(--vscode-input-background);
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.bar-planned {
+    background: rgba(59, 130, 246, 0.3);
+    border: 2px solid #3b82f6;
+}
+
+.bar-completed {
+    background: #22c55e;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bar-label {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground);
+    text-align: center;
+}
+
+.bar-values {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.retro-section {
+    margin-bottom: 24px;
+}
+
+.retro-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+}
+
+.retro-section textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 13px;
+    resize: vertical;
+}
+
+.retro-section textarea:focus {
+    outline: none;
+    border-color: var(--vscode-focusBorder);
+}
+
+.sprint-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.sprint-form {
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.sprint-form h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--vscode-focusBorder);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--vscode-panel-border);
+}
+
+.form-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.form-actions button:not(.btn-primary) {
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+}
+
+.form-actions button:not(.btn-primary):hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.empty-state p {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .sprint-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sprint-tabs {
+        flex-wrap: wrap;
+    }
+
+    .sprints-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .velocity-bars {
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,118 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: item-edit-form
+  name: Item Edit Form
+  description: Form for editing planning item properties
+  category: Input
+  tags: [form, edit, input]
+  version: 1.0.0
+spec:
+  props:
+    item:
+      type: object
+      required: true
+      description: Item to edit
+    showInstructions:
+      type: boolean
+      default: true
+      description: Show instructions and personas fields
+    showAgent:
+      type: boolean
+      default: true
+      description: Show agent selector
+  
+  events:
+    - name: save
+      description: Emitted when save button clicked
+      payload:
+        itemId: string
+        data: object
+  
+  template: |
+    <div class="edit-form">
+      <div class="form-group">
+        <label>Summary</label>
+        <input type="text" class="form-control" id="edit-summary-{{item.id}}" value="{{item.summary}}">
+      </div>
+      
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" id="edit-desc-{{item.id}}" rows="3">{{item.description}}</textarea>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group" style="flex:1">
+          <label>Assignee</label>
+          <input type="text" class="form-control" id="edit-assignee-{{item.id}}" value="{{item.assignee}}">
+        </div>
+        
+        {{#if showAgent}}
+        <div class="form-group" style="flex:1">
+          <label>Agent</label>
+          <select class="form-control" id="edit-agent-{{item.id}}">
+            <option value="orchestrator">AI-ley Orchestrator</option>
+            <option value="architect">Architect</option>
+            <option value="developer">Developer</option>
+            <option value="reviewer">Reviewer</option>
+            <option value="tester">Tester</option>
+          </select>
+        </div>
+        {{/if}}
+      </div>
+      
+      {{#if showInstructions}}
+      <div class="form-group">
+        <label>Instructions (comma separated paths)</label>
+        <input type="text" class="form-control" id="edit-instructions-{{item.id}}" placeholder=".github/ai-ley/instructions/coding.md" value="{{item.instructions}}">
+      </div>
+      
+      <div class="form-group">
+        <label>Personas (comma separated paths)</label>
+        <input type="text" class="form-control" id="edit-personas-{{item.id}}" placeholder=".github/ai-ley/personas/architect.md" value="{{item.personas}}">
+      </div>
+      {{/if}}
+      
+      <button class="footer-btn primary" onclick="saveItemEdit('{{item.id}}')">
+        <span class="codicon codicon-save"></span> Save
+      </button>
+    </div>
+  
+  styles: |
+    .edit-form { }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      color: var(--vscode-descriptionForeground);
+      margin-bottom: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid var(--vscode-input-border);
+      background: var(--vscode-input-background);
+      color: var(--vscode-input-foreground);
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+  
+  examples:
+    - name: Edit Epic
+      description: Edit form for epic item
+      props:
+        item:
+          id: "epic-1"
+          summary: "Implement Schema UI"
+          description: "Create metadata-driven composable UI"
+          assignee: "John Doe"
+        showInstructions: true
+        showAgent: true
+      code: |
+        <item-edit-form item="{{currentItem}}" showInstructions="true"></item-edit-form>

@@ -1,0 +1,218 @@
+/* Planning Tree Component Styles */
+
+.planning-tree-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--vscode-editor-background, #fff);
+    color: var(--vscode-editor-foreground, #333);
+}
+
+.tree-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--vscode-panel-border, #e0e0e0);
+}
+
+.tree-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tree-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.tree-stats {
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--vscode-panel-border, #e0e0e0);
+}
+
+.tree-stats .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+}
+
+.tree-loading,
+.tree-error {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tree-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.tree-root,
+.tree-children {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tree-children {
+    padding-left: 1.5rem;
+    display: none;
+}
+
+.tree-node.expanded > .tree-children {
+    display: block;
+}
+
+.tree-node-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.tree-node-content:hover {
+    background-color: var(--vscode-list-hoverBackground, #f3f3f3);
+}
+
+.tree-node.selected > .tree-node-content {
+    background-color: var(--vscode-list-activeSelectionBackground, #0078d4);
+    color: var(--vscode-list-activeSelectionForeground, #fff);
+}
+
+.tree-toggle {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.tree-node.expanded > .tree-node-content > .tree-toggle {
+    transform: rotate(90deg);
+}
+
+.tree-node.leaf > .tree-node-content > .tree-toggle {
+    visibility: hidden;
+}
+
+.tree-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tree-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tree-status {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.tree-node-actions {
+    display: none;
+    gap: 0.125rem;
+}
+
+.tree-node-content:hover .tree-node-actions {
+    display: flex;
+}
+
+.tree-node-actions .btn {
+    padding: 0.125rem 0.25rem;
+    line-height: 1;
+    color: var(--vscode-foreground, #333);
+}
+
+.tree-node-actions .btn:hover {
+    background-color: var(--vscode-toolbar-hoverBackground, rgba(0,0,0,0.1));
+    color: var(--vscode-foreground, #333);
+}
+
+/* Ensure buttons are visible when tree node is selected */
+.tree-node.selected .tree-node-actions .btn {
+    color: var(--vscode-list-activeSelectionForeground, #fff);
+}
+
+.tree-node.selected .tree-node-actions .btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tree-empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Node type specific styles */
+.tree-node[data-node-type="epic"] > .tree-node-content {
+    font-weight: 600;
+}
+
+.tree-node[data-node-type="epic"] .tree-icon::before {
+    content: "📌";
+}
+
+.tree-node[data-node-type="story"] .tree-icon::before {
+    content: "📖";
+}
+
+.tree-node[data-node-type="task"] .tree-icon::before {
+    content: "☑️";
+}
+
+/* Status badges */
+.tree-status.status-todo {
+    background-color: #6c757d;
+}
+
+.tree-status.status-ready {
+    background-color: #0dcaf0;
+}
+
+.tree-status.status-in-progress {
+    background-color: #fd7e14;
+}
+
+.tree-status.status-review {
+    background-color: #6f42c1;
+}
+
+.tree-status.status-done {
+    background-color: #198754;
+}
+
+/* Drag and drop */
+.tree-node-content.drag-over {
+    border: 2px dashed var(--vscode-focusBorder, #0078d4);
+    background-color: var(--vscode-list-hoverBackground, #f3f3f3);
+}
+
+.tree-node-content.dragging {
+    opacity: 0.5;
+}

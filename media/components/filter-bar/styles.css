@@ -1,0 +1,134 @@
+/* Filter Bar Component Styles */
+
+.filter-bar {
+    background: var(--vscode-sideBar-background, #f5f5f5);
+    border: 1px solid var(--vscode-panel-border, #e0e0e0);
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.filter-bar-header h6 {
+    font-weight: 600;
+    color: var(--vscode-foreground, #333);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-actions .btn {
+    padding: 0.125rem 0.25rem;
+    line-height: 1;
+    font-size: 0.875rem;
+}
+
+.filter-bar-content {
+    margin-top: 1rem;
+}
+
+.filter-bar-content.collapsed {
+    display: none;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--vscode-foreground, #333);
+}
+
+.filter-search {
+    background: var(--vscode-input-background, #fff);
+    color: var(--vscode-input-foreground, #333);
+    border: 1px solid var(--vscode-input-border, #ccc);
+}
+
+.filter-search:focus {
+    border-color: var(--vscode-focusBorder, #007fd4);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--vscode-focusBorder, #007fd4);
+}
+
+.filter-type {
+    background: var(--vscode-input-background, #fff);
+    color: var(--vscode-input-foreground, #333);
+    border: 1px solid var(--vscode-input-border, #ccc);
+}
+
+/* Tagify Integration Styles */
+.tagify {
+    --tags-border-color: var(--vscode-input-border, #ccc);
+    --tag-bg: var(--vscode-button-secondaryBackground, #e0e0e0);
+    --tag-text-color: var(--vscode-button-secondaryForeground, #333);
+    --tag-hover: var(--vscode-button-secondaryHoverBackground, #d0d0d0);
+    --tag-remove-bg: var(--vscode-errorForeground, #dc3545);
+}
+
+.tagify__input {
+    background: var(--vscode-input-background, #fff);
+    color: var(--vscode-input-foreground, #333);
+}
+
+/* Active Filters Display */
+.active-filters {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--vscode-panel-border, #e0e0e0);
+}
+
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--vscode-button-secondaryBackground, #e0e0e0);
+    color: var(--vscode-button-secondaryForeground, #333);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.filter-chip-label {
+    font-weight: 600;
+}
+
+.filter-chip-value {
+    opacity: 0.8;
+}
+
+.filter-chip-remove {
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+    color: inherit;
+    opacity: 0.6;
+    margin-left: 0.25rem;
+}
+
+.filter-chip-remove:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-bar {
+        padding: 0.75rem;
+    }
+
+    .filter-group .row {
+        flex-direction: column;
+    }
+
+    .filter-group .row .col {
+        width: 100%;
+    }
+}

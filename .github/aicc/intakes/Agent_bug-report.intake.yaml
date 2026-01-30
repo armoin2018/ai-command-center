@@ -1,0 +1,68 @@
+name: bug-report
+displayName: Bug Report
+description: Report a bug or issue
+agent: copilot
+submitLabel: Submit Bug Report
+cancelLabel: Cancel
+
+fields:
+  - name: title
+    label: Bug Title
+    type: text
+    placeholder: Short description of the bug
+    validation:
+      required: true
+      minLength: 5
+      maxLength: 100
+
+  - name: severity
+    label: Severity
+    type: select
+    defaultValue: medium
+    options:
+      - label: Low
+        value: low
+      - label: Medium
+        value: medium
+      - label: High
+        value: high
+      - label: Critical
+        value: critical
+    validation:
+      required: true
+
+  - name: stepsToReproduce
+    label: Steps to Reproduce
+    type: textarea
+    placeholder: "1. Go to...\n2. Click on...\n3. See error"
+    validation:
+      required: true
+      minLength: 10
+    helpText: Detailed steps to reproduce the bug
+
+  - name: expectedBehavior
+    label: Expected Behavior
+    type: textarea
+    placeholder: What should happen?
+    validation:
+      required: true
+
+  - name: actualBehavior
+    label: Actual Behavior
+    type: textarea
+    placeholder: What actually happens?
+    validation:
+      required: true
+
+  - name: environment
+    label: Environment
+    type: text
+    placeholder: "e.g., VSCode 1.85.0, macOS 14.0"
+    validation:
+      required: true
+
+  - name: attachments
+    label: Screenshots/Logs
+    type: textarea
+    placeholder: Paste relevant screenshots or log excerpts
+    helpText: Optional but helpful for diagnosis

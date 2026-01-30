@@ -1,0 +1,207 @@
+.charts-container {
+    padding: 20px;
+    background: var(--vscode-editor-background);
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.chart-container {
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.chart-title {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--vscode-foreground);
+}
+
+/* Pie Chart */
+.pie-chart-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.pie-chart path {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.pie-chart path:hover {
+    opacity: 0.8;
+}
+
+.chart-legend {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    flex: 1;
+    color: var(--vscode-foreground);
+    text-transform: capitalize;
+}
+
+.legend-value {
+    font-weight: 600;
+    color: var(--vscode-foreground);
+}
+
+/* Bar Chart */
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.bar-label {
+    width: 100px;
+    font-size: 14px;
+    color: var(--vscode-foreground);
+    text-transform: capitalize;
+    flex-shrink: 0;
+}
+
+.bar-container {
+    flex: 1;
+    height: 32px;
+    background: var(--vscode-input-background);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    transition: width 0.3s ease;
+    min-width: 40px;
+}
+
+.bar-value {
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Progress Chart */
+.progress-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.progress-bar-container {
+    height: 32px;
+    background: var(--vscode-input-background);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #22c55e);
+    transition: width 0.5s ease;
+    border-radius: 16px;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--vscode-foreground);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-chart-wrapper {
+        flex-direction: column;
+    }
+
+    .pie-chart {
+        width: 160px;
+        height: 160px;
+    }
+
+    .bar-label {
+        width: 80px;
+        font-size: 12px;
+    }
+}
+
+/* High Contrast Mode */
+body.high-contrast .chart-container {
+    border-width: 2px;
+}
+
+body.high-contrast .legend-color,
+body.high-contrast .bar {
+    outline: 1px solid var(--vscode-foreground);
+}
+
+/* Reduced Motion */
+body.reduce-motion .bar,
+body.reduce-motion .progress-bar {
+    transition: none;
+}

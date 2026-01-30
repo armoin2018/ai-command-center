@@ -1,0 +1,75 @@
+name: feature-request
+displayName: Feature Request
+description: Submit a new feature request with all necessary details
+agent: copilot
+submitLabel: Submit Request
+cancelLabel: Cancel
+
+fields:
+  - name: title
+    label: Feature Title
+    type: text
+    placeholder: Brief description of the feature
+    validation:
+      required: true
+      minLength: 5
+      maxLength: 100
+      errorMessage: Title must be between 5 and 100 characters
+    helpText: A concise title that describes the feature
+
+  - name: description
+    label: Detailed Description
+    type: textarea
+    placeholder: Provide a detailed description of the feature...
+    validation:
+      required: true
+      minLength: 20
+      errorMessage: Description must be at least 20 characters
+    helpText: Explain what the feature should do and why it's needed
+
+  - name: priority
+    label: Priority
+    type: select
+    defaultValue: medium
+    options:
+      - label: Low
+        value: low
+      - label: Medium
+        value: medium
+      - label: High
+        value: high
+      - label: Critical
+        value: critical
+    validation:
+      required: true
+
+  - name: estimatedEffort
+    label: Estimated Effort (hours)
+    type: number
+    placeholder: "8"
+    validation:
+      min: 1
+      max: 160
+      errorMessage: Effort must be between 1 and 160 hours
+    helpText: Rough estimate of development time
+
+  - name: userStory
+    label: User Story
+    type: textarea
+    placeholder: As a [type of user], I want [goal] so that [benefit]
+    helpText: Optional user story format
+
+  - name: acceptanceCriteria
+    label: Acceptance Criteria
+    type: textarea
+    placeholder: "1. ...\n2. ...\n3. ..."
+    validation:
+      required: true
+      minLength: 10
+    helpText: List the criteria that must be met for this feature to be complete
+
+  - name: hasDesign
+    label: Design Available
+    type: checkbox
+    defaultValue: false
+    helpText: Check if design mockups or wireframes are available

@@ -1,0 +1,93 @@
+<!-- Planning Tree Component -->
+<div class="planning-tree-container">
+    <div class="tree-header">
+        <h3 class="tree-title">
+            <i class="bi bi-diagram-3"></i>
+            Planning Tree
+        </h3>
+        <div class="tree-actions">
+            <button class="btn btn-sm btn-outline-primary tree-refresh" title="Refresh">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-primary tree-expand-all" title="Expand All">
+                <i class="bi bi-arrows-expand"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-primary tree-collapse-all" title="Collapse All">
+                <i class="bi bi-arrows-collapse"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="tree-stats">
+        <span class="badge bg-primary">
+            <i class="bi bi-flag"></i>
+            <span class="stats-epics">0</span> Epics
+        </span>
+        <span class="badge bg-info">
+            <i class="bi bi-book"></i>
+            <span class="stats-stories">0</span> Stories
+        </span>
+        <span class="badge bg-secondary">
+            <i class="bi bi-check-square"></i>
+            <span class="stats-tasks">0</span> Tasks
+        </span>
+        <span class="badge bg-success">
+            <i class="bi bi-check-circle"></i>
+            <span class="stats-completed">0</span> Completed
+        </span>
+    </div>
+    
+    <div class="tree-loading d-none">
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <span>Loading planning tree...</span>
+    </div>
+    
+    <div class="tree-error alert alert-danger d-none" role="alert">
+        <i class="bi bi-exclamation-triangle"></i>
+        <span class="error-message"></span>
+    </div>
+    
+    <div class="tree-content">
+        <!-- Tree nodes will be dynamically inserted here -->
+        <ul class="tree-root">
+            <!-- Epic nodes -->
+        </ul>
+    </div>
+    
+    <div class="tree-empty text-center text-muted py-5 d-none">
+        <i class="bi bi-inbox fs-1"></i>
+        <p class="mt-3">No planning items found</p>
+        <button class="btn btn-primary btn-sm tree-create-epic">
+            <i class="bi bi-plus-circle"></i>
+            Create First Epic
+        </button>
+    </div>
+</div>
+
+<!-- Tree Node Template -->
+<template id="tree-node-template">
+    <li class="tree-node" data-node-id="" data-node-type="">
+        <div class="tree-node-content">
+            <span class="tree-toggle">
+                <i class="bi bi-chevron-right"></i>
+            </span>
+            <span class="tree-icon"></span>
+            <span class="tree-label"></span>
+            <span class="tree-status badge"></span>
+            <div class="tree-node-actions">
+                <button class="btn btn-sm btn-link node-action-edit" title="Edit">
+                    <i class="bi bi-pencil"></i>
+                </button>
+                <button class="btn btn-sm btn-link node-action-delete" title="Delete">
+                    <i class="bi bi-trash"></i>
+                </button>
+                <button class="btn btn-sm btn-link node-action-add" title="Add Child">
+                    <i class="bi bi-plus-circle"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="tree-children"></ul>
+    </li>
+</template>

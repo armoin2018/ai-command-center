@@ -1,0 +1,165 @@
+apiVersion: v1
+kind: Tab
+metadata:
+  name: AI Kit Loader
+  id: ai-kit-loader
+  description: Browse and install AI kits from repositories
+  version: 1.0.0
+  icon: extensions
+  labels:
+    category: tools
+    component: loader
+  annotations:
+    sourceFunction: renderAIKitLoaderPanel
+    componentRef: SEC-AIKIT-TAB
+
+spec:
+  layout:
+    type: stack
+    direction: column
+    gap: 12px
+    padding: 12px
+  
+  components:
+    # Header Text
+    - componentId: markdown
+      id: aikit-header
+      props:
+        content: |
+          ### AI Kit Loader
+          
+          Select a repository and branch to add AI kits to your project.
+      order: 0
+    
+    # Repository Selection Form
+    - componentId: form-group
+      id: aikit-repo-form
+      props:
+        fields:
+          - name: repository
+            type: select
+            label: AI Kit Repository
+            options:
+              - value: armoin2018/ai-ley
+                label: AI-ley Official (armoin2018/ai-ley)
+              - value: custom
+                label: Custom Repository
+            default: armoin2018/ai-ley
+          
+          - name: customRepo
+            type: text
+            label: Custom Repository URL
+            placeholder: https://github.com/user/repo
+            condition: "form.repository === 'custom'"
+          
+          - name: branch
+            type: select
+            label: Branch
+            options:
+              - value: dev
+                label: dev
+              - value: main
+                label: main
+              - value: custom
+                label: Custom Branch
+            default: dev
+          
+          - name: customBranch
+            type: text
+            label: Custom Branch Name
+            placeholder: feature/new-kits
+            condition: "form.branch === 'custom'"
+      order: 1
+    
+    # Load Button
+    - componentId: action-button
+      id: aikit-load-button
+      props:
+        label: Load Kits
+        icon: cloud-download
+        style: primary
+        command: aicc.loadAIKits
+      order: 2
+    
+    # Kit List (populated after loading)
+    - componentId: kit-list
+      id: aikit-list
+      dataBinding: availableKits
+      props:
+        emptyMessage: Click "Load Kits" to browse available AI kits
+        columns:
+          - field: name
+            header: Kit Name
+            sortable: true
+          - field: description
+            header: Description
+            width: 400px
+          - field: version
+            header: Version
+            width: 100px
+          - field: category
+            header: Category
+            width: 150px
+            filter: true
+        actions:
+          - id: install
+            label: Install
+            icon: download
+            command: aicc.installAIKit
+            condition: "!kit.installed"
+            style: primary
+          
+          - id: uninstall
+            label: Uninstall
+            icon: trash
+            command: aicc.uninstallAIKit
+            condition: "kit.installed"
+            style: danger
+          
+          - id: preview
+            label: Preview
+            icon: eye
+            command: aicc.previewAIKit
+            style: secondary
+        groupBy: category
+      condition: "data.availableKits && data.availableKits.length > 0"
+      order: 3
+  
+  dataBindings:
+    availableKits:
+      source: command
+      endpoint: aicc.getAvailableKits
+      params:
+        repository: "{{state.form.repository}}"
+        branch: "{{state.form.branch}}"
+      transform: |
+        (kits) => {
+          return kits.map(kit => ({
+            ...kit,
+            installed: checkIfInstalled(kit.id)
+          }));
+        }
+      cache:
+        enabled: true
+        ttl: 300
+  
+  state:
+    persist: false
+    initialState:
+      form:
+        repository: armoin2018/ai-ley
+        branch: dev
+        customRepo: ""
+        customBranch: ""
+      availableKits: []
+  
+  hooks:
+    onMount: |
+      function onMount(state, bindings) {
+        // Auto-load kits if repository is pre-selected
+        if (state.form.repository) {
+          setTimeout(() => {
+            vscode.postMessage({ type: 'loadAIKits' });
+          }, 500);
+        }
+      }

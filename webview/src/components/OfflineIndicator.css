@@ -1,0 +1,151 @@
+.offline-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.offline-indicator.offline {
+    border-color: var(--vscode-editorWarning-foreground);
+}
+
+.offline-indicator.syncing {
+    border-color: var(--vscode-textLink-foreground);
+}
+
+.indicator-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    user-select: none;
+}
+
+.status-icon {
+    font-size: 16px;
+    animation: pulse 2s infinite;
+}
+
+.offline-indicator.syncing .status-icon {
+    animation: rotate 2s linear infinite;
+}
+
+.status-text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.queue-badge {
+    background: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.indicator-details {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    background: var(--vscode-panel-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 6px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.details-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details-header button {
+    background: none;
+    border: none;
+    color: var(--vscode-foreground);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.7;
+}
+
+.details-header button:hover {
+    opacity: 1;
+}
+
+.details-content {
+    padding: 12px 16px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.status-online {
+    color: var(--vscode-testing-iconPassed);
+    font-weight: 600;
+}
+
+.status-offline {
+    color: var(--vscode-editorWarning-foreground);
+    font-weight: 600;
+}
+
+.offline-message,
+.syncing-message {
+    margin: 12px 0 0 0;
+    padding: 8px;
+    background: var(--vscode-input-background);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.offline-message {
+    color: var(--vscode-editorWarning-foreground);
+}
+
+.syncing-message {
+    color: var(--vscode-textLink-foreground);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .offline-indicator {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .indicator-details {
+        right: auto;
+        left: 0;
+        width: 240px;
+    }
+}

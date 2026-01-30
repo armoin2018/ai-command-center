@@ -1,0 +1,34 @@
+node_modules/
+out/
+dist/
+.vscode-test/
+*.vsix
+.DS_Store
+*.log
+.my/
+.project/
+cache/
+
+
+# AI-Ley generated files and directories
+# Core AI-Ley
+.ai-ley/
+.cache/
+
+# AI Assistant configurations
+
+CLAUDE.md
+.claude/
+GEMINI.md
+.gemini/
+.cursor/
+cursor-config.json
+.windsurf/
+windsurf-config.json
+.clinerules/
+.roorules/
+.codex/
+.opencode/
+.metis/
+AGENT.md
+AGENTS.md

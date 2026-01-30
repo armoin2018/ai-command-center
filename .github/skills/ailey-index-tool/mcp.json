@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ailey-index-tool": {
+      "command": "node",
+      "args": [
+        ".github/skills/ailey-index-tool/scripts/mcp-server.js"
+      ],
+      "disabled": false,
+      "alwaysAllow": []
+    }
+  }
+}

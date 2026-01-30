@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Audit Report - example.com</title>
+  <style>
+    
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+      .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 10px; margin-bottom: 30px; }
+      .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+      .header .meta { font-size: 1.1em; opacity: 0.9; }
+      .section { background: white; padding: 30px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+      .section h2 { color: #667eea; margin-bottom: 20px; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+      .score-card { display: inline-block; background: #f8f9fa; padding: 20px 30px; border-radius: 10px; margin: 10px; text-align: center; min-width: 150px; }
+      .score-card .label { font-size: 0.9em; color: #666; text-transform: uppercase; margin-bottom: 10px; }
+      .score-card .value { font-size: 2.5em; font-weight: bold; }
+      .score-A { color: #28a745; }
+      .score-B { color: #17a2b8; }
+      .score-C { color: #ffc107; }
+      .score-D { color: #fd7e14; }
+      .score-F { color: #dc3545; }
+      .recommendation { border-left: 4px solid #667eea; padding: 15px; margin: 15px 0; background: #f8f9fa; border-radius: 5px; }
+      .recommendation.critical { border-color: #dc3545; background: #fff5f5; }
+      .recommendation.high { border-color: #fd7e14; background: #fff8f5; }
+      .recommendation.medium { border-color: #ffc107; background: #fffcf5; }
+      .recommendation.low { border-color: #28a745; background: #f5fff8; }
+      .recommendation h3 { color: #333; margin-bottom: 10px; }
+      .recommendation .meta { display: flex; gap: 15px; margin: 10px 0; font-size: 0.9em; }
+      .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+      .badge.critical { background: #dc3545; color: white; }
+      .badge.high { background: #fd7e14; color: white; }
+      .badge.medium { background: #ffc107; color: #333; }
+      .badge.low { background: #28a745; color: white; }
+      .chart-container { position: relative; height: 300px; margin: 20px 0; }
+      table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+      th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+      th { background: #667eea; color: white; font-weight: 600; }
+      tr:hover { background: #f8f9fa; }
+      .footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; }
+      .quick-wins { background: #d4edda; border: 2px solid #28a745; padding: 20px; border-radius: 10px; margin: 20px 0; }
+      .quick-wins h3 { color: #155724; margin-bottom: 15px; }
+      .quick-wins ul { list-style-position: inside; }
+      .quick-wins li { padding: 5px 0; color: #155724; }
+      @media print { .container { max-width: 100%; } .section { page-break-inside: avoid; } }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+      <div class="header">
+        <h1>SEO Audit Report</h1>
+        <div class="meta">
+          <div><strong>example.com</strong></div>
+          <div>Generated: 1/15/2024 | Pages Analyzed: 15</div>
+        </div>
+      </div>
+    
+    
+      <div class="section">
+        <h2>Executive Summary</h2>
+        <div style="text-align: center; margin: 30px 0;">
+          <div class="score-card">
+            <div class="label">Overall Health Score</div>
+            <div class="value score-C">72/100</div>
+            <div class="label" style="margin-top: 10px;">Grade: C</div>
+          </div>
+        </div>
+
+        
+          <div style="background: #fff5f5; border: 2px solid #dc3545; padding: 20px; border-radius: 10px; margin: 20px 0;">
+            <h3 style="color: #dc3545; margin-bottom: 15px;">⚠️ Critical Issues Requiring Immediate Attention</h3>
+            <ul>
+              <li style="padding: 5px 0; color: #721c24;">Critical Issue 1: Mobile responsiveness needs improvement</li><li style="padding: 5px 0; color: #721c24;">Critical Issue 2: Missing alt text on 2 images</li>
+            </ul>
+          </div>
+        
+
+        
+          <div class="quick-wins">
+            <h3>🎯 Quick Wins for Immediate Improvement</h3>
+            <ul>
+              <li>Add missing image alt text</li><li>Optimize 8 title tags</li><li>Compress 10 large images</li>
+            </ul>
+          </div>
+        
+      </div>
+    
+    
+      <div class="section">
+        <h2>SEO Score Breakdown</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <div class="score-card">
+            <div class="label">Technical SEO</div>
+            <div class="value score-B">85</div>
+          </div>
+          <div class="score-card">
+            <div class="label">Content</div>
+            <div class="value score-D">68</div>
+          </div>
+          <div class="score-card">
+            <div class="label">Performance</div>
+            <div class="value score-C">75</div>
+          </div>
+          <div class="score-card">
+            <div class="label">User Experience</div>
+            <div class="value score-B">80</div>
+          </div>
+        </div>
+        
+      <div style="margin: 30px 0;">
+        <h3>Score Distribution</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="width: 100px; text-align: right;">Technical:</div>
+              <div style="flex: 1; background: #e0e0e0; height: 30px; border-radius: 15px; overflow: hidden;">
+                <div style="background: #17a2b8; width: 85%; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-weight: bold;">
+                  85
+                </div>
+              </div>
+            </div>
+          
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="width: 100px; text-align: right;">Content:</div>
+              <div style="flex: 1; background: #e0e0e0; height: 30px; border-radius: 15px; overflow: hidden;">
+                <div style="background: #fd7e14; width: 68%; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-weight: bold;">
+                  68
+                </div>
+              </div>
+            </div>
+          
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="width: 100px; text-align: right;">Performance:</div>
+              <div style="flex: 1; background: #e0e0e0; height: 30px; border-radius: 15px; overflow: hidden;">
+                <div style="background: #ffc107; width: 75%; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-weight: bold;">
+                  75
+                </div>
+              </div>
+            </div>
+          
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="width: 100px; text-align: right;">UX:</div>
+              <div style="flex: 1; background: #e0e0e0; height: 30px; border-radius: 15px; overflow: hidden;">
+                <div style="background: #17a2b8; width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-weight: bold;">
+                  80
+                </div>
+              </div>
+            </div>
+          
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="width: 100px; text-align: right;">Authority:</div>
+              <div style="flex: 1; background: #e0e0e0; height: 30px; border-radius: 15px; overflow: hidden;">
+                <div style="background: #fd7e14; width: 60%; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-weight: bold;">
+                  60
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      </div>
+    
+    
+      <div class="section">
+        <h2>Technical SEO Analysis</h2>
+        <table>
+          <tr>
+            <th>Technical Element</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>HTTPS Enabled</td>
+            <td>✅ Yes</td>
+            <td>Secure connection</td>
+          </tr>
+          <tr>
+            <td>Robots.txt</td>
+            <td>✅ Yes</td>
+            <td>Valid</td>
+          </tr>
+          <tr>
+            <td>XML Sitemap</td>
+            <td>✅ Valid</td>
+            <td>150 URLs indexed</td>
+          </tr>
+          <tr>
+            <td>Broken Links</td>
+            <td>✅ None</td>
+            <td>All links working</td>
+          </tr>
+        </table>
+      </div>
+    
+    
+      <div class="section">
+        <h2>Content Analysis</h2>
+        <h3>Title Tag Optimization</h3>
+        <p><strong>Title:</strong> Example Domain - Quality Products & Services</p>
+        <p><strong>Length:</strong> 45 characters (optimal: 30-60)</p>
+        <p><strong>Status:</strong> ✅ Optimal</p>
+        
+        <h3 style="margin-top: 30px;">Content Quality</h3>
+        <p><strong>Word Count:</strong> 1200</p>
+        <p><strong>Readability Score:</strong> 75/100</p>
+        <p><strong>Topical Depth:</strong> Good</p>
+      </div>
+    
+    
+      <div class="section">
+        <h2>Performance & Core Web Vitals</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <div class="score-card">
+            <div class="label">LCP</div>
+            <div class="value score-A">2.3s</div>
+            <div class="label">Target: < 2.5s</div>
+          </div>
+          <div class="score-card">
+            <div class="label">FID</div>
+            <div class="value score-A">85ms</div>
+            <div class="label">Target: < 100ms</div>
+          </div>
+          <div class="score-card">
+            <div class="label">CLS</div>
+            <div class="value score-A">0.08</div>
+            <div class="label">Target: < 0.1</div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="section">
+        <h2>Actionable Recommendations</h2>
+        <p style="margin-bottom: 20px;">Total: 3 recommendations across all categories</p>
+        
+          <div class="recommendation critical">
+            <h3>Fix Mobile Responsiveness Issues</h3>
+            <div class="meta">
+              <span class="badge critical">CRITICAL</span>
+              <span><strong>Impact:</strong> High</span>
+              <span><strong>Effort:</strong> Medium</span>
+              <span><strong>Timeline:</strong> 1 week</span>
+            </div>
+            <p style="margin: 10px 0;">Several pages show layout issues on mobile devices.</p>
+            <p><strong>Implementation:</strong> Update CSS media queries and test on multiple devices.</p>
+          </div>
+        
+          <div class="recommendation high">
+            <h3>Optimize Title Tags</h3>
+            <div class="meta">
+              <span class="badge high">HIGH</span>
+              <span><strong>Impact:</strong> High</span>
+              <span><strong>Effort:</strong> Low</span>
+              <span><strong>Timeline:</strong> 2-3 days</span>
+            </div>
+            <p style="margin: 10px 0;">8 pages have title tags that are too short or missing keywords.</p>
+            <p><strong>Implementation:</strong> Review and update title tags to include primary keywords and stay within 30-60 characters.</p>
+          </div>
+        
+          <div class="recommendation medium">
+            <h3>Compress Images</h3>
+            <div class="meta">
+              <span class="badge medium">MEDIUM</span>
+              <span><strong>Impact:</strong> Medium</span>
+              <span><strong>Effort:</strong> Low</span>
+              <span><strong>Timeline:</strong> 1 week</span>
+            </div>
+            <p style="margin: 10px 0;">Large images are slowing page load times.</p>
+            <p><strong>Implementation:</strong> Use tools like ImageOptim or Squoosh to compress images without quality loss.</p>
+          </div>
+        
+      </div>
+    
+    
+      <div class="section">
+        <h2>Implementation Roadmap</h2>
+        <h3>30-Day Quick Wins (2)</h3>
+        <ul>
+          <li>Fix mobile responsiveness</li><li>Optimize title tags</li>
+        </ul>
+        
+        <h3 style="margin-top: 20px;">90-Day Strategic Improvements (1)</h3>
+        <ul>
+          <li>Implement content strategy</li>
+        </ul>
+      </div>
+    
+    
+      <div class="footer">
+        <p>Report generated by AI-ley SEO Reporter v1.0.0</p>
+        <p>Generated on 1/15/2024, 4:00:00 AM</p>
+        <p style="margin-top: 10px;">This report is confidential and intended for internal use only.</p>
+      </div>
+    
+  </div>
+  
+</body>
+</html>

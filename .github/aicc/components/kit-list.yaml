@@ -1,0 +1,150 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: kit-list
+  name: AI Kit List
+  description: Display available AI kits with install/uninstall actions
+  category: Display
+  tags: [ai-kit, toolkit, install, package]
+  version: 1.0.0
+spec:
+  props:
+    kits:
+      type: array
+      default: []
+      description: Array of available AI kits
+      items:
+        type: object
+        properties:
+          id: string
+          name: string
+          description: string
+          category: string
+          version: string
+          installed: boolean
+    showCategory:
+      type: boolean
+      default: true
+      description: Show category badges
+  
+  events:
+    - name: install
+      description: Emitted when install button clicked
+      payload:
+        kitId: string
+    - name: uninstall
+      description: Emitted when uninstall button clicked
+      payload:
+        kitId: string
+  
+  template: |
+    <div class="kit-list">
+      {{#if kits.length}}
+        {{#each kits}}
+        <div class="kit-item {{#if installed}}installed{{/if}}">
+          <div class="kit-header">
+            <span class="kit-name">{{name}}</span>
+            <span class="kit-version">v{{version}}</span>
+            {{#if @root.showCategory}}
+            <span class="kit-category">{{category}}</span>
+            {{/if}}
+          </div>
+          <div class="kit-description">{{description}}</div>
+          <div class="kit-actions">
+            {{#if installed}}
+            <button class="footer-btn" onclick="uninstallKit('{{id}}')">
+              <span class="codicon codicon-trash"></span> Uninstall
+            </button>
+            {{else}}
+            <button class="footer-btn primary" onclick="installKit('{{id}}')">
+              <span class="codicon codicon-cloud-download"></span> Install
+            </button>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+        <div class="empty-state">
+          <span class="codicon codicon-package"></span>
+          <p>No AI Kits available. Click "Load Kits" to fetch from repository.</p>
+        </div>
+      {{/if}}
+    </div>
+  
+  styles: |
+    .kit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .kit-item {
+      padding: 12px;
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 4px;
+      background: var(--vscode-list-inactiveSelectionBackground);
+    }
+    .kit-item.installed {
+      border-color: var(--vscode-button-background);
+      background: var(--vscode-list-activeSelectionBackground);
+    }
+    .kit-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .kit-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .kit-version {
+      font-size: 11px;
+      color: var(--vscode-descriptionForeground);
+    }
+    .kit-category {
+      padding: 2px 6px;
+      background: var(--vscode-badge-background);
+      color: var(--vscode-badge-foreground);
+      border-radius: 3px;
+      font-size: 10px;
+      margin-left: auto;
+    }
+    .kit-description {
+      font-size: 12px;
+      color: var(--vscode-descriptionForeground);
+      margin-bottom: 8px;
+    }
+    .kit-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--vscode-descriptionForeground);
+    }
+    .empty-state .codicon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      display: block;
+    }
+  
+  examples:
+    - name: Available Kits
+      description: List of AI toolkits
+      props:
+        kits:
+          - id: "planning-toolkit"
+            name: "Planning Toolkit"
+            description: "Agile planning and project management tools"
+            category: "Project Management"
+            version: "1.0.0"
+            installed: false
+          - id: "code-review-toolkit"
+            name: "Code Review Toolkit"
+            description: "Automated code review and quality checks"
+            category: "Development"
+            version: "1.2.1"
+            installed: true
+      code: |
+        <kit-list kits="{{availableKits}}" showCategory="true"></kit-list>

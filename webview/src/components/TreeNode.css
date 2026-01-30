@@ -1,0 +1,202 @@
+.tree-node {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s;
+    user-select: none;
+}
+
+.tree-node:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.tree-node.selected {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+}
+
+.tree-node.epic {
+    font-weight: 600;
+}
+
+.tree-node.story {
+    font-weight: 500;
+}
+
+.expand-button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--vscode-foreground);
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.15s;
+}
+
+.expand-button:hover {
+    background-color: var(--vscode-toolbar-hoverBackground);
+}
+
+.expand-spacer {
+    width: 20px;
+    display: inline-block;
+}
+
+.node-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Colored icons */
+.icon-epic {
+    color: #3b82f6; /* Blue */
+}
+
+.icon-story {
+    color: #a855f7; /* Purple */
+}
+
+.icon-task {
+    color: #22c55e; /* Green */
+}
+
+.icon-bug {
+    color: #ef4444; /* Red */
+}
+
+/* Status circles */
+.status-circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-circle-todo {
+    background-color: #eab308; /* Yellow */
+}
+
+.status-circle-open {
+    background-color: #3b82f6; /* Blue */
+}
+
+.status-circle-done {
+    background-color: #22c55e; /* Green */
+}
+
+.status-circle-in-progress {
+    background-color: #14b8a6; /* Teal */
+}
+
+.status-circle-ready {
+    background-color: #f97316; /* Orange */
+}
+
+.status-circle-hold {
+    background-color: #6b7280; /* Grey */
+}
+
+.tree-node-id {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    opacity: 0.8;
+    margin-right: 4px;
+}
+
+.node-name {
+    flex: 1;
+    font-size: 14px;
+}
+
+.node-metadata {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.node-points {
+    padding: 2px 8px;
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.node-status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Tree node action buttons - ensure visibility */
+.tree-node-metadata .btn-link,
+.tree-node .btn-link,
+.tree-node-actions .btn-link {
+    color: var(--vscode-foreground) !important;
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.tree-node-metadata .btn-link:hover,
+.tree-node .btn-link:hover,
+.tree-node-actions .btn-link:hover {
+    background-color: var(--vscode-toolbar-hoverBackground);
+    color: var(--vscode-foreground) !important;
+}
+
+.tree-node-selected .btn-link,
+.tree-node.bg-primary .btn-link {
+    color: var(--vscode-button-foreground, #ffffff) !important;
+}
+
+.tree-node-selected .btn-link:hover,
+.tree-node.bg-primary .btn-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--vscode-button-foreground, #ffffff) !important;
+}
+
+.status-completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-in-progress {
+    background-color: #007acc;
+    color: white;
+}
+
+.status-blocked {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-not-started {
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+}
+
+/* Bulk selection checkbox */
+.tree-node-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 4px;
+}

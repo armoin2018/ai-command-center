@@ -1,0 +1,129 @@
+apiVersion: v1
+kind: Tab
+metadata:
+  name: Component Catalog
+  id: component-catalog
+  description: Interactive catalog of all available UI components with live demos
+  version: 1.0.0
+  icon: library
+  labels:
+    category: developer
+    component: catalog
+  annotations:
+    developerMode: true
+    componentRef: SEC-CATALOG-TAB
+
+spec:
+  layout:
+    type: stack
+    direction: column
+    gap: 16px
+    padding: 12px
+  
+  components:
+    # Catalog Header
+    - componentId: markdown
+      id: catalog-header
+      props:
+        content: |
+          ## Component Catalog
+          
+          Browse all available UI components with live demos and code examples.
+          
+          **Available Components**: {{componentCount}}
+      order: 0
+    
+    # Component Search & Filter
+    - componentId: filter-bar
+      id: catalog-filter
+      props:
+        placeholder: Search components by name, category, or tags...
+        caseInsensitive: true
+        showCaseToggle: false
+        showRefreshButton: false
+      order: 1
+    
+    # Category Tabs
+    - componentId: horizontal-tabs
+      id: catalog-categories
+      props:
+        tabs:
+          - id: all
+            label: All Components
+            icon: symbol-misc
+          - id: layout
+            label: Layout
+            icon: layout
+          - id: data-display
+            label: Data Display
+            icon: table
+          - id: input
+            label: Input
+            icon: edit
+          - id: navigation
+            label: Navigation
+            icon: compass
+          - id: feedback
+            label: Feedback
+            icon: info
+      order: 2
+    
+    # Component Grid
+    - componentId: component-grid
+      id: catalog-grid
+      dataBinding: components
+      props:
+        columns: 2
+        gap: 16px
+        cardProps:
+          showDemo: true
+          showCode: true
+          showProps: true
+          showUsage: true
+      order: 3
+  
+  dataBindings:
+    components:
+      source: rest
+      endpoint: /mcp/components/catalog
+      method: GET
+      params:
+        category: "{{state.activeCategory}}"
+        search: "{{state.filterText}}"
+      transform: |
+        (components) => {
+          return components.filter(c => {
+            // Filter by active category
+            if (state.activeCategory !== 'all' && c.category !== state.activeCategory) {
+              return false;
+            }
+            
+            // Filter by search text
+            if (state.filterText) {
+              const searchLower = state.filterText.toLowerCase();
+              return c.name.toLowerCase().includes(searchLower) ||
+                     c.description.toLowerCase().includes(searchLower) ||
+                     (c.tags && c.tags.some(t => t.toLowerCase().includes(searchLower)));
+            }
+            
+            return true;
+          });
+        }
+      cache:
+        enabled: true
+        ttl: 600
+  
+  state:
+    persist: false
+    initialState:
+      activeCategory: all
+      filterText: ""
+      componentCount: 0
+  
+  hooks:
+    onDataChange: |
+      function onDataChange(key, newData, oldData, state) {
+        if (key === 'components') {
+          state.componentCount = newData.length;
+        }
+      }

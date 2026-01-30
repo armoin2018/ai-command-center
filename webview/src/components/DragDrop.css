@@ -1,0 +1,41 @@
+/* Drag-and-Drop Styles */
+
+.tree-node.dragging {
+    opacity: 0.5;
+}
+
+.tree-node.drop-before::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--vscode-focusBorder, #007ACC);
+    z-index: 10;
+}
+
+.tree-node.drop-after::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--vscode-focusBorder, #007ACC);
+    z-index: 10;
+}
+
+.tree-node.drop-inside {
+    background-color: var(--vscode-list-dropBackground, rgba(0, 122, 204, 0.15));
+    outline: 2px dashed var(--vscode-focusBorder, #007ACC);
+    outline-offset: -2px;
+}
+
+.tree-node[draggable="true"] {
+    cursor: grab;
+}
+
+.tree-node[draggable="true"]:active {
+    cursor: grabbing;
+}

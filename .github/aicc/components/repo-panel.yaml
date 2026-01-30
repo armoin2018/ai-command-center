@@ -1,0 +1,84 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: repo-panel
+  name: Repository Panel
+  description: Git repository configuration and links
+  category: Input
+  tags: [git, repository, github, source-control]
+  version: 1.0.0
+spec:
+  props:
+    gitRepo:
+      type: string
+      description: Repository URL
+    gitBranch:
+      type: string
+      default: "main"
+      description: Git branch
+    itemId:
+      type: string
+      required: true
+      description: Item ID for saving
+  
+  events:
+    - name: save
+      description: Emitted when save button clicked
+      payload:
+        itemId: string
+        gitRepo: string
+        gitBranch: string
+    - name: open-browser
+      description: Emitted when open in browser clicked
+      payload:
+        gitRepo: string
+  
+  template: |
+    <div class="repo-panel">
+      <div class="form-group">
+        <label>Git Repository</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="repo-url-{{itemId}}" 
+          value="{{gitRepo}}" 
+          placeholder="https://github.com/org/repo">
+      </div>
+      
+      <div class="form-group">
+        <label>Git Branch</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="repo-branch-{{itemId}}" 
+          value="{{gitBranch}}" 
+          placeholder="main">
+      </div>
+      
+      <div class="form-actions">
+        <button class="footer-btn primary" onclick="saveRepoSettings('{{itemId}}')">
+          <span class="codicon codicon-save"></span> Save
+        </button>
+        <button class="footer-btn" onclick="openRepoInBrowser('{{itemId}}')">
+          <span class="codicon codicon-link-external"></span> Open in Browser
+        </button>
+      </div>
+    </div>
+  
+  styles: |
+    .repo-panel { }
+    .form-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+  
+  examples:
+    - name: GitHub Repository
+      description: Configure GitHub repository
+      props:
+        itemId: "epic-1"
+        gitRepo: "https://github.com/armoin2018/ai-command-center"
+        gitBranch: "dev"
+      code: |
+        <repo-panel itemId="{{item.id}}" gitRepo="{{item.gitRepo}}" gitBranch="{{item.gitBranch}}"></repo-panel>

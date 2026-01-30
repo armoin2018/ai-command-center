@@ -1,0 +1,103 @@
+# AI Command Center Default Configuration
+# This file contains default settings that can be overridden by workspace settings
+
+# Planning Configuration
+planning:
+  # Directory path for planning artifacts (relative to workspace root)
+  planPath: ".project/plan"
+  
+  # Auto-save interval in seconds (0 = disabled)
+  autoSaveInterval: 30
+  
+  # Story point scale (fibonacci or linear)
+  storyPointScale: "fibonacci"
+  
+  # Default sprint duration in weeks
+  sprintDurationWeeks: 2
+
+# Logging Configuration
+logging:
+  # Log level: debug, info, warn, error
+  level: "info"
+  
+  # Enable file logging
+  fileLoggingEnabled: true
+  
+  # Log file retention days
+  retentionDays: 7
+  
+  # Maximum log file size in MB
+  maxFileSizeMB: 5
+
+# Integration Configuration
+integrations:
+  # Jira Cloud Integration
+  jira:
+    enabled: false
+    baseUrl: ""
+    email: ""
+    # API token stored in VS Code SecretStorage
+    
+  # Confluence Integration
+  confluence:
+    enabled: false
+    baseUrl: ""
+    # API token stored in VS Code SecretStorage
+    
+  # Gamma.app Integration
+  gamma:
+    enabled: false
+    apiKey: ""
+    # API key stored in VS Code SecretStorage
+
+# MCP Server Configuration
+mcp:
+  # Enable MCP server
+  enabled: true
+  
+  # Server port (0 = auto-assign)
+  port: 3000
+  
+  # Transport protocol: stdio or http
+  transport: "http"
+  
+  # Logging configuration
+  logging:
+    enabled: true
+    level: "info"
+  
+  # Tools configuration
+  tools:
+    enabled: true
+    timeout: 30000
+  
+  # Resources configuration
+  resources:
+    enabled: true
+    cacheSize: 100
+  
+  # Prompts configuration
+  prompts:
+    enabled: true
+
+# UI Configuration
+ui:
+  # Show welcome message on activation
+  showWelcomeMessage: true
+  
+  # Theme: light, dark, auto
+  theme: "auto"
+  
+  # Confirm destructive actions
+  confirmDelete: true
+
+# Performance Configuration
+performance:
+  # Activation timeout in milliseconds
+  activationTimeoutMs: 5000
+  
+  # API request timeout in milliseconds
+  apiTimeoutMs: 30000
+  
+  # Enable performance tracking
+  trackPerformance: true

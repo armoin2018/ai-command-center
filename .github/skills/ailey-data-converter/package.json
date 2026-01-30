@@ -1,0 +1,30 @@
+{
+  "name": "ailey-data-converter",
+  "version": "1.0.0",
+  "description": "Convert files between different data formats with compression, streaming, and chunking support",
+  "type": "module",
+  "scripts": {
+    "convert": "tsx scripts/convert.ts",
+    "test": "tsx tests/test-runner.ts",
+    "test:watch": "tsx tests/test-runner.ts --watch"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "fast-xml-parser": "^4.3.2",
+    "papaparse": "^5.4.1",
+    "parquetjs": "^0.11.2",
+    "avsc": "^5.7.7",
+    "apache-arrow": "^14.0.1",
+    "node-fetch": "^3.3.2",
+    "commander": "^11.1.0",
+    "chalk": "^5.3.0",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/papaparse": "^5.3.11",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

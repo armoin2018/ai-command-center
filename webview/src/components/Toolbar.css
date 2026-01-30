@@ -1,0 +1,127 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--vscode-editor-background);
+    border-bottom: 1px solid var(--vscode-panel-border);
+    gap: 16px;
+}
+
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.toolbar-btn:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+.toolbar-btn-primary {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.toolbar-btn-primary:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.btn-icon {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--vscode-panel-border);
+    margin: 0 4px;
+}
+
+.toolbar-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.stat-label {
+    color: var(--vscode-descriptionForeground);
+    font-weight: 500;
+}
+
+.stat-value {
+    color: var(--vscode-foreground);
+    font-weight: 600;
+    padding: 2px 8px;
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 10px;
+}
+
+.toolbar-export-dropdown {
+    position: relative;
+}
+
+.export-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background-color: var(--vscode-menu-background, #252526);
+    border: 1px solid var(--vscode-menu-border, #454545);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.export-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: var(--vscode-menu-foreground, #cccccc);
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.1s;
+}
+
+.export-menu button:hover {
+    background-color: var(--vscode-menu-selectionBackground, #094771);
+    color: var(--vscode-menu-selectionForeground, #ffffff);
+}
+
+.export-menu button:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.export-menu button:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}

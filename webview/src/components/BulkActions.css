@@ -1,0 +1,105 @@
+.bulk-actions {
+    position: sticky;
+    top: 0;
+    background: var(--vscode-editor-background);
+    border-bottom: 1px solid var(--vscode-panel-border);
+    padding: 12px;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bulk-actions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.selection-count {
+    font-weight: 600;
+    color: var(--vscode-foreground);
+}
+
+.bulk-actions-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bulk-actions-buttons button {
+    padding: 6px 12px;
+    border: 1px solid var(--vscode-button-border);
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.bulk-actions-buttons button:hover {
+    background: var(--vscode-button-hoverBackground);
+}
+
+.bulk-actions-buttons button.btn-danger {
+    background: var(--vscode-errorForeground);
+    color: white;
+}
+
+.bulk-actions-buttons button.btn-danger:hover {
+    background: #c74444;
+}
+
+.btn-clear {
+    padding: 4px 12px;
+    background: transparent;
+    border: 1px solid var(--vscode-button-border);
+    color: var(--vscode-foreground);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-clear:hover {
+    background: var(--vscode-list-hoverBackground);
+}
+
+.bulk-action-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px;
+    background: var(--vscode-input-background);
+    border-radius: 4px;
+}
+
+.bulk-action-form label {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.bulk-action-form input,
+.bulk-action-form select {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--vscode-input-border);
+    background: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.bulk-action-form button {
+    padding: 6px 16px;
+    border: 1px solid var(--vscode-button-border);
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.bulk-action-form button:hover {
+    background: var(--vscode-button-hoverBackground);
+}

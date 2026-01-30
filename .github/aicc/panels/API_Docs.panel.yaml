@@ -1,0 +1,33 @@
+# API Documentation Panel
+# Displays Swagger UI for MCP Server REST API endpoints
+
+panel:
+  id: api-docs
+  name: API Docs
+  scope: all
+  icon: globe
+  order: 10
+  enabled: true
+  description: Interactive API documentation for MCP Server endpoints
+
+layout:
+  type: single
+  sections:
+    - id: main
+      name: null
+      flex: 1
+
+components:
+  # This panel is rendered client-side with custom logic
+  # No component configuration needed - handled by renderAPIDocs() in app.js
+  - type: custom
+    section: main
+    order: 1
+    config:
+      renderer: swagger-ui
+      
+metadata:
+  version: 1.0.0
+  author: AI Command Center
+  created: 2026-01-19
+  updated: 2026-01-19

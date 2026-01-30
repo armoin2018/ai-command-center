@@ -1,0 +1,160 @@
+/* Statistics Panel Styles */
+
+.stats-panel {
+    padding: 16px;
+    background-color: var(--vscode-sideBar-background);
+    border-left: 1px solid var(--vscode-panel-border);
+    min-width: 280px;
+    max-width: 320px;
+    overflow-y: auto;
+}
+
+.stats-section {
+    margin-bottom: 24px;
+}
+
+.stats-section:last-child {
+    margin-bottom: 0;
+}
+
+.stats-title {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--vscode-foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--vscode-foreground);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.progress-item {
+    margin-bottom: 16px;
+}
+
+.progress-item:last-child {
+    margin-bottom: 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--vscode-foreground);
+}
+
+.progress-percent {
+    font-weight: 600;
+    color: var(--vscode-charts-green);
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--vscode-editor-background);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--vscode-charts-blue), var(--vscode-charts-green));
+    transition: width 0.3s ease;
+}
+
+.progress-details {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.distribution-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.distribution-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: var(--vscode-editor-background);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.distribution-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--vscode-foreground);
+}
+
+.distribution-value {
+    font-weight: 600;
+    color: var(--vscode-foreground);
+    padding: 2px 8px;
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-indicator.status-not-started {
+    background-color: var(--vscode-charts-gray, #888);
+}
+
+.status-indicator.status-in-progress {
+    background-color: var(--vscode-charts-blue, #007ACC);
+}
+
+.status-indicator.status-completed {
+    background-color: var(--vscode-charts-green, #4CAF50);
+}
+
+.status-indicator.status-blocked {
+    background-color: var(--vscode-charts-red, #F44336);
+}

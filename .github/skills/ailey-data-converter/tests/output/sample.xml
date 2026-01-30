@@ -1,0 +1,12 @@
+<name>Test User</name>
+<age>30</age>
+<email>test@example.com</email>
+<address>
+  <street>123 Main St</street>
+  <city>Anytown</city>
+  <country>USA</country>
+</address>
+<hobbies>reading</hobbies>
+<hobbies>coding</hobbies>
+<hobbies>hiking</hobbies>
+<active>true</active>

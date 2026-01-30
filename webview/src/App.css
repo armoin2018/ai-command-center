@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bootstrap Integration */
+:root {
+    /* Map VSCode theme colors to Bootstrap variables */
+    --bs-primary: var(--vscode-button-background, #0d6efd);
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary: var(--vscode-button-secondaryBackground, #6c757d);
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success: #198754;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info: #0dcaf0;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning: #ffc107;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger: #dc3545;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light: var(--vscode-editor-background, #f8f9fa);
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark: var(--vscode-editor-foreground, #212529);
+    --bs-dark-rgb: 33, 37, 41;
+    
+    --bs-body-color: var(--vscode-foreground);
+    --bs-body-bg: var(--vscode-editor-background);
+    --bs-border-color: var(--vscode-panel-border, #dee2e6);
+    --bs-border-radius: 0.375rem;
+}
+
+/* Theme-specific custom properties */
+:root,
+body.theme-auto {
+    --aicc-accent-color: var(--vscode-button-background);
+    --aicc-accent-hover: var(--vscode-button-hoverBackground);
+    --aicc-success-color: #4caf50;
+    --aicc-warning-color: #ffc107;
+    --aicc-error-color: #f44336;
+    --aicc-info-color: #2196f3;
+}
+
+body.theme-light,
+body.theme-detected-light {
+    --aicc-accent-color: #007acc;
+    --aicc-accent-hover: #005a9e;
+    --aicc-success-color: #2e7d32;
+    --aicc-warning-color: #f57c00;
+    --aicc-error-color: #c62828;
+    --aicc-info-color: #1976d2;
+}
+
+body.theme-dark,
+body.theme-detected-dark {
+    --aicc-accent-color: #0e639c;
+    --aicc-accent-hover: #1177bb;
+    --aicc-success-color: #66bb6a;
+    --aicc-warning-color: #ffa726;
+    --aicc-error-color: #ef5350;
+    --aicc-info-color: #42a5f5;
+}
+
+body.theme-high-contrast {
+    --aicc-accent-color: #00ffff;
+    --aicc-accent-hover: #00cccc;
+    --aicc-success-color: #00ff00;
+    --aicc-warning-color: #ffff00;
+    --aicc-error-color: #ff0000;
+    --aicc-info-color: #00ffff;
+}
+
+body {
+    font-family: var(--vscode-font-family);
+    font-size: var(--vscode-font-size);
+    color: var(--vscode-foreground);
+    background-color: var(--vscode-editor-background);
+}
+
+.container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header-title h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--vscode-foreground);
+    margin: 0;
+}
+
+.header-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.header-stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-stats strong {
+    color: var(--vscode-foreground);
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    height: 28px;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.btn-primary:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.btn-secondary {
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+/* Icon-only buttons */
+.btn-icon {
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--vscode-icon-foreground);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: var(--vscode-toolbar-hoverBackground);
+    color: var(--vscode-foreground);
+}
+
+.btn-icon:active {
+    background-color: var(--vscode-toolbar-activeBackground);
+}
+
+.btn-icon.btn-icon-primary {
+    color: var(--vscode-button-background);
+}
+
+.btn-icon.btn-icon-primary:hover {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.btn-icon.btn-icon-danger {
+    color: var(--aicc-error-color);
+}
+
+.btn-icon.btn-icon-danger:hover {
+    background-color: var(--aicc-error-color);
+    color: var(--vscode-button-foreground);
+}
+
+.btn-icon.btn-icon-success {
+    color: var(--aicc-success-color);
+}
+
+.btn-icon.btn-icon-success:hover {
+    background-color: var(--aicc-success-color);
+    color: var(--vscode-button-foreground);
+}
+
+.btn-icon .codicon,
+.btn-icon .icon {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.btn-icon:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-icon:disabled:hover {
+    background-color: transparent;
+    color: var(--vscode-icon-foreground);
+}
+
+.main {
+    min-height: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--vscode-panel-border);
+    border-top-color: var(--vscode-button-background);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading p {
+    margin-top: 20px;
+    color: var(--vscode-descriptionForeground);
+}
+
+.error {
+    padding: 20px;
+    background-color: var(--vscode-inputValidation-errorBackground);
+    border: 1px solid var(--vscode-inputValidation-errorBorder);
+    border-radius: 4px;
+}
+
+.settings-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.view-mode-toggle {
+    display: flex;
+    gap: 4px;
+    background-color: var(--vscode-input-background);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.view-mode-toggle button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    background: transparent;
+    color: var(--vscode-foreground);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.view-mode-toggle button:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.view-mode-toggle button.active {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+}
+
+.timeline-container {
+    flex: 1;
+    overflow: auto;
+    padding: 15px;
+}
+
+.error h2 {
+    color: var(--vscode-errorForeground);
+    margin-bottom: 10px;
+}
+
+.tree-view {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    gap: 16px;
+}
+
+.empty-icon {
+    font-size: 64px;
+    opacity: 0.5;
+}
+
+.empty-message {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--vscode-foreground);
+    margin: 0;
+}
+
+.empty-hint {
+    font-size: 14px;
+    color: var(--vscode-descriptionForeground);
+    margin: 0;
+}
+
+/* Input field consistency */
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+    height: 28px;
+    line-height: 20px;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-family: var(--vscode-font-family);
+    color: var(--vscode-input-foreground);
+    background-color: var(--vscode-input-background);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--vscode-focusBorder);
+}
+
+textarea {
+    height: auto;
+    min-height: 60px;
+    resize: vertical;
+}
+
+/* Icon consistency - ensure all icons are uniform height */
+.codicon,
+.icon {
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+
+/* Button with icon alignment */
+.btn .codicon,
+.btn .icon {
+    margin-right: 4px;
+}
+
+/* Status badges with color coding */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    height: 20px;
+}
+
+.status-badge.not-started {
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+}
+
+.status-badge.in-progress {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: var(--aicc-info-color);
+    border: 1px solid var(--aicc-info-color);
+}
+
+.status-badge.completed {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: var(--aicc-success-color);
+    border: 1px solid var(--aicc-success-color);
+}
+
+.status-badge.blocked {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: var(--aicc-error-color);
+    border: 1px solid var(--aicc-error-color);
+}

@@ -1,0 +1,272 @@
+apiVersion: v1
+kind: Tab
+metadata:
+  name: Planning
+  id: planning
+  description: Hierarchical planning view with epics, stories, and tasks
+  version: 1.0.0
+  icon: layers
+  labels:
+    category: planning
+    component: primary
+  annotations:
+    sourceFunction: renderPlanningPanel
+    componentRef: SEC-PLANNING-TAB
+
+spec:
+  layout:
+    type: stack
+    direction: column
+    gap: 16px
+    padding: 12px
+  
+  components:
+    # Status Badges Component
+    - componentId: status-badges
+      id: planning-status-badges
+      dataBinding: statusCounts
+      props:
+        statuses:
+          - id: todo
+            label: TODO
+            color: var(--status-todo)
+            sourceKeys: [backlog, todo]
+          - id: open
+            label: OPEN
+            color: var(--status-open)
+            sourceKeys: [open]
+          - id: in-progress
+            label: IN PROGRESS
+            color: var(--status-in-progress)
+            sourceKeys: [in-progress]
+          - id: ready
+            label: READY
+            color: var(--status-ready)
+            sourceKeys: [ready, review]
+          - id: done
+            label: DONE
+            color: var(--status-done)
+            sourceKeys: [done]
+          - id: hold
+            label: HOLD
+            color: var(--status-hold)
+            sourceKeys: [hold]
+          - id: error
+            label: ERROR
+            color: var(--status-error)
+            sourceKeys: [error, blocked]
+        selectable: true
+        multiSelect: true
+      order: 0
+    
+    # Filter Bar Component
+    - componentId: filter-bar
+      id: planning-filter-bar
+      props:
+        placeholder: Filter by ID, title, or description (regex)
+        caseInsensitive: true
+        showCaseToggle: true
+        showRefreshButton: true
+        refreshCommand: aicc.refreshPlanData
+      order: 1
+    
+    # Accordion List Component (Hierarchical Items)
+    - componentId: accordion-list
+      id: planning-accordion
+      dataBinding: planDocument
+      props:
+        itemType: hierarchical
+        rootFilter: "item.type === 'epic' || !item.parent"
+        statusColors:
+          todo: var(--status-todo)
+          open: var(--status-open)
+          in-progress: var(--status-in-progress)
+          ready: var(--status-ready)
+          done: var(--status-done)
+          hold: var(--status-hold)
+          error: var(--status-error)
+        typeIcons:
+          epic: layers
+          story: bookmark
+          task: circle-outline
+          bug: bug
+        priorityIcons:
+          critical: flame
+          high: arrow-up
+          medium: dash
+          low: arrow-down
+        actions:
+          - id: edit
+            icon: edit
+            tooltip: Edit
+            command: aicc.editItem
+          - id: info
+            icon: info
+            tooltip: Info
+            command: aicc.showItemInfo
+          - id: connections
+            icon: link
+            tooltip: Connections
+            command: aicc.showConnections
+          - id: repo
+            icon: github
+            tooltip: Repository
+            command: aicc.showRepo
+          - id: comments
+            icon: comment
+            tooltip: Comments
+            command: aicc.showComments
+          - id: run
+            icon: play
+            tooltip: Run
+            command: aicc.runItem
+        expandablePanels:
+          - id: edit
+            label: Edit
+            components:
+              - componentId: item-edit-form
+                props:
+                  fields:
+                    - name: summary
+                      type: text
+                      label: Summary
+                      required: true
+                    - name: description
+                      type: textarea
+                      label: Description
+                      rows: 3
+                    - name: assignee
+                      type: text
+                      label: Assignee
+                    - name: agent
+                      type: select
+                      label: Agent
+                      options:
+                        - orchestrator
+                        - architect
+                        - developer
+                        - reviewer
+                    - name: instructions
+                      type: text
+                      label: Instructions
+                      placeholder: ".github/ai-ley/instructions/coding.md"
+                    - name: personas
+                      type: text
+                      label: Personas
+                      placeholder: ".github/ai-ley/personas/architect.md"
+          
+          - id: info
+            label: Info
+            components:
+              - componentId: info-grid
+                props:
+                  fields:
+                    - id
+                    - projectNumber
+                    - type
+                    - status
+                    - priority
+                    - assignee
+                    - storyPoints
+                    - createdAt
+                    - updatedAt
+          
+          - id: connections
+            label: Connections
+            components:
+              - componentId: connection-list
+                props:
+                  showParent: true
+                  showChildren: true
+                  showLinks: true
+          
+          - id: repo
+            label: Repository
+            components:
+              - componentId: repo-panel
+                props:
+                  fields:
+                    - gitRepo
+                    - gitBranch
+                  actions:
+                    - label: Save
+                      command: aicc.saveRepoSettings
+                    - label: Open in Browser
+                      command: aicc.openRepoInBrowser
+          
+          - id: comments
+            label: Comments
+            components:
+              - componentId: comments-list
+                props:
+                  maxHeight: 200px
+                  allowAdd: true
+      order: 2
+  
+  dataBindings:
+    planDocument:
+      source: command
+      endpoint: aicc.getPlanDocument
+      transform: |
+        (data) => {
+          // Normalize status values
+          return {
+            ...data,
+            items: data.items.map(item => ({
+              ...item,
+              status: normalizeStatus(item.status)
+            }))
+          };
+        }
+      cache:
+        enabled: true
+        ttl: 30
+      poll:
+        enabled: false
+        interval: 30000
+    
+    statusCounts:
+      source: command
+      endpoint: aicc.getStatusCounts
+      transform: |
+        (rawCounts) => {
+          return {
+            'todo': (rawCounts['backlog'] || 0) + (rawCounts['todo'] || 0),
+            'open': rawCounts['open'] || 0,
+            'in-progress': rawCounts['in-progress'] || 0,
+            'ready': (rawCounts['ready'] || 0) + (rawCounts['review'] || 0),
+            'done': rawCounts['done'] || 0,
+            'hold': rawCounts['hold'] || 0,
+            'error': (rawCounts['error'] || 0) + (rawCounts['blocked'] || 0)
+          };
+        }
+      cache:
+        enabled: true
+        ttl: 30
+  
+  state:
+    persist: true
+    initialState:
+      activeStatuses: [todo, open, in-progress, ready, hold, error]
+      filterText: ""
+      caseInsensitive: true
+      expandedItems: []
+      pendingChanges: 0
+  
+  hooks:
+    onMount: |
+      function onMount(state, bindings) {
+        // Load persisted expanded items
+        const saved = localStorage.getItem('planning-expanded-items');
+        if (saved) {
+          state.expandedItems = JSON.parse(saved);
+        }
+      }
+    
+    onDataChange: |
+      function onDataChange(key, newData, oldData, state) {
+        if (key === 'planDocument') {
+          // Update pending changes count
+          state.pendingChanges = calculatePendingChanges(newData, oldData);
+        }
+      }

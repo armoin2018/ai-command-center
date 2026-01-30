@@ -1,0 +1,195 @@
+move update-instructions to add instruction
+- Cleanup and Remove instructions for batch scans and bulk cleanup
+- Refine to a single instruction update based on a template
+
+move update-personas to add persona
+- Cleanup and Remove instructions for batch scans and bulk cleanup
+- Refine to a single persona creation
+
+move ask to add-feature
+
+consolidate run and run-next to run
+
+cleanup bench 
+- leverage skills for timing and scoring 
+
+update add-all-glean prompt
+
+Create the following skills
+
+- ailey-progress-report
+create skill ailey-progress-report that generate a project progress report based on the .project/PLAN.json
+follow the instructions defined in the prompt
+
+- ailey-add-skill
+
+- ailey-index
+
+- ailey-jira
+
+[X] update the ailey-data-converter skill to support 
+  - generation of schemas 
+  - conversion of schemas 
+  - support schema evolution 
+  - support schema compatibility mode
+  - support schema conversion mode
+  - should support jq style queries
+  - should support CRUD functions against the data 
+
+[X] /addSkill ailey-manage-plan
+  - Manage the file `.project/PLAN.json`
+  - Schema versions are stored in  `.github/aicc/schemas/plan.v{{version #}}.schema.json`
+  - Support schema evolution
+  - Support schema compatibility mode
+  - should leverage the data-converter skill for capabilites
+    - If it makes sense turn parts of the data-converter skill into a module that will be imported by both skills
+  - If one does not exist an empty object should be created based on the schema
+  - use this to perform CRUD actions against the `.project/PLAN.json`
+  - must be able to search by id, name
+  - must support a jq style query of the data
+  - ability to update individal items or entire elements 
+  - support schema version coversion
+
+- ailey-confluence
+
+
+- ailey-evolve
+
+
+- ailey-data-converter
+
+
+
+- ailey-pdf-converter
+
+
+[X] /addSkill ailey-image-tool
+ - Tool must have the ability to do various functions against images.  
+ - Should be broken out into modular structure so other skills can leverage them
+ - Utilize only MIT or CCO tooling
+ - Support conversion of images between formats
+ - Support formats for both input, output and conversion between BMP, JPG, PNG, GIF, SVG, RAW, PDF, EPS, WebP, AVIF
+ - Turn a sequence of images into animation using MJPEG, GIF, Motion PNG, Animated SVG
+ - support slicing animations into separate files
+ - Support conversion of image to base64 encoded image 
+ - support changing of color depth
+ - swap colors, tollerance for nearby colors
+ - SVG Template replacements with {{Variable}}
+   - Should support bulk template replacement
+ - support rotating
+ - support cropping 
+ - support resizing
+ - support changing canvas size
+ - support setting/changing transparency 
+ - support image compression 
+ - support extracting metadata
+ - extract images from a website
+ - extract text from an image or sequence of images
+ - add a watermark to an image
+ - update metadata on an image
+
+
+[X] /addSkill ailey-admin-optimize-kit
+    - Provide foundational optimizations and alignments to instructions, personas, agents, skills, and prompts
+      - Instructions: `.github/ai-ley/instructions/**/*.instructions.md`
+      - Personas: `.github/ai-ley/personas/**/*.peronsa.md`
+      - Agents: `.github/agents/*.agent.md`
+      - Skills: `.github/skills/**/SKILL.md`
+      - Prompts: `.github/prompts/*.prompt.md`
+    - support single file, looping through a type or all files
+    - List handling cleanup
+      - Most list should start with "- "
+      - Checklists should start with "[ ] "
+      - Ordered events should start with numbered sequence
+      - Do not compound types.
+    - Target <= 300 Lines
+    - Code is extracted in to a relative subfolder `./scripts/{{baseFileName}}/` and setup a reference pointer in the markdown
+    - examples are extracted in to a relative subfolder `./examples/{{baseFileName}}/` and setup a reference pointer in the markdown    
+    - Used to normalize frontmatter: 
+      - id: {basefilename}
+      - name: (string)
+      - description: (string)
+      - keywords: [ array, ] 
+      - tools: [ array, ]
+      - agents: (remove)
+      - Prompts:
+        - agent: (string default "AI-ley Orchestrator")
+        - skills: [ array ] - if it applies
+Example:
+```markdown
+id: {{baseFileName}}
+name: {{Name}}
+description: {{Description}}
+keywords: [ (array) ]
+tools: [ (array) ]
+agent: AI-ley Orchestrator
+skills: [ (array) ]
+```
+    - Used to normalize footer: 
+Example:
+```markdown 
+---
+version: 1.0.0
+updated: 2026-01-29
+reviewed: 2026-01-29
+score: 5.0
+---
+```
+    - Have a Review by AI for the following factors:
+      - Clarity
+      - Conciseness
+      - Accuracy
+      - Reference Material
+      - Sufficiency
+      - No Conjunctions
+      - No Soft Language Must > Should > Can
+      - Focus on Accuracy > Performance > Readability, but try for balance
+    - Assess Quality score 
+
+
+- ailey-gamma
+
+
+- ailey-outlook
+
+
+- ailey-excel
+
+
+- ailey-word
+
+- ailey-powerpoint
+
+
+- ailey-puml
+
+
+- ailey-mermaid
+
+- ailey-rag
+
+- ailey-video
+
+- ailey-audio
+
+- ailey-gemini-image
+
+- ailey-gemini-video
+
+- ailey-ocr
+
+- ailey-pdf
+
+- ailey-svg 
+
+- ailey-linkedin
+
+- ailey-facebook
+
+- ailey-tiktok
+
+- ailey-redit
+
+- ailey-zapier
+
+- ailey-mailchimp

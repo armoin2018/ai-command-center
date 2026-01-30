@@ -1,0 +1,24 @@
+name: feature-status
+displayName: Feature Status Dashboard
+agent: copilot
+description: Track current features in development
+
+content: |
+  <h3>📊 Feature Development Status</h3>
+  <p>Current sprint: Sprint 5 (Jan 3 - Jan 17, 2026)</p>
+  <ul>
+    <li><strong>✅ Completed:</strong> Planning Tab (Phase 4)</li>
+    <li><strong>🔄 In Progress:</strong> Intake Forms (Phase 5)</li>
+    <li><strong>⏳ Upcoming:</strong> External Integrations (Phase 6)</li>
+  </ul>
+
+actions:
+  - id: refresh
+    label: Refresh Status
+    command: refreshFeatureStatus
+    icon: codicon-refresh
+
+  - id: viewBacklog
+    label: View Backlog
+    command: viewFeatureBacklog
+    icon: codicon-list-tree

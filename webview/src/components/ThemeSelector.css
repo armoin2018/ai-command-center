@@ -1,0 +1,43 @@
+.theme-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.theme-selector__label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--vscode-foreground);
+    opacity: 0.8;
+}
+
+.theme-selector__select {
+    padding: 4px 8px;
+    background-color: var(--vscode-dropdown-background);
+    color: var(--vscode-dropdown-foreground);
+    border: 1px solid var(--vscode-dropdown-border);
+    border-radius: 2px;
+    font-family: var(--vscode-font-family);
+    font-size: 13px;
+    cursor: pointer;
+    min-width: 180px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.theme-selector__select:hover {
+    border-color: var(--vscode-inputOption-activeBorder);
+}
+
+.theme-selector__select:focus {
+    border-color: var(--vscode-focusBorder);
+    outline: 1px solid var(--vscode-focusBorder);
+    outline-offset: -1px;
+}
+
+.theme-selector__select option {
+    background-color: var(--vscode-dropdown-background);
+    color: var(--vscode-dropdown-foreground);
+    padding: 6px;
+}

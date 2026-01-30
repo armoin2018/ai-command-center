@@ -1,0 +1,19 @@
+.tree-node-selected {
+    background-color: var(--vscode-list-activeSelectionBackground, #0e639c) !important;
+    color: var(--vscode-list-activeSelectionForeground, #ffffff) !important;
+}
+
+.tree-node-selected .tree-node-status {
+    color: var(--vscode-list-activeSelectionForeground, #ffffff) !important;
+    opacity: 0.9;
+}
+
+.tree-node-selected:focus {
+    outline: 1px solid var(--vscode-focusBorder, #007acc);
+    outline-offset: -1px;
+}
+
+.tree-node:focus {
+    outline: 1px solid var(--vscode-focusBorder, #007acc);
+    outline-offset: -1px;
+}

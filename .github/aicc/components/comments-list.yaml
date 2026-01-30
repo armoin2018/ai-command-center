@@ -1,0 +1,112 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: comments-list
+  name: Comments List
+  description: Display and add comments to planning items
+  category: Display
+  tags: [comments, discussion, communication]
+  version: 1.0.0
+spec:
+  props:
+    comments:
+      type: array
+      default: []
+      description: Array of comment objects
+      items:
+        type: object
+        properties:
+          author: string
+          date: string
+          text: string
+    itemId:
+      type: string
+      required: true
+      description: Item ID for adding comments
+    maxHeight:
+      type: string
+      default: "200px"
+      description: Maximum height of comments list
+  
+  events:
+    - name: add-comment
+      description: Emitted when comment is added
+      payload:
+        itemId: string
+        comment: string
+  
+  template: |
+    <div class="comments-container">
+      <div class="comments-list" style="max-height: {{maxHeight}};">
+        {{#if comments.length}}
+          {{#each comments}}
+          <div class="comment-item">
+            <div class="comment-header">
+              <strong>{{author}}</strong>
+              <span class="comment-date">{{date}}</span>
+            </div>
+            <div class="comment-body">{{text}}</div>
+          </div>
+          {{/each}}
+        {{else}}
+          <em>No comments yet</em>
+        {{/if}}
+      </div>
+      
+      <div class="form-group" style="margin-top: 12px;">
+        <label>Add Comment</label>
+        <textarea 
+          class="form-control" 
+          id="new-comment-{{itemId}}" 
+          rows="2" 
+          placeholder="Enter your comment..."></textarea>
+      </div>
+      
+      <button class="footer-btn primary" onclick="addComment('{{itemId}}')">
+        <span class="codicon codicon-add"></span> Add Comment
+      </button>
+    </div>
+  
+  styles: |
+    .comments-container { }
+    .comments-list {
+      overflow-y: auto;
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 4px;
+      padding: 8px;
+    }
+    .comment-item {
+      padding: 8px;
+      border-bottom: 1px solid var(--vscode-panel-border);
+      margin-bottom: 8px;
+    }
+    .comment-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .comment-header {
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+    .comment-date {
+      color: var(--vscode-descriptionForeground);
+      margin-left: 8px;
+    }
+    .comment-body {
+      font-size: 12px;
+    }
+  
+  examples:
+    - name: Discussion Thread
+      description: Comments on a planning item
+      props:
+        itemId: "epic-1"
+        comments:
+          - author: "Alice"
+            date: "2026-01-15"
+            text: "This looks good, but we need to consider performance."
+          - author: "Bob"
+            date: "2026-01-16"
+            text: "Agreed. Added performance testing to the requirements."
+      code: |
+        <comments-list itemId="{{item.id}}" comments="{{item.comments}}"></comments-list>

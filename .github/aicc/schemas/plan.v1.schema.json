@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.dev/schemas/plan.v1.schema.json",
+  "title": "PLAN.json Schema v1",
+  "description": "Schema for AI Command Center consolidated planning data (PLAN.json) - Version 1",
+  "type": "object",
+  "required": ["version", "generatedAt", "source", "metadata", "statusCounts", "items"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the PLAN.json format"
+    },
+    "generatedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}",
+      "description": "ISO 8601 timestamp when the plan was generated"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source directory where plan files are located"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Project-level metadata",
+      "properties": {
+        "projectName": {
+          "type": "string",
+          "description": "Human-readable project name"
+        },
+        "projectCode": {
+          "type": "string",
+          "description": "Project code prefix for item IDs (e.g., AICC, ARMOIN)",
+          "pattern": "^[A-Z]+$"
+        },
+        "currentSprint": {
+          "type": "string",
+          "description": "Current sprint identifier"
+        },
+        "currentMilestone": {
+          "type": "string",
+          "description": "Current milestone identifier"
+        },
+        "defaultAssignee": {
+          "type": "string",
+          "description": "Default assignee for new items"
+        },
+        "defaultAgent": {
+          "type": "string",
+          "description": "Default AI agent for new items"
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "User or system that created the plan"
+        },
+        "updatedBy": {
+          "type": "string",
+          "description": "User or system that last updated the plan"
+        }
+      }
+    },
+    "statusCounts": {
+      "type": "object",
+      "description": "Count of items by status",
+      "required": ["BACKLOG", "READY", "IN-PROGRESS", "BLOCKED", "REVIEW", "DONE", "SKIP"],
+      "properties": {
+        "BACKLOG": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of items in backlog"
+        },
+        "READY": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of items ready to start"
+        },
+        "IN-PROGRESS": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of items in progress"
+        },
+        "BLOCKED": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of blocked items"
+        },
+        "REVIEW": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of items in review"
+        },
+        "DONE": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of completed items"
+        },
+        "SKIP": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of skipped items"
+        }
+      },
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "array",
+      "description": "Array of all plan items (epics, stories, tasks, bugs)",
+      "items": {
+        "$ref": "#/definitions/PlanItem"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "PlanItem": {
+      "type": "object",
+      "description": "A single plan item (epic, story, task, or bug)",
+      "required": ["id", "type", "summary", "status", "metadata"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z]+-\\d+$",
+          "description": "Unique identifier (e.g., ARMOIN-0001)"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["epic", "story", "task", "bug"],
+          "description": "Type of work item"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Brief summary of the item"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description in markdown format"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["BACKLOG", "READY", "IN-PROGRESS", "BLOCKED", "REVIEW", "DONE", "SKIP"],
+          "description": "Current status of the item"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"],
+          "description": "Priority level"
+        },
+        "assignee": {
+          "type": ["string", "null"],
+          "description": "Person assigned to the item"
+        },
+        "agent": {
+          "type": ["string", "null"],
+          "description": "AI agent assigned to the item"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Display order within parent"
+        },
+        "estimatedHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Estimated hours of work"
+        },
+        "actualHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Actual hours spent"
+        },
+        "acceptanceCriteria": {
+          "type": "string",
+          "description": "Acceptance criteria for completion"
+        },
+        "variables": {
+          "type": "object",
+          "description": "Key-value pairs for item-specific variables",
+          "additionalProperties": true
+        },
+        "instructions": {
+          "type": "array",
+          "description": "Array of instruction file references",
+          "items": {
+            "type": "string"
+          }
+        },
+        "personas": {
+          "type": "array",
+          "description": "Array of persona references",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contexts": {
+          "type": "array",
+          "description": "Array of file or folder paths providing context",
+          "items": {
+            "type": "string"
+          }
+        },
+        "links": {
+          "type": "array",
+          "description": "Array of file paths or URLs",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "description": "Array of keyword tags",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gitRepoUrl": {
+          "type": "string",
+          "description": "Git repository URL"
+        },
+        "gitRepoBranch": {
+          "type": "string",
+          "description": "Git branch name"
+        },
+        "parentId": {
+          "type": "string",
+          "pattern": "^[A-Z]+-\\d+$",
+          "description": "ID of parent item"
+        },
+        "children": {
+          "type": "array",
+          "description": "Array of child item IDs",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z]+-\\d+$"
+          }
+        },
+        "linkedRelationships": {
+          "type": "array",
+          "description": "Array of relationships to other items",
+          "items": {
+            "$ref": "#/definitions/LinkedRelationship"
+          }
+        },
+        "storyPoints": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Story points estimate"
+        },
+        "sprint": {
+          "type": "string",
+          "description": "Sprint identifier"
+        },
+        "milestone": {
+          "type": "string",
+          "description": "Milestone identifier"
+        },
+        "comments": {
+          "type": "array",
+          "description": "Array of comments on the item",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/ItemMetadata"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LinkedRelationship": {
+      "type": "object",
+      "description": "Relationship to another plan item",
+      "required": ["type", "itemId"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["blocks", "blocked-by", "relates-to", "duplicates", "depends-on"],
+          "description": "Type of relationship"
+        },
+        "itemId": {
+          "type": "string",
+          "pattern": "^[A-Z]+-\\d+$",
+          "description": "ID of the related item"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Comment": {
+      "type": "object",
+      "description": "A comment on a plan item",
+      "required": ["createdOn", "createdBy", "comment"],
+      "properties": {
+        "createdOn": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}",
+          "description": "When the comment was created"
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Who created the comment"
+        },
+        "comment": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Comment text"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ItemMetadata": {
+      "type": "object",
+      "description": "Metadata about the plan item",
+      "required": ["createdAt", "updatedAt", "createdBy", "updatedBy"],
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}",
+          "description": "When the item was created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}",
+          "description": "When the item was last updated"
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Who created the item"
+        },
+        "updatedBy": {
+          "type": "string",
+          "description": "Who last updated the item"
+        },
+        "archived": {
+          "type": "boolean",
+          "description": "Whether the item is archived"
+        },
+        "phase": {
+          "type": "string",
+          "description": "Project phase identifier"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

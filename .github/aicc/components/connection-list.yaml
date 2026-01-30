@@ -1,0 +1,94 @@
+apiVersion: aicc.ai-ley.io/v1
+kind: Component
+metadata:
+  id: connection-list
+  name: Connection List
+  description: Display parent, children, and linked items
+  category: Display
+  tags: [connections, relationships, links]
+  version: 1.0.0
+spec:
+  props:
+    parent:
+      type: string
+      description: Parent item ID
+    children:
+      type: array
+      default: []
+      description: Array of child item IDs
+    links:
+      type: array
+      default: []
+      description: Array of linked items
+      items:
+        type: object
+        properties:
+          type: string
+          id: string
+          summary: string
+  
+  template: |
+    <div class="connections-panel">
+      <div class="form-group">
+        <label>Parent</label>
+        <input type="text" class="form-control" value="{{parent}}" readonly>
+      </div>
+      
+      <div class="form-group">
+        <label>Children</label>
+        <div class="connection-list">
+          {{#if children.length}}
+            {{#each children}}
+            <div class="connection-item">{{this}}</div>
+            {{/each}}
+          {{else}}
+            <em>No children</em>
+          {{/if}}
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Linked Items</label>
+        <div class="connection-list">
+          {{#if links.length}}
+            {{#each links}}
+            <div class="connection-item">{{type}}: {{id}}</div>
+            {{/each}}
+          {{else}}
+            <em>No linked items</em>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  
+  styles: |
+    .connections-panel { }
+    .connection-list {
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 4px;
+      padding: 8px;
+      min-height: 40px;
+    }
+    .connection-item {
+      padding: 4px 8px;
+      background: var(--vscode-badge-background);
+      color: var(--vscode-badge-foreground);
+      border-radius: 3px;
+      display: inline-block;
+      margin: 2px;
+      font-size: 11px;
+    }
+  
+  examples:
+    - name: Epic Connections
+      description: Show connections for an epic
+      props:
+        parent: "PORTFOLIO-1"
+        children: ["STORY-1", "STORY-2", "STORY-3"]
+        links:
+          - type: "blocks"
+            id: "BUG-42"
+          - type: "relates-to"
+            id: "EPIC-2"
+      code: |
+        <connection-list parent="{{item.parent}}" children="{{item.children}}" links="{{item.links}}"></connection-list>

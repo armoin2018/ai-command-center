@@ -1,0 +1,1 @@
+"text into fixed-size pieces. Word-based chunking groups by word count. Line-based chunking splits by newlines.\\n\\nAll chunking modes support overlaps. This"

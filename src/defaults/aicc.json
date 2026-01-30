@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Command Center Default Configuration",
+  "description": "This file contains default settings that can be overridden by workspace settings",
+  "planning": {
+    "planPath": ".project/plan",
+    "autoSaveInterval": 30,
+    "storyPointScale": "fibonacci",
+    "sprintDurationWeeks": 2
+  },
+  "logging": {
+    "level": "info",
+    "fileLoggingEnabled": true,
+    "retentionDays": 7,
+    "maxFileSizeMB": 5
+  },
+  "integrations": {
+    "jira": {
+      "enabled": false,
+      "baseUrl": "",
+      "email": "",
+      "apiToken": "",
+      "projectKey": "",
+      "syncStrategy": "bidirectional",
+      "conflictResolution": "manual",
+      "autoSync": false,
+      "syncInterval": 15,
+      "webhookEnabled": false,
+      "webhookSecret": ""
+    },
+    "confluence": {
+      "enabled": false,
+      "baseUrl": "",
+      "apiToken": ""
+    },
+    "gamma": {
+      "enabled": false,
+      "apiKey": ""
+    }
+  },
+  "mcp": {
+    "enabled": true,
+    "port": 3000,
+    "transport": "http",
+    "logging": {
+      "enabled": true,
+      "level": "info"
+    },
+    "tools": {
+      "enabled": true,
+      "timeout": 30000
+    },
+    "resources": {
+      "enabled": true,
+      "cacheSize": 100
+    },
+    "prompts": {
+      "enabled": true
+    }
+  },
+  "ui": {
+    "showWelcomeMessage": true,
+    "theme": "auto",
+    "confirmDelete": true
+  },
+  "performance": {
+    "activationTimeoutMs": 5000,
+    "apiTimeoutMs": 30000,
+    "trackPerformance": true
+  }
+}
