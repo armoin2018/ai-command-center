@@ -1,0 +1,41 @@
+{
+  "name": "ailey-com-email",
+  "version": "1.0.0",
+  "description": "Standard email management using IMAP, SMTP, and POP3 protocols",
+  "type": "module",
+  "main": "scripts/index.ts",
+  "scripts": {
+    "email": "tsx scripts/index.ts",
+    "send": "tsx scripts/index.ts send",
+    "read": "tsx scripts/index.ts read",
+    "folders": "tsx scripts/index.ts folders"
+  },
+  "keywords": [
+    "email",
+    "imap",
+    "smtp",
+    "pop3",
+    "gmail",
+    "mail"
+  ],
+  "author": "AI-ley Kit",
+  "license": "MIT",
+  "dependencies": {
+    "imap": "^0.8.19",
+    "nodemailer": "^6.9.8",
+    "mailparser": "^3.6.5",
+    "handlebars": "^4.7.8",
+    "commander": "^12.0.0",
+    "dotenv": "^16.3.1",
+    "mime-types": "^2.1.35",
+    "csv-parse": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/imap": "^0.8.40",
+    "@types/nodemailer": "^6.4.14",
+    "@types/mime-types": "^2.1.4",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  }
+}

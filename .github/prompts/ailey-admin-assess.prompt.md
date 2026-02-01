@@ -1,15 +1,15 @@
 ---
 id: ailey-admin-assess
 name: AI-LEY Content Assessor
-description: Rescans and rates AI-LEY content files (instructions, personas, prompts) from 0-5 based on quality and template alignment, updating scores and listing files below 4.5 for improvement. Now available in ailey-admin-optimize-kit skill.
+description: Rescans and rates AI-LEY content files (instructions, personas, prompts) from 0-5 based on quality and template alignment, updating scores and listing files below 4.5 for improvement. Now available in ailey-admin-tools-optimize skill.
 tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-> **⚠️ This functionality is now available in the `ailey-admin-optimize-kit` skill.**
+> **⚠️ This functionality is now available in the `ailey-admin-tools-optimize` skill.**
 > 
 > **Usage:**
 > ```bash
-> cd .github/skills/ailey-admin-optimize-kit
+> cd .github/skills/ailey-admin-tools-optimize
 > npm run optimize assess <target>
 > ```
 > 
@@ -31,7 +31,7 @@ agent: AI-ley Orchestrator
 > npm run optimize assess all
 > ```
 > 
-> For detailed documentation, see [ailey-admin-optimize-kit SKILL.md](../skills/ailey-admin-optimize-kit/SKILL.md).
+> For detailed documentation, see [ailey-admin-tools-optimize SKILL.md](../skills/ailey-admin-tools-optimize/SKILL.md).
 
 ---
 

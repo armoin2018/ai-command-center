@@ -342,7 +342,7 @@ score: {{instruction.qualityScore}}
 
 3. **Master Index & Navigation**
 
-Use the skill `.github/skills/ailey-index-tool` to regenerate the indexs
+Use the skill `.github/skills/ailey-admin-tools-index` to regenerate the indexs
 
 4. **Quality Metrics & Analytics**
 

@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cache
+cache/
+openai_cache/
+.cache/
+
+# Output
+output/
+generated/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+tmp/
+temp/
+*.tmp

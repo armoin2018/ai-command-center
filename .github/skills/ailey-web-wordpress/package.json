@@ -1,0 +1,54 @@
+{
+  "name": "@ailey/web-wordpress",
+  "version": "1.0.0",
+  "description": "WordPress.com and Self-Hosted WordPress integration for AI-ley with account tier detection and comprehensive site, content, and media management capabilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "site": "node dist/cli.js site",
+    "post": "node dist/cli.js post",
+    "page": "node dist/cli.js page",
+    "media": "node dist/cli.js media",
+    "plugin": "node dist/cli.js plugin",
+    "theme": "node dist/cli.js theme",
+    "user": "node dist/cli.js user",
+    "comment": "node dist/cli.js comment",
+    "analytics": "node dist/cli.js analytics",
+    "seo": "node dist/cli.js seo",
+    "diagnose": "node dist/cli.js diagnose",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "wordpress",
+    "site-management",
+    "content-management",
+    "cms",
+    "blogging",
+    "api",
+    "ai-ley",
+    "integration"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+

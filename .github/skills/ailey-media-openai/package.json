@@ -1,0 +1,45 @@
+{
+  "name": "ailey-media-openai",
+  "version": "1.0.0",
+  "description": "OpenAI DALL-E 3 and Sora image and video generation integration for AI-ley",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "generate": "node dist/cli.js generate",
+    "edit": "node dist/cli.js edit",
+    "variation": "node dist/cli.js variation",
+    "video": "node dist/cli.js video",
+    "history": "node dist/cli.js history",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "keywords": [
+    "openai",
+    "dall-e",
+    "dall-e-3",
+    "sora",
+    "ai-image-generation",
+    "ai-video-generation",
+    "text-to-image",
+    "text-to-video",
+    "image-editing",
+    "ai-ley"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.3"
+  }
+}

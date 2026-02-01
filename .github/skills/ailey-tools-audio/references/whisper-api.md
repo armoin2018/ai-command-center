@@ -481,7 +481,7 @@ wait
 
 ## Integration Examples
 
-### Integration with ailey-tag-n-rag
+### Integration with ailey-tools-tag-n-rag
 
 Index transcripts in RAG system:
 
@@ -489,7 +489,7 @@ Index transcripts in RAG system:
 # Step 1: Transcribe
 npm run audio transcribe file -i lecture.mp3 -o lecture.txt --format text
 
-# Step 2: Index in RAG (from ailey-tag-n-rag skill)
+# Step 2: Index in RAG (from ailey-tools-tag-n-rag skill)
 npm run rag tag -i lecture.txt -t "lecture,education,AI" -c "AI Command Center"
 ```
 

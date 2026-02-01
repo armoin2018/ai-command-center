@@ -1,0 +1,39 @@
+{
+  "name": "ailey-soc-twitter",
+  "version": "1.0.0",
+  "description": "Comprehensive X (Twitter) integration with tier detection, posting, search, streaming, and analytics",
+  "type": "module",
+  "scripts": {
+    "twitter": "tsx scripts/index.ts",
+    "x": "tsx scripts/index.ts",
+    "tweet": "tsx scripts/index.ts tweet",
+    "search": "tsx scripts/index.ts search",
+    "timeline": "tsx scripts/index.ts timeline",
+    "setup": "tsx scripts/index.ts setup",
+    "test": "tsx scripts/index.ts test",
+    "detect": "tsx scripts/index.ts detect",
+    "monitor": "tsx scripts/bot.ts"
+  },
+  "keywords": [
+    "twitter",
+    "x",
+    "api",
+    "social-media",
+    "tier-detection",
+    "automation",
+    "posting",
+    "streaming"
+  ],
+  "dependencies": {
+    "twitter-api-v2": "^1.17.1",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

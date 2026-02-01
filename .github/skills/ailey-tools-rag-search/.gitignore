@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# ChromaDB
+chromadb_data/
+*.db
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Results
+search_results/
+output/
+generated/
+
+# Cache
+.cache/
+*.cache
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml

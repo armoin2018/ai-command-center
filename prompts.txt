@@ -25,7 +25,7 @@ follow the instructions defined in the prompt
 
 [X] ailey-index
 
-[X] ailey-jira
+[X] ailey-atl-jira
 
 [X] update the ailey-tools-data-converter skill to support 
   - generation of schemas 
@@ -36,7 +36,7 @@ follow the instructions defined in the prompt
   - should support jq style queries
   - should support CRUD functions against the data 
 
-[X] /addSkill ailey-manage-plan
+[X] /addSkill ailey-admin-manage-plan
   - Manage the file `.project/PLAN.json`
   - Schema versions are stored in  `.github/aicc/schemas/plan.v{{version #}}.schema.json`
   - Support schema evolution
@@ -50,7 +50,7 @@ follow the instructions defined in the prompt
   - ability to update individal items or entire elements 
   - support schema version coversion
 
-[X] ailey-confluence
+[X] ailey-atl-confluence
 
 
 - ailey-evolve
@@ -89,7 +89,7 @@ follow the instructions defined in the prompt
  - update metadata on an image
 
 
-[X] /addSkill ailey-admin-optimize-kit
+[X] /addSkill ailey-admin-tools-optimize
     - Provide foundational optimizations and alignments to instructions, personas, agents, skills, and prompts
       - Instructions: `.github/ai-ley/instructions/**/*.instructions.md`
       - Personas: `.github/ai-ley/personas/**/*.peronsa.md`
@@ -147,7 +147,7 @@ score: 5.0
     - Assess Quality score 
 
 
-[X] ailey-gamma
+[X] ailey-media-gamma
 
 
 [X] ailey-outlook
@@ -166,15 +166,15 @@ score: 5.0
 
 - ailey-mermaid
 
-- ailey-rag
+[X] ailey-rag
 
-- ailey-video
+[X] ailey-video
 
-- ailey-audio
+[X] ailey-audio
 
-- ailey-gemini-image
+[X] ailey-gemini-image
 
-- ailey-gemini-video
+[X] ailey-gemini-video
 
 [X] ailey-ocr (ailey-image)
 
@@ -182,47 +182,51 @@ score: 5.0
 
 [X] ailey-svg (ailey-image) 
 
-[X] ailey-linkedin
+[X] ailey-soc-linkedin
 
-[X] ailey-facebook
+[X] ailey-soc-facebook
 
-[X] ailey-tiktok
+[X] ailey-soc-tiktok
 
 [X] ailey-redit
 
-[X] ailey-discord
+[X] ailey-soc-discord
 
 
 
-- ailey-mailchimp
+[X] ailey-com-mailchimp
 
-- ailey-wordpress
+[X] ailey-web-wordpress
 
-- ailey-woocommerce
+[X] ailey-shop-woocommerce
 
-[X] ailey-twitter-X
+[X] ailey-soc-twitter-X
 
-- ailey-zoom
+[X] ailey-com-zoom
 
-- ailey-whatsapp
+[X] ailey-com-whatsapp
 
-[R] ailey-youtube
+[X] ailey-com-vonage
 
-[X] ailey-threads
+[X] ailey-soc-youtube
 
-- ailey-capcut
+[X] ailey-soc-threads
 
-- ailey-amazon
+[X] ailey-media-capcut
 
-- ailey-meetup
+[X] ailey-shop-amazon
 
-- ailey-etsy
+[X] ailey-soc-meetup
 
-- ailey-zapier
+[X] ailey-shop-etsy
+
+[] ailey-zapier
+
+[] ailey-gov-sam
 
 - ailey-make
 
-- ailey-web-crawl
+[X] ailey-tools-web-crawl
 
 - calendly
 https://developer.calendly.com/getting-started
@@ -231,14 +235,14 @@ https://developer.calendly.com/getting-started
 - Meevo
   - https://docs.meevoapi.com/
 
-- TimeTap
+- TimeTap (atlassian)
   - https://timetap.atlassian.net/wiki/spaces/TTAPI/overview
 
 - SalesForce
 
 - Twilio
 
-- vonage 
+[X] vonage 
 
 Persona 
 - Operations Manager

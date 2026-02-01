@@ -1,0 +1,25 @@
+{
+  "name": "ailey-atl-jira",
+  "version": "1.0.0",
+  "description": "Jira integration with CRUD operations, bulk import/export, and plan synchronization",
+  "type": "module",
+  "scripts": {
+    "jira": "tsx scripts/index.ts",
+    "import": "tsx scripts/bulk-import.ts",
+    "export": "tsx scripts/bulk-export.ts",
+    "sync": "tsx scripts/sync-plan.ts"
+  },
+  "dependencies": {
+    "jira-client": "^8.2.2",
+    "commander": "^11.1.0",
+    "dotenv": "^16.4.5",
+    "csv-parse": "^5.5.5",
+    "csv-stringify": "^6.4.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/jira-client": "^7.1.9",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  }
+}

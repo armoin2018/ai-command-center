@@ -1,0 +1,55 @@
+{
+  "name": "ailey-soc-meetup",
+  "version": "1.0.0",
+  "description": "Meetup integration with GraphQL API, account tier detection, and OAuth authentication",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "event": "node dist/cli.js event",
+    "group": "node dist/cli.js group",
+    "rsvp": "node dist/cli.js rsvp",
+    "member": "node dist/cli.js member",
+    "analytics": "node dist/cli.js analytics",
+    "announce": "node dist/cli.js announce",
+    "report": "node dist/cli.js report",
+    "query": "node dist/cli.js query",
+    "diagnose": "node dist/cli.js diagnose",
+    "test": "npm run build && npm run detect"
+  },
+  "keywords": [
+    "meetup",
+    "graphql",
+    "api",
+    "oauth",
+    "events",
+    "groups",
+    "rsvp",
+    "community",
+    "ai-ley",
+    "aicc"
+  ],
+  "author": "AI-ley Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.1",
+    "commander": "^12.0.0",
+    "chalk": "^4.1.2",
+    "open": "^8.4.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

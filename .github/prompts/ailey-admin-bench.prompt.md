@@ -1,15 +1,15 @@
 ---
 id: ailey-admin-bench
 name: Bench
-description: Benchmark and evaluate instruction and persona files for effectiveness, clarity, and performance characteristics. Now available in ailey-admin-optimize-kit skill.
+description: Benchmark and evaluate instruction and persona files for effectiveness, clarity, and performance characteristics. Now available in ailey-admin-tools-optimize skill.
 tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-> **⚠️ This functionality is now available in the `ailey-admin-optimize-kit` skill.**
+> **⚠️ This functionality is now available in the `ailey-admin-tools-optimize` skill.**
 > 
 > **Usage:**
 > ```bash
-> cd .github/skills/ailey-admin-optimize-kit
+> cd .github/skills/ailey-admin-tools-optimize
 > npm run optimize bench <target>
 > ```
 > 
@@ -33,7 +33,7 @@ agent: AI-ley Orchestrator
 > npm run optimize bench instructions -- --baseline
 > ```
 > 
-> For detailed documentation, see [ailey-admin-optimize-kit SKILL.md](../skills/ailey-admin-optimize-kit/SKILL.md).
+> For detailed documentation, see [ailey-admin-tools-optimize SKILL.md](../skills/ailey-admin-tools-optimize/SKILL.md).
 
 ---
 

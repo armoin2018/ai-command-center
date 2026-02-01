@@ -560,7 +560,7 @@ console.log(`Channels: ${metadata.streams[0].channels}`);
 
 ## Integration with AI-ley Ecosystem
 
-### With ailey-tag-n-rag
+### With ailey-tools-tag-n-rag
 
 Index transcripts for RAG:
 
@@ -569,7 +569,7 @@ Index transcripts for RAG:
 npm run audio transcribe file -i video.mp3 -o transcript.txt
 
 # Index with tag-n-rag
-cd ../ailey-tag-n-rag
+cd ../ailey-tools-tag-n-rag
 npm run process file ../ailey-tools-audio/transcript.txt --collection transcripts
 ```
 

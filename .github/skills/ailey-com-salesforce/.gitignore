@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Exports
+exports/
+*.csv
+*.json
+
+# OAuth tokens
+.oauth/
+tokens/
+
+# Certificates
+certs/
+*.key
+*.pem
+*.crt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.salesforce-cache/
+
+# Test
+coverage/
+.nyc_output/

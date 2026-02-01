@@ -1,0 +1,48 @@
+{
+  "name": "ailey-tools-rag-search",
+  "version": "1.0.0",
+  "description": "Search RAG collections created by ailey-tools-tag-n-rag with optional Google grounding",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "list": "node dist/cli.js list",
+    "search": "node dist/cli.js search",
+    "join": "node dist/cli.js join",
+    "grounded": "node dist/cli.js grounded",
+    "tags": "node dist/cli.js tags",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "keywords": [
+    "rag",
+    "search",
+    "chromadb",
+    "vector-search",
+    "semantic-search",
+    "google-grounding",
+    "ai-ley",
+    "retrieval",
+    "embeddings"
+  ],
+  "author": "AI-ley Kit",
+  "license": "MIT",
+  "dependencies": {
+    "chromadb": "^1.8.1",
+    "axios": "^1.6.0",
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.0",
+    "google-search-results-nodejs": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

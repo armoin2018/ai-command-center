@@ -1,0 +1,48 @@
+{
+  "name": "ailey-media-capcut",
+  "version": "1.0.0",
+  "description": "CapCut integration skill for AI-ley kit",
+  "main": "dist/index.js",
+  "bin": {
+    "capcut": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "project": "node dist/cli.js project",
+    "video": "node dist/cli.js video",
+    "asset": "node dist/cli.js asset",
+    "template": "node dist/cli.js template",
+    "export": "node dist/cli.js export",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "keywords": [
+    "capcut",
+    "video-editing",
+    "media",
+    "video-creation",
+    "editing",
+    "templates",
+    "effects",
+    "music",
+    "ai-ley"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

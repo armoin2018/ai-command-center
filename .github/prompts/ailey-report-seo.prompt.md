@@ -7,17 +7,17 @@ agent: AI-ley Marketing
 ---
 # Copilot Command: SEO Report Generator
 
-> **Note**: This prompt now delegates to the **ailey-seo-report** skill for comprehensive SEO analysis.  
-> Skill location: `.github/skills/ailey-seo-report/`  
-> Skill documentation: `.github/skills/ailey-seo-report/SKILL.md`
+> **Note**: This prompt now delegates to the **ailey-tools-seo-report** skill for comprehensive SEO analysis.  
+> Skill location: `.github/skills/ailey-tools-seo-report/`  
+> Skill documentation: `.github/skills/ailey-tools-seo-report/SKILL.md`
 
 ## Quick Start
 
-Use the **ailey-seo-report** skill directly for SEO audits:
+Use the **ailey-tools-seo-report** skill directly for SEO audits:
 
 ```bash
 # Basic SEO audit
-cd .github/skills/ailey-seo-report
+cd .github/skills/ailey-tools-seo-report
 npm run seo-report -- --url https://example.com
 
 # Comprehensive audit with competitors
@@ -32,9 +32,9 @@ npm run seo-report -- \
 ## Skill Resources
 
 **Primary Documentation:**
-- Skill Overview: `.github/skills/ailey-seo-report/SKILL.md`
-- SEO Report Instructions: `.github/skills/ailey-seo-report/references/seo-report.instructions.md`
-- Accessibility & SEO Integration: `.github/skills/ailey-seo-report/references/accessibility-seo.md`
+- Skill Overview: `.github/skills/ailey-tools-seo-report/SKILL.md`
+- SEO Report Instructions: `.github/skills/ailey-tools-seo-report/references/seo-report.instructions.md`
+- Accessibility & SEO Integration: `.github/skills/ailey-tools-seo-report/references/accessibility-seo.md`
 
 **Personas:**
 - SEO Expert: `.github/ai-ley/personas/marketing/seo-expert.md`
@@ -45,7 +45,7 @@ npm run seo-report -- \
 
 ## What the Skill Provides
 
-The **ailey-seo-report** skill delivers all capabilities originally defined in this prompt:
+The **ailey-tools-seo-report** skill delivers all capabilities originally defined in this prompt:
 
 ✅ **Technical SEO Analysis**: Crawlability, sitemaps, robots.txt, schema, Core Web Vitals  
 ✅ **Content Optimization**: Title/meta analysis, keyword optimization, header structure  
@@ -64,7 +64,7 @@ The **ailey-seo-report** skill delivers all capabilities originally defined in t
 
 ## Goal
 
-Generate comprehensive SEO analysis reports using the **ailey-seo-report** skill.
+Generate comprehensive SEO analysis reports using the **ailey-tools-seo-report** skill.
 
 Given:
 - A website URL to be crawled and analyzed
@@ -81,14 +81,14 @@ Produce:
 
 ## Command
 
-Use the **ailey-seo-report** skill for SEO audits. The skill provides all analysis capabilities below.
+Use the **ailey-tools-seo-report** skill for SEO audits. The skill provides all analysis capabilities below.
 
-**Skill Location**: `.github/skills/ailey-seo-report/`  
+**Skill Location**: `.github/skills/ailey-tools-seo-report/`  
 **Documentation**: See `SKILL.md` and `references/seo-report.instructions.md`  
 **Personas**: SEO Expert, Technical Analyst  
 **Agent**: ailey-marketing
 
-### Analysis Steps (Performed by ailey-seo-report skill)
+### Analysis Steps (Performed by ailey-tools-seo-report skill)
 
 The skill executes these steps automatically:
 
@@ -103,7 +103,7 @@ The skill executes these steps automatically:
 9. **Validation**: Completeness checks, scoring consistency
 10. **Delivery**: Comprehensive report package in `.project/seo/{domain}/{YYYY.MM.DD}/`
 
-**Full details**: See `.github/skills/ailey-seo-report/references/seo-report.instructions.md`
+**Full details**: See `.github/skills/ailey-tools-seo-report/references/seo-report.instructions.md`
 
 
 ### Example 1: Basic SEO Audit

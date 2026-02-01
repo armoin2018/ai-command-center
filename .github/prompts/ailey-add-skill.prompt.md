@@ -40,9 +40,9 @@ These provide domain-specific guidance and best practices.
 
 ## Recommended Skills
 
-Use the ailey-skill-creator skill:
+Use the ailey-admin-skill-creator skill:
 
-- `.github/skills/ailey-skill-creator/SKILL.md`
+- `.github/skills/ailey-admin-skill-creator/SKILL.md`
 
 This skill provides structured guidance for creating effective skills.
 
@@ -101,7 +101,7 @@ Run the skill initializer:
 
 ```bash
 cd .github/skills
-node ../skills/ailey-skill-creator/scripts/init-skill.ts <skill-name> --path .github/skills
+node ../skills/ailey-admin-skill-creator/scripts/init-skill.ts <skill-name> --path .github/skills
 ```
 
 This creates:
@@ -228,7 +228,7 @@ If skill needs external resource access:
 Run validation:
 
 ```bash
-node .github/skills/ailey-skill-creator/scripts/validate-skill.ts .github/skills/skill-name
+node .github/skills/ailey-admin-skill-creator/scripts/validate-skill.ts .github/skills/skill-name
 ```
 
 **Check**:
@@ -321,7 +321,7 @@ Before completing:
 ## Notes
 
 - Follow `.github/ai-ley/instructions/vscode/copilot-skills.md` for detailed guidance
-- Use ailey-skill-creator skill for structured workflow
+- Use ailey-admin-skill-creator skill for structured workflow
 - Prefix skill names with `ailey-` for ai-ley kit skills
 - Keep SKILL.md under 500 lines using progressive disclosure
 - Test thoroughly before committing

@@ -27,7 +27,7 @@ This index catalogs all AI-ley prompts with metadata for easy discovery and sele
 | [AI-LEY Content Validator](.github/prompts/ailey-validate.prompt.md) | Validates AI-LEY content files (instructions, personas, prom... | orchestrator | Low | 4.0 |
 | [Health Check](.github/prompts/ailey-health-check.prompt.md) | Evaluate {{files.requirements}}, {{files.plan}}, {{folders.p... | orchestrator | Low | 4.0 |
 | [Project Audit](.github/prompts/ailey-audit.prompt.md) | Audit the existing project to verify it aligns with the stan... | security | Low | 4.0 |
-| [SEO Report Generator](.github/prompts/ailey-seo-report.prompt.md) | Generate comprehensive SEO analysis reports with ratings, gr... | marketing | Low | 4.0 |
+| [SEO Report Generator](.github/prompts/ailey-tools-seo-report.prompt.md) | Generate comprehensive SEO analysis reports with ratings, gr... | marketing | Low | 4.0 |
 
 ### Architecture
 
@@ -168,7 +168,7 @@ This index catalogs all AI-ley prompts with metadata for easy discovery and sele
 - [Build Marketing Strategy](.github/prompts/ailey-build-marketing-strategy.prompt.md) - Generate a complete, metrics-driven marketing strategy from {{files.requirements}} and write it to {{folders.plan}}/business/marketing-strategy.md.
 - [Go-to-Market Strategy](.github/prompts/ailey-go-to-market.prompt.md) - Build a complete go-to-market strategy based on the requirements found in files.requirements
 - [Market Research and Analysis](.github/prompts/ailey-build-market-research.prompt.md) - Build comprehensive market research with industry analysis, future trends, and strategic opportunities
-- [SEO Report Generator](.github/prompts/ailey-seo-report.prompt.md) - Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization
+- [SEO Report Generator](.github/prompts/ailey-tools-seo-report.prompt.md) - Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization
 
 ### optimizer
 
@@ -255,7 +255,7 @@ This index catalogs all AI-ley prompts with metadata for easy discovery and sele
 - [Repair Prompts](.github/prompts/ailey-repair-prompts.prompt.md) (Maintenance) - Repairs missing prompt reference files across AI platforms by analyzing existing prompts and generating missing references
 - [Revenue Projections and Financial Modeling](.github/prompts/ailey-build-revenue-projections.prompt.md) (Business) - Build comprehensive revenue projections with market analysis, customer modeling, and scenario planning
 - [Run Next](.github/prompts/ailey-run-next.prompt.md) (Operations) - Continue executing the next step in a workflow or process
-- [SEO Report Generator](.github/prompts/ailey-seo-report.prompt.md) (Analysis) - Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization
+- [SEO Report Generator](.github/prompts/ailey-tools-seo-report.prompt.md) (Analysis) - Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization
 - [Update Instructions](.github/prompts/ailey-update-instructions.prompt.md) (Maintenance) - AI-ley prompt for update instructions
 - [Update Personas](.github/prompts/ailey-update-personas.prompt.md) (Maintenance) - Awaiting summary.
 
@@ -332,7 +332,7 @@ This index catalogs all AI-ley prompts with metadata for easy discovery and sele
 | [Run](.github/prompts/ailey-run.prompt.md) | Operations | orchestrator | execution, implementation, task-management... | 2026-01-11 |
 | [Run Flow](.github/prompts/ailey-run-flow.prompt.md) | Operations | orchestrator | workflow-execution, plantuml-interpretation, command-chaining... | 2026-01-11 |
 | [Run Next](.github/prompts/ailey-run-next.prompt.md) | Operations | orchestrator | workflow, continuation, next-step... | 2026-01-11 |
-| [SEO Report Generator](.github/prompts/ailey-seo-report.prompt.md) | Analysis | marketing | seo, analysis, website audit... | 2026-01-11 |
+| [SEO Report Generator](.github/prompts/ailey-tools-seo-report.prompt.md) | Analysis | marketing | seo, analysis, website audit... | 2026-01-11 |
 | [Update Instructions](.github/prompts/ailey-update-instructions.prompt.md) | Maintenance | orchestrator | update, instructions, prompt... | 2026-01-11 |
 | [Update Personas](.github/prompts/ailey-update-personas.prompt.md) | Maintenance | orchestrator | , prompt, ailey | 2026-01-11 |
 

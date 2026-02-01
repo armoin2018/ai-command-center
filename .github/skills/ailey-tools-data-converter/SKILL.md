@@ -635,7 +635,7 @@ The converter is optimized for:
 - **lib/query/**: Query engine module (exported for use by other skills)
 - **lib/crud/**: CRUD operations module (exported for use by other skills)
 
-These core modules can be imported by other skills (e.g., ailey-manage-plan) for shared functionality.
+These core modules can be imported by other skills (e.g., ailey-admin-manage-plan) for shared functionality.
 
 ### Tests & Examples
 - Tests: [tests/test-runner.ts](tests/test-runner.ts)
@@ -649,7 +649,7 @@ These core modules can be imported by other skills (e.g., ailey-manage-plan) for
 The data converter provides reusable modules that can be imported by other skills:
 
 ```typescript
-// Example: Using in ailey-manage-plan
+// Example: Using in ailey-admin-manage-plan
 import { SchemaValidator, SchemaEvolver } from '../ailey-tools-data-converter/lib/schema';
 import { QueryExecutor } from '../ailey-tools-data-converter/lib/query';
 import { CRUDOperations } from '../ailey-tools-data-converter/lib/crud';
