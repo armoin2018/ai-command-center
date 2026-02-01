@@ -1,13 +1,11 @@
 ---
-name: 'Go-to-Market Strategy'
-description: 'Build a complete go-to-market strategy based on the requirements found in files.requirements'
+id: ailey-build-gtm-strategy
+name: Go-to-Market Strategy
+description: Build a complete go-to-market strategy based on the requirements found in files.requirements
 keywords: [go-to-market, gtm, strategy, launch, customer-acquisition, marketing, sales, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Go-to-Market Strategy
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [go-to-market, gtm, strategy, launch, customer-acquisition, marketing,
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -110,9 +106,7 @@ You are a go-to-market strategy specialist and product launch expert with expert
 **Market Segmentation Strategy**:
 
 ```markdown
-# Target Market Analysis
 
-## Market Segmentation Framework
 
 ### Primary Target Segment: {Segment Name}
 
@@ -153,7 +147,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 - **Entry Timeline**: {when-to-target}
 - **Strategic Rationale**: {why-target-this-segment}
 
-## Customer Personas
 
 ### Persona 1: "{Persona Name}" - {Role Title}
 
@@ -210,7 +203,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 **Positioning Strategy and Competitive Differentiation**:
 ```markdown
-# Value Proposition & Positioning
 
 ## Core Value Proposition
 **Primary Value Statement**: {one-sentence-value-proposition}
@@ -286,7 +278,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 **Acquisition Channel Design and Optimization**:
 ```markdown
-# Customer Acquisition Strategy
 
 ## Customer Acquisition Funnel
 ### Funnel Metrics Overview
@@ -368,7 +359,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 **Pricing Model Design and Optimization**:
 ```markdown
-# Pricing Strategy
 
 ## Pricing Model Overview
 **Primary Pricing Model**: {subscription-transaction-license-usage}
@@ -451,7 +441,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 **Launch Timeline and Milestone Management**:
 ```markdown
-# Launch Strategy & Timeline
 
 ## Launch Phases Overview
 ### Pre-Launch Phase (Months -3 to 0)
@@ -563,7 +552,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 **KPI Framework and Success Measurement**:
 ```markdown
-# Success Metrics & KPIs
 
 ## Go-to-Market KPI Dashboard
 ### Customer Acquisition Metrics
@@ -645,7 +633,6 @@ You are a go-to-market strategy specialist and product launch expert with expert
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Go-to-Market
 
@@ -745,3 +732,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

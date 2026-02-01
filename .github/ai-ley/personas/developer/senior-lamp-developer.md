@@ -1,12 +1,9 @@
 ---
-name: 'Senior Lamp Developer'
-description: 'Expert persona specializing in Senior Lamp Developer for AI-assisted development'
+id: senior-lamp-developer
+name: Senior Lamp Developer
+description: Expert persona specializing in Senior Lamp Developer for AI-assisted development
 keywords: [directives, constraints, architecture, gui, goals, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: senior lamp developer
 
 ## 1. Role Summary
 A Software Developer specializing in technology implementation, system optimization, and best practices, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/senior-lamp-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

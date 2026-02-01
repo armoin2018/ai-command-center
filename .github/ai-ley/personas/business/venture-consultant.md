@@ -1,11 +1,9 @@
 ---
-name: 'Venture Consultant'
-description: 'Venture Consultant - Strategic capital advisor specializing in startup'
+id: venture-consultant
+name: Venture Consultant
+description: Venture Consultant - Strategic capital advisor specializing in startup
 keywords: [agent, behavior, approach, api, business, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Venture Consultant
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former venture capital principal with extensive network across tier-1 and emergi
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former venture capital principal with extensive network across tier-1 and emergi
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Multi-Stage Capital Strategy
 
@@ -146,7 +138,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Guide startups through sophisticated venture capital strategies by developing op
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/venture-consultant/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -214,13 +203,17 @@ See [example-2](./examples/venture-consultant/example-2.markdown)
 - **Long-term Support**: Provides ongoing strategic guidance beyond initial funding for investor relations, board management, subsequent rounds, and exit preparation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

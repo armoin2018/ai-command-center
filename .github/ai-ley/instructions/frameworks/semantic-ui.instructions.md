@@ -1,7 +1,7 @@
 ---
 name: 'Semantic Ui.Instructions'
 description: 'AI agent guidelines for using Semantic UI effectively, focusing on semantic HTML and component-based development.'
-keywords: [alternatives, [pattern, [concept, analysis, api, appearing, agents, (theme.config), avoid, authentication]
+keywords: [alternatives, pattern, [concept, analysis, api, appearing, agents, (theme.config), avoid, authentication
 ---
 
 

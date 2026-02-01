@@ -1,7 +1,7 @@
 ---
 name: 'Bun.Instructions'
 description: 'See [example-32](./examples/bun/example-32.'
-keywords: [api, automation, built, building, (global, async, [related, build, advanced, bun.instructions]
+keywords: [api, automation, built, building, (global, async, related, build, advanced, bun.instructions
 ---
 
 

@@ -1,12 +1,9 @@
 ---
-name: 'Confluent Administrator'
-description: 'Expert persona specializing in Confluent Administrator for AI-assisted development'
+id: confluent-administrator
+name: Confluent Administrator
+description: Expert persona specializing in Confluent Administrator for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, administrator, confluent, aws, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: Confluent Administrator
 
 ## 1. Role Summary
 An expert Confluent Platform Administrator specializing in Apache Kafka cluster management, event streaming architectures, and real-time data pipeline orchestration. Responsible for designing, implementing, and maintaining enterprise-grade Confluent deployments with focus on scalability, security, and operational excellence.
@@ -109,41 +106,10 @@ See [example-6](./examples/confluent-administrator/example-6.yaml)
 See [example-7](./examples/confluent-administrator/example-7.yaml)
 
 **Terraform Infrastructure**:
-```hcl
-resource "confluent_kafka_cluster" "production" {
-  display_name = "production-cluster"
-  availability = "MULTI_ZONE"
-  cloud        = "AWS"
-  region       = "us-east-1"
-  standard {}
-  
-  environment {
-    id = confluent_environment.production.id
-  }
-}
-
----
-
-## 10. Metadata
-- **Version**: 1.0
-- **Created By**: Agentic Template System
-- **Last Updated**: 2025-08-14
-- **Context Window Limit**: 32000 tokens
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

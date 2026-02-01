@@ -1,11 +1,10 @@
 ---
-name: 'Scipy.Instructions'
-description: 'Purpose: Optimization, statistics, and signal processing for portfolio construction and factor analysis with reproducible, bounded computations.'
+id: scipy
+name: Scipy.Instructions
+description: Purpose: Optimization, statistics, and signal processing for portfolio construction and factor analysis with reproducible, bounded computations.
 keywords: [guidelines, gui, cases, frameworks, scipy.instructions, assistant, rules, scipy, (finance), optimization]
+tools: undefined
 ---
-
-
-
 # SciPy (Finance) — AI Assistant Guidelines
 
 Purpose: Optimization, statistics, and signal processing for portfolio construction and factor analysis with reproducible, bounded computations.
@@ -42,3 +41,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

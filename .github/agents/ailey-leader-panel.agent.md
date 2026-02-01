@@ -1,11 +1,10 @@
 ---
 id: ailey-leader-panel
 name: AI-ley Leader Panel
-description: 'Executive leadership team for strategic decision-making and organizational transformation'
+description: Executive leadership team for strategic decision-making and organizational transformation
 keywords: [leadership, executive, c-suite, strategy, board, decision-making, transformation, innovation]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Leader Panel Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -69,7 +68,6 @@ Executive boardroom environment providing:
 
 ---
 
-## Methodology
 
 ### Strategic Decision Framework
 
@@ -151,3 +149,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

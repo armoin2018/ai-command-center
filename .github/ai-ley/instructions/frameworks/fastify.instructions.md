@@ -1,13 +1,10 @@
 ---
-name: 'Fastify.Instructions'
-description: 'Development guidelines and best practices for Fastify.Instructions'
+id: fastify
+name: Fastify.Instructions
+description: Development guidelines and best practices for Fastify.Instructions
 keywords: [cloud, application, common, architecture, api, caching, authorization, assistant, commands, authentication]
+tools: [undefined]
 ---
-
-
-
-# Fastify Web Framework Instructions
-
 ## Framework Overview
 - **Framework Name**: Fastify
 - **Version**: 4.24+ (Latest stable)
@@ -21,7 +18,6 @@ See [example-1](./examples/fastify/example-1.bash)
 ## Project Structure
 See [example-2](./examples/fastify/example-2.txt)
 
-## Core Concepts
 
 ### Application Setup
 - **Purpose**: Initialize Fastify instance with configuration
@@ -48,7 +44,6 @@ See [example-5](./examples/fastify/example-5.typescript)
 4. **Building**: Compile TypeScript and prepare for deployment
 5. **Deployment**: Deploy with PM2, Docker, or cloud platforms
 
-## Best Practices
 
 ### Error Handling and Logging
 See [example-6](./examples/fastify/example-6.typescript)
@@ -56,7 +51,6 @@ See [example-6](./examples/fastify/example-6.typescript)
 ### Authentication and Authorization
 See [example-7](./examples/fastify/example-7.typescript)
 
-## Common Patterns
 
 ### Service Layer Pattern
 See [example-8](./examples/fastify/example-8.typescript)
@@ -71,7 +65,6 @@ See [example-10](./examples/fastify/example-10.typescript)
 ## Essential Commands
 See [example-11](./examples/fastify/example-11.json)
 
-## Common Issues & Solutions
 
 ### Issue 1: Schema Validation Errors
 **Problem**: TypeBox schema validation failures
@@ -83,7 +76,6 @@ See [example-12](./examples/fastify/example-12.typescript)
 **Solution**: Use proper plugin dependencies and registration order
 See [example-13](./examples/fastify/example-13.typescript)
 
-## Performance Optimization
 
 ### Caching and Compression
 See [example-14](./examples/fastify/example-14.typescript)
@@ -102,7 +94,6 @@ See [example-14](./examples/fastify/example-14.typescript)
 - **Plugin Ecosystem**: https://www.fastify.io/ecosystem/
 - **GitHub Repository**: https://github.com/fastify/fastify
 
-## Framework-Specific Guidelines
 
 ### Code Style
 - Use TypeScript for type safety and better development experience
@@ -116,7 +107,6 @@ See [example-14](./examples/fastify/example-14.typescript)
 - Implement proper configuration management
 - Create reusable plugins for common functionality
 
-## Integration Points
 
 ### Database Integration
 - **Purpose**: Data persistence and querying
@@ -128,7 +118,6 @@ See [example-14](./examples/fastify/example-14.typescript)
 - **Setup**: Jest with Fastify testing utilities
 - **Usage**: Unit, integration, and end-to-end testing
 
-## Troubleshooting
 
 ### Debug Mode
 See [example-15](./examples/fastify/example-15.typescript)
@@ -156,18 +145,7 @@ When helping with Fastify implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

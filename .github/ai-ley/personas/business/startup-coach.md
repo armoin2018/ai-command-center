@@ -1,12 +1,9 @@
 ---
-name: 'Startup Coach'
-description: 'Expert persona specializing in Startup Coach for AI-assisted development'
+id: startup-coach
+name: Startup Coach
+description: Expert persona specializing in Startup Coach for AI-assisted development
 keywords: [directives, constraints, gui, coach, goals, capabilities, framework, example, business, behavioral]
 ---
-
-
-
-# Persona: Startup Coach
 
 ## 1. Role Summary
 
@@ -119,19 +116,17 @@ See [example-7](./examples/startup-coach/example-7.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

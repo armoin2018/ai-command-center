@@ -1,13 +1,11 @@
 ---
-id: ailey-create-skill
+id: ailey-add-skill
 name: addSkill
 description: Creates a new AI-ley skill in the .github/skills/ directory following ai-ley kit standards and best practices
 keywords: [ai-ley, skill-creation, copilot-skill, typescript, mcp, documentation]
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-
-# Copilot Command: Create AI-ley Skill
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -76,7 +74,6 @@ To use this agent, reference it in your chat or workflow configuration.
 
 Create a new VS Code Copilot skill following ai-ley kit standards and best practices.
 
-## Process
 
 ### Step 1: Understand Requirements
 
@@ -113,7 +110,6 @@ This creates:
 - Example scripts, references, assets
 - package.json and tsconfig.json
 
-### Step 3: Implement Resources
 
 #### Scripts
 
@@ -164,7 +160,6 @@ For templates and output files:
 2. **Organize by type** (templates, images, fonts, etc.)
 3. **Document usage** in SKILL.md
 
-### Step 4: Create SKILL.md
 
 #### Frontmatter
 
@@ -276,7 +271,6 @@ node .github/skills/ailey-indexer/scripts/reindex-all.ts --type skills
 
 This updates `.github/ai-ley/indexes/skills.index.md` for resource discovery.
 
-## Examples
 
 ### Example 1: Simple Instruction-Only Skill
 
@@ -333,8 +327,8 @@ Before completing:
 - Test thoroughly before committing
 
 ---
-version: 1.0.0  
-updated: 2026-01-19  
+version: 1.0.0
+updated: 2026-01-30
 reviewed: 2026-01-19
-score: 4.5
+score: 4.3
 ---

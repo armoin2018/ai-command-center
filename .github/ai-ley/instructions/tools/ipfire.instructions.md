@@ -1,15 +1,10 @@
 ---
-name: 'ipfire.instructions'
-description: 'Development guidelines and best practices for Ipfire.Instructions'
+id: ipfire
+name: ipfire.instructions
+description: Development guidelines and best practices for Ipfire.Instructions
 keywords: [api, cloud, automation, avoid, agent, compliance, architecture, assistant, authentication, advanced]
+tools: [undefined]
 ---
-
-
-
-# IPFire Hardened Firewall Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents regarding IPFire hardened Linux firewall distribution, covering network security zones, intrusion detection/prevention systems, web-based administration, and enterprise firewall deployment with automated management, compliance monitoring, and advanced threat intelligence integration.
@@ -87,19 +82,8 @@ See [example-2](./examples/ipfire/example-2.bash)
 - **Use Cases**: Enterprise firewall fabrics, advanced IDS/IPS with threat intelligence, VPN gateways, network microsegmentation, compliance monitoring
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

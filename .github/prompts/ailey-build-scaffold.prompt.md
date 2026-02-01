@@ -1,13 +1,11 @@
 ---
-name: 'Project Scaffold Generator'
-description: 'Generate idempotent project scaffolds with architecture diagrams, schemas, and comprehensive documentation from PLAN.md'
+id: ailey-build-scaffold
+name: Project Scaffold Generator
+description: Generate idempotent project scaffolds with architecture diagrams, schemas, and comprehensive documentation from PLAN.md
 keywords: [scaffold, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Project Scaffold Generator
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -17,8 +15,6 @@ keywords: [scaffold, prompt, ailey]
 
 - See the `{{files.instructions}}` file for global instructions that apply to all commands.
 - Reference applicable personas in `.github/ai-ley/personas` and instructions in `.github/ai-ley/instructions` as needed.
-
-
 
 
 ## Recommended Personas
@@ -265,7 +261,6 @@ Based on technology stack and requirements in `{{files.plan}}`, generate relevan
 Create `{{diag_out}}/RENDER.md`:
 
 ```markdown
-# Architecture Diagram Rendering
 
 ## PlantUML Diagrams
 
@@ -277,7 +272,6 @@ Render `.puml` files using PlantUML:
 
 brew install plantuml # macOS
 
-# or download from https://plantuml.com/
 
 # Render individual diagram
 
@@ -670,7 +664,6 @@ CREATE UNIQUE INDEX idx_users_email ON users(email);
 
 <!-- generated-by: ai-ley scaffold | timestamp: 2025-11-09T12:34:56Z | source: .project/PLAN.json -->
 
-## Runtime Dependencies
 
 ### Node.js / JavaScript
 
@@ -684,7 +677,6 @@ CREATE UNIQUE INDEX idx_users_email ON users(email);
 - `sqlalchemy==2.0.23` - ORM
 - `pydantic==2.5.0` - Data validation
 
-## Build Dependencies
 
 ### Node.js
 
@@ -696,7 +688,6 @@ CREATE UNIQUE INDEX idx_users_email ON users(email);
 - `pytest==7.4.3` - Testing framework
 - `black==23.11.0` - Code formatter
 
-## Development Dependencies
 
 ### Node.js
 
@@ -708,7 +699,6 @@ CREATE UNIQUE INDEX idx_users_email ON users(email);
 - `mypy==1.7.0` - Type checker
 - `ruff==0.1.6` - Fast linter
 
-## Transitive Dependency Conflicts
 
 ### Conflict 1: lodash version mismatch
 
@@ -732,7 +722,6 @@ See `versions.lock.advisory.md` for detailed explanations.
 
 <!-- generated-by: ai-ley scaffold | timestamp: 2025-11-09T12:34:56Z | source: .project/PLAN.json -->
 
-## Why Specific Versions Are Pinned
 
 ### express@4.18.2 (exact pin)
 
@@ -766,7 +755,6 @@ See `versions.lock.advisory.md` for detailed explanations.
 Create `{{schemas_out}}/validators/README.md`:
 
 ```markdown
-# Schema Validation
 
 ## JSON Schema Validation
 
@@ -826,7 +814,6 @@ spectral lint openapi-spec.json --ruleset .spectral.yaml
 
 This scaffold was automatically generated from `{{files.plan}}` to provide a complete, idempotent project structure aligned with the declared technology stacks.
 
-## Generated Artifacts
 
 ### Architecture Diagrams
 
@@ -857,7 +844,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - **How to Use**: Reference for package installation and conflict resolution
 - **Purpose**: Track dependencies, versions, and conflicts
 
-## Lifecycle Management
 
 ### Updating the Scaffold
 
@@ -894,7 +880,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 
 <!-- generated-by: ai-ley scaffold | timestamp: 2025-11-09T12:34:56Z | source: .project/PLAN.json -->
 
-## Technology Stack Assumptions
 
 ### Database
 
@@ -914,7 +899,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - **Rationale**: Standard for stateless API authentication
 - **Alternative**: OAuth2 for third-party integrations
 
-## Architecture Assumptions
 
 ### Deployment Model
 
@@ -928,7 +912,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - **Rationale**: Cost-effectiveness for initial phase
 - **Alternative**: Distributed database if global presence required
 
-## Default Configuration Values
 
 ### API Rate Limiting
 
@@ -945,7 +928,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - **Default**: 5 minutes for frequently accessed data
 - **Rationale**: Balance between freshness and performance
 
-## Incomplete Plan Areas
 
 ### Monitoring & Observability
 
@@ -967,7 +949,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 
 <!-- generated-by: ai-ley scaffold | timestamp: 2025-11-09T12:34:56Z | source: .project/PLAN.json -->
 
-## 2025-11-09T12:34:56Z - Initial Scaffold
 
 ### Files Created
 
@@ -999,7 +980,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - `.github/ai-ley/personas/architect/api-architect.md`
 ```
 
-### 9. **Mode-Specific Execution**
 
 #### Mode: `plan` (Analyze Only)
 
@@ -1012,9 +992,7 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 5. Output proposed changes to console and `.project/SCAFFOLD_PLAN.md`:
 
 ```markdown
-# Scaffold Execution Plan
 
-## Proposed Artifacts
 
 ### Architecture Diagrams (24 files)
 
@@ -1065,9 +1043,7 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 4. Show what would be created/modified:
 
 ```markdown
-# Dry-Run Results
 
-## Files that WOULD be created:
 
 ### .project/architecture/sequence-auth.puml
 
@@ -1127,7 +1103,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - **Duration**: 2m 27s
 - **Status**: ✅ Success
 
-## Inputs Used
 
 ### Primary Plan
 
@@ -1147,7 +1122,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 - Personas: 89 files
 - Agents: 0 files
 
-## Assumptions Made
 
 ### Technology Stack
 
@@ -1157,7 +1131,6 @@ This scaffold was automatically generated from `{{files.plan}}` to provide a com
 
 See `.project/ASSUMPTIONS.md` for full details.
 
-## Files Written
 
 ### Architecture Diagrams (24 files)
 
@@ -1199,7 +1172,6 @@ See `.project/ASSUMPTIONS.md` for full details.
 
 - None (initial generation with no conflicts)
 
-## Next Actions
 
 ### Immediate (Today)
 
@@ -1222,7 +1194,6 @@ See `.project/ASSUMPTIONS.md` for full details.
 3. ⏳ Review dependency update policy
 4. ⏳ Plan for C4 Code-level diagrams (if needed)
 
-## Validation Status
 
 ### JSON Schema Validation
 
@@ -1286,7 +1257,6 @@ See `.project/ASSUMPTIONS.md` for full details.
 - Consistent naming: `{type}-{context}.puml` and `{type}-{context}.mmd`
 - Include comments with purpose and ownership
 
-## Examples
 
 ### Example 1: Basic Usage (Default Mode)
 
@@ -1381,7 +1351,6 @@ Using custom paths:
 See .project/REPORT.md for details.
 ```
 
-## Notes
 
 ### Important Considerations
 
@@ -1415,7 +1384,6 @@ See .project/REPORT.md for details.
 - **Custom Validators**: Add validation tools to step 7
 - **Platform-Specific Artifacts**: Extend for cloud-specific configurations (AWS, Azure, GCP)
 
-## Troubleshooting
 
 ### Issue: Missing instruction/persona files
 
@@ -1442,3 +1410,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3.7
+---

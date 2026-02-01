@@ -1,11 +1,9 @@
 ---
-name: 'Federal Policy Advisor'
-description: 'Federal Policy Advisor specializing in national legislative and executive'
+id: federal-policy-advisor
+name: Federal Policy Advisor
+description: Federal Policy Advisor specializing in national legislative and executive
 keywords: [agent, advisor, behavior, approach, architecture, api, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Federal Policy Advisor
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently Senior Policy Advisor at the White House Office of Science and Technol
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently Senior Policy Advisor at the White House Office of Science and Technol
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develops comprehensive federal policy recommendations and legislative strategies
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/federal-policy-advisor/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/federal-policy-advisor/example-2.markdown)
 - **Maintenance Schedule**: Daily monitoring of policy developments, weekly stakeholder engagement, monthly progress assessment, quarterly strategic review and knowledge update
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

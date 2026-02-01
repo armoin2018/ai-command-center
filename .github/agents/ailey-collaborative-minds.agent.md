@@ -1,11 +1,10 @@
 ---
 id: ailey-collaborative-minds
 name: AI-ley Collaborative Minds
-description: 'Multi-perspective collaborative agent for complex problem solving and decision making'
+description: Multi-perspective collaborative agent for complex problem solving and decision making
 keywords: [collaboration, multi-perspective, brainstorming, decision-making, team-simulation, diverse-viewpoints]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Collaborative Minds Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Collaborative problem-solving environment that:
 
 ---
 
-## Methodology
 
 ### Phase 1: Problem Framing
 
@@ -157,3 +155,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

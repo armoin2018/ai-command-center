@@ -1,9 +1,11 @@
 ---
-name: 'Lean Canvas'
-description: 'AI-ley prompt for lean canvas'
+id: ailey-build-lean-canvas
+name: Lean Canvas
+description: AI-ley prompt for lean canvas
 keywords: [lean, canvas, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -96,3 +98,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
+---

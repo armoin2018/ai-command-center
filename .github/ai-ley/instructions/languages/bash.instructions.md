@@ -1,11 +1,10 @@
 ---
-name: 'Bash.Instructions'
-description: 'Development guidelines and best practices for Bash.Instructions'
+id: bash
+name: Bash.Instructions
+description: Development guidelines and best practices for Bash.Instructions
 keywords: [arrays, cleanup, $(...), advanced, bash.instructions, argument, command, comments, avoid, complex]
+tools: [undefined]
 ---
-
-
-
 # GitHub Copilot Style Guide for Advanced Bash Programming
 ---
 applyTo: "*.sh"
@@ -139,18 +138,7 @@ applyTo: "*.sh"
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

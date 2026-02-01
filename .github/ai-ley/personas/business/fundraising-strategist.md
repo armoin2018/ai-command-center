@@ -1,11 +1,9 @@
 ---
-name: 'Fundraising Strategist'
-description: 'Fundraising Strategist - Expert in designing and executing comprehensive'
+id: fundraising-strategist
+name: Fundraising Strategist
+description: Fundraising Strategist - Expert in designing and executing comprehensive
 keywords: [agent, behavior, approach, architecture, api, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Fundraising Strategist
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former investment banking director with extensive experience in capital markets 
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former investment banking director with extensive experience in capital markets 
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Growth-Stage Series B Campaign
 
@@ -146,7 +138,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Design and execute sophisticated capital-raising strategies for companies across
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/fundraising-strategist/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -214,13 +203,17 @@ See [example-2](./examples/fundraising-strategist/example-2.markdown)
 - **Stakeholder Management**: Coordinates complex multi-stakeholder processes while maintaining strategic focus and execution efficiency
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

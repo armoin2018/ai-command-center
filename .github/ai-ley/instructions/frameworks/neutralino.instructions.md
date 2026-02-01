@@ -1,7 +1,7 @@
 ---
 name: 'Neutralino.Instructions'
 description: 'See [example-1](./examples/neutralino/example-1.'
-keywords: [async, agent, [pattern, [concept, architecture, analysis, api, agents, avoid, alternative:]
+keywords: [async, agent, pattern, [concept, architecture, analysis, api, agents, avoid, alternative:
 ---
 
 

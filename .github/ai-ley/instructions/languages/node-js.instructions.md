@@ -1,11 +1,10 @@
 ---
-name: 'Node Js.Instructions'
-description: 'Comprehensive Node.js development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.'
+id: node-js
+name: Node Js.Instructions
+description: Comprehensive Node.js development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, framework, async, general, gui, guidelines, architecture, conventions, features]
+tools: [undefined]
 ---
-
-
-
 # Node.js Programming Instructions
 
 Comprehensive Node.js development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
@@ -23,7 +22,6 @@ Comprehensive Node.js development guidelines for AI coding assistants, emphasizi
 
 See [example-1](./examples/node-js/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern {LANGUAGE} following established conventions
@@ -40,7 +38,6 @@ See [example-1](./examples/node-js/example-1.text)
 - {MODERN_FEATURE_3}
 - {MODERN_FEATURE_4}
 
-## 📜 Code Style and Conventions
 
 ### Naming Conventions
 
@@ -140,18 +137,7 @@ This template ensures consistency across all language instruction files while pr
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

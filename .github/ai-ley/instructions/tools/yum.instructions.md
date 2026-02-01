@@ -1,17 +1,15 @@
 ---
-name: 'Yum.Instructions'
-description: 'Development guidelines and best practices for Yum.Instructions'
+id: yum
+name: Yum.Instructions
+description: Development guidelines and best practices for Yum.Instructions
 keywords: [advanced, avoid, comprehensive, common, compliance, assistant, concepts, analysis, automation, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "yum, package-management, redhat, centos, fedora, rhel, **/yum.conf, **/yum.repos.d"
 ---
 
-# YUM Package Management Instructions
 
 ## Overview
 - **Domain**: Red Hat Enterprise Linux (RHEL) Package Management and System Administration
@@ -19,7 +17,6 @@ applyTo: "yum, package-management, redhat, centos, fedora, rhel, **/yum.conf, **
 - **Applicable To**: RHEL-based distributions (CentOS, Fedora, Oracle Linux, Rocky Linux, AlmaLinux)
 - **Integration Level**: System administration, containerization, and automated deployments
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Repository-Based Management**: Software distributed through centralized YUM repositories
@@ -40,7 +37,6 @@ applyTo: "yum, package-management, redhat, centos, fedora, rhel, **/yum.conf, **
 - **Myth**: YUM repositories are interchangeable between distributions
   **Reality**: Package compatibility varies between RHEL versions and derivatives
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/yum/example-2.dockerfile)
 #### Ansible Integration
 See [example-3](./examples/yum/example-3.yaml)
 
-## Best Practices
 
 ### Comprehensive Repository Configuration
 See [example-4](./examples/yum/example-4.bash)
@@ -87,7 +82,6 @@ See [example-4](./examples/yum/example-4.bash)
 ### Advanced Package Management with Groups
 See [example-5](./examples/yum/example-5.bash)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Server Deployment Automation
 **Scenario**: Automated RHEL/CentOS server setup for production deployment
@@ -112,7 +106,6 @@ See [example-7](./examples/yum/example-7.bash)
 - **Why It's Problematic**: Exposes system to malicious or corrupted packages
 - **Better Approach**: Properly configure GPG keys and use trusted repositories
 
-## Tools and Resources
 
 ### YUM Utilities and Analysis
 See [example-8](./examples/yum/example-8.bash)
@@ -126,7 +119,6 @@ See [example-9](./examples/yum/example-9.bash)
 - **YUM Configuration**: https://linux.die.net/man/5/yum.conf
 - **Package Management Best Practices**: https://access.redhat.com/solutions/
 
-## Quality and Compliance
 
 ### Quality Standards
 - Regular repository synchronization and metadata updates
@@ -192,18 +184,7 @@ When helping teams choose YUM management approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

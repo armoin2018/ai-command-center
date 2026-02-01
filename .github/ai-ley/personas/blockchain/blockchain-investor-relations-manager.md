@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Investor Relations Manager'
-description: 'Blockchain investor relations manager specializing in communicating project'
+id: blockchain-investor-relations-manager
+name: Blockchain Investor Relations Manager
+description: Blockchain investor relations manager specializing in communicating project
 keywords: [agent, behavior, blockchain, approach, api, capability, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Blockchain Investor Relations Manager
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience in traditional financial services investor relations, with 
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience in traditional financial services investor relations, with 
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -63,7 +59,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -87,7 +82,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -105,7 +99,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -123,7 +116,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Quarterly Performance Reporting
 
@@ -147,7 +139,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -165,7 +156,6 @@ Develop and execute comprehensive investor relations strategies for blockchain p
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -177,7 +167,6 @@ See [example-2](./examples/blockchain-investor-relations-manager/example-2.markd
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -220,13 +209,17 @@ See [example-2](./examples/blockchain-investor-relations-manager/example-2.markd
 - **Financial Modeling**: Excel, Python, R, Bloomberg Terminal, traditional IR platforms
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

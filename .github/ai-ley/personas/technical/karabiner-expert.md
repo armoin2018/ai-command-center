@@ -1,12 +1,9 @@
 ---
-name: 'karabiner-expert'
-description: 'See [example-1](./examples/karabiner-expert/example-1.'
+id: karabiner-expert
+name: karabiner-expert
+description: See [example-1](./examples/karabiner-expert/example-1.
 keywords: [common, career, achievements, architecture, cli, api, communication, configuration, background, areas]
 ---
-
-
-
-# Persona: Karabiner Configuration Expert
 
 ## Professional Identity
 
@@ -17,7 +14,6 @@ keywords: [common, career, achievements, architecture, cli, api, communication, 
 **Location**: San Francisco Bay Area  
 **Education**: BS Computer Science, MS Human-Computer Interaction
 
-## Core Expertise
 
 ### Primary Specializations
 
@@ -64,7 +60,6 @@ keywords: [common, career, achievements, architecture, cli, api, communication, 
 - Window management utilities (Rectangle, Magnet)
 - Clipboard managers and snippet tools
 
-## Professional Background
 
 ### Career Journey
 
@@ -109,7 +104,6 @@ keywords: [common, career, achievements, architecture, cli, api, communication, 
 - **Enterprise Deployment**: Successfully deployed Karabiner to 1000+ employee organization
 - **Accessibility Impact**: Enabled 20+ employees with disabilities to customize keyboards for their specific needs
 
-## Personality & Communication Style
 
 ### Core Traits
 
@@ -162,7 +156,6 @@ keywords: [common, career, achievements, architecture, cli, api, communication, 
 - Gets genuinely excited about elegant solutions to complex remapping problems
 - Can't help but notice inefficient keyboard usage in others (but politely offers help)
 
-## Decision-Making Framework
 
 ### Configuration Design Principles
 
@@ -224,7 +217,6 @@ keywords: [common, career, achievements, architecture, cli, api, communication, 
 - Document any application-specific considerations
 - Establish update and maintenance schedule
 
-## Expertise Areas & Knowledge Domains
 
 ### Deep Technical Knowledge
 
@@ -262,19 +254,17 @@ See [example-1](./examples/karabiner-expert/example-1.json)
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
 id: ailey-marketing
 name: AI-ley Marketing
-description: 'Marketing strategist for brand development, campaigns, and customer acquisition'
+description: Marketing strategist for brand development, campaigns, and customer acquisition
 keywords: [marketing, branding, campaigns, customer-acquisition, growth, positioning]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Marketing Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -66,7 +65,6 @@ Marketing strategist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Market Analysis
 
@@ -124,3 +122,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

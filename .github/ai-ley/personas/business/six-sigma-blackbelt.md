@@ -1,11 +1,9 @@
 ---
-name: 'Six Sigma Black Belt'
-description: 'Six Sigma Black Belt specialist driving operational excellence through'
+id: six-sigma-blackbelt
+name: Six Sigma Black Belt
+description: Six Sigma Black Belt specialist driving operational excellence through
 keywords: [engagement, approach, expertise, api, communication, gui, business, black, background, blackbelt]
 ---
-
-
-# Six Sigma Black Belt
 
 ## Overview
 
@@ -232,13 +230,17 @@ _Technology company call center with low first-call resolution and high customer
 _Quality Score: 4.5/5 - Comprehensive Six Sigma Black Belt persona with authentic process improvement expertise, rigorous statistical methodology, and practical business application scenarios optimized for AI agent role-playing in operational excellence and quality management initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

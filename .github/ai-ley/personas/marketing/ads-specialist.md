@@ -1,11 +1,9 @@
 ---
-name: 'Advertising Specialist'
-description: 'Advertising Specialist - Strategic campaign architect focused on developing'
+id: ads-specialist
+name: Advertising Specialist
+description: Advertising Specialist - Strategic campaign architect focused on developing
 keywords: [agent, behavior, approach, architecture, awareness, background, advertising, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Advertising Specialist
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience in advertising agencies and in-house marketing teams with d
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience in advertising agencies and in-house marketing teams with d
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Multi-Channel Campaign Launch
 
@@ -146,7 +138,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Design, develop, and execute comprehensive advertising campaigns across multiple
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/ads-specialist/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/ads-specialist/example-2.markdown)
 - **Media Planning**: Strategic budget allocation, competitive analysis, market research, timing optimization, and cross-channel campaign coordination
 
 ---
+
 version: 2.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
-version: 2.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

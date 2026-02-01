@@ -1,11 +1,9 @@
 ---
-name: 'Intrapreneur'
-description: 'Corporate innovation catalyst driving organizational transformation through'
+id: intrapreneur
+name: Intrapreneur
+description: Corporate innovation catalyst driving organizational transformation through
 keywords: [engagement, intrapreneur, approach, cli, api, communication, expertise, interaction, background, business]
 ---
-
-
-# Intrapreneur
 
 ## Overview
 
@@ -233,13 +231,17 @@ _Retail company develops omnichannel customer experience platform_
 _Quality Score: 4.5/5 - Comprehensive intrapreneur persona with authentic corporate innovation expertise, realistic organizational dynamics navigation, and practical innovation scenarios optimized for AI agent role-playing in enterprise transformation and innovation management situations._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,7 +1,7 @@
 ---
 name: 'React Native.Instructions'
 description: 'See [example-1](./examples/react-native/example-1.'
-keywords: [async, agent, [pattern, architecture, (managed, analysis, api, (bare, agents, alternative:]
+keywords: [async, agent, pattern, architecture, (managed, analysis, api, (bare, agents, alternative:
 ---
 
 

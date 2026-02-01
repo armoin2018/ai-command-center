@@ -1,19 +1,15 @@
 ---
-name: 'Php.Enhanced.Instructions'
-description: 'Development guidelines and best practices for Php.Enhanced.Instructions'
+id: php.enhanced
+name: Php.Enhanced.Instructions
+description: Development guidelines and best practices for Php.Enhanced.Instructions
 keywords: [audit, api, avoid, benchmarking, adaptation, assistant, architecture, authentication, backend, advanced]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "**/*.php,**/*.phtml"
 ---
 
-# PHP Programming Instructions
-
-## Core Principles
 
 ### Fundamental Concepts
 1. **API-First Architecture**: Strict separation between backend logic and frontend presentation
@@ -35,7 +31,6 @@ applyTo: "**/*.php,**/*.phtml"
 - **Myth**: PHP is only for small projects
   **Reality**: PHP powers large-scale applications like Facebook, Wikipedia, and WordPress
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -83,7 +78,6 @@ See [example-2](./examples/php.enhanced/example-2.bash)
 - README files with setup and usage instructions
 - Architecture decision records for significant design choices
 
-## Best Practices
 
 ### Modern PHP Syntax and Features
 See [example-3](./examples/php.enhanced/example-3.php)
@@ -94,7 +88,6 @@ See [example-4](./examples/php.enhanced/example-4.php)
 ### API Controller Best Practices
 See [example-5](./examples/php.enhanced/example-5.php)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Repository Pattern with Caching
 **Scenario**: Implement data access layer with caching for improved performance
@@ -119,7 +112,6 @@ See [example-7](./examples/php.enhanced/example-7.php)
 - **Why It's Problematic**: Poor performance due to string immutability
 - **Better Approach**: Use array collection and implode() for string building
 
-## Tools and Resources
 
 ### Essential Tools
 #### Development Environment
@@ -153,7 +145,6 @@ See [example-8](./examples/php.enhanced/example-8.php)
 - **Symfony Documentation**: https://symfony.com/doc
 - **PHPUnit Documentation**: https://phpunit.de/documentation.html
 
-## Quality and Compliance
 
 ### Quality Standards
 - Code coverage of 80%+ for critical business logic
@@ -178,7 +169,6 @@ See [example-8](./examples/php.enhanced/example-8.php)
 - Quarterly architecture reviews and performance analysis
 - Annual comprehensive security assessment
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Memory Exhaustion in Large Data Processing
@@ -212,7 +202,6 @@ See [example-8](./examples/php.enhanced/example-8.php)
 - Code review process improvements
 - Tool and framework evaluation and updates
 
-## Metrics and KPIs
 
 ### Success Metrics
 - **Code Quality**: PHPStan level 8 compliance, PSR-12 formatting
@@ -232,7 +221,6 @@ See [example-8](./examples/php.enhanced/example-8.php)
 - Framework and library update tracking
 - Competitive performance analysis
 
-## Integration with Other Practices
 
 ### Related Disciplines
 #### Frontend Development
@@ -251,7 +239,6 @@ See [example-8](./examples/php.enhanced/example-8.php)
 - Caching layer configuration and management
 - Monitoring and alerting system integration
 
-## Advanced Topics
 
 ### Scaling Considerations
 - Horizontal scaling with load balancers and multiple application servers
@@ -302,18 +289,7 @@ When helping teams choose PHP approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,12 +1,9 @@
 ---
-name: 'Crypto Expert'
-description: 'Expert persona specializing in Crypto Expert for AI-assisted development'
+id: crypto-expert
+name: Crypto Expert
+description: Expert persona specializing in Crypto Expert for AI-assisted development
 keywords: [directives, constraints, finance, expert, cryptocurrency, capabilities, framework, example, crypto, behavioral]
 ---
-
-
-
-# Persona: Cryptocurrency Expert
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/crypto-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

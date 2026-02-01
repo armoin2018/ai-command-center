@@ -1,13 +1,11 @@
 ---
-name: 'Language Porting Command'
-description: 'Ports source code from one programming language to another following AI-LEY guidelines and best practices'
+id: ailey-run-port
+name: Language Porting Command
+description: Ports source code from one programming language to another following AI-LEY guidelines and best practices
 keywords: [porting, language-migration, code-translation, cross-platform, development, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Language Porting Command
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -21,8 +19,6 @@ keywords: [porting, language-migration, code-translation, cross-platform, develo
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
 - Reference language-specific development personas for both source and target languages
-
-
 
 
 ## Recommended Personas
@@ -193,7 +189,6 @@ You are a cross-language development specialist and code migration expert with d
 - Include examples and usage instructions
 - Prepare test cases demonstrating equivalence
 
-## Examples
 
 ### Example 1: Python to TypeScript
 
@@ -243,7 +238,6 @@ You are a cross-language development specialist and code migration expert with d
 - Cargo.toml configuration
 - FFI bindings if needed for Node.js compatibility
 
-## Language-Specific Considerations
 
 ### When Porting TO Python:
 
@@ -310,3 +304,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

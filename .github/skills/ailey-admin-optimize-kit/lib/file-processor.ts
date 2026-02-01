@@ -12,7 +12,26 @@ export class FileProcessor {
    * Read and parse file with frontmatter
    */
   async readFile(filePath: string): Promise<FileContent> {
-    const content = await fs.readFile(filePath, 'utf-8');
+    let content = await fs.readFile(filePath, 'utf-8');
+    
+    // Remove duplicate footers before parsing
+    // Match full footer blocks (with or without leading ---)
+    const footerPattern = /(---\s+)?version:[^\n]+\nupdated:[^\n]+\nreviewed:[^\n]+\nscore:[^\n]+\n(---)?/g;
+    const footers = content.match(footerPattern) || [];
+    let duplicateFootersRemoved = 0;
+    
+    if (footers.length > 1) {
+      duplicateFootersRemoved = footers.length - 1;
+      // Keep only the last footer
+      const lastFooter = footers[footers.length - 1];
+      // Remove all footers
+      for (const footer of footers) {
+        content = content.replace(footer, '');
+      }
+      // Add back the last footer at the end (properly formatted)
+      content = content.trim() + '\n\n---\n\n' + lastFooter.replace(/^---\s+/, '').replace(/\n---$/, '') + '\n---';
+    }
+    
     const parsed = matter(content);
     
     // Extract footer from body
@@ -27,7 +46,8 @@ export class FileProcessor {
     return {
       frontmatter: parsed.data as any,
       body,
-      footer
+      footer,
+      metadata: duplicateFootersRemoved > 0 ? { duplicateFootersRemoved } : undefined
     };
   }
 
@@ -109,7 +129,7 @@ score: ${footer.score}
     if (filePath.includes('instructions/') && filePath.endsWith('.instructions.md')) {
       return 'instruction';
     }
-    if (filePath.includes('personas/') && filePath.endsWith('.persona.md')) {
+    if (filePath.includes('personas/') && (filePath.endsWith('.persona.md') || filePath.endsWith('.md'))) {
       return 'persona';
     }
     if (filePath.includes('agents/') && filePath.endsWith('.agent.md')) {
@@ -129,7 +149,11 @@ score: ${footer.score}
    */
   getBaseFileName(filePath: string): string {
     const basename = path.basename(filePath);
-    return basename.replace(/\.(instructions|persona|agent|prompt)\.md$/, '').replace(/SKILL\.md$/, '');
+    // Handle both .persona.md and .md extensions for personas
+    if (basename.endsWith('.persona.md')) {
+      return basename.replace(/\.persona\.md$/, '');
+    }
+    return basename.replace(/\.(instructions|persona|agent|prompt)\.md$/, '').replace(/SKILL\.md$/, '').replace(/\.md$/, '');
   }
 
   /**

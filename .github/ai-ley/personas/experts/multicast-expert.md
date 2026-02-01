@@ -1,12 +1,9 @@
 ---
-name: 'Multicast Expert'
-description: 'Expert persona specializing in Multicast Expert for AI-assisted development'
+id: multicast-expert
+name: Multicast Expert
+description: Expert persona specializing in Multicast Expert for AI-assisted development
 keywords: [cloud, constraints, architecture, cli, api, aws, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Multicast Expert
 
 ## 1. Role Summary
 
@@ -112,19 +109,17 @@ See [example-3](./examples/multicast-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

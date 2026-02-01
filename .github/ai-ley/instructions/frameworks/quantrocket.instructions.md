@@ -1,11 +1,10 @@
 ---
-name: 'Quantrocket.Instructions'
-description: 'Purpose: Research and live trading on IBKR and other data sources via containerized services with reproducible pipelines.'
+id: quantrocket
+name: Quantrocket.Instructions
+description: Purpose: Research and live trading on IBKR and other data sources via containerized services with reproducible pipelines.
 keywords: [calendars, compliance, guidelines, architecture, gui, frameworks, avoid, assistant, docker, quantrocket]
+tools: undefined
 ---
-
-
-
 # QuantRocket — AI Assistant Guidelines
 
 Purpose: Research and live trading on IBKR and other data sources via containerized services with reproducible pipelines.
@@ -61,3 +60,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

@@ -1,13 +1,10 @@
 ---
-name: 'Qwik.Instructions'
-description: 'Development guidelines and best practices for Qwik.Instructions'
+id: qwik
+name: Qwik.Instructions
+description: Development guidelines and best practices for Qwik.Instructions
 keywords: [common, cli, caching, concepts, assistant, actions, additional, commands, authentication, adapters]
+tools: [undefined]
 ---
-
-
-
-# Qwik Framework Instructions
-
 ## Framework Overview
 - **Framework Name**: Qwik
 - **Version**: 1.6+ (Latest stable)
@@ -15,7 +12,6 @@ keywords: [common, cli, caching, concepts, assistant, actions, additional, comma
 - **Language**: TypeScript/JavaScript (with JSX)
 - **Use Cases**: High-performance web applications, instant loading, edge-first development
 
-## Installation & Setup
 
 ### Project Creation
 See [example-1](./examples/qwik/example-1.bash)
@@ -26,7 +22,6 @@ See [example-2](./examples/qwik/example-2.bash)
 ## Project Structure
 See [example-3](./examples/qwik/example-3.txt)
 
-## Core Concepts
 
 ### Resumability and Lazy Loading
 - **Purpose**: Qwik's unique resumability approach for instant loading
@@ -53,7 +48,6 @@ See [example-6](./examples/qwik/example-6.tsx)
 4. **State**: Implement reactive state management
 5. **Deploy**: Deploy to edge platforms with appropriate adapters
 
-## Best Practices
 
 ### Server Actions and Forms
 See [example-7](./examples/qwik/example-7.tsx)
@@ -61,7 +55,6 @@ See [example-7](./examples/qwik/example-7.tsx)
 ### Performance Optimization
 See [example-8](./examples/qwik/example-8.tsx)
 
-## Common Patterns
 
 ### Data Fetching and Caching
 See [example-9](./examples/qwik/example-9.tsx)
@@ -76,7 +69,6 @@ See [example-11](./examples/qwik/example-11.typescript)
 ## Essential Commands
 See [example-12](./examples/qwik/example-12.json)
 
-## Common Issues & Solutions
 
 ### Issue 1: Serialization Errors
 **Problem**: Objects not serializable between server and client
@@ -119,18 +111,7 @@ When helping with Qwik implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

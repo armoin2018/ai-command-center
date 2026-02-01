@@ -1,20 +1,16 @@
 ---
-name: 'Troubleshooting.Instructions'
-description: 'See [example-9](./examples/troubleshooting/example-9.'
+id: troubleshooting
+name: Troubleshooting.Instructions
+description: See [example-9](./examples/troubleshooting/example-9.
 keywords: [audit, approach, common, compliance, checklists, architecture, assistant, classification, avoid, benefits]
+tools: [undefined]
 ---
-
-
-
-# Software Troubleshooting Instructions
-
 ## Overview
 - **Domain**: Software Problem Diagnosis and Resolution
 - **Purpose**: Systematic approach to identifying, diagnosing, and resolving software issues
 - **Applicable To**: All software systems, from development to production environments
 - **Integration Level**: Critical operational skill affecting system reliability and user experience
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Systematic Approach**: Follow structured methodology to avoid missing critical steps
@@ -37,7 +33,6 @@ keywords: [audit, approach, common, compliance, checklists, architecture, assist
 - **Myth**: Troubleshooting is only for production issues
   **Reality**: Development and testing environments benefit from systematic debugging
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -90,7 +85,6 @@ See [example-2](./examples/troubleshooting/example-2.yaml)
 - Escalation procedures and contact information
 - Post-incident reports with lessons learned
 
-## Best Practices
 
 ### Issue Classification and Prioritization
 #### Severity Classification Framework
@@ -110,7 +104,6 @@ See [example-6](./examples/troubleshooting/example-6.bash)
 #### Application Performance Analysis
 See [example-7](./examples/troubleshooting/example-7.javascript)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Database Performance Issues
 **Scenario**: Application experiencing slow response times with database-related errors
@@ -137,7 +130,6 @@ See [example-10](./examples/troubleshooting/example-10.javascript)
 - **Why It's Problematic**: Issues will likely recur and may manifest in other ways
 - **Better Approach**: Use root cause analysis to identify and fix underlying issues
 
-## Tools and Resources
 
 ### Essential Tools
 #### Logging and Monitoring
@@ -172,7 +164,6 @@ See [example-11](./examples/troubleshooting/example-11.bash)
 - **Systems Performance** by Brendan Gregg: Comprehensive performance analysis
 - **Effective Debugging** by Diomidis Spinellis: Practical debugging strategies
 
-## Quality and Compliance
 
 ### Quality Standards
 - All incidents documented with root cause analysis
@@ -197,7 +188,6 @@ See [example-11](./examples/troubleshooting/example-11.bash)
 - Quarterly training updates based on lessons learned
 - Annual incident response procedure review and improvement
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Intermittent Application Failures
@@ -275,18 +265,7 @@ When helping teams troubleshoot issues:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

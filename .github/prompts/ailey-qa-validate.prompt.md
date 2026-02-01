@@ -1,13 +1,11 @@
 ---
-name: 'AI-LEY Content Validator'
-description: 'Validates AI-LEY content files (instructions, personas, prompts) through multi-pass analysis for completeness, template compliance, and quality ratings'
+id: ailey-qa-validate
+name: AI-LEY Content Validator
+description: Validates AI-LEY content files (instructions, personas, prompts) through multi-pass analysis for completeness, template compliance, and quality ratings
 keywords: [validation, quality-control, template-compliance, content-analysis, ai-ley-maintenance, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: AI-LEY Content Validator
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [validation, quality-control, template-compliance, content-analysis, a
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -176,7 +172,6 @@ Scan each file for their current rating in the YAML frontmatter `summaryScore` f
 **Output for Pass 4:**
 
 ```markdown
-## Pass 4: Quality Rating Analysis
 
 ### Critical Quality Issues (Score < 3.0)
 
@@ -219,7 +214,6 @@ Create `.ai-ley/SUGGESTIONS.md` with:
 
 {Pass 4 Output}
 
-## Priority Recommendations
 
 ### High Priority (Immediate Action Required)
 
@@ -282,7 +276,6 @@ Summary:
 Next: Review .ai-ley/SUGGESTIONS.md for detailed recommendations
 ```
 
-## Examples
 
 ### Example 1: Validate All Content Types
 
@@ -378,3 +371,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

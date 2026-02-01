@@ -1,14 +1,10 @@
 ---
-name: 'Microsoft Azure Enterprise Cloud Platform Instructions'
-description: 'Enterprise-grade Microsoft Azure platform with comprehensive infrastructure management, security frameworks, cost optimization, AI services integration, and automated deployment orchestration for mission-critical cloud operations'
-keywords: [(ubuntu/debian), automation, (powershell), architecture**, async, **overview**, ai/ml, additional, architecture, advanced]
+id: azure
+name: Microsoft Azure Enterprise Cloud Platform Instructions
+description: Enterprise-grade Microsoft Azure platform with comprehensive infrastructure management, security frameworks, cost optimization, AI services integration, and automated deployment orchestration for mission-critical cloud operations
+keywords: [(ubuntu/debian), automation, (powershell), architecture, async, overview, ai/ml, additional, architecture, advanced]
+tools: [undefined]
 ---
-
-
-# 🌐 Enterprise Microsoft Azure - Intelligent Cloud Platform
-
-## **🏢 Level 3 Enterprise Implementation**
-
 ### **Overview**
 
 Enterprise Microsoft Azure Platform delivers comprehensive cloud infrastructure management with advanced security frameworks, AI/ML integration, cost optimization, and automated deployment orchestration for mission-critical enterprise operations across global Azure regions.
@@ -305,13 +301,8 @@ See [example-14](./examples/azure/example-14.txt)json
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

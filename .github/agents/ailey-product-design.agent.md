@@ -1,11 +1,10 @@
 ---
 id: ailey-product-design
 name: AI-ley Product Design
-description: 'Product design specialist for user-centered product development and feature prioritization'
+description: Product design specialist for user-centered product development and feature prioritization
 keywords: [product-design, product-management, user-research, feature-prioritization, roadmap]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Product Design Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Product design specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Discover
 
@@ -125,3 +123,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

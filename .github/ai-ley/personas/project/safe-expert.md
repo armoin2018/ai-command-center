@@ -1,12 +1,9 @@
 ---
-name: 'Safe Expert'
-description: 'Expert persona specializing in Safe Expert for AI-assisted development'
+id: safe-expert
+name: Safe Expert
+description: Expert persona specializing in Safe Expert for AI-assisted development
 keywords: [devops, directives, constraints, expert, goals, capabilities, azure, framework, example, behavioral]
 ---
-
-
-
-# Persona: SAFe Expert
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/safe-expert/example-6.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

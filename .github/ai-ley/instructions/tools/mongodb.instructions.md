@@ -1,20 +1,14 @@
 ---
-name: 'mongodb.instructions'
-description: 'Development guidelines and best practices for Mongodb.Instructions'
-keywords: [agent, analytics, **platform, async, capabilities**, decision, architecture, database, advanced, cli]
+id: mongodb
+name: mongodb.instructions
+description: Development guidelines and best practices for Mongodb.Instructions
+keywords: [agent, analytics, platform, async, capabilities, decision, architecture, database, advanced, cli]
+tools: [undefined]
 ---
-
-
-
-# Enterprise MongoDB Document Database & Distributed Analytics Platform
-
-## 🎯 **AI Agent Implementation Guide - Enterprise Edition**
-
 ### **Platform Purpose & Capabilities**
 
 The **Enterprise MongoDB Document Database & Distributed Analytics Platform** provides comprehensive document-oriented database excellence with advanced AI/ML-powered distributed analytics, intelligent sharding orchestration, real-time aggregation pipeline optimization, enterprise-grade security frameworks, automated compliance governance, advanced replica set management, and complete operational intelligence for mission-critical enterprise applications requiring maximum scalability and performance.
 
-### **🎯 Advanced Enterprise Decision Matrix**
 
 #### **Primary Use Cases - Enterprise MongoDB**
 
@@ -36,7 +30,6 @@ The **Enterprise MongoDB Document Database & Distributed Analytics Platform** pr
 - **High-Performance OLTP** → MariaDB Enterprise or PostgreSQL with performance optimization
 - **Time-Series Specialized Workloads** → InfluxDB Enterprise or TimescaleDB
 
-### **🏗️ Enterprise Architecture Framework**
 
 #### **🔥 Advanced Distributed Sharding Intelligence**
 
@@ -74,7 +67,6 @@ The **Enterprise MongoDB Document Database & Distributed Analytics Platform** pr
 - **Data Loss Prevention**: Automated sensitive data discovery and intelligent masking
 - **Security Analytics**: Real-time security monitoring with threat intelligence integration
 
-### **💼 Enterprise Storage Engine Intelligence**
 
 #### **🚀 WiredTiger Advanced Optimization**
 
@@ -306,19 +298,8 @@ The **Enterprise MongoDB Document Database & Distributed Analytics Platform** pr
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

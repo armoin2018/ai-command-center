@@ -1,48 +1,11 @@
 ---
-name: 'Update Instructions'
-description: 'AI-ley prompt for update instructions'
+id: ailey-admin-instructions
+name: adminInstructions
+description: AI-ley prompt for update instructions
 keywords: [update, instructions, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-# Instruction Review & Optimization System
-
-
-
-## Recommended Personas
-
-Consider leveraging these persona domains:
-
-- `.github/ai-ley/personas/_general/**/*.md`
-
-These personas provide specialized expertise and perspective.
-
-## Recommended Instructions
-
-Consider referencing these instruction files:
-
-- `.github/ai-ley/instructions/_general/developer/**/*.md`
-
-These provide domain-specific guidance and best practices.
-
-## Recommended Agent
-
-This prompt works best with the **ailey-orchestrator** agent from `.github/agents/ailey-orchestrator.agent.md`.
-
-To use this agent, reference it in your chat or workflow configuration.
-
-
-## Variables
-
-- Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
-- Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
-
-## References
-
-**Personas:** Leverage domain expertise from `.github/ai-ley/personas/**/*.md`
-
-**Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
-
-**Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
 
 ## Objective
 
@@ -50,22 +13,57 @@ Systematically scan, analyze, and enhance all instruction files in `.github/ai-l
 
 ---
 
+## Inputs
+- Filename, directory path, or glob pattern specifying which instruction files to update
+- Type: add | update | optimize
+- Optional: Specific update level (1, 2, or 3) to control depth of updates
+
+## File Locations
+- Instruction files are located in `.github/ai-ley/instructions/**/*.md``
+
+## Critical Includes
+- Follow the "AI-ley Admin Tools Builder Instructions" found in `.github/ai-ley/instructions/_general/admin-tools.instructions.md` for formatting and structuring guidelines.
+
 ## Execution Strategy
 
-**Batch Processing Approach:**
-
-1. **Small Batches**: Process 5-10 files per session to maintain quality
-2. **Priority Ordering**: Start with high-impact, frequently-used instructions
-3. **Iterative Improvement**: Complete one phase across all files before moving to next
-4. **Validation Checkpoints**: Verify improvements after each batch
-
-**Resource Management:**
-
-- Allocate 15-30 minutes per instruction file for thorough review
-- Focus on high-impact improvements first (accuracy, completeness)
 - Document progress to enable resuming work across sessions
+- All should follow the Optimization Instructions whether adding, updating or optimizing. 
+- Evolve the insructions
+- Verify improvements after each cycle 
+- Benchmarking & Measurement
 
-## Progressive Enhancement Levels
+### Add Instruction
+
+
+### Update Instructions
+
+
+### Optimize Instructions
+
+
+### Evolve
+- Continuously refine the process based on outcomes and feedback
+- Discover potentential imporvments for future iterations
+- Multipass enhancements for deeper optimization.  Take 3 passess at minimum:
+  - Pass 1: Critical fixes and accuracy
+  - Pass 2: Structural standardization
+  - Pass 3: Content enrichment and AI optimization
+
+### Benchmarking & Measurement
+- Measure quality scores pre- and post-enhancement
+- Test Token usage, efficiency and accuracy 
+  - with and without optimizations
+  - pre and post enhancements
+- Ensure measurable improvement in accuracy, relevance, and AI usability
+
+### Batch Processing Approach
+- Focus on high-impact improvements first (accuracy, effectiveness,completeness)
+- **Small Batches**: Process 5-10 files per session to maintain quality
+- **Priority Ordering**: Start with high-impact, frequently-used instructions
+- **Iterative Improvement**: Multiple passes for deeper optimization
+
+
+### Progressive Enhancement Levels
 
 **Level 1 - Critical Fixes** (Priority 1)
 
@@ -107,7 +105,7 @@ Systematically scan, analyze, and enhance all instruction files in `.github/ai-l
 
 ## Phase 1: Discovery & Scanning
 
-**Automated Directory Scan:**
+### Automated Directory Scan
 
 1. **Inventory All Instructions**
 
@@ -302,36 +300,36 @@ Systematically scan, analyze, and enhance all instruction files in `.github/ai-l
 
 ## Output Format & Deliverables
 
-**Primary Outputs:**
-
-1. **Enhanced Instruction Files**
+### Enhanced Instruction Files
 
    - All instruction files in `.github/ai-ley/instructions/**/*.md` updated and optimized
    - Each file conforming to template standards and quality benchmarks
-     - Example templates found under `{{folders.templates.instructions}}/*.md`
+     - Example templates found under `.github/ai-ley/templates/instructions.template.md`
    - Improved content accuracy, relevance, clarity, conciseness, and AI usability
    - Consistent formatting and cross-referencing throughout
    - Add external links to relevant resources if available
-   - Create a header section for each instruction file based on the following format
+   - Create or update a header section for each instruction file based on the following format
 
 ```yaml
 ---
-agentMode: general
-applyTo: general
-author: AI-LEY
-description: Awaiting summary.
-extensions:
-  - .md
-guidelines: N/A
-instructionType: general
-keywords: []
-lastUpdated: '2025-09-03T00:04:48.101198'
-technicalQualityScore: 4.0
-AIUsabilityScore: 4.5
-title: Update Instructions
-version: 1.0.0
+id: {{instruction.id}}
+name: {{instruction.name}}
+description: {{instruction.description}}
+keywords: [{{instruction.keywords}}]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator Agent
 ---
 ```
+   - create or update a footer section for each instruction file based on the following format
+```yaml
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: {{instruction.qualityScore}}
+---   
+```
+
 
 2. **Comprehensive Change Documentation**
 
@@ -344,12 +342,7 @@ version: 1.0.0
 
 3. **Master Index & Navigation**
 
-   - Complete instruction catalog in `{{files.indexes.instructions}}` containing:
-     - Hierarchical organization by category and subcategory
-     - Quick-reference summaries for each instruction
-     - Cross-reference maps between related instructions
-     - Dependency charts and prerequisite information
-     - Tag-based categorization for rapid AI agent lookup
+Use the skill `.github/skills/ailey-index-tool` to regenerate the indexs
 
 4. **Quality Metrics & Analytics**
 
@@ -378,7 +371,7 @@ version: 1.0.0
 
 ---
 
-## Maintenance Schedule:\*\*
+## Maintenance Schedule:
 
 - **Monthly**: Quick scans for outdated content and broken references
 - **Quarterly**: Comprehensive quality assessment and scoring updates
@@ -387,7 +380,7 @@ version: 1.0.0
 
 ## Automation Opportunities
 
-**Automated Tasks:**
+### Automated Tasks
 
 - File inventory and basic statistics generation
 - YAML frontmatter validation and standardization
@@ -395,15 +388,16 @@ version: 1.0.0
 - Basic markdown formatting compliance checks
 - MD5 checksum generation
 
-**Manual Review Required:**
+### Manual Review Required
 
 - Content accuracy and technical validation
 - Practical utility assessment
 - AI optimization and clarity improvements
 - Cross-reference relationship mapping
----
 
+---
 version: 1.0.0
-updated: 2026-01-11
-reviewed: 2026-01-11
-score: 4.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

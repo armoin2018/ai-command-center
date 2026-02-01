@@ -1,13 +1,12 @@
 ---
+id: 
 name: ailey-skill-creator
 description: Guide for creating effective VS Code Copilot skills following ai-ley kit standards. Use when users want to create a new skill, update an existing skill, or need guidance on skill structure, TypeScript scripts, MCP servers, or skill best practices.
 ---
-
 # AI-ley Skill Creator
 
 Create effective VS Code Copilot skills that extend AI capabilities with specialized knowledge, workflows, and tool integrations following ai-ley kit standards.
 
-## Core Principles
 
 ### Conciseness is Key
 
@@ -87,7 +86,6 @@ description: Complete description of what the skill does AND specific triggers/c
 - Examples of input/output
 - References to bundled resources
 
-### Bundled Resources
 
 #### Scripts (`scripts/`)
 
@@ -299,7 +297,6 @@ And `tsconfig.json`:
 - Brand assets for brand-guidelines skill
 - Documentation for reference files
 
-### Step 5: Write SKILL.md
 
 #### Frontmatter
 
@@ -566,7 +563,6 @@ After using skill on real tasks:
 2. Identify needed updates to SKILL.md or resources
 3. Implement changes and test again
 
-## Proven Design Patterns
 
 ### Sequential Workflows
 
@@ -622,7 +618,6 @@ Input: [example]
 Output: [expected result]
 ```
 
-## AI-ley Kit Standards
 
 ### Naming Convention
 
@@ -667,3 +662,10 @@ This skill references:
 
 **Version**: 1.0.0  
 **Created**: 2026-01-19
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

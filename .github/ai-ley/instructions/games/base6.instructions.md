@@ -1,11 +1,10 @@
 ---
-name: 'base6.instructions'
-description: 'Base6 is a vibrant, all-ages card game platform featuring hexagonal cards with six dimensions of play: Suit, Rank, Space, Image, Action, and Dice.'
+id: base6
+name: base6.instructions
+description: Base6 is a vibrant, all-ages card game platform featuring hexagonal cards with six dimensions of play: Suit, Rank, Space, Image, Action, and Dice.
 keywords: [cloud, audience, api, concepts, considerations, community, base6.instructions, design, analytics, base6]
+tools: undefined
 ---
-
-
-
 # Base6 Game Development Instructions
 
 ## Overview
@@ -228,3 +227,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

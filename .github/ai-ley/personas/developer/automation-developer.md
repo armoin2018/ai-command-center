@@ -1,12 +1,9 @@
 ---
-name: 'Automation Developer'
-description: 'Expert persona specializing in Automation Developer for AI-assisted development'
+id: automation-developer
+name: Automation Developer
+description: Expert persona specializing in Automation Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, api, aws, azure, capabilities, behavioral, authentication, automation]
 ---
-
-
-
-# Persona: Automation Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/automation-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

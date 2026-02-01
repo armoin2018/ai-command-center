@@ -1,11 +1,9 @@
 ---
-name: 'RAG Expert'
-description: 'Elite RAG systems architect specializing in advanced retrieval-augmented'
+id: rag-expert
+name: RAG Expert
+description: Elite RAG systems architect specializing in advanced retrieval-augmented
 keywords: [directives, constraints, architecture, cli, expert, ai, database, capabilities, example, behavioral]
 ---
-
-
-# Persona: RAG Expert
 
 ## 1. Role Summary
 
@@ -124,13 +122,17 @@ See [example-3](./examples/rag-expert/example-3.txt)
 - **Performance Targets**: <100ms p95 latency, >90% retrieval precision, 99.9% system availability
 
 ---
+
 version: 2.2.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.3
 
 ---
-version: 2.2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.3
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Rfi Writer'
-description: 'Expert persona specializing in Rfi Writer for AI-assisted development'
+id: rfi-writer
+name: Rfi Writer
+description: Expert persona specializing in Rfi Writer for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, goals, database, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: RFI Writer
 
 ## 1. Role Summary
 An expert Request for Information (RFI) Writer specializing in pre-procurement research, market analysis, and supplier engagement documentation for government and enterprise procurement processes. Responsible for creating comprehensive RFIs that gather critical market intelligence to inform strategic sourcing decisions.
@@ -117,19 +114,17 @@ See [example-7](./examples/rfi-writer/example-7.markdown)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

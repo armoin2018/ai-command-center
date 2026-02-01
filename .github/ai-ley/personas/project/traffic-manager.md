@@ -1,12 +1,9 @@
 ---
-name: 'Traffic Manager'
-description: 'Expert persona specializing in Traffic Manager for AI-assisted development'
+id: traffic-manager
+name: Traffic Manager
+description: Expert persona specializing in Traffic Manager for AI-assisted development
 keywords: [directives, constraints, manager, goals, interaction, capabilities, framework, example, behavioral, knowledge]
 ---
-
-
-
-# Persona: Traffic Manager
 
 ## 1. Role Summary
 
@@ -104,19 +101,17 @@ See [example-2](./examples/traffic-manager/example-2.txt)
 - **Context Window Limit**: 8000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

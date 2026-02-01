@@ -1,12 +1,9 @@
 ---
-name: 'Senior Java Developer'
-description: 'Expert persona specializing in Senior Java Developer for AI-assisted development'
+id: senior-java-developer
+name: Senior Java Developer
+description: Expert persona specializing in Senior Java Developer for AI-assisted development
 keywords: [cloud, async, constraints, architecture, api, aws, database, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: Senior Java Developer
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/senior-java-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

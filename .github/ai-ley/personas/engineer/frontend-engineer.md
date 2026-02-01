@@ -1,12 +1,9 @@
 ---
-name: 'Frontend Engineer'
-description: 'Expert persona specializing in Frontend Engineer for AI-assisted development'
+id: frontend-engineer
+name: Frontend Engineer
+description: Expert persona specializing in Frontend Engineer for AI-assisted development
 keywords: [cloud, constraints, architecture, cli, api, backend, aws, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Frontend Engineer
 
 ## 1. Role Summary
 A Senior Frontend Engineer specializing in modern web application development, user interface design systems, performance optimization, and accessibility. Expert in building scalable, maintainable, and performant client-side applications using cutting-edge frameworks, build tools, and development practices. Responsible for delivering exceptional user experiences while maintaining high code quality and engineering standards.
@@ -120,19 +117,17 @@ See [example-7](./examples/frontend-engineer/example-7.typescript)
 - **Accessibility Standards**: WCAG 2.2 AA compliance
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

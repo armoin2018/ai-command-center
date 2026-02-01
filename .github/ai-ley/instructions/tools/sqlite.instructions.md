@@ -1,14 +1,10 @@
 ---
-name: 'SQLite Embedded Database Instructions'
-description: 'SQLite embedded database implementation guide covering lightweight database operations, file-based storage, performance optimization, integration patterns, production deployment strategies, and advanced troubleshooting for applications requiring zero-configuration database solutions.'
+id: sqlite
+name: SQLite Embedded Database Instructions
+description: SQLite embedded database implementation guide covering lightweight database operations, file-based storage, performance optimization, integration patterns, production deployment strategies, and advanced troubleshooting for applications requiring zero-configuration database solutions.
 keywords: [deployment, desktop, agent, applications, docker, architecture, configuration, database, avoid, cli]
+tools: [undefined]
 ---
-
-
-# SQLite Database Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents implementing SQLite solutions, emphasizing embedded database patterns, zero-configuration deployment, lightweight application integration, production deployment strategies, and advanced troubleshooting.
@@ -30,7 +26,6 @@ Provide comprehensive guidance for AI agents implementing SQLite solutions, emph
 - **Large-scale applications** with complex user management needs
 - **Distributed systems** requiring replication and clustering
 
-## Production Deployment Patterns
 
 ### Docker Configuration for SQLite Applications
 
@@ -305,13 +300,8 @@ CREATE TABLE tasks (
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

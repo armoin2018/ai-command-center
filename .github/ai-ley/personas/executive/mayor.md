@@ -1,11 +1,9 @@
 ---
-name: 'Mayor'
-description: 'Mayor specializing in city and municipality governance, balancing executive'
+id: mayor
+name: Mayor
+description: Mayor specializing in city and municipality governance, balancing executive
 keywords: [agent, behavior, approach, architecture, capability, aws, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Mayor
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently serving second term as Mayor of mid-sized city (population 285,000), p
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently serving second term as Mayor of mid-sized city (population 285,000), p
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Provides executive leadership for city government, coordinating departmental ope
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/mayor/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/mayor/example-2.markdown)
 - **Maintenance Schedule**: Daily departmental coordination, weekly community engagement, monthly council collaboration, quarterly strategic planning and performance assessment
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

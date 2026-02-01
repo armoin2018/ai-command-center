@@ -1,13 +1,11 @@
 ---
-name: 'Run Next'
-description: 'Continue executing the next step in a workflow or process'
+id: ailey-run-next
+name: Run Next
+description: Continue executing the next step in a workflow or process
 keywords: [workflow, continuation, next-step, process, execution, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Run Next
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [workflow, continuation, next-step, process, execution, prompt, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -97,7 +93,6 @@ You are a workflow execution specialist, epic story progress tracker, and proces
   🟡 In Progress: [A] ([B]%)
   ⏸️ Not Started: [C] ([D]%)
 
-## Epic-by-Epic Progress
 
 ### EPIC-001: [Epic Name] - [X]% Complete
 
@@ -285,7 +280,6 @@ Story Breakdown:
 - Current: [Y]% complete
 - Estimated Completion: [Date] (based on current velocity)
 
-## Next Available Actions
 
 ### Option 1: Continue Current Story (Recommended)
 
@@ -327,7 +321,6 @@ Story Breakdown:
 - Provide velocity-based timeline estimates
 - Highlight any critical path changes or risks
 
-## Examples
 
 ### Example 1: Basic Workflow Continuation
 
@@ -413,3 +406,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

@@ -1,7 +1,7 @@
 ---
 name: 'Webpack.Instructions'
 description: 'See [example-29](./examples/webpack/example-29.'
-keywords: [(basic), api, automation, application, bundle, [related, build, caching, advanced, cases]
+keywords: [(basic), api, automation, application, bundle, related, build, caching, advanced, cases
 ---
 
 

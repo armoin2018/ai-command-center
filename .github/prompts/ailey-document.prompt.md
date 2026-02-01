@@ -1,13 +1,11 @@
 ---
-name: 'Document Generator'
-description: 'Generate documentation based on specified format type and target audience'
+id: ailey-document
+name: Document Generator
+description: Generate documentation based on specified format type and target audience
 keywords: [documentation, docusaurus, mkdocs, markdown, client, admin, support, generation, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Document Generator
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [documentation, docusaurus, mkdocs, markdown, client, admin, support, 
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -478,7 +474,6 @@ markdown_extensions:
 - **All**: Comprehensive coverage meeting diverse stakeholder needs
 ```
 
-## Examples
 
 ### Example 1: Client-Focused Docusaurus Documentation
 
@@ -654,3 +649,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

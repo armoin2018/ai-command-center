@@ -1,12 +1,9 @@
 ---
-name: 'Threat Hunter'
-description: 'Expert persona specializing in Threat Hunter for AI-assisted development'
+id: threat-hunter
+name: Threat Hunter
+description: Expert persona specializing in Threat Hunter for AI-assisted development
 keywords: [directives, constraints, architecture, gui, goals, capabilities, framework, example, hunter, behavioral]
 ---
-
-
-
-# Persona: threat hunter
 
 ## 1. Role Summary
 A Security Professional specializing in technology implementation, system optimization, and best practices, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/threat-hunter/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

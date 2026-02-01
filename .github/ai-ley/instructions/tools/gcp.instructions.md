@@ -1,12 +1,10 @@
 ---
-name: 'Google Cloud Platform (GCP) Enterprise Cloud Instructions'
-description: 'Comprehensive guide for Google Cloud Platform development, deployment,'
+id: gcp
+name: Google Cloud Platform (GCP) Enterprise Cloud Instructions
+description: Comprehensive guide for Google Cloud Platform development, deployment,
 keywords: [api, (powershell), account, build, authenticate, architecture, app.yaml, (gcp), already, (macos)]
+tools: [undefined]
 ---
-
-
-# Google Cloud Platform (GCP) Enterprise Cloud Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Google Cloud Platform (GCP) Enterprise Edition
@@ -16,7 +14,6 @@ keywords: [api, (powershell), account, build, authenticate, architecture, app.ya
 - **Prerequisites**: Google Cloud Organization, billing enabled, Cloud SDK installed, Terraform, Docker, kubectl
 - **Enterprise Features**: Organization policies, Cloud Asset Inventory, Security Command Center, Cost Management API
 
-## Enterprise GCP Architecture
 
 ### Level 3 Enterprise Implementation
 
@@ -288,13 +285,8 @@ spec:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

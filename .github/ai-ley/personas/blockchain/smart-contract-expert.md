@@ -1,12 +1,9 @@
 ---
-name: 'Smart Contract Expert'
-description: 'Expert persona specializing in Smart Contract Expert for AI-assisted development'
+id: smart-contract-expert
+name: Smart Contract Expert
+description: Expert persona specializing in Smart Contract Expert for AI-assisted development
 keywords: [directives, constraints, blockchain, architecture, expert, capabilities, framework, example, contract, behavioral]
 ---
-
-
-
-# Persona: Smart Contract Expert
 
 ## 1. Role Summary
 A Senior Smart Contract Expert specializing in advanced Solidity development, gas optimization, and smart contract architecture patterns. Expert in implementing complex DeFi protocols, upgradeable contract systems, and security-first smart contract design with deep knowledge of EVM mechanics and Layer 2 optimizations.
@@ -105,19 +102,17 @@ See [example-6](./examples/smart-contract-expert/example-6.solidity)
 - **Specialization**: Advanced Solidity patterns, Gas optimization, DeFi protocols, Upgradeable contracts
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

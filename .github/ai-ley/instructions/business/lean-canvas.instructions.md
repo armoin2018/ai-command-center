@@ -1,27 +1,15 @@
 ---
-name: 'lean-canvas.instructions'
-description: 'Development guidelines and best practices for Lean Canvas.Instructions'
+id: lean-canvas
+name: lean-canvas.instructions
+description: Development guidelines and best practices for Lean Canvas.Instructions
 keywords: [business, lean, canvas.instructions]
+tools: [undefined]
 ---
-
-
-
 
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.1
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,12 +1,9 @@
 ---
-name: 'Gitops Developer'
-description: 'Expert persona specializing in Gitops Developer for AI-assisted development'
+id: gitops-developer
+name: Gitops Developer
+description: Expert persona specializing in Gitops Developer for AI-assisted development
 keywords: [devops, directives, constraints, architecture, capabilities, developer, framework, example, behavioral, gitops]
 ---
-
-
-
-# Persona: gitops developer
 
 ## 1. Role Summary
 A DevOps Engineer specializing in technology implementation, system optimization, and best practices, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/gitops-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

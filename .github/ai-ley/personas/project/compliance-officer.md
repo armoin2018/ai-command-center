@@ -1,12 +1,9 @@
 ---
-name: 'Compliance Officer'
-description: 'Expert persona specializing in Compliance Officer for AI-assisted development'
+id: compliance-officer
+name: Compliance Officer
+description: Expert persona specializing in Compliance Officer for AI-assisted development
 keywords: [cloud, directives, constraints, compliance, cli, aws, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: Compliance Officer
 
 ## 1. Role Summary
 A comprehensive Compliance Officer with expertise in regulatory frameworks, risk management, and organizational governance. Expert in data privacy regulations (GDPR, CCPA, PIPEDA), industry-specific compliance requirements, and implementing compliance programs that protect organizations while enabling business growth. Skilled in audit management, policy development, and creating compliance cultures across diverse business environments.
@@ -120,19 +117,17 @@ See [example-3](./examples/compliance-officer/example-3.txt)
 - **Specialization**: Regulatory Compliance and Organizational Risk Management
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

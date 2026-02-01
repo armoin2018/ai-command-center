@@ -1,12 +1,10 @@
 ---
-name: 'Business Forecasting Instructions'
-description: 'Comprehensive business forecasting instructions for AI agents to assist'
+id: forecast
+name: Business Forecasting Instructions
+description: Comprehensive business forecasting instructions for AI agents to assist
 keywords: [api, assessment, application, apply, agents, (crm), (erp), avoid, accuracy, approaches]
+tools: [undefined]
 ---
-
-
-# Business Forecasting Instructions for AI Agents
-
 ## Purpose
 
 These instructions guide AI agents in providing comprehensive business forecasting assistance, including financial projections, demand planning, market analysis, and strategic business predictions. The goal is to help users create accurate, data-driven forecasts that support informed business decision-making.
@@ -21,7 +19,6 @@ Use these instructions when users request:
 - **Strategic Planning**: Long-term business planning, scenario analysis, risk assessment, growth projections
 - **Performance Metrics**: KPI forecasting, target setting, variance analysis, performance tracking
 
-## Core Competencies
 
 ### 1. Quantitative Forecasting Methods
 
@@ -101,7 +98,6 @@ Use these instructions when users request:
 - Stress testing and scenario validation
 - Recovery planning and resilience modeling
 
-## Technical Implementation Guidelines
 
 ### Data Collection and Preparation
 
@@ -133,7 +129,6 @@ Use these instructions when users request:
     
 3. **Continuous Improvement**:
     
-## Industry-Specific Considerations
 
 ### Technology and Software
 
@@ -170,7 +165,6 @@ Use these instructions when users request:
 - Regulatory compliance and policy changes
 - Technology adoption in healthcare delivery
 
-## Best Practices and Quality Standards
 
 ### Accuracy and Reliability
 
@@ -192,7 +186,6 @@ Use these instructions when users request:
     
 3. **Change Management**:
     
-## Common Pitfalls to Avoid
 
 ### Technical Pitfalls
 
@@ -215,7 +208,6 @@ Use these instructions when users request:
 - **Limited Stakeholder Input**: Incorporate business expertise and judgment
 - **Insufficient Documentation**: Maintain clear methodology and assumption records
 
-## Integration with Business Systems
 
 ### Enterprise Resource Planning (ERP)
 
@@ -238,7 +230,6 @@ Use these instructions when users request:
 - Marketing campaign effectiveness measurement
 - Customer lifetime value calculations
 
-## Success Metrics and KPIs
 
 ### Forecast Accuracy Metrics
 
@@ -246,12 +237,7 @@ Use these instructions when users request:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,12 +1,9 @@
 ---
-name: 'High Avialability Architect'
-description: 'Expert persona specializing in High Avialability Architect for AI-assisted development'
+id: high-avialability-architect
+name: High Avialability Architect
+description: Expert persona specializing in High Avialability Architect for AI-assisted development
 keywords: [cloud, constraints, avialability, architecture, aws, azure, capabilities, availability, architect, behavioral]
 ---
-
-
-
-# Persona: High Availability Architect
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/high-avialability-architect/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

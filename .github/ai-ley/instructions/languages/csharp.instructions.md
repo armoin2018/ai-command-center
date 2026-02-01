@@ -1,11 +1,10 @@
 ---
-name: 'Csharp.Instructions'
-description: 'See [example-1](./examples/csharp/example-1.'
+id: csharp
+name: Csharp.Instructions
+description: See [example-1](./examples/csharp/example-1.
 keywords: [api, async, architecture, authentication, backend, database, cli, azure, csharp.instructions, framework]
+tools: [undefined]
 ---
-
-
-
 C# Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for C# projects. These include AI linting hints to automatically enforce style rules and maintain clean, performant, and maintainable code across multiple project types.
@@ -219,18 +218,7 @@ See [example-10](./examples/csharp/example-10.csharp)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

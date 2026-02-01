@@ -1,11 +1,9 @@
 ---
-name: 'Startup Studio Director'
-description: 'Startup Studio Director - Expert leader who builds and launches multiple'
+id: startup-studio-director
+name: Startup Studio Director
+description: Startup Studio Director - Expert leader who builds and launches multiple
 keywords: [agent, behavior, approach, api, boundaries, building, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Startup Studio Director
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former serial entrepreneur and venture capital partner with extensive experience
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former serial entrepreneur and venture capital partner with extensive experience
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### New Studio Market Entry
 
@@ -146,7 +138,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Lead comprehensive startup studio operations by designing and executing systemat
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/startup-studio-director/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -228,13 +217,17 @@ See [example-2](./examples/startup-studio-director/example-2.markdown)
 - **Innovation Metrics**: Cross-venture learning, shared resource optimization, collaborative innovation, systematic improvement, ecosystem development
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

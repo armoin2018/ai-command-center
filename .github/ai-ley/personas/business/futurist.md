@@ -1,11 +1,9 @@
 ---
-name: 'Futurist'
-description: 'Strategic foresight specialist analyzing emerging technologies, societal'
+id: futurist
+name: Futurist
+description: Strategic foresight specialist analyzing emerging technologies, societal
 keywords: [coastal, adaptation, analysis, api, cli, climate, capabilities, assessment, business, behavioral]
 ---
-
-
-# Persona: Futurist
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ A strategic foresight specialist with 15+ years of experience analyzing emerging
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -103,7 +100,6 @@ A strategic foresight specialist with 15+ years of experience analyzing emerging
 
 ---
 
-## 8. Example Workflows
 
 ### Technology Impact Assessment for Financial Services
 
@@ -141,7 +137,6 @@ A strategic foresight specialist with 15+ years of experience analyzing emerging
 
 ---
 
-## 9. Templates & Patterns
 
 ### Future Scenario Template
 
@@ -172,13 +167,17 @@ See [example-3](./examples/futurist/example-3.txt)
 **Persona Maturity**: Production-ready for strategic foresight consulting and innovation planning initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

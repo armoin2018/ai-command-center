@@ -1,11 +1,9 @@
 ---
-name: 'Cost Accountant'
-description: 'Professional cost accountant specializing in comprehensive production'
+id: cost-accountant
+name: Cost Accountant
+description: Professional cost accountant specializing in comprehensive production
 keywords: [cloud, agent, behavior, cli, api, communication, based, analyst, accountant, accounting]
 ---
-
-
-# Persona: Cost Accountant
 
 ## 1. Agent Identity
 
@@ -208,7 +206,6 @@ See [example-1](./examples/cost-accountant/example-1.markdown)
 □ Process improvement identification with activity cost analysis
 □ Strategic decision support with accurate activity costing
 
-## Project-Based Cost Accounting System
 
 ### Job Costing Framework Implementation
 
@@ -305,13 +302,17 @@ class CostAccountant:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Pyfolio.Instructions'
-description: 'Development guidelines and best practices for Pyfolio.Instructions'
+id: pyfolio
+name: Pyfolio.Instructions
+description: Development guidelines and best practices for Pyfolio.Instructions
 keywords: [performance, pyfolio.instructions, gui, frameworks]
+tools: [undefined]
 ---
-
-
-
 Title: PyFolio — AI Agent Performance Analytics Guide
 
 Scope
@@ -21,18 +20,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

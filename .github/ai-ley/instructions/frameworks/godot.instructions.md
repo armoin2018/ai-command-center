@@ -1,13 +1,10 @@
 ---
-name: 'Godot.Instructions'
-description: 'Development guidelines and best practices for Godot.Instructions'
+id: godot
+name: Godot.Instructions
+description: Development guidelines and best practices for Godot.Instructions
 keywords: [behavior, considerations, common, audio, architecture, authentication, assistant, concepts, configuration, autoloads]
+tools: [undefined]
 ---
-
-
-
-# Godot Game Engine Instructions
-
 ## Framework Overview
 - **Framework Name**: Godot Engine
 - **Version**: 4.2+ (Latest stable)
@@ -15,7 +12,6 @@ keywords: [behavior, considerations, common, audio, architecture, authentication
 - **Language**: GDScript (primary), C#, C++, Visual scripting
 - **Use Cases**: 2D/3D games, mobile games, indie development, prototyping
 
-## Installation & Setup
 
 ### Engine Installation
 See [example-1](./examples/godot/example-1.bash)
@@ -26,7 +22,6 @@ See [example-2](./examples/godot/example-2.bash)
 ## Project Structure
 See [example-3](./examples/godot/example-3.txt)
 
-## Core Concepts
 
 ### Scene System and Nodes
 - **Purpose**: Godot's fundamental building blocks using node-based architecture
@@ -53,7 +48,6 @@ See [example-6](./examples/godot/example-6.gdscript)
 4. **Testing**: Use built-in debugger and scene testing
 5. **Export**: Build for target platforms using export templates
 
-## Best Practices
 
 ### UI System and Responsive Design
 See [example-7](./examples/godot/example-7.gdscript)
@@ -61,7 +55,6 @@ See [example-7](./examples/godot/example-7.gdscript)
 ### Enemy AI and Behavior Trees
 See [example-8](./examples/godot/example-8.gdscript)
 
-## Common Patterns
 
 ### Resource Management and Object Pooling
 See [example-9](./examples/godot/example-9.gdscript)
@@ -73,7 +66,6 @@ See [example-10](./examples/godot/example-10.gdscript)
 ### Performance Settings
 See [example-11](./examples/godot/example-11.gdscript)
 
-## Common Issues & Solutions
 
 ### Issue 1: Frame Rate Drops
 **Problem**: Game performance decreases over time
@@ -116,18 +108,7 @@ When helping with Godot development:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

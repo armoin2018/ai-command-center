@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
+    .content { padding: 30px; background: #f9f9f9; }
+    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
+    .metric { background: white; padding: 20px; margin: 10px 0; border-left: 4px solid #667eea; }
+    .metric-value { font-size: 32px; font-weight: bold; color: #667eea; }
+    .metric-label { font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>{{reportTitle}}</h1>
+      <p>{{period}}</p>
+    </div>
+    
+    <div class="content">
+      <p>Dear {{recipientName}},</p>
+      
+      <p>Here is your {{reportType}} for {{period}}.</p>
+      
+      <h2>Key Metrics</h2>
+      
+      <div class="metric">
+        <div class="metric-value">{{revenue}}</div>
+        <div class="metric-label">Revenue</div>
+      </div>
+      
+      <div class="metric">
+        <div class="metric-value">{{customers}}</div>
+        <div class="metric-label">New Customers</div>
+      </div>
+      
+      <div class="metric">
+        <div class="metric-value">{{growth}}%</div>
+        <div class="metric-label">Growth Rate</div>
+      </div>
+      
+      <h2>Highlights</h2>
+      <ul>
+        {{#each highlights}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      
+      <h2>Action Items</h2>
+      <ol>
+        {{#each actionItems}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ol>
+      
+      <p>For detailed analysis, please see the attached report.</p>
+      
+      <p>Best regards,<br>
+      {{senderName}}<br>
+      {{senderTitle}}</p>
+    </div>
+    
+    <div class="footer">
+      <p>This is an automated report. For questions, contact {{contactEmail}}.</p>
+    </div>
+  </div>
+</body>
+</html>

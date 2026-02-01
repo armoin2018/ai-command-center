@@ -1,13 +1,11 @@
 ---
-name: 'Market Research and Analysis'
-description: 'Build comprehensive market research with industry analysis, future trends, and strategic opportunities'
+id: ailey-build-market-research
+name: Market Research and Analysis
+description: Build comprehensive market research with industry analysis, future trends, and strategic opportunities
 keywords: [build, market, research, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Market Research and Analysis
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -25,8 +23,6 @@ keywords: [build, market, research, prompt, ailey]
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
 - Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
-
-
 
 
 ## Recommended Personas
@@ -119,7 +115,6 @@ You are a market research analyst and strategic insights expert with expertise i
 **Comprehensive Market Research and Analysis Framework**:
 
 ````markdown
-# Market Research & Strategic Analysis
 
 ## Executive Summary
 
@@ -129,7 +124,6 @@ You are a market research analyst and strategic insights expert with expertise i
 **Strategic Opportunities**: {top-market-opportunities-identified}
 **Recommended Focus**: {priority-market-segments-and-strategies}
 
-## Industry Analysis and Current State
 
 ### Industry Overview
 
@@ -148,7 +142,6 @@ You are a market research analyst and strategic insights expert with expertise i
 - **Bargaining Power of Buyers**: {high-medium-low}
 - **Threat of Substitutes**: {high-medium-low}
 
-### Current Market Trends
 
 #### Technology Trends Impacting the Industry
 
@@ -204,7 +197,6 @@ You are a market research analyst and strategic insights expert with expertise i
 - **Business Investment Trends**: {capital-expenditure-patterns}
 - **Global Trade Implications**: {import-export-supply-chain-effects}
 
-## Future Market Projections (Futurist Analysis)
 
 ### 3-5 Year Market Evolution
 
@@ -216,7 +208,6 @@ You are a market research analyst and strategic insights expert with expertise i
 | **Year 3** | ${projected-size} | {growth}% | {growth-drivers} | {potential-disruptions} |
 | **Year 5** | ${projected-size} | {growth}% | {growth-drivers} | {potential-disruptions} |
 
-### Emerging Opportunities (Future-Forward Analysis)
 
 #### Opportunity 1: {Future-Opportunity-Name}
 
@@ -270,9 +261,6 @@ timeline
 
 `````
 
-## Underserved Market Segments
-
-### Market Gap Analysis
 
 #### Underserved Segment 1: {Segment-Name}
 
@@ -355,11 +343,7 @@ timeline
 **Comprehensive Customer Analysis and Targeting Framework**:
 
 ```markdown
-# Target Market Analysis & Customer Personas
 
-## Market Segmentation Framework
-
-### Primary Target Segments
 
 #### Segment 1: {Primary-Segment-Name}
 
@@ -424,7 +408,6 @@ timeline
 - **Vendor Selection Process**: {rfp-pilot-evaluation-steps}
 - **Contract Preferences**: {terms-pricing-service-requirements}
 
-## Detailed Customer Personas
 
 ### Persona 1: "{Persona-Name}" - {Role-Title}
 
@@ -487,9 +470,6 @@ timeline
 
 [Similar detailed structure as Persona 1]
 
-## Geographic Market Analysis (DMA Analysis)
-
-### Designated Market Area (DMA) Prioritization
 
 #### Primary DMA: {DMA-Name-and-Rank}
 
@@ -530,9 +510,6 @@ timeline
 | **#{rank}** | {dma-name}  | {population} | {density}%     | {score}/10        | {high-med-low} |
 | **#{rank}** | {dma-name}  | {population} | {density}%     | {score}/10        | {high-med-low} |
 
-## Customer Journey Mapping
-
-### Customer Journey for Persona 1
 
 #### Awareness Stage
 
@@ -576,9 +553,7 @@ timeline
 
 **Research-Based Marketing Strategy Framework**:
 ```markdown
-# Marketing Strategy Recommendations
 
-## Market-Informed Marketing Strategy
 
 ### Overall Marketing Strategy Framework
 **Strategic Positioning**: {market-position-based-on-research}
@@ -586,7 +561,6 @@ timeline
 **Competitive Differentiation**: {unique-advantages-vs-competitors}
 **Market Entry Approach**: {how-to-enter-based-on-research}
 
-### Segment-Specific Marketing Strategies
 
 #### Strategy for {Primary-Segment}
 **Marketing Objectives**:
@@ -625,7 +599,6 @@ timeline
 #### Strategy for {Secondary-Segment}
 [Similar structure tailored to secondary segment]
 
-### DMA-Specific Marketing Tactics
 
 #### {Primary-DMA} Marketing Plan
 **Local Market Characteristics**: {dma-specific-insights}
@@ -647,7 +620,6 @@ timeline
 | **Local Events** | ${amount} | {reach} | {leads} | {roi}% |
 | **Community Partnerships** | ${amount} | {reach} | {leads} | {roi}% |
 
-### Customer Acquisition Strategy
 
 #### Acquisition Funnel Optimization
 **Awareness to Interest Conversion**:
@@ -668,7 +640,6 @@ timeline
 - **Decision Support**: {tools-content-to-facilitate-decisions}
 - **Objection Handling**: {common-objections-response-strategies}
 
-### Customer Lifetime Value Optimization
 
 #### Retention Strategy
 **Customer Success Framework**:
@@ -689,7 +660,6 @@ timeline
 - **Cross-sell Timing**: {optimal-timing-for-additional-offers}
 - **Bundling Strategy**: {package-deals-incentives}
 
-## Marketing ROI Analysis
 
 ### Channel ROI Projections
 | Marketing Channel | Monthly Investment | Expected Customers | CAC | CLV | ROI | Payback Period |
@@ -719,7 +689,6 @@ timeline
 - **Expected Results**: {market-position-financial-performance}
 - **Strategic Outcomes**: {long-term-competitive-advantages}
 
-## Marketing Performance Dashboard
 
 ### Key Performance Indicators (KPIs)
 | Metric | Target | Month 3 | Month 6 | Month 12 | Status |
@@ -739,7 +708,6 @@ timeline
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Market Research
 
@@ -851,3 +819,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

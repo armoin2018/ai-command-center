@@ -1,11 +1,10 @@
 ---
-name: 'Asymmetry Brokengrid.Instructions'
-description: 'Development guidelines and best practices for Asymmetry Brokengrid.Instructions'
+id: asymmetry-brokengrid
+name: Asymmetry Brokengrid.Instructions
+description: Development guidelines and best practices for Asymmetry Brokengrid.Instructions
 keywords: [brokengrid.instructions, web design, asymmetry, broken]
+tools: [undefined]
 ---
-
-
-
 # Asymmetry & Broken Grid
 
 - Dynamic, irregular layouts.
@@ -14,18 +13,7 @@ keywords: [brokengrid.instructions, web design, asymmetry, broken]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

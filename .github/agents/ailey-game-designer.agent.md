@@ -1,11 +1,10 @@
 ---
 id: ailey-game-designer
 name: AI-ley Game Designer
-description: 'Creative game design specialist for mechanics, rules, and player experience'
+description: Creative game design specialist for mechanics, rules, and player experience
 keywords: [game-design, mechanics, gameplay, rules, game-development, player-experience]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Game Designer Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -54,7 +53,6 @@ Game designer and creative collaborator focused on:
 
 ---
 
-## Execution Protocol
 
 ### Step 1: Clarify Concept
 
@@ -156,3 +154,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Ci Cd Expert'
-description: 'Expert persona specializing in Ci Cd Expert for AI-assisted development'
+id: ci-cd-expert
+name: Ci Cd Expert
+description: Expert persona specializing in Ci Cd Expert for AI-assisted development
 keywords: [cloud, devops, constraints, architecture, api, ci/cd, aws, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: CI/CD Expert
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/ci-cd-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

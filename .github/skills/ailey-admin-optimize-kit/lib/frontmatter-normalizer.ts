@@ -14,19 +14,39 @@ export class FrontmatterNormalizer {
     resourceType: ResourceType,
     baseFileName: string
   ): FrontmatterSchema {
+    // Remove quotes from name and description if present
+    const name = this.unquote(frontmatter.name) || this.generateName(baseFileName);
+    const description = this.unquote(frontmatter.description) || '';
+
     const normalized: FrontmatterSchema = {
       id: baseFileName,
-      name: frontmatter.name || this.generateName(baseFileName),
-      description: frontmatter.description || '',
-      keywords: this.normalizeArray(frontmatter.keywords),
-      tools: this.normalizeArray(frontmatter.tools)
+      name,
+      description
     };
+
+    // Only add keywords if they exist and have values
+    const keywords = this.normalizeArray(frontmatter.keywords);
+    if (keywords && keywords.length > 0) {
+      normalized.keywords = keywords;
+    }
+
+    // Default tools array for agents if missing
+    const tools = this.normalizeArray(frontmatter.tools);
+    if (tools && tools.length > 0) {
+      normalized.tools = tools;
+    } else if (resourceType === 'agent' || resourceType === 'prompt') {
+      // Add default tools for agents and prompts
+      normalized.tools = ['execute', 'read', 'edit', 'search', 'web', 'agent', 'todo'];
+    }
 
     // Resource-specific normalization
     if (resourceType === 'prompt') {
       normalized.agent = frontmatter.agent || 'AI-ley Orchestrator';
-      if (frontmatter.skills) {
-        normalized.skills = this.normalizeArray(frontmatter.skills);
+      
+      // Only add skills if they exist and have values
+      const skills = this.normalizeArray(frontmatter.skills);
+      if (skills && skills.length > 0) {
+        normalized.skills = skills;
       }
     }
 
@@ -42,6 +62,16 @@ export class FrontmatterNormalizer {
     }
 
     return normalized;
+  }
+
+  /**
+   * Remove quotes from string if present
+   */
+  private unquote(value: any): string | undefined {
+    if (typeof value !== 'string') return value;
+    
+    // Remove leading/trailing quotes (single or double)
+    return value.replace(/^['"]|['"]$/g, '');
   }
 
   /**

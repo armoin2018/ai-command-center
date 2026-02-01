@@ -1,11 +1,9 @@
 ---
-name: 'Grassroots Candidate'
-description: 'Grassroots Candidate specializing in community-driven campaigns for local'
+id: grassroots-candidate
+name: Grassroots Candidate
+description: Grassroots Candidate specializing in community-driven campaigns for local
 keywords: [agent, behavior, approach, architecture, api, candidate, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Grassroots Candidate
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently running for City Council Ward 3 seat, representing diverse working-cla
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently running for City Council Ward 3 seat, representing diverse working-cla
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develops and executes community-driven political campaign focused on local issue
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/grassroots-candidate/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/grassroots-candidate/example-2.markdown)
 - **Maintenance Schedule**: Daily volunteer coordination, weekly community engagement, monthly strategy assessment with community input, quarterly campaign evaluation and adjustment
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,10 @@
 ---
-name: 'AWS CloudFormation Enterprise Platform'
-description: 'Enterprise AWS CloudFormation platform with advanced infrastructure as'
+id: aws-cloudformation
+name: AWS CloudFormation Enterprise Platform
+description: Enterprise AWS CloudFormation platform with advanced infrastructure as
 keywords: [cloud, cloudformation.instructions, account, architecture, configuration, advanced, cli, cloudformation, capabilities, aws]
+tools: [undefined]
 ---
-
-
-# 🏗️ AWS CloudFormation Enterprise Infrastructure Platform
-
 ## 🎯 Enterprise Overview
 
 **AWS CloudFormation Enterprise Platform** - The most comprehensive cloud-native infrastructure as code solution providing advanced CloudFormation patterns, multi-account orchestration with AWS Organizations, StackSets automation, CDK integration, compliance automation across multiple frameworks (SOC2, PCI-DSS, HIPAA, CIS), advanced monitoring integration, security frameworks, disaster recovery automation, and enterprise-scale deployment capabilities.
@@ -32,13 +30,11 @@ keywords: [cloud, cloudformation.instructions, account, architecture, configurat
 - **Purpose**: Enterprise-scale AWS resource provisioning and management
 - **Prerequisites**: AWS CLI, CDK, SAM CLI, enterprise AWS account with Organizations
 
-## Installation & Setup
 
 ### AWS CLI Installation
 
 See [example-1](./examples/aws-cloudformation/example-1.bash)
 
-## 🛠️ Enterprise Installation & Setup
 
 ### AWS Enterprise CLI Suite Installation
 
@@ -285,13 +281,8 @@ Resources:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9

@@ -1,12 +1,10 @@
 ---
-name: 'Apache Cordova Mobile Development Framework Instructions'
-description: 'Comprehensive guide for Apache Cordova hybrid mobile app development'
-keywords: [**security, async, agent, **common, api, apache, **performance, **use, assessment, **avoid]
+id: cordova
+name: Apache Cordova Mobile Development Framework Instructions
+description: Comprehensive guide for Apache Cordova hybrid mobile app development
+keywords: [security, async, agent, common, api, apache, performance, use, assessment, avoid]
+tools: [undefined]
 ---
-
-
-# Apache Cordova Mobile Development Framework Instructions
-
 ## Framework Overview
 
 - **Framework Name**: Apache Cordova
@@ -15,7 +13,6 @@ keywords: [**security, async, agent, **common, api, apache, **performance, **use
 - **Language**: HTML, CSS, JavaScript, TypeScript
 - **Use Cases**: Cross-platform mobile apps, web-to-mobile conversion, rapid prototyping, enterprise mobile solutions
 
-## When to Use Cordova
 
 ### ✅ **Use Cordova When**
 
@@ -38,7 +35,6 @@ keywords: [**security, async, agent, **common, api, apache, **performance, **use
 - Team has strong native development expertise and resources
 - App stores are rejecting hybrid apps in your category
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -60,7 +56,6 @@ keywords: [**security, async, agent, **common, api, apache, **performance, **use
 | **Plugin Dependencies**      | 0-3 basic plugins     | 4-8 plugins with customization   | 9+ plugins or custom development |
 | **Performance Requirements** | Basic content display | Moderate interactivity           | High performance needs           |
 
-## Installation & Setup
 
 ### Prerequisites
 
@@ -78,7 +73,6 @@ See [example-3](./examples/cordova/example-3.bash)
 
 See [example-4](./examples/cordova/example-4.txt)
 
-## Core Concepts
 
 ### Device Ready Event
 
@@ -110,7 +104,6 @@ See [example-7](./examples/cordova/example-7.javascript)
 
 See [example-8](./examples/cordova/example-8.bash)
 
-## Best Practices
 
 ### ✅ **Performance Optimization**
 
@@ -164,13 +157,8 @@ When helping with Apache Cordova development:
 - Follow Cordova's security best practices in all generated examples
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

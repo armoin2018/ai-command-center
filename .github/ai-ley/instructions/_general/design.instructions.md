@@ -1,20 +1,16 @@
 ---
-name: 'Design.Instructions'
-description: 'Development guidelines and best practices for Design.Instructions'
+id: design
+name: Design.Instructions
+description: Development guidelines and best practices for Design.Instructions
 keywords: [audit, api, avoid, (command, assistant, architecture, authentication, authorization, architectural, benefits]
+tools: [undefined]
 ---
-
-
-
-# Software Design Instructions
-
 ## Overview
 - **Domain**: Software Architecture and Design Methodology
 - **Purpose**: Guide AI agents in creating scalable, maintainable, and robust software designs
 - **Applicable To**: All software development projects requiring architectural design and system planning
 - **Integration Level**: Core methodology affecting all development phases from conception to deployment
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Design for Change**: Create flexible architectures that can evolve with changing requirements
@@ -37,7 +33,6 @@ keywords: [audit, api, avoid, (command, assistant, architecture, authentication,
 - **Myth**: Design is only needed for large, complex systems
   **Reality**: Design principles apply to all software, from simple scripts to enterprise systems
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -85,7 +80,6 @@ See [example-1](./examples/design/example-1.markdown)
 - Deployment architecture and infrastructure requirements
 - Security design and threat model documentation
 
-## Best Practices
 
 ### Architectural Patterns
 #### Layered Architecture Implementation
@@ -98,7 +92,6 @@ See [example-3](./examples/design/example-3.typescript)
 #### Repository Pattern with Dependency Injection
 See [example-4](./examples/design/example-4.typescript)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Event-Driven Architecture
 **Scenario**: Building a scalable e-commerce system with multiple services
@@ -121,7 +114,6 @@ See [example-6](./examples/design/example-6.typescript)
 - **Why It's Problematic**: Makes system difficult to change, test, and extend
 - **Better Approach**: Use dependency injection and interface-based design for loose coupling
 
-## Tools and Resources
 
 ### Essential Tools
 #### Design and Modeling Tools
@@ -153,7 +145,6 @@ See [example-6](./examples/design/example-6.typescript)
 - **Domain-Driven Design**: Eric Evans' strategic design and tactical patterns
 - **Microservices Patterns**: Chris Richardson's microservices design patterns
 
-## Quality and Compliance
 
 ### Quality Standards
 - All design decisions documented with rationale and trade-offs
@@ -178,7 +169,6 @@ See [example-6](./examples/design/example-6.typescript)
 - Quarterly comprehensive architecture assessment
 - Annual technology stack and design pattern evaluation
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Performance Problems Due to Poor Design
@@ -256,18 +246,7 @@ When helping teams with software design:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

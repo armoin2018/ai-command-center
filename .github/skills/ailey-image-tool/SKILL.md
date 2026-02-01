@@ -1,8 +1,8 @@
 ---
+id: 
 name: ailey-image-tool
 description: Comprehensive image manipulation toolkit with format conversion (BMP, JPG, PNG, GIF, SVG, RAW), animation creation/slicing, editing (rotate, crop, resize, watermark, color swap), metadata extraction/updates, OCR text extraction, web image scraping, and SVG template processing. Use when working with images, creating animations, extracting text from images, processing image batches, or generating images from templates.
 ---
-
 # AI-ley Image Tool
 
 Modular image manipulation toolkit providing format conversion, animation, editing, metadata management, OCR, web extraction, and SVG templating capabilities.
@@ -79,7 +79,6 @@ Use this skill when:
 - **Batch Operations**: Processing multiple images at once
 - **Color Manipulation**: Swapping colors or adjusting transparency
 
-## Quick Start
 
 ### Install Dependencies
 
@@ -158,7 +157,6 @@ tsx scripts/image-tool.ts svg-template \
   -v '{"name":"John","score":"95"}'
 ```
 
-## Workflows
 
 ### Workflow 1: Batch Image Optimization
 
@@ -438,7 +436,6 @@ Process multi-page TIFF documents:
    done
    ```
 
-## Command Reference
 
 ### Convert Commands
 
@@ -714,3 +711,10 @@ The tool provides clear error messages:
 **Version**: 1.0.0  
 **Created**: 2026-01-29  
 **Score**: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

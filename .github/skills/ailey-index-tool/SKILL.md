@@ -1,8 +1,8 @@
 ---
+id: 
 name: ailey-index-tool
 description: Comprehensive index management for AI-ley kit resources - reindex resources to .github/aicc/indexes/*.index.json with ID-based keying and .my/ override support, plus search/query capabilities with multiple output formats. Use for rebuilding indexes, searching resources by name/keywords/content, or exporting index data in various formats (JSON, YAML, XML, CSV, Markdown, HTML).
 ---
-
 # AI-ley Index Tool
 
 Complete index management solution: reindex AI-ley kit resources, search with powerful filters, and transform data with multiple output formats.
@@ -16,7 +16,6 @@ The ailey-index-tool provides two primary capabilities:
 
 Indexes are stored in `.github/aicc/indexes/*.index.json` and support hierarchical overrides from `.my/` directories.
 
-## When to Use
 
 ### Reindexing
 
@@ -42,7 +41,6 @@ Use when you need to:
 - **Get resource lists**: Extract just names for scripting purposes
 - **Filter by type**: Search specific index types (agents, skills, personas, etc.)
 
-## Quick Start
 
 ### Reindex All Resources
 
@@ -86,7 +84,6 @@ node scripts/search.ts --type skills --format html --output skills-report.html
 node scripts/search.ts --keywords api --names-only
 ```
 
-## Workflows
 
 ### Workflow 1: Reindex Resources
 
@@ -111,7 +108,6 @@ Rebuild indexes after adding or modifying resources:
    - `.my/aicc/instructions/` overrides for instructions
    - `.my/{{kit}}/{{type}}/` for kit-specific overrides
 
-### Workflow 2: Search by Criteria
 
 ### Workflow 2: Search by Criteria
 
@@ -187,7 +183,6 @@ node scripts/search.ts --type skills --names-only
 node scripts/search.ts --keywords typescript --names-only > typescript-resources.txt
 ```
 
-## Index Format & Structure
 
 ### Index File Structure
 
@@ -295,7 +290,6 @@ Result: Override metadata merged with original, takes precedence
 | `--jq-output <query>` | Transform output | `--jq-output 'map(.name)'` |
 | `--jq-output-file <file>` | Transform from file | `--jq-output-file format.jq` |
 
-## Output Formats
 
 ### JSON (default)
 
@@ -343,7 +337,6 @@ XML structure for integration with XML-based tools.
 
 Formatted as AI prompt instructions with resource details.
 
-## Examples
 
 ### Example 1: Find All Testing Resources
 
@@ -423,7 +416,6 @@ $ node scripts/search.ts --jq 'group_by(.path | split("/")[3]) | map({type: .[0]
 ]
 ```
 
-## Integration with AI-ley Kit
 
 ### Orchestrator Agent
 
@@ -472,7 +464,6 @@ const results = searchResources(['personas'], {
 });
 ```
 
-## Best Practices
 
 ### When to Reindex
 
@@ -515,7 +506,6 @@ const results = searchResources(['personas'], {
 - Review and adjust quality scores regularly
 - Ensure IDs are unique and descriptive
 
-## Tips
 
 ### Reindexing Tips
 
@@ -556,7 +546,6 @@ const results = searchResources(['personas'], {
 
 5. **ID-based lookup**: Access resources directly by ID in scripts
 
-## Performance
 
 ### Optimization Techniques
 
@@ -576,7 +565,6 @@ On standard ai-ley kit installation:
 
 **ID-based lookups**: Instant (O(1) access)
 
-## Troubleshooting
 
 ### Index Out of Date
 
@@ -603,8 +591,6 @@ node scripts/search.ts --jq '.resources | keys'
 ```bash
 # Verify ID matches
 # Override file: .my/personas/typescript-expert.persona.md
-# Must have: id: typescript-expert in frontmatter
-# Or filename must be: typescript-expert.persona.md
 
 # Check with verbose reindex
 node scripts/reindex.ts --type personas --verbose
@@ -676,3 +662,10 @@ If migrating from the separate ailey-indexer skill:
 **Version**: 2.0.0  
 **Updated**: 2026-01-29  
 **Score**: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.1
+---

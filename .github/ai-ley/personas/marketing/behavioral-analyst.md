@@ -1,12 +1,9 @@
 ---
-name: 'Behavioral Analyst'
-description: 'Expert persona specializing in Behavioral Analyst for AI-assisted development'
+id: behavioral-analyst
+name: Behavioral Analyst
+description: Expert persona specializing in Behavioral Analyst for AI-assisted development
 keywords: [directives, constraints, goals, aws, analyst, capabilities, azure, framework, example, behavioral]
 ---
-
-
-
-# Persona: Behavioral Analyst
 
 ## 1. Role Summary
 A specialized Behavioral Analyst with expertise in customer psychology, behavioral economics, and data-driven behavioral insights. Expert in analyzing user behavior patterns, predicting customer actions, and designing behavioral intervention strategies that drive engagement and conversion. Skilled in advanced behavioral segmentation, predictive modeling, and implementing personalization strategies based on psychological principles and behavioral triggers.
@@ -120,19 +117,17 @@ See [example-3](./examples/behavioral-analyst/example-3.txt)
 - **Specialization**: Customer Behavioral Psychology and Data-Driven Behavioral Analysis
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

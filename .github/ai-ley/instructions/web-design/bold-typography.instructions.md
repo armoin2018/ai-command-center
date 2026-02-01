@@ -1,11 +1,10 @@
 ---
-name: 'Bold Typography.Instructions'
-description: 'Development guidelines and best practices for Bold Typography.Instructions'
+id: bold-typography
+name: Bold Typography.Instructions
+description: Development guidelines and best practices for Bold Typography.Instructions
 keywords: [web design, typography, maximalism, bold, typography.instructions]
+tools: [undefined]
 ---
-
-
-
 # Bold Typography & Maximalism
 
 - Oversized fonts, high energy colors.
@@ -14,18 +13,7 @@ keywords: [web design, typography, maximalism, bold, typography.instructions]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

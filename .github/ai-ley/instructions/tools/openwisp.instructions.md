@@ -1,15 +1,10 @@
 ---
-name: 'openwisp.instructions'
-description: 'Development guidelines and best practices for Openwisp.Instructions'
+id: openwisp
+name: openwisp.instructions
+description: Development guidelines and best practices for Openwisp.Instructions
 keywords: [api, avoid, agent, compliance, architecture, assistant, authentication, database, advanced, capabilities]
+tools: [undefined]
 ---
-
-
-
-# OpenWISP Network Management Security Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents regarding OpenWISP centralized network management platform for OpenWrt-based devices, covering zero-touch provisioning, configuration management, monitoring, and scalable network infrastructure deployment for enterprise and ISP environments.
@@ -66,7 +61,6 @@ Provide comprehensive guidance for AI agents regarding OpenWISP centralized netw
 
 See [example-1](./examples/openwisp/example-1.python)
 
-## AI Implementation Guidelines
 
 ### Enterprise OpenWisp Deployment Framework
 
@@ -158,19 +152,8 @@ See [example-1](./examples/openwisp/example-1.python)
 - **Use Cases**: Enterprise networking, ISP management, municipal Wi-Fi, campus networks, compliance environments
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

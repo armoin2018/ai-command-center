@@ -1,9 +1,10 @@
 ---
-name: 'Bench'
-description: 'Benchmark and evaluate instruction and persona files for effectiveness, clarity, and performance characteristics. Now available in ailey-admin-optimize-kit skill.'
+id: ailey-admin-bench
+name: Bench
+description: Benchmark and evaluate instruction and persona files for effectiveness, clarity, and performance characteristics. Now available in ailey-admin-optimize-kit skill.
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-
 > **⚠️ This functionality is now available in the `ailey-admin-optimize-kit` skill.**
 > 
 > **Usage:**
@@ -15,10 +16,10 @@ agent: AI-ley Orchestrator
 > **Targets:** `instructions`, `personas`, `prompts`, `agents`, `skills`, `all`, or specific file path
 > 
 > **Options:**
-> - `--baseline`: Run baseline test only (no context)
-> - `--context`: Run context-enhanced test only
-> - `--output <dir>`: Benchmark output directory (default: `.ai-ley/benchmark`)
-> - `-v, --verbose`: Verbose output
+> - `--baseline` - Run baseline test only (no context)
+> - `--context` - Run context-enhanced test only
+> - `--output <dir>` - Set benchmark output directory (default: `.ai-ley/benchmark`)
+> - `-v, --verbose` - Enable verbose output
 > 
 > **Example:**
 > ```bash
@@ -57,11 +58,11 @@ You are an AI quality assessment tool designed to benchmark and evaluate instruc
 
 The benchmark system supports flexible targeting based on user input:
 
-### Input Modes:
+### Input Modes
 
-1. **Specific File**: Target a single file by name (e.g., "clean-code-advocate.md")
-2. **Category Mode**: Target all files in a category ("personas" or "instructions")
-3. **Comprehensive Mode**: Benchmark all files when no target is specified
+1. **Specific File** - Target a single file by name (e.g., "clean-code-advocate.md")
+2. **Category Mode** - Target all files in a category ("personas" or "instructions")
+3. **Comprehensive Mode** - Benchmark all files when no target is specified
 
 ### Target Resolution:
 
@@ -70,7 +71,6 @@ The benchmark system supports flexible targeting based on user input:
 - If "instructions" is specified, process all files in `.github/ai-ley/instructions/**/*.md`
 - If no target or empty string is provided, process both personas and instructions comprehensively
 
-## Your Task
 
 ## Your Task
 
@@ -219,7 +219,6 @@ For each file, provide:
 **Category**: [instruction/persona type]
 **Prompt**: [captured prompt]
 
-### Baseline
 
 #### Quality Scores:
 
@@ -235,7 +234,6 @@ For each file, provide:
 - Token Usage: X tokens
 - Context Efficiency: X/100
 
-### Context Enhancement
 
 #### Quality Scores:
 
@@ -251,7 +249,6 @@ For each file, provide:
 - Estimated Token Usage: X tokens
 - Context Efficiency: X/100
 
-#### Composite Score: X/100
 
 #### Key Strengths:
 
@@ -279,7 +276,6 @@ For each file, provide:
 After evaluating all files, provide a comprehensive summary:
 
 ```markdown
-# Benchmark Summary Report
 
 ## Overall Statistics:
 
@@ -288,7 +284,6 @@ After evaluating all files, provide a comprehensive summary:
 - Highest Scoring File: [filename] (X/100)
 - Lowest Scoring File: [filename] (X/100)
 
-## Category Breakdown:
 
 ### Instructions:
 
@@ -302,7 +297,6 @@ After evaluating all files, provide a comprehensive summary:
 - Average Score: X/100
 - Top Performers: [list top 3]
 
-## Priority Recommendations:
 
 ### High Priority Updates (Score < 60):
 
@@ -331,7 +325,6 @@ After evaluating all files, provide a comprehensive summary:
 [List effective patterns to replicate]
 ```
 
-## Performance Comparison Testing
 
 ### Test Protocol for Copilot Performance Analysis
 
@@ -353,7 +346,6 @@ After evaluating all files, provide a comprehensive summary:
 ### Copilot-Specific Output Format
 
 ```markdown
-# Copilot Performance Benchmark Report
 
 ## Test Summary
 
@@ -363,7 +355,6 @@ After evaluating all files, provide a comprehensive summary:
 - **Average Quality Improvement**: X%
 - **Average Response Time**: X seconds
 
-## Individual File Results
 
 ### [filename.md]
 
@@ -464,10 +455,18 @@ If benchmarking is interrupted, use the MD5 comparison to identify which files s
 └── ...
 ```
 
-Begin your assessment based on the provided target input and provide both individual file assessments and the comprehensive summary report optimized for Copilot performance analysis.
+Begin your assessment based on the provided target input and provide both individual file assessments and comprehensive summary report optimized for Copilot performance analysis.
+
 ---
 
+version: 1.0.1
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+
+---
 version: 1.0.0
-updated: 2026-01-11
-reviewed: 2026-01-11
-score: 4.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Database Developer'
-description: 'Expert persona specializing in Database Developer for AI-assisted development'
+id: database-developer
+name: Database Developer
+description: Expert persona specializing in Database Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, api, aws, authorization, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Database Developer
 
 ## 1. Role Summary
 
@@ -107,19 +104,17 @@ See [example-3](./examples/database-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

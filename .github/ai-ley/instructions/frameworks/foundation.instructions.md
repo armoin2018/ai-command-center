@@ -1,7 +1,7 @@
 ---
 name: 'Foundation CSS Framework Instructions'
 description: 'Comprehensive guide for using Foundation CSS framework for responsive,'
-keywords: [common, agent, [pattern, [concept, analysis, api, **use, building, assessment, **avoid]
+keywords: [common, agent, pattern, [concept, analysis, api, use, building, assessment, avoid
 ---
 
 

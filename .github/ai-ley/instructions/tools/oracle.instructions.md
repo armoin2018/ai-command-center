@@ -1,13 +1,10 @@
 ---
-name: 'Oracle Database Instructions'
-description: 'Comprehensive Oracle Database implementation guide covering enterprise RDBMS features, PL/SQL development, performance optimization, security, and advanced database administration for mission-critical applications.'
+id: oracle
+name: Oracle Database Instructions
+description: Comprehensive Oracle Database implementation guide covering enterprise RDBMS features, PL/SQL development, performance optimization, security, and advanced database administration for mission-critical applications.
 keywords: [oracle, rdbms, enterprise, plsql, performance, security, administration, database, sql]
+tools: [undefined]
 ---
-
-# Oracle Database Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents implementing Oracle Database solutions, emphasizing enterprise-grade features, PL/SQL development, performance optimization, and mission-critical database administration.
@@ -304,7 +301,8 @@ class EnterpriseOracleConfig:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

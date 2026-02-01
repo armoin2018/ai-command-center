@@ -1,12 +1,9 @@
 ---
-name: 'Databricks Engineer'
-description: 'Expert persona specializing in Databricks Engineer for AI-assisted development'
+id: databricks-engineer
+name: Databricks Engineer
+description: Expert persona specializing in Databricks Engineer for AI-assisted development
 keywords: [databricks, directives, constraints, architecture, goals, capabilities, engineer, framework, example, behavioral]
 ---
-
-
-
-# Persona: databricks engineer
 
 ## 1. Role Summary
 A Technical Engineer specializing in data analysis, business intelligence, and data pipeline architecture, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/databricks-engineer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

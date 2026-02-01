@@ -1,12 +1,9 @@
 ---
-name: 'Senior Php Developer'
-description: 'Expert persona specializing in Senior Php Developer for AI-assisted development'
+id: senior-php-developer
+name: Senior Php Developer
+description: Expert persona specializing in Senior Php Developer for AI-assisted development
 keywords: [devops, constraints, architecture, api, authorization, database, capabilities, authentication, developer, behavioral]
 ---
-
-
-
-# Persona: Senior PHP Developer
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/senior-php-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,13 +1,11 @@
 ---
-name: 'Business Development Plan'
-description: 'Build a comprehensive business development plan based on project requirements and growth objectives'
+id: ailey-build-business-development
+name: Business Development Plan
+description: Build a comprehensive business development plan based on project requirements and growth objectives
 keywords: [build, business, development, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Business Development Plan
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [build, business, development, prompt, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -113,7 +109,6 @@ You are a business development strategist and partnership expert with extensive 
 **Partnership Development Framework**:
 
 ```markdown
-# Business Development Plan
 
 ## Executive Summary
 
@@ -123,7 +118,6 @@ You are a business development strategist and partnership expert with extensive 
 **Investment Required**: ${total-investment-amount}
 **Revenue Target**: ${revenue-growth-target}
 
-## Current Business Analysis
 
 ### Business Foundation
 
@@ -150,9 +144,6 @@ You are a business development strategist and partnership expert with extensive 
 4. **Customer Acquisition**: Acquire {number} new customers through BD
 5. **Product Enhancement**: Add {number} new capabilities through partnerships
 
-## Strategic Partnership Framework
-
-### Partnership Categories and Strategy
 
 #### 1. Strategic Alliances
 
@@ -208,7 +199,6 @@ You are a business development strategist and partnership expert with extensive 
 - **Sales Strategy**: {joint-sales-approach}
 - **Success Metrics**: {partnership-performance-kpis}
 
-### Partner Target Analysis
 
 #### Tier 1 Priority Partners (Immediate Focus)
 
@@ -245,7 +235,6 @@ You are a business development strategist and partnership expert with extensive 
 
 **Revenue Stream Expansion and Optimization**:
 ```markdown
-# Revenue Growth Strategy
 
 ## Current Revenue Analysis
 ### Existing Revenue Streams
@@ -257,7 +246,6 @@ You are a business development strategist and partnership expert with extensive 
 | **Other Revenue** | ${amount} | {percentage}% | {growth-rate}% | {high-med-low} |
 | **Total Current Revenue** | **${total-amount}** | **100%** | **{overall-rate}%** | - |
 
-## Revenue Diversification Opportunities
 
 ### New Revenue Stream #1: {Revenue-Stream-Name}
 **Description**: {detailed-revenue-stream-description}
@@ -292,7 +280,6 @@ You are a business development strategist and partnership expert with extensive 
 **Investment Required**: ${development-cost}
 **Key Success Factors**: {critical-requirements-for-success}
 
-## Customer Expansion Strategy
 
 ### Existing Customer Growth
 **Upselling Opportunities**:
@@ -352,9 +339,7 @@ You are a business development strategist and partnership expert with extensive 
 
 **Customer Acquisition Through Business Development**:
 ```markdown
-# Customer Acquisition & Market Penetration
 
-## Market Penetration Strategy
 
 ### Target Market Analysis
 #### Primary Target Market: {Market-Segment-1}
@@ -387,7 +372,6 @@ You are a business development strategist and partnership expert with extensive 
 - **Revenue Projection**: ${expected-annual-revenue}
 - **Competitive Response**: {expected-competitor-reactions}
 
-### Customer Acquisition Channels
 
 #### Partner-Driven Acquisition
 **Channel Partner Program**:
@@ -421,7 +405,6 @@ You are a business development strategist and partnership expert with extensive 
 - **Value Demonstration**: {proof-of-concept-pilot-programs}
 - **Expansion Strategy**: {land-and-expand-approach}
 
-### Customer Retention and Expansion
 
 #### Customer Success Strategy
 **Retention Program**:
@@ -438,7 +421,6 @@ You are a business development strategist and partnership expert with extensive 
 - **Department Expansion**: {wider-organizational-adoption}
 - **Subsidiary/Division Sales**: {multi-location-opportunities}
 
-## Customer Acquisition Metrics
 
 ### Acquisition Performance Dashboard
 | Metric | Target | Q1 | Q2 | Q3 | Q4 | Annual |
@@ -468,9 +450,7 @@ You are a business development strategist and partnership expert with extensive 
 
 **Business Development Execution Plan with Timeline and Metrics**:
 ```markdown
-# Implementation Roadmap
 
-## Business Development Execution Timeline
 
 ### Phase 1: Foundation Building (Months 1-3)
 **Objectives**: Establish BD infrastructure and initiate key partnerships
@@ -558,7 +538,6 @@ You are a business development strategist and partnership expert with extensive 
 - Scale successful customer acquisition channels
 - Prepare for geographic expansion
 
-## Resource Requirements
 
 ### Team Structure and Roles
 **Business Development Team**:
@@ -583,7 +562,6 @@ You are a business development strategist and partnership expert with extensive 
 - **Travel and Business Development**: ${travel-budget}
 - **Total Investment**: **${total-bd-investment}**
 
-## Success Metrics and KPIs
 
 ### Business Development Dashboard
 | Metric | Target | Q1 | Q2 | Q3 | Q4 | Status |
@@ -601,7 +579,6 @@ You are a business development strategist and partnership expert with extensive 
 | **{Partner-2}** | {category} | {count} | ${amount} | {excellent-good-needs-improvement} |
 | **{Partner-3}** | {category} | {count} | ${amount} | {excellent-good-needs-improvement} |
 
-## Risk Management
 
 ### Key Risks and Mitigation
 | Risk | Probability | Impact | Mitigation Strategy | Contingency Plan |
@@ -620,7 +597,6 @@ You are a business development strategist and partnership expert with extensive 
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Business Development
 
@@ -728,3 +704,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

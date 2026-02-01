@@ -1,13 +1,10 @@
 ---
-name: 'Capacitor.Instructions'
-description: 'See [example-1](./examples/capacitor/example-1.'
-keywords: [api, agent, capacitor.instructions, agents, alternative:, architecture, authentication, capacitor, avoid, (capacitor.config.ts)]
+id: capacitor
+name: Capacitor.Instructions
+description: See [example-1](./examples/capacitor/example-1.
+keywords: [api, agent, capacitor.instructions, agents, object Object, architecture, authentication, capacitor, avoid, (capacitor.config.ts)]
+tools: [undefined]
 ---
-
-
-
-# Capacitor Framework Instructions for AI Agents
-
 ## When to Use Capacitor
 
 Use Capacitor when you need:
@@ -39,7 +36,6 @@ Consider alternatives when:
 - **Language**: JavaScript/TypeScript with web frameworks
 - **Use Cases**: Hybrid mobile apps, PWAs with native features, web-to-mobile conversion
 
-## Installation & Setup
 
 ### ✅ Recommended: Add Capacitor to Existing Web App
 
@@ -57,7 +53,6 @@ See [example-2](./examples/capacitor/example-2.bash)
 - **For React/Vue/Angular**: Add Capacitor after initial setup
 - **For PWA enhancement**: Add native plugins as needed
 
-## Project Structure
 
 ### ✅ Capacitor Project Structure
 
@@ -67,7 +62,6 @@ See [example-3](./examples/capacitor/example-3.txt)
 
 See [example-4](./examples/capacitor/example-4.typescript)
 
-## Core Concepts
 
 ### Native Plugin System
 
@@ -87,7 +81,6 @@ See [example-6](./examples/capacitor/example-6.typescript)
 
 See [example-7](./examples/capacitor/example-7.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -115,7 +108,6 @@ See [example-7](./examples/capacitor/example-7.typescript)
 
 See [example-8](./examples/capacitor/example-8.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Development Process
 
@@ -134,7 +126,6 @@ See [example-9](./examples/capacitor/example-9.bash)
 | Team web-focused            | Leverage existing web skills   | Learning native development  |
 | Rapid prototyping           | Capacitor with web frameworks  | Complex native setup         |
 
-## Testing
 
 ### ✅ Unit Testing Native Features
 
@@ -169,18 +160,7 @@ See [example-11](./examples/capacitor/example-11.typescript)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

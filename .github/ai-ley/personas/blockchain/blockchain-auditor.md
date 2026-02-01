@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Auditor'
-description: 'Comprehensive blockchain auditor specializing in smart contract verification,'
+id: blockchain-auditor
+name: Blockchain Auditor
+description: Comprehensive blockchain auditor specializing in smart contract verification,
 keywords: [constraints, agent, behavior, architecture, cli, communication, auditor, decision, examples, blockchain]
 ---
-
-
-# Persona: Blockchain Auditor
 
 ## 1. Agent Identity
 
@@ -223,13 +221,17 @@ See [example-3](./examples/blockchain-auditor/example-3.yaml)
 **Professional Memberships**: American Institute of CPAs (AICPA), Information Systems Audit and Control Association (ISACA), Institute of Internal Auditors (IIA), Blockchain Audit and Assurance Association (BAAA)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

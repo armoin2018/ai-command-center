@@ -1,17 +1,15 @@
 ---
-name: 'R.Instructions'
-description: 'Development guidelines and best practices for R.Instructions'
+id: r
+name: R.Instructions
+description: Development guidelines and best practices for R.Instructions
 keywords: [api, avoid, common, category, compliance, architecture, authentication, assistant, advanced, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "r, rstudio, cran, tidyverse, shiny, **/*.r, **/*.R, **/*.Rmd"
 ---
 
-# R Programming Language Instructions
 
 ## Overview
 - **Domain**: Statistical Computing and Data Science Programming Language
@@ -19,7 +17,6 @@ applyTo: "r, rstudio, cran, tidyverse, shiny, **/*.r, **/*.R, **/*.Rmd"
 - **Applicable To**: Data science projects, statistical analysis, bioinformatics, machine learning
 - **Integration Level**: Data pipelines, research workflows, and business intelligence systems
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Vectorized Operations**: Operations applied element-wise to vectors and matrices
@@ -43,7 +40,6 @@ applyTo: "r, rstudio, cran, tidyverse, shiny, **/*.r, **/*.R, **/*.Rmd"
 - **Myth**: R is only for statisticians and academics
   **Reality**: R is widely used in industry for data science, finance, and business analytics
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -87,7 +83,6 @@ See [example-2](./examples/r/example-2.r)
 #### R Package Development Framework
 See [example-3](./examples/r/example-3.r)
 
-## Best Practices
 
 ### High-Performance R Programming
 See [example-4](./examples/r/example-4.r)
@@ -95,7 +90,6 @@ See [example-4](./examples/r/example-4.r)
 ### Production R Deployment
 See [example-5](./examples/r/example-5.r)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Advanced Data Manipulation
 **Scenario**: Complex data transformation and analysis workflows
@@ -120,7 +114,6 @@ See [example-7](./examples/r/example-7.r)
 - **Why It's Problematic**: Memory exhaustion and poor performance
 - **Better Approach**: Use data.table, memory profiling, and proper garbage collection
 
-## Tools and Resources
 
 ### Essential R Packages by Category
 See [example-8](./examples/r/example-8.r)
@@ -136,7 +129,6 @@ See [example-9](./examples/r/example-9.r)
 - **RStudio Cheatsheets**: https://rstudio.com/resources/cheatsheets/
 - **CRAN Task Views**: https://cran.r-project.org/web/views/
 
-## Quality and Compliance
 
 ### Quality Standards
 - Follow tidyverse style guide for consistent code formatting
@@ -203,18 +195,7 @@ When helping teams with R:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

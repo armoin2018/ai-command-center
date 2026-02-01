@@ -1,12 +1,9 @@
 ---
-name: 'Physical Product Designer'
-description: 'Expert persona specializing in Physical Product Designer for AI-assisted development'
+id: physical-product-designer
+name: Physical Product Designer
+description: Expert persona specializing in Physical Product Designer for AI-assisted development
 keywords: [directives, constraints, designer, api, goals, capabilities, design, framework, example, behavioral]
 ---
-
-
-
-# Persona: Physical Product Designer
 
 ## 1. Role Summary
 
@@ -104,19 +101,17 @@ See [example-2](./examples/physical-product-designer/example-2.txt)
 - **Context Window Limit**: 8000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

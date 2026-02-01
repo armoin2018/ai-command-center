@@ -1,24 +1,19 @@
 ---
 id: ailey-base
 name: AI-ley Base Agent
-description: 'Foundational behaviors, variables, and standards for all AI-ley agents'
+description: Foundational behaviors, variables, and standards for all AI-ley agents
 keywords: [base, foundation, variables, standards, core, reference, mustache, configuration]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Base Agent
-
-**Extends:** None (foundational agent)
 
 This is the foundational agent that defines core behaviors, variable systems, and standards inherited by all AI-ley agents.
 
 ---
 
-## Variable System
-
 ### Variable Sources
 
-Variables are defined in `.github/ai-ley/ai-ley.yaml` and referenced using mustache syntax: `{{folders.plan}}`, `{{files.requirements}}`, etc.
+Variables defined in `.github/ai-ley/ai-ley.yaml`, overrides in `.my/ai-ley/ai-ley.yaml`, referenced using mustache syntax: `{{folders.plan}}`, `{{files.requirements}}`, etc.
 
 ### File Organization
 
@@ -37,32 +32,11 @@ Variables are defined in `.github/ai-ley/ai-ley.yaml` and referenced using musta
 - Architecture diagrams in `{{folders.architecture}}` using PlantUML
 - API specifications in `{{folders.api}}` using Swagger/OpenAPI
 
-**Formatting Rules (CRITICAL - Do Not Mix):**
-
-1. **Sequences**: Use numbered format (`1.`, `2.`, `3.`) for ordered steps
-2. **Checklists**: Use `[ ]` format for task tracking and completion items
-3. **Lists**: Use `-` (dash) format for unordered items and bullet points
-4. **Never stack or combine**: Do not use `- [ ]` or mix formats; choose one per context
-5. **Clarity over complexity**: Single format per section reduces token count and improves AI parsing
-
-**External Reference Pattern:**
-
-- **No Embedded Code**: Do not embed scripts or examples in documentation/instruction files
-- **External References**: Place code in subdirectories relative to the documentation file
-- **Path Pattern**: `./(examples|scripts)/{{(agent|instruction|persona)name}}/`
-- **Example Structure**:
-  - Documentation: `.github/agents/ailey-tester.agent.md`
-  - Examples: `.github/agents/examples/ailey-tester/`
-  - Scripts: `.github/agents/scripts/ailey-tester/`
-- **Linking**: Reference external files using relative markdown links: `[example](./examples/ailey-tester/unit-test-example.js)`
-
 ---
-
-## Resource Management
 
 ### Instruction Files
 
-Instruction files are indexed in `.github/ai-ley/indexes/instructions.md` with:
+Instruction files are indexed in `.github/ai-ley/indexes/instructions.index.json` with:
 
 - Quality scores and effectiveness ratings
 - Keywords for rapid selection
@@ -70,7 +44,7 @@ Instruction files are indexed in `.github/ai-ley/indexes/instructions.md` with:
 
 ### Personas
 
-Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
+Personas are cataloged in `.github/ai-ley/indexes/personas.index.json` organized by:
 
 - Domain expertise (developer, architect, security, etc.)
 - Skill specialization
@@ -85,7 +59,6 @@ Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
 
 ---
 
-## Workflow Standards
 
 ### Requirements Management
 
@@ -111,7 +84,6 @@ Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
 
 ---
 
-## Security & Performance
 
 ### Security Guidelines
 
@@ -133,7 +105,6 @@ Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
 
 ---
 
-## Error Handling & Logging
 
 ### Error Standards
 
@@ -153,7 +124,6 @@ Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
 
 ---
 
-## API & Architecture Standards
 
 ### API Design
 
@@ -183,7 +153,6 @@ Personas are cataloged in `.github/ai-ley/indexes/personas.md` organized by:
 
 ---
 
-## Compliance & Standards
 
 ### Legal Considerations
 
@@ -205,3 +174,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
+---

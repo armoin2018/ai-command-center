@@ -1,12 +1,9 @@
 ---
-name: 'R Developer'
-description: 'Expert persona specializing in R Developer for AI-assisted development'
+id: r-developer
+name: R Developer
+description: Expert persona specializing in R Developer for AI-assisted development
 keywords: [devops, directives, constraints, architecture, aws, database, capabilities, authentication, developer, behavioral]
 ---
-
-
-
-# Persona: R Developer
 
 ## 1. Role Summary
 
@@ -113,19 +110,17 @@ See [example-3](./examples/r-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

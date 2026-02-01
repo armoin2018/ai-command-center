@@ -1,13 +1,10 @@
 ---
-name: 'dmn.instructions'
-description: 'Development guidelines and best practices for Dmn.Instructions'
-keywords: [api, components**, **platform, async, capabilities**, architecture, **dmn, advanced, business, cases]
+id: dmn
+name: dmn.instructions
+description: Development guidelines and best practices for Dmn.Instructions
+keywords: [api, components, platform, async, capabilities, architecture, dmn, advanced, business, cases]
+tools: [undefined]
 ---
-
-
-
-# **DMN Enterprise Decision Intelligence & Business Rules Platform**
-
 ## **Platform Overview**
 
 The **DMN Enterprise Decision Intelligence & Business Rules Platform** provides comprehensive Decision Model and Notation (DMN) capabilities with advanced decision modeling, business rules automation, real-time decision intelligence, regulatory compliance, and enterprise governance for large-scale decision automation, policy management, and intelligent business operations.
@@ -21,7 +18,6 @@ The **DMN Enterprise Decision Intelligence & Business Rules Platform** provides 
 - **Regulatory Compliance Engine**: Automated compliance checking, audit trails, and regulatory reporting for decision governance
 - **Enterprise Integration Hub**: Seamless integration with business systems, data platforms, and workflow engines
 
-### **🏗️ Architecture Components**
 
 #### **1. DMN Modeling & Design Engine**
 
@@ -44,7 +40,6 @@ The **DMN Enterprise Decision Intelligence & Business Rules Platform** provides 
 - **A/B Testing Framework**: Decision variant testing with statistical analysis and automated rollout management
 - **Predictive Decision Modeling**: Forward-looking decision simulation and outcome prediction
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Advanced Credit Risk Decision Model**
 
@@ -307,18 +302,7 @@ class BusinessRulesEngine:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

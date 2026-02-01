@@ -1,12 +1,10 @@
 ---
-name: 'Kubernetes Enterprise Container Orchestration Platform'
-description: 'Enterprise Kubernetes Container Orchestration Platform - Comprehensive Level 3 production-ready container orchestration platform with advanced security policies, network segmentation, service mesh integration, GitOps workflows, compliance automation, monitoring observability, multi-cluster management, disaster recovery, and enterprise governance standards for cloud-native applications at scale.'
-keywords: [**deployment, **alternative, **security, (crds), **avoid, **common, **platform, **deploy, (hpa), **container]
+id: kubernetes
+name: Kubernetes Enterprise Container Orchestration Platform
+description: Enterprise Kubernetes Container Orchestration Platform - Comprehensive Level 3 production-ready container orchestration platform with advanced security policies, network segmentation, service mesh integration, GitOps workflows, compliance automation, monitoring observability, multi-cluster management, disaster recovery, and enterprise governance standards for cloud-native applications at scale.
+keywords: [deployment, alternative, security, (crds), avoid, common, platform, deploy, (hpa), container]
+tools: [undefined]
 ---
-
-
-# ☸️ Kubernetes Enterprise Container Orchestration Platform - Production-Scale Cloud-Native Infrastructure
-
 ## 🏢 Enterprise Platform Overview
 
 **Kubernetes Enterprise Container Orchestration Platform** is a comprehensive, production-ready solution for deploying, managing, and scaling containerized applications in enterprise environments. This platform provides advanced security policies, network segmentation, service mesh integration, GitOps workflows, compliance automation, comprehensive monitoring, multi-cluster management, and enterprise-grade governance standards.
@@ -39,7 +37,6 @@ See [example-1](./examples/kubernetes/example-1.mermaid)
 - **Security**: OPA Gatekeeper with comprehensive policy library
 - **Compliance**: CIS benchmarks with automated validation and reporting
 
-## 🎯 Enterprise Use Cases & Decision Matrix
 
 ### ✅ **Deploy Kubernetes Enterprise Platform When**
 
@@ -62,7 +59,6 @@ See [example-1](./examples/kubernetes/example-1.mermaid)
 - **🏃 Rapid Prototyping**: Use managed container services like AWS Fargate or Google Cloud Run
 - **💰 Cost Optimization**: Use managed Kubernetes services for reduced operational overhead
 
-## 🔐 Enterprise Security Architecture
 
 ### Advanced RBAC and Access Control
 
@@ -96,7 +92,6 @@ See [example-4](./examples/kubernetes/example-4.yaml)
 - Building desktop applications or simple static websites
 - Have limited infrastructure resources or budget constraints
 
-## AI Agent Decision Matrix
 
 ### Project Complexity Assessment
 
@@ -119,7 +114,6 @@ See [example-4](./examples/kubernetes/example-4.yaml)
 | **Services**   | 5-10 services            | 20-100 services       | 100+ services            |
 | **Complexity** | Basic deployments        | Multi-environment     | Multi-cluster federation |
 
-## Installation & Setup
 
 ### kubectl Installation
 
@@ -133,7 +127,6 @@ See [example-6](./examples/kubernetes/example-6.bash)
 
 See [example-7](./examples/kubernetes/example-7.bash)
 
-## Configuration
 
 ### Production-Ready Application Deployment
 
@@ -155,7 +148,6 @@ See [example-11](./examples/kubernetes/example-11.yaml)
 
 See [example-12](./examples/kubernetes/example-12.yaml)
 
-## Core Features
 
 ### Horizontal Pod Autoscaler (HPA)
 
@@ -193,7 +185,6 @@ See [example-16](./examples/kubernetes/example-16.yaml)
 
 See [example-17](./examples/kubernetes/example-17.bash)
 
-## Workflow Integration
 
 ### Development Workflow
 
@@ -212,7 +203,6 @@ See [example-18](./examples/kubernetes/example-18.yaml)
 
 See [example-19](./examples/kubernetes/example-19.yaml)
 
-## Best Practices
 
 ### ✅ **Container and Pod Best Practices**
 
@@ -250,7 +240,6 @@ See [example-19](./examples/kubernetes/example-19.yaml)
 - **Don't neglect monitoring** - Implement comprehensive observability
 - **Avoid manual configuration** - Use Infrastructure as Code and GitOps
 
-## Advanced Kubernetes Usage
 
 ### Custom Resource Definitions (CRDs)
 
@@ -264,7 +253,6 @@ See [example-21](./examples/kubernetes/example-21.yaml)
 
 See [example-22](./examples/kubernetes/example-22.yaml)
 
-## Integration with Other Tools
 
 ### Helm Chart Management
 
@@ -280,9 +268,6 @@ See [example-25](./examples/kubernetes/example-25.yaml)
 
 See [example-26](./examples/kubernetes/example-26.hcl)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Pod Startup Problems
 
@@ -305,13 +290,8 @@ See [example-28](./examples/kubernetes/example-28.bash)
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 10.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 10.0

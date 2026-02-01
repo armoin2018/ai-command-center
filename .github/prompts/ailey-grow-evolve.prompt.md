@@ -1,13 +1,11 @@
 ---
-name: 'Evolve'
-description: 'Evolve and enhance AI-LEY resources by generating new instructions, personas, or both based on request files and systematic improvement processes.'
+id: ailey-grow-evolve
+name: Evolve
+description: Evolve and enhance AI-LEY resources by generating new instructions, personas, or both based on request files and systematic improvement processes.
 keywords: [evolution, enhancement, instructions, personas, generation, optimization, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Evolve
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [evolution, enhancement, instructions, personas, generation, optimizat
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -392,7 +388,6 @@ You are an AI resource evolution specialist and systematic enhancement architect
 **Create Evolution Report**:
 
 ```markdown
-# Evolution Report: {type} - {date}
 
 ## Evolution Summary
 
@@ -487,7 +482,6 @@ You are an AI resource evolution specialist and systematic enhancement architect
 - Design advanced optimization strategies and techniques
 ````
 
-## Examples
 
 ### Example 1: Evolve Instructions Only
 
@@ -500,7 +494,6 @@ evolve instructions
 **Processing**:
 
 ```markdown
-# Evolving Instructions Only
 
 ## Step 1: Loading Context
 
@@ -515,7 +508,6 @@ evolve instructions
 - Identified 8 existing instructions needing enhancement
 - Prioritized based on AI agent workflow impact
 
-## Step 3: Instruction Evolution
 
 ### New Instructions Created:
 
@@ -554,7 +546,6 @@ evolve both
 **Processing**:
 
 ```markdown
-# Evolving Both Instructions and Personas
 
 ## Step 1: Loading Context
 
@@ -563,7 +554,6 @@ evolve both
 - Loading requests from both request files
 - Scanning all existing resources
 
-## Step 2: Dual Evolution Processing
 
 ### Instructions Evolution:
 
@@ -575,7 +565,6 @@ evolve both
 - 3 new personas planned
 - 4 existing personas to enhance
 
-## Step 3: Resource Generation
 
 ### New Instructions:
 
@@ -623,7 +612,6 @@ evolve personas
 **Processing**:
 
 ```markdown
-# Evolving Personas Only
 
 ## Step 1: Character Evolution Focus
 
@@ -638,7 +626,6 @@ evolve personas
 - Identified 5 existing personas needing authenticity improvements
 - Mapped role coverage gaps in AI/ML and blockchain domains
 
-## Step 3: Persona Evolution
 
 ### New Personas Created:
 
@@ -682,3 +669,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

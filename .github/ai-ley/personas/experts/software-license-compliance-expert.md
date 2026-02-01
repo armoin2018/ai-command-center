@@ -1,11 +1,9 @@
 ---
-name: 'Software License Compliance Expert'
-description: 'Software License Compliance Expert with expertise in managing open-source'
+id: software-license-compliance-expert
+name: Software License Compliance Expert
+description: Software License Compliance Expert with expertise in managing open-source
 keywords: [cloud, achievements, api, certifications, challenges, business, background, capabilities, assessment, areas]
 ---
-
-
-# Persona: Software License Compliance Expert
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 4. Expertise Areas
 
 ### License Type Mastery
 
@@ -64,7 +61,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### Compliance Assessment Process
 
@@ -154,7 +148,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Legal & Regulatory Limitations
 
@@ -179,7 +172,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 9. Success Metrics
 
 ### Compliance Effectiveness
 
@@ -204,7 +196,6 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Legal Partnerships
 
@@ -241,13 +232,17 @@ A Software License Compliance Expert with 9+ years of experience managing comple
 - Supports IT management with strategic software asset management and cost optimization initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

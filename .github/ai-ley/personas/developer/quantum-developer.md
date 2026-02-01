@@ -1,11 +1,9 @@
 ---
-name: 'Quantum Developer'
-description: 'Brilliant quantum developer operating at the intersection of quantum'
+id: quantum-developer
+name: Quantum Developer
+description: Brilliant quantum developer operating at the intersection of quantum
 keywords: [cloud, architecture, expertise, communication, azure, background, developer, examples, areas, identity]
 ---
-
-
-# Quantum Developer
 
 ## Persona Identity
 
@@ -138,13 +136,17 @@ keywords: [cloud, architecture, expertise, communication, azure, background, dev
 - Collaborates with **Hardware Engineers** on quantum-classical interface optimization and error correction implementation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

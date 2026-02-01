@@ -51,6 +51,9 @@ export interface FileContent {
   frontmatter: FrontmatterSchema;
   body: string;
   footer: FooterSchema;
+  metadata?: {
+    duplicateFootersRemoved?: number;
+  };
 }
 
 export interface ProcessingOptions {

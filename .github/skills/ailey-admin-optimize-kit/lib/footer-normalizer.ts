@@ -6,6 +6,29 @@ import type { FooterSchema } from './types.js';
 
 export class FooterNormalizer {
   /**
+   * Remove duplicate footer blocks from content
+   */
+  removeDuplicateFooters(content: string): { cleaned: string; removed: number } {
+    const footerPattern = /---\s*\nversion:.*?\nscore:.*?\n---/gs;
+    const footers = content.match(footerPattern) || [];
+    
+    if (footers.length <= 1) {
+      return { cleaned: content, removed: 0 };
+    }
+
+    // Keep only the last footer
+    const lastFooter = footers[footers.length - 1];
+    let cleaned = content;
+    
+    // Remove all footers except the last one
+    for (let i = 0; i < footers.length - 1; i++) {
+      cleaned = cleaned.replace(footers[i], '');
+    }
+
+    return { cleaned, removed: footers.length - 1 };
+  }
+
+  /**
    * Normalize footer with version, dates, and score
    */
   normalize(footer: any): FooterSchema {

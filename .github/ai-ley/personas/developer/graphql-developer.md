@@ -1,12 +1,9 @@
 ---
-name: 'Graphql Developer'
-description: 'Expert persona specializing in Graphql Developer for AI-assisted development'
+id: graphql-developer
+name: Graphql Developer
+description: Expert persona specializing in Graphql Developer for AI-assisted development
 keywords: [constraints, architecture, cli, api, backend, aws, authorization, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: GraphQL Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/graphql-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

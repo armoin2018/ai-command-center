@@ -1,12 +1,10 @@
 ---
-name: 'Azure ARM Templates Enterprise Platform'
-description: 'Enterprise Azure Resource Manager (ARM) Templates - Comprehensive Level'
+id: azure-arm
+name: Azure ARM Templates Enterprise Platform
+description: Enterprise Azure Resource Manager (ARM) Templates - Comprehensive Level
 keywords: [api, application, (arm), bicep, arm.instructions, architecture, authentication, advanced, azure, capabilities]
+tools: [undefined]
 ---
-
-
-# 🏗️ Azure Resource Manager (ARM) Templates - Enterprise Cloud Platform
-
 ## 📋 Enterprise Platform Overview
 
 **Azure ARM Templates** is Microsoft's comprehensive Infrastructure as Code (IaC) solution providing declarative JSON-based templates and advanced Bicep DSL for deploying, managing, and orchestrating Azure resources at enterprise scale. This platform enables sophisticated multi-subscription deployments, comprehensive compliance automation, advanced security governance, enterprise monitoring integration, cost optimization, disaster recovery automation, and production-ready resource management across Azure cloud environments.
@@ -69,7 +67,6 @@ keywords: [api, application, (arm), bicep, arm.instructions, architecture, authe
 - **Compliance Support**: SOC2, PCI-DSS, HIPAA, CIS, NIST, FedRAMP
 - **Multi-Cloud**: Primary Azure focus with hybrid cloud capabilities
 
-## 🛠️ Enterprise Installation & Setup
 
 ### Azure Enterprise CLI Suite Installation
 
@@ -83,9 +80,6 @@ See [example-2](./examples/azure-arm/example-2.bash)
 
 See [example-3](./examples/azure-arm/example-3.txt)
 
-## Configuration
-
-## 🔧 Enterprise Configuration & Template Architecture
 
 ### Enterprise ARM Template Foundation Structure
 
@@ -224,7 +218,6 @@ EOF
 
 See [example-11](./examples/azure-arm/example-11.json)`
 
-## Core Features
 
 ### Resource Deployment
 
@@ -254,7 +247,6 @@ See [example-14](./examples/azure-arm/example-14.bicep)
 
 See [example-15](./examples/azure-arm/example-15.bash)
 
-### Advanced ARM Template Patterns & Nested Templates
 
 #### Enterprise Nested Template Architecture
 
@@ -272,7 +264,6 @@ See [example-18](./examples/azure-arm/example-18.json)
 
 See [example-19](./examples/azure-arm/example-19.json)
 
-## 🎯 Enterprise Best Practices & Security Framework
 
 ### Template Design Patterns
 
@@ -282,7 +273,6 @@ See [example-20](./examples/azure-arm/example-20.json)
 
 See [example-21](./examples/azure-arm/example-21.json)
 
-## Common Use Cases
 
 ### Multi-Tier Web Application
 
@@ -298,20 +288,14 @@ See [example-22](./examples/azure-arm/example-22.json)
 
 See [example-23](./examples/azure-arm/example-23.yaml)
 
-## Troubleshooting
 
 ### Common Issues
 
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9

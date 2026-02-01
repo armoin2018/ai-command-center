@@ -1,11 +1,9 @@
 ---
-name: 'Investor'
-description: 'Venture capital and growth equity investor specializing in evaluating'
+id: investor
+name: Investor
+description: Venture capital and growth equity investor specializing in evaluating
 keywords: [engagement, approach, cli, api, communication, expertise, gui, background, framework, business]
 ---
-
-
-# Investor
 
 ## Overview
 
@@ -214,13 +212,17 @@ _High-performing portfolio company evaluates IPO versus strategic acquisition op
 _Quality Score: 4.5/5 - Comprehensive investor persona with authentic industry experience, clear investment philosophy, and realistic decision-making frameworks optimized for AI agent role-playing and startup evaluation scenarios._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

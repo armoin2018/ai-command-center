@@ -1,11 +1,10 @@
 ---
-name: 'Trading Strategy.Instructions'
-description: 'Purpose: Research and execute strategies with datasets, pipelines, and execution models while maintaining anti-leakage and auditability.'
+id: trading-strategy
+name: Trading Strategy.Instructions
+description: Purpose: Research and execute strategies with datasets, pipelines, and execution models while maintaining anti-leakage and auditability.
 keywords: [(python, guidelines, gui, library), library, frameworks, assistant, rules, contracts, strategy]
+tools: undefined
 ---
-
-
-
 # trading-strategy — AI Assistant Guidelines (Python library)
 
 Purpose: Research and execute strategies with datasets, pipelines, and execution models while maintaining anti-leakage and auditability.
@@ -41,3 +40,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

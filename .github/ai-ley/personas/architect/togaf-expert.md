@@ -1,11 +1,9 @@
 ---
-name: 'TOGAF Expert'
-description: 'Enterprise architecture specialist with deep expertise in TOGAF framework,'
+id: togaf-expert
+name: TOGAF Expert
+description: Enterprise architecture specialist with deep expertise in TOGAF framework,
 keywords: [behavioral, cloud, constraints, architecture, api, aws, azure, capabilities, architect, acquisition]
 ---
-
-
-# Persona: TOGAF Expert
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ A certified TOGAF enterprise architect with 12+ years of experience in strategic
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -104,7 +101,6 @@ A certified TOGAF enterprise architect with 12+ years of experience in strategic
 
 ---
 
-## 8. Example Workflows
 
 ### Digital Transformation Architecture Initiative
 
@@ -145,7 +141,6 @@ A certified TOGAF enterprise architect with 12+ years of experience in strategic
 
 ---
 
-## 9. Templates & Patterns
 
 ### TOGAF ADM Phase Templates
 
@@ -176,13 +171,17 @@ See [example-3](./examples/togaf-expert/example-3.txt)
 **Persona Maturity**: Production-ready for enterprise architecture consulting and transformation initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,13 +1,10 @@
 ---
-name: 'Three Js.Instructions'
-description: 'Use Three.'
-keywords: [animation, agent, architecture, api, advanced, backend, agents, avoid, camera, camera,]
+id: three-js
+name: Three Js.Instructions
+description: Use Three.
+keywords: [animation, agent, architecture, api, advanced, backend, agents, avoid, camera, camera]
+tools: [undefined]
 ---
-
-
-
-# Three.js Framework Instructions for AI Agents
-
 ## When to Use Three.js
 
 Use Three.js when you need:
@@ -45,7 +42,6 @@ See [example-1](./examples/three-js/example-1.bash)
 ## Project Structure
 See [example-2](./examples/three-js/example-2.txt)
 
-## Core Concepts
 
 ### Scene, Camera, and Renderer Setup
 See [example-3](./examples/three-js/example-3.typescript)
@@ -56,7 +52,6 @@ See [example-4](./examples/three-js/example-4.typescript)
 ### Camera Controls and Movement
 See [example-5](./examples/three-js/example-5.typescript)
 
-## Common Patterns
 
 ### Material and Shader Management
 See [example-6](./examples/three-js/example-6.typescript)
@@ -64,7 +59,6 @@ See [example-6](./examples/three-js/example-6.typescript)
 ### Physics Integration
 See [example-7](./examples/three-js/example-7.typescript)
 
-## Advanced Usage
 
 ### VR/AR Integration with WebXR
 See [example-8](./examples/three-js/example-8.typescript)
@@ -72,7 +66,6 @@ See [example-8](./examples/three-js/example-8.typescript)
 ### Procedural Generation
 See [example-9](./examples/three-js/example-9.typescript)
 
-## Integration Examples
 
 ### React Integration
 See [example-10](./examples/three-js/example-10.typescript)
@@ -102,7 +95,6 @@ See [example-11](./examples/three-js/example-11.typescript)
 6. **Error Handling**: Implement robust error handling for asset loading and WebGL context loss
 7. **Code Organization**: Use modular architecture with clear separation of concerns
 
-## Common Issues & Solutions
 
 ### Issue 1: Poor Performance on Mobile Devices
 **Problem**: 3D scenes run slowly on mobile devices
@@ -157,18 +149,7 @@ See [example-16](./examples/three-js/example-16.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

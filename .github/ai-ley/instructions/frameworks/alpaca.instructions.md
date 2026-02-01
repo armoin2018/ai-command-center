@@ -1,13 +1,10 @@
 ---
-name: 'Alpaca.Instructions'
-description: 'Development guidelines and best practices for Alpaca.Instructions'
+id: alpaca
+name: Alpaca.Instructions
+description: Development guidelines and best practices for Alpaca.Instructions
 keywords: [common, architecture, cli, api, alpaca, algorithmic, assistant, alpaca.instructions, commands, authentication]
+tools: [undefined]
 ---
-
-
-
-# Alpaca Trading API Instructions
-
 ## Framework Overview
 - **Framework Name**: Alpaca Trading API
 - **Version**: Latest (REST API v2)
@@ -21,7 +18,6 @@ See [example-1](./examples/alpaca/example-1.bash)
 ## Project Structure
 See [example-2](./examples/alpaca/example-2.txt)
 
-## Core Concepts
 
 ### API Authentication and Setup
 - **Purpose**: Secure connection to Alpaca trading platform
@@ -48,12 +44,10 @@ See [example-5](./examples/alpaca/example-5.python)
 4. **Risk Management**: Implement position sizing and risk controls
 5. **Live Trading**: Deploy strategies with real money
 
-## Best Practices
 
 ### Portfolio and Risk Management
 See [example-6](./examples/alpaca/example-6.python)
 
-## Common Patterns
 
 ### Algorithmic Trading Strategy
 See [example-7](./examples/alpaca/example-7.python)
@@ -65,7 +59,6 @@ See [example-8](./examples/alpaca/example-8.bash)
 ## Essential Commands
 See [example-9](./examples/alpaca/example-9.python)
 
-## Common Issues & Solutions
 
 ### Issue 1: Order Rejection
 **Problem**: Orders get rejected due to insufficient buying power or invalid parameters
@@ -77,7 +70,6 @@ See [example-10](./examples/alpaca/example-10.python)
 **Solution**: Use appropriate data feeds and implement latency monitoring
 See [example-11](./examples/alpaca/example-11.python)
 
-## Performance Optimization
 
 ### Efficient Data Management
 See [example-12](./examples/alpaca/example-12.python)
@@ -95,7 +87,6 @@ See [example-12](./examples/alpaca/example-12.python)
 - **Trading API Reference**: https://alpaca.markets/docs/api-references/trading-api/
 - **Community Forum**: https://forum.alpaca.markets/
 
-## Framework-Specific Guidelines
 
 ### Code Style
 - Use descriptive variable names for financial instruments and metrics
@@ -109,7 +100,6 @@ See [example-12](./examples/alpaca/example-12.python)
 - Implement proper state management for orders and positions
 - Create modular strategies that can be easily backtested
 
-## Integration Points
 
 ### Pandas Integration
 - **Purpose**: Efficient data manipulation and analysis
@@ -121,7 +111,6 @@ See [example-12](./examples/alpaca/example-12.python)
 - **Setup**: pip install TA-Lib
 - **Usage**: Calculate advanced technical indicators for trading signals
 
-## Troubleshooting
 
 ### Debug Mode
 See [example-13](./examples/alpaca/example-13.python)
@@ -149,18 +138,7 @@ When helping with Alpaca Trading API implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

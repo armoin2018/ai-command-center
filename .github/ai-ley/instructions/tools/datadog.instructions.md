@@ -1,20 +1,16 @@
 ---
-name: 'datadog.instructions'
-description: 'Development guidelines and best practices for Datadog.Instructions'
-keywords: [compose.yml, api, application, configuration**, agent, backend, configuration, database, advanced, datadog]
+id: datadog
+name: datadog.instructions
+description: Development guidelines and best practices for Datadog.Instructions
+keywords: [compose.yml, api, application, configuration, agent, backend, configuration, database, advanced, datadog]
+tools: [undefined]
 ---
-
-
-
-# **🐕 Enterprise Datadog Application Performance Monitoring Platform**
-
 ## **📊 Advanced APM & Observability Intelligence**
 
 Transform your enterprise monitoring capabilities with comprehensive Datadog-powered observability, featuring AI-driven performance insights, distributed tracing, intelligent alerting, and real-time business intelligence for mission-critical applications and infrastructure.
 
 ---
 
-## **🚀 Enterprise Datadog Configuration Framework**
 
 ### **⚙️ Core Enterprise Configuration**
 
@@ -270,18 +266,7 @@ apiVersion: v1
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

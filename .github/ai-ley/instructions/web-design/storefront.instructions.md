@@ -1,11 +1,10 @@
 ---
-name: 'Storefront.Instructions'
-description: 'Development guidelines and best practices for Storefront.Instructions'
+id: storefront
+name: Storefront.Instructions
+description: Development guidelines and best practices for Storefront.Instructions
 keywords: [ecommerce, storefront.instructions, storefront, web design]
+tools: [undefined]
 ---
-
-
-
 # Storefront / eCommerce
 
 - Product listings, cart, and checkout.
@@ -14,18 +13,7 @@ keywords: [ecommerce, storefront.instructions, storefront, web design]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,9 @@
 ---
-name: 'Family Office Manager'
-description: 'Family Office Manager responsible for managing wealth and investment'
+id: family-office-manager
+name: Family Office Manager
+description: Family Office Manager responsible for managing wealth and investment
 keywords: [agent, behavior, approach, architecture, api, boundaries, background, business, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Family Office Manager
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former investment banker, private equity professional, or institutional asset ma
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former investment banker, private equity professional, or institutional asset ma
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Oversee comprehensive wealth management strategies for high-net-worth families, 
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/family-office-manager/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/family-office-manager/example-2.markdown)
 - **Maintenance Schedule**: Daily market monitoring, weekly portfolio reviews, monthly performance analysis, and quarterly strategic assessments
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

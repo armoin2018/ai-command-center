@@ -1,7 +1,7 @@
 ---
 name: 'Vitest.Instructions'
 description: 'See [example-28](./examples/vitest/example-28.'
-keywords: [(basic), api, (react), automation, commands, async, [related, ci/cd, advanced, cases]
+keywords: [(basic), api, (react), automation, commands, async, related, ci/cd, advanced, cases
 ---
 
 

@@ -1,14 +1,10 @@
 ---
-name: 'Enterprise Docker Compose Multi-Service Orchestration Platform'
-description: 'Comprehensive enterprise Docker Compose orchestration platform for multi-service applications with advanced security policies, secret management, network segmentation, monitoring integration, CI/CD automation, compliance frameworks, and production governance. Includes enterprise service mesh integration, distributed tracing, centralized logging, automated scaling, and comprehensive troubleshooting capabilities for mission-critical containerized applications.'
+id: docker-compose
+name: Enterprise Docker Compose Multi-Service Orchestration Platform
+description: Comprehensive enterprise Docker Compose orchestration platform for multi-service applications with advanced security policies, secret management, network segmentation, monitoring integration, CI/CD automation, compliance frameworks, and production governance. Includes enterprise service mesh integration, distributed tracing, centralized logging, automated scaling, and comprehensive troubleshooting capabilities for mission-critical containerized applications.
 keywords: [api, application, agent, architecture, collection, advanced, cli, business, compose, compose.instructions]
+tools: [undefined]
 ---
-
-
-# 🚀 Enterprise Docker Compose Multi-Service Orchestration Platform
-
-## 📋 Executive Summary
-
 ### Enterprise Architecture Overview
 
 **Docker Compose Enterprise Platform** delivers comprehensive multi-container application orchestration with advanced security frameworks, network segmentation, secret management, monitoring integration, and production-ready governance. This platform transforms basic Docker Compose configurations into enterprise-grade service orchestration with comprehensive compliance automation, distributed tracing, centralized logging, and automated scaling capabilities.
@@ -29,9 +25,6 @@ keywords: [api, application, agent, architecture, collection, advanced, cli, bus
 - **Compliance Adherence**: 100% automated compliance validation for multi-service applications
 - **Cost Optimization**: 50% reduction in development infrastructure costs through optimized resource utilization
 
-## 🛡️ Enterprise Security & Network Architecture
-
-## 🛡️ Enterprise Security & Network Architecture
 
 ### Advanced Network Segmentation & Security Policies
 
@@ -41,7 +34,6 @@ See [example-1](./examples/docker-compose/example-1.yaml)
 
 See [example-2](./examples/docker-compose/example-2.bash)
 
-## 📊 Enterprise Monitoring & Observability Stack
 
 ### Comprehensive Monitoring Architecture
 
@@ -284,13 +276,8 @@ APP_TPL_EOF
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.1
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 9.9

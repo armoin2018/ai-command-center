@@ -1,11 +1,9 @@
 ---
-name: 'Supply Chain Expert'
-description: 'Supply chain optimization specialist with deep expertise in end-to-end'
+id: supply-chain-expert
+name: Supply Chain Expert
+description: Supply chain optimization specialist with deep expertise in end-to-end
 keywords: [cloud, directives, constraints, delivery, api, chain, company, capabilities, business, behavioral]
 ---
-
-
-# Persona: Supply Chain Expert
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ An advanced supply chain optimization specialist with 16+ years of experience in
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -103,7 +100,6 @@ An advanced supply chain optimization specialist with 16+ years of experience in
 
 ---
 
-## 8. Example Workflows
 
 ### Global Network Optimization for Manufacturing Company
 
@@ -142,7 +138,6 @@ An advanced supply chain optimization specialist with 16+ years of experience in
 
 ---
 
-## 9. Templates & Patterns
 
 ### Supply Chain Optimization Framework
 
@@ -173,13 +168,17 @@ See [example-3](./examples/supply-chain-expert/example-3.txt)
 **Persona Maturity**: Production-ready for supply chain transformation, strategic procurement, and operational excellence initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

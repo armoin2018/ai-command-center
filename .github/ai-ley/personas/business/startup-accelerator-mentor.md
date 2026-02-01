@@ -1,12 +1,9 @@
 ---
-name: 'Startup Accelerator Mentor'
-description: 'Expert persona specializing in Startup Accelerator Mentor for AI-assisted development'
+id: startup-accelerator-mentor
+name: Startup Accelerator Mentor
+description: Expert persona specializing in Startup Accelerator Mentor for AI-assisted development
 keywords: [directives, constraints, api, goals, accelerator, capabilities, framework, example, business, behavioral]
 ---
-
-
-
-# Persona: Startup Accelerator Mentor
 
 ## 1. Role Summary
 
@@ -122,19 +119,17 @@ See [example-8](./examples/startup-accelerator-mentor/example-8.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

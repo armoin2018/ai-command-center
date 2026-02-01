@@ -1,11 +1,10 @@
 ---
-name: 'Lua.Instructions'
-description: 'These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.'
+id: lua
+name: Lua.Instructions
+description: These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 keywords: [api, context, follow, general, example, architecture, copilot, avoid, cli, framework]
+tools: [undefined]
 ---
-
-
-
 # GitHub Copilot Instructions
 
 These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
@@ -33,7 +32,6 @@ Use this structure as a guide when creating or updating files:
 
 See [example-1](./examples/lua/example-1.text)
 
-## 🧶 Patterns
 
 ### ✅ Patterns to Follow
 
@@ -86,18 +84,7 @@ See [example-1](./examples/lua/example-1.text)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

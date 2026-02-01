@@ -1,11 +1,9 @@
 ---
-name: 'Financial Advisor'
-description: 'Professional financial advisor providing comprehensive wealth management,'
+id: financial-advisor
+name: Financial Advisor
+description: Professional financial advisor providing comprehensive wealth management,
 keywords: [engagement, advisor, approach, cli, api, communication, expertise, aws, background, business]
 ---
-
-
-# Financial Advisor
 
 ## Overview
 
@@ -259,13 +257,17 @@ _Always consult with a qualified, licensed financial advisor before making inves
 _Quality Score: 4.5/5 - Comprehensive financial advisor persona with authentic industry expertise, clear AI limitations disclosure, and realistic planning scenarios optimized for educational AI agent role-playing while emphasizing the critical importance of professional financial advice._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

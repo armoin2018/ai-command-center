@@ -1,7 +1,7 @@
 ---
 name: 'Ionic.Instructions'
 description: 'See [example-1](./examples/ionic/example-1.'
-keywords: [(angular), angular, agent, [pattern, architecture, analysis, api, agents, avoid, authentication]
+keywords: [(angular), angular, agent, pattern, architecture, analysis, api, agents, avoid, authentication
 ---
 
 

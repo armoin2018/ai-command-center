@@ -1,15 +1,10 @@
 ---
-name: 'ufw.instructions'
-description: 'UFW (Uncomplicated Firewall) is a simplified interface for managing netfilter/iptables firewall rules on Linux.'
+id: ufw
+name: ufw.instructions
+description: UFW (Uncomplicated Firewall) is a simplified interface for managing netfilter/iptables firewall rules on Linux.
 keywords: [api, (uncomplicated, avoid, assurance, agent, architecture, assistant, advanced, administration, aws]
+tools: [undefined]
 ---
-
-
-
-# UFW (Uncomplicated Firewall) Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents implementing UFW firewall solutions, emphasizing secure-by-default configurations, simplified iptables management, robust network security for Linux systems, advanced threat detection, automated rule management, and enterprise-grade monitoring and compliance frameworks.
@@ -50,9 +45,6 @@ Provide comprehensive enterprise-grade guidance for AI agents implementing UFW f
 
 UFW (Uncomplicated Firewall) is a simplified interface for managing netfilter/iptables firewall rules on Linux. It provides sane defaults, easy allow/deny syntax, application profiles, IPv6 support, and logging. It's ideal for servers and workstations where simple, auditable firewall policies are required with enterprise management capabilities.
 
-# UFW (Uncomplicated Firewall) Instructions
-
-## AI Agent Implementation Guide
 
 ### Purpose
 
@@ -76,7 +68,6 @@ Provide comprehensive guidance for AI agents implementing UFW firewall solutions
 - **Non-Linux systems** → use platform-specific firewall solutions
 - **Enterprise environments** requiring advanced firewall features → consider pfSense, OPNsense
 
-## Advanced UFW Security Architecture
 
 ### Enterprise Firewall Management Framework
 
@@ -112,7 +103,6 @@ See [example-1](./examples/ufw/example-1.mermaid)
 
 ---
 
-# UFW (Uncomplicated Firewall) Instructions
 
 ## Overview
 
@@ -133,7 +123,6 @@ UFW (Uncomplicated Firewall) is a simplified interface for managing netfilter/ip
 
 See [example-2](./examples/ufw/example-2.python)
 
-## Implementation Framework
 
 ### Safe Bootstrap on Remote Server
 
@@ -157,7 +146,6 @@ See [example-5](./examples/ufw/example-5.bash)
 - Periodically review rules with “status numbered” and prune
 - Restrict admin ports by source IP when practical
 
-## Common Patterns
 
 ### Role-based example policies
 
@@ -252,13 +240,11 @@ See [example-11](./examples/ufw/example-11.bash)
 - **Implement automated backup** procedures before making configuration changes
 - **Validate configuration** after changes with connectivity testing and security scanning
 
-## Quality Assurance Framework
 
 ### Compliance Validation
 
 See [example-12](./examples/ufw/example-12.bash)
 
-## Advanced Enterprise Integration
 
 ### Infrastructure as Code Examples
 
@@ -267,19 +253,8 @@ See [example-13](./examples/ufw/example-13.yaml)
 This comprehensive Level 3 enhancement provides enterprise-grade UFW management with advanced automation, compliance frameworks, monitoring integration, and production deployment patterns.
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

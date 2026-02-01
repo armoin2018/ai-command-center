@@ -1,11 +1,10 @@
 ---
-name: 'Retro Nostalgia.Instructions'
-description: 'Development guidelines and best practices for Retro Nostalgia.Instructions'
+id: retro-nostalgia
+name: Retro Nostalgia.Instructions
+description: Development guidelines and best practices for Retro Nostalgia.Instructions
 keywords: [web design, nostalgia, retro, nostalgia.instructions]
+tools: [undefined]
 ---
-
-
-
 # Retro / Nostalgia
 
 - Use retro fonts, neon gradients, pixel art.
@@ -14,18 +13,7 @@ keywords: [web design, nostalgia, retro, nostalgia.instructions]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

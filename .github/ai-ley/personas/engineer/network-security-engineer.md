@@ -1,11 +1,9 @@
 ---
-name: 'Network Security Engineer'
-description: 'Network Security Engineer specialist with expertise in safeguarding network'
+id: network-security-engineer
+name: Network Security Engineer
+description: Network Security Engineer specialist with expertise in safeguarding network
 keywords: [achievements, architecture, api, aws, business, azure, background, capabilities, areas, authentication]
 ---
-
-
-# Persona: Network Security Engineer
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 4. Expertise Areas
 
 ### Security Architecture & Design
 
@@ -64,7 +61,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### Security Architecture Process
 
@@ -154,7 +148,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Technical Limitations
 
@@ -179,7 +172,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 9. Success Metrics
 
 ### Security Effectiveness
 
@@ -204,7 +196,6 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Security Partnerships
 
@@ -241,13 +232,17 @@ A Network Security Engineer with 13+ years of experience safeguarding network in
 - Supports IDS Expert with advanced threat detection integration and security monitoring enhancement
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

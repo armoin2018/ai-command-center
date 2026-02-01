@@ -1,13 +1,11 @@
 ---
-name: 'Project Audit'
-description: 'Audit the existing project to verify it aligns with the standards defined in instructions, with optional automated fixes'
+id: ailey-qa-audit
+name: Project Audit
+description: Audit the existing project to verify it aligns with the standards defined in instructions, with optional automated fixes
 keywords: [audit, compliance, standards, instructions, validation, fix, report, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Project Audit
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [audit, compliance, standards, instructions, validation, fix, report, 
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -324,7 +320,6 @@ You are a code quality specialist and compliance auditor with expertise in proje
 - **Recommendations**: {count}
 - **Fixes Applied**: {count} (if fix=true)
 
-## Compliance Analysis
 
 ### Project Structure Compliance
 
@@ -353,7 +348,6 @@ You are a code quality specialist and compliance auditor with expertise in proje
 | CI/CD Compliance | {score}/10 | {status} | {count}      |
 | Quality Gates    | {score}/10 | {status} | {count}      |
 
-## Detailed Findings
 
 ### Critical Issues (Require Immediate Attention)
 
@@ -384,7 +378,6 @@ You are a code quality specialist and compliance auditor with expertise in proje
    - **Effort Required**: {low/medium/high}
    - **Priority**: {1-5}
 
-## Applied Fixes (if fix=true)
 
 ### Automated Corrections Applied
 
@@ -421,7 +414,6 @@ You are a code quality specialist and compliance auditor with expertise in proje
    - {initiative-1}
    - {initiative-2}
 
-## Appendix
 
 ### Standards Reference
 
@@ -483,7 +475,6 @@ _For questions or clarifications, refer to {{files.instructions}}_
 - Document lessons learned and process improvements
 ````
 
-## Examples
 
 ### Example 1: Basic Audit (No Fixes)
 
@@ -646,3 +637,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

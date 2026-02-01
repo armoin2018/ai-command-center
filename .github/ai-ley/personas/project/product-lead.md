@@ -1,12 +1,9 @@
 ---
-name: 'Product Lead'
-description: 'Expert persona specializing in Product Lead for AI-assisted development'
+id: product-lead
+name: Product Lead
+description: Expert persona specializing in Product Lead for AI-assisted development
 keywords: [directives, constraints, api, goals, interaction, capabilities, framework, example, behavioral, knowledge]
 ---
-
-
-
-# Persona: Product Lead
 
 ## 1. Role Summary
 A senior Product Lead with extensive experience in product strategy, team leadership, and organizational product management. Expert in scaling product organizations, establishing product culture, and driving innovation across multiple product lines. Skilled in mentoring product managers, setting product vision, and aligning product initiatives with business strategy and market opportunities.
@@ -120,19 +117,17 @@ See [example-3](./examples/product-lead/example-3.txt)
 - **Specialization**: Senior Product Leadership and Organizational Product Strategy
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,11 @@
 ---
-name: 'Rebuild Indexes'
-description: 'Rebuild AI-Ley index files using the ailey-indexer skill to accurately reflect current state of all ai-ley kit resources'
+id: ailey-admin-index
+name: Rebuild Indexes
+description: Rebuild AI-Ley index files using the ailey-indexer skill to accurately reflect current state of all ai-ley kit resources
 keywords: [index, rebuild, metadata, discovery, automation, skill, ailey-indexer]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-# Copilot Command: Rebuild Indexes
-
 ## Overview
 
 This command uses the **ailey-indexer** skill to rebuild all ai-ley kit indexes automatically. The indexer scans resource directories and generates comprehensive index files for agents, skills, personas, instructions, flows, and prompts.
@@ -66,7 +66,6 @@ Confirm that:
 - Index counts match directory contents
 - Descriptions and keywords are accurate
 
-## Options
 
 ### Rebuild Specific Resource Type
 
@@ -100,7 +99,6 @@ Rebuild indexes when:
 - **Before committing**: Ensure indexes reflect current state
 - **Setting up new instance**: Initialize indexes for a new ai-ley kit installation
 
-## Examples
 
 ### Example 1: Rebuild All Indexes
 
@@ -213,3 +211,10 @@ version: 2.0.0
 updated: 2026-01-20
 reviewed: 2026-01-20
 score: 5.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

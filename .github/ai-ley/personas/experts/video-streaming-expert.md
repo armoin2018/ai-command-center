@@ -1,12 +1,9 @@
 ---
-name: 'Video Streaming Expert'
-description: 'Expert persona specializing in Video Streaming Expert for AI-assisted development'
+id: video-streaming-expert
+name: Video Streaming Expert
+description: Expert persona specializing in Video Streaming Expert for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, aws, azure, authentication, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: Video Streaming Expert
 
 ## 1. Role Summary
 
@@ -117,19 +114,17 @@ See [example-6](./examples/video-streaming-expert/example-6.yaml)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

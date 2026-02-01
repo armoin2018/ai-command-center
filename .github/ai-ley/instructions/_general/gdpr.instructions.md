@@ -1,11 +1,10 @@
 ---
-name: 'Gdpr.Instructions'
-description: 'Development guidelines and best practices for Gdpr.Instructions'
+id: gdpr
+name: Gdpr.Instructions
+description: Development guidelines and best practices for Gdpr.Instructions
 keywords: [testing, api, rest, security, gui, gdpr.instructions]
+tools: [undefined]
 ---
-
-
-
 Title: GDPR — AI Agent Compliance Guide
 
 Scope
@@ -41,18 +40,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

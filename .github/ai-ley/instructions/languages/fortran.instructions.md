@@ -1,11 +1,10 @@
 ---
-name: 'Fortran.Instructions'
-description: 'Development guidelines and best practices for Fortran.Instructions'
+id: fortran
+name: Fortran.Instructions
+description: Development guidelines and best practices for Fortran.Instructions
 keywords: [testing, languages, fortran.instructions, gui, performance, framework]
+tools: [undefined]
 ---
-
-
-
 Title: Fortran — AI Agent Implementation Guide
 
 Use cases
@@ -36,18 +35,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

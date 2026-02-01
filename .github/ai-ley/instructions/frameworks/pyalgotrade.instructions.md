@@ -1,11 +1,10 @@
 ---
-name: 'Pyalgotrade.Instructions'
-description: 'Development guidelines and best practices for Pyalgotrade.Instructions'
+id: pyalgotrade
+name: Pyalgotrade.Instructions
+description: Development guidelines and best practices for Pyalgotrade.Instructions
 keywords: [testing, architecture, gui, api, frameworks, pyalgotrade.instructions, framework, performance]
+tools: [undefined]
 ---
-
-
-
 Title: PyAlgoTrade — AI Agent Trading Guide
 
 Scope
@@ -25,18 +24,7 @@ See also
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,10 @@
 ---
-name: 'Zipline Reloaded.Instructions'
-description: 'Development guidelines and best practices for Zipline Reloaded.Instructions'
+id: zipline-reloaded
+name: Zipline Reloaded.Instructions
+description: Development guidelines and best practices for Zipline Reloaded.Instructions
 keywords: [cloud, testing, gui, api, zipline, frameworks, framework, reloaded.instructions, performance]
+tools: [undefined]
 ---
-
-
-
 Title: Zipline Reloaded — AI Agent Backtesting Guide
 
 Scope
@@ -33,18 +32,7 @@ See also
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,12 +1,9 @@
 ---
-name: 'Css Developer'
-description: 'Expert persona specializing in Css Developer for AI-assisted development'
+id: css-developer
+name: Css Developer
+description: Expert persona specializing in Css Developer for AI-assisted development
 keywords: [directives, constraints, frontend, architecture, goals, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: CSS Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/css-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

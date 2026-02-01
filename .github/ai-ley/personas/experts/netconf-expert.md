@@ -1,12 +1,9 @@
 ---
-name: 'Netconf Expert'
-description: 'Expert persona specializing in Netconf Expert for AI-assisted development'
+id: netconf-expert
+name: Netconf Expert
+description: Expert persona specializing in Netconf Expert for AI-assisted development
 keywords: [devops, directives, constraints, architecture, cli, authorization, capabilities, authentication, example, behavioral]
 ---
-
-
-
-# Persona: NETCONF Expert
 
 ## 1. Role Summary
 
@@ -112,19 +109,17 @@ See [example-3](./examples/netconf-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

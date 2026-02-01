@@ -1,13 +1,11 @@
 ---
-name: 'Innovation Opportunity Analysis'
-description: 'Scan existing business requirements and identify potential growth opportunities with strategic scoring'
+id: ailey-grow-innovate
+name: Innovation Opportunity Analysis
+description: Scan existing business requirements and identify potential growth opportunities with strategic scoring
 keywords: [innovation, growth-opportunities, business-expansion, strategic-analysis, revenue-growth, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Innovation Opportunity Analysis
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [innovation, growth-opportunities, business-expansion, strategic-analy
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -109,7 +105,6 @@ You are an innovation strategist and business growth expert with expertise in op
 **Innovation Opportunity Categories**:
 
 ````markdown
-# Innovation Opportunity Analysis
 
 ## Executive Summary
 
@@ -118,7 +113,6 @@ You are an innovation strategist and business growth expert with expertise in op
 **Business Context**: {current-business-summary}
 **Strategic Objective**: {primary-growth-goals}
 
-## Current Business Analysis
 
 ### Existing Business Model
 
@@ -151,7 +145,6 @@ graph LR
 
 `````
 
-### Innovation Opportunity Categories
 
 #### 1. Different Approaches (Core Business Innovation)
 
@@ -271,9 +264,7 @@ graph LR
 **Scoring Methodology and Opportunity Ranking**:
 
 ```markdown
-# Opportunity Scoring & Prioritization
 
-## Scoring Methodology
 
 ### Evaluation Criteria (1-10 Scale)
 
@@ -294,7 +285,6 @@ graph LR
 | ROI Projection   | 15%    | Investment return requirements        |
 | Strategic Fit    | 10%    | Core competency alignment             |
 
-## Opportunity Score Matrix
 
 ### Different Approaches (Core Business Innovation)
 
@@ -338,7 +328,6 @@ graph LR
 | **#4** | {fourth-opportunity} | {category} | **{score}/10** | {primary-benefit} | {implementation-time} |
 | **#5** | {fifth-opportunity}  | {category} | **{score}/10** | {primary-benefit} | {implementation-time} |
 
-## Financial Impact Analysis
 
 ### Revenue Projections by Opportunity (Year 1-3)
 
@@ -360,7 +349,6 @@ graph LR
 
 **Priority Opportunities and Execution Framework**:
 ```markdown
-# Strategic Recommendations
 
 ## Priority Innovation Portfolio
 ### Tier 1: Immediate Implementation (0-6 months)
@@ -463,7 +451,6 @@ graph LR
 
 **External Innovation Partnerships and Collaboration Framework**:
 ```markdown
-# Innovation Ecosystem & Partnerships
 
 ## External Innovation Opportunities
 ### Technology Partners
@@ -540,7 +527,6 @@ graph TD
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Innovation Analysis
 
@@ -646,3 +632,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

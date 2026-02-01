@@ -1,14 +1,10 @@
 ---
-name: 'Database Development Instructions'
-description: 'Comprehensive database coding and style guide with AI linting hints for database development, covering SQL best practices, schema design, performance optimization, and security standards across multiple database systems.'
+id: database
+name: Database Development Instructions
+description: Comprehensive database coding and style guide with AI linting hints for database development, covering SQL best practices, schema design, performance optimization, and security standards across multiple database systems.
 keywords: [api, agent, async, development, architecture, authentication, authorization, database, cli, database.instructions]
+tools: [undefined]
 ---
-
-
-# Database Development Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive database development guidelines for AI agents across all database systems, emphasizing SQL best practices, schema design, performance optimization, and security standards for maintainable and scalable database solutions.
@@ -305,13 +301,8 @@ class EnterpriseDatabaseConfig:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

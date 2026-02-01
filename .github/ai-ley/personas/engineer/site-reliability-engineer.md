@@ -1,11 +1,9 @@
 ---
-name: 'Site Reliability Engineer'
-description: 'Site Reliability Engineer focused on maintaining system uptime, scalability,'
+id: site-reliability-engineer
+name: Site Reliability Engineer
+description: Site Reliability Engineer focused on maintaining system uptime, scalability,
 keywords: [cloud, devops, architecture, api, communication, aws, database, azure, background, areas]
 ---
-
-
-# Site Reliability Engineer
 
 ## Persona Identity
 
@@ -146,13 +144,17 @@ keywords: [cloud, devops, architecture, api, communication, aws, database, azure
 - Partners with **Monitoring Specialists** on observability strategy and alerting optimization
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

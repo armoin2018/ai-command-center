@@ -1,12 +1,9 @@
 ---
-name: 'Html5 Developer'
-description: 'Expert persona specializing in Html5 Developer for AI-assisted development'
+id: html5-developer
+name: Html5 Developer
+description: Expert persona specializing in Html5 Developer for AI-assisted development
 keywords: [directives, constraints, frontend, architecture, api, goals, capabilities, developer, example, behavioral]
 ---
-
-
-
-# Persona: HTML5 Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/html5-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

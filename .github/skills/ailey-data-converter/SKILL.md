@@ -1,8 +1,8 @@
 ---
+id: 
 name: ailey-data-converter
 description: Convert files between data formats (JSON, YAML, XML, CSV, TSV, Parquet, Avro, ORC, Thrift) with schema generation/conversion/evolution, CRUD operations, jq-style queries, compression, streaming, and chunking support. Use for format conversion, schema management, data querying/manipulation, processing large files, or batch operations.
 ---
-
 # AI-ley Data Converter
 
 Comprehensive data conversion, schema management, and data manipulation tool with CRUD operations and jq-style querying.
@@ -59,7 +59,6 @@ Use this skill when:
 - Validating data against schemas
 - Complex data manipulations
 
-## Quick Start
 
 ### Data Conversion
 
@@ -212,7 +211,6 @@ Convert all JSON files in a directory:
 tsx scripts/convert.ts --bulk "data/*.json" --to yaml
 ```
 
-## Workflows
 
 ### Workflow 1: Schema-Driven Development
 
@@ -366,7 +364,6 @@ Create a compressed data processing pipeline:
      --output-compression gzip
    ```
 
-## Command Line Options
 
 ### Data Conversion (convert.ts)
 
@@ -482,7 +479,6 @@ Supported formats: `json`, `yaml`, `xml`, `csv`, `tsv`, `parquet`, `avro`, `orc`
 - `--query <jq>` - Query to select items for deletion
 - `--schema <file>` - Validate after deletion
 
-## Architecture
 
 ### Modular Design
 
@@ -627,7 +623,6 @@ The converter is optimized for:
 - **Schema evolution**: Breaking changes require manual data migration
 - **CRUD atomicity**: File-based operations not transactional
 
-## Resources
 
 ### Scripts
 - **convert.ts**: [scripts/convert.ts](scripts/convert.ts) - Data format conversion
@@ -675,3 +670,10 @@ await crud.update('.items[] | select(.id == "AICC-001")', { status: 'IN-PROGRESS
 ## Version
 
 2.0.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

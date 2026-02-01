@@ -1,10 +1,10 @@
 ---
-name: 'Health Check'
-description: 'Evaluate requirements, plan, personas, and instructions; write health report and suggestions. Now available in ailey-admin-optimize-kit skill.'
-keywords: [health, check, prompt, ailey]
+id: ailey-admin-health-check
+name: Health Check
+description: Evaluate requirements, plan, personas, and instructions; write health report and suggestions. Now available in ailey-admin-optimize-kit skill.
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-
 > **⚠️ This functionality is now available in the `ailey-admin-optimize-kit` skill.**
 > 
 > **Usage:**
@@ -14,10 +14,10 @@ agent: AI-ley Orchestrator
 > ```
 > 
 > **Options:**
-> - `--requirements <path>`: Requirements file path
-> - `--plan <path>`: Plan file path
-> - `--output <path>`: Health check report output
-> - `--suggestions <path>`: Suggestions backlog output
+> - `--requirements <path>` - Specify requirements file path
+> - `--plan <path>` - Specify plan file path
+> - `--output <path>` - Set health check report output path
+> - `--suggestions <path>` - Set suggestions backlog output path
 > 
 > **Example:**
 > ```bash
@@ -81,23 +81,23 @@ Operate deterministically. If information is missing, **state minimal assumption
 
 ## Evaluation Dimensions (0–5 rubric; weight in parentheses)
 
-- **Completeness (20%)**: Required sections, non-placeholder content, acceptance criteria, non-functional requirements (NFRs).
-- **Consistency (15%)**: No contradictions across files (goals, dates, budgets, scope, terminology).
-- **Traceability (20%)**: Requirements ↔ Plan tasks/milestones ↔ Personas (audience fit) ↔ Instructions (how-to).
-- **Feasibility (10%)**: Technical/operational viability within constraints, capacity, budget, timeline.
-- **Risk & Mitigation (10%)**: Identified risks with owners, triggers, and mitigations.
-- **Governance (10%)**: Roles/RACI, decision rules, change control.
-- **Measurement (10%)**: KPIs, targets, baselines, instrumentation.
-- **Ethics/Safety/Compliance (5%)**: Privacy, security, regulatory and brand safeguards.
+- **Completeness (20%)** - Required sections, non-placeholder content, acceptance criteria, non-functional requirements (NFRs)
+- **Consistency (15%)** - No contradictions across files (goals, dates, budgets, scope, terminology)
+- **Traceability (20%)** - Requirements ↔ Plan tasks/milestones ↔ Personas (audience fit) ↔ Instructions (how-to)
+- **Feasibility (10%)** - Technical/operational viability within constraints, capacity, budget, timeline
+- **Risk & Mitigation (10%)** - Identified risks with owners, triggers, and mitigations
+- **Governance (10%)** - Roles/RACI, decision rules, change control
+- **Measurement (10%)** - KPIs, targets, baselines, instrumentation
+- **Ethics/Safety/Compliance (5%)** - Privacy, security, regulatory and brand safeguards
 
 **Rubric anchors (per dimension):**  
 0 = missing/contradictory; 1 = skeletal; 2 = partial; 3 = acceptable; 4 = strong; 5 = exemplary with evidence.
 
 ## Heuristics & Checks (non-exhaustive)
 
-- **Requirements:** presence of problem statement, goals, out-of-scope, constraints, acceptance criteria, NFRs (e.g., performance, security, accessibility).
-- **Plan:** milestones with ISO dates, owners, critical path, dependencies; budget and capacity alignment; risk register.
-- **Personas:** ICP alignment, pains/goals, objections, buying roles, success criteria; mapping to requirements and content/instruction needs.
+- **Requirements** - Presence of problem statement, goals, out-of-scope, constraints, acceptance criteria, NFRs (performance, security, accessibility)
+- **Plan** - Milestones with ISO dates, owners, critical path, dependencies; budget and capacity alignment; risk register
+- **Personas** - ICP alignment, pains/goals, objections, buying roles, success criteria; mapping to requirements and content/instruction needs
 - **Instructions:** unambiguous steps, inputs/outputs, guardrails, references to real files/paths; no dead links; consistency with requirements/plan.
 - **Conflicts:** date mismatches, budget sums ≠ allocations, KPI targets absent or inconsistent, persona needs not addressed in plan, instructions referencing non-existent artifacts.
 - **Traceability:** build a matrix mapping **Requirement → Plan item(s) → Persona(s) → Instruction(s)** with coverage status (Covered/Partial/Gap).
@@ -130,7 +130,6 @@ Format the report exactly as below.
 
 > Scoring notes: cite concrete evidence from the inputs.
 
-## 3) Findings by Source
 
 ### 3.1 Requirements
 
@@ -240,12 +239,20 @@ Produce an actionable, prioritized backlog. Use the exact structure below.
 ## Output Rules
 
 - Use **concise, evidence-backed prose** and tables.
-- Use **ISO dates**, explicit time zones, and currency units where relevant.
-- **No TBD** or placeholders unless unavoidable—justify briefly.
-- Do **not** ask for missing info; make minimal assumptions and note them.
+- Use ISO dates, explicit time zones, and currency units where relevant
+- Avoid TBD or placeholders unless unavoidable—justify briefly
+- State minimal assumptions when information is missing and proceed
+
 ---
 
+version: 1.0.1
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+
+---
 version: 1.0.0
-updated: 2026-01-11
-reviewed: 2026-01-11
-score: 4.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

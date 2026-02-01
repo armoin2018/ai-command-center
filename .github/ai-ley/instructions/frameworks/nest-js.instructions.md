@@ -1,13 +1,10 @@
 ---
-name: 'Nest Js.Instructions'
-description: 'See [example-1](./examples/nest-js/example-1.'
+id: nest-js
+name: Nest Js.Instructions
+description: See [example-1](./examples/nest-js/example-1.
 keywords: [async, agent, 4.9/5.0, architecture, api, authorization, agents, avoid, assistant, authentication]
+tools: [undefined]
 ---
-
-
-
-# NestJS Framework Instructions for AI Agents
-
 ## When to Use NestJS
 
 Use NestJS when you need:
@@ -38,7 +35,6 @@ Consider alternatives when:
 - **Language**: TypeScript (primary), JavaScript (supported)
 - **Use Cases**: Enterprise APIs, microservices, GraphQL servers
 
-## Installation & Setup
 
 ### ✅ Recommended: NestJS CLI
 
@@ -55,7 +51,6 @@ See [example-2](./examples/nest-js/example-2.bash)
 - **GraphQL**: NestJS + GraphQL + Apollo
 - **Real-time**: NestJS + WebSockets + Socket.io
 
-## Core Concepts
 
 ### Modules and Dependency Injection
 
@@ -87,7 +82,6 @@ See [example-6](./examples/nest-js/example-6.typescript)
 
 See [example-7](./examples/nest-js/example-7.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -111,7 +105,6 @@ See [example-7](./examples/nest-js/example-7.typescript)
 
 See [example-8](./examples/nest-js/example-8.typescript)
 
-### Testing Best Practices
 
 #### Unit Testing Services
 See [example-9](./examples/nest-js/example-9.typescript)
@@ -130,7 +123,6 @@ See [example-13](./examples/nest-js/example-13.typescript)
 #### Mocking External Services
 See [example-14](./examples/nest-js/example-14.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Commands
 
@@ -146,7 +138,6 @@ See [example-15](./examples/nest-js/example-15.bash)
 | Authentication | JWT + Passport + Guards         | Session-based auth          |
 | Validation     | Class-validator + DTOs          | Manual validation           |
 
-## Security Best Practices
 
 ### Authentication & Authorization
 See [example-16](./examples/nest-js/example-16.typescript)
@@ -160,7 +151,6 @@ See [example-18](./examples/nest-js/example-18.typescript)
 ### Database Security
 See [example-19](./examples/nest-js/example-19.typescript)
 
-## Performance Optimization
 
 ### Caching Strategies
 See [example-20](./examples/nest-js/example-20.typescript)
@@ -219,18 +209,7 @@ When helping with NestJS:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

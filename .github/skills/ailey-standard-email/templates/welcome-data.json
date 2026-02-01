@@ -1,0 +1,6 @@
+{
+  "name": "John Doe",
+  "company": "Acme Corp",
+  "email": "john@example.com",
+  "loginUrl": "https://portal.acme.com/login"
+}

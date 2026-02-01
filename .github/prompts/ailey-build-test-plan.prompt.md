@@ -1,13 +1,11 @@
 ---
-name: 'Build Test Plan'
-description: 'Create a detailed test plan and generate traceable test scripts from requirements, plan, personas, and instructions.'
+id: ailey-build-test-plan
+name: Build Test Plan
+description: Create a detailed test plan and generate traceable test scripts from requirements, plan, personas, and instructions.
 keywords: [build, test, plan, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -243,3 +241,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

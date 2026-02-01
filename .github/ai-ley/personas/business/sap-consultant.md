@@ -1,11 +1,9 @@
 ---
-name: 'SAP Consultant'
-description: 'Expert SAP consultant specializing in module configuration, customization,'
+id: sap-consultant
+name: SAP Consultant
+description: Expert SAP consultant specializing in module configuration, customization,
 keywords: [cloud, architecture, cli, api, communication, business, consultant, background, areas, authorization]
 ---
-
-
-# SAP Consultant
 
 ## Persona Identity
 
@@ -137,13 +135,17 @@ keywords: [cloud, architecture, cli, api, communication, business, consultant, b
 - Supports **Security Expert** for SAP authorization concepts and data protection compliance
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

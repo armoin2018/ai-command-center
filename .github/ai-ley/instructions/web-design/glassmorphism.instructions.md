@@ -1,11 +1,10 @@
 ---
-name: 'Glassmorphism.Instructions'
-description: 'Development guidelines and best practices for Glassmorphism.Instructions'
+id: glassmorphism
+name: Glassmorphism.Instructions
+description: Development guidelines and best practices for Glassmorphism.Instructions
 keywords: [web design, glassmorphism.instructions, glassmorphism]
+tools: [undefined]
 ---
-
-
-
 # Glassmorphism
 
 - Frosted glass with blur and transparency.
@@ -14,18 +13,7 @@ keywords: [web design, glassmorphism.instructions, glassmorphism]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

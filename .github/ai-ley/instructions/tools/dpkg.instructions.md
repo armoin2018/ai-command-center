@@ -1,18 +1,14 @@
 ---
-name: 'Dpkg.Instructions'
-description: 'DPKG (Debian Package) is the low-level package management system for Debian-based Linux distributions.'
+id: dpkg
+name: Dpkg.Instructions
+description: DPKG (Debian Package) is the low-level package management system for Debian-based Linux distributions.
 keywords: [building, common, compliance, assistant, cloning, configuration, advanced, auditing, administration, automated]
+tools: [undefined]
 ---
-
-
-
-# DPKG Package Management Instructions
-
 ## Overview
 
 DPKG (Debian Package) is the low-level package management system for Debian-based Linux distributions. It provides the foundation for higher-level package managers like APT and handles the installation, removal, and information querying of .deb packages directly.
 
-## Core Principles
 
 ### Package Management Foundation
 - **Binary Package Format**: .deb packages containing pre-compiled software
@@ -32,7 +28,6 @@ DPKG (Debian Package) is the low-level package management system for Debian-base
 - **Force Options**: Controlled override mechanisms for exceptional circumstances
 - **Audit Trail**: Comprehensive logging of all package management operations
 
-## Implementation Framework
 
 ### Essential DPKG Operations
 
@@ -46,7 +41,6 @@ See [example-2](./examples/dpkg/example-2.bash)
 
 See [example-3](./examples/dpkg/example-3.bash)
 
-## Best Practices
 
 ### Package Management Safety
 
@@ -60,7 +54,6 @@ See [example-5](./examples/dpkg/example-5.bash)
 
 See [example-6](./examples/dpkg/example-6.bash)
 
-## Common Patterns
 
 ### System Migration and Cloning
 
@@ -74,7 +67,6 @@ See [example-8](./examples/dpkg/example-8.bash)
 
 See [example-9](./examples/dpkg/example-9.bash)
 
-## Tools and Resources
 
 ### Essential DPKG Utilities
 
@@ -88,7 +80,6 @@ See [example-11](./examples/dpkg/example-11.bash)
 
 See [example-12](./examples/dpkg/example-12.bash)
 
-## Quality and Compliance
 
 ### Security Best Practices
 
@@ -102,7 +93,6 @@ See [example-14](./examples/dpkg/example-14.bash)
 
 See [example-15](./examples/dpkg/example-15.bash)
 
-## Troubleshooting
 
 ### Common Issues and Solutions
 
@@ -112,7 +102,6 @@ See [example-16](./examples/dpkg/example-16.bash)
 
 See [example-17](./examples/dpkg/example-17.bash)
 
-## Metrics and Monitoring
 
 ### Key Performance Indicators
 
@@ -122,7 +111,6 @@ See [example-18](./examples/dpkg/example-18.bash)
 
 See [example-19](./examples/dpkg/example-19.bash)
 
-## Integration Patterns
 
 ### Containerization Integration
 
@@ -136,7 +124,6 @@ See [example-21](./examples/dpkg/example-21.yaml)
 
 See [example-22](./examples/dpkg/example-22.bash)
 
-## Advanced Topics
 
 ### Custom Package Development
 
@@ -146,7 +133,6 @@ See [example-23](./examples/dpkg/example-23.bash)
 
 See [example-24](./examples/dpkg/example-24.bash)
 
-## AI Assistant Guidelines
 
 ### When to Use DPKG
 
@@ -197,18 +183,7 @@ See [example-24](./examples/dpkg/example-24.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

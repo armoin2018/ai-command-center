@@ -1,7 +1,7 @@
 ---
 name: 'Tauri.Instructions'
 description: 'See [example-1](./examples/tauri/example-1.'
-keywords: [api, application, agent, agents, alternative:, architecture, [pattern, authentication, analysis, advanced]
+keywords: [api, application, agent, agents, alternative:, architecture, pattern, authentication, analysis, advanced
 ---
 
 

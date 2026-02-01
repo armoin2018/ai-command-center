@@ -1,11 +1,10 @@
 ---
 id: ailey-planner
 name: AI-ley Planner
-description: 'Project planning specialist for requirements, roadmaps, and execution plans'
+description: Project planning specialist for requirements, roadmaps, and execution plans
 keywords: [planning, project-management, roadmap, requirements, agile, milestones]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Planner Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Project planning specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Discovery
 
@@ -139,3 +137,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

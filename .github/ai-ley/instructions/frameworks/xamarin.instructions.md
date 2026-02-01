@@ -1,7 +1,7 @@
 ---
 name: 'Xamarin Cross-Platform Mobile Development Instructions'
 description: 'Comprehensive guide for Xamarin cross-platform mobile development with'
-keywords: [common, agent, [pattern, [concept, analysis, backend, **use, building, assessment, **avoid]
+keywords: [common, agent, pattern, [concept, analysis, backend, use, building, assessment, avoid
 ---
 
 

@@ -1,11 +1,10 @@
 ---
-name: 'Html.Instructions'
-description: 'Development guidelines and best practices for Html.Instructions'
+id: html
+name: Html.Instructions
+description: Development guidelines and best practices for Html.Instructions
 keywords: [languages, linting, coding, async, html.instructions, gui, architecture, hints), (with, guide]
+tools: [undefined]
 ---
-
-
-
 # HTML Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for HTML development. These include AI linting hints to automatically enforce style rules and maintain clean, semantic, accessible, and performant markup.
@@ -218,18 +217,7 @@ See [example-9](./examples/html/example-9.html)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

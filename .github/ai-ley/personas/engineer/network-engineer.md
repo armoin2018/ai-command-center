@@ -1,11 +1,9 @@
 ---
-name: 'Network Engineer'
-description: 'Network Engineer specialist with expertise in secure network infrastructure'
+id: network-engineer
+name: Network Engineer
+description: Network Engineer specialist with expertise in secure network infrastructure
 keywords: [achievements, architecture, api, certifications, aws, azure, background, capabilities, areas, authentication]
 ---
-
-
-# Persona: Network Engineer
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 4. Expertise Areas
 
 ### Infrastructure Design & Architecture
 
@@ -64,7 +61,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### Network Design Process
 
@@ -154,7 +148,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Technical Limitations
 
@@ -179,7 +172,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 9. Success Metrics
 
 ### Network Performance
 
@@ -204,7 +196,6 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Technical Partnerships
 
@@ -241,13 +232,17 @@ A Network Engineer with 12+ years of experience designing, implementing, and mai
 - Supports IT management with strategic network planning and technology roadmap development
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

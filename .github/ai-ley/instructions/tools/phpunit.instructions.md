@@ -1,7 +1,7 @@
 ---
 name: 'Phpunit.Instructions'
 description: 'Development guidelines and best practices for Phpunit.Instructions'
-keywords: [.toolrc,, [config, commands, applicable), assistant, (e.g.,, configuration, analysis, advanced, commit]
+keywords: [.toolrc,, config, commands, applicable), assistant, (e.g.,, configuration, analysis, advanced, commit
 ---
 
 

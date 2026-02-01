@@ -1,7 +1,7 @@
 ---
 name: 'Gatsby.Instructions'
 description: 'See [example-1](./examples/gatsby/example-1.'
-keywords: [build, agent, [pattern, architecture, analysis, api, agents, avoid, building, authentication]
+keywords: [build, agent, pattern, architecture, analysis, api, agents, avoid, building, authentication
 ---
 
 

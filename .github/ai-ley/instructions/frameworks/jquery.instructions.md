@@ -1,13 +1,10 @@
 ---
-name: 'Jquery.Instructions'
-description: 'See [example-1](./examples/jquery/example-1.'
+id: jquery
+name: Jquery.Instructions
+description: See [example-1](./examples/jquery/example-1.
 keywords: [api, commands, common, async, bootstrap, assistant, architecture, compatibility, analysis, animations]
+tools: [undefined]
 ---
-
-
-
-# jQuery Framework Instructions
-
 ## Framework Overview
 
 - **Framework Name**: jQuery
@@ -24,7 +21,6 @@ See [example-1](./examples/jquery/example-1.bash)
 
 See [example-2](./examples/jquery/example-2.txt)
 
-## Core Concepts
 
 ### DOM Selection and Manipulation
 
@@ -76,7 +72,6 @@ See [example-6](./examples/jquery/example-6.javascript)
 - Always handle AJAX errors gracefully
 - Use semantic HTML and enhance with jQuery rather than building everything in JS
 
-## Common Patterns
 
 ### Module Pattern
 
@@ -86,7 +81,6 @@ See [example-7](./examples/jquery/example-7.javascript)
 
 See [example-8](./examples/jquery/example-8.javascript)
 
-## Configuration
 
 ### jQuery Configuration
 
@@ -100,7 +94,6 @@ See [example-10](./examples/jquery/example-10.html)
 
 See [example-11](./examples/jquery/example-11.bash)
 
-## Common Issues & Solutions
 
 ### $ is not defined
 
@@ -144,7 +137,6 @@ See [example-11](./examples/jquery/example-11.bash)
 - **jQuery UI**: https://jqueryui.com/
 - **Plugin Registry**: https://plugins.jquery.com/
 
-## Framework-Specific Guidelines
 
 ### Code Style
 
@@ -162,7 +154,6 @@ See [example-11](./examples/jquery/example-11.bash)
 - Separate concerns: HTML structure, CSS presentation, JS behavior
 - Use data attributes for component configuration
 
-## Integration Points
 
 ### Bootstrap
 
@@ -189,7 +180,6 @@ See [example-11](./examples/jquery/example-11.bash)
 - **Dependencies**: None (standalone library)
 - **jQuery Versions**: 1.x (legacy IE), 2.x (modern), 3.x (current)
 
-## Troubleshooting
 
 ### Debug Mode
 
@@ -246,18 +236,7 @@ When helping with jQuery implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,8 +1,8 @@
 ---
+id: 
 name: ailey-manage-plan
 description: Manage .project/PLAN.json with schema evolution, CRUD operations, and jq-style queries. Use when creating, reading, updating, or deleting plan items, validating against schemas, migrating between schema versions, or querying plan data with complex filters. Supports ID and name-based searches.
 ---
-
 # AI-ley Manage Plan
 
 Comprehensive management tool for `.project/PLAN.json` with schema evolution, CRUD operations, and jq-style querying capabilities.
@@ -41,7 +41,6 @@ Use this skill when:
 - **Validation**: Ensuring PLAN.json conforms to schema
 - **Statistics**: Generating reports on plan status and progress
 
-## Quick Start
 
 ### Initialize PLAN.json
 
@@ -109,7 +108,6 @@ Delete by query:
 tsx scripts/manage-plan.ts delete --query '.items[] | select(.status == "SKIP")'
 ```
 
-## Workflows
 
 ### Workflow 1: Initialize and Populate Plan
 
@@ -200,7 +198,6 @@ Update multiple items efficiently:
    tsx scripts/manage-plan.ts stats
    ```
 
-## Command Reference
 
 ### Create
 
@@ -418,7 +415,6 @@ Supported jq-style operations:
 '.items[] | .summary'
 ```
 
-## Schema Evolution
 
 ### Compatibility Rules
 
@@ -522,3 +518,10 @@ The tool provides clear error messages:
 **Version**: 1.0.0  
 **Created**: 2026-01-29  
 **Score**: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

@@ -1,17 +1,17 @@
 ---
+id: 
 name: ailey-seo-report
-version: 1.0.0
 description: Comprehensive SEO analysis and reporting tool with interactive HTML, Markdown, and JSON reports
+keywords: [seo-audit, web-crawler, performance-analysis, content-analysis, technical-seo, core-web-vitals]
+version: 1.0.0
 category: Analysis & Reporting
 tags: [seo, analysis, web-crawling, reporting, performance, content-optimization]
 author: AI-ley
-created: 2024-01-20
-updated: 2024-01-20
+created: Fri Jan 19 2024 18:00:00 GMT-0600 (Central Standard Time)
+updated: Fri Jan 19 2024 18:00:00 GMT-0600 (Central Standard Time)
 status: active
 dependencies: [cheerio, lighthouse, puppeteer, axios, commander, chalk]
-keywords: [seo-audit, web-crawler, performance-analysis, content-analysis, technical-seo, core-web-vitals]
 ---
-
 # AI-ley SEO Report Skill
 
 Comprehensive SEO analysis and reporting tool that crawls websites, analyzes technical SEO, content quality, performance metrics, and generates actionable recommendations in multiple formats.
@@ -56,7 +56,6 @@ npm install
 **Related Prompts:**
 - `ailey-report-seo.prompt.md` - Generate SEO reports (delegates to this skill)
 
-## Usage
 
 ### Command Line Interface
 
@@ -109,7 +108,6 @@ console.log(`Overall SEO Score: ${report.scores.overall}/100`);
 console.log(`Health Grade: ${report.executiveSummary.healthGrade}`);
 ```
 
-## Report Outputs
 
 ### HTML Report (`seo-audit-report.html`)
 
@@ -149,7 +147,6 @@ Spreadsheet-compatible recommendation export:
 - Import into project management tools
 - Track implementation progress
 
-## Architecture
 
 ### Collectors (`lib/collectors/`)
 
@@ -185,7 +182,6 @@ Spreadsheet-compatible recommendation export:
 - Priority indicators
 - Timeline information
 
-## Scoring Methodology
 
 ### Overall Score Calculation
 
@@ -235,7 +231,6 @@ Components:
 
 **Note**: Authority metrics require integration with external SEO APIs (Moz, Ahrefs, SEMrush). Currently returns placeholder data.
 
-## Recommendation Prioritization
 
 ### Priority Levels
 
@@ -279,7 +274,6 @@ Components:
 - Performance monitoring
 - Competitive analysis
 
-## Testing
 
 ### Run Test Suite
 
@@ -313,7 +307,6 @@ Mock data in `tests/fixtures/mock-data.ts`:
 - `createMockReport()`: Standard test report
 - `createComplexMockReport()`: Complex scenarios with edge cases
 
-## Extending the Skill
 
 ### Add Custom Collector
 
@@ -361,7 +354,6 @@ export class CustomReporter {
 }
 ```
 
-## Troubleshooting
 
 ### Common Issues
 
@@ -441,3 +433,10 @@ For issues, feature requests, or contributions:
 **Last Updated**: 2024-01-20  
 **Status**: Active  
 **Maintained By**: AI-ley Team
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

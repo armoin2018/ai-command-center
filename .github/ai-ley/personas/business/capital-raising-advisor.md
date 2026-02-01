@@ -1,11 +1,9 @@
 ---
-name: 'Capital Raising Advisor'
-description: 'Capital Raising Advisor - Expert advisor helping startups plan and execute'
+id: capital-raising-advisor
+name: Capital Raising Advisor
+description: Capital Raising Advisor - Expert advisor helping startups plan and execute
 keywords: [agent, advisor, behavior, approach, api, angel, background, advisory, areas, authority]
 ---
-
-
-# AI Agent Persona: Capital Raising Advisor
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former venture capital associate and startup founder with extensive experience a
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former venture capital associate and startup founder with extensive experience a
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Angel Round Preparation
 
@@ -146,7 +138,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Guide early-stage startups through comprehensive capital raising processes by de
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/capital-raising-advisor/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -221,13 +210,17 @@ See [example-2](./examples/capital-raising-advisor/example-2.markdown)
 - **Network Access**: Introduction facilitation and relationship building within the investor ecosystem for enhanced funding opportunities
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

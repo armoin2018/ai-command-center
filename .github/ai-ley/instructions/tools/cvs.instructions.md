@@ -1,17 +1,15 @@
 ---
-name: 'Cvs.Instructions'
-description: 'Development guidelines and best practices for Cvs.Instructions'
+id: cvs
+name: Cvs.Instructions
+description: Development guidelines and best practices for Cvs.Instructions
 keywords: [administrative, commands, (concurrent, common, architecture, assistant, backend, avoid, cli, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "cvs, version-control, **/.cvs, **/CVSROOT"
 ---
 
-# CVS (Concurrent Versions System) Instructions
 
 ## Overview
 - **Domain**: Legacy Centralized Version Control System for Historical Project Maintenance
@@ -19,7 +17,6 @@ applyTo: "cvs, version-control, **/.cvs, **/CVSROOT"
 - **Applicable To**: Legacy systems, maintenance projects, historical code preservation
 - **Integration Level**: Legacy workflows, maintenance scripts, and archival systems
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Centralized Repository Model**: Single repository with client-server architecture
@@ -40,7 +37,6 @@ applyTo: "cvs, version-control, **/.cvs, **/CVSROOT"
 - **Myth**: CVS cannot handle binary files
   **Reality**: CVS can handle binary files with proper configuration, though not optimally
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -80,12 +76,10 @@ See [example-2](./examples/cvs/example-2.txt)
 #### Legacy Maintenance Script
 See [example-3](./examples/cvs/example-3.bash)
 
-## Best Practices
 
 ### CVS Workflow Management
 See [example-4](./examples/cvs/example-4.bash)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Legacy Code Maintenance
 **Scenario**: Maintain old software systems that still use CVS
@@ -110,7 +104,6 @@ See [example-6](./examples/cvs/example-6.bash)
 - **Why It's Problematic**: CVS handles binary files poorly, leading to repository bloat
 - **Better Approach**: Use external storage for large binaries and reference them in CVS
 
-## Tools and Resources
 
 ### Essential CVS Commands
 See [example-7](./examples/cvs/example-7.bash)
@@ -125,7 +118,6 @@ See [example-8](./examples/cvs/example-8.bash)
 - **WinCVS**: Cross-platform GUI client - http://www.wincvs.org/
 - **Eclipse CVS Plugin**: IDE integration for development
 
-## Quality and Compliance
 
 ### Quality Standards
 - Consistent commit message format with clear descriptions
@@ -191,18 +183,7 @@ When helping teams with CVS:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

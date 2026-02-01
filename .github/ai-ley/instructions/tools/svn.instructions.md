@@ -1,17 +1,15 @@
 ---
-name: 'Svn.Instructions'
-description: 'Development guidelines and best practices for Svn.Instructions'
+id: svn
+name: Svn.Instructions
+description: Development guidelines and best practices for Svn.Instructions
 keywords: [(svn), avoid, binary, asset, architecture, assistant, authentication, authorization, advanced, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "svn, subversion, version-control, **/.svn, **/svnignore"
 ---
 
-# Subversion (SVN) Version Control Instructions
 
 ## Overview
 - **Domain**: Centralized Version Control System for Legacy and Enterprise Environments
@@ -19,7 +17,6 @@ applyTo: "svn, subversion, version-control, **/.svn, **/svnignore"
 - **Applicable To**: Legacy systems, enterprise environments, projects requiring centralized control
 - **Integration Level**: Development workflows, CI/CD pipelines, and team collaboration
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Centralized Repository Model**: Single source of truth with centralized server architecture
@@ -40,7 +37,6 @@ applyTo: "svn, subversion, version-control, **/.svn, **/svnignore"
 - **Myth**: SVN branching is difficult and expensive
   **Reality**: Modern SVN handles branching efficiently with copy-on-write semantics
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/svn/example-2.txt)
 #### Jenkins CI/CD Integration
 See [example-3](./examples/svn/example-3.groovy)
 
-## Best Practices
 
 ### Advanced SVN Workflow Management
 See [example-4](./examples/svn/example-4.bash)
@@ -87,7 +82,6 @@ See [example-4](./examples/svn/example-4.bash)
 ### Git-SVN Bridge Integration
 See [example-5](./examples/svn/example-5.bash)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Enterprise Release Management
 **Scenario**: Manage software releases with proper branching and tagging strategy
@@ -112,7 +106,6 @@ See [example-7](./examples/svn/example-7.bash)
 - **Why It's Problematic**: Makes code review difficult and complicates rollbacks
 - **Better Approach**: Group related changes together and use descriptive commit messages
 
-## Tools and Resources
 
 ### Essential SVN Commands and Operations
 See [example-8](./examples/svn/example-8.bash)
@@ -126,7 +119,6 @@ See [example-9](./examples/svn/example-9.bash)
 - **TortoiseSVN Documentation**: https://tortoisesvn.net/docs/
 - **Git-SVN Guide**: https://git-scm.com/docs/git-svn
 
-## Quality and Compliance
 
 ### Quality Standards
 - Consistent repository structure with trunk/branches/tags layout
@@ -192,18 +184,7 @@ When helping teams with SVN:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

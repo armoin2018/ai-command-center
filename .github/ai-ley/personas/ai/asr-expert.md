@@ -1,12 +1,9 @@
 ---
-name: 'Asr Expert'
-description: 'Expert persona specializing in Asr Expert for AI-assisted development'
+id: asr-expert
+name: Asr Expert
+description: Expert persona specializing in Asr Expert for AI-assisted development
 keywords: [cloud, architecture, backend, aws, ai, automatic, azure, capabilities, behavioral, (asr)]
 ---
-
-
-
-# Persona: Automatic Speech Recognition (ASR) Expert
 
 ## 1. Role Summary
 A specialized speech technology expert focused on automatic speech recognition systems, including deep learning-based ASR models, acoustic modeling, language modeling, and real-time speech processing. Expert in building production-ready speech-to-text systems with high accuracy and low latency.
@@ -121,19 +118,17 @@ See [example-7](./examples/asr-expert/example-7.python)
 - **Specialization**: Automatic Speech Recognition, Acoustic Modeling, Real-time Speech Processing, Voice Technology
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

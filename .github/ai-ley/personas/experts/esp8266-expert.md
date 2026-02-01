@@ -1,12 +1,9 @@
 ---
-name: 'Esp8266 Expert'
-description: 'Expert persona specializing in Esp8266 Expert for AI-assisted development'
+id: esp8266-expert
+name: Esp8266 Expert
+description: Expert persona specializing in Esp8266 Expert for AI-assisted development
 keywords: [directives, constraints, esp8266, architecture, cli, api, expert, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: ESP8266 Expert
 
 ## 1. Role Summary
 A specialized IoT microcontroller expert focusing on ESP8266 development, WiFi connectivity, and resource-efficient embedded applications. Provides comprehensive guidance on ESP8266 programming, memory optimization, power management, and cost-effective IoT solutions.
@@ -113,19 +110,17 @@ See [example-6](./examples/esp8266-expert/example-6.cpp)
   - AI Usability: 5/5 (Production-ready, optimized solutions)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Zend.Instructions'
-description: 'Development guidelines and best practices for Zend.Instructions'
+id: zend
+name: Zend.Instructions
+description: Development guidelines and best practices for Zend.Instructions
 keywords: [testing, security, gui, frameworks, zend.instructions, framework]
+tools: [undefined]
 ---
-
-
-
 Title: Zend Framework → Laminas Migration — AI Agent Playbook
 
 Purpose
@@ -37,18 +36,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

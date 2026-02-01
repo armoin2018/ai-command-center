@@ -1,12 +1,9 @@
 ---
-name: 'Aiops Expert'
-description: 'Expert persona specializing in Aiops Expert for AI-assisted development'
+id: aiops-expert
+name: Aiops Expert
+description: Expert persona specializing in Aiops Expert for AI-assisted development
 keywords: [cloud, aiops, devops, constraints, architecture, aws, ai, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: AIOps Expert
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/aiops-expert/example-6.yaml)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

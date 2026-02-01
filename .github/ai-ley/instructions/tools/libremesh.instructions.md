@@ -1,15 +1,10 @@
 ---
-name: 'libremesh.instructions'
-description: 'Development guidelines and best practices for Libremesh.Instructions'
+id: libremesh
+name: libremesh.instructions
+description: Development guidelines and best practices for Libremesh.Instructions
 keywords: [api, cloud, agent, compliance, architecture, authentication, assistant, avoid, compose, community]
+tools: [undefined]
 ---
-
-
-
-# LibreMesh Community Networking Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents regarding LibreMesh community mesh networking framework, covering OpenWrt-based mesh networks, decentralized wireless infrastructure, routing protocols, and resilient community networking for secure distributed communications with production deployment automation.
@@ -88,19 +83,8 @@ See [example-2](./examples/libremesh/example-2.yaml)
 - **Use Cases**: Enterprise mesh networks, community connectivity, emergency communications, smart city infrastructure, tactical deployments
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

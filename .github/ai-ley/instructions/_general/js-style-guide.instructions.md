@@ -1,11 +1,10 @@
 ---
-name: 'Js Style Guide.Instructions'
-description: 'Development guidelines and best practices for Js Style Guide.Instructions'
+id: js-style-guide
+name: Js Style Guide.Instructions
+description: Development guidelines and best practices for Js Style Guide.Instructions
 keywords: [async, cli, best practices, classes, comments, based), (airbnb, arrays, (prettier), browser]
+tools: [undefined]
 ---
-
-
-
 # JavaScript Style Guide (Airbnb-based)
 
 This guide codifies how we write modern JavaScript. It’s based on the Airbnb JavaScript Style Guide, adapted with pragmatic defaults and a few project-specific overrides. Follow this guide for all JavaScript in browser and Node contexts.
@@ -217,18 +216,7 @@ Questions or proposals? Open a PR that includes rationale, examples, and updated
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

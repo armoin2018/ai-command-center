@@ -1,11 +1,10 @@
 ---
-name: 'Admin Dashboard.Instructions'
-description: 'Development guidelines and best practices for Admin Dashboard.Instructions'
+id: admin-dashboard
+name: Admin Dashboard.Instructions
+description: Development guidelines and best practices for Admin Dashboard.Instructions
 keywords: [dashboard, administrative, web design, dashboard.instructions, admin]
+tools: [undefined]
 ---
-
-
-
 # Administrative Dashboard
 
 - Data-rich interfaces with charts and tables.
@@ -14,18 +13,7 @@ keywords: [dashboard, administrative, web design, dashboard.instructions, admin]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,10 @@
 ---
 id: ailey-architect
 name: AI-ley Architect
-description: 'Software architecture specialist for design patterns, system design, and preventing anti-patterns'
+description: Software architecture specialist for design patterns, system design, and preventing anti-patterns
 keywords: [architecture, design-patterns, system-design, microservices, anti-patterns, SOLID, clean-architecture]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Architect Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -63,7 +62,6 @@ Software architecture specialist providing strategic guidance on:
 
 ---
 
-## Methodology
 
 ### 1. Requirements Analysis
 
@@ -137,3 +135,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

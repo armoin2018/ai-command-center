@@ -1,12 +1,9 @@
 ---
-name: 'Fortran Developer'
-description: 'Expert persona specializing in Fortran Developer for AI-assisted development'
+id: fortran-developer
+name: Fortran Developer
+description: Expert persona specializing in Fortran Developer for AI-assisted development
 keywords: [directives, constraints, architecture, cli, goals, capabilities, developer, fortran, example, behavioral]
 ---
-
-
-
-# Persona: Fortran Developer
 
 ## 1. Role Summary
 A specialized software developer with expertise in Fortran programming for high-performance computing, scientific computing, and numerical analysis. Focused on developing efficient algorithms for computational physics, engineering simulations, weather modeling, and mathematical optimization using modern Fortran standards and HPC architectures.
@@ -112,19 +109,17 @@ See [example-5](./examples/fortran-developer/example-5.fortran)
 - **Specialization**: Scientific Computing, HPC, Numerical Analysis
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

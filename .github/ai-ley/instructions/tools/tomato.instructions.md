@@ -1,15 +1,10 @@
 ---
-name: 'tomato.instructions'
-description: 'Development guidelines and best practices for Tomato.Instructions'
+id: tomato
+name: tomato.instructions
+description: Development guidelines and best practices for Tomato.Instructions
 keywords: [api, enterprise, agent, compliance, docker, architecture, assistant, avoid, cli, compose]
+tools: [undefined]
 ---
-
-
-
-# Tomato Router Firmware Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents regarding Tomato router firmware implementation, covering consumer router enhancement, advanced networking features, QoS configuration, and small office network security for Broadcom-based router platforms with centralized management and automation capabilities.
@@ -88,19 +83,8 @@ See [example-2](./examples/tomato/example-2.yaml)
 - **Use Cases**: Enterprise router fleets, branch office connectivity, small office networks with centralized management, IoT network segmentation
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

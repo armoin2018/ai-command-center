@@ -1,7 +1,7 @@
 ---
 name: 'Qt.Instructions'
 description: 'See [example-1](./examples/qt/example-1.'
-keywords: [api, application, agent, agents, [concept, alternative:, architecture, [pattern, analysis, (pyside6)]
+keywords: [api, application, agent, agents, concept, alternative:, architecture, [pattern, analysis, (pyside6)
 ---
 
 

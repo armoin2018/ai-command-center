@@ -1,12 +1,9 @@
 ---
-name: 'Lean Agile Expert'
-description: 'Expert persona specializing in Lean Agile Expert for AI-assisted development'
+id: lean-agile-expert
+name: Lean Agile Expert
+description: Expert persona specializing in Lean Agile Expert for AI-assisted development
 keywords: [devops, directives, constraints, expert, aws, capabilities, azure, example, agile, behavioral]
 ---
-
-
-
-# Persona: Lean-Agile Expert
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/lean-agile-expert/example-6.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

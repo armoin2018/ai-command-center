@@ -21,11 +21,11 @@ Create the following skills
 create skill ailey-progress-report that generate a project progress report based on the .project/PLAN.json
 follow the instructions defined in the prompt
 
-- ailey-add-skill
+[X] ailey-add-skill
 
-- ailey-index
+[X] ailey-index
 
-- ailey-jira
+[X] ailey-jira
 
 [X] update the ailey-data-converter skill to support 
   - generation of schemas 
@@ -50,17 +50,17 @@ follow the instructions defined in the prompt
   - ability to update individal items or entire elements 
   - support schema version coversion
 
-- ailey-confluence
+[X] ailey-confluence
 
 
 - ailey-evolve
 
 
-- ailey-data-converter
+[X} ailey-data-converter
 
 
 
-- ailey-pdf-converter
+[X] ailey-pdf-converter (image-tool)
 
 
 [X] /addSkill ailey-image-tool
@@ -147,10 +147,10 @@ score: 5.0
     - Assess Quality score 
 
 
-- ailey-gamma
+[X] ailey-gamma
 
 
-- ailey-outlook
+[X] ailey-outlook
 
 
 - ailey-excel
@@ -176,20 +176,44 @@ score: 5.0
 
 - ailey-gemini-video
 
-- ailey-ocr
+[X] ailey-ocr (ailey-image)
 
-- ailey-pdf
+[X] ailey-pdf (ailey-image)
 
-- ailey-svg 
+[X] ailey-svg (ailey-image) 
 
-- ailey-linkedin
+[X] ailey-linkedin
 
-- ailey-facebook
+[X] ailey-facebook
 
-- ailey-tiktok
+[X] ailey-tiktok
 
-- ailey-redit
+[X] ailey-redit
+
+[X] ailey-discord
 
 - ailey-zapier
 
 - ailey-mailchimp
+
+- ailey-wordpress
+
+- ailey-woocommerce
+
+[X] ailey-twitter-X
+
+- ailey-zoom
+
+- ailey-youtube
+
+- ailey-capcut
+
+- ailey-amazon
+
+- ailey-meetup
+
+- ailey-threads
+
+Persona 
+- Operations Manager
+

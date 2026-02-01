@@ -1,11 +1,9 @@
 ---
-name: 'Resume Consultant'
-description: 'Resume Consultant - Strategic career communications specialist with deep'
+id: resume-consultant
+name: Resume Consultant
+description: Resume Consultant - Strategic career communications specialist with deep
 keywords: [agent, behavior, approach, business, boundaries, background, areas, branding, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Resume Consultant
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience working with diverse professionals across industries from e
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience working with diverse professionals across industries from e
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Career Transition Optimization
 
@@ -146,7 +138,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Transform client professional experience into strategically optimized career doc
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/resume-consultant/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/resume-consultant/example-2.markdown)
 - **Career Development**: Transition strategies, networking approaches, interview psychology, salary negotiation, and long-term career planning methodologies
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,10 +1,10 @@
 ---
-name: 'Flipper Zero Hardware Security Instructions'
-description: 'Flipper Zero hardware security testing device guide covering multi-protocol analysis, RF testing, infrared communication, NFC/RFID research, and ethical security research within authorized laboratory environments and compliance frameworks.'
+id: flipper-zero
+name: Flipper Zero Hardware Security Instructions
+description: Flipper Zero hardware security testing device guide covering multi-protocol analysis, RF testing, infrared communication, NFC/RFID research, and ethical security research within authorized laboratory environments and compliance frameworks.
 keywords: [avoid, enterprise, compliance, essentials, architecture, authorization, authentication, assistant, advanced, aws]
+tools: [undefined]
 ---
-
-
 ---
 
 ai-system-type: "security-testing-tool"
@@ -83,7 +83,6 @@ See [example-1](./examples/flipper-zero/example-1.python)
 
 See [example-2](./examples/flipper-zero/example-2.bash)
 
-## AI Implementation Guidelines
 
 ### Enterprise Security Research Framework
 
@@ -153,13 +152,8 @@ See [example-2](./examples/flipper-zero/example-2.bash)
 - **Use Cases**: Authorized security research, enterprise penetration testing, compliance validation, educational training
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

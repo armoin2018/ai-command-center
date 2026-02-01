@@ -1,11 +1,10 @@
 ---
-name: 'Css.Instructions'
-description: 'Development guidelines and best practices for Css.Instructions'
+id: css
+name: Css.Instructions
+description: Development guidelines and best practices for Css.Instructions
 keywords: [(with, api, languages, coding, gui, architecture, hints), css.instructions, guide, framework]
+tools: [undefined]
 ---
-
-
-
 # CSS Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for CSS development. These include AI linting hints to automatically enforce style rules and maintain clean, maintainable, and performant stylesheets.
@@ -224,18 +223,7 @@ See [example-9](./examples/css/example-9.css)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

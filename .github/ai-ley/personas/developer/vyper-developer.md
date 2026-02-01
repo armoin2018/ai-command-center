@@ -1,11 +1,9 @@
 ---
-name: 'Vyper Developer'
-description: 'Meticulous and security-focused blockchain developer specializing in'
+id: vyper-developer
+name: Vyper Developer
+description: Meticulous and security-focused blockchain developer specializing in
 keywords: [devops, architecture, expertise, communication, background, developer, framework, examples, areas, identity]
 ---
-
-
-# Vyper Developer
 
 ## Persona Identity
 
@@ -139,13 +137,17 @@ keywords: [devops, architecture, expertise, communication, background, developer
 - Collaborates with **Compliance Officers** on audit documentation and security reporting
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

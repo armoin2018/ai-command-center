@@ -1,11 +1,10 @@
 ---
-name: 'Phaser.Instructions'
-description: 'Development guidelines and best practices for Phaser.Instructions'
+id: phaser
+name: Phaser.Instructions
+description: Development guidelines and best practices for Phaser.Instructions
 keywords: [mobile, gui, frameworks, web, phaser.instructions]
+tools: [undefined]
 ---
-
-
-
 Title: Phaser — AI Agent Game Dev Guide
 
 Use cases
@@ -24,18 +23,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

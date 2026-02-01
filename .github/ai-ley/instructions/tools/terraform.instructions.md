@@ -1,12 +1,10 @@
 ---
-name: 'Terraform Enterprise Infrastructure-as-Code Platform'
-description: 'Enterprise Terraform infrastructure-as-code platform with advanced HCL'
+id: terraform
+name: Terraform Enterprise Infrastructure-as-Code Platform
+description: Enterprise Terraform infrastructure-as-code platform with advanced HCL
 keywords: [api, alerting, actions, architecture, backend, ci/cd, aws, advanced, azure, automated]
+tools: [undefined]
 ---
-
-
-# Terraform Enterprise Infrastructure-as-Code at Scale
-
 ## 🏢 Enterprise Strategic Overview
 
 Terraform Enterprise Infrastructure-as-Code provides comprehensive multi-cloud infrastructure provisioning, configuration management, and lifecycle automation across AWS, Azure, GCP, and hybrid environments. This enterprise implementation features advanced HCL patterns, centralized state management, compliance automation, security frameworks, policy-as-code enforcement, and production-scale monitoring integration with comprehensive cost governance and organizational scalability.
@@ -44,13 +42,11 @@ Enterprise deployments utilize advanced features including Terraform Cloud/Enter
 - **Scale**: 100K+ resources, 1K+ modules, 500+ workspaces across 50+ cloud accounts
 - **Technologies**: HCL 2.0, Go providers, Sentinel policies, Terraform Cloud API, Git, CI/CD pipelines
 
-## 📚 Advanced Enterprise HCL Patterns & Architecture
 
 ### Multi-Cloud Provider Configuration
 
 See [example-2](./examples/terraform/example-2.hcl)
 
-## 🛠️ Enterprise Installation & Setup
 
 ### Terraform Enterprise Platform
 
@@ -60,7 +56,6 @@ See [example-3](./examples/terraform/example-3.bash)
 
 See [example-4](./examples/terraform/example-4.bash)
 
-## 🔧 Enterprise Variable Architecture
 
 ### Comprehensive Variable Definitions
 
@@ -70,7 +65,6 @@ See [example-5](./examples/terraform/example-5.hcl)
 
 See [example-6](./examples/terraform/example-6.hcl)
 
-## 🔐 Security & Compliance Framework
 
 ### Sentinel Policy-as-Code
 
@@ -84,7 +78,6 @@ See [example-8](./examples/terraform/example-8.hcl)
 
 See [example-9](./examples/terraform/example-9.hcl)
 
-## 📊 Monitoring & Observability Integration
 
 ### Prometheus & Grafana Deployment
 
@@ -94,7 +87,6 @@ See [example-10](./examples/terraform/example-10.hcl)
 
 See [example-11](./examples/terraform/example-11.hcl)
 
-## 🚀 CI/CD Pipeline Integration
 
 ### GitHub Actions Enterprise Pipeline
 
@@ -301,13 +293,8 @@ resource "tfe_workspace" "enterprise_infrastructure" {
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0

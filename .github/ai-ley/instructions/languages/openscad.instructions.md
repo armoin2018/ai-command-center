@@ -1,11 +1,10 @@
 ---
-name: 'Openscad.Instructions'
-description: 'Development guidelines and best practices for Openscad.Instructions'
+id: openscad
+name: Openscad.Instructions
+description: Development guidelines and best practices for Openscad.Instructions
 keywords: [openscad.instructions, languages, gui]
+tools: [undefined]
 ---
-
-
-
 Title: OpenSCAD — AI Agent Modeling Guide
 
 Use cases
@@ -24,18 +23,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

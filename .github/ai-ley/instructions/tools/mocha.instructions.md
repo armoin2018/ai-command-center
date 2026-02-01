@@ -1,12 +1,10 @@
 ---
-name: 'Mocha JavaScript Testing Framework Instructions'
-description: 'Comprehensive guide for using Mocha testing framework for JavaScript'
-keywords: [(tdd), **performance, .mocharc.json, advanced, **avoid, **common, **use, (.mocharc.json), **test, **asynchronous]
+id: mocha
+name: Mocha JavaScript Testing Framework Instructions
+description: Comprehensive guide for using Mocha testing framework for JavaScript
+keywords: [(tdd), performance, .mocharc.json, advanced, avoid, common, use, (.mocharc.json), test, asynchronous]
+tools: [undefined]
 ---
-
-
-# Mocha JavaScript Testing Framework Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Mocha
@@ -15,7 +13,6 @@ keywords: [(tdd), **performance, .mocharc.json, advanced, **avoid, **common, **u
 - **Purpose**: Flexible JavaScript testing framework for Node.js and browsers, supporting BDD, TDD, and asynchronous testing
 - **Prerequisites**: Node.js 14+, npm/yarn/pnpm, JavaScript/TypeScript project
 
-## When to Use Mocha
 
 ### ✅ **Use Mocha When**
 
@@ -38,7 +35,6 @@ keywords: [(tdd), **performance, .mocharc.json, advanced, **avoid, **common, **u
 - Team prefers opinionated frameworks with less configuration overhead
 - Working on simple projects where test setup complexity isn't justified
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -60,7 +56,6 @@ keywords: [(tdd), **performance, .mocharc.json, advanced, **avoid, **common, **u
 | **Assertion Libraries** | Single library (Chai) | Multiple assertion styles | Custom assertions    |
 | **Reporting**           | Basic console output  | HTML + JSON reports       | Custom reporters     |
 
-## Installation & Setup
 
 ### Package Manager Installation
 
@@ -78,7 +73,6 @@ See [example-3](./examples/mocha/example-3.bash)
 
 See [example-4](./examples/mocha/example-4.bash)
 
-## Configuration
 
 ### .mocharc.json Configuration
 
@@ -100,7 +94,6 @@ See [example-8](./examples/mocha/example-8.javascript)
 
 See [example-9](./examples/mocha/example-9.javascript)
 
-## Core Features
 
 ### Test Structure and Organization
 
@@ -138,7 +131,6 @@ See [example-13](./examples/mocha/example-13.javascript)
 
 See [example-14](./examples/mocha/example-14.bash)
 
-## Workflow Integration
 
 ### Development Workflow
 
@@ -160,7 +152,6 @@ See [example-16](./examples/mocha/example-16.yaml)
 
 See [example-17](./examples/mocha/example-17.json)
 
-## Best Practices
 
 ### ✅ **Test Organization Best Practices**
 
@@ -198,7 +189,6 @@ See [example-17](./examples/mocha/example-17.json)
 - **Don't ignore flaky tests** - Fix intermittent test failures promptly
 - **Avoid testing third-party libraries** - Focus on your application logic
 
-## Advanced Mocha Usage
 
 ### Custom Reporters
 
@@ -216,7 +206,6 @@ See [example-20](./examples/mocha/example-20.javascript)
 
 See [example-21](./examples/mocha/example-21.javascript)
 
-## Integration with Other Tools
 
 ### Chai Assertion Library
 
@@ -230,9 +219,6 @@ See [example-23](./examples/mocha/example-23.javascript)
 
 See [example-24](./examples/mocha/example-24.bash)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Tests Not Running
 
@@ -266,7 +252,6 @@ See [example-28](./examples/mocha/example-28.bash)
 
 See [example-29](./examples/mocha/example-29.javascript)
 
-## Security Considerations
 
 ### Security Best Practices
 
@@ -305,13 +290,8 @@ When helping with Mocha:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

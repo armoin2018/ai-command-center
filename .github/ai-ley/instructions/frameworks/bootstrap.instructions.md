@@ -1,7 +1,7 @@
 ---
 name: 'Bootstrap.Instructions'
 description: 'See [example-1](./examples/bootstrap/example-1.'
-keywords: [applying, agent, [pattern, analysis, api, basic, advanced, agents, avoid, accessibility]
+keywords: [applying, agent, pattern, analysis, api, basic, advanced, agents, avoid, accessibility
 ---
 
 

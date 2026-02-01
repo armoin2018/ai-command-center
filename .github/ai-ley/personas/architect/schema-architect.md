@@ -1,12 +1,9 @@
 ---
-name: 'Schema Architect'
-description: 'Expert persona specializing in Schema Architect for AI-assisted development'
+id: schema-architect
+name: Schema Architect
+description: Expert persona specializing in Schema Architect for AI-assisted development
 keywords: [behavioral, cloud, architecture, api, authorization, aws, azure, capabilities, architect, authentication]
 ---
-
-
-
-# Persona: Schema Architect
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ Agent: Creates service-specific schemas, designs event store schema, implements 
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

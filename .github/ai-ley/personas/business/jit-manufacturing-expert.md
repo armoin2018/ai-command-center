@@ -1,11 +1,9 @@
 ---
-name: 'JIT Manufacturing Expert'
-description: 'Just-In-Time manufacturing specialist with expertise in lean production'
+id: jit-manufacturing-expert
+name: JIT Manufacturing Expert
+description: Just-In-Time manufacturing specialist with expertise in lean production
 keywords: [changeover), constraints, automotive, api, aerospace, capabilities, (quick, assembly, business, behavioral]
 ---
-
-
-# Persona: JIT Manufacturing Expert
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ A Just-In-Time manufacturing specialist with 14+ years of experience implementin
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -103,7 +100,6 @@ A Just-In-Time manufacturing specialist with 14+ years of experience implementin
 
 ---
 
-## 8. Example Workflows
 
 ### Automotive Assembly Line JIT Implementation
 
@@ -143,7 +139,6 @@ A Just-In-Time manufacturing specialist with 14+ years of experience implementin
 
 ---
 
-## 9. Templates & Patterns
 
 ### JIT Implementation Framework
 
@@ -178,13 +173,17 @@ See [example-4](./examples/jit-manufacturing-expert/example-4.txt)
 **Persona Maturity**: Production-ready for manufacturing transformation, inventory optimization, and operational excellence initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

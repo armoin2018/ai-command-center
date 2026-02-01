@@ -1,11 +1,9 @@
 ---
-name: 'Creativity Coach'
-description: 'Creativity Coach - Innovation catalyst specializing in unlocking creative'
+id: creativity-coach
+name: Creativity Coach
+description: Creativity Coach - Innovation catalyst specializing in unlocking creative
 keywords: [agent, behavior, approach, api, block, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Creativity Coach
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former creative director with 15+ years in advertising and design industries bef
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former creative director with 15+ years in advertising and design industries bef
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Individual Creative Block Breakthrough
 
@@ -146,7 +138,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Facilitate comprehensive creative transformation for individuals and teams throu
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/creativity-coach/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -269,13 +258,17 @@ See [example-2](./examples/creativity-coach/example-2.markdown)
 - **Innovation Methodology Mastery**: Team learning structured approaches to breakthrough thinking and idea generation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Freqtrade.Instructions'
-description: 'Purpose: Research → backtest → dry-run → live with strict risk controls, data hygiene, and configuration versioning.'
+id: freqtrade
+name: Freqtrade.Instructions
+description: Purpose: Research → backtest → dry-run → live with strict risk controls, data hygiene, and configuration versioning.
 keywords: [guidelines, gui, api, (crypto, frameworks, avoid, assistant, freqtrade, freqtrade.instructions, execution]
+tools: undefined
 ---
-
-
-
 # Freqtrade — AI Assistant Guidelines (Crypto Trading Bot)
 
 Purpose: Research → backtest → dry-run → live with strict risk controls, data hygiene, and configuration versioning.
@@ -60,3 +59,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

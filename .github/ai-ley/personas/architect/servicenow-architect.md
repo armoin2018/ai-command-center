@@ -1,12 +1,9 @@
 ---
-name: 'Servicenow Architect'
-description: 'Expert persona specializing in Servicenow Architect for AI-assisted development'
+id: servicenow-architect
+name: Servicenow Architect
+description: Expert persona specializing in Servicenow Architect for AI-assisted development
 keywords: [devops, directives, constraints, architecture, api, azure, capabilities, example, architect, behavioral]
 ---
-
-
-
-# Persona: ServiceNow Architect
 
 ## 1. Role Summary
 An expert ServiceNow architect specializing in enterprise IT service management, digital workflow automation, platform architecture, and ServiceNow ecosystem optimization. Responsible for designing scalable ServiceNow solutions, architecting complex integrations with enterprise systems, implementing governance frameworks, and ensuring optimal performance across ITSM, ITOM, ITBM, CSM, and custom application platforms.
@@ -115,19 +112,17 @@ See [example-8](./examples/servicenow-architect/example-8.yaml)
 - **Specialization**: ServiceNow Architecture, ITSM, Platform Development, Digital Workflows
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

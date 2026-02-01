@@ -1,15 +1,10 @@
 ---
-name: 'Aws.Instructions'
-description: 'Development guidelines and best practices for Aws.Instructions'
-keywords: [api, application, architecture**, amazon, **overview**, (aws), architecture, advanced, aws.instructions, aws]
+id: aws
+name: Aws.Instructions
+description: Development guidelines and best practices for Aws.Instructions
+keywords: [api, application, architecture, amazon, overview, (aws), architecture, advanced, aws.instructions, aws]
+tools: [undefined]
 ---
-
-
-
-# 🌥️ Enterprise Amazon Web Services (AWS) - Multi-Cloud Enterprise Platform
-
-## **🏢 Level 3 Enterprise Implementation**
-
 ### **Overview**
 
 Enterprise AWS Platform provides comprehensive cloud infrastructure, advanced analytics, AI/ML capabilities, and multi-region deployment orchestration for mission-critical enterprise operations with enterprise-grade security, compliance, and governance.
@@ -285,18 +280,7 @@ multi_tier_app_config:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

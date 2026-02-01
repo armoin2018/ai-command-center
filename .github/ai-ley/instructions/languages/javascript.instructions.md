@@ -1,11 +1,10 @@
 ---
-name: 'Javascript.Instructions'
-description: 'Modern JavaScript development guidelines for AI coding assistants, emphasizing ES6+ features, best practices, and maintainable code patterns.'
+id: javascript
+name: Javascript.Instructions
+description: Modern JavaScript development guidelines for AI coding assistants, emphasizing ES6+ features, best practices, and maintainable code patterns.
 keywords: [context, comprehensive, asynchronous, classes, common, async, async/await, configuration, avoid, composition]
+tools: [undefined]
 ---
-
-
-
 # JavaScript Programming Instructions
 
 Modern JavaScript development guidelines for AI coding assistants, emphasizing ES6+ features, best practices, and maintainable code patterns.
@@ -23,7 +22,6 @@ Modern JavaScript development guidelines for AI coding assistants, emphasizing E
 
 See [example-1](./examples/javascript/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern JavaScript using ES6+ features
@@ -41,7 +39,6 @@ See [example-1](./examples/javascript/example-1.text)
 - Use async/await for asynchronous operations
 - Utilize modules (import/export) for code organization
 
-## 📜 Code Style and Conventions
 
 ### Variable and Function Naming
 
@@ -51,7 +48,6 @@ See [example-2](./examples/javascript/example-2.javascript)
 
 See [example-3](./examples/javascript/example-3.javascript)
 
-## 🔄 Asynchronous Programming
 
 ### Async/Await Best Practices
 
@@ -61,31 +57,26 @@ See [example-4](./examples/javascript/example-4.javascript)
 
 See [example-5](./examples/javascript/example-5.javascript)
 
-## 🛡️ Error Handling
 
 ### Comprehensive Error Handling
 
 See [example-6](./examples/javascript/example-6.javascript)
 
-## 🏗️ Object-Oriented Programming
 
 ### Classes and Inheritance
 
 See [example-7](./examples/javascript/example-7.javascript)
 
-## 🔧 Functional Programming
 
 ### Higher-Order Functions and Composition
 
 See [example-8](./examples/javascript/example-8.javascript)
 
-## 🎯 Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-9](./examples/javascript/example-9.javascript)
 
-## 🧪 Testing Guidelines
 
 ### Unit Testing with Jest
 
@@ -95,13 +86,11 @@ See [example-10](./examples/javascript/example-10.javascript)
 
 See [example-11](./examples/javascript/example-11.javascript)
 
-## 📦 Module System
 
 ### ES6 Modules Best Practices
 
 See [example-12](./examples/javascript/example-12.javascript)
 
-## 🛠️ Development Tools
 
 ### Recommended Configuration
 
@@ -128,18 +117,7 @@ See [example-13](./examples/javascript/example-13.javascript)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

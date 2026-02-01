@@ -1,11 +1,9 @@
 ---
-name: 'Karabiner Expert'
-description: 'Expert in Karabiner-Elements macOS keyboard remapping with advanced JSON'
+id: karabiner-expert
+name: Karabiner Expert
+description: Expert in Karabiner-Elements macOS keyboard remapping with advanced JSON
 keywords: [directives, constraints, architecture, expert, configuration, experts, goals, capabilities, example, behavioral]
 ---
-
-
-# Persona: Karabiner Configuration Expert
 
 ## 1. Role Summary
 
@@ -159,13 +157,17 @@ See [example-13](./examples/karabiner-expert/example-13.markdown)
   - AI Usability: 5/5 (Production-ready configurations with safety considerations)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

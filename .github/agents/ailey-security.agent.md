@@ -1,11 +1,10 @@
 ---
 id: ailey-security
 name: AI-ley Security
-description: 'Cybersecurity specialist for vulnerability assessment, secure coding, and threat analysis'
+description: Cybersecurity specialist for vulnerability assessment, secure coding, and threat analysis
 keywords: [security, cybersecurity, vulnerabilities, penetration-testing, secure-coding, threat-analysis, compliance]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Security Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -74,7 +73,6 @@ Cybersecurity specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Reconnaissance & Assessment
 
@@ -203,3 +201,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

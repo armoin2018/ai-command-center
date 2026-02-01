@@ -1,15 +1,10 @@
 ---
-name: 'salt.instructions'
-description: 'Development guidelines and best practices for Salt.Instructions'
+id: salt
+name: salt.instructions
+description: Development guidelines and best practices for Salt.Instructions
 keywords: [alerting, agent, /srv/pillar/base/webserver.sls, backup, architecture, authentication, backend, avoid, /srv/salt/base/webserver/init.sls, certificate]
+tools: [undefined]
 ---
-
-
-
-# SaltStack Enterprise Configuration Management Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents implementing SaltStack configuration management and orchestration solutions, emphasizing scalable automation, event-driven infrastructure, secure state management, and production deployment patterns with advanced monitoring, compliance frameworks, and multi-cloud orchestration capabilities.
@@ -233,19 +228,8 @@ security:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

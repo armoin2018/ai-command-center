@@ -1,13 +1,10 @@
 ---
-name: 'Svelte.Instructions'
-description: 'See [example-9](./examples/svelte/example-9.'
-keywords: [api, agent, (lightweight), agents, (full, alternative:, architecture, authentication, authorization, (sveltekit)]
+id: svelte
+name: Svelte.Instructions
+description: See [example-9](./examples/svelte/example-9.
+keywords: [api, agent, (lightweight), agents, (full, object Object, architecture, authentication, authorization, (sveltekit)]
+tools: [undefined]
 ---
-
-
-
-# Svelte Framework Instructions for AI Agents
-
 ## When to Use Svelte
 Use Svelte when you need:
 - Minimal bundle sizes with compile-time optimizations
@@ -34,7 +31,6 @@ Consider alternatives when:
 - **Language**: JavaScript/TypeScript with enhanced syntax
 - **Use Cases**: SPAs, static sites, PWAs, component libraries
 
-## Installation & Setup
 
 ### ✅ Recommended: SvelteKit (Full-stack framework)
 See [example-1](./examples/svelte/example-1.bash)
@@ -51,7 +47,6 @@ See [example-3](./examples/svelte/example-3.bash)
 - **For prototyping**: Use SvelteKit with adapter-static
 - **For existing apps**: Progressive adoption with standalone Svelte
 
-## Project Structure
 
 ### ✅ SvelteKit Structure
 See [example-4](./examples/svelte/example-4.txt)
@@ -59,7 +54,6 @@ See [example-4](./examples/svelte/example-4.txt)
 ### ✅ Component Architecture
 See [example-5](./examples/svelte/example-5.txt)
 
-## Core Concepts
 
 ### Components with Script, Markup, and Style
 ✅ **Best Practice**: Single-file components with TypeScript
@@ -79,7 +73,6 @@ See [example-9](./examples/svelte/example-9.svelte)
 ✅ **Best Practice**: Type-safe API routes
 See [example-10](./examples/svelte/example-10.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 - Use TypeScript for better development experience
@@ -105,7 +98,6 @@ See [example-11](./examples/svelte/example-11.svelte)
 
 See [example-12](./examples/svelte/example-12.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Development Setup
 See [example-13](./examples/svelte/example-13.bash)
@@ -135,7 +127,6 @@ See [example-13](./examples/svelte/example-13.bash)
 ## Common Patterns
 See [example-14](./examples/svelte/example-14.svelte)
 
-## Testing
 
 ### ✅ Component Testing
 See [example-15](./examples/svelte/example-15.typescript)
@@ -166,18 +157,7 @@ See [example-17](./examples/svelte/example-17.svelte)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

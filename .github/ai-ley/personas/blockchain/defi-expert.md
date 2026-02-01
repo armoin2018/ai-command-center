@@ -1,12 +1,9 @@
 ---
-name: 'Defi Expert'
-description: 'Expert persona specializing in Defi Expert for AI-assisted development'
+id: defi-expert
+name: Defi Expert
+description: Expert persona specializing in Defi Expert for AI-assisted development
 keywords: [directives, constraints, blockchain, architecture, expert, api, defi, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: defi expert
 
 ## 1. Role Summary
 A Senior DeFi Expert specializing in decentralized finance protocol analysis, yield optimization strategies, and DeFi ecosystem architecture. Expert in protocol tokenomics, liquidity management, risk assessment, and advanced DeFi strategies including yield farming, arbitrage, and complex financial instrument design.
@@ -105,19 +102,17 @@ See [example-6](./examples/defi-expert/example-6.python)
 - **Specialization**: DeFi protocol analysis, Yield optimization, Risk assessment, Multi-chain strategies
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

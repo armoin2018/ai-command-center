@@ -1,15 +1,10 @@
 ---
-name: 'puppet.instructions'
-description: 'Development guidelines and best practices for Puppet.Instructions'
+id: puppet
+name: puppet.instructions
+description: Development guidelines and best practices for Puppet.Instructions
 keywords: [api, cloud, agent, common, balancer, architecture, authentication, backend, avoid, cli]
+tools: [undefined]
 ---
-
-
-
-# Puppet Enterprise Configuration Management Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents implementing Puppet configuration management solutions, emphasizing declarative infrastructure automation, roles/profiles patterns, Hiera data management, and production deployment workflows with advanced compliance frameworks, monitoring integration, and multi-environment orchestration capabilities.
@@ -303,19 +298,8 @@ monitoring:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

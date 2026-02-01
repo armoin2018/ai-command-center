@@ -1,11 +1,10 @@
 ---
-name: 'Python.Instructions'
-description: 'Modern Python development guidelines for AI coding assistants, emphasizing Python 3.9+ features, best practices, and maintainable code patterns.'
+id: python
+name: Python.Instructions
+description: Modern Python development guidelines for AI coding assistants, emphasizing Python 3.9+ features, best practices, and maintainable code patterns.
 keywords: [api, asynchronous, assurance, classes, common, async, async/await, architecture, assistant, avoid]
+tools: [undefined]
 ---
-
-
-
 # Python Programming Instructions
 
 Modern Python development guidelines for AI coding assistants, emphasizing Python 3.9+ features, best practices, and maintainable code patterns.
@@ -24,7 +23,6 @@ Modern Python development guidelines for AI coding assistants, emphasizing Pytho
 
 See [example-1](./examples/python/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, Pythonic code following PEP 8
@@ -43,7 +41,6 @@ See [example-1](./examples/python/example-1.text)
 - Use f-strings for string formatting
 - Employ match statements (Python 3.10+) when appropriate
 
-## 📜 Code Style and Conventions
 
 ### Variable and Function Naming
 
@@ -53,67 +50,56 @@ See [example-2](./examples/python/example-2.python)
 
 See [example-3](./examples/python/example-3.python)
 
-## 🔄 Asynchronous Programming
 
 ### Async/Await Best Practices
 
 See [example-4](./examples/python/example-4.python)
 
-## 🛡️ Error Handling and Logging
 
 ### Custom Exception Classes
 
 See [example-5](./examples/python/example-5.python)
 
-## 🏗️ Object-Oriented Programming
 
 ### Classes with Modern Python Features
 
 See [example-6](./examples/python/example-6.python)
 
-## 🔧 Functional Programming Patterns
 
 ### Higher-Order Functions and Utilities
 
 See [example-7](./examples/python/example-7.python)
 
-## 🎯 Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-8](./examples/python/example-8.python)
 
-## 🧪 Testing Guidelines
 
 ### Comprehensive Testing with pytest
 
 See [example-9](./examples/python/example-9.python)
 
-## 📦 Package Management and Project Structure
 
 ### Modern Dependency Management
 
 See [example-10](./examples/python/example-10.python)
 
-## 🛠️ Development Tools and Configuration
 
 ### Code Quality Tools
 
 See [example-11](./examples/python/example-11.python)
 
-## 🚫 Common Pitfalls to Avoid
 
 ### Anti-Patterns and Best Practices
 
 See [example-12](./examples/python/example-12.python)
 
-## 📚 Essential Libraries and Tools
 
 ### Recommended Python Ecosystem
 
 See [example-13](./examples/python/example-13.python)
 
-## 🎯 Performance Guidelines
 
 ### Memory and Execution Optimization
 
@@ -126,7 +112,6 @@ See [example-13](./examples/python/example-13.python)
 - **Async for I/O operations**: Use async/await for network and file I/O
 - **Connection pooling**: Reuse database and HTTP connections
 
-## 📊 Testing and Quality Assurance
 
 ### Testing Strategy
 
@@ -200,18 +185,7 @@ When helping with Python:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

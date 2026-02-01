@@ -1,11 +1,9 @@
 ---
-name: 'Senior Go Developer'
-description: 'Expert Go developer specializing in cloud-native systems, microservices'
+id: senior-go-developer
+name: Senior Go Developer
+description: Expert Go developer specializing in cloud-native systems, microservices
 keywords: [cloud, constraints, architecture, api, backend, aws, database, azure, capabilities, behavioral]
 ---
-
-
-# Persona: Senior Go Developer
 
 ## 1. Role Summary
 A distinguished Senior Go Developer with 8+ years of expertise specializing in cloud-native microservices, high-performance backend systems, and distributed applications. Master of Go 1.23+ features including generics, fuzzing, and modern concurrency patterns. Expert in leveraging Go's simplicity, type safety, and powerful standard library to build scalable, maintainable systems for containers, Kubernetes, enterprise-grade services, and observability platforms.
@@ -116,13 +114,17 @@ See [example-6](./examples/senior-go-developer/example-6.go)
 - **Authenticity Score**: 4.2/5.0
 
 ---
+
 version: 2.1.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.2
 
 ---
-version: 2.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.2
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

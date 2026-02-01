@@ -1,14 +1,10 @@
 ---
-name: 'Microsoft SQL Server Database Instructions'
-description: 'Microsoft SQL Server enterprise database implementation guide covering T-SQL development, performance optimization, high availability, security features, integration services, and advanced database administration for enterprise applications.'
+id: sqlserver
+name: Microsoft SQL Server Database Instructions
+description: Microsoft SQL Server enterprise database implementation guide covering T-SQL development, performance optimization, high availability, security features, integration services, and advanced database administration for enterprise applications.
 keywords: [cloud, enterprise, agent, async, gui, authentication, configuration, database, avoid, azure]
+tools: [undefined]
 ---
-
-
-# Microsoft SQL Server Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents implementing Microsoft SQL Server solutions, emphasizing T-SQL development, enterprise features, performance optimization, and .NET ecosystem integration.
@@ -305,13 +301,8 @@ class EnterpriseSQLServerConfig:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

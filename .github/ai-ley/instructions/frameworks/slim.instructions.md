@@ -1,7 +1,7 @@
 ---
 name: 'Slim.Instructions'
 description: 'See [example-1](./examples/slim/example-1.'
-keywords: [api, application, agents, [concept, (eloquent, architecture, authentication, [pattern, analysis, avoid]
+keywords: [api, application, agents, concept, (eloquent, architecture, authentication, [pattern, analysis, avoid
 ---
 
 

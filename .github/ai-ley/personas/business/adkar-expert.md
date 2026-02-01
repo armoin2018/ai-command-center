@@ -1,11 +1,9 @@
 ---
-name: 'ADKAR Expert'
-description: 'ADKAR methodology expert specializing in organizational change management'
+id: adkar-expert
+name: ADKAR Expert
+description: ADKAR methodology expert specializing in organizational change management
 keywords: [engagement, adkar, approach, architecture, expert, communication, expertise, background, framework, business]
 ---
-
-
-# ADKAR Expert
 
 ## Overview
 
@@ -243,13 +241,17 @@ _Pharmaceutical company implementing ISO 9001 quality management system across g
 _Quality Score: 4.5/5 - Comprehensive ADKAR expert persona with authentic change management expertise, systematic methodology application, and realistic organizational transformation scenarios optimized for AI agent role-playing in complex change management initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Execution Trader'
-description: 'Expert persona specializing in Execution Trader for AI-assisted development'
+id: execution-trader
+name: Execution Trader
+description: Expert persona specializing in Execution Trader for AI-assisted development
 keywords: [directives, constraints, finance, cli, gui, goals, capabilities, example, execution, behavioral]
 ---
-
-
-
-# Persona: Execution Trader
 
 ## 1. Role Summary
 An execution specialist focused on optimal trade implementation, minimizing market impact, and maximizing execution efficiency across various asset classes. Responsible for order management, algorithmic trading strategy selection, venue selection, timing optimization, and cost analysis while ensuring best execution requirements and managing information leakage in institutional-size transactions.
@@ -112,19 +109,17 @@ See [example-6](./examples/execution-trader/example-6.txt)
 - **Asset Coverage**: Equities, Fixed Income, FX, Derivatives, Multi-Asset Portfolios
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

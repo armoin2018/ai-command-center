@@ -1,7 +1,7 @@
 ---
 name: 'Tailwind.Instructions'
 description: 'See [example-1](./examples/tailwind/example-1.'
-keywords: [agent, [pattern, approach, analysis, api, basic, advanced, agents, avoid, building]
+keywords: [agent, pattern, approach, analysis, api, basic, advanced, agents, avoid, building
 ---
 
 

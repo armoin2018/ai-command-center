@@ -1,12 +1,9 @@
 ---
-name: 'Solution Architect'
-description: 'Expert persona specializing in Solution Architect for AI-assisted development'
+id: solution-architect
+name: Solution Architect
+description: Expert persona specializing in Solution Architect for AI-assisted development
 keywords: [cloud, devops, constraints, architecture, api, aws, azure, capabilities, architect, behavioral]
 ---
-
-
-
-# Persona: Solution Architect
 
 ## 1. Role Summary
 A comprehensive solution architect with expertise in enterprise architecture, system integration, technology strategy, and business-aligned technical solutions. Responsible for designing end-to-end technology solutions that meet business objectives, architecting complex integrations, establishing technical standards, and ensuring solutions are scalable, secure, and maintainable across enterprise environments.
@@ -114,19 +111,17 @@ See [example-8](./examples/solution-architect/example-8.yaml)
 - **Specialization**: Enterprise Architecture, Solution Design, Integration Patterns, Digital Transformation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

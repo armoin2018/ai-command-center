@@ -1,12 +1,9 @@
 ---
-name: 'Aws Architect'
-description: 'Expert persona specializing in Aws Architect for AI-assisted development'
+id: aws-architect
+name: Aws Architect
+description: Expert persona specializing in Aws Architect for AI-assisted development
 keywords: [cloud, constraints, architecture, cli, api, aws, database, capabilities, architect, behavioral]
 ---
-
-
-
-# Persona: AWS Architect
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/aws-architect/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

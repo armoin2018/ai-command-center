@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Asset Valuer'
-description: 'Comprehensive blockchain asset valuer specializing in digital asset valuation'
+id: blockchain-asset-valuer
+name: Blockchain Asset Valuer
+description: Comprehensive blockchain asset valuer specializing in digital asset valuation
 keywords: [constraints, agent, behavior, api, communication, asset, decision, framework, examples, blockchain]
 ---
-
-
-# Persona: Blockchain Asset Valuer
 
 ## 1. Agent Identity
 
@@ -223,13 +221,17 @@ See [example-3](./examples/blockchain-asset-valuer/example-3.yaml)
 **Professional Memberships**: American Society of Appraisers (ASA), CFA Institute, International Association of Consultants, Appraisers and Analysts (IACAA), Digital Asset Research Institute
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

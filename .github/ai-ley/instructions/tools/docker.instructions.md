@@ -1,12 +1,10 @@
 ---
-name: 'Docker Enterprise Containerization Platform'
-description: 'Enterprise Docker Containerization Platform - Comprehensive Level 3 production-ready container platform with advanced security hardening, image signing and verification, multi-architecture builds, enterprise registry management, comprehensive monitoring, CI/CD integration, compliance frameworks, runtime security, and enterprise governance standards for containerized application lifecycle management.'
-keywords: [**alternative, **security, **avoid, **common, (development), **platform, .dockerignore, **deploy, **image, **production]
+id: docker
+name: Docker Enterprise Containerization Platform
+description: Enterprise Docker Containerization Platform - Comprehensive Level 3 production-ready container platform with advanced security hardening, image signing and verification, multi-architecture builds, enterprise registry management, comprehensive monitoring, CI/CD integration, compliance frameworks, runtime security, and enterprise governance standards for containerized application lifecycle management.
+keywords: [alternative, security, avoid, common, (development), platform, .dockerignore, deploy, image, production]
+tools: [undefined]
 ---
-
-
-# 🐳 Docker Enterprise Containerization Platform - Security-First Container Lifecycle Management
-
 ## 🏢 Enterprise Platform Overview
 
 **Docker Enterprise Containerization Platform** is a comprehensive, production-ready solution for building, securing, distributing, and running containerized applications in enterprise environments. This platform provides advanced security hardening, image signing and verification, multi-architecture builds, enterprise registry management, comprehensive monitoring, compliance automation, and enterprise-grade governance standards.
@@ -38,7 +36,6 @@ See [example-1](./examples/docker/example-1.mermaid)
 - **Compliance**: CIS Docker benchmarks with automated validation
 - **Supply Chain**: SLSA Level 3 compliance with SBOM and attestation
 
-## 🎯 Enterprise Use Cases & Decision Matrix
 
 ### ✅ **Deploy Docker Enterprise Platform When**
 
@@ -61,7 +58,6 @@ See [example-1](./examples/docker/example-1.mermaid)
 - **📱 Desktop Applications**: Use native packaging solutions
 - **💰 Cost-Sensitive Workloads**: Use managed container services for reduced operational overhead
 
-## 🔐 Enterprise Security Architecture
 
 ### Advanced Dockerfile Security Hardening
 
@@ -87,7 +83,6 @@ See [example-3](./examples/docker/example-3.dockerfile)
 - Need direct access to host system resources and peripherals
 - Building applications with simple single-server deployment needs
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -109,7 +104,6 @@ See [example-3](./examples/docker/example-3.dockerfile)
 | **Architecture**    | Monolithic application  | Multi-tier application  | Distributed microservices |
 | **Data Management** | Stateless application   | Database integration    | Complex data workflows    |
 
-## Installation & Setup
 
 ### Docker Engine Installation
 
@@ -123,7 +117,6 @@ See [example-5](./examples/docker/example-5.bash)
 
 See [example-6](./examples/docker/example-6.bash)
 
-## Configuration
 
 ### Production-Ready Dockerfile
 
@@ -141,7 +134,6 @@ See [example-9](./examples/docker/example-9.yaml)
 
 See [example-10](./examples/docker/example-10.bash)
 
-## Core Features
 
 ### Multi-Stage Builds
 
@@ -181,7 +173,6 @@ See [example-15](./examples/docker/example-15.yaml)
 
 See [example-16](./examples/docker/example-16.bash)
 
-## Workflow Integration
 
 ### Development Workflow
 
@@ -200,7 +191,6 @@ See [example-17](./examples/docker/example-17.yaml)
 
 See [example-18](./examples/docker/example-18.json)
 
-## Best Practices
 
 ### ✅ **Image Optimization Best Practices**
 
@@ -238,7 +228,6 @@ See [example-18](./examples/docker/example-18.json)
 - **Don't ignore resource limits** - Can cause resource starvation
 - **Avoid tightly coupled containers** - Design for loose coupling and scalability
 
-## Advanced Docker Usage
 
 ### Docker Swarm Orchestration
 
@@ -248,7 +237,6 @@ See [example-19](./examples/docker/example-19.yaml)
 
 See [example-20](./examples/docker/example-20.yaml)
 
-## Integration with Other Tools
 
 ### Kubernetes Integration
 
@@ -258,9 +246,6 @@ See [example-21](./examples/docker/example-21.yaml)
 
 See [example-22](./examples/docker/example-22.hcl)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Container Won't Start
 
@@ -294,7 +279,6 @@ See [example-26](./examples/docker/example-26.bash)
 
 See [example-27](./examples/docker/example-27.dockerfile)
 
-## Security Considerations
 
 ### Security Best Practices
 
@@ -305,13 +289,8 @@ See [example-27](./examples/docker/example-27.dockerfile)
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 10.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 10.0

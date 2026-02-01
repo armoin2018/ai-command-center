@@ -1,17 +1,15 @@
 ---
-name: 'Parcel.Instructions'
-description: 'See [example-6](./examples/parcel/example-6.'
+id: parcel
+name: Parcel.Instructions
+description: See [example-6](./examples/parcel/example-6.
 keywords: [(pwa), api, avoid, application, common, build, architecture, assistant, advanced, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "parcel, build-tools, bundler, **/package.json, **/.parcelrc, **/parcel-config.json"
 ---
 
-# Parcel Build Tool Instructions
 
 ## Overview
 - **Domain**: Modern Web Application Build Tool and Bundler
@@ -19,7 +17,6 @@ applyTo: "parcel, build-tools, bundler, **/package.json, **/.parcelrc, **/parcel
 - **Applicable To**: Web applications, SPAs, static sites, libraries, and development workflows
 - **Integration Level**: Development toolchains, CI/CD pipelines, and deployment automation
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Zero Configuration**: Works out of the box without complex configuration files
@@ -40,7 +37,6 @@ applyTo: "parcel, build-tools, bundler, **/package.json, **/.parcelrc, **/parcel
 - **Myth**: Parcel lacks customization capabilities
   **Reality**: Parcel 2 provides extensive plugin system and configuration options
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/parcel/example-2.json)
 #### Advanced Configuration (.parcelrc)
 See [example-3](./examples/parcel/example-3.json)
 
-## Best Practices
 
 ### Comprehensive Project Structure
 See [example-4](./examples/parcel/example-4.txt)
@@ -96,7 +91,6 @@ See [example-8](./examples/parcel/example-8.javascript)
 
 See [example-9](./examples/parcel/example-9.typescript)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Progressive Web App (PWA) Setup
 **Scenario**: Create a PWA with service worker and offline capabilities
@@ -129,7 +123,6 @@ See [example-15](./examples/parcel/example-15.typescript)
 - **Why It's Problematic**: Can lead to bloated bundles and poor performance
 - **Better Approach**: Regularly analyze bundles and optimize based on metrics
 
-## Tools and Resources
 
 ### Development and Build Tools
 See [example-16](./examples/parcel/example-16.bash)
@@ -143,7 +136,6 @@ See [example-17](./examples/parcel/example-17.typescript)
 - **Performance Guide**: https://parceljs.org/features/production/
 - **Plugin Development**: https://parceljs.org/plugin-system/overview/
 
-## Quality and Compliance
 
 ### Quality Standards
 - Fast development builds (< 1 second for incremental changes)
@@ -210,18 +202,7 @@ When helping teams choose Parcel configurations:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

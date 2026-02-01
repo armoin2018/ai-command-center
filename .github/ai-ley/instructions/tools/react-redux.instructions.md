@@ -1,17 +1,15 @@
 ---
-name: 'React Redux.Instructions'
-description: 'Development guidelines and best practices for React Redux.Instructions'
+id: react-redux
+name: React Redux.Instructions
+description: Development guidelines and best practices for React Redux.Instructions
 keywords: [api, common, async, better, compliance, architecture, assistant, avoid, benefits, complex]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "redux, react-redux, @reduxjs/toolkit, **/*{store,reducer,slice}.{js,ts}"
 ---
 
-# React Redux State Management Instructions
 
 ## Overview
 - **Domain**: State Management for React Applications
@@ -19,7 +17,6 @@ applyTo: "redux, react-redux, @reduxjs/toolkit, **/*{store,reducer,slice}.{js,ts
 - **Applicable To**: Complex React applications with shared state requirements
 - **Integration Level**: Application-wide state management and data flow
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Single Source of Truth**: All application state lives in a single store
@@ -39,7 +36,6 @@ applyTo: "redux, react-redux, @reduxjs/toolkit, **/*{store,reducer,slice}.{js,ts
 - **Myth**: Redux is too complex and has too much boilerplate
   **Reality**: Redux Toolkit significantly reduces boilerplate and complexity
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -78,7 +74,6 @@ See [example-2](./examples/react-redux/example-2.bash)
 #### Type Safety with TypeScript
 See [example-3](./examples/react-redux/example-3.bash)
 
-## Best Practices
 
 ### Modern Redux Toolkit Patterns
 See [example-4](./examples/react-redux/example-4.typescript)
@@ -92,7 +87,6 @@ See [example-6](./examples/react-redux/example-6.typescript)
 ### Component Integration
 See [example-7](./examples/react-redux/example-7.tsx)
 
-## Common Patterns and Examples
 
 ### Pattern 1: RTK Query for API Management
 **Scenario**: Efficient API state management with caching
@@ -117,7 +111,6 @@ See [example-9](./examples/react-redux/example-9.typescript)
 - **Why It's Problematic**: Breaks Redux's immutability contract
 - **Better Approach**: Always return new state objects (Redux Toolkit uses Immer internally)
 
-## Tools and Resources
 
 ### Essential Tools
 #### Redux DevTools
@@ -132,7 +125,6 @@ See [example-11](./examples/react-redux/example-11.typescript)
 - **Redux DevTools**: https://github.com/reduxjs/redux-devtools
 - **Redux Style Guide**: https://redux.js.org/style-guide/style-guide
 
-## Quality and Compliance
 
 ### Quality Standards
 - All async operations handled with proper loading/error states
@@ -196,18 +188,7 @@ When helping teams choose Redux approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

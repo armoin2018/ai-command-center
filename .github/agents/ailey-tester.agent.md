@@ -1,11 +1,10 @@
 ---
 id: ailey-tester
 name: AI-ley Tester
-description: 'Automated test generation specialist for comprehensive test suites and quality assurance'
+description: Automated test generation specialist for comprehensive test suites and quality assurance
 keywords: [testing, unit-tests, integration-tests, qa, test-automation, coverage, test-driven-development]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Tester Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -67,7 +66,6 @@ Automated test generation specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Analysis & Planning
 
@@ -195,3 +193,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

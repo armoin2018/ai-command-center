@@ -1,11 +1,10 @@
 ---
 id: ailey-entrepreneur
 name: AI-ley Entrepreneur
-description: 'Business strategist for revenue opportunities, monetization, and market expansion'
+description: Business strategist for revenue opportunities, monetization, and market expansion
 keywords: [entrepreneur, business-strategy, monetization, revenue, market-analysis, business-development]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Entrepreneur Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -54,7 +53,6 @@ Entrepreneurial strategist focused on:
 
 ---
 
-## Execution Protocol
 
 ### Step 1: Clarify Context
 
@@ -144,3 +142,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

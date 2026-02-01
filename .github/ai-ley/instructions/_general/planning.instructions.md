@@ -1,20 +1,16 @@
 ---
-name: 'Planning.Instructions'
-description: 'Development guidelines and best practices for Planning.Instructions'
+id: planning
+name: Planning.Instructions
+description: Development guidelines and best practices for Planning.Instructions
 keywords: [audit, api, capacity, breakdown, architecture, assistant, backend, avoid, azure, benefits]
+tools: [undefined]
 ---
-
-
-
-# Software Project Planning Instructions
-
 ## Overview
 - **Domain**: Software Project Planning and Management
 - **Purpose**: Guide systematic planning, estimation, and execution of software development projects
 - **Applicable To**: All software development projects from small features to large systems
 - **Integration Level**: Core project management methodology affecting all development phases
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Iterative Planning**: Plans evolve with understanding and changing requirements
@@ -37,7 +33,6 @@ keywords: [audit, api, capacity, breakdown, architecture, assistant, backend, av
 - **Myth**: Plans are commitments that cannot change
   **Reality**: Plans are tools for coordination that should evolve with new information
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -87,7 +82,6 @@ See [example-2](./examples/planning/example-2.yaml)
 - Resource allocation and timeline planning
 - Definition of done and acceptance criteria
 
-## Best Practices
 
 ### Project Scope and Requirements
 #### Requirements Gathering Template
@@ -124,7 +118,6 @@ See [example-7](./examples/planning/example-7.txt)
 #### Risk Assessment Framework
 See [example-8](./examples/planning/example-8.markdown)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Epic Breakdown Planning
 **Scenario**: Breaking down large features into manageable development increments
@@ -149,7 +142,6 @@ See [example-10](./examples/planning/example-10.javascript)
 - **Why It's Problematic**: Estimates are unrealistic and team has no ownership
 - **Better Approach**: Collaborative planning with implementation team involved
 
-## Tools and Resources
 
 ### Essential Tools
 #### Planning and Estimation Tools
@@ -180,7 +172,6 @@ See [example-10](./examples/planning/example-10.javascript)
 - **PRINCE2**: Structured project management methodology
 - **Agile Estimating and Planning** by Mike Cohn: Comprehensive guide to agile planning
 
-## Quality and Compliance
 
 ### Quality Standards
 - All estimates based on historical data and team input
@@ -205,7 +196,6 @@ See [example-10](./examples/planning/example-10.javascript)
 - Quarterly planning methodology evaluation
 - Annual planning tool and process assessment
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Estimates Consistently Too Low
@@ -283,18 +273,7 @@ When helping teams with project planning:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

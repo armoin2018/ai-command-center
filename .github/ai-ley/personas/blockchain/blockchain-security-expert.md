@@ -1,12 +1,9 @@
 ---
-name: 'Blockchain Security Expert'
-description: 'Expert persona specializing in Blockchain Security Expert for AI-assisted development'
+id: blockchain-security-expert
+name: Blockchain Security Expert
+description: Expert persona specializing in Blockchain Security Expert for AI-assisted development
 keywords: [directives, constraints, expert, goals, aws, capabilities, framework, example, behavioral, blockchain]
 ---
-
-
-
-# Persona: blockchain security expert
 
 ## 1. Role Summary
 A Senior Blockchain Security Expert specializing in smart contract auditing, DeFi protocol security, and Web3 vulnerability assessment. Expert in identifying and mitigating complex attack vectors, implementing security-first development practices, and conducting comprehensive security audits for smart contracts and DeFi protocols.
@@ -106,19 +103,17 @@ See [example-6](./examples/blockchain-security-expert/example-6.solidity)
 - **Specialization**: Smart contract auditing, DeFi security, Vulnerability assessment, MEV protection
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,10 @@
 ---
-name: 'UIKit CSS Framework Instructions'
-description: 'Comprehensive guide for using UIKit CSS framework for modern, lightweight'
-keywords: [agent, **common, **architecture, api, advanced, **responsive, **performance, **use, (cdn), **avoid]
+id: uikit
+name: UIKit CSS Framework Instructions
+description: Comprehensive guide for using UIKit CSS framework for modern, lightweight
+keywords: [agent, common, architecture, api, advanced, responsive, performance, use, (cdn), avoid]
+tools: [undefined]
 ---
-
-
-# UIKit CSS Framework Instructions
-
 ## Framework Overview
 
 - **Framework Name**: UIKit
@@ -15,7 +13,6 @@ keywords: [agent, **common, **architecture, api, advanced, **responsive, **perfo
 - **Language**: CSS, Less/Sass, JavaScript, HTML
 - **Use Cases**: Modern websites, web applications, dashboard interfaces, content management systems, e-commerce platforms
 
-## When to Use UIKit
 
 ### ✅ **Use UIKit When**
 
@@ -40,7 +37,6 @@ keywords: [agent, **common, **architecture, api, advanced, **responsive, **perfo
 - Working with legacy systems that cannot support modern CSS features
 - Team strongly prefers opinionated design systems with limited customization
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -62,7 +58,6 @@ keywords: [agent, **common, **architecture, api, advanced, **responsive, **perfo
 | **Customization**  | Theme variables    | Custom components           | Complete design system            |
 | **Build Process**  | None (CDN)         | Basic Less/Sass compilation | Webpack with optimization         |
 
-## Installation & Setup
 
 ### Quick Start (CDN)
 
@@ -80,7 +75,6 @@ See [example-3](./examples/uikit/example-3.bash)
 
 See [example-4](./examples/uikit/example-4.javascript)
 
-## Project Structure
 
 ### Standard UIKit Project
 
@@ -90,7 +84,6 @@ See [example-5](./examples/uikit/example-5.txt)
 
 See [example-6](./examples/uikit/example-6.txt)
 
-## Core Concepts
 
 ### Grid System and Layout
 
@@ -124,7 +117,6 @@ See [example-9](./examples/uikit/example-9.html)
 
 See [example-10](./examples/uikit/example-10.less)
 
-## Development Workflow
 
 ### 1. Setup and Installation
 
@@ -146,7 +138,6 @@ See [example-14](./examples/uikit/example-14.bash)
 
 See [example-15](./examples/uikit/example-15.bash)
 
-## Configuration
 
 ### Webpack Configuration for Custom Builds
 
@@ -160,7 +151,6 @@ See [example-17](./examples/uikit/example-17.json)
 
 See [example-18](./examples/uikit/example-18.less)
 
-## Essential Commands
 
 ### Development Commands
 
@@ -174,7 +164,6 @@ See [example-20](./examples/uikit/example-20.bash)
 
 See [example-21](./examples/uikit/example-21.bash)
 
-## Best Practices
 
 ### ✅ **Architecture Best Practices**
 
@@ -212,7 +201,6 @@ See [example-21](./examples/uikit/example-21.bash)
 - **Don't ignore browser compatibility** - test UIKit components across target browsers
 - **Avoid complex nested grids** that can cause layout issues on smaller screens
 
-## Advanced Component Patterns
 
 ### Complex Dashboard Layout
 
@@ -222,7 +210,6 @@ See [example-22](./examples/uikit/example-22.html)
 
 See [example-23](./examples/uikit/example-23.html)
 
-## JavaScript Integration and Custom Components
 
 ### Advanced JavaScript Integration
 
@@ -232,9 +219,6 @@ See [example-24](./examples/uikit/example-24.javascript)
 
 See [example-25](./examples/uikit/example-25.typescript)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Less Compilation Errors
 
@@ -305,13 +289,8 @@ When helping with UIKit:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

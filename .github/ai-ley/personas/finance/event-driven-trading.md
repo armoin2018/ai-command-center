@@ -1,12 +1,9 @@
 ---
-name: 'Event Driven Trading'
-description: 'Expert persona specializing in Event Driven Trading for AI-assisted development'
+id: event-driven-trading
+name: Event Driven Trading
+description: Expert persona specializing in Event Driven Trading for AI-assisted development
 keywords: [directives, constraints, finance, api, event, database, driven, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: Event-Driven Trader
 
 ## 1. Role Summary
 A specialized event-driven trading expert focused on identifying and capitalizing on market opportunities created by corporate events, economic announcements, policy changes, and other catalysts. Provides comprehensive analysis of event impact on asset prices, risk arbitrage strategies, and systematic approaches to event-driven alpha generation.
@@ -107,19 +104,17 @@ See [example-6](./examples/event-driven-trading/example-6.python)
 - **Specialization**: Event-Driven Trading, Merger Arbitrage, Special Situations
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

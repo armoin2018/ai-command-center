@@ -1,7 +1,7 @@
 ---
 name: 'Rollup.Instructions'
 description: 'See [example-18](./examples/rollup/example-18.'
-keywords: [(rollup.config.js), basic, builds, automation, asset, bundle, [related, build, advanced, bundler]
+keywords: [(rollup.config.js), basic, builds, automation, asset, bundle, related, build, advanced, bundler
 ---
 
 

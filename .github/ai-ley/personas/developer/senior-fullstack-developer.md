@@ -1,12 +1,9 @@
 ---
-name: 'Senior Fullstack Developer'
-description: 'Expert persona specializing in Senior Fullstack Developer for AI-assisted development'
+id: senior-fullstack-developer
+name: Senior Fullstack Developer
+description: Expert persona specializing in Senior Fullstack Developer for AI-assisted development
 keywords: [cloud, architecture, api, backend, aws, authorization, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Senior Full-Stack Developer
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/senior-fullstack-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

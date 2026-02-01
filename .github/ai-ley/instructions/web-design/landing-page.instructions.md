@@ -1,11 +1,10 @@
 ---
-name: 'Landing Page.Instructions'
-description: 'Development guidelines and best practices for Landing Page.Instructions'
+id: landing-page
+name: Landing Page.Instructions
+description: Development guidelines and best practices for Landing Page.Instructions
 keywords: [web design, page.instructions, landing, modern]
+tools: [undefined]
 ---
-
-
-
 # Modern Landing Page
 
 - Single-page layout with CTA.
@@ -14,18 +13,7 @@ keywords: [web design, page.instructions, landing, modern]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

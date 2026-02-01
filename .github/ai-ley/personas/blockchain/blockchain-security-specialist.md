@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Security Specialist'
-description: 'Comprehensive blockchain security specialist focused on infrastructure'
+id: blockchain-security-specialist
+name: Blockchain Security Specialist
+description: Comprehensive blockchain security specialist focused on infrastructure
 keywords: [cloud, agent, behavior, blockchain, architecture, cli, api, communication, aws, authorization]
 ---
-
-
-# Persona: Blockchain Security Specialist
 
 ## 1. Agent Identity
 
@@ -223,13 +221,17 @@ See [example-3](./examples/blockchain-security-specialist/example-3.yaml)
 **Professional Networks**: Blockchain Security Alliance, International Association for Cryptologic Research (IACR), Open Web Application Security Project (OWASP)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,15 +1,10 @@
 ---
-name: 'Documentation.Instructions'
-description: 'Development guidelines and best practices for Documentation.Instructions'
+id: documentation
+name: Documentation.Instructions
+description: Development guidelines and best practices for Documentation.Instructions
 keywords: [audit, api, basic, common, checklists, architecture, assistant, avoid, cli, benefits]
+tools: [undefined]
 ---
-
-
-
-# Documentation Instructions
-
-## Core Principles
-
 ### Fundamental Concepts
 1. **User-Centered**: Documentation should serve the needs of its intended audience first
 2. **Living Documentation**: Documentation evolves with the codebase and stays current
@@ -31,7 +26,6 @@ keywords: [audit, api, basic, common, checklists, architecture, assistant, avoid
 - **Myth**: Only technical writers can create good documentation
   **Reality**: Developers and domain experts often write the most valuable documentation
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -81,7 +75,6 @@ See [example-2](./examples/documentation/example-2.yaml)
 - User guides and tutorials for end-user features
 - Troubleshooting guides and FAQ sections
 
-## Best Practices
 
 ### Writing and Structure
 #### README Structure
@@ -129,7 +122,6 @@ See [example-10](./examples/documentation/example-10.javascript)
 #### Architecture Decision Records (ADRs)
 See [example-11](./examples/documentation/example-11.markdown)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Progressive Documentation
 **Scenario**: Building comprehensive documentation incrementally without overwhelming users
@@ -159,7 +151,6 @@ See [example-15](./examples/documentation/example-15.typescript)
 - **Why It's Problematic**: Creates noise that obscures important information
 - **Better Approach**: Focus on user scenarios and frequently asked questions
 
-## Tools and Resources
 
 ### Essential Tools
 #### Documentation Platforms
@@ -196,7 +187,6 @@ See [example-16](./examples/documentation/example-16.mermaid)
 - **Microsoft Writing Style Guide**: Modern approach to technical writing
 - **Divio Documentation System**: Framework for organizing technical documentation
 
-## Quality and Compliance
 
 ### Quality Standards
 - Documentation accuracy verified through automated testing
@@ -221,7 +211,6 @@ See [example-16](./examples/documentation/example-16.mermaid)
 - Annual documentation strategy and tooling evaluation
 - Continuous user feedback collection and analysis
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Documentation Becomes Outdated Quickly
@@ -299,18 +288,7 @@ When helping teams improve documentation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

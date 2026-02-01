@@ -1,11 +1,10 @@
 ---
-name: 'Java.Instructions'
-description: 'Comprehensive Java development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.'
+id: java
+name: Java.Instructions
+description: Comprehensive Java development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, common, completablefuture, architecture, authentication, configuration, analysis, avoid, concurrent]
+tools: [undefined]
 ---
-
-
-
 # Java Programming Instructions
 
 Comprehensive Java development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
@@ -23,7 +22,6 @@ Comprehensive Java development guidelines for AI coding assistants, emphasizing 
 
 See [example-1](./examples/java/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern Java following established conventions
@@ -41,7 +39,6 @@ See [example-1](./examples/java/example-1.text)
 - Utilize record classes for immutable data carriers
 - Take advantage of var keyword for local variable type inference
 
-## 📜 Code Style and Conventions
 
 ### Naming Conventions
 
@@ -51,7 +48,6 @@ See [example-2](./examples/java/example-2.java)
 
 See [example-3](./examples/java/example-3.java)
 
-## 🏗️ Architecture Patterns
 
 ### Object-Oriented Design
 
@@ -61,7 +57,6 @@ See [example-4](./examples/java/example-4.java)
 
 See [example-5](./examples/java/example-5.java)
 
-## 🔄 Concurrent Programming
 
 ### CompletableFuture Best Practices
 
@@ -71,19 +66,16 @@ See [example-6](./examples/java/example-6.java)
 
 See [example-7](./examples/java/example-7.java)
 
-## 🛡️ Memory Management
 
 ### Efficient Resource Handling
 
 See [example-8](./examples/java/example-8.java)
 
-## ⚡ Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-9](./examples/java/example-9.java)
 
-## 🧪 Testing Guidelines
 
 ### Unit Testing Best Practices
 
@@ -93,7 +85,6 @@ See [example-10](./examples/java/example-10.java)
 
 See [example-11](./examples/java/example-11.java)
 
-## 🛠️ Development Environment
 
 ### Recommended Configuration
 
@@ -106,7 +97,6 @@ See [example-12](./examples/java/example-12.xml)
 - **Build Tool**: Maven/Gradle - Dependency management and build automation
 - **Package Manager**: Maven Central/JCenter - Library dependency resolution
 
-## 🔍 Code Quality Standards
 
 ### Static Analysis
 
@@ -126,7 +116,6 @@ See [example-14](./examples/java/example-14.java)
 - **God Classes**: Keep classes focused on single responsibility; split large classes into smaller ones
 - **Premature Optimization**: Write clear, readable code first; optimize only when performance issues are identified
 
-## 📚 Essential Libraries
 
 ### Standard Library
 See [example-15](./examples/java/example-15.java)
@@ -139,7 +128,6 @@ See [example-15](./examples/java/example-15.java)
 - **AssertJ**: Fluent assertions for more readable test code
 - **Testcontainers**: Integration testing with real database instances
 
-## 🚦 AI Enforcement Summary
 
 ### Code Quality Rules
 - ✅ Enforce proper encapsulation with private fields and public methods
@@ -172,18 +160,7 @@ See [example-15](./examples/java/example-15.java)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,19 +1,15 @@
 ---
-name: 'Business Launch Plan'
-description: 'Build a comprehensive business launch plan with timeline, strategy, and execution framework'
+id: ailey-build-launch-plan
+name: Business Launch Plan
+description: Build a comprehensive business launch plan with timeline, strategy, and execution framework
 keywords: [build, launch, plan, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Business Launch Plan
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
 - Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
-
-
 
 
 ## Recommended Personas
@@ -107,7 +103,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 **Comprehensive Launch Strategy Framework**:
 
 ```markdown
-# Business Launch Plan
 
 ## Executive Summary
 
@@ -118,7 +113,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 **Investment Required**: ${total-launch-investment}
 **Success Metrics**: {key-performance-indicators}
 
-## Launch Foundation
 
 ### What We're Launching
 
@@ -156,7 +150,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 - **Competitive Threats**: {potential-challenges}
 - **Market Share Target**: {realistic-market-penetration-goal}
 
-## Launch Strategy Framework
 
 ### Launch Objectives and Goals
 
@@ -174,7 +167,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 - **12-Month Goals**: {medium-term-achievement-targets}
 - **18-Month Goals**: {long-term-establishment-objectives}
 
-### Target Market and Customer Strategy
 
 #### Primary Target Segment: {Segment-Name}
 
@@ -220,7 +212,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 | **Features** | {position} | {position} | {position} | {advantage} |
 | **Service** | {position} | {position} | {position} | {advantage} |
 
-## Launch Phases and Timeline
 
 ### Pre-Launch Phase (Months -6 to -1)
 
@@ -330,9 +321,7 @@ You are a launch strategy expert and business execution specialist with extensiv
 
 **Comprehensive Launch Execution Plan**:
 ```markdown
-# Launch Execution Roadmap
 
-## Launch Team Structure and Responsibilities
 
 ### Core Launch Team
 **Launch Director**: {overall-launch-leadership-and-coordination}
@@ -366,7 +355,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 **Legal**: {compliance-and-contract-management}
 **Technology**: {systems-and-infrastructure-support}
 
-## Detailed Launch Timeline
 
 ### Month -6: Launch Foundation
 | Week | Focus Area | Key Activities | Deliverables | Owner | Status |
@@ -392,7 +380,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 | **3** | Sales Activation | {specific-activities} | {success-measurements} | {responsible-person} | ${amount} |
 | **4** | Customer Onboarding | {specific-activities} | {success-measurements} | {responsible-person} | ${amount} |
 
-## Resource Requirements and Budget
 
 ### Launch Budget Allocation
 **Total Launch Investment**: ${total-launch-budget}
@@ -434,7 +421,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 - **Legal Services**: ${amount} as needed
 - **Technology Consultants**: ${amount} for {duration}
 
-## Launch Channels and Tactics
 
 ### Customer Acquisition Channels
 #### Digital Marketing Channels
@@ -504,9 +490,7 @@ You are a launch strategy expert and business execution specialist with extensiv
 
 **Comprehensive Risk Management and Contingency Framework**:
 ```markdown
-# Risk Assessment & Contingency Planning
 
-## Launch Risk Analysis
 
 ### Critical Risk Categories
 #### Market Risks
@@ -596,7 +580,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 | **Funding Shortfall** | {rating} | {rating} | {score} | {high-med-low} | ${amount} |
 | **Revenue Shortfall** | {rating} | {rating} | {score} | {high-med-low} | ${amount} |
 
-## Contingency Planning Framework
 
 ### Scenario-Based Response Plans
 #### Scenario 1: Slow Market Adoption
@@ -650,7 +633,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 - **Market Position**: {competitive-market-position-assessment}
 - **Next Phase Planning**: {post-launch-strategy-development}
 
-## Success Monitoring and Optimization
 
 ### Launch Performance Dashboard
 #### Week 1-4 Metrics (Launch Month)
@@ -688,7 +670,6 @@ You are a launch strategy expert and business execution specialist with extensiv
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Launch Plan
 
@@ -796,3 +777,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

@@ -1,13 +1,10 @@
 ---
-name: 'Brutalism.Instructions'
-description: 'See [example-1](./examples/brutalism/example-1.'
+id: brutalism
+name: Brutalism.Instructions
+description: See [example-1](./examples/brutalism/example-1.
 keywords: [brutalist, artist, characteristics, color, brand, brutalism.instructions, assistant, avoid, cases, broken]
+tools: [undefined]
 ---
-
-
-
-# Brutalist Web Design Instructions
-
 ## Design Philosophy
 
 - **Style Name**: Brutalist Web Design
@@ -16,7 +13,6 @@ keywords: [brutalist, artist, characteristics, color, brand, brutalism.instructi
 - **Purpose**: Create bold, unconventional websites that challenge traditional design conventions
 - **Prerequisites**: Strong understanding of CSS Grid, Flexbox, and typography principles
 
-## Core Principles
 
 ### Visual Characteristics
 
@@ -32,7 +28,6 @@ keywords: [brutalist, artist, characteristics, color, brand, brutalism.instructi
 - Challenge user expectations through unconventional navigation and interaction patterns
 - Prioritize artistic expression over traditional usability conventions
 
-## Implementation Guidelines
 
 ### Typography System
 
@@ -46,7 +41,6 @@ See [example-2](./examples/brutalism/example-2.css)
 
 See [example-3](./examples/brutalism/example-3.css)
 
-## Common Use Cases
 
 ### Artist Portfolio Website
 
@@ -82,7 +76,6 @@ See [example-6](./examples/brutalism/example-6.css)
 - **Performance Ignorance**: Creating effects that significantly impact page performance
 - **Readability Destruction**: Making content completely unreadable for shock value alone
 
-## Integration & Tools
 
 ### Essential Tools
 
@@ -118,18 +111,7 @@ When helping with Brutalist design:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

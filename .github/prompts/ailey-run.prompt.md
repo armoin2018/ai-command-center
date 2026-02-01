@@ -1,13 +1,11 @@
 ---
-name: 'Run'
-description: 'Execute project plans with intelligent task management, breaking work into small manageable chunks with continuous validation and progress tracking.'
+id: ailey-run
+name: Run
+description: Execute project plans with intelligent task management, breaking work into small manageable chunks with continuous validation and progress tracking.
 keywords: [execution, implementation, task-management, progress-tracking, quality-gates, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Execute Plan
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [execution, implementation, task-management, progress-tracking, qualit
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -185,9 +181,7 @@ You are a senior implementation engineer, quality gatekeeper, and execution spec
 **Progress Reporting Structure**:
 
 ```markdown
-# Task Execution Log - [DATE/TIME]
 
-## Overall Epic Story Progress
 
 ### Project Overview
 
@@ -412,7 +406,6 @@ During execution, actively identify:
 **Sprint-Level Progress Tracking**:
 
 ```markdown
-# Sprint Progress Report - Sprint [NUMBER]
 
 ## Sprint Goals Status
 
@@ -421,7 +414,6 @@ During execution, actively identify:
 - **Task Progress**: [X/Y tasks completed]
 - **Story Points**: [X/Y points completed]
 
-## Epic Story Progress Through Sprint
 
 ### Visual Progress Dashboard
 ```
@@ -614,7 +606,6 @@ EPIC-003: Reporting System ████░░░░░░░░░░░░░�
    - Document anti-patterns and pitfalls to avoid
 ```
 
-## Quality Gates Summary
 
 ### Task-Level Quality Gates
 
@@ -686,3 +677,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Ocr Expert'
-description: 'Expert persona specializing in Ocr Expert for AI-assisted development'
+id: ocr-expert
+name: Ocr Expert
+description: Expert persona specializing in Ocr Expert for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, api, aws, ai, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: OCR Expert
 
 ## 1. Role Summary
 
@@ -111,19 +108,17 @@ See [example-3](./examples/ocr-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

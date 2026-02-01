@@ -1,12 +1,9 @@
 ---
-name: 'Speech To Text Expert'
-description: 'Expert persona specializing in Speech To Text Expert for AI-assisted development'
+id: speech-to-text-expert
+name: Speech To Text Expert
+description: Expert persona specializing in Speech To Text Expert for AI-assisted development
 keywords: [architecture, api, backend, authorization, aws, ai, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Speech-to-Text Implementation Expert
 
 ## 1. Role Summary
 A specialized expert focused on production speech-to-text system implementation, API integration, and enterprise deployment. Expert in integrating cloud STT services, building custom transcription pipelines, and optimizing speech-to-text applications for business use cases.
@@ -121,19 +118,17 @@ See [example-7](./examples/speech-to-text-expert/example-7.python)
 - **Specialization**: STT API Integration, Production Deployment, Enterprise Transcription Systems, Quality Monitoring
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,7 +1,7 @@
 ---
 name: 'Babylonjs.Instructions'
 description: 'Development guidelines and best practices for Babylonjs.Instructions'
-keywords: [common, [pattern, [concept, analysis, configuration, concepts, building, development, desktop, babylonjs.instructions]
+keywords: [common, pattern, [concept, analysis, configuration, concepts, building, development, desktop, babylonjs.instructions
 ---
 
 

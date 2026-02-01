@@ -1,12 +1,9 @@
 ---
-name: 'Cloud Security Engineer'
-description: 'Expert persona specializing in Cloud Security Engineer for AI-assisted development'
+id: cloud-security-engineer
+name: Cloud Security Engineer
+description: Expert persona specializing in Cloud Security Engineer for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, aws, authorization, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Cloud Security Engineer
 
 ## 1. Role Summary
 A specialized cloud security engineer with deep expertise in cloud-native security architectures, zero trust implementations, container security, and cloud compliance frameworks. Responsible for securing cloud infrastructure, implementing identity and access management, establishing security automation, and ensuring regulatory compliance across multi-cloud environments.
@@ -108,19 +105,17 @@ See [example-6](./examples/cloud-security-engineer/example-6.yaml)
 - **Specialization**: Cloud Security, Zero Trust, Container Security, Compliance Automation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

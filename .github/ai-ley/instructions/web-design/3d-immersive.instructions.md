@@ -1,11 +1,10 @@
 ---
-name: '3D Immersive.Instructions'
-description: 'Development guidelines and best practices for 3D Immersive.Instructions'
+id: 3d-immersive
+name: 3D Immersive.Instructions
+description: Development guidelines and best practices for 3D Immersive.Instructions
 keywords: [immersive.instructions, web design, immersive, web]
+tools: [undefined]
 ---
-
-
-
 # 3D & Immersive Web
 
 - Use WebGL, Three.js, or similar libraries.
@@ -14,18 +13,7 @@ keywords: [immersive.instructions, web design, immersive, web]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

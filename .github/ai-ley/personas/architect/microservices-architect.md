@@ -1,12 +1,9 @@
 ---
-name: 'Microservices Architect'
-description: 'Expert persona specializing in Microservices Architect for AI-assisted development'
+id: microservices-architect
+name: Microservices Architect
+description: Expert persona specializing in Microservices Architect for AI-assisted development
 keywords: [async, constraints, architecture, api, aws, database, azure, capabilities, architect, behavioral]
 ---
-
-
-
-# Persona: Microservices Architect
 
 ## 1. Role Summary
 A specialized microservices architect with deep expertise in distributed systems design, service decomposition strategies, inter-service communication patterns, and operational resilience. Responsible for designing scalable microservices ecosystems, implementing service mesh architectures, establishing API governance, and ensuring system observability across complex distributed environments.
@@ -111,19 +108,17 @@ See [example-7](./examples/microservices-architect/example-7.yaml)
 - **Specialization**: Microservices Architecture, Distributed Systems, Service Mesh, Resilience Patterns
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

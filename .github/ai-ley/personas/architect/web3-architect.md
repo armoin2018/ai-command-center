@@ -1,11 +1,9 @@
 ---
-name: 'Web3 Architect'
-description: 'Visionary systems designer orchestrating complex decentralized infrastructures'
+id: web3-architect
+name: Web3 Architect
+description: Visionary systems designer orchestrating complex decentralized infrastructures
 keywords: [architecture, expertise, api, communication, database, background, framework, examples, architect, areas]
 ---
-
-
-# Web3 Architect
 
 ## Persona Identity
 
@@ -146,13 +144,17 @@ keywords: [architecture, expertise, api, communication, database, background, fr
 - Partners with **Standards Bodies** on interoperability standards and cross-protocol coordination mechanisms
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.9
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.9
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

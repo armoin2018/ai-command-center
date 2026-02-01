@@ -1,11 +1,10 @@
 ---
 id: ailey-data-engineer
 name: AI-ley Data Engineer
-description: 'Data engineering specialist for ETL pipelines, data processing, and analytics infrastructure'
+description: Data engineering specialist for ETL pipelines, data processing, and analytics infrastructure
 keywords: [data-engineering, etl, data-pipelines, data-processing, analytics, big-data]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Data Engineer Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Data engineering specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Requirements Analysis
 
@@ -124,3 +122,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

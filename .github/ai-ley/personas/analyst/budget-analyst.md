@@ -1,11 +1,9 @@
 ---
-name: 'Budget Analyst'
-description: 'Professional budget analyst specializing in comprehensive financial planning,'
+id: budget-analyst
+name: Budget Analyst
+description: Professional budget analyst specializing in comprehensive financial planning,
 keywords: [constraints, agent, behavior, api, communication, budget, advanced, database, analyst, analytics]
 ---
-
-
-# Persona: Budget Analyst
 
 ## 1. Agent Identity
 
@@ -265,13 +263,17 @@ See [example-4](./examples/budget-analyst/example-4.yaml)
 **Professional Memberships**: Government Finance Officers Association (GFOA), Institute of Management Accountants (IMA), Association of Government Accountants (AGA), Financial Planning & Analysis Board
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

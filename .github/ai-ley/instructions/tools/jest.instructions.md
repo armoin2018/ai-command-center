@@ -1,13 +1,10 @@
 ---
-name: 'Jest.Instructions'
-description: 'Development guidelines and best practices for Jest.Instructions'
+id: jest
+name: Jest.Instructions
+description: Development guidelines and best practices for Jest.Instructions
 keywords: [api, basic, assertions, async, (matchers), ci/cd, authentication, (jest.config.js), authorization, advanced]
+tools: [undefined]
 ---
-
-
-
-# Jest Testing Framework Instructions
-
 ## Tool Overview
 - **Tool Name**: Jest
 - **Version**: 29.7+ (stable), 30.0+ (latest with enhanced features)
@@ -25,7 +22,6 @@ See [example-2](./examples/jest/example-2.bash)
 ### React Testing Setup
 See [example-3](./examples/jest/example-3.bash)
 
-## Configuration
 
 ### Basic Configuration (jest.config.js)
 See [example-4](./examples/jest/example-4.javascript)
@@ -39,7 +35,6 @@ See [example-6](./examples/jest/example-6.javascript)
 ### Advanced Configuration
 See [example-7](./examples/jest/example-7.javascript)
 
-## Core Features
 
 ### Test Structure
 - **Purpose**: Organize tests with describe blocks and individual test cases
@@ -62,7 +57,6 @@ See [example-10](./examples/jest/example-10.javascript)
 ## Common Commands
 See [example-11](./examples/jest/example-11.bash)
 
-## Advanced Features
 
 ### Snapshot Testing
 See [example-12](./examples/jest/example-12.javascript)
@@ -73,7 +67,6 @@ See [example-13](./examples/jest/example-13.javascript)
 ### Custom Matchers
 See [example-14](./examples/jest/example-14.javascript)
 
-## Testing Patterns
 
 ### React Component Testing
 See [example-15](./examples/jest/example-15.javascript)
@@ -87,7 +80,6 @@ See [example-17](./examples/jest/example-17.javascript)
 ### Error Handling Testing
 See [example-18](./examples/jest/example-18.javascript)
 
-## Environment-Specific Configuration
 
 ### package.json Scripts
 See [example-19](./examples/jest/example-19.json)
@@ -98,7 +90,6 @@ See [example-20](./examples/jest/example-20.yaml)
 ### Docker Integration
 See [example-21](./examples/jest/example-21.dockerfile)
 
-## Common Issues & Solutions
 
 ### Mocking Issues
 **Problem**: Mock not working or being overridden
@@ -122,7 +113,6 @@ See [example-24](./examples/jest/example-24.javascript)
 - **Mock Functions**: https://jestjs.io/docs/mock-functions
 - **Testing Library**: https://testing-library.com/docs/react-testing-library/intro
 
-## Tool-Specific Guidelines
 
 ### Best Practices
 - Write descriptive test names that explain what is being tested
@@ -151,7 +141,6 @@ See [example-24](./examples/jest/example-24.javascript)
 - **Babel**: 7+ (for modern JavaScript features)
 - **React**: 16.8+ (with React Testing Library)
 
-## Troubleshooting
 
 ### Common Error Messages
 - **Error**: `Cannot find module` during imports
@@ -172,18 +161,7 @@ See [example-24](./examples/jest/example-24.javascript)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

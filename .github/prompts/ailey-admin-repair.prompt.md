@@ -1,13 +1,11 @@
 ---
-name: 'Repair Prompts'
-description: 'Repairs missing prompt reference files across AI platforms by analyzing existing prompts and generating missing references'
+id: ailey-admin-repair
+name: Repair Prompts
+description: Repairs missing prompt reference files across AI platforms by analyzing existing prompts and generating missing references
 keywords: [repair, prompt, synchronization, ai-platforms, maintenance, automation, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Repair Prompts
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [repair, prompt, synchronization, ai-platforms, maintenance, automatio
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -86,7 +82,6 @@ You are a project maintenance specialist and automation engineer.
 For each missing file in `.github/prompts/{command-name}.prompt.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -103,7 +98,6 @@ Where:
 For each missing file in `.claude/commands/{command-name}.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -115,7 +109,6 @@ For each missing file in `.claude/commands/{command-name}.md`:
 For each missing file in `.opencode/commands/{command-name}.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -172,7 +165,6 @@ OpenCode References:
 🎯 All prompt references synchronized successfully!
 ```
 
-## Examples
 
 ### Example 1: Basic Repair
 
@@ -214,7 +206,6 @@ Found 12 prompt files
 🎯 No repairs needed - system is synchronized!
 ```
 
-## Implementation Logic
 
 ### Title Extraction Priority
 
@@ -252,3 +243,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

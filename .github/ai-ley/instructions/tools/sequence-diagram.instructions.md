@@ -1,13 +1,10 @@
 ---
-name: 'sequence-diagram.instructions'
-description: 'Development guidelines and best practices for Sequence Diagram.Instructions'
-keywords: [api, **platform, async, capabilities**, architecture, authentication, authorization, cases, advanced, **sequence]
+id: sequence-diagram
+name: sequence-diagram.instructions
+description: Development guidelines and best practices for Sequence Diagram.Instructions
+keywords: [api, platform, async, capabilities, architecture, authentication, authorization, cases, advanced, sequence]
+tools: [undefined]
 ---
-
-
-
-# **Sequence Diagram Enterprise Interaction Modeling Platform**
-
 ## **Platform Overview**
 
 The **Sequence Diagram Enterprise Interaction Modeling Platform** provides comprehensive sequence diagram capabilities with advanced interaction modeling, real-time collaboration, automated code generation, performance analysis, and enterprise integration for large-scale system design, API documentation, and distributed architecture visualization.
@@ -21,7 +18,6 @@ The **Sequence Diagram Enterprise Interaction Modeling Platform** provides compr
 - **Enterprise Integration**: Seamless integration with API management platforms, monitoring tools, and CI/CD pipelines
 - **Governance Framework**: Version control, approval workflows, and compliance tracking for interaction designs
 
-### **🏗️ Architecture Components**
 
 #### **1. Sequence Modeling Core Engine**
 
@@ -44,7 +40,6 @@ The **Sequence Diagram Enterprise Interaction Modeling Platform** provides compr
 - **Implementation Stubs**: Code skeleton generation for multiple programming languages
 - **Contract Testing**: Consumer-driven contract generation and validation
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Enterprise API Interaction Modeling**
 
@@ -287,22 +282,10 @@ The **Sequence Diagram Enterprise Platform** is taking shape with **3,400+ lines
 3. **Multi-Format Visualization Engine** (800+ lines)
     
 Ready to continue with the collaboration platform, advanced code generation, and enterprise deployment features! 🚀
-````
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

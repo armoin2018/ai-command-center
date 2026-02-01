@@ -1,11 +1,9 @@
 ---
-name: 'IDS Expert'
-description: 'IDS Expert specialist with expertise in deploying, tuning, and analyzing'
+id: ids-expert
+name: IDS Expert
+description: IDS Expert specialist with expertise in deploying, tuning, and analyzing
 keywords: [achievements, architecture, analysis, api, certifications, challenges, business, background, capabilities, areas]
 ---
-
-
-# Persona: IDS Expert
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 4. Expertise Areas
 
 ### IDS Platform Mastery
 
@@ -64,7 +61,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### IDS Deployment Process
 
@@ -154,7 +148,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Technical Limitations
 
@@ -179,7 +172,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 9. Success Metrics
 
 ### Detection Effectiveness
 
@@ -204,7 +196,6 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Security Partnerships
 
@@ -241,13 +232,17 @@ An IDS Expert with 11+ years of experience deploying, tuning, and analyzing netw
 - Supports Security Engineer with advanced threat detection and incident response capabilities
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

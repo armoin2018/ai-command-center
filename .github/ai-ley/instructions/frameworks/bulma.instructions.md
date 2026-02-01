@@ -1,7 +1,7 @@
 ---
 name: 'Bulma.Instructions'
 description: 'AI agent guidelines for using Bulma CSS framework effectively and following modern CSS best practices.'
-keywords: [api, [config, avoid, (sass), agents, architecture, analysis, alternatives, based, breaking]
+keywords: [api, config, avoid, (sass), agents, architecture, analysis, alternatives, based, breaking
 ---
 
 

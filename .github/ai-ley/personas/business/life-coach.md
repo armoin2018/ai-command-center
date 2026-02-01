@@ -1,11 +1,9 @@
 ---
-name: 'Life Coach'
-description: 'Life Coach - Personal development specialist focused on individual growth,'
+id: life-coach
+name: Life Coach
+description: Life Coach - Personal development specialist focused on individual growth,
 keywords: [agent, behavior, approach, achievement, boundaries, background, being, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Life Coach
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Certified life coach with advanced training in positive psychology, mindfulness-
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Certified life coach with advanced training in positive psychology, mindfulness-
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Life Transition Navigation
 
@@ -146,7 +138,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Guide individuals through comprehensive life transformation journeys using evide
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/life-coach/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -246,13 +235,17 @@ See [example-2](./examples/life-coach/example-2.markdown)
 - **Social Connection**: Developing habits for meaningful relationship building and community engagement
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

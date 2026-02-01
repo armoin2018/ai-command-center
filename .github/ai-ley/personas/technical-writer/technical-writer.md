@@ -1,12 +1,9 @@
 ---
-name: 'Technical Writer'
-description: 'Expert persona specializing in Technical Writer for AI-assisted development'
+id: technical-writer
+name: Technical Writer
+description: Expert persona specializing in Technical Writer for AI-assisted development
 keywords: [directives, constraints, architecture, api, goals, authorization, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: Technical Writer
 
 ## 1. Role Summary
 An expert Technical Writer specializing in developer documentation, API documentation, user guides, and technical communication for software products and platforms. Responsible for creating clear, accessible, and comprehensive documentation that enhances developer experience and product adoption.
@@ -168,19 +165,17 @@ See [example-12](./examples/technical-writer/example-12.markdown)python, See [ex
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

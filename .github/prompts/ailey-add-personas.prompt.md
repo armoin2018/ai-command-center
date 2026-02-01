@@ -1,15 +1,11 @@
 ---
-name: 'Update Personas'
-description: 'Awaiting summary.'
+id: ailey-add-personas
+name: Update Personas
+description: Awaiting summary.
 keywords: [, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Persona Review & Optimization System
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -314,3 +310,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

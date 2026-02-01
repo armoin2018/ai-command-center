@@ -1,13 +1,11 @@
 ---
-name: 'Glean - External Source Ingestion & Insight Extraction'
-description: 'Ingest external sources (git repos, URLs, files, folders) and extract reusable insights to improve AI-Ley instructions, personas, prompts, agents, and skills'
+id: ailey-add-all-glean
+name: Glean - External Source Ingestion & Insight Extraction
+description: Ingest external sources (git repos, URLs, files, folders) and extract reusable insights to improve AI-Ley instructions, personas, prompts, agents, and skills
 keywords: [ingest, external, glean, extract, analyze, improve, git, url, crawl, insights, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Glean - External Source Ingestion
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -17,8 +15,6 @@ keywords: [ingest, external, glean, extract, analyze, improve, git, url, crawl, 
 
 - See the `{{files.instructions}}` file for global instructions that apply to all commands.
 - Reference applicable personas in `.github/ai-ley/personas` and instructions in `.github/ai-ley/instructions` as needed.
-
-
 
 
 ## Recommended Personas
@@ -387,7 +383,6 @@ service-account*.json
 | `src/models/user.js` | JavaScript | Code          | 4.5 KB  | sha256:jkl... | Data model         |
 | `README.md`          | Markdown   | Documentation | 6.8 KB  | sha256:mno... | Project overview   |
 
-## Categories
 
 ### Code (78 files, 2.1 MB)
 
@@ -442,7 +437,6 @@ For each file, generate a concise summary in `SUMMARIES.md`:
 
 <!-- generated-by: ai-ley glean | mode:apply | source:git_repo | timestamp: 2025-11-09T12:34:56Z -->
 
-## Code Files
 
 ### `src/api/users.js`
 
@@ -499,7 +493,6 @@ Mongoose schema for User entity with:
 
 ---
 
-## Documentation Files
 
 ### `docs/API.md`
 
@@ -526,7 +519,6 @@ Complete documentation for REST API:
 
 ---
 
-## Specification Files
 
 ### `openapi.yaml`
 
@@ -582,7 +574,6 @@ Extract key entities and concepts for `EXTRACTS.md`:
 
 <!-- generated-by: ai-ley glean | mode:apply | source:git_repo | timestamp: 2025-11-09T12:34:56Z -->
 
-## APIs & Endpoints
 
 ### User Management API
 
@@ -607,7 +598,6 @@ POST /auth/refresh - Refresh JWT token
 
 ---
 
-## Data Models
 
 ### User Schema
 
@@ -639,7 +629,6 @@ POST /auth/refresh - Refresh JWT token
 
 ---
 
-## Design Patterns
 
 ### RESTful API Pattern
 
@@ -683,7 +672,6 @@ app.use(errorHandler); // Error handling
 
 ---
 
-## Glossary Terms
 
 ### JWT (JSON Web Token)
 
@@ -740,7 +728,6 @@ Analyze against AI-Ley assets and propose enhancements in `IMPROVEMENTS.md`:
 
 <!-- generated-by: ai-ley glean | mode:apply | source:git_repo | timestamp: 2025-11-09T12:34:56Z -->
 
-## Instructions to Update
 
 ### 1. Update: `.github/ai-ley/instructions/api/rest-api-design.md`
 
@@ -780,7 +767,6 @@ Add sections on:
 
 ---
 
-## Instructions to Create
 
 ### 1. New: `.github/ai-ley/instructions/database/mongoose-schemas.md`
 
@@ -825,7 +811,6 @@ Add sections on:
 
 ---
 
-## Personas to Update
 
 ### 1. Update: `.github/ai-ley/personas/developer/backend-developer.md`
 
@@ -847,7 +832,6 @@ Add expertise areas:
 
 ---
 
-## Personas to Create
 
 ### 1. New: `.github/ai-ley/personas/developer/api-developer.md`
 
@@ -872,7 +856,6 @@ Add expertise areas:
 
 ---
 
-## Prompts to Create
 
 ### 1. New: `.github/prompts/generate-openapi-spec.md`
 
@@ -895,7 +878,6 @@ Add expertise areas:
 
 ---
 
-## Chatmodes to Create (if applicable)
 
 ### 1. New: `{{folders.chatmodes}}/api-design-mode.md`
 
@@ -950,7 +932,6 @@ For OpenAPI/AsyncAPI/GraphQL/Protobuf/Avro/JSON Schema files:
    - Generate preview in `.preview/openapi-summary.md`:
 
 ```markdown
-# OpenAPI Specification Summary
 
 ## API: User Management API
 
@@ -994,9 +975,7 @@ For OpenAPI/AsyncAPI/GraphQL/Protobuf/Avro/JSON Schema files:
    - Catalog in `.preview/schema-catalog.md`:
 
 ````markdown
-# JSON Schema Catalog
 
-## Schemas (5 files)
 
 ### user.schema.json
 
@@ -1037,9 +1016,7 @@ graph LR
    - List render commands in `.preview/RENDER.md`:
 
 ```markdown
-# Diagram Rendering Instructions
 
-## PlantUML Diagrams (4 files)
 
 ### Install PlantUML
 
@@ -1066,7 +1043,6 @@ plantuml content/diagrams/erd-users.puml
 plantuml content/diagrams/deployment.puml
 ```
 
-## Mermaid Diagrams (2 files)
 
 ### Install Mermaid CLI
 
@@ -1112,7 +1088,6 @@ For each new or modified AI-Ley asset, update the appropriate index atomically:
 
 <!-- Last updated: 2025-11-09T12:34:56Z -->
 
-## API & Integration
 
 ### jwt-authentication
 - **Path**: `.github/ai-ley/instructions/security/jwt-authentication-generated.md`
@@ -1153,7 +1128,6 @@ For each new or modified AI-Ley asset, update the appropriate index atomically:
 
 <!-- Last updated: 2025-11-09T12:34:56Z -->
 
-## Developer
 
 ### api-developer
 
@@ -1183,7 +1157,6 @@ For each new or modified AI-Ley asset, update the appropriate index atomically:
 
 <!-- Last updated: 2025-11-09T12:34:56Z -->
 
-## Code Generation
 
 ### generate-openapi-spec
 
@@ -1219,7 +1192,6 @@ All documentation includes standard headers:
 - **Indexes Updated**: 3
 - **Total Changes**: 11
 
-## Created Assets
 
 ### Instructions
 
@@ -1252,7 +1224,6 @@ All documentation includes standard headers:
    - **Source**: Inspired by `openapi.yaml`, `src/api/`
    - **Template Used**: `prompt-template.md`
 
-## Updated Assets
 
 ### Instructions
 
@@ -1427,7 +1398,6 @@ function getBackoffDelay(attempt) {
 **Validation Report** (in mode=plan or mode=dry-run):
 
 ```markdown
-# Validation Report
 
 ## Pre-Flight Checks
 
@@ -1562,7 +1532,6 @@ When `mode=apply`:
 - **Patterns Identified**: 12
 - **Relationships Mapped**: 23
 
-## AI-Ley Changes
 
 ### Created Assets (5)
 
@@ -1669,7 +1638,6 @@ See `QUESTIONS.md` and `.ai-ley/shared/QUESTIONS.md`
 - Quality scores maintained or improved
 - Indexes properly updated
 
-## Examples
 
 ### Example 1: Ingest Git Repository
 
@@ -1747,7 +1715,6 @@ No files acquired (plan mode).
 See .ai-ley/shared/external/example/PLAN.md for details.
 ```
 
-## Notes
 
 ### Important Considerations
 
@@ -1783,7 +1750,6 @@ See .ai-ley/shared/external/example/PLAN.md for details.
 - **De-duplicate Early**: Skip duplicate files by checksum before processing
 - **Chunk Large Files**: Process large files in semantic chunks for better analysis
 
-## Troubleshooting
 
 ### Issue: Git clone fails
 
@@ -1804,9 +1770,10 @@ See .ai-ley/shared/external/example/PLAN.md for details.
 ### Issue: Index update conflicts
 
 **Solution**: Review existing entries, resolve naming conflicts, maintain alphabetical order
----
 
+---
 version: 1.0.0
-updated: 2026-01-11
-reviewed: 2026-01-11
-score: 4.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3.8
+---

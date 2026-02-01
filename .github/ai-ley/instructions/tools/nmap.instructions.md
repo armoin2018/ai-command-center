@@ -1,14 +1,10 @@
 ---
-name: 'Enterprise Nmap Network Security Scanner Platform'
-description: 'Enterprise-grade Nmap network discovery and security scanning framework with advanced compliance automation, threat intelligence integration, vulnerability assessment, sophisticated evasion techniques, distributed scanning orchestration, automated penetration testing workflows, SIEM integration, executive reporting, and production-ready security operations center capabilities for comprehensive cybersecurity environments.'
+id: nmap
+name: Enterprise Nmap Network Security Scanner Platform
+description: Enterprise-grade Nmap network discovery and security scanning framework with advanced compliance automation, threat intelligence integration, vulnerability assessment, sophisticated evasion techniques, distributed scanning orchestration, automated penetration testing workflows, SIEM integration, executive reporting, and production-ready security operations center capabilities for comprehensive cybersecurity environments.
 keywords: [api, cloud, advanced, automation, enterprise, agent, compliance, database, avoid, deploy]
+tools: [undefined]
 ---
-
-
-# Enterprise Nmap Network Security Scanner Platform
-
-## AI Agent Implementation Guide
-
 ### Enterprise Mission Statement
 
 This enhanced Nmap instruction set provides enterprise-grade network discovery and security scanning capabilities with advanced automation, compliance frameworks, threat intelligence integration, sophisticated vulnerability assessment, comprehensive evasion techniques, distributed scanning orchestration, automated penetration testing workflows, SIEM integration, executive reporting dashboards, and production-ready security operations center capabilities for professional cybersecurity environments.
@@ -42,7 +38,6 @@ This enhanced Nmap instruction set provides enterprise-grade network discovery a
 - **Inadequate Legal Framework** without proper SOWs, NDAs, and liability protection → establish comprehensive legal documentation
 - **Insufficient Technical Expertise** without qualified security professionals → provide comprehensive training and certification programs
 
-## 🔐 Enterprise Security & Compliance Integration
 
 ### Advanced Compliance Framework Automation
 
@@ -305,13 +300,8 @@ class AdvancedNmapScanner:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

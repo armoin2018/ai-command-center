@@ -1,12 +1,10 @@
 ---
-name: 'Selenium Web Browser Automation Testing Instructions'
-description: 'Comprehensive guide for using Selenium WebDriver for automated web testing,'
-keywords: [api, (maven), assessment, browser, **avoid, agent, **use, automation, appropriate, build.gradle)]
+id: selenium
+name: Selenium Web Browser Automation Testing Instructions
+description: Comprehensive guide for using Selenium WebDriver for automated web testing,
+keywords: [api, (maven), assessment, browser, avoid, agent, use, automation, appropriate, build.gradle)]
+tools: [undefined]
 ---
-
-
-# Selenium Web Browser Automation Testing Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Selenium WebDriver
@@ -15,7 +13,6 @@ keywords: [api, (maven), assessment, browser, **avoid, agent, **use, automation,
 - **Purpose**: Automates web browsers for testing web applications, UI validation, and end-to-end workflows
 - **Prerequisites**: Programming language runtime (Java, Python, Node.js, C#), browser drivers, web application to test
 
-## When to Use Selenium
 
 ### ✅ **Use Selenium When**
 
@@ -39,7 +36,6 @@ keywords: [api, (maven), assessment, browser, **avoid, agent, **use, automation,
 - Budget/time constraints don't allow for cross-browser testing setup
 - Need simpler test authoring for non-technical team members
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -61,9 +57,6 @@ keywords: [api, (maven), assessment, browser, **avoid, agent, **use, automation,
 | **Test Environment** | Local development        | Staging + production  | Multiple environments     |
 | **Integration**      | Standalone tests         | CI/CD integration     | Grid + parallel execution |
 
-## Installation & Setup
-
-### WebDriver Installation
 
 #### Python Setup
 
@@ -140,11 +133,9 @@ WebDriver driver = new ChromeDriver();
 WebDriverManager.firefoxdriver().setup();
 WebDriver driver = new FirefoxDriver();
 See [example-8](./examples/selenium/example-8.txt)bash
-# Download and install drivers manually
 
 # Chrome Driver
 wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE
-# Download appropriate version for your Chrome browser
 
 # Firefox GeckoDriver
 wget https://github.com/mozilla/geckodriver/releases/latest
@@ -171,7 +162,6 @@ mkdir -p config
 # Create virtual environment
 python -m venv selenium-env
 source selenium-env/bin/activate  # Linux/Mac
-# selenium-env\Scripts\activate   # Windows
 
 # Install dependencies
 pip install -r requirements.txt
@@ -305,13 +295,8 @@ public class WebDriverConfig {
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

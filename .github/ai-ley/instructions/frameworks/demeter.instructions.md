@@ -1,11 +1,10 @@
 ---
-name: 'Demeter.Instructions'
-description: 'Purpose: Research and simulate AMM/liquidity strategies with price/fee modeling, impermanent loss analysis, and on-chain data hygiene.'
+id: demeter
+name: Demeter.Instructions
+description: Purpose: Research and simulate AMM/liquidity strategies with price/fee modeling, impermanent loss analysis, and on-chain data hygiene.
 keywords: [demeter.instructions, framework), (defi/amm, gui, demeter, guidelines, assistant, optimization, framework, frameworks]
+tools: undefined
 ---
-
-
-
 # Demeter — AI Assistant Guidelines (DeFi/AMM Strategy Framework)
 
 Purpose: Research and simulate AMM/liquidity strategies with price/fee modeling, impermanent loss analysis, and on-chain data hygiene.
@@ -46,3 +45,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

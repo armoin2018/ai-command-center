@@ -1,11 +1,10 @@
 ---
-name: 'Express Api.Instructions'
-description: 'Development guidelines and best practices for Express Api.Instructions'
+id: express-api
+name: Express Api.Instructions
+description: Development guidelines and best practices for Express Api.Instructions
 keywords: [async, context, architecture, api, express, avoid, example, copilot, api.instructions, follow]
+tools: [undefined]
 ---
-
-
-
 # GitHub Copilot Instructions
 
 These instructions define how GitHub Copilot should assist with this Node.js TypeScript Express API project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, Express best practices, and TypeScript standards.
@@ -32,7 +31,6 @@ Use this structure as a guide when creating or updating files:
 
 See [example-1](./examples/express-api/example-1.text)
 
-## 🧶 Patterns
 
 ### ✅ Patterns to Follow
 
@@ -89,18 +87,7 @@ See [example-1](./examples/express-api/example-1.text)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

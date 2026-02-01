@@ -1,11 +1,10 @@
 ---
-name: 'Openzeppelin.Instructions'
-description: 'Development guidelines and best practices for Openzeppelin.Instructions'
+id: openzeppelin
+name: Openzeppelin.Instructions
+description: Development guidelines and best practices for Openzeppelin.Instructions
 keywords: [testing, security, gui, frameworks, openzeppelin.instructions]
+tools: [undefined]
 ---
-
-
-
 Title: OpenZeppelin — AI Agent Implementation Guide
 
 Use cases
@@ -36,18 +35,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

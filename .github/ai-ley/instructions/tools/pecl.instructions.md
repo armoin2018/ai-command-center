@@ -1,18 +1,14 @@
 ---
-name: 'Pecl.Instructions'
-description: 'PECL (PHP Extension Community Library) is a repository of PHP extensions written in C that provide additional functionality to the PHP language.'
+id: pecl
+name: Pecl.Instructions
+description: PECL (PHP Extension Community Library) is a repository of PHP extensions written in C that provide additional functionality to the PHP language.
 keywords: [common, compliance, assistant, configuration, custom, checks, database, advanced, community, continuous]
+tools: [undefined]
 ---
-
-
-
-# PECL PHP Extension Community Library Instructions
-
 ## Overview
 
 PECL (PHP Extension Community Library) is a repository of PHP extensions written in C that provide additional functionality to the PHP language. PECL allows developers to install, configure, and manage C-based PHP extensions that extend core PHP capabilities with high-performance modules for databases, networking, cryptography, and specialized functionality.
 
-## Core Principles
 
 ### Extension Management
 - **C Extension Integration**: Seamless integration of C-based extensions with PHP
@@ -32,7 +28,6 @@ PECL (PHP Extension Community Library) is a repository of PHP extensions written
 - **Testing Framework**: Comprehensive testing tools for extension validation
 - **Distribution Packaging**: Packaging and distribution mechanisms for extensions
 
-## Implementation Framework
 
 ### PECL Installation and Setup
 
@@ -50,7 +45,6 @@ See [example-3](./examples/pecl/example-3.bash)
 
 See [example-4](./examples/pecl/example-4.bash)
 
-## Best Practices
 
 ### Extension Development Environment
 
@@ -64,7 +58,6 @@ See [example-6](./examples/pecl/example-6.bash)
 
 See [example-7](./examples/pecl/example-7.bash)
 
-## Common Patterns
 
 ### Extension Version Management
 
@@ -78,7 +71,6 @@ See [example-9](./examples/pecl/example-9.yaml)
 
 See [example-10](./examples/pecl/example-10.dockerfile)
 
-## Tools and Resources
 
 ### Essential PECL Tools
 
@@ -92,7 +84,6 @@ See [example-12](./examples/pecl/example-12.bash)
 
 See [example-13](./examples/pecl/example-13.bash)
 
-## Quality and Compliance
 
 ### Security Best Practices
 
@@ -102,7 +93,6 @@ See [example-14](./examples/pecl/example-14.bash)
 
 See [example-15](./examples/pecl/example-15.bash)
 
-## Troubleshooting
 
 ### Common Installation Issues
 
@@ -112,7 +102,6 @@ See [example-16](./examples/pecl/example-16.bash)
 
 See [example-17](./examples/pecl/example-17.bash)
 
-## Metrics and Monitoring
 
 ### Performance Monitoring
 
@@ -122,7 +111,6 @@ See [example-18](./examples/pecl/example-18.php)
 
 See [example-19](./examples/pecl/example-19.bash)
 
-## Integration Patterns
 
 ### Configuration Management Integration
 
@@ -132,7 +120,6 @@ See [example-20](./examples/pecl/example-20.yaml)
 
 See [example-21](./examples/pecl/example-21.bash)
 
-## Advanced Topics
 
 ### Custom Extension Development
 
@@ -144,7 +131,6 @@ See [example-23](./examples/pecl/example-23.bash)
 
 See [example-24](./examples/pecl/example-24.bash)
 
-## AI Assistant Guidelines
 
 ### When to Use PECL
 
@@ -196,18 +182,7 @@ See [example-24](./examples/pecl/example-24.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

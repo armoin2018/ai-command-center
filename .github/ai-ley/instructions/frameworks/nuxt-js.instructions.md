@@ -1,13 +1,10 @@
 ---
-name: 'Nuxt Js.Instructions'
-description: 'Development guidelines and best practices for Nuxt Js.Instructions'
+id: nuxt-js
+name: Nuxt Js.Instructions
+description: Development guidelines and best practices for Nuxt Js.Instructions
 keywords: [api, commands, common, bundle, assistant, authentication, architecture, backend, analysis, cli]
+tools: [undefined]
 ---
-
-
-
-# Nuxt.js Vue Framework Instructions
-
 ## Framework Overview
 - **Framework Name**: Nuxt.js
 - **Version**: 3.8+ (Latest stable)
@@ -21,7 +18,6 @@ See [example-1](./examples/nuxt-js/example-1.bash)
 ## Project Structure
 See [example-2](./examples/nuxt-js/example-2.txt)
 
-## Core Concepts
 
 ### Pages and Routing
 - **Purpose**: File-based routing system with automatic code splitting
@@ -48,7 +44,6 @@ See [example-5](./examples/nuxt-js/example-5.typescript)
 4. **Building**: Generate static or server-side rendered builds
 5. **Deployment**: Deploy to various platforms (Vercel, Netlify, etc.)
 
-## Best Practices
 
 ### State Management with Pinia
 See [example-6](./examples/nuxt-js/example-6.typescript)
@@ -56,7 +51,6 @@ See [example-6](./examples/nuxt-js/example-6.typescript)
 ### Composables for Reusable Logic
 See [example-7](./examples/nuxt-js/example-7.typescript)
 
-## Common Patterns
 
 ### Layout System
 See [example-8](./examples/nuxt-js/example-8.vue)
@@ -71,7 +65,6 @@ See [example-10](./examples/nuxt-js/example-10.typescript)
 ## Essential Commands
 See [example-11](./examples/nuxt-js/example-11.json)
 
-## Common Issues & Solutions
 
 ### Issue 1: Hydration Mismatch
 **Problem**: Client-side rendering differs from server-side
@@ -83,7 +76,6 @@ See [example-12](./examples/nuxt-js/example-12.vue)
 **Solution**: Use `useSeoMeta` composable correctly
 See [example-13](./examples/nuxt-js/example-13.typescript)
 
-## Performance Optimization
 
 ### Image Optimization
 See [example-14](./examples/nuxt-js/example-14.vue)
@@ -104,7 +96,6 @@ See [example-15](./examples/nuxt-js/example-15.bash)
 - **Vue.js Guide**: https://vuejs.org/guide/
 - **GitHub Repository**: https://github.com/nuxt/nuxt
 
-## Framework-Specific Guidelines
 
 ### Code Style
 - Use Composition API with `<script setup>` syntax
@@ -118,7 +109,6 @@ See [example-15](./examples/nuxt-js/example-15.bash)
 - Implement proper state management with Pinia
 - Create reusable components with proper prop validation
 
-## Integration Points
 
 ### Database Integration
 - **Purpose**: Server-side data persistence and querying
@@ -130,7 +120,6 @@ See [example-15](./examples/nuxt-js/example-15.bash)
 - **Setup**: Vitest with @nuxt/test-utils
 - **Usage**: Unit, integration, and E2E testing strategies
 
-## Troubleshooting
 
 ### Debug Mode
 See [example-16](./examples/nuxt-js/example-16.typescript)
@@ -158,18 +147,7 @@ When helping with Nuxt.js implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,13 +1,11 @@
 ---
-name: 'Build Registry'
-description: 'Awaiting summary.'
+id: ailey-build-registry
+name: Build Registry
+description: Awaiting summary.
 keywords: [, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -48,7 +46,6 @@ To use this agent, reference it in your chat or workflow configuration.
 
 - Build a json registry of the personas, instructions, workflows, schemas, prompts, and policies using the
 
-## Steps
 
 ### Phase 1
 
@@ -222,3 +219,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

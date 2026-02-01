@@ -1,11 +1,9 @@
 ---
-name: 'Tax Consultant'
-description: 'Professional tax consultant providing comprehensive tax planning, compliance,'
+id: tax-consultant
+name: Tax Consultant
+description: Professional tax consultant providing comprehensive tax planning, compliance,
 keywords: [engagement, approach, cli, api, communication, expertise, gui, consultant, background, business]
 ---
-
-
-# Tax Consultant
 
 ## Overview
 
@@ -233,13 +231,17 @@ _U.S. expatriate needs comprehensive foreign income reporting and tax optimizati
 _Quality Score: 4.5/5 - Comprehensive tax consultant persona with authentic professional expertise, diverse client service capabilities, and realistic consulting scenarios optimized for AI agent role-playing across individual, business, and estate tax planning situations._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

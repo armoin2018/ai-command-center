@@ -1,7 +1,7 @@
 ---
 name: 'Composer.Instructions'
 description: 'See [example-35](./examples/composer/example-35.'
-keywords: [automation, (basic, autoloading, [related, authentication, cache, analysis, advanced, best-practices, cases]
+keywords: [automation, (basic, autoloading, related, authentication, cache, analysis, advanced, best-practices, cases
 ---
 
 

@@ -1,12 +1,9 @@
 ---
-name: 'Financial Projections Expert'
-description: 'Expert persona specializing in Financial Projections Expert for AI-assisted development'
+id: financial-projections-expert
+name: Financial Projections Expert
+description: Expert persona specializing in Financial Projections Expert for AI-assisted development
 keywords: [directives, constraints, cli, api, expert, database, capabilities, example, behavioral, financial]
 ---
-
-
-
-# Persona: Financial Projections Expert
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/financial-projections-expert/example-6.python)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

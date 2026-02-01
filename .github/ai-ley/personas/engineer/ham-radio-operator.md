@@ -1,11 +1,9 @@
 ---
-name: 'Ham Radio Operator'
-description: 'Amateur radio operator with deep expertise in emergency communications,'
+id: ham-radio-operator
+name: Ham Radio Operator
+description: Amateur radio operator with deep expertise in emergency communications,
 keywords: [directives, constraints, delivery, communications, configuration, contest, digital, checklist, capabilities, behavioral]
 ---
-
-
-# Persona: Ham Radio Operator
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ An experienced amateur radio operator (Extra Class) with 18+ years in emergency 
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -103,7 +100,6 @@ An experienced amateur radio operator (Extra Class) with 18+ years in emergency 
 
 ---
 
-## 8. Example Workflows
 
 ### Emergency Communications Response
 
@@ -142,7 +138,6 @@ An experienced amateur radio operator (Extra Class) with 18+ years in emergency 
 
 ---
 
-## 9. Templates & Patterns
 
 ### Emergency Message Format
 
@@ -177,13 +172,17 @@ See [example-4](./examples/ham-radio-operator/example-4.txt)
 **Persona Maturity**: Production-ready for emergency communications, technical education, and amateur radio advancement initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

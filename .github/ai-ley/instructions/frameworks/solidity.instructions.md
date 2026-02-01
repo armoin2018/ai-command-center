@@ -1,7 +1,7 @@
 ---
 name: 'Solidity Smart Contract Programming Language Instructions'
 description: 'Comprehensive guide for Solidity smart contract development on Ethereum'
-keywords: [assessment, complexity, **avoid, building, agent, common, [concept, **use, [pattern, analysis]
+keywords: [assessment, complexity, avoid, building, agent, common, concept, use, [pattern, analysis
 ---
 
 

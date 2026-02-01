@@ -1,18 +1,16 @@
 ---
-name: 'Compliance.Instructions'
-description: 'Development guidelines and best practices for Compliance.Instructions'
+id: compliance
+name: Compliance.Instructions
+description: Development guidelines and best practices for Compliance.Instructions
 keywords: [audit, avoid, common, checklists, architecture, authorization, assistant, automation, benefits, aws]
+tools: [undefined]
 ---
-
-# Software Compliance Instructions
-
 ## Overview
 - **Domain**: Software Development Compliance and Regulatory Adherence
 - **Purpose**: Guide AI agents in implementing and maintaining compliance requirements across software development lifecycles
 - **Applicable To**: All software projects with regulatory, legal, or industry compliance requirements
 - **Integration Level**: Core requirement affecting architecture, development processes, and deployment strategies
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Compliance by Design**: Integrate compliance requirements from the earliest design phases rather than retrofitting
@@ -35,7 +33,6 @@ keywords: [audit, avoid, common, checklists, architecture, authorization, assist
 - **Myth**: Only certain team members need to understand compliance requirements
   **Reality**: All team members should understand relevant compliance requirements that affect their work
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -82,7 +79,6 @@ See [example-1](./examples/compliance/example-1.yaml)
 - Incident response and breach notification procedures
 - Regular compliance training and awareness programs
 
-## Best Practices
 
 ### Data Protection Implementation
 #### Privacy by Design Framework
@@ -95,7 +91,6 @@ See [example-3](./examples/compliance/example-3.markdown)
 #### Automated Compliance Checking
 See [example-4](./examples/compliance/example-4.python)
 
-## Common Patterns and Examples
 
 ### Pattern 1: GDPR Compliance Implementation
 **Scenario**: Web application handling EU user data requiring GDPR compliance
@@ -118,7 +113,6 @@ See [example-6](./examples/compliance/example-6.java)
 - **Why It's Problematic**: Error-prone, inconsistent, and doesn't scale with development velocity
 - **Better Approach**: Implement automated compliance checking with manual oversight for complex decisions
 
-## Tools and Resources
 
 ### Essential Tools
 #### Compliance Management Platforms
@@ -149,7 +143,6 @@ See [example-6](./examples/compliance/example-6.java)
 - **GDPR Implementation Guide**: Practical guidance for data protection compliance
 - **SOX Compliance Resources**: Financial reporting and internal controls guidance
 
-## Quality and Compliance
 
 ### Quality Standards
 - All compliance requirements documented and version-controlled
@@ -174,7 +167,6 @@ See [example-6](./examples/compliance/example-6.java)
 - Annual comprehensive compliance audit and certification
 - Continuous monitoring of regulatory changes and requirements
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Compliance Requirement Conflicts
@@ -252,6 +244,7 @@ When helping teams with compliance implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

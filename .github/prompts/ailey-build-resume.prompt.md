@@ -1,13 +1,11 @@
 ---
-name: 'Build Resume'
-description: 'Enhance resumes using AI-powered resume consultant and writer personas with ATS optimization'
+id: ailey-build-resume
+name: Build Resume
+description: Enhance resumes using AI-powered resume consultant and writer personas with ATS optimization
 keywords: [resume, enhancement, ats-optimization, career, professional-development, job-search, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Build Resume
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [resume, enhancement, ats-optimization, career, professional-developme
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -113,7 +109,6 @@ Using the resume consultant persona, perform comprehensive analysis:
 **Generate Consultant Report**:
 
 ```markdown
-# Resume Consultant Analysis Report
 
 ## Executive Summary
 
@@ -122,7 +117,6 @@ Using the resume consultant persona, perform comprehensive analysis:
 - **Target Role Alignment**: [Score/10]
 - **Overall Improvement Potential**: [High/Medium/Low]
 
-## Detailed Analysis
 
 ### Strengths Identified
 
@@ -222,7 +216,6 @@ Using the resume writer persona, implement improvements:
 **Success Metrics Report**:
 
 ```markdown
-# Resume Enhancement Success Metrics
 
 ## Improvement Scores
 
@@ -244,7 +237,6 @@ Using the resume writer persona, implement improvements:
 - [Interview preparation suggestions]
 ```
 
-## Examples
 
 ### Example 1: Basic Resume Enhancement
 
@@ -348,3 +340,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

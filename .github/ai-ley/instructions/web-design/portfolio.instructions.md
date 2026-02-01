@@ -1,11 +1,10 @@
 ---
-name: 'Portfolio.Instructions'
-description: 'Development guidelines and best practices for Portfolio.Instructions'
+id: portfolio
+name: Portfolio.Instructions
+description: Development guidelines and best practices for Portfolio.Instructions
 keywords: [portfolio, web design, website, portfolio.instructions, web]
+tools: [undefined]
 ---
-
-
-
 # Portfolio Website
 
 - Showcase projects and case studies.
@@ -14,18 +13,7 @@ keywords: [portfolio, web design, website, portfolio.instructions, web]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

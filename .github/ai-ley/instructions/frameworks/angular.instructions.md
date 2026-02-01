@@ -1,13 +1,10 @@
 ---
-name: 'Angular.Instructions'
-description: 'See [example-1](./examples/angular/example-1.'
-keywords: [api, agent, angular.instructions, agents, angular, avoid:, alternative:, architecture, avoid, 5.0/5.0]
+id: angular
+name: Angular.Instructions
+description: See [example-1](./examples/angular/example-1.
+keywords: [api, agent, angular.instructions, agents, angular, object Object, object Object, architecture, avoid, 5.0/5.0]
+tools: [undefined]
 ---
-
-
-
-# Angular Framework Instructions for AI Agents
-
 ## When to Use Angular
 
 Use Angular when you need:
@@ -37,7 +34,6 @@ Consider alternatives when:
 - **Language**: TypeScript (primary), JavaScript (supported)
 - **Use Cases**: Enterprise SPAs, PWAs, large-scale applications
 
-## Installation & Setup
 
 ### ✅ Recommended: Angular CLI with Standalone Components
 
@@ -58,7 +54,6 @@ See [example-3](./examples/angular/example-3.bash)
 - **For mobile**: Consider Ionic + Capacitor integration
 - **For existing**: Migrate gradually from modules to standalone
 
-## Project Structure
 
 ### ✅ Modern Standalone Architecture
 
@@ -71,7 +66,6 @@ See [example-4](./examples/angular/example-4.txt)
 - **Standalone**: Prefer standalone components over NgModules
 - **Signals**: Use signals for reactive state management
 
-## Core Concepts
 
 ### Standalone Components
 
@@ -99,7 +93,6 @@ See [example-7](./examples/angular/example-7.typescript)
 
 See [example-8](./examples/angular/example-8.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -130,7 +123,6 @@ See [example-9](./examples/angular/example-9.typescript)
 
 See [example-10](./examples/angular/example-10.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Commands
 
@@ -162,18 +154,7 @@ See [example-11](./examples/angular/example-11.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

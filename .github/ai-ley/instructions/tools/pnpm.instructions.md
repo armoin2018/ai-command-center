@@ -1,7 +1,7 @@
 ---
 name: 'Pnpm.Instructions'
 description: 'See [example-28](./examples/pnpm/example-28.'
-keywords: [(pnpm, automation, commands, .npmrc, [related, architecture, ci/cd, advanced, cli, cases]
+keywords: [(pnpm, automation, commands, .npmrc, related, architecture, ci/cd, advanced, cli, cases
 ---
 
 

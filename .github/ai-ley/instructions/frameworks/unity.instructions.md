@@ -1,13 +1,10 @@
 ---
-name: 'Unity.Instructions'
-description: 'Development guidelines and best practices for Unity.Instructions'
+id: unity
+name: Unity.Instructions
+description: Development guidelines and best practices for Unity.Instructions
 keywords: [common, build, audio, architecture, configuration, concepts, considerations, assistant, development, components]
+tools: [undefined]
 ---
-
-
-
-# Unity Game Engine Instructions
-
 ## Framework Overview
 - **Framework Name**: Unity
 - **Version**: 2023.2+ (Latest LTS recommended)
@@ -15,7 +12,6 @@ keywords: [common, build, audio, architecture, configuration, concepts, consider
 - **Language**: C# (primary), UnityScript (deprecated), Visual scripting
 - **Use Cases**: 2D/3D games, mobile apps, VR/AR experiences, simulations
 
-## Installation & Setup
 
 ### Unity Hub Installation
 See [example-1](./examples/unity/example-1.bash)
@@ -26,7 +22,6 @@ See [example-2](./examples/unity/example-2.bash)
 ### Project Structure
 See [example-3](./examples/unity/example-3.txt)
 
-## Core Concepts
 
 ### GameObjects and Components
 - **Purpose**: Unity's fundamental building blocks for game entities
@@ -53,7 +48,6 @@ See [example-6](./examples/unity/example-6.csharp)
 4. **Testing**: Use Play mode and build testing for target platforms
 5. **Build**: Deploy to target platforms (PC, mobile, console, web)
 
-## Best Practices
 
 ### Performance Optimization
 See [example-7](./examples/unity/example-7.csharp)
@@ -61,7 +55,6 @@ See [example-7](./examples/unity/example-7.csharp)
 ### UI and User Experience
 See [example-8](./examples/unity/example-8.csharp)
 
-## Common Patterns
 
 ### Data Persistence
 See [example-9](./examples/unity/example-9.csharp)
@@ -70,7 +63,6 @@ See [example-9](./examples/unity/example-9.csharp)
 ### Project Settings and Build Configuration
 See [example-10](./examples/unity/example-10.csharp)
 
-## Common Issues & Solutions
 
 ### Issue 1: Performance Issues
 **Problem**: Low frame rate and poor performance
@@ -113,18 +105,7 @@ When helping with Unity game development:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

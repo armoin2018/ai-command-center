@@ -1,10 +1,10 @@
 ---
-id: ailey-seo-report
+id: ailey-report-seo
 name: seoReport
-description: 'Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization'
+description: Generate comprehensive SEO analysis reports with ratings, gradings, remediations and recommendations for website optimization
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Marketing
 ---
-
 # Copilot Command: SEO Report Generator
 
 > **Note**: This prompt now delegates to the **ailey-seo-report** skill for comprehensive SEO analysis.  
@@ -105,7 +105,6 @@ The skill executes these steps automatically:
 
 **Full details**: See `.github/skills/ailey-seo-report/references/seo-report.instructions.md`
 
-## Examples
 
 ### Example 1: Basic SEO Audit
 ```
@@ -188,3 +187,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

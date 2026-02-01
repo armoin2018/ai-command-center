@@ -1,12 +1,9 @@
 ---
-name: 'Disaster Recovery Architect'
-description: 'Expert persona specializing in Disaster Recovery Architect for AI-assisted development'
+id: disaster-recovery-architect
+name: Disaster Recovery Architect
+description: Expert persona specializing in Disaster Recovery Architect for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, aws, database, azure, capabilities, architect, behavioral]
 ---
-
-
-
-# Persona: Disaster Recovery Architect
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/disaster-recovery-architect/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

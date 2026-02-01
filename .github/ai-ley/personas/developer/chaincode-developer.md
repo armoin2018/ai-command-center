@@ -1,12 +1,9 @@
 ---
-name: 'Chaincode Developer'
-description: 'Expert persona specializing in Chaincode Developer for AI-assisted development'
+id: chaincode-developer
+name: Chaincode Developer
+description: Expert persona specializing in Chaincode Developer for AI-assisted development
 keywords: [directives, constraints, chaincode, architecture, docker, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: chaincode developer
 
 ## 1. Role Summary
 A Software Developer specializing in machine learning model development, AI system integration, and intelligent automation, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/chaincode-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

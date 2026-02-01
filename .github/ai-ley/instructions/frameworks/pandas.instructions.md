@@ -1,11 +1,10 @@
 ---
-name: 'Pandas.Instructions'
-description: 'Development guidelines and best practices for Pandas.Instructions'
+id: pandas
+name: Pandas.Instructions
+description: Development guidelines and best practices for Pandas.Instructions
 keywords: [frameworks, pandas.instructions, gui, testing]
+tools: [undefined]
 ---
-
-
-
 Title: pandas (Finance) — AI Agent Data Handling Guide
 
 Scope
@@ -29,18 +28,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

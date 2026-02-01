@@ -1,13 +1,10 @@
 ---
-name: 'Express.Instructions'
-description: 'Use Express.'
+id: express
+name: Express.Instructions
+description: Use Express.
 keywords: [application, async, agent, 4.9/5.0, architecture, api, agents, avoid, assistant, authentication]
+tools: [undefined]
 ---
-
-
-
-# Express.js Framework Instructions for AI Agents
-
 ## When to Use Express.js
 
 Use Express.js when you need:
@@ -39,7 +36,6 @@ Consider alternatives when:
 - **Language**: JavaScript/TypeScript
 - **Use Cases**: REST APIs, web servers, microservices, real-time apps
 
-## Installation & Setup
 
 ### ✅ Recommended: TypeScript with Modern Dependencies
 
@@ -60,7 +56,6 @@ See [example-3](./examples/express/example-3.bash)
 - **For real-time**: Express + Socket.io + Redis
 - **For enterprise**: Consider NestJS instead
 
-## Project Structure
 
 ### ✅ Recommended TypeScript Structure
 
@@ -73,7 +68,6 @@ See [example-4](./examples/express/example-4.txt)
 - **Middleware**: Process requests before reaching controllers
 - **Models**: Define data structures and database schemas
 
-## Core Concepts
 
 ### Application Setup
 
@@ -119,7 +113,6 @@ See [example-11](./examples/express/example-11.typescript)
 
 See [example-12](./examples/express/example-12.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -150,7 +143,6 @@ See [example-13](./examples/express/example-13.typescript)
 
 See [example-14](./examples/express/example-14.typescript)
 
-### Testing Best Practices
 
 #### Unit Testing Services
 See [example-15](./examples/express/example-15.typescript)
@@ -169,7 +161,6 @@ See [example-19](./examples/express/example-19.typescript)
 #### Testing Middleware
 See [example-20](./examples/express/example-20.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Scripts
 
@@ -254,18 +245,7 @@ When helping with Express.js:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

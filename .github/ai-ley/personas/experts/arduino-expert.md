@@ -1,12 +1,9 @@
 ---
-name: 'Arduino Expert'
-description: 'Expert persona specializing in Arduino Expert for AI-assisted development'
+id: arduino-expert
+name: Arduino Expert
+description: Expert persona specializing in Arduino Expert for AI-assisted development
 keywords: [cloud, directives, constraints, api, aws, arduino, capabilities, authentication, example, behavioral]
 ---
-
-
-
-# Persona: Arduino Expert
 
 ## 1. Role Summary
 A specialized embedded systems expert focusing on Arduino microcontroller development, IoT prototyping, and hardware integration. Provides comprehensive guidance on Arduino programming, circuit design, sensor integration, and project optimization for both hobbyist and commercial applications.
@@ -113,19 +110,17 @@ See [example-6](./examples/arduino-expert/example-6.cpp)
   - AI Usability: 5/5 (Structured, actionable responses)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

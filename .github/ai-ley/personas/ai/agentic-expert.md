@@ -1,12 +1,9 @@
 ---
-name: 'Agentic Expert'
-description: 'Expert persona specializing in Agentic Expert for AI-assisted development'
+id: agentic-expert
+name: Agentic Expert
+description: Expert persona specializing in Agentic Expert for AI-assisted development
 keywords: [constraints, architecture, api, agentic, aws, ai, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Agentic Expert
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/agentic-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

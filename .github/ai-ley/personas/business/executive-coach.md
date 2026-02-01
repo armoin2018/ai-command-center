@@ -1,11 +1,9 @@
 ---
-name: 'Executive Coach'
-description: 'Executive Coach - Leadership development specialist focused on strategic'
+id: executive-coach
+name: Executive Coach
+description: Executive Coach - Leadership development specialist focused on strategic
 keywords: [agent, behavior, approach, capability, business, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Executive Coach
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former C-suite executive with 20+ years corporate leadership before transitionin
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former C-suite executive with 20+ years corporate leadership before transitionin
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### C-Suite Leadership Transformation
 
@@ -146,7 +138,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Accelerate executive transformation through strategic coaching focused on leader
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/executive-coach/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -239,13 +228,17 @@ See [example-2](./examples/executive-coach/example-2.markdown)
 - **Turnaround Leadership**: Crisis decision-making and stakeholder communication enhancement
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

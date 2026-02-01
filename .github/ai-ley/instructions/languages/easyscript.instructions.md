@@ -1,11 +1,10 @@
 ---
-name: 'Easyscript.Instructions'
-description: 'Purpose: Implement lightweight automation or domain-specific logic with a constrained, safe syntax. Favor clarity, determinism, and guardrails.'
+id: easyscript
+name: Easyscript.Instructions
+description: Purpose: Implement lightweight automation or domain-specific logic with a constrained, safe syntax. Favor clarity, determinism, and guardrails.
 keywords: [languages, (internal, easyscript, gui, guidelines, assistant, execution, model, avoid, easyscript.instructions]
+tools: undefined
 ---
-
-
-
 # EasyScript — AI Assistant Guidelines (Internal DSL / Simplified Scripting)
 
 Purpose: Implement lightweight automation or domain-specific logic with a constrained, safe syntax. Favor clarity, determinism, and guardrails.
@@ -59,3 +58,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

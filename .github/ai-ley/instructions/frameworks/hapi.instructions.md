@@ -1,11 +1,10 @@
 ---
-name: 'Hapi.Instructions'
-description: 'Title: hapi (Node.'
+id: hapi
+name: Hapi.Instructions
+description: Title: hapi (Node.
 keywords: [testing, api, security, gui, hapi.instructions, frameworks]
+tools: undefined
 ---
-
-
-
 Title: hapi (Node.js) — AI Agent Implementation Guide
 
 Use cases
@@ -47,3 +46,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

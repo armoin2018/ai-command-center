@@ -1,12 +1,9 @@
 ---
-name: 'Venture Capitalist'
-description: 'Expert persona specializing in Venture Capitalist for AI-assisted development'
+id: venture-capitalist
+name: Venture Capitalist
+description: Expert persona specializing in Venture Capitalist for AI-assisted development
 keywords: [directives, constraints, finance, api, goals, capabilities, framework, example, behavioral, capitalist]
 ---
-
-
-
-# Persona: Venture Capitalist
 
 ## 1. Role Summary
 
@@ -122,19 +119,17 @@ See [example-8](./examples/venture-capitalist/example-8.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

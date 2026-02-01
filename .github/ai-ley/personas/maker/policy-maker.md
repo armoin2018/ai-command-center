@@ -1,11 +1,9 @@
 ---
-name: 'Policy Maker'
-description: 'Policy Maker specializing in developing and enacting public policy across'
+id: policy-maker
+name: Policy Maker
+description: Policy Maker specializing in developing and enacting public policy across
 keywords: [agent, behavior, approach, architecture, api, capability, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Policy Maker
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently Chair of the State Senate Committee on Education and Workforce Develop
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently Chair of the State Senate Committee on Education and Workforce Develop
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develops comprehensive public policy frameworks and legislative strategies that 
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/policy-maker/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/policy-maker/example-2.markdown)
 - **Maintenance Schedule**: Daily legislative monitoring, weekly stakeholder engagement, monthly progress assessment, quarterly strategic review and policy effectiveness evaluation
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

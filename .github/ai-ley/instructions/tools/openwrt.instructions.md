@@ -1,15 +1,10 @@
 ---
-name: 'openwrt.instructions'
-description: 'Development guidelines and best practices for Openwrt.Instructions'
+id: openwrt
+name: openwrt.instructions
+description: Development guidelines and best practices for Openwrt.Instructions
 keywords: [api, automation, avoid, agent, compliance, architecture, assistant, authentication, configuration, advanced]
+tools: [undefined]
 ---
-
-
-
-# OpenWrt Router Security Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents regarding OpenWrt embedded Linux router firmware, covering open-source router customization, network security configuration, package management, UCI system, and edge device deployment for secure networking infrastructure.
@@ -70,7 +65,6 @@ See [example-1](./examples/openwrt/example-1.python)
 
 See [example-2](./examples/openwrt/example-2.bash)
 
-## AI Implementation Guidelines
 
 ### Enterprise OpenWrt Deployment Framework
 
@@ -140,19 +134,8 @@ See [example-2](./examples/openwrt/example-2.bash)
 - **Use Cases**: Enterprise edge security, IoT gateways, network segmentation, compliance environments
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

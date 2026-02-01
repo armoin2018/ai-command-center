@@ -1,11 +1,10 @@
 ---
-name: 'Quantconnect.Instructions'
-description: 'Development guidelines and best practices for Quantconnect.Instructions'
+id: quantconnect
+name: Quantconnect.Instructions
+description: Development guidelines and best practices for Quantconnect.Instructions
 keywords: [cloud, testing, gui, frameworks, framework, quantconnect.instructions, performance]
+tools: [undefined]
 ---
-
-
-
 Title: QuantConnect — AI Agent Platform Guide
 
 Scope
@@ -33,18 +32,7 @@ See also
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

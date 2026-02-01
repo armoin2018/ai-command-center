@@ -1,7 +1,7 @@
 ---
 name: 'Hardhat Ethereum Development Framework Instructions'
 description: 'Comprehensive guide for Hardhat development environment for Ethereum'
-keywords: [common, complexity, agent, [pattern, [concept, analysis, **use, building, assessment, **avoid]
+keywords: [common, complexity, agent, pattern, [concept, analysis, use, building, assessment, avoid
 ---
 
 

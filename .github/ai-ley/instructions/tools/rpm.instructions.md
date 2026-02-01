@@ -1,17 +1,15 @@
 ---
-name: 'Rpm.Instructions'
-description: 'Development guidelines and best practices for Rpm.Instructions'
+id: rpm
+name: Rpm.Instructions
+description: Development guidelines and best practices for Rpm.Instructions
 keywords: [advanced, comprehensive, application, common, compliance, assistant, concepts, analysis, avoid, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "rpm, package-management, redhat, centos, fedora, suse, **/rpm, spec-files"
 ---
 
-# RPM Package Management Instructions
 
 ## Overview
 - **Domain**: Red Hat Package Manager (RPM) and Low-Level Package Operations
@@ -19,7 +17,6 @@ applyTo: "rpm, package-management, redhat, centos, fedora, suse, **/rpm, spec-fi
 - **Applicable To**: RHEL, CentOS, Fedora, SUSE, OpenSUSE, and other RPM-based distributions
 - **Integration Level**: System administration, package development, and automated deployments
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Binary Package Distribution**: RPM provides compiled software packages with metadata
@@ -40,7 +37,6 @@ applyTo: "rpm, package-management, redhat, centos, fedora, suse, **/rpm, spec-fi
 - **Myth**: RPM automatically resolves dependencies
   **Reality**: RPM validates dependencies but doesn't automatically install them (use YUM/DNF for that)
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/rpm/example-2.bash)
 #### CI/CD Integration for RPM Building
 See [example-3](./examples/rpm/example-3.yaml)
 
-## Best Practices
 
 ### Comprehensive SPEC File Template
 See [example-4](./examples/rpm/example-4.spec)
@@ -87,7 +82,6 @@ See [example-4](./examples/rpm/example-4.spec)
 ### Advanced RPM Operations and Queries
 See [example-5](./examples/rpm/example-5.bash)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Custom Application Packaging
 **Scenario**: Package a custom application with all dependencies and proper system integration
@@ -112,7 +106,6 @@ See [example-7](./examples/rpm/example-7.spec)
 - **Why It's Problematic**: Changes are lost during package updates and can cause verification failures
 - **Better Approach**: Use configuration packages or proper configuration management tools
 
-## Tools and Resources
 
 ### RPM Development and Analysis Tools
 See [example-8](./examples/rpm/example-8.bash)
@@ -126,7 +119,6 @@ See [example-9](./examples/rpm/example-9.bash)
 - **Fedora Packaging Guidelines**: https://docs.fedoraproject.org/en-US/packaging-guidelines/
 - **SPEC File Reference**: https://rpm-software-management.github.io/rpm/manual/spec.html
 
-## Quality and Compliance
 
 ### Quality Standards
 - Comprehensive SPEC file documentation with proper metadata
@@ -192,18 +184,7 @@ When helping teams choose RPM packaging approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

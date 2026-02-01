@@ -1,17 +1,15 @@
 ---
-name: 'Objective C.Instructions'
-description: 'Development guidelines and best practices for Objective C.Instructions'
+id: objective-c
+name: Objective C.Instructions
+description: Development guidelines and best practices for Objective C.Instructions
 keywords: [api, c.instructions, avoid, common, architecture, authentication, assistant, authorization, advanced, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "objective-c, objc, cocoa, ios, macos, **/*.m, **/*.h, **/*.mm"
 ---
 
-# Objective-C Programming Language Instructions
 
 ## Overview
 - **Domain**: Apple Platform Development Language for iOS, macOS, watchOS, and tvOS
@@ -19,7 +17,6 @@ applyTo: "objective-c, objc, cocoa, ios, macos, **/*.m, **/*.h, **/*.mm"
 - **Applicable To**: iOS applications, macOS applications, legacy codebases, bridging Swift and C
 - **Integration Level**: Apple platform frameworks, Core Foundation, and system-level programming
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Message Passing**: Dynamic method dispatch through runtime messaging system
@@ -43,7 +40,6 @@ applyTo: "objective-c, objc, cocoa, ios, macos, **/*.m, **/*.h, **/*.mm"
 - **Myth**: Objective-C syntax is unnecessarily verbose
   **Reality**: Verbosity provides clarity and self-documenting code
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -85,7 +81,6 @@ See [example-2](./examples/objective-c/example-2.objc)
 ### Advanced Objective-C Patterns
 See [example-3](./examples/objective-c/example-3.objc)
 
-## Best Practices
 
 ### Memory Management and Performance
 See [example-4](./examples/objective-c/example-4.objc)
@@ -93,7 +88,6 @@ See [example-4](./examples/objective-c/example-4.objc)
 ### Error Handling and Debugging
 See [example-5](./examples/objective-c/example-5.objc)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Model-View-Controller Architecture
 **Scenario**: Implement clean MVC architecture for iOS applications
@@ -118,7 +112,6 @@ See [example-7](./examples/objective-c/example-7.objc)
 - **Why It's Problematic**: Causes UI freezing and poor user experience
 - **Better Approach**: Use background queues for heavy operations and return to main queue for UI updates
 
-## Tools and Resources
 
 ### Development Tools and Frameworks
 See [example-8](./examples/objective-c/example-8.objc)
@@ -137,7 +130,6 @@ See [example-10](./examples/objective-c/example-10.objc)
 - **Ray Wenderlich Tutorials**: https://www.raywenderlich.com/
 - **NSHipster**: https://nshipster.com/
 
-## Quality and Compliance
 
 ### Quality Standards
 - Follow Apple's coding conventions and style guidelines
@@ -204,18 +196,7 @@ When helping teams with Objective-C:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

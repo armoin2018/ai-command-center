@@ -1,15 +1,10 @@
 ---
-name: 'splunk.instructions'
-description: 'Development guidelines and best practices for Splunk.Instructions'
-keywords: [enterprise, mobile, analytics, architecture**, implementation**, **overview**, architecture, level, performance, intelligence]
+id: splunk
+name: splunk.instructions
+description: Development guidelines and best practices for Splunk.Instructions
+keywords: [enterprise, mobile, analytics, architecture, implementation, overview, architecture, level, performance, intelligence]
+tools: [undefined]
 ---
-
-
-
-# 🔍 Enterprise Splunk - Data Analytics & Security Intelligence Platform
-
-## **🏢 Level 3 Enterprise Implementation**
-
 ### **Overview**
 
 Enterprise Splunk Platform provides comprehensive data analytics, security intelligence, and business insights through advanced search, machine learning, and real-time monitoring capabilities for mission-critical operations.
@@ -29,21 +24,9 @@ Enterprise Splunk Platform provides comprehensive data analytics, security intel
 
 See [example-1](./examples/splunk/example-1.python)
 
-
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

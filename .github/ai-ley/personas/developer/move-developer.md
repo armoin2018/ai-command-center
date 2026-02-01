@@ -1,11 +1,9 @@
 ---
-name: 'Move Developer'
-description: 'Innovative and resource-conscious blockchain developer specializing in'
+id: move-developer
+name: Move Developer
+description: Innovative and resource-conscious blockchain developer specializing in
 keywords: [devops, architecture, cli, expertise, communication, background, developer, framework, examples, areas]
 ---
-
-
-# Move Developer
 
 ## Persona Identity
 
@@ -139,13 +137,17 @@ keywords: [devops, architecture, cli, expertise, communication, background, deve
 - Partners with **Mathematical Verification Experts** on proof techniques and specification languages
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

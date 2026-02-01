@@ -1,13 +1,11 @@
 ---
-name: 'Revenue Projections and Financial Modeling'
-description: 'Build comprehensive revenue projections with market analysis, customer modeling, and scenario planning'
+id: ailey-build-revenue-projections
+name: Revenue Projections and Financial Modeling
+description: Build comprehensive revenue projections with market analysis, customer modeling, and scenario planning
 keywords: [build, revenue, projections, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Revenue Projections and Financial Modeling
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [build, revenue, projections, prompt, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -113,7 +109,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 **Comprehensive Market Analysis Framework**:
 
 ```markdown
-# Revenue Projections & Financial Model
 
 ## Executive Summary
 
@@ -123,9 +118,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 **Growth Strategy**: {primary-growth-drivers}
 **ROI Projection**: {roi-summary}%
 
-## Revenue Model Definition
-
-### Primary Revenue Streams
 
 #### Revenue Stream 1: {Primary-Revenue-Stream}
 
@@ -162,7 +154,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 | **{Stream-2}** | {type} | ${pricing} | {percentage}% | {rating}    | {rating}       |
 | **{Stream-3}** | {type} | ${pricing} | {percentage}% | {rating}    | {rating}       |
 
-## Market Size and Penetration Analysis
 
 ### Total Addressable Market (TAM) Analysis
 
@@ -209,9 +200,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 - **Key Success Factors**: {requirements-for-success}
 - **Market Entry Barriers**: {challenges-to-overcome}
 
-## Market Penetration Assumptions
-
-### Year 1-5 Market Penetration Strategy
 
 #### Year 1: Market Entry
 
@@ -259,9 +247,7 @@ You are a financial analyst and business modeling expert with expertise in reven
 
 **Customer Growth and Revenue Generation Model**:
 ```markdown
-# Customer Acquisition & Retention Model
 
-## Customer Acquisition Strategy and Projections
 
 ### Customer Acquisition Funnel
 **Acquisition Funnel Metrics**:
@@ -291,7 +277,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 | **Year 4** | {annual-new} | {total-base} | ${average-cac} | ${total-investment} |
 | **Year 5** | {annual-new} | {total-base} | ${average-cac} | ${total-investment} |
 
-## Customer Retention and Lifecycle Value
 
 ### Customer Retention Model
 **Retention Rate Assumptions**:
@@ -323,7 +308,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 | **{Segment-3}** | ${arpu} | {months} | {percent}% | ${clv} | {ratio}:1 |
 | **Blended Average** | **${avg-arpu}** | **{avg-months}** | **{avg-percent}%** | **${avg-clv}** | **{avg-ratio}:1** |
 
-## Customer Base Growth Projections
 
 ### Customer Base Evolution
 | Year | Starting Base | New Customers | Churned | Ending Base | Net Growth | Growth Rate |
@@ -360,9 +344,7 @@ You are a financial analyst and business modeling expert with expertise in reven
 
 **Comprehensive Pricing Framework and Revenue Stream Analysis**:
 ```markdown
-# Pricing Strategy & Revenue Stream Analysis
 
-## Pricing Strategy Framework
 
 ### Pricing Model Philosophy
 **Pricing Approach**: {value-based-cost-plus-competitive-penetration}
@@ -411,7 +393,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 - **Dynamic Pricing**: {usage-based-demand-based-adjustments}
 - **Enterprise Pricing**: {custom-pricing-for-large-deals}
 
-## Revenue Stream Analysis
 
 ### Revenue Stream Performance
 #### Primary Revenue Stream: {Stream-Name}
@@ -481,9 +462,7 @@ You are a financial analyst and business modeling expert with expertise in reven
 
 **5-Year Revenue and ROI Modeling**:
 ```markdown
-# 5-Year Growth Projections & ROI Analysis
 
-## Year-over-Year Revenue Growth Analysis
 
 ### Annual Revenue Summary
 | Year | Total Revenue | Growth Rate | Monthly Recurring | One-Time Revenue | Revenue Mix |
@@ -525,7 +504,6 @@ You are a financial analyst and business modeling expert with expertise in reven
    - New customer segments: {number} segments
    - Partnership channel growth: {percentage}% of revenue by Year 5
 
-## Investment and Cost Structure
 
 ### Investment Requirements
 **Initial Investment (Year 1)**:
@@ -553,7 +531,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 | **4** | ${revenue} | ${cogs} | ${gross} | ${opex} | ${ebitda} | {gm}% / {em}% |
 | **5** | ${revenue} | ${cogs} | ${gross} | ${opex} | ${ebitda} | {gm}% / {em}% |
 
-## ROI Analysis and Payback Period
 
 ### Return on Investment Analysis
 **ROI Calculation**:
@@ -608,9 +585,7 @@ You are a financial analyst and business modeling expert with expertise in reven
 
 **Conservative, Expected, and Optimistic Scenario Planning**:
 ```markdown
-# Scenario Analysis & Risk Assessment
 
-## Three-Scenario Revenue Modeling
 
 ### Scenario Assumptions Summary
 | Assumption | Conservative | Expected | Optimistic | Impact Factor |
@@ -707,7 +682,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 - **Year 5**: ${weighted-average-revenue}
 - **5-Year Total**: ${total-weighted-revenue}
 
-## Risk Analysis and Mitigation
 
 ### Key Risk Factors
 | Risk | Probability | Impact | Scenario Effect | Mitigation Strategy |
@@ -756,7 +730,6 @@ You are a financial analyst and business modeling expert with expertise in reven
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Revenue Projections
 
@@ -861,3 +834,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

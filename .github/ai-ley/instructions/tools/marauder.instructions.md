@@ -1,15 +1,10 @@
 ---
-name: 'marauder.instructions'
-description: 'Development guidelines and best practices for Marauder.Instructions'
+id: marauder
+name: marauder.instructions
+description: Development guidelines and best practices for Marauder.Instructions
 keywords: [cloud, avoid, enterprise, agent, compliance, essentials, architecture, authorization, assistant, advanced]
+tools: [undefined]
 ---
-
-
-
-# Marauder Wi-Fi Security Toolkit Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents regarding Marauder Wi-Fi security testing toolkit, covering ESP32-based wireless security assessment, authorized penetration testing, and microcontroller-based security research within strict compliance frameworks, legal boundaries, and automated governance systems.
@@ -87,19 +82,8 @@ See [example-2](./examples/marauder/example-2.bash)
 - **Use Cases**: Authorized enterprise wireless testing, regulated security research, compliance assessment with automated audit trails, professional penetration testing with legal supervision
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

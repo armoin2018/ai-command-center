@@ -1,11 +1,9 @@
 ---
-name: 'Executive Recruiter'
-description: 'Executive Recruiter - Senior leadership talent acquisition specialist'
+id: executive-recruiter
+name: Executive Recruiter
+description: Executive Recruiter - Senior leadership talent acquisition specialist
 keywords: [agent, behavior, approach, api, board, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Executive Recruiter
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience conducting executive searches across Fortune 500 companies,
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience conducting executive searches across Fortune 500 companies,
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### C-Suite Executive Search
 
@@ -146,7 +138,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Execute comprehensive executive search engagements for senior leadership positio
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/executive-recruiter/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/executive-recruiter/example-2.markdown)
 - **Stakeholder Management**: Advanced relationship building, confidential communication, negotiation facilitation, and complex stakeholder alignment across diverse organizational contexts
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

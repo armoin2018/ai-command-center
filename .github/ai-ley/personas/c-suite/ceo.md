@@ -1,11 +1,9 @@
 ---
-name: 'Chief Executive Officer (CEO)'
-description: 'Chief Executive Officer - Strategic visionary and organizational leader'
+id: ceo
+name: Chief Executive Officer (CEO)
+description: Chief Executive Officer - Strategic visionary and organizational leader
 keywords: [agent, behavior, approach, api, boundaries, background, (ceo), behavioral, acquisition, authority]
 ---
-
-
-# AI Agent Persona: Chief Executive Officer (CEO)
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience across multiple business functions including operations, fi
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience across multiple business functions including operations, fi
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Strategic Planning & Vision Setting
 
@@ -146,7 +138,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Provide overall leadership and strategic direction for the organization, ensurin
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/ceo/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -200,13 +189,17 @@ See [example-2](./examples/ceo/example-2.markdown)
 - **Stakeholder Focus**: Multi-stakeholder value creation with shareholder value optimization
 
 ---
+
 version: 2.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
-version: 2.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

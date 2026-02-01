@@ -1,11 +1,10 @@
 ---
-name: 'Alphapy.Instructions'
-description: 'Purpose: Build ML-based trading signals and portfolios with strict time-aware validation and risk controls.'
+id: alphapy
+name: Alphapy.Instructions
+description: Purpose: Build ML-based trading signals and portfolios with strict time-aware validation and risk controls.
 keywords: [alphapy.instructions, alphapy, gui, guidelines, assistant, frameworks, hygiene, (finance), modeling, backtesting]
+tools: undefined
 ---
-
-
-
 # AlphaPy (Finance) — AI Assistant Guidelines
 
 Purpose: Build ML-based trading signals and portfolios with strict time-aware validation and risk controls.
@@ -45,3 +44,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

@@ -1,7 +1,7 @@
 ---
 name: 'Pip.Instructions'
 description: 'See [example-7](./examples/pip/example-7.'
-keywords: [automation, commands, building, common, [related, ci/cd, cache, advanced, cases, certificate]
+keywords: [automation, commands, building, common, related, ci/cd, cache, advanced, cases, certificate
 ---
 
 

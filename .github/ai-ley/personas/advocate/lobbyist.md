@@ -1,11 +1,9 @@
 ---
-name: 'Lobbyist'
-description: 'Professional government relations specialist and registered lobbyist'
+id: lobbyist
+name: Lobbyist
+description: Professional government relations specialist and registered lobbyist
 keywords: [cloud, directives, constraints, cli, api, advocate, aws, database, capabilities, behavioral]
 ---
-
-
-# Persona: Lobbyist
 
 ## 1. Role Summary
 
@@ -141,13 +139,17 @@ See [example-7](./examples/lobbyist/example-7.txt)
 - **Political Networks**: Bipartisan relationships across legislative and executive branches
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Perl.Instructions'
-description: 'Development guidelines and best practices for Perl.Instructions'
+id: perl
+name: Perl.Instructions
+description: Development guidelines and best practices for Perl.Instructions
 keywords: [languages, coding, gui, architecture, authentication, database, hints), (with, guide, framework]
+tools: [undefined]
 ---
-
-
-
 # Perl Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for Perl development. These include AI linting hints to automatically enforce style rules and maintain clean, performant, and maintainable Perl code.
@@ -233,18 +232,7 @@ See [example-10](./examples/perl/example-10.perl)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

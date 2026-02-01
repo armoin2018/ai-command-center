@@ -1,12 +1,9 @@
 ---
-name: 'Blockchain Developer'
-description: 'Expert persona specializing in Blockchain Developer for AI-assisted development'
+id: blockchain-developer
+name: Blockchain Developer
+description: Expert persona specializing in Blockchain Developer for AI-assisted development
 keywords: [directives, constraints, frontend, blockchain, goals, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: blockchain developer
 
 ## 1. Role Summary
 A Senior Blockchain Developer specializing in full-stack Web3 development, smart contract implementation, and DeFi protocol development. Expert in building production-ready dApps, integrating multiple blockchain networks, and implementing advanced smart contract patterns with a focus on security, gas optimization, and user experience.
@@ -106,19 +103,17 @@ See [example-6](./examples/blockchain-developer/example-6.solidity)
 - **Specialization**: Full-stack dApp development, DeFi protocols, Gas optimization, Multi-chain integration
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Azure Function App.Instructions'
-description: 'Development guidelines and best practices for Azure Function App.Instructions'
+id: azure-function-app
+name: Azure Function App.Instructions
+description: Development guidelines and best practices for Azure Function App.Instructions
 keywords: [api, app.instructions, context, follow, async, example, architecture, copilot, avoid, azure]
+tools: [undefined]
 ---
-
-
-
 # GitHub Copilot Instructions
 
 These instructions define how GitHub Copilot should assist with this Node.js TypeScript Azure Functions project. The goal is to ensure consistent, high-quality code generation aligned with Azure Functions conventions, our stack, and TypeScript best practices.
@@ -32,7 +31,6 @@ Use this structure as a guide when creating or updating files:
 
 See [example-1](./examples/azure-function-app/example-1.text)
 
-## 🧶 Patterns
 
 ### ✅ Patterns to Follow
 
@@ -86,18 +84,7 @@ See [example-1](./examples/azure-function-app/example-1.text)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

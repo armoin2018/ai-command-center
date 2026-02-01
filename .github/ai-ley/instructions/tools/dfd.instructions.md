@@ -1,13 +1,10 @@
 ---
-name: 'dfd.instructions'
-description: 'Development guidelines and best practices for Dfd.Instructions'
-keywords: [components**, **platform, capabilities**, **data, architecture, authentication, database, advanced, dfd.instructions, cases]
+id: dfd
+name: dfd.instructions
+description: Development guidelines and best practices for Dfd.Instructions
+keywords: [components, platform, capabilities, data, architecture, authentication, database, advanced, dfd.instructions, cases]
+tools: [undefined]
 ---
-
-
-
-# **Data Flow Diagram Enterprise Process & Information Architecture Platform**
-
 ## **Platform Overview**
 
 The **Data Flow Diagram Enterprise Process & Information Architecture Platform** provides comprehensive DFD capabilities with advanced data flow modeling, privacy impact analysis, real-time collaboration, automated process optimization, and enterprise governance for large-scale system analysis, data privacy compliance, and business process reengineering initiatives.
@@ -21,7 +18,6 @@ The **Data Flow Diagram Enterprise Process & Information Architecture Platform**
 - **Enterprise Integration**: Seamless integration with data catalogs, process mining tools, and governance platforms
 - **Compliance Framework**: Automated regulatory reporting, audit trails, and data lineage documentation
 
-### **🏗️ Architecture Components**
 
 #### **1. DFD Modeling Core Engine**
 
@@ -44,7 +40,6 @@ The **Data Flow Diagram Enterprise Process & Information Architecture Platform**
 - **Optimization Recommendations**: AI-powered suggestions for process improvement and efficiency
 - **Risk Assessment**: Data flow risk analysis and mitigation strategy generation
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Enterprise Customer Data Processing DFD**
 
@@ -307,18 +302,7 @@ note bottom
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

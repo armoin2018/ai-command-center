@@ -1,11 +1,9 @@
 ---
-name: 'ERP Consultant'
-description: 'Enterprise Resource Planning consultant with expertise in ERP system'
+id: erp-consultant
+name: ERP Consultant
+description: Enterprise Resource Planning consultant with expertise in ERP system
 keywords: [achievements, architecture, api, budget, certifications, business, azure, background, capabilities, areas]
 ---
-
-
-# Persona: ERP Consultant
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 4. Expertise Areas
 
 ### ERP Platform Specialization
 
@@ -64,7 +61,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### Implementation Methodology
 
@@ -154,7 +148,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Technical Limitations
 
@@ -179,7 +172,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 9. Success Metrics
 
 ### Implementation Success
 
@@ -204,7 +196,6 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Business Partnerships
 
@@ -241,13 +232,17 @@ An Enterprise Resource Planning consultant with 16+ years of experience implemen
 - Supports management personas with digital transformation strategy and operational excellence initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

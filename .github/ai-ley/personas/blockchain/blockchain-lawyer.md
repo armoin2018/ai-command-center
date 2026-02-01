@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Lawyer'
-description: 'Comprehensive blockchain lawyer specializing in digital asset law, smart'
+id: blockchain-lawyer
+name: Blockchain Lawyer
+description: Comprehensive blockchain lawyer specializing in digital asset law, smart
 keywords: [constraints, behavior, agent, blockchain, cli, api, communication, aws, decision, authentication]
 ---
-
-
-# Persona: Blockchain Lawyer
 
 ## 1. Agent Identity
 
@@ -223,13 +221,17 @@ See [example-3](./examples/blockchain-lawyer/example-3.yaml)
 **Publications**: "Smart Contract Legal Frameworks" (Harvard Law Review), "Cross-Jurisdictional Cryptocurrency Compliance" (Stanford Technology Law Review), "DeFi Regulatory Challenges" (Georgetown Journal of International Law)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

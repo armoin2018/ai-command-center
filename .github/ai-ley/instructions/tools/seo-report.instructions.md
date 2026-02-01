@@ -1,12 +1,10 @@
 ---
-name: 'SEO Report Analysis Instructions'
-description: 'Comprehensive SEO analysis and audit instruction set for AI agents to'
+id: seo-report
+name: SEO Report Analysis Instructions
+description: Comprehensive SEO analysis and audit instruction set for AI agents to
 keywords: [audit, assessment, availability, (`crawl, access, (`analyze, analyzer, architecture, analysis, cli]
+tools: [undefined]
 ---
-
-
-# SEO Analysis & Audit Instructions
-
 ## 1. Overview & Purpose
 
 Comprehensive instruction set for AI agents to perform detailed SEO analysis and generate actionable audit reports. This system evaluates technical SEO, content optimization, user experience, and authority signals to provide prioritized recommendations for improved search engine visibility and organic traffic growth.
@@ -52,7 +50,6 @@ For advanced strategic analysis and ecosystem-level optimization recommendations
 - Provide competitive benchmarking when applicable
 - Deliver executive-ready reports with prioritized action plans
 
-## 2. Input Parameters & Configuration
 
 ### Required Inputs
 
@@ -69,7 +66,6 @@ For advanced strategic analysis and ecosystem-level optimization recommendations
 
 See [example-1](./examples/seo-report/example-1.json)
 
-## 3. SEO Tool Detection & Web Access Methods
 
 ### Tool Detection & Availability Assessment
 
@@ -121,7 +117,6 @@ See [example-5](./examples/seo-report/example-5.python)
 **Phase 6 Enhancement (v3.5.0)**: Complete website crawling and per-page SEO analysis framework for comprehensive site-wide audits.
 
 #
-### 4.1 Website Crawler (`crawl_site.py`)
 
 #### Purpose
 
@@ -175,7 +170,6 @@ See [example-10](./examples/seo-report/example-10.json)
 
 See [example-11](./examples/seo-report/example-11.json)
 
-### 4.2 Per-Page Analyzer (`analyze_pages.py`)
 
 #### Purpose
 
@@ -249,13 +243,8 @@ See [example-16](./examples/seo-report/example-16.txt)
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.5.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 3.5.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

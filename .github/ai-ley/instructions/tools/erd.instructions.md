@@ -1,13 +1,10 @@
 ---
-name: 'erd.instructions'
-description: 'Development guidelines and best practices for Erd.Instructions'
-keywords: [**erd, components**, erd.instructions, enterprise, **platform, capabilities**, examples**, architecture, database, cases]
+id: erd
+name: erd.instructions
+description: Development guidelines and best practices for Erd.Instructions
+keywords: [erd, components, erd.instructions, enterprise, platform, capabilities, examples, architecture, database, cases]
+tools: [undefined]
 ---
-
-
-
-# **ERD Enterprise Data Modeling & Database Architecture Platform**
-
 ## **Platform Overview**
 
 The **ERD Enterprise Data Modeling & Database Architecture Platform** provides comprehensive Entity Relationship Diagram capabilities with advanced data modeling, automated schema generation, database optimization, team collaboration, and enterprise data architecture governance for large-scale database design, data governance, and enterprise data management initiatives.
@@ -21,7 +18,6 @@ The **ERD Enterprise Data Modeling & Database Architecture Platform** provides c
 - **Database Optimization Engine**: Performance analysis, indexing recommendations, and query optimization insights
 - **Integration Ecosystem**: Seamless integration with database systems, ORMs, and data management tools
 
-### **🏗️ Architecture Components**
 
 #### **1. ERD Modeling Core Engine**
 
@@ -44,7 +40,6 @@ The **ERD Enterprise Data Modeling & Database Architecture Platform** provides c
 - **Access Control**: Role-based data access modeling and security constraint generation
 - **Audit Framework**: Comprehensive audit trail generation and regulatory reporting capabilities
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Enterprise Customer Data Model**
 
@@ -307,18 +302,7 @@ BEGIN
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

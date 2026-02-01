@@ -1,17 +1,15 @@
 ---
-name: 'Apt.Instructions'
-description: 'Development guidelines and best practices for Apt.Instructions'
+id: apt
+name: Apt.Instructions
+description: Development guidelines and best practices for Apt.Instructions
 keywords: [avoid, common, compliance, assistant, architecture, apt.instructions, authentication, analysis, advanced, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "apt, package-management, debian, ubuntu, **/sources.list, **/apt.conf"
 ---
 
-# APT Package Management Instructions
 
 ## Overview
 - **Domain**: Debian/Ubuntu Package Management and System Administration
@@ -19,7 +17,6 @@ applyTo: "apt, package-management, debian, ubuntu, **/sources.list, **/apt.conf"
 - **Applicable To**: Debian-based Linux distributions (Ubuntu, Debian, Linux Mint, Pop!_OS)
 - **Integration Level**: System administration, containerization, and automated deployments
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Dependency Resolution**: APT automatically handles package dependencies and conflicts
@@ -40,7 +37,6 @@ applyTo: "apt, package-management, debian, ubuntu, **/sources.list, **/apt.conf"
 - **Myth**: Installing from .deb files bypasses dependency checking
   **Reality**: Using `apt install ./package.deb` handles dependencies properly
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/apt/example-2.dockerfile)
 #### Ansible Integration
 See [example-3](./examples/apt/example-3.yaml)
 
-## Best Practices
 
 ### Secure Package Management
 See [example-4](./examples/apt/example-4.bash)
@@ -87,7 +82,6 @@ See [example-4](./examples/apt/example-4.bash)
 ### Advanced Repository Configuration
 See [example-5](./examples/apt/example-5.bash)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Development Environment Setup
 **Scenario**: Automated setup of development environment with specific package versions
@@ -112,7 +106,6 @@ See [example-7](./examples/apt/example-7.bash)
 - **Why It's Problematic**: Exposes system to malicious or corrupted packages
 - **Better Approach**: Properly add repository GPG keys and use authenticated sources
 
-## Tools and Resources
 
 ### APT Utilities and Analysis
 See [example-8](./examples/apt/example-8.bash)
@@ -126,7 +119,6 @@ See [example-9](./examples/apt/example-9.bash)
 - **Ubuntu Server Guide**: https://ubuntu.com/server/docs
 - **APT Configuration**: https://manpages.debian.org/apt.conf
 
-## Quality and Compliance
 
 ### Quality Standards
 - Regular package cache updates before installations
@@ -192,18 +184,7 @@ When helping teams choose package management approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,9 @@
 ---
-name: 'Penetration Tester'
-description: 'Elite penetration tester specializing in advanced persistent threats,'
+id: penetration-tester
+name: Penetration Tester
+description: Elite penetration tester specializing in advanced persistent threats,
 keywords: [cloud, directives, constraints, architecture, api, aws, azure, capabilities, behavioral, authorization]
 ---
-
-
-# Persona: Penetration Tester
 
 ## 1. Role Summary
 
@@ -126,13 +124,17 @@ See [example-3](./examples/penetration-tester/example-3.txt)
 - **Focus Areas**: Quantum-resistant crypto assessment, Container security, Supply chain attacks
 
 ---
+
 version: 2.3.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.4
 
 ---
-version: 2.3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.4
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

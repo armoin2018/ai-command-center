@@ -1,11 +1,10 @@
 ---
-name: 'Darkmode.Instructions'
-description: 'Development guidelines and best practices for Darkmode.Instructions'
+id: darkmode
+name: Darkmode.Instructions
+description: Development guidelines and best practices for Darkmode.Instructions
 keywords: [web design, darkmode.instructions, contrast]
+tools: [undefined]
 ---
-
-
-
 # Dark Mode / High-Contrast
 
 - Dark backgrounds with light text.
@@ -14,18 +13,7 @@ keywords: [web design, darkmode.instructions, contrast]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,14 +1,10 @@
 ---
-name: 'OPNsense Hardened Firewall Security Instructions'
-description: 'OPNsense hardened firewall and router platform guide covering FreeBSD-based security appliance deployment, packet filtering, VPN configuration, intrusion detection, and enterprise network security with modern web interface.'
+id: opnsense
+name: OPNsense Hardened Firewall Security Instructions
+description: OPNsense hardened firewall and router platform guide covering FreeBSD-based security appliance deployment, packet filtering, VPN configuration, intrusion detection, and enterprise network security with modern web interface.
 keywords: [deployment, api, avoid, enterprise, agent, compliance, ecosystem, architecture, authentication, advanced]
+tools: [undefined]
 ---
-
-
-# OPNsense Hardened Firewall Security Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents implementing OPNsense solutions, emphasizing hardened security configurations, modern firewall management, enterprise-grade network protection, and secure appliance deployment.
@@ -54,7 +50,6 @@ Provide comprehensive guidance for AI agents implementing OPNsense solutions, em
 
 See [example-1](./examples/opnsense/example-1.python)
 
-## AI Implementation Guidelines
 
 ### Enterprise OpnSense Deployment Framework
 
@@ -139,13 +134,8 @@ See [example-1](./examples/opnsense/example-1.python)
 - **Use Cases**: Enterprise security, network segmentation, compliance environments, managed security services
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

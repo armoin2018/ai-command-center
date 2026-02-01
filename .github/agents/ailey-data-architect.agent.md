@@ -1,11 +1,10 @@
 ---
 id: ailey-data-architect
 name: AI-ley Data Architect
-description: 'Data architecture specialist for schema design, data flows, and optimization'
+description: Data architecture specialist for schema design, data flows, and optimization
 keywords: [data-architecture, schema-design, database, api-contracts, data-integrity, optimization]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Data Architect Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Data architecture specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Discovery
 
@@ -135,3 +133,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

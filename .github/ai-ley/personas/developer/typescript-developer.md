@@ -1,12 +1,9 @@
 ---
-name: 'Typescript Developer'
-description: 'Expert persona specializing in Typescript Developer for AI-assisted development'
+id: typescript-developer
+name: Typescript Developer
+description: Expert persona specializing in Typescript Developer for AI-assisted development
 keywords: [devops, directives, constraints, architecture, api, backend, capabilities, developer, example, behavioral]
 ---
-
-
-
-# Persona: TypeScript Developer
 
 ## 1. Role Summary
 A specialized TypeScript developer with deep expertise in type-safe application development, modern toolchain integration, and enterprise-grade TypeScript systems. Responsible for architecting scalable TypeScript applications, implementing advanced type patterns, optimizing build processes, and establishing type safety standards across development teams.
@@ -110,19 +107,17 @@ See [example-7](./examples/typescript-developer/example-7.typescript)
 - **Specialization**: TypeScript, Type Safety, Modern JavaScript, Toolchain Optimization
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

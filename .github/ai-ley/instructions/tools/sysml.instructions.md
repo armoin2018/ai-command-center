@@ -1,13 +1,10 @@
 ---
-name: 'sysml.instructions'
-description: 'Development guidelines and best practices for Sysml.Instructions'
-keywords: [components**, automotive, **sysml, await, **platform, async, capabilities**, architecture, aerospace, cases]
+id: sysml
+name: sysml.instructions
+description: Development guidelines and best practices for Sysml.Instructions
+keywords: [components, automotive, sysml, await, platform, async, capabilities, architecture, aerospace, cases]
+tools: [undefined]
 ---
-
-
-
-# **SysML Enterprise Systems Engineering & MBSE Platform**
-
 ## **Platform Overview**
 
 The **SysML Enterprise Systems Engineering & Model-Based Systems Engineering (MBSE) Platform** provides comprehensive Systems Modeling Language (SysML) capabilities with advanced systems engineering, requirements traceability, model-based design, verification & validation, systems integration, and enterprise governance for large-scale systems development, aerospace engineering, automotive systems, and complex system-of-systems architectures.
@@ -21,7 +18,6 @@ The **SysML Enterprise Systems Engineering & Model-Based Systems Engineering (MB
 - **Verification & Validation Engine**: Automated V&V workflows with simulation and testing integration
 - **Enterprise Systems Governance**: Systems architecture governance with compliance and change management
 
-### **🏗️ Architecture Components**
 
 #### **1. SysML Modeling & Design Engine**
 
@@ -44,7 +40,6 @@ The **SysML Enterprise Systems Engineering & Model-Based Systems Engineering (MB
 - **Requirements Validation**: Automated requirements validation and consistency checking
 - **Change Impact Assessment**: Real-time impact analysis for requirements changes
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Advanced SysML Systems Engineering Engine**
 
@@ -307,18 +302,7 @@ async def implement_automotive_systems_integration():
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

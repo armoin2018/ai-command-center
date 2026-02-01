@@ -1,12 +1,9 @@
 ---
-name: 'Supply Chain Manager'
-description: 'Expert persona specializing in Supply Chain Manager for AI-assisted development'
+id: supply-chain-manager
+name: Supply Chain Manager
+description: Expert persona specializing in Supply Chain Manager for AI-assisted development
 keywords: [directives, constraints, chain, goals, aws, interaction, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: Supply Chain Manager
 
 ## 1. Role Summary
 
@@ -104,19 +101,17 @@ See [example-2](./examples/supply-chain-manager/example-2.txt)
 - **Context Window Limit**: 8000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

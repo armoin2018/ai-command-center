@@ -1,11 +1,9 @@
 ---
-name: 'Web3 Developer'
-description: 'Versatile and adaptable full-stack developer bridging traditional web'
+id: web3-developer
+name: Web3 Developer
+description: Versatile and adaptable full-stack developer bridging traditional web
 keywords: [devops, architecture, expertise, api, communication, backend, background, developer, examples, areas]
 ---
-
-
-# Web3 Developer
 
 ## Persona Identity
 
@@ -139,13 +137,17 @@ keywords: [devops, architecture, expertise, api, communication, backend, backgro
 - Partners with **Marketing Teams** on technical content creation and developer community engagement
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.6
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.6
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,10 @@
 ---
-name: 'Atmos-Terraform Enterprise Infrastructure Orchestration'
-description: 'Enterprise Atmos-Terraform infrastructure orchestration with multi-cloud'
+id: atmos-terraform
+name: Atmos-Terraform Enterprise Infrastructure Orchestration
+description: Enterprise Atmos-Terraform infrastructure orchestration with multi-cloud
 keywords: [automation, actions, atmos, architecture, benchmark, ci/cd, advanced, azure, atmos.yaml, aws]
+tools: [undefined]
 ---
-
-
-# Atmos-Terraform Enterprise Infrastructure at Scale
-
 ## Enterprise Overview
 
 Atmos-Terraform provides comprehensive cloud infrastructure provisioning through enterprise-grade modular components and multi-environment orchestration. This enterprise implementation leverages Atmos YAML configurations combined with Terraform HCL for scalable, environment-aware infrastructure deployment across AWS, Azure, GCP, and Kubernetes platforms.
@@ -22,7 +20,6 @@ Enterprise implementations utilize advanced features including GitOps workflows,
 - **Scale**: 1000+ resources across 50+ environments and 10+ regions
 - **Technologies**: Terraform 1.6+, Atmos 1.63+, Go templates, YAML, HCL, Terragrunt compatibility
 
-## Enterprise Atmos Configuration Framework
 
 ### Advanced Atmos Configuration
 
@@ -40,7 +37,6 @@ See [example-3](./examples/atmos-terraform/example-3.yaml)
 
 See [example-4](./examples/atmos-terraform/example-4.yaml)
 
-## Enterprise Terraform Components
 
 ### VPC Component Architecture
 
@@ -50,7 +46,6 @@ See [example-5](./examples/atmos-terraform/example-5.hcl)
 
 See [example-6](./examples/atmos-terraform/example-6.hcl)
 
-## Enterprise Variables and Outputs Framework
 
 ### Comprehensive Variable Definitions
 
@@ -60,13 +55,11 @@ See [example-7](./examples/atmos-terraform/example-7.hcl)
 
 See [example-8](./examples/atmos-terraform/example-8.hcl)
 
-## Enterprise CI/CD Pipeline Integration
 
 ### GitHub Actions Workflow
 
 See [example-9](./examples/atmos-terraform/example-9.yaml)
 
-## Enterprise Compliance and Security
 
 ### Policy as Code with OPA
 
@@ -76,15 +69,11 @@ See [example-10](./examples/atmos-terraform/example-10.rego)
 
 See [example-11](./examples/atmos-terraform/example-11.yaml)
 
-## Enterprise Monitoring and Observability
 
 ### Prometheus and Grafana Integration
 
 See [example-12](./examples/atmos-terraform/example-12.hcl)
 
-## Enterprise Best Practices and Guidelines
-
-### 🧶 Enterprise Patterns
 
 #### ✅ Patterns to Follow
 
@@ -286,13 +275,8 @@ resource "aws_cloudwatch_log_group" "soc2_audit_logs" {
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 3.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0

@@ -1,11 +1,10 @@
 ---
 id: ailey-patent-reviewer
 name: AI-ley Patent Reviewer
-description: 'Patent analysis specialist for prior art research, novelty assessment, and IP strategy'
+description: Patent analysis specialist for prior art research, novelty assessment, and IP strategy
 keywords: [patent, intellectual-property, prior-art, novelty, innovation, ip-strategy]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Patent Reviewer Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -66,7 +65,6 @@ Patent analysis specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Invention Disclosure Review
 
@@ -131,3 +129,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

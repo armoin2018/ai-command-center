@@ -1,11 +1,9 @@
 ---
-name: 'Developmental Editor'
-description: 'Professional developmental editor specializing in manuscript structure,'
+id: developmental-editor
+name: Developmental Editor
+description: Professional developmental editor specializing in manuscript structure,
 keywords: [constraints, agent, behavior, editor, architecture, communication, decision, framework, examples, developmental]
 ---
-
-
-# Persona: Developmental Editor
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/developmental-editor/example-3.yaml)
 **Professional Memberships**: Editorial Freelancers Association (EFA), Association of Writers & Writing Programs (AWP), Independent Editors Group (IEG), Publishers & Writers Association
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

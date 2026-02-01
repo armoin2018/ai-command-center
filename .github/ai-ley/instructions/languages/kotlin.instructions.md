@@ -1,11 +1,10 @@
 ---
-name: 'Kotlin.Instructions'
-description: 'Comprehensive Kotlin development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.'
+id: kotlin
+name: Kotlin.Instructions
+description: Comprehensive Kotlin development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, concurrency, common, async, cli, architecture, analysis, avoid, best-practices, clean]
+tools: [undefined]
 ---
-
-
-
 # Kotlin Programming Instructions
 
 Comprehensive Kotlin development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
@@ -23,7 +22,6 @@ Comprehensive Kotlin development guidelines for AI coding assistants, emphasizin
 
 See [example-1](./examples/kotlin/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern Kotlin following established conventions
@@ -43,7 +41,6 @@ See [example-1](./examples/kotlin/example-1.text)
 - Use delegation patterns (by lazy, by observable)
 - Leverage inline functions for performance-critical code
 
-## 📜 Code Style and Conventions
 
 ### Naming Conventions
 
@@ -53,7 +50,6 @@ See [example-2](./examples/kotlin/example-2.kotlin)
 
 See [example-3](./examples/kotlin/example-3.kotlin)
 
-## 🏗️ Architecture Patterns
 
 ### Clean Architecture Design
 
@@ -63,7 +59,6 @@ See [example-4](./examples/kotlin/example-4.kotlin)
 
 See [example-5](./examples/kotlin/example-5.kotlin)
 
-## 🔄 Coroutines Programming
 
 ### Structured Concurrency Best Practices
 
@@ -73,19 +68,16 @@ See [example-6](./examples/kotlin/example-6.kotlin)
 
 See [example-7](./examples/kotlin/example-7.kotlin)
 
-## 🛡️ Memory Management
 
 ### Efficient Resource Handling
 
 See [example-8](./examples/kotlin/example-8.kotlin)
 
-## ⚡ Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-9](./examples/kotlin/example-9.kotlin)
 
-## 🧪 Testing Guidelines
 
 ### Unit Testing Best Practices
 
@@ -95,7 +87,6 @@ See [example-10](./examples/kotlin/example-10.kotlin)
 
 See [example-11](./examples/kotlin/example-11.kotlin)
 
-## 🛠️ Development Environment
 
 ### Recommended Configuration
 
@@ -108,7 +99,6 @@ See [example-12](./examples/kotlin/example-12.kotlin)
 - **Package Manager**: Gradle - Comprehensive dependency management and build automation
 - **Testing**: JUnit 5 + Kotest + MockK - Modern testing framework with powerful assertions
 
-## 🔍 Code Quality Standards
 
 ### Static Analysis
 
@@ -126,7 +116,6 @@ See [example-14](./examples/kotlin/example-14.kotlin)
 - **Memory leaks**: Properly cancel coroutines and clean up resources
 - **Platform violations**: Don't perform long-running operations on the main thread
 
-## 📚 Essential Libraries
 
 ### Standard Library
 See [example-15](./examples/kotlin/example-15.kotlin)
@@ -138,7 +127,6 @@ See [example-15](./examples/kotlin/example-15.kotlin)
 - **Kotest**: Comprehensive testing framework with powerful matchers
 - **Arrow**: Functional programming library with advanced type safety
 
-## 🚦 AI Enforcement Summary
 
 ### Code Quality Rules
 - ✅ Enforce immutable data classes and val over var
@@ -171,18 +159,7 @@ See [example-15](./examples/kotlin/example-15.kotlin)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,9 @@
 ---
-name: 'AI Threat Analyst'
-description: 'Comprehensive AI threat analyst specializing in identifying and mitigating'
+id: ai-threat-analyst
+name: AI Threat Analyst
+description: Comprehensive AI threat analyst specializing in identifying and mitigating
 keywords: [cloud, constraints, agent, behavior, architecture, api, communication, aws, analyst, azure]
 ---
-
-
-# Persona: AI Threat Analyst
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/ai-threat-analyst/example-3.markdown)
 **Professional Memberships**: Association for Computing Machinery (ACM), IEEE Computer Society, International Association for Cryptologic Research (IACR), Partnership on AI, AI Safety Research Community
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

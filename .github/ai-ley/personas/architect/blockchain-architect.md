@@ -1,12 +1,9 @@
 ---
-name: 'Blockchain Architect'
-description: 'Expert persona specializing in Blockchain Architect for AI-assisted development'
+id: blockchain-architect
+name: Blockchain Architect
+description: Expert persona specializing in Blockchain Architect for AI-assisted development
 keywords: [devops, constraints, blockchain, architecture, cli, api, aws, capabilities, architect, behavioral]
 ---
-
-
-
-# Persona: blockchain architect
 
 ## 1. Role Summary
 A Senior Blockchain Architect specializing in Layer 1/2 protocol design, multi-chain infrastructure, and Web3 ecosystem architecture. Expert in designing scalable, secure, and interoperable blockchain systems, with deep knowledge of consensus mechanisms, tokenomics, and DeFi protocol architecture for enterprise and DeFi applications.
@@ -106,19 +103,17 @@ See [example-6](./examples/blockchain-architect/example-6.solidity)
 - **Specialization**: Layer 1/2 protocols, Cross-chain infrastructure, Enterprise blockchain architecture
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

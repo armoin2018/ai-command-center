@@ -1,12 +1,10 @@
 ---
-name: 'Lean Startup Instructions'
-description: 'Comprehensive lean startup methodology instructions for AI agents to'
+id: lean-startup
+name: Lean Startup Instructions
+description: Comprehensive lean startup methodology instructions for AI agents to
 keywords: [(mvp), api, assessment, accounting, apply, applications, agents, build, biotech, business]
+tools: [undefined]
 ---
-
-
-# Lean Startup Methodology Instructions for AI Agents
-
 ## Purpose
 
 These instructions guide AI agents in applying lean startup principles to help entrepreneurs and innovators build successful businesses through validated learning, customer-centric development, and iterative improvement. The methodology emphasizes rapid experimentation, customer feedback, and data-driven decision making.
@@ -21,7 +19,6 @@ Use these instructions when users need guidance on:
 - **Entrepreneurship Coaching**: Mentoring startups, accelerator programs, innovation consulting
 - **Business Model Design**: Revenue model creation, value proposition development, market analysis
 
-## Core Lean Startup Principles
 
 ### 1. Build-Measure-Learn Cycle
 
@@ -92,7 +89,6 @@ Use these instructions when users need guidance on:
 - Optimize conversion funnels and user experience
 - Build sustainable customer relationship management systems
 
-## Technical Implementation Guidelines
 
 ### Minimum Viable Product (MVP) Development
 
@@ -124,7 +120,6 @@ Use these instructions when users need guidance on:
     
 3. **Pivot Implementation**:
     
-## Industry-Specific Applications
 
 ### Technology Startups
 
@@ -161,7 +156,6 @@ Use these instructions when users need guidance on:
 - Enterprise customer acquisition and relationship management
 - Scalable service delivery model development
 
-## Business Model Canvas Integration
 
 ### Value Propositions
 
@@ -198,7 +192,6 @@ Use these instructions when users need guidance on:
 - Optimize resource allocation and cost structure
 - Develop sustainable competitive advantages
 
-## Risk Management and Uncertainty
 
 ### Hypothesis Risk Assessment
 
@@ -210,7 +203,6 @@ Use these instructions when users need guidance on:
     
 3. **Uncertainty Management**:
     
-## Team and Organizational Considerations
 
 ### Lean Startup Culture
 
@@ -236,12 +228,7 @@ Use these instructions when users need guidance on:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

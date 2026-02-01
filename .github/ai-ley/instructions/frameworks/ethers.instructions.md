@@ -1,7 +1,7 @@
 ---
 name: 'Ethers.Instructions'
 description: 'Use Ethers.'
-keywords: [(v6+), api, async, [concept, agents, architecture, authentication, [pattern, analysis, avoid]
+keywords: [(v6+), api, async, concept, agents, architecture, authentication, [pattern, analysis, avoid
 ---
 
 

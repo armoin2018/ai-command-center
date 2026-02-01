@@ -1,12 +1,10 @@
 ---
-name: 'ATS Optimization Instructions'
-description: 'Comprehensive instructions for AI agents to analyze and optimize Applicant'
+id: ats-optimization
+name: ATS Optimization Instructions
+description: Comprehensive instructions for AI agents to analyze and optimize Applicant
 keywords: [advanced, common, algorithm, assistant, concepts, analysis, avoid, business, benefits, cases]
+tools: [undefined]
 ---
-
-
-# ATS Optimization Instructions
-
 ## Overview
 
 - **Domain**: Human Resources & Talent Acquisition
@@ -14,7 +12,6 @@ keywords: [advanced, common, algorithm, assistant, concepts, analysis, avoid, bu
 - **Applicable To**: Job seekers, recruiters, HR professionals, career coaches, and talent acquisition teams
 - **Complexity Level**: Intermediate (requires understanding of recruitment processes and keyword optimization)
 
-## Core Concepts
 
 ### Essential Concepts
 
@@ -30,7 +27,6 @@ keywords: [advanced, common, algorithm, assistant, concepts, analysis, avoid, bu
 - Enhanced recruitment efficiency through optimized job descriptions and screening criteria
 - Better candidate experience through clearer job requirements and application processes
 
-## Implementation Guidelines
 
 ### Getting Started
 
@@ -46,7 +42,6 @@ See [example-1](./examples/ats-optimization/example-1.markdown)
 
 See [example-2](./examples/ats-optimization/example-2.yaml)
 
-## Common Use Cases
 
 ### Use Case 1: Resume ATS Optimization
 
@@ -74,7 +69,6 @@ See [example-2](./examples/ats-optimization/example-2.yaml)
 - **Over-Optimization**: Sacrificing genuine content quality for keyword density
 - **Ignoring Context**: Using keywords without proper context or relevant experience backing
 
-## Integration & Tools
 
 ### Essential ATS Analysis Tools
 
@@ -136,7 +130,6 @@ When providing ATS optimization guidance:
 - 🚫 Reject format changes that significantly reduce human readability
 - 🚫 Prevent recommendations that violate fair hiring practices or create bias
 
-## Advanced Optimization Strategies
 
 ### Keyword Strategy Framework
 
@@ -146,7 +139,6 @@ See [example-5](./examples/ats-optimization/example-5.markdown)
 
 See [example-6](./examples/ats-optimization/example-6.bash)
 
-## Performance Metrics & Monitoring
 
 ### ATS Optimization KPIs
 
@@ -170,12 +162,7 @@ See [example-7](./examples/ats-optimization/example-7.yaml)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

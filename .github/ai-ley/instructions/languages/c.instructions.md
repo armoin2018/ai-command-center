@@ -1,11 +1,10 @@
 ---
-name: 'C.Instructions'
-description: 'Comprehensive instructions for C development with AI coding assistants, focusing on modern C best practices, memory safety, and maintainable code.'
+id: c
+name: C.Instructions
+description: Comprehensive instructions for C development with AI coding assistants, focusing on modern C best practices, memory safety, and maintainable code.
 keywords: [api, c.instructions, common, build, compiler, architecture, allocation, avoid, cli, checklist]
+tools: [undefined]
 ---
-
-
-
 # C Programming Instructions
 
 Comprehensive instructions for C development with AI coding assistants, focusing on modern C best practices, memory safety, and maintainable code.
@@ -22,7 +21,6 @@ Comprehensive instructions for C development with AI coding assistants, focusing
 
 See [example-1](./examples/c/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, portable C following C17 standards
@@ -47,7 +45,6 @@ See [example-1](./examples/c/example-1.text)
 - **Macros**: `UPPER_SNAKE_CASE` (e.g., `ARRAY_SIZE`)
 - **Global variables**: `g_snake_case` (avoid when possible)
 
-## 🛡️ Memory Management
 
 ### Allocation Best Practices
 
@@ -61,7 +58,6 @@ See [example-2](./examples/c/example-2.c)
 - Use `const` qualifiers for read-only data
 - Implement RAII-style cleanup patterns where possible
 
-## 🔤 String Handling
 
 ### Safe String Operations
 
@@ -74,7 +70,6 @@ See [example-3](./examples/c/example-3.c)
 - Use `const char*` for read-only string parameters
 - Validate string lengths before operations
 
-## ⚠️ Error Handling
 
 ### Error Handling Patterns
 
@@ -87,7 +82,6 @@ See [example-4](./examples/c/example-4.c)
 - Implement proper cleanup on errors using `goto` when appropriate
 - Log errors appropriately for debugging
 
-## 🔄 Functions and APIs
 
 ### Function Design Principles
 
@@ -102,13 +96,11 @@ See [example-5](./examples/c/example-5.c)
 - Use `const` for read-only parameters
 - Minimize side effects
 
-## ⚡ Performance Guidelines
 
 ### Efficient Code Patterns
 
 See [example-6](./examples/c/example-6.c)
 
-## 🧪 Testing Guidelines
 
 ### Unit Testing Best Practices
 
@@ -122,7 +114,6 @@ See [example-7](./examples/c/example-7.c)
 - Test edge cases and boundary conditions
 - Mock external dependencies when needed
 
-## 🛠️ Build and Tools
 
 ### Recommended Tools
 - **Static Analysis**: `clang-static-analyzer`, `cppcheck`, `PVS-Studio`
@@ -145,7 +136,6 @@ See [example-8](./examples/c/example-8.makefile)
 - **Format String Vulnerabilities**: Use static format strings
 - **Global State**: Minimize global variables and shared mutable state
 
-## 📚 Standard Libraries
 
 ### Essential Headers
 See [example-9](./examples/c/example-9.c)
@@ -173,18 +163,7 @@ See [example-9](./examples/c/example-9.c)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

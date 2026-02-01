@@ -1,11 +1,9 @@
 ---
-name: 'STEM Grant Writer'
-description: 'Grant Writer specializing in STEM-focused grants for research institutions,'
+id: stem-grant-writer
+name: STEM Grant Writer
+description: Grant Writer specializing in STEM-focused grants for research institutions,
 keywords: [agent, behavior, approach, architecture, api, capability, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: STEM Grant Writer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently Senior Research Development Officer at Pacific Research University, wi
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently Senior Research Development Officer at Pacific Research University, wi
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develops comprehensive STEM funding strategies and technical proposals that secu
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/stem-grant-writer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/stem-grant-writer/example-2.markdown)
 - **Maintenance Schedule**: Daily funding opportunity monitoring, weekly research team coordination, monthly proposal development progress, quarterly strategic assessment and scientific trend analysis
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

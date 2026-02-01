@@ -1,13 +1,10 @@
 ---
-name: 'uml.instructions'
-description: 'Development guidelines and best practices for Uml.Instructions'
-keywords: [api, application, analytics, **platform, async, **uml, architecture, backend, advanced, applications**]
+id: uml
+name: uml.instructions
+description: Development guidelines and best practices for Uml.Instructions
+keywords: [api, application, analytics, platform, async, uml, architecture, backend, advanced, applications]
+tools: [undefined]
 ---
-
-
-
-# **UML Enterprise Architecture & Code Generation Platform**
-
 ## **Platform Overview**
 
 The **UML Enterprise Architecture & Code Generation Platform** provides comprehensive Unified Modeling Language capabilities with advanced code generation, enterprise architecture design, team collaboration, automated validation, compliance documentation, and production-ready integration workflows for large-scale software development and system architecture projects.
@@ -21,7 +18,6 @@ The **UML Enterprise Architecture & Code Generation Platform** provides comprehe
 - **Compliance Documentation**: Automated compliance reporting and architectural documentation
 - **Integration Ecosystem**: Seamless integration with IDEs, CI/CD, and enterprise tools
 
-### **🏗️ Architecture Components**
 
 #### **1. Core UML Engine**
 
@@ -44,7 +40,6 @@ The **UML Enterprise Architecture & Code Generation Platform** provides comprehe
 - **Review Workflows**: Model review processes with approval workflows and change management
 - **Team Management**: Role-based access control with enterprise security integration
 
-### **📊 Use Cases & Applications**
 
 #### **Enterprise Architecture**
 
@@ -54,7 +49,6 @@ See [example-1](./examples/uml/example-1.uml)
 
 See [example-2](./examples/uml/example-2.uml)
 
-### **🔧 Enterprise Code Generation Examples**
 
 #### **Java Enterprise Service Generation**
 
@@ -64,25 +58,21 @@ See [example-3](./examples/uml/example-3.java)
 
 See [example-4](./examples/uml/example-4.typescript)
 
-### **🏢 Enterprise Integration Patterns**
 
 #### **Model-Driven Development Workflow**
 
 See [example-5](./examples/uml/example-5.python)
 
-### **📋 Enterprise Configuration Management**
 
 #### **UML Platform Configuration**
 
 See [example-6](./examples/uml/example-6.yaml)
 
-### **🔒 Enterprise Security Framework**
 
 #### **Security Policy Implementation**
 
 See [example-7](./examples/uml/example-7.python)
 
-### **📊 Advanced Analytics & Reporting**
 
 #### **UML Analytics Engine**
 
@@ -296,18 +286,7 @@ class PerformanceOptimizer:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

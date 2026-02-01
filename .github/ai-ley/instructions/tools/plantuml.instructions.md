@@ -1,13 +1,10 @@
 ---
-name: 'plantuml.instructions'
-description: 'Development guidelines and best practices for Plantuml.Instructions'
-keywords: [api, **platform, capabilities**, cicd, architecture, authentication, authorization, **plantuml, azure, cases]
+id: plantuml
+name: plantuml.instructions
+description: Development guidelines and best practices for Plantuml.Instructions
+keywords: [api, platform, capabilities, cicd, architecture, authentication, authorization, plantuml, azure, cases]
+tools: [undefined]
 ---
-
-
-
-# **PlantUML Enterprise Diagram-as-Code & Visualization Platform**
-
 ## **Platform Overview**
 
 The **PlantUML Enterprise Diagram-as-Code & Visualization Platform** provides comprehensive diagram generation capabilities with advanced enterprise features including automated CI/CD integration, team collaboration, multi-format export, version control, compliance documentation, and production-ready deployment workflows for large-scale architecture visualization and documentation automation.
@@ -21,7 +18,6 @@ The **PlantUML Enterprise Diagram-as-Code & Visualization Platform** provides co
 - **Enterprise Integration**: Seamless integration with documentation systems and development tools
 - **Automated Validation**: Diagram validation, consistency checking, and quality assurance
 
-### **🏗️ Architecture Components**
 
 #### **1. Core PlantUML Engine**
 
@@ -44,7 +40,6 @@ The **PlantUML Enterprise Diagram-as-Code & Visualization Platform** provides co
 - **Change Management**: Automated change tracking and notification systems
 - **Team Management**: Role-based access control with enterprise security
 
-### **📊 Enterprise Use Cases & Examples**
 
 #### **System Architecture Diagrams**
 
@@ -54,7 +49,6 @@ See [example-1](./examples/plantuml/example-1.plantuml)
 
 See [example-2](./examples/plantuml/example-2.plantuml)
 
-### **🔧 Enterprise Code Generation Examples**
 
 #### **Automated PlantUML CI/CD Pipeline**
 
@@ -292,18 +286,7 @@ class EnterpriseDiagramSecurityManager:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

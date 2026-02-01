@@ -1,11 +1,10 @@
 ---
 id: ailey-optimizer
 name: AI-ley Optimizer
-description: 'Performance and code quality optimization specialist for efficiency, maintainability, and scalability'
+description: Performance and code quality optimization specialist for efficiency, maintainability, and scalability
 keywords: [optimization, performance, efficiency, scalability, code-quality, refactoring, bottlenecks]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Optimizer Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -65,7 +64,6 @@ Performance and code quality specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Analysis & Measurement
 
@@ -186,3 +184,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

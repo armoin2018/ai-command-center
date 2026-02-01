@@ -1,15 +1,10 @@
 ---
-name: 'postgresql.instructions'
-description: 'Development guidelines and best practices for Postgresql.Instructions'
+id: postgresql
+name: postgresql.instructions
+description: Development guidelines and best practices for Postgresql.Instructions
 keywords: [automation, application, agent, access, architecture, assistant, authentication, authorization, advanced, (sqlalchemy)]
+tools: [undefined]
 ---
-
-
-
-# PostgreSQL Database Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents when implementing PostgreSQL solutions, emphasizing ACID compliance, advanced SQL features, performance optimization, and enterprise-grade database administration.
@@ -51,9 +46,6 @@ Provide comprehensive guidance for AI agents when implementing PostgreSQL soluti
 - **Memory Tuning**: Configure shared_buffers, work_mem, maintenance_work_mem
 - **Monitoring**: Track slow queries, connection counts, lock waits, replication lag
 
-## Advanced Troubleshooting Guide
-
-### Performance Diagnosis
 
 #### Slow Query Investigation
 
@@ -67,7 +59,6 @@ See [example-2](./examples/postgresql/example-2.sql)
 
 See [example-3](./examples/postgresql/example-3.sql)
 
-### Common Production Issues and Solutions
 
 #### Issue: Database Connection Exhaustion
 
@@ -109,7 +100,6 @@ See [example-8](./examples/postgresql/example-8.sql)
 
 See [example-9](./examples/postgresql/example-9.sql)
 
-### Maintenance Automation Scripts
 
 #### Automated Vacuum and Analyze
 
@@ -170,7 +160,6 @@ When helping with PostgreSQL:
 - **License**: Open Source (PostgreSQL License)
 - **Use Cases**: OLTP, OLAP, Analytics, JSON/NoSQL workloads, Time-series data
 
-## Installation & Setup
 
 ### Local Installation
 
@@ -180,7 +169,6 @@ See [example-12](./examples/postgresql/example-12.bash)
 
 See [example-13](./examples/postgresql/example-13.ini)
 
-## Core Concepts
 
 ### Schemas and Tables
 
@@ -200,7 +188,6 @@ See [example-13](./examples/postgresql/example-13.ini)
 - **Usage**: Wrap related operations in transactions, handle deadlocks
 - **Best Practices**: Keep transactions short, use appropriate isolation levels
 
-## Connection and Authentication
 
 ### Connection Methods
 
@@ -212,7 +199,6 @@ See [example-15](./examples/postgresql/example-15.python)
 
 See [example-16](./examples/postgresql/example-16.sql)
 
-## Data Modeling
 
 ### Schema Design Best Practices
 
@@ -224,7 +210,6 @@ See [example-16](./examples/postgresql/example-16.sql)
 
 See [example-17](./examples/postgresql/example-17.sql)
 
-## CRUD Operations
 
 ### Create Operations
 
@@ -242,7 +227,6 @@ See [example-20](./examples/postgresql/example-20.sql)
 
 See [example-21](./examples/postgresql/example-21.sql)
 
-## Performance Optimization
 
 ### Indexing Strategies
 
@@ -261,7 +245,6 @@ See [example-23](./examples/postgresql/example-23.sql)
 
 See [example-24](./examples/postgresql/example-24.sql)
 
-## Backup and Recovery
 
 ### Backup Strategies
 
@@ -271,7 +254,6 @@ See [example-25](./examples/postgresql/example-25.bash)
 
 See [example-26](./examples/postgresql/example-26.bash)
 
-## Scaling and High Availability
 
 ### Read Replicas
 
@@ -283,7 +265,6 @@ See [example-28](./examples/postgresql/example-28.bash)
 
 See [example-29](./examples/postgresql/example-29.ini)
 
-## Security Best Practices
 
 ### Access Control
 
@@ -293,7 +274,6 @@ See [example-30](./examples/postgresql/example-30.sql)
 
 See [example-31](./examples/postgresql/example-31.sql)
 
-## Integration Patterns
 
 ### Application Integration
 
@@ -306,19 +286,8 @@ See [example-33](./examples/postgresql/example-33.python)
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

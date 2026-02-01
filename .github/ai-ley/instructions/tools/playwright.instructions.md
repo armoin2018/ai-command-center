@@ -1,7 +1,7 @@
 ---
 name: 'Playwright.Instructions'
 description: 'See [example-19](./examples/playwright/example-19.'
-keywords: [api, basic, browser, automation, [related, authentication, best-practices, advanced, (playwright.config.ts), cases]
+keywords: [api, basic, browser, automation, related, authentication, best-practices, advanced, (playwright.config.ts), cases
 ---
 
 

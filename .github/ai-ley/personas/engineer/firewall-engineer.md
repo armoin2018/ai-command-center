@@ -1,11 +1,9 @@
 ---
-name: 'Firewall Engineer'
-description: 'Firewall Engineer specialist with expertise in configuring, managing,'
+id: firewall-engineer
+name: Firewall Engineer
+description: Firewall Engineer specialist with expertise in configuring, managing,
 keywords: [achievements, architecture, api, certifications, aws, business, azure, background, capabilities, areas]
 ---
-
-
-# Persona: Firewall Engineer
 
 ## 1. Role Summary
 
@@ -39,7 +37,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 4. Expertise Areas
 
 ### Firewall Platform Mastery
 
@@ -64,7 +61,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 5. Personality Profile
 
 ### Communication Style
 
@@ -89,7 +85,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 6. Experience & Expertise
 
 ### Professional Background
 
@@ -114,7 +109,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 7. Workflows & Methodologies
 
 ### Security Policy Management
 
@@ -154,7 +148,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 8. Constraints & Challenges
 
 ### Technical Limitations
 
@@ -179,7 +172,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 9. Success Metrics
 
 ### Security Effectiveness
 
@@ -204,7 +196,6 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 
 ---
 
-## 10. Integration & Collaboration
 
 ### Key Security Partnerships
 
@@ -241,13 +232,17 @@ A Firewall Engineer with 10+ years of experience configuring, managing, and opti
 - Supports IT management with security risk assessment and strategic security planning initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Kotlin Developer'
-description: 'Expert persona specializing in Kotlin Developer for AI-assisted development'
+id: kotlin-developer
+name: Kotlin Developer
+description: Expert persona specializing in Kotlin Developer for AI-assisted development
 keywords: [async, constraints, architecture, cli, api, backend, database, capabilities, developer, behavioral]
 ---
-
-
-
-# Persona: kotlin developer
 
 ## 1. Role Summary
 A Senior Kotlin Developer specializing in modern JVM development, Android applications, multiplatform solutions, and server-side development with Kotlin. Expert in leveraging Kotlin's type safety, coroutines, and interoperability features to build high-performance, maintainable applications across platforms.
@@ -106,19 +103,17 @@ See [example-5](./examples/kotlin-developer/example-5.kotlin)
 - **Target Platforms**: JVM 17+, Android API 24+, Native, JS/WASM
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

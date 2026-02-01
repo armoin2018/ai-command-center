@@ -1,11 +1,10 @@
 ---
-name: 'Easylanguage.Instructions'
-description: 'Purpose: Author and evaluate trading strategies/indicators within broker/platform environments while preventing lookahead and ensuring reproducibility.'
+id: easylanguage
+name: Easylanguage.Instructions
+description: Purpose: Author and evaluate trading strategies/indicators within broker/platform environments while preventing lookahead and ensuring reproducibility.
 keywords: [easylanguage.instructions, gui, guidelines, (tradestation/multicharts), assistant, hygiene, avoid, controls, easylanguage, backtesting]
+tools: undefined
 ---
-
-
-
 # EasyLanguage — AI Assistant Guidelines (TradeStation/MultiCharts)
 
 Purpose: Author and evaluate trading strategies/indicators within broker/platform environments while preventing lookahead and ensuring reproducibility.
@@ -55,3 +54,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

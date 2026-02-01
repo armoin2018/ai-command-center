@@ -1,11 +1,9 @@
 ---
-name: 'Business Speech Writer'
-description: 'Business Speech Writer - Strategic corporate communication specialist'
+id: business-speech-writer
+name: Business Speech Writer
+description: Business Speech Writer - Strategic corporate communication specialist
 keywords: [agent, behavior, approach, business, address, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Business Speech Writer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience working with C-suite executives, board members, and senior 
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience working with C-suite executives, board members, and senior 
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### CEO Investor Relations Presentation
 
@@ -146,7 +138,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develop high-impact business speeches and presentations that effectively communi
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/business-speech-writer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/business-speech-writer/example-2.markdown)
 - **Executive Support**: Specialized skills in C-suite collaboration, board communication, investor relations, and high-stakes presentation development with measurable business outcomes
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

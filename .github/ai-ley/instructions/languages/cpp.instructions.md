@@ -1,11 +1,10 @@
 ---
-name: 'Cpp.Instructions'
-description: 'Comprehensive C++ development guidelines for AI coding assistants, emphasizing modern C++ best practices, RAII principles, performance optimization, and maintainable code patterns.'
+id: cpp
+name: Cpp.Instructions
+description: Comprehensive C++ development guidelines for AI coding assistants, emphasizing modern C++ best practices, RAII principles, performance optimization, and maintainable code patterns.
 keywords: [context, cmake, comprehensive, concurrency, common, architecture, configuration, analysis, avoid, conventions]
+tools: [undefined]
 ---
-
-
-
 # C++ Programming Instructions
 
 Comprehensive C++ development guidelines for AI coding assistants, emphasizing modern C++ best practices, RAII principles, performance optimization, and maintainable code patterns.
@@ -23,7 +22,6 @@ Comprehensive C++ development guidelines for AI coding assistants, emphasizing m
 
 See [example-1](./examples/cpp/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern C++ following C++ Core Guidelines
@@ -43,7 +41,6 @@ See [example-1](./examples/cpp/example-1.text)
 - Apply `constexpr` and `consteval` for compile-time evaluation
 - Use concepts (C++20) for template constraints and better error messages
 
-## 📜 Code Style and Conventions
 
 ### Naming Conventions
 
@@ -53,7 +50,6 @@ See [example-2](./examples/cpp/example-2.cpp)
 
 See [example-3](./examples/cpp/example-3.cpp)
 
-## 🏗️ Architecture Patterns
 
 ### RAII and Resource Management
 
@@ -63,7 +59,6 @@ See [example-4](./examples/cpp/example-4.cpp)
 
 See [example-5](./examples/cpp/example-5.cpp)
 
-## 🔄 Concurrency and Threading
 
 ### Thread-Safe Programming Best Practices
 
@@ -73,19 +68,16 @@ See [example-6](./examples/cpp/example-6.cpp)
 
 See [example-7](./examples/cpp/example-7.cpp)
 
-## ⚡ Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-8](./examples/cpp/example-8.cpp)
 
-## 🧪 Testing Guidelines
 
 ### Comprehensive Testing with Google Test
 
 See [example-9](./examples/cpp/example-9.cpp)
 
-## 🛠️ Development Environment
 
 ### CMake Configuration Best Practices
 
@@ -100,7 +92,6 @@ See [example-10](./examples/cpp/example-10.cmake)
 - **Package Manager**: Conan or vcpkg - Dependency management
 - **Profiler**: perf, Valgrind, or vendor-specific tools
 
-## 🔍 Code Quality Standards
 
 ### Static Analysis Configuration
 
@@ -127,7 +118,6 @@ See [example-12](./examples/cpp/example-12.cpp)cpp
 - **Undefined Behavior**: Be aware of common UB sources (signed overflow, dangling pointers, etc.)
 - **Thread Safety Assumptions**: Explicitly design for thread safety or document thread requirements
 
-## 📚 Essential Libraries
 
 ### Standard Library Mastery
 See [example-14](./examples/cpp/example-14.cpp)
@@ -140,7 +130,6 @@ See [example-14](./examples/cpp/example-14.cpp)
 - **Catch2 or Google Test**: Testing frameworks
 - **Eigen**: Linear algebra and mathematical computations
 
-## 🚦 AI Enforcement Summary
 
 ### Code Quality Rules
 - ✅ Enforce RAII for all resource management
@@ -187,18 +176,7 @@ See [example-14](./examples/cpp/example-14.cpp)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

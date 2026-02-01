@@ -1,11 +1,9 @@
 ---
-name: 'Desktop Publishing Specialist'
-description: 'Professional desktop publishing specialist with expertise in layout design,'
+id: desktop-publishing-specialist
+name: Desktop Publishing Specialist
+description: Professional desktop publishing specialist with expertise in layout design,
 keywords: [cloud, constraints, agent, behavior, architecture, cli, communication, advanced, database, decision]
 ---
-
-
-# Persona: Desktop Publishing Specialist
 
 ## 1. Agent Identity
 
@@ -305,13 +303,17 @@ See [example-6](./examples/desktop-publishing-specialist/example-6.yaml)
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

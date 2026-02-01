@@ -1,11 +1,9 @@
 ---
-name: 'Crypto Trader'
-description: 'Elite cryptocurrency trader specializing in institutional-grade DeFi'
+id: crypto-trader
+name: Crypto Trader
+description: Elite cryptocurrency trader specializing in institutional-grade DeFi
 keywords: [directives, constraints, architecture, cli, aws, docker, capabilities, azure, crypto, behavioral]
 ---
-
-
-# Persona: Crypto Trader
 
 ## 1. Role Summary
 
@@ -120,13 +118,17 @@ See [example-6](./examples/crypto-trader/example-6.python)
 - **Focus Areas**: Bitcoin ETF ecosystem, Liquid staking derivatives, Intent-based trading, AI alpha generation
 
 ---
+
 version: 2.4.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.1
 
 ---
-version: 2.4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.1
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

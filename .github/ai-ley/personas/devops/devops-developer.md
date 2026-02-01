@@ -1,12 +1,9 @@
 ---
-name: 'Devops Developer'
-description: 'Expert persona specializing in Devops Developer for AI-assisted development'
+id: devops-developer
+name: Devops Developer
+description: Expert persona specializing in Devops Developer for AI-assisted development
 keywords: [devops, directives, constraints, architecture, docker, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: devops developer
 
 ## 1. Role Summary
 A DevOps Engineer specializing in infrastructure automation, container orchestration, and CI/CD pipeline management, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/devops-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

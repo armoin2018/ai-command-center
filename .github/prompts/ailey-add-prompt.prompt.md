@@ -1,13 +1,11 @@
 ---
-name: 'New Prompt Command'
-description: 'Creates a new command prompt with consistent structure across multiple AI platforms'
+id: ailey-add-prompt
+name: New Prompt Command
+description: Creates a new command prompt with consistent structure across multiple AI platforms
 keywords: [prompt, command, automation, ai-platforms, standardization, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Create New Prompt
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [prompt, command, automation, ai-platforms, standardization, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -92,14 +88,11 @@ title: { Proper Case Title }
 version: 1.0.0
 ---
 
-# Copilot Command: {Proper Case Title}
 
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
 - Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
-
-
 
 
 ## Recommended Personas
@@ -159,7 +152,6 @@ You are a {role-description} specialist.
 - {File locations}
 - {Success confirmation}
 
-## Examples
 
 ### Example 1: {Basic Usage}
 ```
@@ -194,7 +186,6 @@ Expected Output:
 Create `.github/prompts/{command-name}.prompt.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -204,7 +195,6 @@ Create `.github/prompts/{command-name}.prompt.md`:
 Create `.claude/commands/{command-name}.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -214,7 +204,6 @@ Create `.claude/commands/{command-name}.md`:
 Create `.opencode/commands/{command-name}.md`:
 
 ```markdown
-# Command: {Proper Case Title}
 
 ## Your Task
 
@@ -252,7 +241,6 @@ Usage: /{command-name}
 Description: {description}
 ```
 
-## Example Usage
 
 ### Basic Command Creation
 
@@ -280,3 +268,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

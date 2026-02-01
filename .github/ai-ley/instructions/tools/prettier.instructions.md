@@ -1,12 +1,10 @@
 ---
-name: 'Prettier Code Formatter Instructions'
-description: 'Comprehensive guide for using Prettier to automatically format code for'
-keywords: [**performance, assessment, **avoid, agent, **common, **usage, applications, **use, advanced, **configuration]
+id: prettier
+name: Prettier Code Formatter Instructions
+description: Comprehensive guide for using Prettier to automatically format code for
+keywords: [performance, assessment, avoid, agent, common, usage, applications, use, advanced, configuration]
+tools: [undefined]
 ---
-
-
-# Prettier Code Formatter Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Prettier
@@ -15,7 +13,6 @@ keywords: [**performance, assessment, **avoid, agent, **common, **usage, applica
 - **Purpose**: Opinionated code formatter that enforces consistent style across multiple languages
 - **Prerequisites**: Node.js 14+ for Prettier 3.0, npm/yarn/pnpm package manager
 
-## When to Use Prettier
 
 ### ✅ **Use Prettier When**
 
@@ -36,7 +33,6 @@ keywords: [**performance, assessment, **avoid, agent, **common, **usage, applica
 - Performance is extremely critical and formatting overhead is unacceptable
 - Need highly customized formatting rules beyond Prettier's configuration options
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -58,7 +54,6 @@ keywords: [**performance, assessment, **avoid, agent, **common, **usage, applica
 | **File Types**  | JS/TS only               | JS/TS/CSS/HTML          | All supported formats        |
 | **Integration** | Basic IDE setup          | ESLint + Git hooks      | CI/CD + custom plugins       |
 
-## Installation & Setup
 
 ### Package Manager Installation
 
@@ -72,7 +67,6 @@ See [example-2](./examples/prettier/example-2.bash)
 
 See [example-3](./examples/prettier/example-3.bash)
 
-## Configuration
 
 ### Basic Configuration
 
@@ -94,7 +88,6 @@ See [example-7](./examples/prettier/example-7.bash)
 
 See [example-8](./examples/prettier/example-8.json)
 
-## Core Features
 
 ### Automatic Code Formatting
 
@@ -132,7 +125,6 @@ See [example-12](./examples/prettier/example-12.json)
 
 See [example-13](./examples/prettier/example-13.bash)
 
-## Workflow Integration
 
 ### Development Workflow
 
@@ -156,7 +148,6 @@ See [example-16](./examples/prettier/example-16.json)
 
 See [example-17](./examples/prettier/example-17.yaml)
 
-## Best Practices
 
 ### ✅ **Configuration Best Practices**
 
@@ -194,7 +185,6 @@ See [example-17](./examples/prettier/example-17.yaml)
 - **Don't mix multiple formatters** - choose Prettier as single source of truth
 - **Avoid manual formatting** once Prettier is configured
 
-## Framework-Specific Configurations
 
 ### React/Next.js Applications
 
@@ -214,7 +204,6 @@ See [example-21](./examples/prettier/example-21.bash)
 
 See [example-22](./examples/prettier/example-22.json)
 
-## Integration with Other Tools
 
 ### ESLint Integration
 
@@ -234,9 +223,6 @@ See [example-26](./examples/prettier/example-26.javascript)
 
 See [example-27](./examples/prettier/example-27.json)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Configuration Not Found
 
@@ -278,7 +264,6 @@ See [example-32](./examples/prettier/example-32.bash)
 
 See [example-33](./examples/prettier/example-33.bash)
 
-## Security Considerations
 
 ### Security Best Practices
 
@@ -296,7 +281,6 @@ See [example-34](./examples/prettier/example-34.yaml)
 
 See [example-35](./examples/prettier/example-35.bash)
 
-## Advanced Configuration
 
 ### Custom Plugin Development
 
@@ -305,13 +289,8 @@ See [example-36](./examples/prettier/example-36.javascript)
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

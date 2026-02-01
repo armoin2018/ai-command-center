@@ -1,7 +1,7 @@
 ---
 name: 'Pytest.Instructions'
 description: 'See [example-21](./examples/pytest/example-21.'
-keywords: [api, basic, (modern), automation, actions, async, [related, ci/cd, advanced, cases]
+keywords: [api, basic, (modern), automation, actions, async, related, ci/cd, advanced, cases
 ---
 
 

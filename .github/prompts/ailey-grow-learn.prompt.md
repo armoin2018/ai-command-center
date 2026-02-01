@@ -1,13 +1,11 @@
 ---
-name: 'Project Learning and Suggestions'
-description: 'Scan project components, research web innovations, and generate intelligent improvement suggestions'
+id: ailey-grow-learn
+name: Project Learning and Suggestions
+description: Scan project components, research web innovations, and generate intelligent improvement suggestions
 keywords: [learn, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Project Learning and Suggestions
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -25,8 +23,6 @@ keywords: [learn, prompt, ailey]
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
 - Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
-
-
 
 
 ## Recommended Personas
@@ -154,7 +150,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 **Project Improvement Suggestions**:
 
 ```markdown
-# Project Learning & Improvement Suggestions
 
 ## Project Analysis Summary
 
@@ -164,7 +159,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 **Research Sources**: {web-research-sources-consulted}
 **Suggestion Categories**: {types-of-recommendations-provided}
 
-## Current Project Assessment
 
 ### Strengths Identified
 
@@ -214,7 +208,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Scalability Concerns**: {growth-limitations-imposed}
 - **Maintenance Burden**: {ongoing-cost-complexity}
 
-## Web Research Insights
 
 ### Industry Trend Analysis
 
@@ -285,9 +278,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Distribution Channel Changes**: {emerging-sales-marketing-channels}
 - **Customer Success Patterns**: {what-drives-retention-growth}
 
-## Prioritized Improvement Suggestions
-
-### High Priority Recommendations (Immediate - 0-3 months)
 
 #### Suggestion 1: {High-Priority-Improvement}
 
@@ -324,7 +314,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Customer Value**: {benefit-delivered-to-target-audience}
 - **Technical Feasibility**: {implementation-complexity-assessment}
 
-### Medium Priority Recommendations (3-6 months)
 
 #### Suggestion 4: {Medium-Priority-Improvement}
 
@@ -340,7 +329,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Technology Readiness**: {maturity-stability-support-quality}
 - **Integration Complexity**: {technical-business-process-changes}
 
-### Low Priority Recommendations (6-12 months)
 
 #### Suggestion 6: {Long-Term-Enhancement}
 
@@ -349,7 +337,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Market Development**: {emerging-opportunity-positioning}
 - **Technology Evolution**: {preparation-for-next-generation-tools}
 
-## Implementation Roadmap
 
 ### Quarter 1 Focus
 
@@ -373,7 +360,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 - **Q3**: {integration-optimization-scaling-activities}
 - **Q4**: {suggestion-6-experimental-pilot-evaluation}
 
-## Ongoing Learning Framework
 
 ### Continuous Research Process
 
@@ -417,7 +403,6 @@ You are a project intelligence analyst and innovation researcher with expertise 
 
 ```
 
-## Examples
 
 ### Example 1: SaaS Platform Learning Analysis
 
@@ -538,3 +523,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

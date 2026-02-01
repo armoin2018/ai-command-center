@@ -1,7 +1,7 @@
 ---
 name: 'Yarn.Instructions'
 description: 'See [example-12](./examples/yarn/example-12.'
-keywords: [automation, (yarn, .yarnrc, bundle, [related, cache, analysis, advanced, (pnp), .yarnrc.yml]
+keywords: [automation, (yarn, .yarnrc, bundle, related, cache, analysis, advanced, (pnp), .yarnrc.yml
 ---
 
 

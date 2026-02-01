@@ -1,12 +1,9 @@
 ---
-name: 'Security Documentation Expert'
-description: 'Expert persona specializing in Security Documentation Expert for AI-assisted development'
+id: security-documentation-expert
+name: Security Documentation Expert
+description: Expert persona specializing in Security Documentation Expert for AI-assisted development
 keywords: [directives, constraints, documentation, architecture, expert, goals, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: security documentation expert
 
 ## 1. Role Summary
 A Security Professional specializing in cybersecurity analysis, vulnerability assessment, and security protocol implementation, responsible for delivering expert guidance and implementing robust, scalable solutions in complex technical environments.
@@ -97,19 +94,17 @@ See [example-3](./examples/security-documentation-expert/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

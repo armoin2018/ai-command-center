@@ -1,11 +1,10 @@
 ---
-name: 'Swift.Instructions'
-description: 'Comprehensive Swift development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.'
+id: swift
+name: Swift.Instructions
+description: Comprehensive Swift development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, concurrency, common, async, async/await, architecture, configuration, analysis, avoid]
+tools: [undefined]
 ---
-
-
-
 # Swift Programming Instructions
 
 Comprehensive Swift development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
@@ -23,7 +22,6 @@ Comprehensive Swift development guidelines for AI coding assistants, emphasizing
 
 See [example-1](./examples/swift/example-1.text)
 
-## 🔧 General Guidelines
 
 ### Core Principles
 - Write idiomatic, modern Swift following established conventions
@@ -42,7 +40,6 @@ See [example-1](./examples/swift/example-1.text)
 - Apply generics and associated types for type safety
 - Use computed properties and property observers effectively
 
-## 📜 Code Style and Conventions
 
 ### Naming Conventions
 
@@ -52,7 +49,6 @@ See [example-2](./examples/swift/example-2.swift)
 
 See [example-3](./examples/swift/example-3.swift)
 
-## 🏗️ Architecture Patterns
 
 ### MVVM with SwiftUI
 
@@ -62,7 +58,6 @@ See [example-4](./examples/swift/example-4.swift)
 
 See [example-5](./examples/swift/example-5.swift)
 
-## 🔄 Concurrency Programming
 
 ### Modern async/await Patterns
 
@@ -72,19 +67,16 @@ See [example-6](./examples/swift/example-6.swift)
 
 See [example-7](./examples/swift/example-7.swift)
 
-## 🛡️ Memory Management
 
 ### Efficient Resource Handling
 
 See [example-8](./examples/swift/example-8.swift)
 
-## ⚡ Performance Optimization
 
 ### Efficient Code Patterns
 
 See [example-9](./examples/swift/example-9.swift)
 
-## 🧪 Testing Guidelines
 
 ### Unit Testing Best Practices
 
@@ -94,7 +86,6 @@ See [example-10](./examples/swift/example-10.swift)
 
 See [example-11](./examples/swift/example-11.swift)
 
-## 🛠️ Development Environment
 
 ### Recommended Configuration
 
@@ -107,7 +98,6 @@ See [example-12](./examples/swift/example-12.swift)
 - **Package Manager**: Swift Package Manager - Native dependency management
 - **Testing**: XCTest + Quick/Nimble - Comprehensive testing framework
 
-## 🔍 Code Quality Standards
 
 ### Static Analysis
 
@@ -125,7 +115,6 @@ See [example-14](./examples/swift/example-14.swift)
 - **Ignoring optionals**: Always handle optional values explicitly
 - **Over-using classes**: Prefer structs and value types when possible
 
-## 📚 Essential Libraries
 
 ### Standard Library
 See [example-15](./examples/swift/example-15.swift)
@@ -137,7 +126,6 @@ See [example-15](./examples/swift/example-15.swift)
 - **SnapKit**: Auto Layout DSL for programmatic UI
 - **Kingfisher**: Image downloading and caching library
 
-## 🚦 AI Enforcement Summary
 
 ### Code Quality Rules
 - ✅ Enforce immutable properties with `let` over `var`
@@ -170,18 +158,7 @@ See [example-15](./examples/swift/example-15.swift)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

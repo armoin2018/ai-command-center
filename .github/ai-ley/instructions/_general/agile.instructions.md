@@ -1,18 +1,16 @@
 ---
-name: 'Agile.Instructions'
-description: 'Development guidelines and best practices for Agile.Instructions'
+id: agile
+name: Agile.Instructions
+description: Development guidelines and best practices for Agile.Instructions
 keywords: [audit, checklist, agile, backlog, agile.instructions, architecture, assistant, avoid, azure, benefits]
+tools: [undefined]
 ---
-
-# Agile Development Instructions
-
 ## Overview
 - **Domain**: Agile Software Development Methodologies
 - **Purpose**: Guide iterative, collaborative, and adaptive software development practices
 - **Applicable To**: Software development teams, product development, and project management
 - **Integration Level**: Core development methodology affecting all aspects of software delivery
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Individuals and Interactions** over processes and tools
@@ -35,7 +33,6 @@ keywords: [audit, checklist, agile, backlog, agile.instructions, architecture, a
 - **Myth**: Agile means faster delivery at all costs
   **Reality**: Agile focuses on delivering value early and often, with sustainable pace
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -84,7 +81,6 @@ See [example-2](./examples/agile/example-2.yaml)
 - Architecture decision records (ADRs)
 - Definition of Done and team working agreements
 
-## Best Practices
 
 ### Sprint Planning and Management
 #### User Story Writing
@@ -101,7 +97,6 @@ See [example-5](./examples/agile/example-5.markdown)
 #### Story Prioritization Framework
 See [example-6](./examples/agile/example-6.javascript)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Feature Toggle Implementation
 **Scenario**: Deploying incomplete features without impacting users
@@ -126,7 +121,6 @@ See [example-8](./examples/agile/example-8.markdown)
 - **Why It's Problematic**: Misses opportunities for team improvement and issue resolution
 - **Better Approach**: Regular, well-facilitated retrospectives with concrete action items
 
-## Tools and Resources
 
 ### Essential Tools
 #### Project Management Tools
@@ -152,7 +146,6 @@ See [example-10](./examples/agile/example-10.markdown)
 - [Scaled Agile Framework (SAFe)](https://www.scaledagileframework.com/)
 - [Atlassian Agile Coach](https://www.atlassian.com/agile)
 
-## Quality and Compliance
 
 ### Quality Standards
 - Sprint goals achieved 80%+ of the time
@@ -177,7 +170,6 @@ See [example-10](./examples/agile/example-10.markdown)
 - Annual agile coaching and training evaluation
 - Continuous feedback collection from team members and stakeholders
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Unstable Velocity
@@ -255,6 +247,7 @@ When helping teams adopt or improve agile practices:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

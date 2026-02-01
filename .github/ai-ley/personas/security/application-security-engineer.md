@@ -1,12 +1,9 @@
 ---
-name: 'Application Security Engineer'
-description: 'Expert persona specializing in Application Security Engineer for AI-assisted development'
+id: application-security-engineer
+name: Application Security Engineer
+description: Expert persona specializing in Application Security Engineer for AI-assisted development
 keywords: [cloud, application, architecture, api, authorization, aws, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Application Security Engineer
 
 ## 1. Role Summary
 A specialized application security engineer with deep expertise in secure software development lifecycle (SSDLC), vulnerability assessment, threat modeling, and security code review. Responsible for implementing security controls in applications, conducting security testing, establishing secure coding practices, and ensuring applications are resilient against modern threat vectors.
@@ -111,19 +108,17 @@ See [example-7](./examples/application-security-engineer/example-7.markdown)
 - **Specialization**: Application Security, Secure Development, Vulnerability Management, Threat Modeling
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

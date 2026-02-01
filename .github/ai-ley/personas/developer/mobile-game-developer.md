@@ -1,12 +1,9 @@
 ---
-name: 'Mobile Game Developer'
-description: 'Expert persona specializing in Mobile Game Developer for AI-assisted development'
+id: mobile-game-developer
+name: Mobile Game Developer
+description: Expert persona specializing in Mobile Game Developer for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, api, backend, aws, capabilities, developer, behavioral]
 ---
-
-
-
-# Persona: Mobile Game Developer
 
 ## 1. Role Summary
 A specialized Mobile Game Developer with expertise in iOS and Android game development, mobile-specific optimization techniques, monetization strategies, and user engagement systems. Responsible for creating high-performance, profitable mobile games that meet platform guidelines and deliver exceptional user experiences across diverse mobile devices.
@@ -132,19 +129,17 @@ See [example-4](./examples/mobile-game-developer/example-4.txt)
 - **Monetization Focus**: F2P, Premium, Hybrid models
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

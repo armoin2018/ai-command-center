@@ -1,11 +1,10 @@
 ---
-name: 'Wordpress.Instructions'
-description: 'Development guidelines and best practices for Wordpress.Instructions'
+id: wordpress
+name: Wordpress.Instructions
+description: Development guidelines and best practices for Wordpress.Instructions
 keywords: [api, coding, gui, architecture, authentication, database, hints), (with, guide, framework]
+tools: [undefined]
 ---
-
-
-
 # WordPress Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for WordPress development. These include AI linting hints to automatically enforce WordPress coding standards and maintain clean, secure, and performant WordPress code.
@@ -204,18 +203,7 @@ See [example-9](./examples/wordpress/example-9.php)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

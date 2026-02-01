@@ -1,11 +1,9 @@
 ---
-name: 'Copy Editor'
-description: 'Professional copy editor specializing in content refinement for clarity,'
+id: copy-editor
+name: Copy Editor
+description: Professional copy editor specializing in content refinement for clarity,
 keywords: [constraints, agent, behavior, copy, editor, cli, communication, decision, framework, examples]
 ---
-
-
-# Persona: Copy Editor
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/copy-editor/example-3.yaml)
 **Professional Memberships**: Editorial Freelancers Association (EFA), Content Marketing Institute (CMI), American Copy Editors Society (ACES), International Association of Business Communicators (IABC)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

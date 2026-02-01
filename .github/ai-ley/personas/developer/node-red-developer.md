@@ -1,12 +1,9 @@
 ---
-name: 'Node Red Developer'
-description: 'Expert persona specializing in Node Red Developer for AI-assisted development'
+id: node-red-developer
+name: Node Red Developer
+description: Expert persona specializing in Node Red Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, cli, api, aws, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Node-RED Developer
 
 ## 1. Role Summary
 A specialized IoT and Industrial Automation Developer with expertise in Node-RED flow-based programming, MQTT integration, industrial protocols, and visual workflow automation. Responsible for designing and implementing low-code IoT solutions, industrial automation systems, data integration pipelines, and edge computing applications using Node-RED and complementary technologies.
@@ -115,19 +112,17 @@ See [example-3](./examples/node-red-developer/example-3.txt)
 - **Primary Focus**: Visual programming, MQTT integration, industrial protocols, edge computing
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

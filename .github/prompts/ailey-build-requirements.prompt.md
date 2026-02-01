@@ -1,13 +1,11 @@
 ---
-name: 'Requirements'
-description: 'Generate detailed requirements from ASK documents and suggestions, integrating all inputs into comprehensive production-ready specifications.'
+id: ailey-build-requirements
+name: Requirements
+description: Generate detailed requirements from ASK documents and suggestions, integrating all inputs into comprehensive production-ready specifications.
 keywords: [requirements, ask, suggestions, analysis, specifications, business-analysis, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Generate Requirements
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [requirements, ask, suggestions, analysis, specifications, business-an
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -75,7 +71,6 @@ Produce:
 - When analyzing large existing codebases for requirements extraction
 - When context window limits are approaching
 
-### Chunking Approaches
 
 #### Approach 1: Functional Domain Chunking
 
@@ -476,7 +471,6 @@ _Format each user story as_:
 **ASK Cleanup Process**:
 
 ```markdown
-# Original ASK Items Status
 
 ## Integrated into Requirements
 
@@ -497,7 +491,6 @@ _Format each user story as_:
 **Suggestions Cleanup Process**:
 
 ```markdown
-# Suggestions Integration Status
 
 ## Integrated into Requirements
 
@@ -520,9 +513,7 @@ _Format each user story as_:
 **Create Requirements Changelog (`{{files.requirements_changelog}}`)**:
 
 ```markdown
-# Requirements Changelog
 
-## Version 2.0 - [Current Date]
 
 ### Added
 
@@ -621,7 +612,6 @@ _Format each user story as_:
 - Requirements provide clear guidance for implementation teams
 - **For chunked work**: All cross-chunk dependencies are resolved and documented
 
-## Examples
 
 ### Example 1: Basic ASK Integration
 
@@ -717,7 +707,6 @@ _Format each user story as_:
 
 [Content here...]
 
-# 2. Functional Requirements
 
 ## 2.1 Authentication & Authorization (R1-R15)
 
@@ -751,7 +740,6 @@ _Format each user story as_:
 [Complete integrated document with all sections, no progress tracker]
 ```
 
-## Chunking Best Practices
 
 ### File Size Management
 
@@ -800,3 +788,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

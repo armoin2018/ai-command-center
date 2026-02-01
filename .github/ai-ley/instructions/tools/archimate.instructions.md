@@ -1,12 +1,10 @@
 ---
-name: 'ArchiMate Enterprise Architecture Modeling'
-description: 'Comprehensive instructions for using ArchiMate to model enterprise architecture, including core concepts, diagram types, tools, and best practices for AI-assisted enterprise modeling.'
+id: archimate
+name: ArchiMate Enterprise Architecture Modeling
+description: Comprehensive instructions for using ArchiMate to model enterprise architecture, including core concepts, diagram types, tools, and best practices for AI-assisted enterprise modeling.
 keywords: [(open, cross, common, archimate, archi, bizzdesign, architecture, archimate.instructions, concepts, (soa)]
+tools: [undefined]
 ---
-
-
-# ArchiMate Enterprise Architecture Modeling Instructions
-
 ## Tool Overview
 
 - **Tool Name**: ArchiMate (Architecture Modeling Language)
@@ -15,7 +13,6 @@ keywords: [(open, cross, common, archimate, archi, bizzdesign, architecture, arc
 - **Purpose**: Model, analyze, and visualize enterprise architectures across business, application, and technology layers
 - **Prerequisites**: Understanding of enterprise architecture concepts, TOGAF framework knowledge (recommended)
 
-## ArchiMate Core Concepts
 
 ### Architecture Layers
 
@@ -39,7 +36,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Focus**: Hardware, system software, and communication infrastructure
 - **Key Elements**: Node, Device, System Software, Technology Service
 
-### Cross-Layer Elements
 
 #### Strategy Elements
 
@@ -66,9 +62,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Implementation Event**: State change in architecture realization
 - **Plateau**: Relatively stable state during implementation
 
-## Viewpoints and Perspectives
-
-### Core Viewpoints
 
 #### Organization Viewpoint
 
@@ -100,7 +93,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Elements**: Node, Device, System Software, Technology Interface
 - **Usage**: Infrastructure diagrams, deployment models
 
-### Specialized Viewpoints
 
 #### Capability Map Viewpoint
 
@@ -120,9 +112,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Elements**: Resource, Capability, Value Stream, Course of Action
 - **Usage**: Strategic planning, business model canvas
 
-## Relationship Types
-
-### Structural Relationships
 
 #### Composition
 
@@ -148,7 +137,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Meaning**: Implementation or achievement relationship
 - **Example**: Application Service realizes Business Service
 
-### Dependency Relationships
 
 #### Serving
 
@@ -174,7 +162,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Meaning**: Temporal or causal relationship
 - **Example**: Business Event triggers Business Process
 
-### Dynamic Relationships
 
 #### Flow
 
@@ -194,9 +181,6 @@ ArchiMate organizes enterprise architecture into three core layers:
 - **Meaning**: Unspecified relationship
 - **Example**: Business Actor associated with Business Object
 
-## ArchiMate Tools and Platforms
-
-### Archi (Open Source)
 
 #### Installation & Setup
 
@@ -215,7 +199,6 @@ See [example-2](./examples/archimate/example-2.yaml)
 - **Collaboration features**
 - **Plugin ecosystem**
 
-### BiZZdesign Enterprise Studio
 
 #### Professional Features
 
@@ -230,7 +213,6 @@ See [example-2](./examples/archimate/example-2.yaml)
 
 See [example-3](./examples/archimate/example-3.yaml)
 
-### Visual Paradigm
 
 #### ArchiMate Support
 
@@ -240,7 +222,6 @@ See [example-3](./examples/archimate/example-3.yaml)
 - **Team collaboration**
 - **Version control**
 
-### Other Tools
 
 #### Sparx Systems Enterprise Architect
 
@@ -254,9 +235,6 @@ See [example-3](./examples/archimate/example-3.yaml)
 - **Governance integration**
 - **Risk management**
 
-## Modeling Best Practices
-
-### Model Organization
 
 #### Layered Approach
 
@@ -266,7 +244,6 @@ See [example-4](./examples/archimate/example-4.yaml)
 
 See [example-5](./examples/archimate/example-5.yaml)
 
-### View Development Strategy
 
 #### Progressive Elaboration
 
@@ -280,7 +257,6 @@ See [example-5](./examples/archimate/example-5.yaml)
 
 See [example-6](./examples/archimate/example-6.yaml)
 
-### Quality Guidelines
 
 #### Model Consistency
 
@@ -296,7 +272,6 @@ See [example-6](./examples/archimate/example-6.yaml)
 - **Ensure no contradictory relationships**
 - **Validate business logic representation**
 
-## Common Modeling Patterns
 
 ### Service-Oriented Architecture (SOA) Pattern
 
@@ -306,12 +281,7 @@ See [example-7](./examples/archimate/example-7.yaml)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

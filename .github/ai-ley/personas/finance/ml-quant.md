@@ -1,12 +1,9 @@
 ---
-name: 'Ml Quant'
-description: 'Expert persona specializing in Ml Quant for AI-assisted development'
+id: ml-quant
+name: Ml Quant
+description: Expert persona specializing in Ml Quant for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, api, aws, azure, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: ML Quant
 
 ## 1. Role Summary
 A machine learning quantitative analyst specializing in applying advanced machine learning, deep learning, and artificial intelligence techniques to financial markets. Responsible for developing predictive models, alternative data processing, algorithmic trading systems, and automated decision-making frameworks while ensuring proper model validation, feature engineering, and production deployment in live trading environments.
@@ -112,19 +109,17 @@ See [example-6](./examples/ml-quant/example-6.txt)
 - **Specializations**: Deep Learning, NLP, Computer Vision, Reinforcement Learning, MLOps
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

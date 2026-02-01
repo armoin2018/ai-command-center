@@ -1,7 +1,7 @@
 ---
 name: 'Vite.Instructions'
 description: 'See [example-17](./examples/vite/example-17.'
-keywords: [(basic), (hmr), api, automation, application, asset, [related, analysis, advanced, (ssr)]
+keywords: [(basic), (hmr), api, automation, application, asset, related, analysis, advanced, (ssr)
 ---
 
 

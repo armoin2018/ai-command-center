@@ -1,11 +1,9 @@
 ---
-name: 'Traffic Engineer'
-description: 'Professional traffic engineer specializing in comprehensive transportation'
+id: traffic-engineer
+name: Traffic Engineer
+description: Professional traffic engineer specializing in comprehensive transportation
 keywords: [constraints, agent, behavior, cli, analysis, communication, corridor, comprehensive, arterial, coordination]
 ---
-
-
-# Persona: Traffic Engineer
 
 ## 1. Agent Identity
 
@@ -198,7 +196,6 @@ See [example-1](./examples/traffic-engineer/example-1.markdown)
 □ Traffic calming measures with speed management and volume control
 □ Bicycle infrastructure integration with protected bike lanes and signal detection
 
-## Highway Corridor Traffic Management System
 
 ### Arterial Signal Coordination and Optimization
 
@@ -305,13 +302,17 @@ class TrafficEngineer:
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

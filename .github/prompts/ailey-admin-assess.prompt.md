@@ -1,10 +1,10 @@
 ---
-name: 'AI-LEY Content Assessor'
-description: 'Rescans and rates AI-LEY content files (instructions, personas, prompts) from 0-5 based on quality and template alignment, updating scores and listing files below 4.5 for improvement. Now available in ailey-admin-optimize-kit skill.'
-keywords: [assessment, quality-rating, template-alignment, content-evaluation, ai-ley-scoring, prompt, ailey]
+id: ailey-admin-assess
+name: AI-LEY Content Assessor
+description: Rescans and rates AI-LEY content files (instructions, personas, prompts) from 0-5 based on quality and template alignment, updating scores and listing files below 4.5 for improvement. Now available in ailey-admin-optimize-kit skill.
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-
 > **⚠️ This functionality is now available in the `ailey-admin-optimize-kit` skill.**
 > 
 > **Usage:**
@@ -16,8 +16,8 @@ agent: AI-ley Orchestrator
 > **Targets:** `instructions`, `personas`, `prompts`, `agents`, `skills`, `all`, or specific file path
 > 
 > **Options:**
-> - `-o, --output <path>`: Output report path (default: `.ai-ley/SUGGESTIONS.md`)
-> - `-v, --verbose`: Verbose output with detailed metrics
+> - `-o, --output <path>` - Set output report path (default: `.ai-ley/SUGGESTIONS.md`)
+> - `-v, --verbose` - Enable verbose output with detailed metrics
 > 
 > **Example:**
 > ```bash
@@ -53,8 +53,6 @@ agent: AI-ley Orchestrator
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
 - Reference quality standards from `.github/prompts/ailey-add-instructions.prompt.md` for instruction assessment
 - Reference quality standards from `.github/prompts/ailey-add-personas.prompt.md` for persona assessment
-
-
 
 
 ## Recommended Personas
@@ -97,7 +95,7 @@ Produce:
 
 You are an AI-LEY content quality assessor and scoring specialist with expertise in template compliance and content excellence evaluation.
 
-### 1. **Parse Input Parameters**
+### 1. Parse Input Parameters
 
 - Extract the target content type from user input (`instructions`, `personas`, `prompts/commands`, or `all`)
 - Validate the parameter and provide helpful error messages for invalid inputs
@@ -288,7 +286,6 @@ Total files scoring below 4.5: **{count}**
 - 3.0-3.9 (Moderate): {count}
 - 4.0-4.4 (Good but needs polish): {count}
 
-## Files Requiring Improvement (Score < 4.5)
 
 ### Critical Priority (Score 0.0-2.9)
 
@@ -308,7 +305,6 @@ Total files scoring below 4.5: **{count}**
 | ----------- | ------------- | ---------------------- | ------------------ |
 | {file-path} | {score}       | {polish-opportunities} | Minor enhancements |
 
-## Improvement Recommendations
 
 ### Template Compliance Issues
 
@@ -337,7 +333,6 @@ Total files scoring below 4.5: **{count}**
 3. **Medium-term (Good files):** Schedule polish and enhancement
 4. **Ongoing:** Regular assessment to maintain quality standards
 
-## Assessment Criteria Applied
 
 ### Instructions Assessment
 
@@ -406,7 +401,6 @@ Quality Distribution:
 Next: Review .ai-ley/SUGGESTIONS.md for improvement priorities
 ```
 
-## Examples
 
 ### Example 1: Assess All Content Types
 
@@ -503,12 +497,20 @@ Next: Review .ai-ley/SUGGESTIONS.md for improvement priorities
 - Files scoring below 4.5 are flagged for improvement in the suggestions report
 - Assessment scoring is objective and consistent, based on measurable criteria
 - The system respects existing file structure and only updates quality ratings
-- Regular assessment helps maintain high content quality across the AI-LEY ecosystem
+- Regular assessment maintains high content quality across the AI-LEY ecosystem
 - Score updates trigger timestamp updates only for significant changes (>0.5 difference)
-- Assessment methodology can be refined based on emerging quality standards
+- Assessment methodology evolves based on emerging quality standards
+
 ---
 
+version: 1.0.1
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+
+---
 version: 1.0.0
-updated: 2026-01-11
-reviewed: 2026-01-11
-score: 4.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

@@ -1,14 +1,10 @@
 ---
-name: 'Enterprise OWASP Web Application Security Platform'
-description: 'Enterprise-grade OWASP web application security platform with advanced vulnerability assessment automation, comprehensive ASVS verification frameworks, intelligent threat modeling systems, automated penetration testing pipelines, enterprise compliance validation (PCI-DSS, OWASP Top 10, NIST), sophisticated security orchestration, executive risk dashboards, and production-ready DevSecOps integration for complete web application security operations.'
+id: owasp
+name: Enterprise OWASP Web Application Security Platform
+description: Enterprise-grade OWASP web application security platform with advanced vulnerability assessment automation, comprehensive ASVS verification frameworks, intelligent threat modeling systems, automated penetration testing pipelines, enterprise compliance validation (PCI-DSS, OWASP Top 10, NIST), sophisticated security orchestration, executive risk dashboards, and production-ready DevSecOps integration for complete web application security operations.
 keywords: [api, automation, avoid, application, agent, apply, architecture, assistant, advanced, artifacts]
+tools: [undefined]
 ---
-
-
-# Enterprise OWASP Web Application Security Platform
-
-## AI Agent Implementation Guide
-
 ### Enterprise Mission Statement
 
 This enhanced OWASP instruction set provides enterprise-grade web application security capabilities with advanced vulnerability assessment automation, comprehensive ASVS verification frameworks, intelligent threat modeling systems, automated penetration testing pipelines, sophisticated compliance validation (PCI-DSS, OWASP Top 10, NIST), executive risk dashboards, security orchestration platforms, and production-ready DevSecOps integration for complete web application security operations across enterprise environments.
@@ -42,7 +38,6 @@ This enhanced OWASP instruction set provides enterprise-grade web application se
 - **Legacy Application Assessment** requiring specialized tools → supplement with technology-specific security assessment frameworks
 - **Regulatory-Specific Industries** requiring specialized compliance → ensure alignment with industry-specific security requirements
 
-## ⚔️ Enterprise Web Application Security Platform
 
 ### Advanced OWASP Automation Framework
 
@@ -146,13 +141,8 @@ application security requirements, testing, and validation.
 - Avoid generating insecure examples; flag dangerous APIs and suggest safer alternatives
 
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

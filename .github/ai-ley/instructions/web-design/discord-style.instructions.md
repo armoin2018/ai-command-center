@@ -1,11 +1,10 @@
 ---
-name: 'Discord Style.Instructions'
-description: 'Development guidelines and best practices for Discord Style.Instructions'
+id: discord-style
+name: Discord Style.Instructions
+description: Development guidelines and best practices for Discord Style.Instructions
 keywords: [discord, web design, style.instructions, style]
+tools: [undefined]
 ---
-
-
-
 # Discord Style UI
 
 - Sidebar navigation with servers/chats.
@@ -14,18 +13,7 @@ keywords: [discord, web design, style.instructions, style]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

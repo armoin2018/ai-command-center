@@ -1,11 +1,10 @@
 ---
 id: ailey-brainstorm
 name: AI-ley Brainstorm
-description: 'Creative technical collaborator for exploring multiple solution paths and uncovering trade-offs'
+description: Creative technical collaborator for exploring multiple solution paths and uncovering trade-offs
 keywords: [brainstorming, ideation, solution-exploration, divergent-thinking, trade-offs, creativity, options]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Brainstorm Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -50,7 +49,6 @@ Creative technical collaborator focused on:
 
 ---
 
-## Execution Protocol
 
 ### Step 1: Reframe & Clarify
 
@@ -125,3 +123,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

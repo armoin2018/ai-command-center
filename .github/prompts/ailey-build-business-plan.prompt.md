@@ -1,13 +1,11 @@
 ---
-name: 'Business Plan Generator'
-description: 'Build a complete detailed business plan based on the requirements found in files.requirements'
+id: ailey-build-business-plan
+name: Business Plan Generator
+description: Build a complete detailed business plan based on the requirements found in files.requirements
 keywords: [business, plan, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Business Plan Generator
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [business, plan, prompt, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -136,7 +132,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 **Executive Summary Content Structure**:
 
 ```markdown
-# Executive Summary
 
 ## Company Overview
 
@@ -209,7 +204,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Company Formation and Legal Structure**:
 ```markdown
-# Company Description
 
 ## Company History & Background
 **Founding Story**: {how-and-why-company-was-founded}
@@ -266,7 +260,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Industry Overview and Market Size**:
 ```markdown
-# Market Analysis
 
 ## Industry Overview
 **Industry Definition**: {industry-sector-definition}
@@ -358,7 +351,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Direct and Indirect Competitor Mapping**:
 ```markdown
-# Competitive Analysis
 
 ## Competitive Landscape Overview
 **Market Structure**: {oligopoly/fragmented/monopolistic}
@@ -424,7 +416,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Brand Strategy and Market Positioning**:
 ```markdown
-# Marketing & Sales Strategy
 
 ## Brand Positioning
 **Brand Promise**: {what-we-promise-customers}
@@ -497,7 +488,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Production and Service Delivery**:
 ```markdown
-# Operations Plan
 
 ## Operational Model
 **Business Model**: {how-we-create-and-deliver-value}
@@ -545,7 +535,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 
 **Revenue and Expense Modeling**:
 ```markdown
-# Financial Plan
 
 ## Financial Projections Summary
 ### 5-Year Revenue Projections
@@ -638,7 +627,6 @@ You are a business strategy consultant and comprehensive business plan specialis
 **Implementation Examples**:
 ```markdown
 
-## Examples
 
 ### Example 1: SaaS Business Plan
 
@@ -738,3 +726,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

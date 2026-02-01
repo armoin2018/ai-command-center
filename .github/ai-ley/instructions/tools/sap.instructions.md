@@ -1,12 +1,10 @@
 ---
-name: 'SAP Instructions'
-description: 'Comprehensive instruction set for using SAP, covering core functions such as navigation, data entry, module access (FI, CO, MM, SD), report generation, and transaction execution with step-by-step procedures, system tips, and typical use case workflows.'
+id: sap
+name: SAP Instructions
+description: Comprehensive instruction set for using SAP, covering core functions such as navigation, data entry, module access (FI, CO, MM, SD), report generation, and transaction execution with step-by-step procedures, system tips, and typical use case workflows.
 keywords: [entry, basic, accounting, access, distribution, custom, execution, cli, controlling, error]
+tools: [undefined]
 ---
-
-
-# SAP Instructions
-
 ## Tool Overview
 
 - **Tool Name**: SAP (Systems, Applications & Products in Data Processing)
@@ -15,7 +13,6 @@ keywords: [entry, basic, accounting, access, distribution, custom, execution, cl
 - **Purpose**: Integrated business software for managing operations and customer relations
 - **Prerequisites**: SAP GUI client, user credentials, authorized access to SAP system
 
-## System Access & Navigation
 
 ### SAP GUI Login
 
@@ -24,7 +21,6 @@ keywords: [entry, basic, accounting, access, distribution, custom, execution, cl
    
 2. **SAP Fiori Launchpad (S/4HANA)**
    
-### Basic Navigation
 
 #### Transaction Codes (TCodes)
 
@@ -42,9 +38,6 @@ See [example-1](./examples/sap/example-1.txt)
 - **Command Field**: Enter transaction codes
 - **Title Bar**: Current transaction and system information
 
-## Core System Functions
-
-### Session Management
 
 #### Multiple Sessions
 
@@ -54,7 +47,6 @@ See [example-2](./examples/sap/example-2.txt)
 
 See [example-3](./examples/sap/example-3.txt)
 
-### Data Entry Best Practices
 
 #### Field Navigation
 
@@ -71,9 +63,6 @@ See [example-3](./examples/sap/example-3.txt)
 - **Value Lists**: Use F4 for valid entries
 - **Batch Input**: Use templates for bulk data entry
 
-## Module Access & Core Functions
-
-### Financial Accounting (FI)
 
 #### Key Transactions
 
@@ -91,7 +80,6 @@ See [example-4](./examples/sap/example-4.txt)
 
 See [example-5](./examples/sap/example-5.txt)
 
-### Controlling (CO)
 
 #### Key Transactions
 
@@ -108,7 +96,6 @@ See [example-6](./examples/sap/example-6.txt)
 
 See [example-7](./examples/sap/example-7.txt)
 
-### Materials Management (MM)
 
 #### Key Transactions
 
@@ -128,7 +115,6 @@ See [example-8](./examples/sap/example-8.txt)
 
 See [example-9](./examples/sap/example-9.txt)
 
-### Sales & Distribution (SD)
 
 #### Key Transactions
 
@@ -148,9 +134,6 @@ See [example-10](./examples/sap/example-10.txt)
 
 See [example-11](./examples/sap/example-11.txt)
 
-## Report Generation
-
-### Standard Reports
 
 #### Financial Reports
 
@@ -175,7 +158,6 @@ See [example-15](./examples/sap/example-15.txt)
     3. **Execute**: Press F8 or Execute button
 4. **Review Output**:
    
-### Custom Reports & Queries
 
 #### SAP Query (SQ01)
 
@@ -186,7 +168,6 @@ See [example-16](./examples/sap/example-16.txt)
 - **Save Variants**: `/nSE80` → Variants
 - **Execute with Variant**: Enter transaction → Goto → Variants → Get
 
-## Transaction Execution Best Practices
 
 ### Transaction Flow
 
@@ -209,13 +190,11 @@ See [example-16](./examples/sap/example-16.txt)
 
 See [example-17](./examples/sap/example-17.txt)
 
-## System Tips & Shortcuts
 
 ### Keyboard Shortcuts
 
 See [example-18](./examples/sap/example-18.txt)
 
-### Time-Saving Features
 
 #### Favorites Management
 
@@ -237,12 +216,7 @@ See [example-21](./examples/sap/example-21.txt)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,9 @@
 ---
-name: 'Fundraiser'
-description: 'Professional fundraising specialist securing donations and investments'
+id: fundraiser
+name: Fundraiser
+description: Professional fundraising specialist securing donations and investments
 keywords: [engagement, approach, expertise, api, communication, gui, background, framework, fundraiser, business]
 ---
-
-
-# Fundraiser
 
 ## Overview
 
@@ -256,13 +254,17 @@ _Disaster relief organization needs $300K within 30 days for hurricane response_
 _Quality Score: 4.5/5 - Comprehensive fundraising persona with authentic nonprofit development experience, diverse outreach strategies, and realistic donor relationship management frameworks optimized for AI agent role-playing across multiple fundraising scenarios._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

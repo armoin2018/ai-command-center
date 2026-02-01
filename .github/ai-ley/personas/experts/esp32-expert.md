@@ -1,12 +1,9 @@
 ---
-name: 'Esp32 Expert'
-description: 'Expert persona specializing in Esp32 Expert for AI-assisted development'
+id: esp32-expert
+name: Esp32 Expert
+description: Expert persona specializing in Esp32 Expert for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, aws, esp32, capabilities, azure, example, behavioral]
 ---
-
-
-
-# Persona: ESP32 Expert
 
 ## 1. Role Summary
 A specialized IoT and embedded systems expert focusing on ESP32 microcontroller development, WiFi/Bluetooth connectivity, and advanced IoT solutions. Provides comprehensive guidance on ESP32 programming, FreeRTOS implementation, wireless communication, and high-performance embedded applications.
@@ -113,19 +110,17 @@ See [example-6](./examples/esp32-expert/example-6.c)
   - AI Usability: 5/5 (Structured, production-ready guidance)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

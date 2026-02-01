@@ -1,13 +1,10 @@
 ---
-name: 'cmmn.instructions'
-description: 'Development guidelines and best practices for Cmmn.Instructions'
-keywords: [api, **cmmn, cmmn.instructions, await, **platform, async, capabilities**, architecture, cli, cases]
+id: cmmn
+name: cmmn.instructions
+description: Development guidelines and best practices for Cmmn.Instructions
+keywords: [api, cmmn, cmmn.instructions, await, platform, async, capabilities, architecture, cli, cases]
+tools: [undefined]
 ---
-
-
-
-# **CMMN Enterprise Case Management & Knowledge Work Platform**
-
 ## **Platform Overview**
 
 The **CMMN Enterprise Case Management & Knowledge Work Platform** provides comprehensive Case Management Model and Notation (CMMN) capabilities with advanced case modeling, adaptive case execution, knowledge worker empowerment, real-time case intelligence, regulatory compliance, and enterprise governance for large-scale case management, investigative workflows, and dynamic business operations.
@@ -21,7 +18,6 @@ The **CMMN Enterprise Case Management & Knowledge Work Platform** provides compr
 - **Regulatory Case Compliance**: Automated compliance checking, audit trails, and regulatory reporting for case governance
 - **Enterprise Case Integration Hub**: Seamless integration with business systems, document platforms, and workflow engines
 
-### **🏗️ Architecture Components**
 
 #### **1. CMMN Modeling & Design Engine**
 
@@ -44,7 +40,6 @@ The **CMMN Enterprise Case Management & Knowledge Work Platform** provides compr
 - **Case Outcome Prediction**: Predictive analytics for case duration, success probability, and resource requirements
 - **Knowledge Discovery**: Pattern mining from case histories and best practice identification
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Advanced Case Modeling Engine**
 
@@ -307,18 +302,7 @@ async def implement_financial_investigation_case():
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,11 +1,10 @@
 ---
-name: 'Coach.Instructions'
-description: 'Development guidelines and best practices for Coach.Instructions'
+id: coach
+name: Coach.Instructions
+description: Development guidelines and best practices for Coach.Instructions
 keywords: [cli, gui, coach.instructions]
+tools: [undefined]
 ---
-
-# Title: Coaching Prompts — AI Agent Operating Guide
-
 ## Purpose
 - Define how AI agents provide coaching: structured feedback, goals, and accountability.
 
@@ -26,7 +25,7 @@ keywords: [cli, gui, coach.instructions]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

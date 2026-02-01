@@ -1,7 +1,7 @@
 ---
 name: 'Truffle.Instructions'
 description: 'See [example-1](./examples/truffle/example-1.'
-keywords: [[pattern, [concept, architecture, analysis, cli, advanced, agents, avoid, building, alternative:]
+keywords: [pattern, [concept, architecture, analysis, cli, advanced, agents, avoid, building, alternative:
 ---
 
 

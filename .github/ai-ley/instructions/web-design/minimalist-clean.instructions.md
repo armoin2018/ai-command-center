@@ -1,11 +1,10 @@
 ---
-name: 'Minimalist Clean.Instructions'
-description: 'Development guidelines and best practices for Minimalist Clean.Instructions'
+id: minimalist-clean
+name: Minimalist Clean.Instructions
+description: Development guidelines and best practices for Minimalist Clean.Instructions
 keywords: [web design, clean.instructions, minimalist, design, clean]
+tools: [undefined]
 ---
-
-
-
 # Minimalist / Clean Design
 
 - Focus on whitespace and simplicity.
@@ -15,18 +14,7 @@ keywords: [web design, clean.instructions, minimalist, design, clean]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

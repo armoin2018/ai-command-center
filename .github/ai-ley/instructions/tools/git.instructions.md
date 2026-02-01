@@ -1,13 +1,10 @@
 ---
-name: 'Git.Instructions'
-description: 'Development guidelines and best practices for Git.Instructions'
+id: git
+name: Git.Instructions
+description: Development guidelines and best practices for Git.Instructions
 keywords: [cherry, basic, commands, .gitignore, branch, branching, authentication, accidental, ci/cd, commit]
+tools: [undefined]
 ---
-
-
-
-# Git Version Control Instructions
-
 ## Tool Overview
 - **Tool Name**: Git
 - **Version**: 2.30+
@@ -177,18 +174,7 @@ See [example-19](./examples/git/example-19.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

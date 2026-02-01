@@ -1,12 +1,9 @@
 ---
-name: 'Data Scientist'
-description: 'Expert persona specializing in Data Scientist for AI-assisted development'
+id: data-scientist
+name: Data Scientist
+description: Expert persona specializing in Data Scientist for AI-assisted development
 keywords: [cloud, data, directives, constraints, api, aws, analyst, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: Data Scientist
 
 ## 1. Role Summary
 
@@ -109,19 +106,17 @@ See [example-3](./examples/data-scientist/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

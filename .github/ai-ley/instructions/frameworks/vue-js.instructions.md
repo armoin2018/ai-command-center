@@ -1,7 +1,7 @@
 ---
 name: 'Vue.js Progressive Web Framework Instructions'
 description: 'Comprehensive guide for Vue.js progressive framework with Composition'
-keywords: [agent, [pattern, [concept, architecture, analysis, api, **use, building, assessment, **avoid]
+keywords: [agent, pattern, [concept, architecture, analysis, api, use, building, assessment, avoid
 ---
 
 

@@ -1,12 +1,10 @@
 ---
-name: 'EditorConfig Enterprise Code Standards & Developer Productivity Platform'
-description: 'Enterprise-grade EditorConfig platform with advanced code standards automation, policy enforcement engines, compliance validation frameworks, automated code quality gates, security-focused configuration management, enterprise development workflow integration, and comprehensive developer productivity optimization for complete enterprise development environment standardization.'
+id: editorconfig
+name: EditorConfig Enterprise Code Standards & Developer Productivity Platform
+description: Enterprise-grade EditorConfig platform with advanced code standards automation, policy enforcement engines, compliance validation frameworks, automated code quality gates, security-focused configuration management, enterprise development workflow integration, and comprehensive developer productivity optimization for complete enterprise development environment standardization.
 keywords: [api, enterprise, editorconfig, devops, developer, database, automation, azure, editorconfig.instructions, framework]
+tools: [undefined]
 ---
-
-
-# EditorConfig Enterprise Code Standards & Developer Productivity Platform
-
 ## Enterprise Platform Overview
 
 - **Platform Name**: EditorConfig Enterprise Standards Engine
@@ -305,13 +303,8 @@ class EnterpriseEditorConfigEngine:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

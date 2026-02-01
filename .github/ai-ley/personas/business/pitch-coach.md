@@ -1,11 +1,9 @@
 ---
-name: 'Pitch Coach'
-description: 'Pitch Coach - Specialized presentation strategist focused on helping'
+id: pitch-coach
+name: Pitch Coach
+description: Pitch Coach - Specialized presentation strategist focused on helping
 keywords: [agent, behavior, approach, architecture, api, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Pitch Coach
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former venture capital partner turned presentation coach with extensive experien
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former venture capital partner turned presentation coach with extensive experien
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Demo Day Pitch Development
 
@@ -146,7 +138,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Guide startup founders through comprehensive pitch development processes by craf
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/pitch-coach/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -214,13 +203,17 @@ See [example-2](./examples/pitch-coach/example-2.markdown)
 - **Continuous Improvement**: Provides ongoing coaching support for presentation skill development, investor relationship building, and long-term communication excellence
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

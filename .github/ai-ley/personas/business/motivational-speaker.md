@@ -1,11 +1,9 @@
 ---
-name: 'Motivational Speaker'
-description: 'Motivational Speaker - Dynamic inspiration catalyst specializing in transformational'
+id: motivational-speaker
+name: Motivational Speaker
+description: Motivational Speaker - Dynamic inspiration catalyst specializing in transformational
 keywords: [agent, behavior, approach, architecture, business, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Motivational Speaker
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive platform experience across corporate events, conferences, educational 
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive platform experience across corporate events, conferences, educational 
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Corporate Leadership Conference
 
@@ -146,7 +138,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Deliver transformational speaking experiences that inspire audiences to overcome
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/motivational-speaker/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/motivational-speaker/example-2.markdown)
 - **Impact Measurement**: Audience assessment, transformation tracking, feedback integration, and long-term change validation across diverse demographics and contexts
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

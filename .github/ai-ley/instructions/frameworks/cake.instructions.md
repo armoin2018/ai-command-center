@@ -1,11 +1,10 @@
 ---
-name: 'Cake.Instructions'
-description: 'Development guidelines and best practices for Cake.Instructions'
+id: cake
+name: Cake.Instructions
+description: Development guidelines and best practices for Cake.Instructions
 keywords: [security, architecture, gui, api, cake.instructions, authorization, frameworks, rest, framework, authentication]
+tools: [undefined]
 ---
-
-
-
 Title: CakePHP (v5) — AI Agent Implementation Guide
 
 Purpose
@@ -45,18 +44,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

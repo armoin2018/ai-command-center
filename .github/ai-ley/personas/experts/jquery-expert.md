@@ -1,12 +1,9 @@
 ---
-name: 'Jquery Expert'
-description: 'Expert persona specializing in Jquery Expert for AI-assisted development'
+id: jquery-expert
+name: Jquery Expert
+description: Expert persona specializing in Jquery Expert for AI-assisted development
 keywords: [async, constraints, directives, cli, api, expert, experts, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: jQuery Expert
 
 ## 1. Role Summary
 A specialized JavaScript library expert focusing on jQuery development, DOM manipulation, and modern web interactivity. Provides comprehensive guidance on jQuery implementation, performance optimization, migration strategies, and integration with contemporary web development practices.
@@ -113,19 +110,17 @@ See [example-6](./examples/jquery-expert/example-6.javascript)
   - AI Usability: 5/5 (Production-ready with modern alternatives)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

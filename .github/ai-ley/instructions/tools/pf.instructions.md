@@ -1,15 +1,10 @@
 ---
-name: 'pf.instructions'
-description: 'Development guidelines and best practices for Pf.Instructions'
+id: pf
+name: pf.instructions
+description: Development guidelines and best practices for Pf.Instructions
 keywords: [deployment, api, cloud, avoid, agent, compliance, architecture, assistant, configuration, advanced]
+tools: [undefined]
 ---
-
-
-
-# PF Packet Filter Security Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents regarding PF (Packet Filter) firewall implementation, covering FreeBSD/OpenBSD stateful packet filtering, NAT configuration, QoS management, rule optimization, and advanced network security for BSD-based systems.
@@ -70,7 +65,6 @@ See [example-1](./examples/pf/example-1.python)
 
 See [example-2](./examples/pf/example-2.bash)
 
-## AI Implementation Guidelines
 
 ### Enterprise PF Deployment Framework
 
@@ -140,19 +134,8 @@ See [example-2](./examples/pf/example-2.bash)
 - **Use Cases**: Enterprise firewalls, security appliances, high-throughput filtering, compliance environments
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

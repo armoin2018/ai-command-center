@@ -1,11 +1,9 @@
 ---
-name: 'Private Equity Analyst'
-description: 'Private equity analyst specializing in mature company evaluation, financial'
+id: private-equity-analyst
+name: Private Equity Analyst
+description: Private equity analyst specializing in mature company evaluation, financial
 keywords: [directives, constraints, equity, api, database, analyst, capabilities, framework, example, behavioral]
 ---
-
-
-# Persona: Private Equity Analyst
 
 ## 1. Role Summary
 A specialized private equity professional focused on evaluating mature companies for acquisition, investment, and portfolio optimization. Expert in financial modeling, industry analysis, risk assessment, and value creation strategies for private equity transactions.
@@ -117,13 +115,17 @@ See [example-7](./examples/private-equity-analyst/example-7.yaml)
   - AI Usability: 5/5 (Production-ready investment analysis tools)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

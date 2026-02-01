@@ -1,13 +1,10 @@
 ---
-name: 'Quantlib.Instructions'
-description: 'Development guidelines and best practices for Quantlib.Instructions'
+id: quantlib
+name: Quantlib.Instructions
+description: Development guidelines and best practices for Quantlib.Instructions
 keywords: [calendar, calibration, commands, common, caching, assistant, architecture, concepts, configuration, arithmetic]
+tools: [undefined]
 ---
-
-
-
-# QuantLib Quantitative Finance Instructions
-
 ## Framework Overview
 - **Framework Name**: QuantLib
 - **Version**: 1.32+ (Latest stable)
@@ -21,7 +18,6 @@ See [example-1](./examples/quantlib/example-1.bash)
 ## Project Structure
 See [example-2](./examples/quantlib/example-2.txt)
 
-## Core Concepts
 
 ### Date and Calendar Management
 - **Purpose**: Handle business days, holidays, and date arithmetic
@@ -48,7 +44,6 @@ See [example-5](./examples/quantlib/example-5.python)
 4. **Calibration**: Calibrate models to market data
 5. **Analysis**: Price instruments and calculate risk metrics
 
-## Best Practices
 
 ### Market Data Management
 See [example-6](./examples/quantlib/example-6.python)
@@ -56,7 +51,6 @@ See [example-6](./examples/quantlib/example-6.python)
 ### Portfolio Risk Management
 See [example-7](./examples/quantlib/example-7.python)
 
-## Common Patterns
 
 ### Fixed Income Instruments
 See [example-8](./examples/quantlib/example-8.python)
@@ -68,7 +62,6 @@ See [example-9](./examples/quantlib/example-9.python)
 ## Essential Commands
 See [example-10](./examples/quantlib/example-10.python)
 
-## Common Issues & Solutions
 
 ### Issue 1: Date Arithmetic Errors
 **Problem**: Business day adjustments and calendar conflicts
@@ -80,7 +73,6 @@ See [example-11](./examples/quantlib/example-11.python)
 **Solution**: Use appropriate initial guesses and optimization methods
 See [example-12](./examples/quantlib/example-12.python)
 
-## Performance Optimization
 
 ### Memory Management and Caching
 See [example-13](./examples/quantlib/example-13.python)
@@ -97,7 +89,6 @@ See [example-13](./examples/quantlib/example-13.python)
 - **Luigi Ballabio's Blog**: https://lballabio.github.io/QuantLib/
 - **GitHub Repository**: https://github.com/lballabio/QuantLib
 
-## Framework-Specific Guidelines
 
 ### Code Style
 - Use descriptive names for financial instruments and market data
@@ -111,7 +102,6 @@ See [example-13](./examples/quantlib/example-13.python)
 - Implement observer pattern for real-time market data updates
 - Create modular components for different asset classes
 
-## Integration Points
 
 ### NumPy/Pandas Integration
 - **Purpose**: Efficient data manipulation and analysis
@@ -123,7 +113,6 @@ See [example-13](./examples/quantlib/example-13.python)
 - **Setup**: pip install matplotlib
 - **Usage**: Plot yield curves, option surfaces, and P&L profiles
 
-## Troubleshooting
 
 ### Debug Mode
 See [example-14](./examples/quantlib/example-14.python)
@@ -151,18 +140,7 @@ When helping with QuantLib implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

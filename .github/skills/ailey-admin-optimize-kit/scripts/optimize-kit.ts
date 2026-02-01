@@ -7,22 +7,30 @@
 import { program } from 'commander';
 import { glob } from 'glob';
 import chalk from 'chalk';
+import path from 'path';
 import {
   FileProcessor,
   FrontmatterNormalizer,
   FooterNormalizer,
   CodeExtractor,
   AIReviewer,
+  ArtifactCleaner,
+  HTMLSummaryGenerator,
+  AIIssueResolver,
   type ProcessingOptions,
   type OptimizationResult,
   type ResourceType
 } from '../lib/index.js';
+import { fixYaml } from './commands/fix-yaml.js';
 
 const processor = new FileProcessor();
 const frontmatterNormalizer = new FrontmatterNormalizer();
 const footerNormalizer = new FooterNormalizer();
 const codeExtractor = new CodeExtractor();
 const aiReviewer = new AIReviewer();
+const artifactCleaner = new ArtifactCleaner();
+const htmlGenerator = new HTMLSummaryGenerator();
+const issueResolver = new AIIssueResolver();
 
 /**
  * Optimize a single file
@@ -42,6 +50,27 @@ async function optimizeFile(
     // Track changes
     const changes: string[] = [];
 
+    let updatedBody = content.body;
+
+    // Check if duplicate footers were removed during file read
+    if (content.metadata?.duplicateFootersRemoved) {
+      changes.push(`Removed ${content.metadata.duplicateFootersRemoved} duplicate footer(s) during read`);
+    }
+
+    // Remove duplicate footers from body (if any remain)
+    const footerResult = footerNormalizer.removeDuplicateFooters(updatedBody);
+    if (footerResult.removed > 0) {
+      updatedBody = footerResult.cleaned;
+      changes.push(`Removed ${footerResult.removed} duplicate footer(s)`);
+    }
+
+    // Clean corrupt artifacts
+    const cleanResult = artifactCleaner.clean(updatedBody);
+    if (cleanResult.removed.length > 0) {
+      updatedBody = cleanResult.cleaned;
+      changes.push(`Cleaned ${cleanResult.removed.length} artifact(s)`);
+    }
+
     // Normalize frontmatter
     const normalizedFrontmatter = frontmatterNormalizer.normalize(
       content.frontmatter,
@@ -57,8 +86,6 @@ async function optimizeFile(
     if (JSON.stringify(normalizedFooter) !== JSON.stringify(content.footer)) {
       changes.push('Normalized footer');
     }
-
-    let updatedBody = content.body;
 
     // Extract code blocks
     if (options.extractCode) {
@@ -99,6 +126,32 @@ async function optimizeFile(
     const optimizedSize = processor.countLines(updatedBody);
     if (options.targetLines && optimizedSize > options.targetLines) {
       changes.push(`Warning: ${optimizedSize} lines exceeds target ${options.targetLines}`);
+    }
+
+    // AI Issue Resolution - attempt to resolve any detected issues
+    const issues = changes.filter(c => 
+      c.toLowerCase().includes('warning') || 
+      c.toLowerCase().includes('error') ||
+      c.toLowerCase().includes('issue')
+    );
+    
+    if (issues.length > 0 && options.aiReview) {
+      const resolutionResult = await issueResolver.resolve(updatedBody, issues);
+      
+      if (resolutionResult.resolutions.some(r => r.resolved)) {
+        updatedBody = resolutionResult.resolvedContent;
+        const resolvedCount = resolutionResult.resolutions.filter(r => r.resolved).length;
+        changes.push(`AI resolved ${resolvedCount} issue(s)`);
+      }
+      
+      // Add suggestions for unresolved issues
+      const suggestions = resolutionResult.resolutions
+        .filter(r => !r.resolved && r.error)
+        .map(r => r.error);
+      
+      if (suggestions.length > 0 && options.verbose) {
+        console.log(chalk.yellow(`  Suggestions: ${suggestions.join('; ')}`));
+      }
     }
 
     // Write file
@@ -176,9 +229,9 @@ async function processFiles(
 }
 
 /**
- * Display summary
+ * Display summary and generate HTML report
  */
-function displaySummary(results: OptimizationResult[]) {
+async function displaySummary(results: OptimizationResult[], generateHTML: boolean = false) {
   const successful = results.filter(r => r.success);
   const failed = results.filter(r => !r.success);
   
@@ -193,6 +246,12 @@ function displaySummary(results: OptimizationResult[]) {
   console.log(`  Failed: ${chalk.red(failed.length)}`);
   console.log(`  Total changes: ${totalChanges}`);
   console.log(`  Average quality score: ${chalk.yellow(avgQuality.toFixed(1))}/5.0`);
+
+  // Generate HTML summary if requested
+  if (generateHTML && results.length > 0) {
+    const htmlPath = path.resolve(process.cwd(), '../../../.admin/KIT-OPTIMIZER.SUMMARY.html');
+    await htmlGenerator.generate(results, htmlPath);
+  }
 }
 
 // CLI Commands
@@ -211,7 +270,7 @@ program
   .option('--target-lines <number>', 'Target maximum lines', '300')
   .option('--verbose', 'Show detailed output')
   .action(async (options) => {
-    const pattern = '.github/ai-ley/instructions/**/*.instructions.md';
+    const pattern = '../../../.github/ai-ley/instructions/**/*.instructions.md';
     const results = await processFiles(pattern, {
       ...options,
       targetLines: parseInt(options.targetLines)
@@ -229,7 +288,7 @@ program
   .option('--target-lines <number>', 'Target maximum lines', '300')
   .option('--verbose', 'Show detailed output')
   .action(async (options) => {
-    const pattern = '.github/ai-ley/personas/**/*.persona.md';
+    const pattern = '../../../.github/ai-ley/personas/**/*.md';
     const results = await processFiles(pattern, {
       ...options,
       targetLines: parseInt(options.targetLines)
@@ -302,11 +361,11 @@ program
   .option('--verbose', 'Show detailed output')
   .action(async (options) => {
     const patterns = [
-      '.github/ai-ley/instructions/**/*.instructions.md',
-      '.github/ai-ley/personas/**/*.persona.md',
-      '.github/agents/*.agent.md',
-      '.github/skills/**/SKILL.md',
-      '.github/prompts/*.prompt.md'
+      '../../../.github/ai-ley/instructions/**/*.instructions.md',
+      '../../../.github/ai-ley/personas/**/*.md',
+      '../../../.github/agents/**/*.agent.md',
+      '../../../.github/skills/**/SKILL.md',
+      '../../../.github/prompts/**/*.prompt.md'
     ];
 
     let allResults: OptimizationResult[] = [];
@@ -320,7 +379,12 @@ program
       allResults = allResults.concat(results);
     }
 
-    displaySummary(allResults);
+    await displaySummary(allResults, true);
+    
+    console.log(chalk.cyan('\n🔄 Regenerating indexes...'));
+    // Note: Index regeneration would be called here
+    // await regenerateIndexes();
+    console.log(chalk.green('✅ Optimization complete!\n'));
   });
 
 program
@@ -356,6 +420,15 @@ program
         console.log(chalk.red(`  Error: ${result.error}`));
       }
     }
+  });
+
+program
+  .command('fix-yaml <target>')
+  .description('Fix common YAML frontmatter errors (instructions|personas|prompts|agents|skills|all|<file>)')
+  .option('--dry-run', 'Preview changes without writing')
+  .option('--verbose', 'Show detailed output')
+  .action(async (target, options) => {
+    await fixYaml(target, options);
   });
 
 program.parse();

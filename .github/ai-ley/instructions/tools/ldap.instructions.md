@@ -1,14 +1,10 @@
 ---
-name: 'LDAP Directory Services Security Instructions'
-description: 'LDAP directory services security implementation guide covering centralized authentication, secure user management, access control, enterprise identity management, production deployment strategies, threat modeling, and advanced security monitoring.'
+id: ldap
+name: LDAP Directory Services Security Instructions
+description: LDAP directory services security implementation guide covering centralized authentication, secure user management, access control, enterprise identity management, production deployment strategies, threat modeling, and advanced security monitoring.
 keywords: [api, (olcaccess), agent, (lightweight, access, architecture, assistant, authentication, authorization, advanced]
+tools: [undefined]
 ---
-
-
-# LDAP Directory Services Security Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive guidance for AI agents implementing LDAP directory services, emphasizing centralized authentication, secure user management, access control, enterprise identity management with proper security hardening, production deployment strategies, threat modeling, and advanced security monitoring.
@@ -37,7 +33,6 @@ Provide comprehensive guidance for AI agents implementing LDAP directory service
 - **Replication**: Multi-master and master-slave replication for high availability
 - **Access Control**: ACLs for fine-grained permissions and security policies
 
-## Production Deployment Patterns
 
 ### High Availability LDAP Cluster with Security Hardening
 
@@ -79,7 +74,6 @@ See [example-3](./examples/ldap/example-3.yaml)
 
 ---
 
-# LDAP (Lightweight Directory Access Protocol) Instructions
 
 ## Overview
 
@@ -95,7 +89,6 @@ LDAP is an open protocol for accessing and maintaining distributed directory inf
 - Modify: Add/modify/delete entries and attributes
 - Access Control: ACLs to control who can read/modify what
 
-## Implementation Framework
 
 ### CLI tooling
 
@@ -119,7 +112,6 @@ See [example-6](./examples/ldap/example-6.ldif)
 - Document your DIT and schema decisions
 - Backup regularly (slapcat) and test restore procedures
 
-## Common Patterns
 
 ### App authentication pattern
 
@@ -203,13 +195,8 @@ Quality enforcement:
 - Backups and tested restores
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

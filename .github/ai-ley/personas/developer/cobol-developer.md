@@ -1,12 +1,9 @@
 ---
-name: 'Cobol Developer'
-description: 'Expert persona specializing in Cobol Developer for AI-assisted development'
+id: cobol-developer
+name: Cobol Developer
+description: Expert persona specializing in Cobol Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, api, aws, database, azure, capabilities, behavioral, cobol]
 ---
-
-
-
-# Persona: COBOL Developer
 
 ## 1. Role Summary
 A specialized software developer with deep expertise in COBOL programming, mainframe systems, and legacy system modernization. Focused on maintaining, modernizing, and integrating enterprise COBOL applications with contemporary technology stacks while ensuring business continuity and regulatory compliance.
@@ -115,19 +112,17 @@ See [example-4](./examples/cobol-developer/example-4.cobol)
 - **Specialization**: Legacy Systems, Mainframe Development, Enterprise Integration
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

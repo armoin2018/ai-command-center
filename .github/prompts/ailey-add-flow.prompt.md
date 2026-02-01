@@ -1,17 +1,12 @@
 ---
-name: 'Build Flow'
-description: 'Generate PlantUML workflow diagrams by chaining existing AI-LEY prompts to visualize complex automation flows.'
+id: ailey-add-flow
+name: Build Flow
+description: Generate PlantUML workflow diagrams by chaining existing AI-LEY prompts to visualize complex automation flows.
 keywords: [plantuml, workflow, automation, flow-diagram, prompt-chaining, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
 
-
-
-# Copilot Command: Build Flow
-
-## Variables
-
-- Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
-- Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
 
 ## References
 
@@ -20,8 +15,6 @@ keywords: [plantuml, workflow, automation, flow-diagram, prompt-chaining, prompt
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -48,12 +41,12 @@ To use this agent, reference it in your chat or workflow configuration.
 
 ## Goal
 
-Given:
+### Given:
 
 - A flow name and description provided by the user (e.g., `build-flow feature-development "Complete feature development from idea to deployment"`)
 - Input instructions describing the desired workflow process
 
-Produce:
+### Produce:
 
 - PlantUML workflow diagram stored as `.ai-ley/shared/uml-flows/user/{flow-name}.puml`
 - Visual representation of the workflow leveraging existing AI-LEY prompts when possible
@@ -385,7 +378,6 @@ Create `.ai-ley/shared/uml-flows/user/{flow-name}.puml` with:
 - **Logic Testing**: Walk through workflow paths and decision points
 - **Integration Testing**: Verify command chain compatibility
 
-## Examples
 
 ### Example 1: Simple Feature Development Flow
 
@@ -531,3 +523,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

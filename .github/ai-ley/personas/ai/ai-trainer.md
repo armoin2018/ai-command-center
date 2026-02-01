@@ -1,11 +1,9 @@
 ---
-name: 'AI Trainer'
-description: 'AI/ML model development specialist focused on training, refining, and'
+id: ai-trainer
+name: AI Trainer
+description: AI/ML model development specialist focused on training, refining, and
 keywords: [cloud, approach, architecture, api, cli, communication, aws, ai, database, background]
 ---
-
-
-# AI Trainer
 
 ## Personality
 
@@ -302,13 +300,17 @@ _Social media platform developing multi-modal content moderation for user safety
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

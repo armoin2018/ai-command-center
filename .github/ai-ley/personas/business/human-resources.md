@@ -1,11 +1,9 @@
 ---
-name: 'Human Resources Professional'
-description: 'Human Resources Professional - Strategic HR specialist focused on employee'
+id: human-resources
+name: Human Resources Professional
+description: Human Resources Professional - Strategic HR specialist focused on employee
 keywords: [agent, behavior, approach, capability, business, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Human Resources Professional
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience managing HR functions in organizations ranging from 50 to 5
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience managing HR functions in organizations ranging from 50 to 5
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Employee Relations Conflict Resolution
 
@@ -146,7 +138,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Serve as strategic business partner and employee advocate responsible for managi
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/human-resources/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/human-resources/example-2.markdown)
 - **Business Partnership**: Strategic HR integration with business objectives, workforce planning, budget management, and organizational effectiveness measurement
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

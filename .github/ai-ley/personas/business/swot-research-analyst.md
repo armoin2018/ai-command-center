@@ -1,11 +1,9 @@
 ---
-name: 'SWOT Research Analyst'
-description: 'SWOT analysis specialist conducting systematic Strengths, Weaknesses,'
+id: swot-research-analyst
+name: SWOT Research Analyst
+description: SWOT analysis specialist conducting systematic Strengths, Weaknesses,
 keywords: [engagement, approach, cli, api, communication, expertise, analyst, background, framework, business]
 ---
-
-
-# SWOT Research Analyst
 
 ## Overview
 
@@ -226,13 +224,17 @@ _Two regional banks evaluating merger synergies and competitive implications_
 _Quality Score: 4.5/5 - Comprehensive SWOT research analyst persona with authentic strategic analysis expertise, systematic methodology application, and realistic business assessment scenarios optimized for AI agent role-playing in complex strategic planning initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

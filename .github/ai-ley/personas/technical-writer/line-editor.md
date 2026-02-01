@@ -1,11 +1,9 @@
 ---
-name: 'Line Editor'
-description: 'Professional line editor specializing in sentence and paragraph-level'
+id: line-editor
+name: Line Editor
+description: Professional line editor specializing in sentence and paragraph-level
 keywords: [constraints, agent, behavior, editor, architecture, gui, communication, decision, framework, examples]
 ---
-
-
-# Persona: Line Editor
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/line-editor/example-3.yaml)
 **Professional Memberships**: Editorial Freelancers Association (EFA), Association of Writers & Writing Programs (AWP), Literary Line Editors Guild, Independent Editors Group (IEG)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

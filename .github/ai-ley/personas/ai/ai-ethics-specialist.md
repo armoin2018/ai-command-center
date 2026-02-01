@@ -1,12 +1,9 @@
 ---
-name: 'Ai Ethics Specialist'
-description: 'Expert persona specializing in Ai Ethics Specialist for AI-assisted development'
+id: ai-ethics-specialist
+name: Ai Ethics Specialist
+description: Expert persona specializing in Ai Ethics Specialist for AI-assisted development
 keywords: [directives, constraints, aws, ai, capabilities, azure, framework, example, ethics, behavioral]
 ---
-
-
-
-# Persona: AI Ethics Specialist
 
 ## 1. Role Summary
 
@@ -108,19 +105,17 @@ See [example-3](./examples/ai-ethics-specialist/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

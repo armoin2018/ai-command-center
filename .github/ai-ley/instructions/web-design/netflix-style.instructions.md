@@ -1,11 +1,10 @@
 ---
-name: 'Netflix Style.Instructions'
-description: 'Development guidelines and best practices for Netflix Style.Instructions'
+id: netflix-style
+name: Netflix Style.Instructions
+description: Development guidelines and best practices for Netflix Style.Instructions
 keywords: [style, web design, netflix, style.instructions]
+tools: [undefined]
 ---
-
-
-
 # Netflix Style UI
 
 - Horizontal scrolling categories.
@@ -14,18 +13,7 @@ keywords: [style, web design, netflix, style.instructions]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,19 +1,14 @@
 ---
-name: 'Enterprise MariaDB Relational Database & High-Availability Platform'
-description: 'Enterprise MariaDB Relational Database & High-Availability Platform with advanced clustering orchestration, intelligent performance optimization, automated failover systems, enterprise security frameworks, advanced analytics integration, real-time monitoring intelligence, automated compliance governance, and comprehensive operational excellence for mission-critical enterprise applications.'
-keywords: [audit, availability, agent, **platform, architecture, assistant, authentication, archiving, authorization, advanced]
+id: mariadb
+name: Enterprise MariaDB Relational Database & High-Availability Platform
+description: Enterprise MariaDB Relational Database & High-Availability Platform with advanced clustering orchestration, intelligent performance optimization, automated failover systems, enterprise security frameworks, advanced analytics integration, real-time monitoring intelligence, automated compliance governance, and comprehensive operational excellence for mission-critical enterprise applications.
+keywords: [audit, availability, agent, platform, architecture, assistant, authentication, archiving, authorization, advanced]
+tools: [undefined]
 ---
-
-
-# Enterprise MariaDB Relational Database & High-Availability Platform
-
-## 🎯 **AI Agent Implementation Guide - Enterprise Edition**
-
 ### **Platform Purpose & Capabilities**
 
 The **Enterprise MariaDB Relational Database & High-Availability Platform** provides comprehensive relational database excellence with advanced AI/ML-powered clustering orchestration, intelligent performance optimization, automated failover systems, enterprise-grade security frameworks, real-time analytics integration, comprehensive monitoring intelligence, automated compliance governance, and complete operational excellence for mission-critical enterprise applications requiring maximum availability and performance.
 
-### **🎯 Advanced Enterprise Decision Matrix**
 
 #### **Primary Use Cases - Enterprise MariaDB**
 
@@ -35,7 +30,6 @@ The **Enterprise MariaDB Relational Database & High-Availability Platform** prov
 - **Time-Series Analytics** → InfluxDB Enterprise or TimescaleDB
 - **Graph Database Requirements** → Neo4j Enterprise or Amazon Neptune
 
-### **🏗️ Enterprise Architecture Framework**
 
 #### **🔥 Advanced High-Availability Clustering**
 
@@ -64,7 +58,6 @@ The **Enterprise MariaDB Relational Database & High-Availability Platform** prov
 - **Data Loss Prevention**: Automated sensitive data discovery and protection
 - **Security Analytics**: Real-time security monitoring with threat intelligence
 
-### **💼 Enterprise Storage Engine Intelligence**
 
 #### **🚀 Advanced InnoDB Enterprise**
 
@@ -89,7 +82,6 @@ The **Enterprise MariaDB Relational Database & High-Availability Platform** prov
 - **Concurrent Access**: Optimized concurrent access with intelligent locking
 - **Backup Integration**: Hot backup support with automated consistency checks
 
-## Production Deployment Patterns
 
 ### High Availability Galera Cluster Configuration
 
@@ -145,9 +137,6 @@ See [example-5](./examples/mariadb/example-5.yaml)
 - **Myth**: Migrating from MySQL to MariaDB is complex
   **Reality**: MariaDB is designed as a drop-in replacement with minimal migration effort
 
-## Implementation Framework
-
-### Getting Started
 
 #### Prerequisites
 
@@ -159,7 +148,6 @@ See [example-5](./examples/mariadb/example-5.yaml)
 
 See [example-6](./examples/mariadb/example-6.bash)
 
-### Core Methodologies
 
 #### Database Design and Normalization
 
@@ -183,7 +171,6 @@ See [example-6](./examples/mariadb/example-6.bash)
   4. Monitor and tune storage engine parameters
 - **Success Metrics**: Fast query response times and efficient resource utilization
 
-### Process Integration
 
 #### Development Workflow
 
@@ -193,7 +180,6 @@ See [example-7](./examples/mariadb/example-7.bash)
 
 See [example-8](./examples/mariadb/example-8.bash)
 
-## Best Practices
 
 ### Database Schema Design
 
@@ -207,7 +193,6 @@ See [example-10](./examples/mariadb/example-10.sql)
 
 See [example-11](./examples/mariadb/example-11.sql)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Audit Trail Implementation
 
@@ -227,7 +212,6 @@ See [example-13](./examples/mariadb/example-13.sql)
 
 **Expected Outcomes**: Improved performance through data lifecycle management
 
-### Anti-Patterns to Avoid
 
 #### Anti-Pattern 1: Using SELECT \* in Production Queries
 
@@ -241,9 +225,6 @@ See [example-13](./examples/mariadb/example-13.sql)
 - **Why It's Problematic**: Data integrity issues and orphaned records
 - **Better Approach**: Define proper foreign key constraints at database level
 
-## Tools and Resources
-
-### Essential Tools
 
 #### Database Administration
 
@@ -260,7 +241,6 @@ See [example-15](./examples/mariadb/example-15.ini)
 - **SQL Optimization Guide**: https://mariadb.com/kb/en/query-optimizations/
 - **MariaDB Security**: https://mariadb.com/kb/en/securing-mariadb/
 
-## Quality and Compliance
 
 ### Quality Standards
 
@@ -305,13 +285,8 @@ When helping teams choose MariaDB approaches:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.8
 ---
-version: 4.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

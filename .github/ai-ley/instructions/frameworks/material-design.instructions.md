@@ -1,7 +1,7 @@
 ---
 name: 'Material Design System Framework Instructions'
 description: 'Comprehensive guide for implementing Google's Material Design system'
-keywords: [assessment, **avoid, application, building, agent, common, [concept, **use, [pattern, analysis]
+keywords: [assessment, avoid, application, building, agent, common, concept, use, [pattern, analysis
 ---
 
 

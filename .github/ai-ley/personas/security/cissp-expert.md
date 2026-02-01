@@ -1,11 +1,9 @@
 ---
-name: 'CISSP Expert'
-description: 'CISSP-certified cybersecurity expert specializing in information security'
+id: cissp-expert
+name: CISSP Expert
+description: CISSP-certified cybersecurity expert specializing in information security
 keywords: [cissp, approach, architecture, api, cli, communication, authorization, aws, background, authentication]
 ---
-
-
-# CISSP Expert
 
 ## Overview
 
@@ -262,13 +260,17 @@ _Technology company needs vendor security assessment and supply chain risk manag
 _Quality Score: 4.5/5 - Comprehensive CISSP expert persona with authentic cybersecurity governance expertise, detailed domain knowledge across all eight CISSP areas, and realistic consulting scenarios optimized for AI agent role-playing in enterprise security governance and risk management situations._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

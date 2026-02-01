@@ -1,13 +1,10 @@
 ---
-name: 'bpmn.instructions'
-description: 'Development guidelines and best practices for Bpmn.Instructions'
-keywords: [api, analytics, **platform, async, **bpmn, bpmn.instructions, architecture, authentication, automation, business]
+id: bpmn
+name: bpmn.instructions
+description: Development guidelines and best practices for Bpmn.Instructions
+keywords: [api, analytics, platform, async, bpmn, bpmn.instructions, architecture, authentication, automation, business]
+tools: [undefined]
 ---
-
-
-
-# **BPMN Enterprise Business Process Management & Workflow Automation Platform**
-
 ## **Platform Overview**
 
 The **BPMN Enterprise Business Process Management & Workflow Automation Platform** provides comprehensive Business Process Model and Notation capabilities with advanced process automation, analytics, compliance monitoring, team collaboration, and production-ready workflow execution for large-scale enterprise process optimization and digital transformation.
@@ -21,7 +18,6 @@ The **BPMN Enterprise Business Process Management & Workflow Automation Platform
 - **Team Collaboration Platform**: Real-time collaborative process modeling with review workflows
 - **Integration Ecosystem**: Seamless integration with enterprise systems and business applications
 
-### **🏗️ Architecture Components**
 
 #### **1. Core BPMN Engine**
 
@@ -44,19 +40,16 @@ The **BPMN Enterprise Business Process Management & Workflow Automation Platform
 - **Predictive Insights**: ML-powered process optimization recommendations
 - **Compliance Reporting**: Automated regulatory compliance reporting and audit trails
 
-### **📊 Enterprise Use Cases & Examples**
 
 #### **Order Processing Workflow**
 
 See [example-1](./examples/bpmn/example-1.xml)
 
-### **🔧 Enterprise Workflow Engine Implementation**
 
 #### **BPMN Execution Engine**
 
 See [example-2](./examples/bpmn/example-2.java)
 
-### **📊 Process Analytics & Intelligence Engine**
 
 #### **Real-time Process Monitoring**
 
@@ -307,18 +300,7 @@ public class EnterpriseBPMNController {
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

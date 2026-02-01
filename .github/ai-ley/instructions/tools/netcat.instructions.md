@@ -1,14 +1,10 @@
 ---
-name: 'Netcat Network Utility Instructions'
-description: 'Netcat network utility guide covering TCP/UDP communication, network debugging, data transfer, port scanning, and network connectivity testing for system administration and security assessment purposes.'
+id: netcat
+name: Netcat Network Utility Instructions
+description: Netcat network utility guide covering TCP/UDP communication, network debugging, data transfer, port scanning, and network connectivity testing for system administration and security assessment purposes.
 keywords: [api, avoid, agent, compliance, devops, architecture, assistant, authorization, advanced, cli]
+tools: [undefined]
 ---
-
-
-# Netcat Network Utility Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents implementing Netcat solutions, emphasizing network debugging, secure data transfer, connectivity testing, and responsible network utility usage within authorized environments, supported by automated security monitoring and compliance frameworks.
@@ -100,13 +96,8 @@ See [example-2](./examples/netcat/example-2.bash)
 - Include cleanup steps and firewall notes; prefer TLS-capable tools when confidentiality matters
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

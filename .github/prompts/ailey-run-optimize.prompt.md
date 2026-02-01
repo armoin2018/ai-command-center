@@ -1,13 +1,11 @@
 ---
-name: 'Performance Optimization and Analysis'
-description: 'Comprehensive performance analysis, bottleneck identification, and optimization recommendations with profiling and monitoring'
+id: ailey-run-optimize
+name: Performance Optimization and Analysis
+description: Comprehensive performance analysis, bottleneck identification, and optimization recommendations with profiling and monitoring
 keywords: [optimize, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Performance Optimization and Analysis
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [optimize, prompt, ailey]
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -936,7 +932,6 @@ loadTester.runLoadTest(testScenarios);
 
 **Performance Analysis Report Template** (`{{files.performance}}`):
 ```markdown
-# Performance Optimization Analysis Report
 
 ## Executive Summary
 **Analysis Date**: {current-date}
@@ -946,9 +941,6 @@ loadTester.runLoadTest(testScenarios);
 **Total Recommendations**: {recommendation-count}
 **Estimated Performance Gain**: {projected-improvement-percentage}
 
-## Performance Bottlenecks Identified
-
-### Critical Priority Bottlenecks
 
 #### 1. Database Performance Issues
 **Category**: Database Query Optimization
@@ -1138,7 +1130,6 @@ class APIBatcher {
 }
 ```
 
-### Medium Priority Bottlenecks
 
 #### 4. Asynchronous Processing Issues
 
@@ -1164,9 +1155,6 @@ class APIBatcher {
 - **Redundant Calculations**: Recalculating complex formulas in loops
 - **Poor Data Structure Choice**: Using lists for frequent lookups instead of dictionaries
 
-## Performance Optimization Recommendations
-
-### Immediate Actions (Week 1-2)
 
 #### Database Optimizations
 
@@ -1209,7 +1197,6 @@ class APIBatcher {
    - Impact: Eliminate 40MB/hour memory growth
    - Files: frontend/events.js, components/dashboard.js
 
-### Short-term Actions (Week 3-4)
 
 #### Network and I/O Optimizations
 
@@ -1233,7 +1220,6 @@ class APIBatcher {
    - Impact: Non-blocking user experience
    - Implementation: Background job queue with Redis/Celery
 
-### Long-term Actions (Month 2-3)
 
 #### Infrastructure and Architecture
 
@@ -1250,7 +1236,6 @@ class APIBatcher {
     - Impact: 30% reduction in CPU usage
     - Files: utils/sort.py, calculations/formulas.py
 
-## Performance Monitoring Setup
 
 ### Recommended Monitoring Tools
 
@@ -1296,7 +1281,6 @@ class APIBatcher {
 }
 ```
 
-## Performance Testing Results
 
 ### Load Testing Summary
 
@@ -1331,7 +1315,6 @@ class APIBatcher {
 - Memory exhaustion: Occurs after 6 hours under heavy load
 - CPU bottleneck: Reaches 95% at 180 concurrent users
 
-## Implementation Timeline
 
 ### Phase 1: Critical Fixes (Weeks 1-2)
 
@@ -1354,7 +1337,6 @@ class APIBatcher {
 - [ ] Performance testing automation
 - [ ] Documentation and training
 
-## Success Metrics and KPIs
 
 ### Primary Performance KPIs
 
@@ -1371,7 +1353,6 @@ class APIBatcher {
 3. **Server Costs**: Target 30% reduction in infrastructure costs
 4. **Developer Productivity**: Faster deployment and testing cycles
 
-## Next Steps and Recommendations
 
 ### Immediate Actions
 
@@ -1404,7 +1385,6 @@ class APIBatcher {
 
 ```
 
-## Examples
 
 ### Example 1: Database Performance Analysis
 
@@ -1526,3 +1506,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Rfq Writer'
-description: 'Expert persona specializing in Rfq Writer for AI-assisted development'
+id: rfq-writer
+name: Rfq Writer
+description: Expert persona specializing in Rfq Writer for AI-assisted development
 keywords: [directives, constraints, metadata, goals, database, interaction, capabilities, example, behavioral, knowledge]
 ---
-
-
-
-# Persona: RFQ Writer
 
 ## 1. Role Summary
 An expert Request for Quotation (RFQ) Writer specializing in price-focused procurement documentation, competitive bidding processes, and cost analysis for well-defined goods and services. Responsible for creating precise RFQs that facilitate accurate price comparisons and support cost-effective purchasing decisions.
@@ -117,19 +114,17 @@ See [example-7](./examples/rfq-writer/example-7.markdown)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

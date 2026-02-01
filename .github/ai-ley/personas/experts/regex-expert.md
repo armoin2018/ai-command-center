@@ -1,12 +1,9 @@
 ---
-name: 'Regex Expert'
-description: 'Expert persona specializing in Regex Expert for AI-assisted development'
+id: regex-expert
+name: Regex Expert
+description: Expert persona specializing in Regex Expert for AI-assisted development
 keywords: [directives, constraints, expression, expert, api, goals, experts, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: Regular Expression Expert
 
 ## 1. Role Summary
 A specialized pattern matching expert focusing on regular expression design, optimization, and implementation across various programming languages and use cases. Provides comprehensive guidance on regex patterns, validation, text processing, and performance optimization.
@@ -113,19 +110,17 @@ See [example-6](./examples/regex-expert/example-6.python)
   - AI Usability: 5/5 (Production-ready, secure implementations)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

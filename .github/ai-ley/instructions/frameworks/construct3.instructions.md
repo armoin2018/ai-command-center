@@ -1,13 +1,10 @@
 ---
-name: 'Construct3.Instructions'
-description: 'See [example-1](./examples/construct3/example-1.'
+id: construct3
+name: Construct3.Instructions
+description: See [example-1](./examples/construct3/example-1.
 keywords: [cloud, agent, 5.0/5.0, architecture, api, based, agents, avoid, browser, behaviors]
+tools: [undefined]
 ---
-
-
-
-# Construct 3 Framework Instructions for AI Agents
-
 ## When to Use Construct 3
 
 Use Construct 3 when you need:
@@ -42,7 +39,6 @@ Consider alternatives when:
 - **Language**: Visual scripting (event sheets) + JavaScript integration
 - **Use Cases**: 2D games, educational tools, interactive media, prototypes
 
-## Installation & Setup
 
 ### ✅ Recommended: Browser-Based Editor
 
@@ -56,7 +52,6 @@ See [example-2](./examples/construct3/example-2.text)
 
 See [example-3](./examples/construct3/example-3.txt)
 
-## Core Concepts
 
 ### Event Sheets and Visual Scripting
 
@@ -79,7 +74,6 @@ See [example-5](./examples/construct3/example-5.text)
 
 See [example-6](./examples/construct3/example-6.text)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -102,7 +96,6 @@ See [example-6](./examples/construct3/example-6.text)
 - **Don't duplicate event logic** - Use functions and includes for reusable code
 - **Don't neglect testing** - Regular playtesting prevents major issues
 
-## Common Patterns
 
 ### Player Movement System
 
@@ -112,7 +105,6 @@ See [example-7](./examples/construct3/example-7.text)
 
 See [example-8](./examples/construct3/example-8.text)
 
-## Essential Development Workflow
 
 ### 1. Project Setup
 
@@ -126,9 +118,6 @@ See [example-10](./examples/construct3/example-10.text)
 
 See [example-11](./examples/construct3/example-11.text)
 
-## Troubleshooting
-
-### Common Issues & Solutions
 
 #### **Performance Problems**
 **Problem**: Game runs slowly on mobile devices
@@ -174,18 +163,7 @@ See [example-11](./examples/construct3/example-11.text)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,13 +1,11 @@
 ---
-name: 'Plan'
-description: 'Generate comprehensive project plans from requirements using Epic-Story-Task structure with JIRA compatibility and Gantt charts.'
+id: ailey-build-plan
+name: Plan
+description: Generate comprehensive project plans from requirements using Epic-Story-Task structure with JIRA compatibility and Gantt charts.
 keywords: [planning, epic, story, task, jira, gantt, project-management, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Generate Project Plan
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [planning, epic, story, task, jira, gantt, project-management, prompt,
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -279,7 +275,6 @@ Break down requirements into logical epics representing major functional areas:
 Create `{{folders.plan}}/epics/epic-XXX-[name]/README.md` for each epic:
 
 ```markdown
-# Epic XXX: [EPIC NAME]
 
 ## Overview
 
@@ -346,7 +341,6 @@ Break down each epic into user stories representing specific user value:
 Create `{{folders.plan}}/epics/epic-XXX/story-XXX-[name]/README.md` for each story:
 
 ```markdown
-# Story XXX: [STORY NAME]
 
 ## Overview
 
@@ -436,7 +430,6 @@ Break down each story into specific, actionable tasks:
 Create `{{folders.plan}}/epics/epic-XXX/story-XXX/task-XXX-[name].md` for each task:
 
 ```markdown
-# Task XXX: [TASK NAME]
 
 ## Overview
 
@@ -594,7 +587,6 @@ Create team structure and resource allocation plan based on intelligent matching
 **Create `{{folders.plan}}/planning/resource-allocation.md`**:
 
 ```markdown
-# Resource Allocation Plan
 
 ## Intelligent Resource Matching Summary
 
@@ -604,7 +596,6 @@ Create team structure and resource allocation plan based on intelligent matching
 
 **Critical Resource Dependencies**: [List any single points of failure or over-allocated experts]
 
-## Persona Assignment Matrix
 
 ### Primary Assignments (by Epic/Story)
 
@@ -802,7 +793,6 @@ Create supporting architecture documentation:
 Create basic architecture overview at `{{folders.plan}}/architecture/README.md`:
 
 ```markdown
-# Architecture Overview
 
 ## System Context
 
@@ -838,7 +828,6 @@ Create business justification documents:
 **Create `{{folders.plan}}/business/business-case.md`**:
 
 ```markdown
-# Business Case
 
 ## Executive Summary
 
@@ -886,7 +875,6 @@ Create master plan overview document:
 **Create `{{folders.plan}}/PLAN.md`**:
 
 ```markdown
-# Project Plan Overview
 
 ## Quick Navigation
 
@@ -902,7 +890,6 @@ Create master plan overview document:
 **Team Size**: [Number of team members and key roles]
 **Budget**: [Total project budget and major cost categories]
 
-## Epic Overview
 
 ### Epic 1: Foundation ([X Story Points])
 
@@ -1087,3 +1074,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
+---

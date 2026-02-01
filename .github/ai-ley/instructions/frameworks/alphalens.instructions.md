@@ -1,11 +1,10 @@
 ---
-name: 'Alphalens.Instructions'
-description: 'Purpose: Evaluate predictive power of alpha factors with rigorous time alignment, forward return computation, and tearsheets.'
+id: alphalens
+name: Alphalens.Instructions
+description: Purpose: Evaluate predictive power of alpha factors with rigorous time alignment, forward return computation, and tearsheets.
 keywords: [alphalens, (factor, gui, cli, analysis), frameworks, avoid, assistant, alphalens.instructions, contracts]
+tools: undefined
 ---
-
-
-
 # Alphalens — AI Assistant Guidelines (Factor Analysis)
 
 Purpose: Evaluate predictive power of alpha factors with rigorous time alignment, forward return computation, and tearsheets.
@@ -62,3 +61,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

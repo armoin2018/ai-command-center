@@ -1,15 +1,10 @@
 ---
-name: 'deauth.instructions'
-description: 'Development guidelines and best practices for Deauth.Instructions'
+id: deauth
+name: deauth.instructions
+description: Development guidelines and best practices for Deauth.Instructions
 keywords: [deauth.instructions, agent, deauth, compliance, architecture, authentication, authorization, assistant, avoid, cli]
+tools: [undefined]
 ---
-
-
-
-# Wi-Fi Deauthentication Security Testing Instructions
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents regarding Wi-Fi deauthentication security testing, emphasizing strict legal compliance, authorized testing environments, and responsible wireless security assessment within explicit consent requirements, supported by automated compliance validation and comprehensive audit frameworks.
@@ -88,19 +83,8 @@ See [example-2](./examples/deauth/example-2.bash)
 - **Use Cases**: Authorized enterprise security testing, regulatory compliance assessment, professional penetration testing, educational training with legal supervision
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

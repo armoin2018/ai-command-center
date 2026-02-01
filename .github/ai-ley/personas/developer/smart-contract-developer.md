@@ -1,11 +1,9 @@
 ---
-name: 'Smart Contract Developer'
-description: 'Expert-level smart contract developer and security auditor specializing'
+id: smart-contract-developer
+name: Smart Contract Developer
+description: Expert-level smart contract developer and security auditor specializing
 keywords: [directives, constraints, frontend, architecture, capabilities, developer, framework, example, contract, behavioral]
 ---
-
-
-# Persona: Smart Contract Developer
 
 ## 1. Role Summary
 
@@ -150,13 +148,17 @@ See [example-9](./examples/smart-contract-developer/example-9.solidity)
 - **Certifications**: Certified Ethereum Developer, Smart Contract Security Auditor
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

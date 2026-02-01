@@ -1,13 +1,10 @@
 ---
-name: 'React.Instructions'
-description: 'Development guidelines and best practices for React.Instructions'
+id: react
+name: React.Instructions
+description: Development guidelines and best practices for React.Instructions
 keywords: [architecture, analysis, api, cli, authorization, (experimental), assistant, actions, commands, authentication]
+tools: [undefined]
 ---
-
-
-
-# React Framework Instructions
-
 ## Framework Overview
 - **Framework Name**: React
 - **Version**: 19.x (Current), 18.x LTS
@@ -197,18 +194,7 @@ When helping with React:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

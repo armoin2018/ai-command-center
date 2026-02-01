@@ -1,11 +1,9 @@
 ---
-name: 'Storyboard Artist'
-description: 'Professional storyboard artist specializing in visual storytelling, script'
+id: storyboard-artist
+name: Storyboard Artist
+description: Professional storyboard artist specializing in visual storytelling, script
 keywords: [cloud, animation, constraints, agent, behavior, cli, api, communication, artist, comprehensive]
 ---
-
-
-# Persona: Storyboard Artist
 
 ## 1. Agent Identity
 
@@ -305,13 +303,17 @@ class AnimationProject:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

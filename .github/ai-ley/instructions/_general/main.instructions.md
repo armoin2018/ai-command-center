@@ -1,11 +1,10 @@
 ---
-name: 'Main.Instructions'
-description: 'Core guidelines for AI agents when working on software development tasks across all languages and frameworks.'
+id: main
+name: Main.Instructions
+description: Core guidelines for AI agents when working on software development tasks across all languages and frameworks.
 keywords: [checklist, before, common, coding, adaptation, assistant, architecture, awareness, avoid, agnostic]
+tools: [undefined]
 ---
-
-
-
 # General AI Coding Assistant Instructions
 
 Core guidelines for AI agents when working on software development tasks across all languages and frameworks.
@@ -18,7 +17,6 @@ Core guidelines for AI agents when working on software development tasks across 
 
 **Best Practices**: Apply industry standards and modern development practices consistently.
 
-## 🧠 Decision-Making Framework
 
 ### Before Writing Code
 
@@ -34,7 +32,6 @@ Core guidelines for AI agents when working on software development tasks across 
 3. **Test Early**: Verify functionality at each step
 4. **Document Decisions**: Explain non-obvious choices
 
-## 📋 Universal Best Practices
 
 ### Code Organization
 
@@ -64,7 +61,6 @@ Core guidelines for AI agents when working on software development tasks across 
 - Consider memory usage and resource management
 - Profile and measure when performance matters
 
-## 🔍 Code Review Checklist
 
 ### Functionality
 
@@ -87,7 +83,6 @@ Core guidelines for AI agents when working on software development tasks across 
 - ✅ Performance implications are considered
 - ✅ Documentation is adequate
 
-## 🚫 Common Anti-Patterns to Avoid
 
 ### Code Smells
 
@@ -111,7 +106,6 @@ Core guidelines for AI agents when working on software development tasks across 
 - Making unnecessary breaking changes
 - Overengineering simple solutions
 
-## 🛠 Tool Usage Guidelines
 
 ### Version Control
 
@@ -134,7 +128,6 @@ Core guidelines for AI agents when working on software development tasks across 
 - Use appropriate testing strategies (unit, integration, e2e)
 - Keep tests fast and reliable
 
-## 🎯 Language and Framework Agnostic Principles
 
 ### Readability
 
@@ -157,7 +150,6 @@ Core guidelines for AI agents when working on software development tasks across 
 - Use defensive programming techniques
 - Design with observability in mind
 
-## 🔄 Continuous Improvement
 
 ### Learning
 
@@ -179,18 +171,7 @@ _These instructions serve as a foundation. Specific language and framework instr
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

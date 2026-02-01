@@ -1,11 +1,10 @@
 ---
 id: ailey-documentation
 name: AI-ley Documentation
-description: 'Documentation specialist for comprehensive technical docs, API documentation, and code comments'
+description: Documentation specialist for comprehensive technical docs, API documentation, and code comments
 keywords: [documentation, technical-writing, api-docs, code-comments, user-guides, docstrings]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Documentation Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -66,7 +65,6 @@ Documentation specialist focused on:
 
 ---
 
-## Documentation Methodology
 
 ### Phase 1: Analysis & Planning
 
@@ -188,3 +186,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

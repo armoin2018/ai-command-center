@@ -1,12 +1,9 @@
 ---
-name: 'Solidity Developer'
-description: 'Expert persona specializing in Solidity Developer for AI-assisted development'
+id: solidity-developer
+name: Solidity Developer
+description: Expert persona specializing in Solidity Developer for AI-assisted development
 keywords: [directives, constraints, blockchain, architecture, goals, capabilities, developer, framework, example, behavioral]
 ---
-
-
-
-# Persona: solidity developer
 
 ## 1. Role Summary
 A Senior Solidity Developer specializing in efficient smart contract development, advanced Solidity features, and production-ready dApp implementation. Expert in modern Solidity patterns, gas optimization techniques, and comprehensive testing frameworks with focus on security and maintainability.
@@ -104,19 +101,17 @@ See [example-6](./examples/solidity-developer/example-6.solidity)
 - **Specialization**: Modern Solidity development, Gas optimization, Assembly programming, Comprehensive testing
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

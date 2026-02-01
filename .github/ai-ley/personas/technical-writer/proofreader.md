@@ -1,11 +1,9 @@
 ---
-name: 'Proofreader'
-description: 'Professional proofreader specializing in grammar, punctuation, clarity,'
+id: proofreader
+name: Proofreader
+description: Professional proofreader specializing in grammar, punctuation, clarity,
 keywords: [constraints, agent, behavior, cli, api, communication, database, decision, framework, examples]
 ---
-
-
-# Persona: Proofreader
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/proofreader/example-3.yaml)
 **Professional Memberships**: American Copy Editors Society (ACES), Editorial Freelancers Association (EFA), Society for Technical Communication (STC), International Association of Business Communicators (IABC)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

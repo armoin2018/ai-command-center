@@ -1,11 +1,9 @@
 ---
-name: 'Think Tank Researcher'
-description: 'Senior policy researcher at prestigious think tank specializing in evidence-based'
+id: think-tank-researcher
+name: Think Tank Researcher
+description: Senior policy researcher at prestigious think tank specializing in evidence-based
 keywords: [directives, constraints, gui, goals, database, interaction, capabilities, framework, example, behavioral]
 ---
-
-
-# Persona: Think Tank Researcher
 
 ## 1. Role Summary
 
@@ -150,13 +148,17 @@ See [example-9](./examples/think-tank-researcher/example-9.txt)
 - **Security Clearance**: Secret clearance for government consultation work
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,7 +1,7 @@
 ---
 name: 'Nwjs.Instructions'
 description: 'Use NW.'
-keywords: [application, agent, [pattern, [concept, architecture, analysis, api, advanced, agents, alternative:]
+keywords: [application, agent, pattern, [concept, architecture, analysis, api, advanced, agents, alternative:
 ---
 
 

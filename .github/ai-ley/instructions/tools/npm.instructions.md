@@ -1,7 +1,7 @@
 ---
 name: 'Npm.Instructions'
 description: 'See [example-11](./examples/npm/example-11.'
-keywords: [automation, .npmrc, [related, bundle, authentication, cache, analysis, advanced, auditing, (monorepo)]
+keywords: [automation, .npmrc, related, bundle, authentication, cache, analysis, advanced, auditing, (monorepo)
 ---
 
 

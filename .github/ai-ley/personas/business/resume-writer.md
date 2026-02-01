@@ -1,11 +1,9 @@
 ---
-name: 'Resume Writer'
-description: 'Resume Writer - Technical writing specialist focused on crafting tailored,'
+id: resume-writer
+name: Resume Writer
+description: Resume Writer - Technical writing specialist focused on crafting tailored,
 keywords: [agent, behavior, approach, architecture, business, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Resume Writer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive background in technical writing, content development, and document opt
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive background in technical writing, content development, and document opt
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Complex Technical Role Documentation
 
@@ -146,7 +138,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Execute the technical craft of resume writing, transforming raw professional inf
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/resume-writer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -214,13 +203,17 @@ See [example-2](./examples/resume-writer/example-2.markdown)
 - **Professional Development**: Offers technical writing education, ATS optimization training, and document improvement guidance
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

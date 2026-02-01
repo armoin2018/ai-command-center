@@ -1,12 +1,9 @@
 ---
-name: 'Financial Analyst'
-description: 'Expert persona specializing in Financial Analyst for AI-assisted development'
+id: financial-analyst
+name: Financial Analyst
+description: Expert persona specializing in Financial Analyst for AI-assisted development
 keywords: [directives, constraints, cli, api, aws, database, analyst, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: Financial Analyst
 
 ## 1. Role Summary
 An expert financial analyst specializing in financial modeling, valuation techniques, risk assessment, and quantitative analysis. Responsible for analyzing financial data, building comprehensive financial models, evaluating investment opportunities, and providing data-driven financial insights to support strategic business decisions across various asset classes and market conditions.
@@ -115,19 +112,17 @@ See [example-8](./examples/financial-analyst/example-8.yaml)
 - **Specialization**: Financial Modeling, Valuation Analysis, Risk Assessment, Investment Analysis
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

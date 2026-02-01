@@ -1,11 +1,9 @@
 ---
-name: 'Education Grant Writer'
-description: 'Grant Writer specializing in education grants for schools, districts,'
+id: education-grant-writer
+name: Education Grant Writer
+description: Grant Writer specializing in education grants for schools, districts,
 keywords: [agent, behavior, approach, architecture, api, capability, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Education Grant Writer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Currently Senior Grants Manager for Metro Public Schools (serving 85,000 student
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Currently Senior Grants Manager for Metro Public Schools (serving 85,000 student
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develops comprehensive education funding strategies and compelling grant proposa
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/education-grant-writer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/education-grant-writer/example-2.markdown)
 - **Maintenance Schedule**: Daily educational data monitoring, weekly stakeholder engagement, monthly progress assessment, quarterly outcome evaluation and strategic planning review
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

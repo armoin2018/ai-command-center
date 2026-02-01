@@ -1,7 +1,7 @@
 ---
 name: 'Symfony.Instructions'
 description: 'See [example-1](./examples/symfony/example-1.'
-keywords: [[pattern, [concept, architecture, analysis, api, cli, agents, avoid, building, alternative:]
+keywords: [pattern, [concept, architecture, analysis, api, cli, agents, avoid, building, alternative:
 ---
 
 

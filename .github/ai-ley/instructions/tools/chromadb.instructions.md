@@ -1,12 +1,10 @@
 ---
-name: 'ChromaDB Enterprise Vector Database & Semantic Intelligence Platform'
-description: 'Enterprise ChromaDB Vector Database & Semantic Intelligence Platform with comprehensive AI/ML orchestration, advanced embedding management, enterprise-grade security validation, multi-model semantic search, intelligent data governance, production-scale RAG systems, automated compliance frameworks, real-time analytics intelligence, and complete enterprise integration capabilities for mission-critical AI-powered applications and semantic data architecture.'
-keywords: [api, **advanced, analytics, ai/ml, **enterprise, architecture, (optional), capabilities, cases, **production]
+id: chromadb
+name: ChromaDB Enterprise Vector Database & Semantic Intelligence Platform
+description: Enterprise ChromaDB Vector Database & Semantic Intelligence Platform with comprehensive AI/ML orchestration, advanced embedding management, enterprise-grade security validation, multi-model semantic search, intelligent data governance, production-scale RAG systems, automated compliance frameworks, real-time analytics intelligence, and complete enterprise integration capabilities for mission-critical AI-powered applications and semantic data architecture.
+keywords: [api, advanced, analytics, ai/ml, enterprise, architecture, (optional), capabilities, cases, production]
+tools: [undefined]
 ---
-
-
-# ChromaDB Enterprise Vector Database & Semantic Intelligence Platform
-
 ## Platform Overview
 
 - **Platform Name**: ChromaDB Enterprise Vector Database & Semantic Intelligence Platform
@@ -16,7 +14,6 @@ keywords: [api, **advanced, analytics, ai/ml, **enterprise, architecture, (optio
 - **Enterprise Level**: Level 3 - Production-ready AI/ML platform with full operational intelligence
 - **Prerequisites**: Enterprise AI/ML environment, vector processing infrastructure, semantic intelligence frameworks integration
 
-## Enterprise Capabilities
 
 ### 🤖 **Advanced AI/ML Vector Orchestration**
 
@@ -258,13 +255,8 @@ Generated: {timestamp}
 *Content optimized for conciseness. See external references for additional details.*
 
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 3.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

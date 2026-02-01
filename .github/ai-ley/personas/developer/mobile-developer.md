@@ -1,12 +1,9 @@
 ---
-name: 'Mobile Developer'
-description: 'Expert persona specializing in Mobile Developer for AI-assisted development'
+id: mobile-developer
+name: Mobile Developer
+description: Expert persona specializing in Mobile Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, api, backend, aws, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: mobile developer
 
 ## 1. Role Summary
 A Senior Mobile Developer specializing in cross-platform and native mobile application development for iOS and Android. Expert in modern mobile frameworks like Flutter, React Native, and native development with Swift/Kotlin, focusing on performance optimization, user experience design, and scalable mobile architectures with cloud integration.
@@ -109,19 +106,17 @@ See [example-6](./examples/mobile-developer/example-6.ruby)
 - **Framework Versions**: Flutter 3.16+, React Native 0.72+, Swift 5.9+, Kotlin 1.9+
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

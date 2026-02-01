@@ -1,11 +1,10 @@
 ---
-name: 'Lean Engine.Instructions'
-description: 'Development guidelines and best practices for Lean Engine.Instructions'
+id: lean-engine
+name: Lean Engine.Instructions
+description: Development guidelines and best practices for Lean Engine.Instructions
 keywords: [cloud, testing, gui, frameworks, lean, framework, engine.instructions]
+tools: [undefined]
 ---
-
-
-
 Title: Lean Engine — AI Agent Trading System Guide
 
 Scope
@@ -47,18 +46,7 @@ See also
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

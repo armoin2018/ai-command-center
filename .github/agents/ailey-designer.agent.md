@@ -1,11 +1,10 @@
 ---
 id: ailey-designer
 name: AI-ley Designer
-description: 'UI/UX design specialist for user interfaces, user experience, and design systems'
+description: UI/UX design specialist for user interfaces, user experience, and design systems
 keywords: [design, ui, ux, user-interface, user-experience, design-system, accessibility]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Designer Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -66,7 +65,6 @@ UI/UX design specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Research
 
@@ -125,3 +123,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

@@ -1,15 +1,14 @@
 ---
+id: developer
 name: developer-general-instructions
 description: General developer instructions for AI-ley agents.
 keywords: [developer, coding-standards, clean-code, best-practices]
+tools: [undefined]
 ---
-
 # Clean Code Style Guide (based on Robert C. Martin)
 
 This guide distills core development principles into practical, enforceable rules for development. Prefer efficiency, clarity and correctness over cleverness. Small, focused changes win.
 
-
-## Core Standards
 
 ### Core values
 - Readability over brevity
@@ -150,7 +149,6 @@ This guide distills core development principles into practical, enforceable rule
 - Make side effects explicit; name functions to reflect effects (e.g., `saveUser` vs `getUser`).
 - Avoid hidden temporal coupling; document ordering requirements or redesign to remove them.
 
-## Tests (Clean Tests)
 
 ### Core Principles
 
@@ -253,6 +251,7 @@ This guide distills core development principles into practical, enforceable rule
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
+---

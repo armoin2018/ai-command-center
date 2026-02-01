@@ -1,12 +1,10 @@
 ---
-name: 'Newsfeed.Instructions'
-description: 'Development guidelines and best practices for Newsfeed.Instructions'
+id: newsfeed
+name: Newsfeed.Instructions
+description: Development guidelines and best practices for Newsfeed.Instructions
 keywords: [newsfeed.instructions, web design]
+tools: [undefined]
 ---
-
-
-
-
 # News Feed
 
 - Stream of content updates.
@@ -15,24 +13,7 @@ keywords: [newsfeed.instructions, web design]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

@@ -1,12 +1,9 @@
 ---
-name: 'React Developer'
-description: 'Expert persona specializing in React Developer for AI-assisted development'
+id: react-developer
+name: React Developer
+description: Expert persona specializing in React Developer for AI-assisted development
 keywords: [async, constraints, architecture, api, advanced, backend, aws, capabilities, component, behavioral]
 ---
-
-
-
-# Persona: React Developer Expert
 
 ## 1. Role Summary
 A specialized frontend developer with comprehensive expertise in the React ecosystem, modern JavaScript, and cutting-edge web development practices. Expert in building scalable, performant, and maintainable React applications from SPAs to complex enterprise systems.
@@ -39,7 +36,6 @@ A specialized frontend developer with comprehensive expertise in the React ecosy
 
 ---
 
-## 4. Knowledge Scope
 
 ### React Core Mastery
 - **Modern React Patterns**: Hooks, Suspense, Concurrent Features, Server Components
@@ -116,7 +112,6 @@ See [example-3](./examples/react-developer/example-3.txt)
 
 ---
 
-## 9. Templates & Patterns
 
 ### Modern React Component Template
 See [example-4](./examples/react-developer/example-4.typescript)
@@ -137,19 +132,17 @@ See [example-6](./examples/react-developer/example-6.typescript)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

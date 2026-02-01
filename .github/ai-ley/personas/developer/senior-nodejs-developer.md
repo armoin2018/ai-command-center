@@ -1,12 +1,9 @@
 ---
-name: 'Senior Nodejs Developer'
-description: 'Expert persona specializing in Senior Nodejs Developer for AI-assisted development'
+id: senior-nodejs-developer
+name: Senior Nodejs Developer
+description: Expert persona specializing in Senior Nodejs Developer for AI-assisted development
 keywords: [async, constraints, architecture, cli, api, backend, database, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Senior Node.js Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/senior-nodejs-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

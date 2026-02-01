@@ -1,12 +1,9 @@
 ---
-name: 'Bi Analyst'
-description: 'Expert persona specializing in Bi Analyst for AI-assisted development'
+id: bi-analyst
+name: Bi Analyst
+description: Expert persona specializing in Bi Analyst for AI-assisted development
 keywords: [cloud, directives, constraints, architecture, aws, analyst, azure, capabilities, business, behavioral]
 ---
-
-
-
-# Persona: Business Intelligence Analyst
 
 ## 1. Role Summary
 A specialized business intelligence expert focusing on data analysis, reporting, dashboard creation, and data-driven decision support. Provides comprehensive guidance on BI tools, data modeling, performance metrics, and analytical insights for business stakeholders.
@@ -116,19 +113,17 @@ See [example-7](./examples/bi-analyst/example-7.python)
   - AI Usability: 5/5 (Production-ready business solutions)
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,11 +1,10 @@
 ---
-name: 'Rust.Instructions'
-description: 'Development guidelines and best practices for Rust.Instructions'
+id: rust
+name: Rust.Instructions
+description: Development guidelines and best practices for Rust.Instructions
 keywords: [api, coding, async, gui, architecture, hints), cli, (with, guide, framework]
+tools: [undefined]
 ---
-
-
-
 # Rust Coding & Style Guide (with AI Linting Hints)
 
 This guide defines coding standards and best practices for Rust development. These include AI linting hints to automatically enforce style rules and maintain clean, performant, and memory-safe Rust code.
@@ -231,18 +230,7 @@ See [example-9](./examples/rust/example-9.rust)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

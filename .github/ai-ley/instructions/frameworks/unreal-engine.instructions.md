@@ -1,12 +1,10 @@
 ---
-name: 'Unreal Engine Game Development Instructions'
-description: 'Comprehensive guide for Unreal Engine game development using Blueprint'
-keywords: [(defaultinput.ini), **code, (defaultengine.ini), **choose, **common, **development, **asset, (defaultgame.ini), **avoid, **building]
+id: unreal-engine
+name: Unreal Engine Game Development Instructions
+description: Comprehensive guide for Unreal Engine game development using Blueprint
+keywords: [(defaultinput.ini), code, (defaultengine.ini), choose, common, development, asset, (defaultgame.ini), avoid, building]
+tools: [undefined]
 ---
-
-
-# Unreal Engine Game Development Instructions
-
 ## Framework Overview
 
 - **Framework Name**: Unreal Engine
@@ -15,7 +13,6 @@ keywords: [(defaultinput.ini), **code, (defaultengine.ini), **choose, **common, 
 - **Languages**: Blueprint (Visual Scripting), C++, Python (Editor Scripting)
 - **Use Cases**: AAA games, VR/AR applications, architectural visualization, film production, enterprise applications
 
-## When to Use Unreal Engine
 
 ### ✅ **Choose Unreal Engine When:**
 
@@ -48,7 +45,6 @@ keywords: [(defaultinput.ini), **code, (defaultengine.ini), **choose, **common, 
 | **Mobile Performance**   | ⭐⭐⭐⭐⭐ | ⭐⭐⭐        | ⭐⭐⭐⭐   | ⭐⭐⭐⭐      |
 | **Console Development**  | ⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐    | ⭐⭐       | ⭐⭐⭐        |
 
-## Installation & Setup
 
 ### Epic Games Launcher Installation
 
@@ -66,7 +62,6 @@ See [example-3](./examples/unreal-engine/example-3.bash)
 
 See [example-4](./examples/unreal-engine/example-4.txt)
 
-## Core Concepts
 
 ### Actor-Component Architecture
 
@@ -105,7 +100,6 @@ See [example-6](./examples/unreal-engine/example-6.cpp)
 
 See [example-7](./examples/unreal-engine/example-7.cpp)
 
-## Development Workflow
 
 ### 1. **Project Setup and Configuration**
 
@@ -133,7 +127,6 @@ See [example-10](./examples/unreal-engine/example-10.bash)
 - **Mobile**: Android APK or iOS App Store
 - **VR**: Platform-specific VR runtimes
 
-## Best Practices
 
 ### ✅ **Performance Optimization**
 
@@ -167,7 +160,6 @@ See [example-10](./examples/unreal-engine/example-10.bash)
 - Avoid monolithic Blueprint classes (break into components)
 - Don't skip source control for project collaboration
 
-## Common Patterns
 
 ### Game Mode and Game State Architecture
 
@@ -181,7 +173,6 @@ See [example-12](./examples/unreal-engine/example-12.cpp)
 
 See [example-13](./examples/unreal-engine/example-13.cpp)
 
-## Configuration
 
 ### Engine Configuration (DefaultEngine.ini)
 
@@ -195,7 +186,6 @@ See [example-15](./examples/unreal-engine/example-15.ini)
 
 See [example-16](./examples/unreal-engine/example-16.ini)
 
-## Essential Development Commands
 
 ### Editor Console Commands
 
@@ -205,7 +195,6 @@ See [example-17](./examples/unreal-engine/example-17.bash)
 
 See [example-18](./examples/unreal-engine/example-18.bash)
 
-## Common Issues & Solutions
 
 ### Blueprint Compilation Errors
 
@@ -242,7 +231,6 @@ See [example-19](./examples/unreal-engine/example-19.cpp)
 
 See [example-20](./examples/unreal-engine/example-20.cpp)
 
-## Performance Optimization
 
 ### Rendering Optimization
 
@@ -265,7 +253,6 @@ See [example-21](./examples/unreal-engine/example-21.cpp)
 - **Efficient Algorithms**: Use appropriate data structures (TMap, TArray)
 - **Threading**: Utilize background tasks for heavy computations
 
-## Security Considerations
 
 ### Code Protection
 
@@ -283,7 +270,6 @@ See [example-22](./examples/unreal-engine/example-22.cpp)
 - **Config File Validation**: Verify configuration files haven't been tampered with
 - **Asset Integrity**: Checksum important game assets
 
-## Advanced Features
 
 ### Virtual Reality Development
 
@@ -306,12 +292,7 @@ See [example-25](./examples/unreal-engine/example-25.cpp)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

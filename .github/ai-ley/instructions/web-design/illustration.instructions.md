@@ -1,11 +1,10 @@
 ---
-name: 'Illustration.Instructions'
-description: 'Development guidelines and best practices for Illustration.Instructions'
+id: illustration
+name: Illustration.Instructions
+description: Development guidelines and best practices for Illustration.Instructions
 keywords: [web design, illustration.instructions, drawn, illustration]
+tools: [undefined]
 ---
-
-
-
 # Illustration & Hand-Drawn
 
 - Custom illustrations or doodle-style graphics.
@@ -14,18 +13,7 @@ keywords: [web design, illustration.instructions, drawn, illustration]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

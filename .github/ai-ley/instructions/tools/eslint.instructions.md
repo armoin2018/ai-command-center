@@ -1,12 +1,10 @@
 ---
-name: 'ESLint JavaScript Code Quality and Linting Tool Instructions'
-description: 'Comprehensive guide for using ESLint to maintain code quality, consistency,'
-keywords: [**performance, **avoid, (eslint, agent, **common, **usage, **use, 9.0+), advanced, **configuration]
+id: eslint
+name: ESLint JavaScript Code Quality and Linting Tool Instructions
+description: Comprehensive guide for using ESLint to maintain code quality, consistency,
+keywords: [performance, avoid, (eslint, agent, common, usage, use, 9.0+), advanced, configuration]
+tools: [undefined]
 ---
-
-
-# ESLint JavaScript Code Quality and Linting Tool Instructions
-
 ## Tool Overview
 
 - **Tool Name**: ESLint
@@ -15,7 +13,6 @@ keywords: [**performance, **avoid, (eslint, agent, **common, **usage, **use, 9.0
 - **Purpose**: Static analysis tool for identifying and fixing problems in JavaScript/TypeScript code
 - **Prerequisites**: Node.js 18.18.0+, npm/yarn/pnpm package manager
 
-## When to Use ESLint
 
 ### ✅ **Use ESLint When**
 
@@ -35,7 +32,6 @@ keywords: [**performance, **avoid, (eslint, agent, **common, **usage, **use, 9.0
 - Project has legacy codebase that cannot be easily migrated
 - Team strongly prefers alternative linting solutions (JSHint, JSLint)
 
-## AI Agent Decision Matrix
 
 ### Project Type Assessment
 
@@ -56,7 +52,6 @@ keywords: [**performance, **avoid, (eslint, agent, **common, **usage, **use, 9.0
 | **Codebase Size** | <10k lines                   | 10k-100k lines           | 100k+ lines                 |
 | **Custom Rules**  | Standard presets             | Some custom rules        | Extensive customization     |
 
-## Installation & Setup
 
 ### Package Manager Installation
 
@@ -70,7 +65,6 @@ See [example-2](./examples/eslint/example-2.bash)
 
 See [example-3](./examples/eslint/example-3.bash)
 
-## Configuration
 
 ### Flat Configuration (ESLint 9.0+)
 
@@ -88,7 +82,6 @@ See [example-6](./examples/eslint/example-6.bash)
 
 See [example-7](./examples/eslint/example-7.json)
 
-## Core Features
 
 ### Static Code Analysis
 
@@ -126,7 +119,6 @@ See [example-11](./examples/eslint/example-11.bash)
 
 See [example-12](./examples/eslint/example-12.bash)
 
-## Workflow Integration
 
 ### Development Workflow
 
@@ -150,7 +142,6 @@ See [example-15](./examples/eslint/example-15.json)
 
 See [example-16](./examples/eslint/example-16.yaml)
 
-## Best Practices
 
 ### ✅ **Configuration Best Practices**
 
@@ -188,7 +179,6 @@ See [example-16](./examples/eslint/example-16.yaml)
 - **Avoid too strict rules** that slow down development
 - **Don't mix flat and legacy config** in same project
 
-## Framework-Specific Configurations
 
 ### React Applications
 
@@ -202,7 +192,6 @@ See [example-18](./examples/eslint/example-18.javascript)
 
 See [example-19](./examples/eslint/example-19.javascript)
 
-## Integration with Other Tools
 
 ### Prettier Integration
 
@@ -218,9 +207,6 @@ See [example-22](./examples/eslint/example-22.javascript)
 
 See [example-23](./examples/eslint/example-23.javascript)
 
-## Troubleshooting
-
-### Common Issues
 
 #### Configuration Not Found
 
@@ -262,7 +248,6 @@ See [example-28](./examples/eslint/example-28.bash)
 
 See [example-29](./examples/eslint/example-29.bash)
 
-## Security Considerations
 
 ### Security Best Practices
 
@@ -280,7 +265,6 @@ See [example-30](./examples/eslint/example-30.javascript)
 
 See [example-31](./examples/eslint/example-31.yaml)
 
-## Advanced Configuration
 
 ### Custom Rules Development
 
@@ -305,13 +289,8 @@ When helping with ESLint:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

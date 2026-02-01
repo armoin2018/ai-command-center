@@ -1,12 +1,9 @@
 ---
-name: 'Sql Developer'
-description: 'Expert persona specializing in Sql Developer for AI-assisted development'
+id: sql-developer
+name: Sql Developer
+description: Expert persona specializing in Sql Developer for AI-assisted development
 keywords: [directives, constraints, architecture, authorization, database, capabilities, authentication, developer, example, behavioral]
 ---
-
-
-
-# Persona: SQL Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/sql-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

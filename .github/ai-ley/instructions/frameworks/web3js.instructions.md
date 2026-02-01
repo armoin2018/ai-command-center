@@ -1,7 +1,7 @@
 ---
 name: 'Web3Js.Instructions'
 description: 'Use Web3.'
-keywords: [api, batch, account, agents, [concept, architecture, backend, [pattern, analysis, avoid]
+keywords: [api, batch, account, agents, concept, architecture, backend, [pattern, analysis, avoid
 ---
 
 

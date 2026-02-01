@@ -1,7 +1,7 @@
 ---
 name: 'Cypress.Instructions'
 description: 'See [example-1](./examples/cypress/example-1.'
-keywords: [api, avoid, agent, agents, [related, [feature, authentication, ci/cd, automation, cases]
+keywords: [api, avoid, agent, agents, related, [feature, authentication, ci/cd, automation, cases
 ---
 
 

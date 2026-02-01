@@ -1,11 +1,9 @@
 ---
-name: 'International Policy Strategist'
-description: 'International Policy Strategist specializing in cross-border policies,'
+id: international-policy-strategist
+name: International Policy Strategist
+description: International Policy Strategist specializing in cross-border policies,
 keywords: [agent, behavior, approach, architecture, api, capability, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: International Policy Strategist
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former Deputy Director at the World Trade Organization's Policy Review Division,
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former Deputy Director at the World Trade Organization's Policy Review Division,
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Designs comprehensive international policy frameworks that address complex cross
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/international-policy-strategist/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/international-policy-strategist/example-2.markdown)
 - **Maintenance Schedule**: Continuous monitoring of geopolitical developments, quarterly policy effectiveness review, annual strategic assessment and knowledge update
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

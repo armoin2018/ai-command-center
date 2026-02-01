@@ -1,13 +1,11 @@
 ---
-name: 'Build Architecture'
-description: 'Synthesize a production-ready architecture by evaluating requirements, plan, personas, and instructions; write the architecture doc and update the requirements with design specifics.'
+id: ailey-build-architecture
+name: Build Architecture
+description: Synthesize a production-ready architecture by evaluating requirements, plan, personas, and instructions; write the architecture doc and update the requirements with design specifics.
 keywords: [build, architecture, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -90,7 +88,6 @@ Produce **exactly** this structure.
 
 - Performance, scalability, availability/SLOs, reliability, security, privacy, accessibility, observability, cost.
 
-## 4) C4 Views
 
 ### 4.1 Context Diagram
 
@@ -257,3 +254,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
+---

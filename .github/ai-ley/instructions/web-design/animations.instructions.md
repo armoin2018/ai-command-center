@@ -1,11 +1,10 @@
 ---
-name: 'Animations.Instructions'
-description: 'Development guidelines and best practices for Animations.Instructions'
+id: animations
+name: Animations.Instructions
+description: Development guidelines and best practices for Animations.Instructions
 keywords: [animations.instructions, web design, animation, website, web]
+tools: [undefined]
 ---
-
-
-
 # Animation-Rich Website
 
 - Heavy use of motion, transitions, and effects.
@@ -14,18 +13,7 @@ keywords: [animations.instructions, web design, animation, website, web]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

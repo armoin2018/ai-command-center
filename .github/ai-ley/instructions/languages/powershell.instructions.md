@@ -1,17 +1,15 @@
 ---
-name: 'Powershell.Instructions'
-description: 'Development guidelines and best practices for Powershell.Instructions'
+id: powershell
+name: Powershell.Instructions
+description: Development guidelines and best practices for Powershell.Instructions
 keywords: [cloud, advanced, common, assistant, architecture, analysis, avoid, azure, benefits, aws]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "**/*.ps1, **/*.psm1, **/*.psd1, powershell"
 ---
 
-# PowerShell Programming Instructions
 
 ## Overview
 - **Domain**: System Administration, Automation, and Cross-Platform Scripting
@@ -19,7 +17,6 @@ applyTo: "**/*.ps1, **/*.psm1, **/*.psd1, powershell"
 - **Applicable To**: Windows/Linux/macOS automation, cloud administration, DevOps pipelines, and enterprise management
 - **Integration Level**: System administration, CI/CD pipelines, and infrastructure automation
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Object-Oriented Pipelines**: PowerShell works with .NET objects, not just text
@@ -40,7 +37,6 @@ applyTo: "**/*.ps1, **/*.psm1, **/*.psd1, powershell"
 - **Myth**: PowerShell is slow compared to other scripting languages
   **Reality**: PowerShell's object model provides efficiency gains for many administrative tasks
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/powershell/example-2.powershell)
 #### CI/CD Integration
 See [example-3](./examples/powershell/example-3.yaml)
 
-## Best Practices
 
 ### Modern PowerShell Function Design
 See [example-4](./examples/powershell/example-4.powershell)
@@ -87,7 +82,6 @@ See [example-4](./examples/powershell/example-4.powershell)
 ### Advanced Pipeline and Error Handling
 See [example-5](./examples/powershell/example-5.powershell)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Configuration Management
 **Scenario**: Manage system configurations across multiple servers
@@ -112,7 +106,6 @@ See [example-7](./examples/powershell/example-7.powershell)
 - **Why It's Problematic**: Scripts fail unpredictably and provide poor user experience
 - **Better Approach**: Use try-catch blocks and proper ErrorAction parameters
 
-## Tools and Resources
 
 ### Essential Modules and Tools
 See [example-8](./examples/powershell/example-8.powershell)
@@ -126,7 +119,6 @@ See [example-9](./examples/powershell/example-9.powershell)
 - **PowerShell Best Practices**: https://github.com/PoshCode/PowerShellPracticeAndStyle
 - **Pester Testing**: https://pester.dev/
 
-## Quality and Compliance
 
 ### Quality Standards
 - All functions include comprehensive help documentation
@@ -192,18 +184,7 @@ When helping teams choose PowerShell approaches:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

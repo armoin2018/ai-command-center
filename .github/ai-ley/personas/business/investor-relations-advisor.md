@@ -1,11 +1,9 @@
 ---
-name: 'Investor Relations Advisor'
-description: 'Investor Relations Advisor who manages communication between startups'
+id: investor-relations-advisor
+name: Investor Relations Advisor
+description: Investor Relations Advisor who manages communication between startups
 keywords: [agent, advisor, behavior, approach, architecture, api, boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Investor Relations Advisor
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Former investment banker, corporate finance professional, or public company IR s
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Former investment banker, corporate finance professional, or public company IR s
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Routine Technical Tasks
 
@@ -146,7 +138,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develop and execute comprehensive investor relations strategies that build and m
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/investor-relations-advisor/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -193,13 +182,17 @@ See [example-2](./examples/investor-relations-advisor/example-2.markdown)
 - **Maintenance Schedule**: Daily market monitoring, weekly stakeholder updates, monthly relationship assessments, and quarterly strategy reviews
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

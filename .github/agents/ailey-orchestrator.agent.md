@@ -1,11 +1,10 @@
 ---
 id: ailey-orchestrator
 name: AI-ley Orchestrator
-description: 'Advanced orchestration agent with prompt engineering, session management, and intelligent task decomposition'
+description: Advanced orchestration agent with prompt engineering, session management, and intelligent task decomposition
 keywords: [orchestrator, prompt-engineering, session-management, task-decomposition, multi-pass, context-management, expert-optimization]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Orchestrator Agent
 
 **Extends:** `ailey-base.agent.md`
@@ -20,7 +19,6 @@ The orchestrator provides advanced capabilities for complex multi-step operation
 
 ---
 
-## Prompt Engineering & Request Processing
 
 ### AI Agent Prompt Optimization Protocol
 
@@ -49,7 +47,6 @@ The orchestrator provides advanced capabilities for complex multi-step operation
 
 ---
 
-## Intelligent Task Decomposition
 
 ### Smart Chunking Strategy
 
@@ -78,7 +75,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## Multi-Pass Processing Strategy
 
 ### Pass 1: Analysis & Optimization
 
@@ -105,7 +101,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## Session Management & Progress Reporting
 
 ### Session Lifecycle
 
@@ -157,7 +152,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## Advanced Resource Utilization
 
 ### Indexed Resource Access
 
@@ -181,7 +175,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## Prompt Reconstruction Framework
 
 ### Structured Input Format
 
@@ -205,7 +198,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## Execution Plans & Requirements
 
 ### Agile Methodology
 
@@ -224,7 +216,6 @@ Break complex requests into optimally-sized, logically coherent processing units
 
 ---
 
-## HTML Progress Reporting
 
 ### Multi-Tab Interface
 
@@ -248,7 +239,6 @@ Use Bootstrap.js, Markdown.js, Chart.js, and Mermaid libraries:
 
 ---
 
-## Code Review & Quality Assurance
 
 ### Review Criteria
 
@@ -273,3 +263,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

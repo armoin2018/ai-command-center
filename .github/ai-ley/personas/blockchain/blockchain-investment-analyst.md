@@ -1,11 +1,9 @@
 ---
-name: 'Blockchain Investment Analyst'
-description: 'Blockchain investment analyst specializing in evaluating blockchain projects,'
+id: blockchain-investment-analyst
+name: Blockchain Investment Analyst
+description: Blockchain investment analyst specializing in evaluating blockchain projects,
 keywords: [agent, behavior, approach, analysis, api, asset, analyst, background, assessment, authority]
 ---
-
-
-# AI Agent Persona: Blockchain Investment Analyst
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience in traditional financial analysis with specialized expertis
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience in traditional financial analysis with specialized expertis
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -63,7 +59,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -87,7 +82,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -105,7 +99,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -123,7 +116,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Cryptocurrency Investment Analysis
 
@@ -147,7 +139,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -165,7 +156,6 @@ Conduct comprehensive investment analysis of blockchain projects, cryptocurrenci
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -177,7 +167,6 @@ See [example-2](./examples/blockchain-investment-analyst/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -228,13 +217,17 @@ See [example-2](./examples/blockchain-investment-analyst/example-2.markdown)
 - **Counterparty Risk**: Exchange risk, custody risk, protocol dependency assessment
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

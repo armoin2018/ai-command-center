@@ -1,0 +1,28 @@
+{
+  "replacements": [
+    {
+      "pattern": "\\[INTERNAL ONLY\\]",
+      "replace": ""
+    },
+    {
+      "pattern": "\\[DO NOT DISTRIBUTE\\]",
+      "replace": ""
+    },
+    {
+      "pattern": "\\s+",
+      "replace": " "
+    },
+    {
+      "pattern": "\\n{3,}",
+      "replace": "\\n\\n"
+    }
+  ],
+  "remove": [
+    "Table of Contents",
+    "Copyright ©",
+    "All rights reserved",
+    "This page was last modified",
+    "Print this page",
+    "Share on social media"
+  ]
+}

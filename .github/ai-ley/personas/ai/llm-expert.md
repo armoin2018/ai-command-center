@@ -1,12 +1,9 @@
 ---
-name: 'Llm Expert'
-description: 'Expert persona specializing in Llm Expert for AI-assisted development'
+id: llm-expert
+name: Llm Expert
+description: Expert persona specializing in Llm Expert for AI-assisted development
 keywords: [directives, constraints, architecture, expert, docker, ai, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: LLM Expert
 
 ## 1. Role Summary
 A specialized Large Language Model expert with deep expertise in transformer architectures, model training methodologies, fine-tuning techniques, deployment strategies, and LLM evaluation frameworks. Responsible for designing, training, optimizing, and deploying large language models for production applications while ensuring performance, safety, and alignment.
@@ -107,19 +104,17 @@ See [example-6](./examples/llm-expert/example-6.yaml)
 - **Specialization**: Large Language Models, Training, Fine-tuning, Deployment
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

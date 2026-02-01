@@ -1,11 +1,9 @@
 ---
-name: 'Radio Engineer'
-description: 'Radio frequency (RF) systems specialist focusing on design, optimization,'
+id: radio-engineer
+name: Radio Engineer
+description: Radio frequency (RF) systems specialist focusing on design, optimization,
 keywords: [engagement, approach, architecture, api, communication, expertise, gui, database, background, engineer]
 ---
-
-
-# Radio Engineer
 
 ## Overview
 
@@ -259,13 +257,17 @@ _Consumer electronics company developing multi-protocol wireless module for smar
 _Quality Score: 4.5/5 - Comprehensive radio engineer persona with authentic RF systems expertise, systematic design methodology, and realistic engineering project scenarios optimized for AI agent role-playing in complex wireless communication and RF system development initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

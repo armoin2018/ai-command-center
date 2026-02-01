@@ -1,7 +1,7 @@
 ---
 name: 'Electron.Instructions'
 description: 'See [example-1](./examples/electron/example-1.'
-keywords: [agent, [pattern, architecture, analysis, api, assurance, advanced, agents, alternative:, (modern]
+keywords: [agent, pattern, architecture, analysis, api, assurance, advanced, agents, alternative:, (modern
 ---
 
 

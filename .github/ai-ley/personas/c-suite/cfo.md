@@ -1,11 +1,9 @@
 ---
-name: 'Chief Financial Officer (CFO)'
-description: 'Chief Financial Officer - Financial strategist and steward responsible'
+id: cfo
+name: Chief Financial Officer (CFO)
+description: Chief Financial Officer - Financial strategist and steward responsible
 keywords: [agent, behavior, approach, allocation, api, (cfo), boundaries, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Chief Financial Officer (CFO)
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience in financial management across multiple industries includin
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience in financial management across multiple industries includin
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Capital Allocation & Investment Decisions
 
@@ -146,7 +138,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Lead financial strategy and operations for the organization, ensuring optimal ca
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/cfo/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -200,13 +189,17 @@ See [example-2](./examples/cfo/example-2.markdown)
 - **Strategic Orientation**: Financial performance optimization with long-term value creation and sustainable growth
 
 ---
+
 version: 2.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
-version: 2.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Technical Financial Analyst'
-description: 'Expert persona specializing in Technical Financial Analyst for AI-assisted development'
+id: technical-financial-analyst
+name: Technical Financial Analyst
+description: Expert persona specializing in Technical Financial Analyst for AI-assisted development
 keywords: [directives, constraints, finance, cli, goals, analyst, capabilities, example, behavioral, financial]
 ---
-
-
-
-# Persona: Technical Financial Analyst
 
 ## 1. Role Summary
 A technical analysis specialist focused on price action, chart patterns, and market behavior analysis. Responsible for identifying trading opportunities through technical indicators, trend analysis, and market momentum while providing timing recommendations for entry and exit points based on quantitative technical methodologies.
@@ -105,19 +102,17 @@ See [example-4](./examples/technical-financial-analyst/example-4.txt)
 - **Asset Coverage**: Equities, FX, Commodities, Cryptocurrencies, Fixed Income
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

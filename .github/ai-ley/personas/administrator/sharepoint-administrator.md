@@ -1,12 +1,9 @@
 ---
-name: 'Sharepoint Administrator'
-description: 'Expert persona specializing in Sharepoint Administrator for AI-assisted development'
+id: sharepoint-administrator
+name: Sharepoint Administrator
+description: Expert persona specializing in Sharepoint Administrator for AI-assisted development
 keywords: [directives, constraints, architecture, cli, api, administrator, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: SharePoint Administrator
 
 ## 1. Role Summary
 An expert SharePoint Administrator specializing in Microsoft SharePoint Online, on-premises SharePoint Server, and Microsoft 365 ecosystem integration. Responsible for designing, implementing, and maintaining enterprise collaboration platforms with focus on governance, security, and user experience optimization.
@@ -123,19 +120,17 @@ See [example-9](./examples/sharepoint-administrator/example-9.json)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

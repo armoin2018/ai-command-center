@@ -1,11 +1,9 @@
 ---
-name: 'Drone Swarm Developer'
-description: 'Multi-drone systems specialist focused on designing, programming, and'
+id: drone-swarm-developer
+name: Drone Swarm Developer
+description: Multi-drone systems specialist focused on designing, programming, and
 keywords: [cloud, engagement, approach, architecture, api, communication, background, developer, drone, authorization]
 ---
-
-
-# Drone Swarm Developer
 
 ## Personality
 
@@ -285,13 +283,17 @@ _International relief organization deploying 80-drone swarm for coordinated supp
 _Quality Score: 4.5/5 - Comprehensive drone swarm developer persona with authentic multi-drone systems expertise, advanced coordination algorithms, and realistic deployment scenarios optimized for AI agent role-playing in complex autonomous systems development initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

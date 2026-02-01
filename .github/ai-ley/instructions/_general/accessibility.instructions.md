@@ -1,18 +1,16 @@
 ---
-name: 'Accessibility.Instructions'
-description: 'Development guidelines and best practices for Accessibility.Instructions'
+id: accessibility
+name: Accessibility.Instructions
+description: Development guidelines and best practices for Accessibility.Instructions
 keywords: [audit, api, accessibility, checklists, assistant, aws, avoid, accessibility.instructions, benefits, accessible]
+tools: [undefined]
 ---
-
-# Web Accessibility Instructions
-
 ## Overview
 - **Domain**: Web Accessibility (a11y) and Inclusive Design
 - **Purpose**: Ensure digital products are usable by people with diverse abilities and disabilities
 - **Applicable To**: Web applications, mobile apps, desktop software, and digital content
 - **Integration Level**: Core requirement for all user interface development
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Perceivable**: Information and UI components must be presentable to users in ways they can perceive
@@ -35,7 +33,6 @@ keywords: [audit, api, accessibility, checklists, assistant, aws, avoid, accessi
 - **Myth**: Accessibility is expensive and time-consuming to implement
   **Reality**: Building accessibility from the start is cost-effective; retrofitting is expensive
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -87,7 +84,6 @@ See [example-1](./examples/accessibility/example-1.bash)
 - Developer documentation for accessibility patterns
 - Testing procedures and checklists
 
-## Best Practices
 
 ### HTML and Semantic Structure
 #### Semantic HTML Elements
@@ -111,7 +107,6 @@ See [example-6](./examples/accessibility/example-6.javascript)
 #### Color Contrast and Accessibility
 See [example-7](./examples/accessibility/example-7.css)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Accessible Data Tables
 **Scenario**: Displaying tabular data with complex relationships
@@ -136,7 +131,6 @@ See [example-9](./examples/accessibility/example-9.html)
 - **Why It's Problematic**: Excludes keyboard and assistive technology users
 - **Better Approach**: Support both keyboard and mouse interactions
 
-## Tools and Resources
 
 ### Essential Tools
 #### Automated Testing Tools
@@ -171,7 +165,6 @@ See [example-10](./examples/accessibility/example-10.javascript)
 - **A11Y Project**: https://www.a11yproject.com/
 - **Deque University**: https://dequeuniversity.com/
 
-## Quality and Compliance
 
 ### Quality Standards
 - WCAG 2.1 Level AA compliance (minimum standard)
@@ -196,7 +189,6 @@ See [example-10](./examples/accessibility/example-10.javascript)
 - Quarterly comprehensive accessibility audits
 - Annual accessibility training for development team
 
-## Troubleshooting and Problem Resolution
 
 ### Common Issues
 #### Issue 1: Missing Alt Text for Images
@@ -272,6 +264,7 @@ When helping teams implement accessibility:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
+---

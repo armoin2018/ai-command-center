@@ -1,12 +1,9 @@
 ---
-name: 'Nosql Developer'
-description: 'Expert persona specializing in Nosql Developer for AI-assisted development'
+id: nosql-developer
+name: Nosql Developer
+description: Expert persona specializing in Nosql Developer for AI-assisted development
 keywords: [cloud, constraints, architecture, cli, api, authorization, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: NoSQL Developer
 
 ## 1. Role Summary
 
@@ -110,19 +107,17 @@ See [example-3](./examples/nosql-developer/example-3.txt)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

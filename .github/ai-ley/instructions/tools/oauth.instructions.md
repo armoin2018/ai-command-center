@@ -1,14 +1,10 @@
 ---
-name: 'Enterprise OAuth 2.0 Authentication Security Platform'
-description: 'Enterprise-grade OAuth 2.0 authentication and authorization framework with advanced identity management, multi-protocol federation (OIDC, SAML), sophisticated threat modeling, comprehensive audit logging, automated compliance validation, enterprise identity providers integration, security monitoring dashboards, automated incident response, and production-ready deployment patterns for large-scale authentication systems.'
+id: oauth
+name: Enterprise OAuth 2.0 Authentication Security Platform
+description: Enterprise-grade OAuth 2.0 authentication and authorization framework with advanced identity management, multi-protocol federation (OIDC, SAML), sophisticated threat modeling, comprehensive audit logging, automated compliance validation, enterprise identity providers integration, security monitoring dashboards, automated incident response, and production-ready deployment patterns for large-scale authentication systems.
 keywords: [api, avoid, agent, attacks, (sso), architecture, assistant, authentication, authorization, advanced]
+tools: [undefined]
 ---
-
-
-# Enterprise OAuth 2.0 Authentication Security Platform
-
-## AI Agent Implementation Guide
-
 ### Enterprise Mission Statement
 
 This enhanced OAuth 2.0 instruction set provides enterprise-grade authentication and authorization capabilities with advanced identity management, multi-protocol federation support (OIDC, SAML, LDAP), sophisticated threat modeling, comprehensive audit logging, automated compliance validation, enterprise identity provider integrations, security monitoring dashboards, automated incident response workflows, and production-ready deployment patterns for large-scale authentication systems.
@@ -42,7 +38,6 @@ This enhanced OAuth 2.0 instruction set provides enterprise-grade authentication
 - **Highly Classified Environments** requiring custom authentication protocols → develop specialized security solutions with government approval
 - **Small Organization Deployments** without dedicated security teams → use managed identity services with appropriate support contracts
 
-## 🔐 Enterprise Identity Management Platform
 
 ### Advanced Multi-Protocol Authentication Framework
 
@@ -66,7 +61,6 @@ See [example-2](./examples/oauth/example-2.dockerfile)
 
 See [example-3](./examples/oauth/example-3.yaml)
 
-### Advanced Security Configuration Examples
 
 #### Secure OAuth 2.0 Authorization Server Implementation
 
@@ -111,7 +105,6 @@ See [example-4](./examples/oauth/example-4.javascript)
 - **License**: Open Standard (IETF)
 - **Use Cases**: API security, SSO, third-party integrations, mobile auth
 
-## Installation & Setup
 
 ### Python Implementation
 
@@ -125,7 +118,6 @@ See [example-6](./examples/oauth/example-6.bash)
 
 See [example-7](./examples/oauth/example-7.bash)
 
-## Configuration
 
 ### OAuth 2.0 Flow Types
 
@@ -135,7 +127,6 @@ See [example-8](./examples/oauth/example-8.python)
 
 See [example-9](./examples/oauth/example-9.python)
 
-## Core Features
 
 ### OAuth Client Implementation
 
@@ -161,13 +152,11 @@ See [example-11](./examples/oauth/example-11.python)
 4. **API Access**: Use access token to access protected resources
 5. **Token Refresh**: Refresh expired tokens using refresh token
 
-## Best Practices
 
 ### Security Implementation
 
 See [example-12](./examples/oauth/example-12.python)
 
-## Common Use Cases
 
 ### Single Sign-On (SSO)
 
@@ -176,7 +165,6 @@ See [example-12](./examples/oauth/example-12.python)
 
 See [example-13](./examples/oauth/example-13.python)
 
-## Common Issues & Solutions
 
 ### Issue 1: CSRF Attacks
 
@@ -228,13 +216,8 @@ When helping with OAuth 2.0 implementation:
 - Provide clear documentation of security considerations
 
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 4.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

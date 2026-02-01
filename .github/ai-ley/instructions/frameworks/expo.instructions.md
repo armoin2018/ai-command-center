@@ -1,7 +1,7 @@
 ---
 name: 'Expo React Native Development Platform Instructions'
 description: 'Comprehensive guide for building React Native applications with Expo'
-keywords: [**performance, api, **avoid, agent, **development, **common, [concept, **use, [pattern, analysis]
+keywords: [performance, api, avoid, agent, development, common, concept, use, [pattern, analysis
 ---
 
 

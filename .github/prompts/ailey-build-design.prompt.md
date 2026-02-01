@@ -1,13 +1,11 @@
 ---
-name: 'Build Design'
-description: 'Synthesize a production-ready architecture/design by evaluating requirements, plan, personas, and instructions; write the design doc and update the requirements with design specifics.'
+id: ailey-build-design
+name: Build Design
+description: Synthesize a production-ready architecture/design by evaluating requirements, plan, personas, and instructions; write the design doc and update the requirements with design specifics.
 keywords: [build, design, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -215,7 +213,6 @@ flowchart TB
 - External/internal APIs, events, webhooks, file exchanges.
 - For each interface: purpose, method/topic, request/response schema, status codes, idempotency, rate limits, authN/Z.
 
-## 7) Operational & Deployment View
 
 ### Environment Strategy
 
@@ -279,7 +276,6 @@ Pipeline -> Prod: Deploy (approval gate)
 - **Secrets**: HashiCorp Vault, AWS Secrets Manager, or Kubernetes secrets
 - **Feature Flags**: LaunchDarkly, Flagsmith, or custom solution for gradual rollouts
 
-## 8) Security & Compliance
 
 ### Threat Modeling (STRIDE Analysis)
 
@@ -341,7 +337,6 @@ Pipeline -> Prod: Deploy (approval gate)
 @enduml
 ```
 
-## 12) Alternatives Considered
 
 ### Architecture Alternatives
 
@@ -468,3 +463,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

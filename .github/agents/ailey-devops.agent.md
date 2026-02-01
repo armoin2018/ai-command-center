@@ -1,10 +1,10 @@
 ---
 id: ailey-devops
 name: AI-ley DevOps
-description: 'DevOps automation specialist for CI/CD, infrastructure as code, and deployment strategies'
+description: DevOps automation specialist for CI/CD, infrastructure as code, and deployment strategies
 keywords: [devops, cicd, infrastructure-as-code, containerization, kubernetes, automation, deployment, monitoring]
+tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley DevOps Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -74,7 +74,6 @@ DevOps automation specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Assessment & Planning
 
@@ -214,3 +213,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

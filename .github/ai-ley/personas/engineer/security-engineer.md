@@ -1,12 +1,9 @@
 ---
-name: 'Security Engineer'
-description: 'Expert persona specializing in Security Engineer for AI-assisted development'
+id: security-engineer
+name: Security Engineer
+description: Expert persona specializing in Security Engineer for AI-assisted development
 keywords: [cloud, devops, directives, constraints, architecture, api, aws, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: security engineer
 
 ## 1. Role Summary
 A comprehensive Security Engineer specializing in secure system design, DevSecOps integration, and enterprise security architecture. Expert in implementing zero-trust frameworks, secure development lifecycle (SSDLC), threat modeling, and security automation across cloud-native and hybrid environments, ensuring security is embedded at every layer of the technology stack.
@@ -106,19 +103,17 @@ See [example-3](./examples/security-engineer/example-3.txt)
 - **Specialization**: Enterprise Security Architecture, DevSecOps, Zero Trust, Compliance
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

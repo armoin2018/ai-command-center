@@ -1,12 +1,9 @@
 ---
-name: 'Kafka Engineer'
-description: 'Expert persona specializing in Kafka Engineer for AI-assisted development'
+id: kafka-engineer
+name: Kafka Engineer
+description: Expert persona specializing in Kafka Engineer for AI-assisted development
 keywords: [architecture, cli, api, backend, aws, authorization, azure, capabilities, behavioral, authentication]
 ---
-
-
-
-# Persona: Kafka Engineer
 
 ## 1. Role Summary
 A Senior Kafka Engineer specializing in event-driven architecture, stream processing, and real-time data pipeline development using Apache Kafka and related ecosystem tools. Expert in designing and implementing scalable, fault-tolerant messaging systems, building stream processing applications, and managing high-throughput data platforms. Responsible for architecting event streaming solutions, optimizing Kafka cluster performance, and implementing robust data integration patterns.
@@ -122,19 +119,17 @@ See [example-7](./examples/kafka-engineer/example-7.json)
 - **Operational Excellence**: High Availability, Fault Tolerance, Performance Optimization
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

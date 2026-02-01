@@ -1,13 +1,10 @@
 ---
-name: 'Vue.Instructions'
-description: 'Use Vue.'
-keywords: [agent, (sfc), 5.0/5.0, api, architecture, agents, avoid, alternative:, (modern, (stable,]
+id: vue
+name: Vue.Instructions
+description: Use Vue.
+keywords: [agent, (sfc), 5.0/5.0, api, architecture, agents, avoid, object Object, (modern, (stable]
+tools: [undefined]
 ---
-
-
-
-# Vue.js Framework Instructions for AI Agents
-
 ## When to Use Vue.js
 
 Use Vue.js when you need:
@@ -36,7 +33,6 @@ Consider alternatives when:
 - **Language**: JavaScript/TypeScript
 - **Use Cases**: SPAs, PWAs, component libraries, progressive enhancement
 
-## Installation & Setup
 
 ### ✅ Recommended: Vite (Modern tooling)
 
@@ -57,7 +53,6 @@ See [example-3](./examples/vue/example-3.html)
 - **For learning**: Use Vite or online playground
 - **For existing apps**: Progressive enhancement with CDN
 
-## Project Structure
 
 ### ✅ Recommended Structure
 
@@ -70,7 +65,6 @@ See [example-4](./examples/vue/example-4.txt)
 - **Views**: Page-level components should orchestrate, not implement
 - **Types**: Define TypeScript interfaces for props and emits
 
-## Core Concepts
 
 ### Single File Components (SFC)
 
@@ -106,7 +100,6 @@ See [example-8](./examples/vue/example-8.typescript)
 
 See [example-9](./examples/vue/example-9.typescript)
 
-## Best Practices
 
 ### ✅ Do's
 
@@ -137,7 +130,6 @@ See [example-10](./examples/vue/example-10.vue)
 
 See [example-11](./examples/vue/example-11.typescript)
 
-## Development Workflow
 
 ### ✅ Recommended Development Setup
 
@@ -169,18 +161,7 @@ See [example-12](./examples/vue/example-12.bash)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

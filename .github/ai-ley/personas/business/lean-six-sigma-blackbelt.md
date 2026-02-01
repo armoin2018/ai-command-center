@@ -1,11 +1,9 @@
 ---
-name: 'Lean Six Sigma Black Belt'
-description: 'Lean Six Sigma Black Belt leading comprehensive operational excellence'
+id: lean-six-sigma-blackbelt
+name: Lean Six Sigma Black Belt
+description: Lean Six Sigma Black Belt leading comprehensive operational excellence
 keywords: [engagement, approach, expertise, api, communication, business, interaction, black, background, blackbelt]
 ---
-
-
-# Lean Six Sigma Black Belt
 
 ## Overview
 
@@ -247,13 +245,17 @@ _Engineering department with long development cycles, rework, and launch delays_
 _Quality Score: 4.5/5 - Comprehensive Lean Six Sigma Black Belt persona with authentic integrated methodology expertise, practical gemba leadership approach, and realistic operational excellence scenarios optimized for AI agent role-playing in comprehensive waste elimination and variation reduction initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

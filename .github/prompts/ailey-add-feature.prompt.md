@@ -3,11 +3,9 @@ id: ailey-add-feature
 name: addFeature
 description: Integrates user requests and ideas into requirements, adding entries to ask and suggestions files while following comprehensive analysis guidelines
 keywords: [ask-integration, requirements, feature-addition, suggestions, analysis, prioritization]
+tools: [execute, read, edit, search, web, agent, todo]
 agent: AI-ley Orchestrator
 ---
-
-# Ask Integration Command
-
 ## Context & Resources
 
 **Variables:** All paths use mustache syntax from `.github/ai-ley/ai-ley.yaml` (e.g., `{{folders.plan}}`, `{{files.requirements}}`)
@@ -26,7 +24,6 @@ Transform user `<ask>` input into structured requirements, ask items, and sugges
 
 **Optional Workflow Extension:** Can trigger build-plan → run-plan for end-to-end feature development.
 
-## Process
 
 ### 1. Parse & Classify Ask
 
@@ -90,7 +87,6 @@ As a [user type] I want [functionality] So that [value]
 **Pattern:** ASK_ITEM_FORMAT for `{{files.ask}}`:
 
 ```
-# Project Ask Items | Last Updated: [Date]
 
 ## Active - High Priority
 #### ASK-[ID]: [Title]
@@ -126,7 +122,6 @@ As a [user type] I want [functionality] So that [value]
 **Pattern:** SUGGESTION_FORMAT for `{{files.suggestions}}`:
 
 ```
-# Enhancement Suggestions | Last Updated: [Date]
 
 ## Active - User Experience
 #### SUG-[ID]: [Title]
@@ -190,7 +185,6 @@ As a [user type] I want [functionality] So that [value]
 **Pattern:** INTEGRATION_SUMMARY
 
 ```
-# Integration Summary - [Date]
 
 ## Original Ask
 > [Quote input]
@@ -245,3 +239,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

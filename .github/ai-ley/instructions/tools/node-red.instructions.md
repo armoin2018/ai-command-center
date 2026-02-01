@@ -1,12 +1,10 @@
 ---
-name: 'Node-RED Event-Driven Automation'
-description: 'Comprehensive instructions for using Node-RED to build event-driven automation'
+id: node-red
+name: Node-RED Event-Driven Automation
+description: Comprehensive instructions for using Node-RED to build event-driven automation
 keywords: [api, automation, commands, async, authorization, authentication, based, advanced, cli, cases]
+tools: [undefined]
 ---
-
-
-# Node-RED Event-Driven Automation Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Node-RED
@@ -15,7 +13,6 @@ keywords: [api, automation, commands, async, authorization, authentication, base
 - **Purpose**: Visual programming tool for building event-driven automation flows, IoT applications, and API integrations
 - **Prerequisites**: Node.js 18+, npm/yarn, basic understanding of JavaScript and networking concepts
 
-## Installation & Setup
 
 ### Local Installation
 
@@ -33,7 +30,6 @@ See [example-3](./examples/node-red/example-3.bash)
 
 See [example-4](./examples/node-red/example-4.bash)
 
-## Configuration
 
 ### Settings File
 
@@ -47,7 +43,6 @@ See [example-6](./examples/node-red/example-6.bash)
 
 See [example-7](./examples/node-red/example-7.json)
 
-## Core Features
 
 ### Visual Flow Editor
 
@@ -67,9 +62,6 @@ See [example-7](./examples/node-red/example-7.json)
 - **Usage**: Deploy debug nodes and view messages in the debug panel
 - **Features**: Message filtering, payload inspection, timestamp tracking
 
-## Core Nodes Reference
-
-### Input Nodes
 
 #### Inject Node
 
@@ -83,7 +75,6 @@ See [example-9](./examples/node-red/example-9.javascript)
 
 See [example-10](./examples/node-red/example-10.javascript)
 
-### Processing Nodes
 
 #### Function Node
 
@@ -97,7 +88,6 @@ See [example-12](./examples/node-red/example-12.javascript)
 
 See [example-13](./examples/node-red/example-13.javascript)
 
-### Output Nodes
 
 #### HTTP Response Node
 
@@ -115,9 +105,6 @@ See [example-16](./examples/node-red/example-16.javascript)
 
 See [example-17](./examples/node-red/example-17.bash)
 
-## Integration & Workflow
-
-### API Integration Patterns
 
 #### REST API Client
 
@@ -127,7 +114,6 @@ See [example-18](./examples/node-red/example-18.javascript)
 
 See [example-19](./examples/node-red/example-19.javascript)
 
-### MQTT Integration
 
 #### MQTT Broker Configuration
 
@@ -137,21 +123,16 @@ See [example-20](./examples/node-red/example-20.javascript)
 
 See [example-21](./examples/node-red/example-21.javascript)
 
-### Database Integration
 
 #### InfluxDB Time Series
 
 See [example-22](./examples/node-red/example-22.javascript)
 
-### Automation Workflows
 
 #### Home Automation Flow
 
 See [example-23](./examples/node-red/example-23.javascript)
 
-## Best Practices
-
-### Flow Design Patterns
 
 #### Error Handling
 
@@ -165,7 +146,6 @@ See [example-25](./examples/node-red/example-25.javascript)
 
 See [example-26](./examples/node-red/example-26.javascript)
 
-### Performance Optimization
 
 #### Memory Management
 
@@ -175,9 +155,6 @@ See [example-27](./examples/node-red/example-27.javascript)
 
 See [example-28](./examples/node-red/example-28.javascript)
 
-## Version Control and Environments
-
-### Git Integration
 
 #### Flow Version Control
 
@@ -191,7 +168,6 @@ See [example-30](./examples/node-red/example-30.txt)
 
 See [example-31](./examples/node-red/example-31.javascript)
 
-### Deployment Strategies
 
 #### CI/CD Pipeline
 
@@ -201,7 +177,6 @@ See [example-32](./examples/node-red/example-32.yaml)
 
 See [example-33](./examples/node-red/example-33.bash)
 
-## Common Use Cases
 
 ### IoT Data Processing Pipeline
 
@@ -230,9 +205,6 @@ See [example-36](./examples/node-red/example-36.javascript)
 
 **Expected Result**: Automated industrial control system with sensor monitoring and safety controls
 
-## Troubleshooting
-
-### Common Issues
 
 #### Memory Leaks
 
@@ -258,7 +230,6 @@ See [example-38](./examples/node-red/example-38.bash)
 
 See [example-39](./examples/node-red/example-39.javascript)
 
-### Debug Mode
 
 #### Enable Verbose Logging
 
@@ -268,9 +239,6 @@ See [example-40](./examples/node-red/example-40.javascript)
 
 See [example-41](./examples/node-red/example-41.javascript)
 
-## Security Considerations
-
-### Authentication and Authorization
 
 #### Secure Admin Interface
 
@@ -280,15 +248,11 @@ See [example-42](./examples/node-red/example-42.javascript)
 
 See [example-43](./examples/node-red/example-43.javascript)
 
-### Data Protection
 
 #### Encryption at Rest
 
 See [example-44](./examples/node-red/example-44.javascript)
 
-## Advanced Configuration
-
-### Custom Node Development
 
 #### Simple Input Node
 
@@ -298,7 +262,6 @@ See [example-45](./examples/node-red/example-45.javascript)
 
 See [example-46](./examples/node-red/example-46.html)
 
-### Performance Tuning
 
 #### Memory Optimization
 
@@ -306,12 +269,7 @@ See [example-46](./examples/node-red/example-46.html)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

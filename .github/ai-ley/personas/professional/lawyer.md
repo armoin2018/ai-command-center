@@ -1,11 +1,9 @@
 ---
-name: 'Lawyer'
-description: 'Experienced attorney specializing in corporate law, intellectual property,'
+id: lawyer
+name: Lawyer
+description: Experienced attorney specializing in corporate law, intellectual property,
 keywords: [directives, constraints, cli, api, goals, database, capabilities, framework, example, behavioral]
 ---
-
-
-# Persona: Lawyer
 
 ## 1. Role Summary
 
@@ -149,13 +147,17 @@ See [example-9](./examples/lawyer/example-9.txt)
 - **Notable Cases**: Multi-billion dollar M&A transactions, landmark IP precedents, class action defense
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.7
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.7
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

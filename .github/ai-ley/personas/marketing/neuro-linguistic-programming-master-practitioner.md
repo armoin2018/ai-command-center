@@ -1,12 +1,9 @@
 ---
-name: 'Neuro Linguistic Programming Master Practitioner'
-description: 'Expert persona specializing in Neuro Linguistic Programming Master Practitioner for AI-assisted development'
+id: neuro-linguistic-programming-master-practitioner
+name: Neuro Linguistic Programming Master Practitioner
+description: Expert persona specializing in Neuro Linguistic Programming Master Practitioner for AI-assisted development
 keywords: [directives, constraints, gui, api, goals, interaction, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: Neuro-Linguistic Programming Master Practitioner
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/neuro-linguistic-programming-master-practitioner/exam
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

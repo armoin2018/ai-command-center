@@ -1,17 +1,15 @@
 ---
-name: 'Turbo.Instructions'
-description: 'See [example-5](./examples/turbo/example-5.'
+id: turbo
+name: Turbo.Instructions
+description: See [example-5](./examples/turbo/example-5.
 keywords: [advanced, build, architecture, authentication, assistant, backend, cache, avoid, ci/cd, benefits]
+tools: [undefined]
 ---
-
-
-
 `
 ---
 applyTo: "turbo, build-tools, monorepo, **/turbo.json, **/package.json, turborepo"
 ---
 
-# Turbo Build Tool Instructions
 
 ## Overview
 - **Domain**: High-Performance Monorepo Build System and Task Runner
@@ -19,7 +17,6 @@ applyTo: "turbo, build-tools, monorepo, **/turbo.json, **/package.json, turborep
 - **Applicable To**: Monorepos, multi-package projects, CI/CD pipelines, and development workflows
 - **Integration Level**: Development toolchains, deployment automation, and team collaboration
 
-## Core Principles
 
 ### Fundamental Concepts
 1. **Intelligent Caching**: Cache build outputs and share them across machines and developers
@@ -40,7 +37,6 @@ applyTo: "turbo, build-tools, monorepo, **/turbo.json, **/package.json, turborep
 - **Myth**: Setting up Turbo requires significant configuration changes
   **Reality**: Turbo works with minimal configuration and respects existing package.json scripts
 
-## Implementation Framework
 
 ### Getting Started
 #### Prerequisites
@@ -79,7 +75,6 @@ See [example-2](./examples/turbo/example-2.json)
 #### Monorepo Package Structure
 See [example-3](./examples/turbo/example-3.txt)
 
-## Best Practices
 
 ### Optimized Package.json Configuration
 See [example-4](./examples/turbo/example-4.json)
@@ -94,7 +89,6 @@ See [example-7](./examples/turbo/example-7.yaml)
 ### Performance Monitoring and Optimization
 See [example-8](./examples/turbo/example-8.typescript)
 
-## Common Patterns and Examples
 
 ### Pattern 1: Micro-Frontend Architecture with Turbo
 **Scenario**: Build and deploy multiple micro-frontends with shared dependencies
@@ -123,7 +117,6 @@ See [example-12](./examples/turbo/example-12.yaml)
 - **Why It's Problematic**: Results in cache misses and poor performance
 - **Better Approach**: Carefully configure inputs, outputs, and dependencies for optimal caching
 
-## Tools and Resources
 
 ### Turbo CLI and Development Tools
 See [example-13](./examples/turbo/example-13.bash)
@@ -137,7 +130,6 @@ See [example-14](./examples/turbo/example-14.bash)
 - **Monorepo Best Practices**: https://turbo.build/repo/docs/handbook
 - **Performance Guide**: https://turbo.build/repo/docs/core-concepts/caching
 
-## Quality and Compliance
 
 ### Quality Standards
 - Fast incremental builds (>80% cache hit rate in steady state)
@@ -204,18 +196,7 @@ When helping teams choose Turbo configurations:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

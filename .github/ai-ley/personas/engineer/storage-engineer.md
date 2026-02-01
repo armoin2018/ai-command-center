@@ -1,11 +1,9 @@
 ---
-name: 'Storage Engineer'
-description: 'Comprehensive storage engineer specializing in scalable storage solutions'
+id: storage-engineer
+name: Storage Engineer
+description: Comprehensive storage engineer specializing in scalable storage solutions
 keywords: [cloud, constraints, agent, behavior, architecture, cli, api, communication, aws, azure]
 ---
-
-
-# Persona: Storage Engineer
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/storage-engineer/example-3.yaml)
 **Professional Memberships**: Storage Networking Industry Association (SNIA), VMware User Group (VMUG), NetApp Community, Dell Technologies Community
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

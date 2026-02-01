@@ -1,13 +1,11 @@
 ---
-name: 'Pitch Deck Generator'
-description: 'Build a complete pitch deck based on the requirements found in files.requirements with structured slides covering problem, solution, business model, financials, team, and implementation'
+id: ailey-build-pitch-deck
+name: Pitch Deck Generator
+description: Build a complete pitch deck based on the requirements found in files.requirements with structured slides covering problem, solution, business model, financials, team, and implementation
 keywords: [pitch-deck, business, presentation, slides, funding, startup, investment, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Pitch Deck Generator
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [pitch-deck, business, presentation, slides, funding, startup, investm
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -120,7 +116,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 1 Content Structure**:
 
 ```markdown
-# Slide 1: The Problem
 
 ## Core Problem Statement
 
@@ -156,7 +151,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 2 Content Structure**:
 
 ```markdown
-# Slide 2: Market Opportunity
 
 ## Market Size Analysis
 
@@ -197,7 +191,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 3 Content Structure**:
 
 ```markdown
-# Slide 3: Target Customer & Use Cases
 
 ## Primary Customer Profile
 
@@ -254,7 +247,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 
 **Slide 4 Content Structure**:
 ```markdown
-# Slide 4: Our Solution
 
 ## Solution Statement
 {One-sentence description of how you solve the problem}
@@ -296,13 +288,11 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 5 Content Structure**:
 
 ```markdown
-# Slide 5: Product Demo & Key Features
 
 ## Product Overview
 
 {Brief description of product architecture and design}
 
-## Core Features
 
 ### Feature 1: {Feature Name}
 
@@ -361,7 +351,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 6 Content Structure**:
 
 ```markdown
-# Slide 6: Technology & Intellectual Property
 
 ## Technology Architecture
 
@@ -425,7 +414,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 
 **Slide 7 Content Structure**:
 ```markdown
-# Slide 7: Business Model
 
 ## Revenue Streams
 ### Primary Revenue: {Revenue Type}
@@ -481,9 +469,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 8 Content Structure**:
 
 ```markdown
-# Slide 8: Go-to-Market Strategy
 
-## Target Market Prioritization
 
 ### Phase 1: {Primary Segment} (Months 1-6)
 
@@ -499,7 +485,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 - **Entry Strategy**: {how to reach and acquire these customers}
 - **Success Metrics**: {KPIs for this segment}
 
-## Sales & Marketing Strategy
 
 ### Sales Approach
 
@@ -532,7 +517,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 - **Strategic Partners**: {industry and market access partnerships}
 - **Implementation Partners**: {service and consulting partnerships}
 
-## Launch Plan
 
 ### Pre-Launch (Months -3 to 0)
 
@@ -566,9 +550,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 9 Content Structure**:
 
 ```markdown
-# Slide 9: Competitive Landscape
 
-## Competitive Map
 
 ### Direct Competitors
 
@@ -591,7 +573,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
   - **Customer Overlap**: {customer segment overlap}
   - **Our Position**: {how we compete against this}
 
-## Competitive Advantages
 
 ### Sustainable Competitive Moats
 
@@ -645,7 +626,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 
 **Slide 10 Content Structure**:
 ```markdown
-# Slide 10: Financial Projections
 
 ## Revenue Projections (5-Year)
 | Year | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
@@ -703,9 +683,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 11 Content Structure**:
 
 ```markdown
-# Slide 11: Funding Requirements
 
-## Funding Request
 
 ### Total Funding Sought: ${total-amount}
 
@@ -724,7 +702,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 | **Operations & Infrastructure** | ${amount} | {percentage}% | {operational scaling needs}       |
 | **Working Capital**             | ${amount} | {percentage}% | {cash flow and reserves}          |
 
-## Funding Milestones
 
 ### 6-Month Milestones
 
@@ -786,9 +763,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 12 Content Structure**:
 
 ```markdown
-# Slide 12: Return Projections
 
-## Investment Return Scenarios
 
 ### Base Case (70% probability)
 
@@ -842,7 +817,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
    - **Impact**: {quantified value impact}
    - **Timeline**: {when this value is realized}
 
-## Exit Strategy Analysis
 
 ### Strategic Acquisition (Most Likely)
 
@@ -890,7 +864,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 
 **Slide 13 Content Structure**:
 ```markdown
-# Slide 13: Leadership Team
 
 ## Founding Team
 ### {Founder Name}, {Title}
@@ -970,11 +943,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 14 Content Structure**:
 
 ```markdown
-# Slide 14: Implementation Roadmap
 
-## 18-Month Execution Plan
-
-### Phase 1: Foundation (Months 1-6)
 
 #### Key Objectives
 
@@ -1005,7 +974,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 - **Team Size**: {count} employees
 - **Product Metrics**: {key product KPIs}
 
-### Phase 2: Growth (Months 7-12)
 
 #### Key Objectives
 
@@ -1036,7 +1004,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 - **Market Share**: {percentage}% in target segment
 - **Team Size**: {count} employees
 
-### Phase 3: Scale (Months 13-18)
 
 #### Key Objectives
 
@@ -1052,7 +1019,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 | {Milestone 2} | Month {#}    | {success criteria} | {team member} |
 | {Milestone 3} | Month {#}    | {success criteria} | {team member} |
 
-## Resource Requirements by Phase
 
 ### Phase 1 Resources
 
@@ -1104,9 +1070,7 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 **Slide 15 Content Structure**:
 
 ```markdown
-# Slide 15: Key Hires & Organizational Plan
 
-## Hiring Plan (18 Months)
 
 ### Immediate Hires (Months 1-6)
 
@@ -1132,7 +1096,6 @@ You are a business strategy consultant and pitch deck specialist with expertise 
 | {Role 2} | High     | Month {#} | {market expansion support} | ${amount} |
 | {Role 3} | Medium   | Month {#} | {specialized expertise}    | ${amount} |
 
-## Organizational Structure
 
 ### Current Structure (Team of {count})
 ```
@@ -1239,7 +1202,6 @@ CEO
 
 **Appendix Content Structure**:
 ```markdown
-# Appendix: Supporting Data & Documentation
 
 ## A. Market Research & Analysis
 ### A1. Market Size Calculations
@@ -1462,7 +1424,6 @@ CEO
 - [ ] All sources and references are properly cited
 ````
 
-## Examples
 
 ### Example 1: Tech Startup Pitch Deck
 
@@ -1567,3 +1528,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

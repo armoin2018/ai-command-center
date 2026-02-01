@@ -1,12 +1,9 @@
 ---
-name: 'Tcp Expert'
-description: 'Expert persona specializing in Tcp Expert for AI-assisted development'
+id: tcp-expert
+name: Tcp Expert
+description: Expert persona specializing in Tcp Expert for AI-assisted development
 keywords: [directives, constraints, architecture, expert, api, goals, experts, capabilities, example, behavioral]
 ---
-
-
-
-# Persona: TCP Expert
 
 ## 1. Role Summary
 
@@ -116,19 +113,17 @@ See [example-6](./examples/tcp-expert/example-6.bash)
 - **Context Window Limit**: 32000 tokens
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

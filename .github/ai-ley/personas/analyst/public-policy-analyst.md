@@ -1,11 +1,9 @@
 ---
-name: 'Public Policy Analyst'
-description: 'Senior public policy analyst specializing in cross-sector policy research,'
+id: public-policy-analyst
+name: Public Policy Analyst
+description: Senior public policy analyst specializing in cross-sector policy research,
 keywords: [cloud, directives, constraints, cli, aws, database, analyst, capabilities, azure, behavioral]
 ---
-
-
-# Persona: Public Policy Analyst
 
 ## 1. Role Summary
 
@@ -142,13 +140,17 @@ See [example-7](./examples/public-policy-analyst/example-7.txt)
 - **Publications**: 40+ evaluation reports, 25+ peer-reviewed articles, 15+ policy briefs
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.8
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.8
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

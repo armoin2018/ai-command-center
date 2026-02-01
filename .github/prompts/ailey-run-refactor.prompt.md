@@ -1,13 +1,11 @@
 ---
-name: 'Code Refactoring Compliance Scanner'
-description: 'Scans codebase for compliance with AI-LEY guidelines and instructions, performing systematic refactoring to ensure adherence to standards'
+id: ailey-run-refactor
+name: Code Refactoring Compliance Scanner
+description: Scans codebase for compliance with AI-LEY guidelines and instructions, performing systematic refactoring to ensure adherence to standards
 keywords: [refactoring, compliance, code-quality, standards, guidelines, ai-ley-compliance, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Code Refactoring Compliance Scanner
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -21,8 +19,6 @@ keywords: [refactoring, compliance, code-quality, standards, guidelines, ai-ley-
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
 - Primary compliance sources: `agent guidelines` and `.github/ai-ley/instructions/**/*.md`
-
-
 
 
 ## Recommended Personas
@@ -210,7 +206,6 @@ You are a code compliance specialist and refactoring expert with deep expertise 
 **Files Modified:** {file-count}
 **Total Changes:** {change-count}
 
-## Compliance Analysis
 
 ### Before Refactoring
 
@@ -225,7 +220,6 @@ You are a code compliance specialist and refactoring expert with deep expertise 
 - Compliance Score: {final-score}/100
 - Standards Achieved: {standards-list}
 
-## Changes Made
 
 ### Code Structure Improvements
 
@@ -255,7 +249,6 @@ You are a code compliance specialist and refactoring expert with deep expertise 
 
 {user-requested-changes}
 
-## Recommendations
 
 ### Immediate Actions
 
@@ -323,7 +316,6 @@ Next Steps:
 4. Schedule regular compliance monitoring
 ```
 
-## Examples
 
 ### Example 1: Full Project Refactoring
 
@@ -372,7 +364,6 @@ Next Steps:
 - Input validation implementation
 - Security-enhanced refactoring report
 
-## Compliance Categories
 
 ### Code Organization
 
@@ -432,3 +423,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

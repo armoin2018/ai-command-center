@@ -1,11 +1,9 @@
 ---
-name: 'Entrepreneur'
-description: 'Serial entrepreneur with expertise in launching and scaling innovative'
+id: entrepreneur
+name: Entrepreneur
+description: Serial entrepreneur with expertise in launching and scaling innovative
 keywords: [directives, constraints, delivery, cli, api, capabilities, commerce, business, consumer, behavioral]
 ---
-
-
-# Persona: Entrepreneur
 
 ## 1. Role Summary
 
@@ -78,7 +76,6 @@ A serial entrepreneur with 12+ years of experience launching and scaling innovat
 
 ---
 
-## 7. Interaction Protocol
 
 ### Input Processing
 
@@ -103,7 +100,6 @@ A serial entrepreneur with 12+ years of experience launching and scaling innovat
 
 ---
 
-## 8. Example Workflows
 
 ### SaaS Startup Launch and Scaling
 
@@ -143,7 +139,6 @@ A serial entrepreneur with 12+ years of experience launching and scaling innovat
 
 ---
 
-## 9. Templates & Patterns
 
 ### Business Model Validation Framework
 
@@ -174,13 +169,17 @@ See [example-3](./examples/entrepreneur/example-3.txt)
 **Persona Maturity**: Production-ready for venture creation, startup scaling, and innovation leadership initiatives
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,13 +1,10 @@
 ---
-name: 'Solid Js.Instructions'
-description: 'Development guidelines and best practices for Solid Js.Instructions'
+id: solid-js
+name: Solid Js.Instructions
+description: Development guidelines and best practices for Solid Js.Instructions
 keywords: [common, architecture, cli, concepts, authorization, assistant, component, additional, commands, authentication]
+tools: [undefined]
 ---
-
-
-
-# SolidJS Framework Instructions
-
 ## Framework Overview
 - **Framework Name**: SolidJS
 - **Version**: 1.8+ (Latest stable)
@@ -15,7 +12,6 @@ keywords: [common, architecture, cli, concepts, authorization, assistant, compon
 - **Language**: TypeScript/JavaScript (with JSX)
 - **Use Cases**: High-performance web applications, reactive UIs, component-based architecture
 
-## Installation & Setup
 
 ### Project Creation
 See [example-1](./examples/solid-js/example-1.bash)
@@ -26,7 +22,6 @@ See [example-2](./examples/solid-js/example-2.bash)
 ## Project Structure
 See [example-3](./examples/solid-js/example-3.txt)
 
-## Core Concepts
 
 ### Reactive Primitives
 - **Purpose**: SolidJS's fundamental building blocks for reactive state management
@@ -53,7 +48,6 @@ See [example-6](./examples/solid-js/example-6.tsx)
 4. **Testing**: Write component and integration tests
 5. **Build**: Optimize and bundle for production deployment
 
-## Best Practices
 
 ### Performance Optimization
 See [example-7](./examples/solid-js/example-7.tsx)
@@ -61,7 +55,6 @@ See [example-7](./examples/solid-js/example-7.tsx)
 ### Router Integration
 See [example-8](./examples/solid-js/example-8.tsx)
 
-## Common Patterns
 
 ### Form Handling
 See [example-9](./examples/solid-js/example-9.tsx)
@@ -76,7 +69,6 @@ See [example-11](./examples/solid-js/example-11.json)
 ## Essential Commands
 See [example-12](./examples/solid-js/example-12.json)
 
-## Common Issues & Solutions
 
 ### Issue 1: Signal Updates Not Triggering
 **Problem**: Components not re-rendering when signal values change
@@ -119,18 +111,7 @@ When helping with SolidJS implementation:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.6
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

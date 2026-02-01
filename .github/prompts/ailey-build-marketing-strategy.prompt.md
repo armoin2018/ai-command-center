@@ -1,13 +1,11 @@
 ---
-name: 'Build Marketing Strategy'
-description: 'Generate a complete, metrics-driven marketing strategy from {{files.requirements}} and write it to {{folders.plan}}/business/marketing-strategy.md.'
+id: ailey-build-marketing-strategy
+name: Build Marketing Strategy
+description: Generate a complete, metrics-driven marketing strategy from {{files.requirements}} and write it to {{folders.plan}}/business/marketing-strategy.md.
 keywords: [build, marketing, strategy, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-
-
 ## Recommended Personas
 
 Consider leveraging these persona domains:
@@ -58,7 +56,6 @@ Then **write the final deliverable to**: `{{folders.plan}}/business/marketing-st
 - Provide **KPIs with targets**, not just metrics.
 - Include **at least one creative alternative** per major recommendation.
 
-### Deliverable Structure (must follow exactly)
 
 # Marketing Strategy — {{product_or_initiative_name}}
 
@@ -85,7 +82,6 @@ Then **write the final deliverable to**: `{{folders.plan}}/business/marketing-st
 - **Messaging Pillars (3–5) & Proof Points**
 - **Differentiators vs. Competitors (table)**
 
-## 5) Go-To-Market Strategy
 
 ### 5.1 Channel Mix (Owned / Earned / Paid / Partnerships / Community)
 
@@ -174,3 +170,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
+---

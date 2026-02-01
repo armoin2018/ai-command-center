@@ -1,11 +1,10 @@
 ---
-name: 'Spotify Style.Instructions'
-description: 'Development guidelines and best practices for Spotify Style.Instructions'
+id: spotify-style
+name: Spotify Style.Instructions
+description: Development guidelines and best practices for Spotify Style.Instructions
 keywords: [spotify, style, web design, style.instructions]
+tools: [undefined]
 ---
-
-
-
 # Spotify Style UI
 
 - Dark mode, sidebar navigation, and playlists.
@@ -14,18 +13,7 @@ keywords: [spotify, style, web design, style.instructions]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

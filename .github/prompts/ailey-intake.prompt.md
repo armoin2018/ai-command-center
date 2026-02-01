@@ -1,13 +1,11 @@
 ---
-name: 'Interactive Project Intake'
-description: 'Interactive intake template to gather project requirements and record them in INTAKE.md with optional REQUIREMENTS.md generation'
+id: ailey-intake
+name: Interactive Project Intake
+description: Interactive intake template to gather project requirements and record them in INTAKE.md with optional REQUIREMENTS.md generation
 keywords: [intake, requirements, interactive, template, questions, gathering, discovery, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Interactive Project Intake
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [intake, requirements, interactive, template, questions, gathering, di
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -112,9 +108,6 @@ author: AI-LEY
 created: { { timestamp } }
 ---
 
-# {{Type}} Project Intake
-
-## Project Overview
 
 ### Q1: Project Name
 
@@ -141,7 +134,6 @@ created: { { timestamp } }
 - Reduce costs
 - Enter new market
 
-## Technical Context
 
 ### Q4: Technology Stack
 
@@ -164,7 +156,6 @@ created: { { timestamp } }
 - Android
 - API/Backend only
 
-## Team & Resources
 
 ### Q6: Team Composition
 
@@ -184,7 +175,6 @@ created: { { timestamp } }
 **Allow Custom**: yes
 **Create If Missing**: yes (instruction)
 
-## Constraints & Requirements
 
 ### Q8: Timeline
 
@@ -581,9 +571,7 @@ Your choice (1/2/3):
 **Update `.project/GENERATED_CHANGES.md`**:
 
 ```markdown
-# Generated Changes Log
 
-## 2025-11-09T13:15:42Z - Intake Session ({{type}})
 
 ### Files Created/Updated
 
@@ -696,7 +684,6 @@ Your choice (1/2/3):
 - No information loss from intake to requirements
 - Structured and actionable requirements
 
-## Examples
 
 ### Example 1: Basic Web App Intake
 
@@ -839,7 +826,6 @@ Recorded:
 - GraphQL API Specialist (newly created)
 ```
 
-## Notes
 
 ### Important Considerations
 
@@ -873,7 +859,6 @@ Recorded:
 - **Multi-Stage Intake**: Support progressive intake over multiple sessions
 - **Integration**: Intake can feed other commands (plan, design, architecture)
 
-## Troubleshooting
 
 ### Issue: Template not found
 
@@ -900,3 +885,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Nvidia Expert'
-description: 'Expert persona specializing in Nvidia Expert for AI-assisted development'
+id: nvidia-expert
+name: Nvidia Expert
+description: Expert persona specializing in Nvidia Expert for AI-assisted development
 keywords: [cloud, computing, async, architecture, api, aws, ai, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: NVIDIA GPU Computing Expert
 
 ## 1. Role Summary
 A specialized GPU computing expert focused on NVIDIA technologies including CUDA programming, TensorRT optimization, multi-GPU systems, and high-performance computing. Expert in accelerating AI/ML workloads, optimizing inference pipelines, and implementing scalable GPU-accelerated applications.
@@ -121,19 +118,17 @@ See [example-7](./examples/nvidia-expert/example-7.python)
 - **Specialization**: CUDA Programming, TensorRT Optimization, Multi-GPU Computing, High-Performance AI
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

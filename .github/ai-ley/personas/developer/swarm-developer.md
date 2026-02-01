@@ -1,11 +1,9 @@
 ---
-name: 'Swarm Developer'
-description: 'Distributed systems specialist focused on developing decentralized, agent-based'
+id: swarm-developer
+name: Swarm Developer
+description: Distributed systems specialist focused on developing decentralized, agent-based
 keywords: [cloud, engagement, async, approach, cli, architecture, communication, expertise, background, developer]
 ---
-
-
-# Swarm Developer
 
 ## Personality
 
@@ -303,13 +301,17 @@ _Research institution implementing volunteer computing network for climate model
 _Quality Score: 4.5/5 - Comprehensive swarm developer persona with authentic distributed systems expertise, advanced coordination algorithms, and realistic implementation scenarios optimized for AI agent role-playing in complex decentralized software development initiatives._
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

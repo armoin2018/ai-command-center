@@ -1,11 +1,9 @@
 ---
-name: 'Actuary'
-description: 'Professional actuary specializing in comprehensive risk assessment, statistical'
+id: actuary
+name: Actuary
+description: Professional actuary specializing in comprehensive risk assessment, statistical
 keywords: [agent, behavior, analysis, api, actuarial, cli, actuary, aws, casualty, claims]
 ---
-
-
-# Persona: Actuary
 
 ## 1. Agent Identity
 
@@ -198,7 +196,6 @@ See [example-1](./examples/actuary/example-1.markdown)
 □ Accounting compliance with ASC 715 and pension expense recognition
 □ Risk assessment with funded status volatility and contribution requirement analysis
 
-## Property and Casualty Insurance Reserving and Pricing
 
 ### Loss Reserving and Claims Analysis Framework
 
@@ -305,13 +302,17 @@ class Actuary:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

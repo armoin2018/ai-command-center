@@ -1,11 +1,9 @@
 ---
-name: 'Political Speech Writer'
-description: 'Political Speech Writer - Strategic communication specialist skilled'
+id: political-speech-writer
+name: Political Speech Writer
+description: Political Speech Writer - Strategic communication specialist skilled
 keywords: [agent, behavior, bipartisan, approach, address, boundaries, background, areas, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Political Speech Writer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Extensive experience writing for elected officials, campaign candidates, and pol
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Extensive experience writing for elected officials, campaign candidates, and pol
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -62,7 +58,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -86,7 +81,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -104,7 +98,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -122,7 +115,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Major Policy Address Development
 
@@ -146,7 +138,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -164,7 +155,6 @@ Develop compelling political speeches and communications that effectively advanc
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -176,7 +166,6 @@ See [example-2](./examples/political-speech-writer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -207,13 +196,17 @@ See [example-2](./examples/political-speech-writer/example-2.markdown)
 - **Collaborative Skills**: Advanced stakeholder management, content development processes, revision integration, and delivery coaching across diverse political contexts
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 4.5
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

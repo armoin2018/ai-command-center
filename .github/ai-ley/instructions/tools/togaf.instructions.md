@@ -1,13 +1,10 @@
 ---
-name: 'togaf.instructions'
-description: 'Development guidelines and best practices for Togaf.Instructions'
-keywords: [components**, enterprise, **platform, capabilities**, async, delivered:**, architecture, **togaf, components, cases]
+id: togaf
+name: togaf.instructions
+description: Development guidelines and best practices for Togaf.Instructions
+keywords: [components, enterprise, platform, capabilities, async, delivered:**, architecture, togaf, components, cases]
+tools: [undefined]
 ---
-
-
-
-# **TOGAF Enterprise Architecture Framework Platform**
-
 ## **Platform Overview**
 
 The **TOGAF Enterprise Architecture Framework Platform** provides comprehensive enterprise architecture management capabilities based on The Open Group Architecture Framework (TOGAF) with advanced Architecture Development Method (ADM) automation, architecture repository management, stakeholder engagement, architecture analytics, enterprise governance, and digital transformation acceleration for large-scale enterprise architecture initiatives.
@@ -21,7 +18,6 @@ The **TOGAF Enterprise Architecture Framework Platform** provides comprehensive 
 - **Architecture Analytics & Intelligence**: AI-powered architecture insights, gap analysis, and transformation planning
 - **Digital Transformation Platform**: Enterprise-wide digital transformation orchestration and change management
 
-### **🏗️ Architecture Components**
 
 #### **1. TOGAF ADM Automation Engine**
 
@@ -44,7 +40,6 @@ The **TOGAF Enterprise Architecture Framework Platform** provides comprehensive 
 - **Architecture Performance Metrics**: Comprehensive KPIs and metrics for architecture maturity and effectiveness
 - **Predictive Architecture Intelligence**: AI-powered predictions for architecture evolution and optimization
 
-### **📊 Enterprise Use Cases & Implementation Examples**
 
 #### **Advanced TOGAF Enterprise Architecture Engine**
 
@@ -303,18 +298,7 @@ Enterprise-wide digital transformation orchestration and change management
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

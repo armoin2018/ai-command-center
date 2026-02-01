@@ -1,11 +1,10 @@
 ---
-name: 'Typescript.Instructions'
-description: 'Comprehensive TypeScript development guidelines emphasizing type safety, modern patterns, and maintainable code for AI coding assistants.'
+id: typescript
+name: Typescript.Instructions
+description: Comprehensive TypeScript development guidelines emphasizing type safety, modern patterns, and maintainable code for AI coding assistants.
 keywords: [context, common, async, build, class, configuration, advanced, design, component, error]
+tools: [undefined]
 ---
-
-
-
 # TypeScript Programming Instructions
 
 Comprehensive TypeScript development guidelines emphasizing type safety, modern patterns, and maintainable code for AI coding assistants.
@@ -22,7 +21,6 @@ Comprehensive TypeScript development guidelines emphasizing type safety, modern 
 
 See [example-1](./examples/typescript/example-1.text)
 
-## 🔧 Type System Best Practices
 
 ### Fundamental Types
 
@@ -32,7 +30,6 @@ See [example-2](./examples/typescript/example-2.typescript)
 
 See [example-3](./examples/typescript/example-3.typescript)
 
-## 🏗️ Class and Interface Design
 
 ### Modern Class Patterns
 
@@ -42,25 +39,21 @@ See [example-4](./examples/typescript/example-4.typescript)
 
 See [example-5](./examples/typescript/example-5.typescript)
 
-## 🔄 Async Programming and Error Handling
 
 ### Modern Async Patterns
 
 See [example-6](./examples/typescript/example-6.typescript)
 
-## 🎯 React/Frontend Patterns
 
 ### Component Design
 
 See [example-7](./examples/typescript/example-7.typescript)
 
-## 🧪 Testing with TypeScript
 
 ### Unit Testing
 
 See [example-8](./examples/typescript/example-8.typescript)
 
-## 🛠️ Configuration and Build Setup
 
 ### TypeScript Configuration
 
@@ -91,18 +84,7 @@ See [example-10](./examples/typescript/example-10.javascript)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.7
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

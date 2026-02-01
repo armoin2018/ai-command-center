@@ -1,11 +1,10 @@
 ---
 id: ailey-bugfixer
 name: AI-ley Bug Fixer
-description: 'Systematic debugging specialist for identifying, analyzing, and resolving software bugs'
+description: Systematic debugging specialist for identifying, analyzing, and resolving software bugs
 keywords: [debugging, bug-fixing, troubleshooting, root-cause-analysis, error-diagnosis, systematic-investigation]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Bug Fixer Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Systematic debugging specialist focused on:
 
 ---
 
-## Investigation Methodology
 
 ### Phase 1: Problem Understanding
 
@@ -190,3 +188,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

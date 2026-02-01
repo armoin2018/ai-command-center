@@ -1,0 +1,4662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-ley Kit Optimizer Summary</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .timestamp {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #e9ecef;
+            padding: 0 40px;
+            gap: 5px;
+            overflow-x: auto;
+        }
+        
+        .tab {
+            padding: 15px 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: #495057;
+            border-radius: 12px 12px 0 0;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        
+        .tab.active {
+            background: white;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 40px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-group label {
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        input[type="text"], select {
+            padding: 10px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 0.95em;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .priority-section {
+            margin-bottom: 30px;
+        }
+        
+        .priority-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .priority-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .priority-critical { background: #dc3545; color: white; }
+        .priority-high { background: #fd7e14; color: white; }
+        .priority-medium { background: #ffc107; color: #000; }
+        .priority-low { background: #28a745; color: white; }
+        
+        .file-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .file-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .file-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .file-card.failed {
+            border-left-color: #dc3545;
+            background: #fff5f5;
+        }
+        
+        .file-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .file-name {
+            font-weight: 600;
+            color: #212529;
+            font-size: 1.05em;
+        }
+        
+        .score-badge {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .score-badge.low { background: #dc3545; }
+        .score-badge.medium { background: #ffc107; color: #000; }
+        .score-badge.high { background: #28a745; }
+        
+        .file-changes {
+            margin-top: 10px;
+        }
+        
+        .change-item {
+            color: #6c757d;
+            font-size: 0.9em;
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .change-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .warning-item:before {
+            content: "⚠";
+            color: #ffc107;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+        
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 AI-ley Kit Optimizer Summary</h1>
+            <div class="timestamp">1/30/2026, 7:32:19 AM</div>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Files</div>
+                <div class="stat-value">344</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Successful</div>
+                <div class="stat-value" style="color: #28a745;">279</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Failed</div>
+                <div class="stat-value" style="color: #dc3545;">65</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Changes</div>
+                <div class="stat-value" style="color: #ffc107;">330</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Score</div>
+                <div class="stat-value">4.5</div>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('instruction')">Instructions</button><button class="tab " onclick="switchTab('persona')">Personas</button><button class="tab " onclick="switchTab('agent')">Agents</button><button class="tab " onclick="switchTab('skill')">Skills</button><button class="tab " onclick="switchTab('prompt')">Prompts</button>
+        </div>
+        
+        
+        <div id="instruction" class="tab-content active">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by name:</label>
+                    <input type="text" id="instruction-name-filter" placeholder="Search files..." oninput="filterFiles('instruction')">
+                </div>
+                <div class="filter-group">
+                    <label>Priority:</label>
+                    <select id="instruction-priority-filter" onchange="filterFiles('instruction')">
+                        <option value="">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-critical">critical (65)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card failed" data-name="yarn.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">yarn.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="webpack.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">webpack.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="vitest.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">vitest.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="vite.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">vite.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="rollup.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">rollup.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="pytest.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">pytest.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="pnpm.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">pnpm.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="playwright.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">playwright.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="pip.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">pip.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="phpunit.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">phpunit.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="npm.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">npm.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="husky.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">husky.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ missed comma between flow collection entries at line 4, column 113:
+     ... ommit, detection, classification}]
+                                         ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="helm.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">helm.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unidentified alias "*/charts/**" at line 5, column 38:
+     ... rds: [helm,, avoid, **/charts/**,, applyto:, argocd, architectur ... 
+                                         ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="esbuild.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">esbuild.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="digital-ocean.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">digital-ocean.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a double quoted scalar at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="cypress.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">cypress.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="composer.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">composer.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="bun.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">bun.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="base6.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">base6.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 115:
+     ... ards with six dimensions of play: Suit, Rank, Space, Image, Acti ... 
+                                         ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="easyscript.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">easyscript.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Implement lightweight automati ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="easylanguage.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">easylanguage.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Author and evaluate trading st ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="xamarin.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">xamarin.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="web3js.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">web3js.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="vue-js.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">vue-js.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="truffle.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">truffle.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="trading-strategy.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">trading-strategy.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Research and execute strategie ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="tradier.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">tradier.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Integrate with Tradier brokera ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="tauri.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">tauri.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="tailwind.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">tailwind.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="ta-lib.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">ta-lib.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Compute technical indicators r ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="sympy.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">sympy.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Use symbolic math to prototype ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="symfony.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">symfony.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="solidity.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">solidity.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="slim.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">slim.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="semantic-ui.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">semantic-ui.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="scipy.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">scipy.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Optimization, statistics, and  ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="react-native.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">react-native.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="quantrocket.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">quantrocket.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Research and live trading on I ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="qt.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">qt.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="pymc3.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">pymc3.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Bayesian time-series and hiera ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="nwjs.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">nwjs.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="neutralino.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">neutralino.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="material-design.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">material-design.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 9:
+    keywords: [assessment, avoid, applicatio ... 
+            ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="laravel.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">laravel.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="koa.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">koa.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 19:
+    description: Title: Koa (Node.
+                      ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="ionic.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">ionic.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="hftbacktest.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">hftbacktest.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Ultra-fast event-driven backte ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="hardhat.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">hardhat.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="hapi.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">hapi.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 19:
+    description: Title: hapi (Node.
+                      ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="gtk.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">gtk.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="gatsby.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">gatsby.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="freqtrade.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">freqtrade.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Research → backtest → dry-run  ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="foundation.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">foundation.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="flutter.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">flutter.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="expo.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">expo.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="ethers.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">ethers.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="electron.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">electron.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="demeter.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">demeter.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Research and simulate AMM/liqu ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="code-igniter.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">code-igniter.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="chainlink.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">chainlink.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="bulma.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">bulma.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="bootstrap.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">bootstrap.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="babylonjs.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">babylonjs.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ unexpected end of the stream within a flow collection at line 5, column 1:
+    
+    ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="alphapy.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">alphapy.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Build ML-based trading signals ... 
+                        ^</div>
+            
+        </div>
+    
+        <div class="file-card failed" data-name="alphalens.instructions.md" data-priority="critical">
+            <div class="file-header">
+                <div class="file-name">alphalens.instructions.md</div>
+                
+            </div>
+            
+                <div class="error-message">❌ incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 4, column 21:
+    description: Purpose: Evaluate predictive power of a ... 
+                        ^</div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-medium">medium (79)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="zoom-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">zoom-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="webflow-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">webflow-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="storytelling-scroll.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">storytelling-scroll.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="storefront.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">storefront.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="spotify-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">spotify-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="retro-nostalgia.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">retro-nostalgia.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="portfolio.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">portfolio.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="newsfeed.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">newsfeed.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="neumorphism.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">neumorphism.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="netflix-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">netflix-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="minimalist-clean.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">minimalist-clean.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="landing-page.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">landing-page.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="illustration.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">illustration.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="glassmorphism.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">glassmorphism.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="game-dashboard.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">game-dashboard.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="flat-material.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">flat-material.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="discord-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">discord-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="darkmode.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">darkmode.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="bold-typography.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">bold-typography.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="blog.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">blog.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="asymmetry-brokengrid.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">asymmetry-brokengrid.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="animations.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">animations.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="amazon-style.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">amazon-style.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="admin-dashboard.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">admin-dashboard.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="3d-immersive.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">3d-immersive.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="vercel.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">vercel.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="togaf.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">togaf.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="teradata.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">teradata.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="sqlserver.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">sqlserver.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="sequence-diagram.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">sequence-diagram.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="selenium.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">selenium.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="salt.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">salt.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="puppet.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">puppet.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pfsense.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pfsense.instructions.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="oracle.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">oracle.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="nmap.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">nmap.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="netlify.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">netlify.instructions.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="metasploit-framework.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">metasploit-framework.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lint-staged.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">lint-staged.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="grafana.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">grafana.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="enzyme.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">enzyme.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="editorconfig.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">editorconfig.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="docker-compose.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">docker-compose.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="dmn.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">dmn.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="dfd.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">dfd.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="datadog.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">datadog.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="database.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">database.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cmmn.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">cmmn.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="c4.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">c4.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="bpmn.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">bpmn.instructions.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="aws-cloudformation.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">aws-cloudformation.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ansible.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ansible.instructions.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="tsql.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">tsql.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="plsql.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">plsql.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="openscad.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">openscad.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="fortran.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">fortran.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cobol.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">cobol.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ansi-sql.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ansi-sql.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="zipline-reloaded.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">zipline-reloaded.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="vectorbt.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">vectorbt.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="tensorflow.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">tensorflow.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="quantconnect.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">quantconnect.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pytorch.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pytorch.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pyfolio.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pyfolio.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pyalgotrade.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pyalgotrade.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="phaser.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">phaser.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pandas.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pandas.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="openzeppelin.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">openzeppelin.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="numpy.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">numpy.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="nautilustrader.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">nautilustrader.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lean-engine.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">lean-engine.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cake.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">cake.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="bt.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">bt.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="gdpr.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">gdpr.instructions.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pitch-deck.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">pitch-deck.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lean.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">lean.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lean-canvas.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">lean-canvas.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="go-to-market.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">go-to-market.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="business-plan.instructions.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">business-plan.instructions.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-low">low (124)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="brutalism.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">brutalism.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="yum.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">yum.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="wordpress.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">wordpress.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="uml.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">uml.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ufw.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ufw.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="turbo.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">turbo.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="tomato.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">tomato.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="terraform.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">terraform.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="sysml.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">sysml.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="svn.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">svn.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="sqlite.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">sqlite.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="splunk.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">splunk.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="seo-report.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">seo-report.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="sap.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">sap.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="rpm.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">rpm.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="react-redux.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">react-redux.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="prettier.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">prettier.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="postgresql.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">postgresql.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="podman.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">podman.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="plantuml.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">plantuml.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pf.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">pf.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="pecl.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">pecl.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="parcel.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">parcel.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="owasp.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">owasp.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="opnsense.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">opnsense.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="openwrt.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">openwrt.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="openwisp.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">openwisp.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="oauth.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">oauth.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="node-red.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">node-red.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="new-relic.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">new-relic.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="netcat.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">netcat.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="mysql.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">mysql.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="mongodb.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">mongodb.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="mocha.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">mocha.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="mariadb.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">mariadb.instructions.md</div>
+                <div class="score-badge high">4.8</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.8)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="marauder.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">marauder.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="libremesh.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">libremesh.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ldap.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ldap.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="langflow.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">langflow.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="kubernetes.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">kubernetes.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="jest.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">jest.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ipfire.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ipfire.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="git.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">git.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="gcp.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">gcp.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="flipper-zero.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">flipper-zero.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="eslint.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">eslint.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="erd.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">erd.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="elastic-stack.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">elastic-stack.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="dynatrace.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">dynatrace.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="drupal-11.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">drupal-11.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="dpkg.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">dpkg.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="docker.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">docker.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="deauth.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">deauth.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cvs.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">cvs.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="couchdb.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">couchdb.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="chromadb.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">chromadb.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="chef.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">chef.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="azure.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">azure.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="azure-arm.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">azure-arm.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="aws.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">aws.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="atmos-terraform.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">atmos-terraform.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="archimate.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">archimate.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="apt.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">apt.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="typescript.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">typescript.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="swift.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">swift.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="rust.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">rust.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="r.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">r.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="python.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">python.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="powershell.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">powershell.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="php.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">php.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="php.enhanced.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">php.enhanced.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="perl.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">perl.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="objective-c.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">objective-c.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="node-js.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">node-js.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lua.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">lua.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="kotlin.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">kotlin.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="javascript.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">javascript.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="java.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">java.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="html.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">html.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="go.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">go.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="css.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">css.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="csharp.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">csharp.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cpp.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">cpp.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="c.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">c.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="bash.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">bash.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="zend.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">zend.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="vue.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">vue.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="unreal-engine.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">unreal-engine.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="unity.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">unity.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="uikit.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">uikit.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="three-js.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">three-js.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="svelte.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">svelte.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="solid-js.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">solid-js.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="react.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">react.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="qwik.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">qwik.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="quantlib.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">quantlib.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="nuxt-js.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">nuxt-js.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="nest-js.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">nest-js.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="jquery.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">jquery.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="godot.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">godot.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="fastify.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">fastify.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="express.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">express.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="express-api.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">express-api.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="cordova.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">cordova.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="construct3.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">construct3.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="charmbracelet-cli.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">charmbracelet-cli.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="capacitor.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">capacitor.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="azure-function-app.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">azure-function-app.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="angular.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">angular.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="alpaca.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">alpaca.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="troubleshooting.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">troubleshooting.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="planning.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">planning.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="main.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">main.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="js-style-guide.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">js-style-guide.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="documentation.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">documentation.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="developer.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">developer.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="design.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">design.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="compliance.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">compliance.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="coach.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">coach.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="agile.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">agile.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="accessibility.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">accessibility.instructions.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="lean-startup.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">lean-startup.instructions.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="forecast.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">forecast.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ats-optimization.instructions.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ats-optimization.instructions.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    
+        <div id="persona" class="tab-content ">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by name:</label>
+                    <input type="text" id="persona-name-filter" placeholder="Search files..." oninput="filterFiles('persona')">
+                </div>
+                <div class="filter-group">
+                    <label>Priority:</label>
+                    <select id="persona-priority-filter" onchange="filterFiles('persona')">
+                        <option value="">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-medium">medium (1)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="developer.persona.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">developer.persona.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    
+        <div id="agent" class="tab-content ">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by name:</label>
+                    <input type="text" id="agent-name-filter" placeholder="Search files..." oninput="filterFiles('agent')">
+                </div>
+                <div class="filter-group">
+                    <label>Priority:</label>
+                    <select id="agent-priority-filter" onchange="filterFiles('agent')">
+                        <option value="">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-medium">medium (6)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="ailey-product-design.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-product-design.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-planner.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-planner.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-orchestrator.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-orchestrator.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-marketing.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-marketing.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-designer.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-designer.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-data-architect.agent.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-data-architect.agent.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-low">low (16)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="ailey-tester.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-tester.agent.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-security.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-security.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-porting.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-porting.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-patent-reviewer.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-patent-reviewer.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-optimizer.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-optimizer.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-leader-panel.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-leader-panel.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-game-designer.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-game-designer.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-entrepreneur.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-entrepreneur.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-documentation.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-documentation.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-devops.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-devops.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-data-engineer.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-data-engineer.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-collaborative-minds.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-collaborative-minds.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-bugfixer.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-bugfixer.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-brainstorm.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-brainstorm.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-base.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-base.agent.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-architect.agent.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-architect.agent.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    
+        <div id="skill" class="tab-content ">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by name:</label>
+                    <input type="text" id="skill-name-filter" placeholder="Search files..." oninput="filterFiles('skill')">
+                </div>
+                <div class="filter-group">
+                    <label>Priority:</label>
+                    <select id="skill-priority-filter" onchange="filterFiles('skill')">
+                        <option value="">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-medium">medium (6)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 659 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 421 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 515 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Cleaned 1 artifact(s)</div><div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.1)</div><div class="change-item warning-item">Warning: 659 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 667 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="SKILL.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 708 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-low">low (1)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="SKILL.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">SKILL.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Cleaned 1 artifact(s)</div><div class="change-item">Normalized frontmatter</div><div class="change-item">Normalized footer</div><div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    
+        <div id="prompt" class="tab-content ">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by name:</label>
+                    <input type="text" id="prompt-name-filter" placeholder="Search files..." oninput="filterFiles('prompt')">
+                </div>
+                <div class="filter-group">
+                    <label>Priority:</label>
+                    <select id="prompt-priority-filter" onchange="filterFiles('prompt')">
+                        <option value="">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-high">high (3)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="ailey-build-unit-tests.prompt.md" data-priority="high">
+            <div class="file-header">
+                <div class="file-name">ailey-build-unit-tests.prompt.md</div>
+                <div class="score-badge low">3.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 3.7)</div><div class="change-item warning-item">Warning: 3086 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-scaffold.prompt.md" data-priority="high">
+            <div class="file-header">
+                <div class="file-name">ailey-build-scaffold.prompt.md</div>
+                <div class="score-badge low">3.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 3.7)</div><div class="change-item warning-item">Warning: 1404 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-all-glean.prompt.md" data-priority="high">
+            <div class="file-header">
+                <div class="file-name">ailey-add-all-glean.prompt.md</div>
+                <div class="score-badge low">3.8</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 3.8)</div><div class="change-item warning-item">Warning: 1770 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-medium">medium (24)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="ailey-run.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-run.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 671 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-run-refactor.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-run-refactor.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 417 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-run-optimize.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-run-optimize.prompt.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 1500 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-run-flow.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-run-flow.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 755 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-qa-validate.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-qa-validate.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 365 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-qa-audit.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-qa-audit.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 631 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-intake.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-intake.prompt.md</div>
+                <div class="score-badge medium">4.0</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.0)</div><div class="change-item warning-item">Warning: 879 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-grow-learn.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-grow-learn.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 517 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-document.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-document.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 643 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-revenue-projections.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-revenue-projections.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 828 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-requirements.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-requirements.prompt.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 782 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-registry.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-registry.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-plan.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-plan.prompt.md</div>
+                <div class="score-badge medium">4.2</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.2)</div><div class="change-item warning-item">Warning: 1068 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-pitch-deck.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-pitch-deck.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 1522 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-launch-plan.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-launch-plan.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 771 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-gtm-strategy.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-gtm-strategy.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 726 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-design.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-build-design.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 457 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-admin-bench.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-admin-bench.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 458 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-admin-assess.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-admin-assess.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 502 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-skill.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-add-skill.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div><div class="change-item warning-item">Warning: 319 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-prompt.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-add-prompt.prompt.md</div>
+                <div class="score-badge medium">4.3</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.3)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-instructions.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-add-instructions.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 399 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-flow.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-add-flow.prompt.md</div>
+                <div class="score-badge medium">4.4</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.4)</div><div class="change-item warning-item">Warning: 520 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-agent.prompt.md" data-priority="medium">
+            <div class="file-header">
+                <div class="file-name">ailey-add-agent.prompt.md</div>
+                <div class="score-badge medium">4.1</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">Normalized frontmatter</div><div class="change-item">AI review completed (score: 4.1)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        <div class="priority-section">
+            <div class="priority-header">
+                <span class="priority-badge priority-low">low (19)</span>
+            </div>
+            <div class="file-grid">
+                
+        <div class="file-card " data-name="ailey-run-port.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-run-port.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-run-next.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-run-next.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 400 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-report-seo.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-report-seo.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-grow-innovate.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-grow-innovate.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 626 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-grow-evolve.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-grow-evolve.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 663 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-test-plan.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-test-plan.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-resume.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-resume.prompt.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div><div class="change-item warning-item">Warning: 334 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-requirements-extract.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-requirements-extract.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 461 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-marketing-strategy.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-marketing-strategy.prompt.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-market-research.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-market-research.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 813 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-lean-canvas.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-lean-canvas.prompt.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-business-plan.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-business-plan.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 720 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-business-development.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-business-development.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 698 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-build-architecture.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-build-architecture.prompt.md</div>
+                <div class="score-badge high">4.7</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.7)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-admin-repair.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-admin-repair.prompt.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-admin-index.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-admin-index.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-admin-health-check.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-admin-health-check.prompt.md</div>
+                <div class="score-badge high">4.6</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.6)</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-personas.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-add-personas.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div><div class="change-item warning-item">Warning: 304 lines exceeds target 300</div>
+                </div>
+            
+        </div>
+    
+        <div class="file-card " data-name="ailey-add-feature.prompt.md" data-priority="low">
+            <div class="file-header">
+                <div class="file-name">ailey-add-feature.prompt.md</div>
+                <div class="score-badge high">4.5</div>
+            </div>
+            
+                <div class="file-changes">
+                    <div class="change-item">AI review completed (score: 4.5)</div>
+                </div>
+            
+        </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    
+    </div>
+    
+    <script>
+        function switchTab(tabId) {
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+        
+        function filterFiles(type) {
+            const nameFilter = document.getElementById(`${type}-name-filter`).value.toLowerCase();
+            const priorityFilter = document.getElementById(`${type}-priority-filter`).value;
+            
+            document.querySelectorAll(`#${type} .file-card`).forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                const priority = card.dataset.priority;
+                
+                const nameMatch = !nameFilter || name.includes(nameFilter);
+                const priorityMatch = !priorityFilter || priority === priorityFilter;
+                
+                card.style.display = nameMatch && priorityMatch ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,12 +1,9 @@
 ---
-name: 'Multimodal Expert'
-description: 'Expert persona specializing in Multimodal Expert for AI-assisted development'
+id: multimodal-expert
+name: Multimodal Expert
+description: Expert persona specializing in Multimodal Expert for AI-assisted development
 keywords: [directives, constraints, architecture, cli, expert, ai, capabilities, framework, example, behavioral]
 ---
-
-
-
-# Persona: Multimodal AI Expert
 
 ## 1. Role Summary
 A specialized artificial intelligence expert focused on multimodal systems that process and understand multiple types of data simultaneously (text, images, audio, video). Expert in vision-language models, multimodal fusion techniques, and cross-modal understanding for applications like visual question answering, image captioning, and multimodal search.
@@ -121,19 +118,17 @@ See [example-7](./examples/multimodal-expert/example-7.python)
 - **Specialization**: Multimodal AI, Vision-Language Models, Cross-Modal Understanding, Fusion Techniques
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

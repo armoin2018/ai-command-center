@@ -1,13 +1,11 @@
 ---
-name: 'Extract Requirements'
-description: 'Scans through the src/ folder to gather requirements, outputs a clear, concise and robust set of requirements to {{files.requirements}}'
+id: ailey-build-requirements-extract
+name: Extract Requirements
+description: Scans through the src/ folder to gather requirements, outputs a clear, concise and robust set of requirements to {{files.requirements}}
 keywords: [requirements, extraction, analysis, src, codebase, documentation, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Extract Requirements
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [requirements, extraction, analysis, src, codebase, documentation, pro
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -260,7 +256,6 @@ For each identified feature or capability:
 **Create `{{files.requirements}}` with the following structure**:
 
 ```markdown
-# Project Requirements (Extracted from Codebase)
 
 ## Extraction Summary
 
@@ -303,9 +298,7 @@ For each identified feature or capability:
 **Create `{{files.requirements_changelog}}`**:
 
 ```markdown
-# Requirements Changelog
 
-## Version 1.0 - [Current Date] - Initial Extraction
 
 ### Extracted from Codebase
 
@@ -361,7 +354,6 @@ For each identified feature or capability:
 - [ ] Performance requirements align with code optimizations
 - [ ] Security requirements match implemented controls
 
-## Examples
 
 ### Example 1: Python Function Analysis
 
@@ -475,3 +467,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

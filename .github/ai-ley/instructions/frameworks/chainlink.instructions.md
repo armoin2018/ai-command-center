@@ -1,7 +1,7 @@
 ---
 name: 'Chainlink.Instructions'
 description: 'See [example-1](./examples/chainlink/example-1.'
-keywords: [api, (vrf), (ccip), aggregation, [concept, agents, architecture, [pattern, analysis, (beta)]
+keywords: [api, (vrf), (ccip), aggregation, concept, agents, architecture, [pattern, analysis, (beta)
 ---
 
 

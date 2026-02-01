@@ -1,11 +1,10 @@
 ---
-name: 'Webflow Style.Instructions'
-description: 'Development guidelines and best practices for Webflow Style.Instructions'
+id: webflow-style
+name: Webflow Style.Instructions
+description: Development guidelines and best practices for Webflow Style.Instructions
 keywords: [webflow, web design, builder, style.instructions, style, web]
+tools: [undefined]
 ---
-
-
-
 # Webflow-Style Builder
 
 - Drag-and-drop editing interface.
@@ -14,18 +13,7 @@ keywords: [webflow, web design, builder, style.instructions, style, web]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

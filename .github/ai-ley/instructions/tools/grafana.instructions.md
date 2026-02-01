@@ -1,20 +1,16 @@
 ---
-name: 'grafana.instructions'
-description: 'Development guidelines and best practices for Grafana.Instructions'
-keywords: [compose.yml, api, configuration**, analytics, architecture, authentication, configuration, database, advanced, cli]
+id: grafana
+name: grafana.instructions
+description: Development guidelines and best practices for Grafana.Instructions
+keywords: [compose.yml, api, configuration, analytics, architecture, authentication, configuration, database, advanced, cli]
+tools: [undefined]
 ---
-
-
-
-# **🎯 Enterprise Grafana Observability & Visualization Platform**
-
 ## **📊 Advanced Analytics & Observability Intelligence**
 
 Transform your enterprise monitoring capabilities with comprehensive Grafana-powered observability, featuring intelligent dashboards, advanced alerting systems, multi-tenant architecture, and enterprise-grade visualization frameworks for mission-critical infrastructure monitoring and business intelligence.
 
 ---
 
-## **🚀 Enterprise Grafana Configuration Framework**
 
 ### **⚙️ Core Enterprise Configuration**
 
@@ -274,18 +270,7 @@ services:
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

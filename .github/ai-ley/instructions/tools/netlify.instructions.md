@@ -1,12 +1,10 @@
 ---
-name: 'Enterprise Netlify JAMstack Platform Instructions'
-description: 'Enterprise-grade Netlify platform for JAMstack deployment, serverless functions, edge computing, team collaboration, and advanced performance optimization with comprehensive monitoring and security features'
+id: netlify
+name: Enterprise Netlify JAMstack Platform Instructions
+description: Enterprise-grade Netlify platform for JAMstack deployment, serverless functions, edge computing, team collaboration, and advanced performance optimization with comprehensive monitoring and security features
 keywords: [api, cloud, enterprise, frontend, async, example, architecture, database, cli, framework]
+tools: [undefined]
 ---
-
-
-# Enterprise Netlify JAMstack Platform Instructions
-
 ## Tool Overview
 
 - **Tool Name**: Netlify Enterprise Platform
@@ -305,13 +303,8 @@ async def deploy_saas_application():
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.2
 ---
-version: 2.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0

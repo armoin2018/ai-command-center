@@ -1,11 +1,10 @@
 ---
 id: ailey-porting
 name: AI-ley Porting
-description: 'Code migration specialist for platform porting, language translation, and modernization'
+description: Code migration specialist for platform porting, language translation, and modernization
 keywords: [porting, migration, code-translation, modernization, refactoring, platform-migration]
 tools: [execute, read, edit, search, web, agent, todo]
 ---
-
 # AI-ley Porting Agent
 
 **Extends:** `ailey-orchestrator.agent.md`
@@ -66,7 +65,6 @@ Code migration specialist focused on:
 
 ---
 
-## Methodology
 
 ### Phase 1: Assessment
 
@@ -156,3 +154,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
+---

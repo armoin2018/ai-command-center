@@ -1,13 +1,11 @@
 ---
-name: 'Run Flow'
-description: 'Execute PlantUML workflow diagrams as sequences of AI-LEY command actions, interpreting flow logic and chaining prompts systematically.'
+id: ailey-run-flow
+name: Run Flow
+description: Execute PlantUML workflow diagrams as sequences of AI-LEY command actions, interpreting flow logic and chaining prompts systematically.
 keywords: [workflow-execution, plantuml-interpretation, command-chaining, automation, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Run Flow
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -20,8 +18,6 @@ keywords: [workflow-execution, plantuml-interpretation, command-chaining, automa
 **Instructions:** Follow best practices from `.github/ai-ley/instructions/**/*.md`
 
 **Agents:** This prompt is designed for the agent system. See the Recommended Agent section below.
-
-
 
 
 ## Recommended Personas
@@ -262,7 +258,6 @@ You are a workflow execution specialist and PlantUML interpreter with expertise 
 **Execution Status Management**:
 
 ```markdown
-# Workflow Execution Status - {flow-name}
 
 ## Current Execution State
 
@@ -574,7 +569,6 @@ You are a workflow execution specialist and PlantUML interpreter with expertise 
 **Final Execution Report Template**:
 
 ```markdown
-# Workflow Execution Report: {flow-name}
 
 ## Execution Summary
 
@@ -634,7 +628,6 @@ You are a workflow execution specialist and PlantUML interpreter with expertise 
 - {recommendation-3}
 ```
 
-## Examples
 
 ### Example 1: Simple Sequential Flow Execution
 
@@ -647,7 +640,6 @@ run-flow feature-development
 **Flow Execution**:
 
 ```markdown
-# Executing: feature-development.puml
 
 ## Step 1: Start Point
 
@@ -699,7 +691,6 @@ run-flow project-lifecycle
 **Flow Execution**:
 
 ```markdown
-# Executing: project-lifecycle.puml
 
 ## Step 1: Start Point
 
@@ -770,3 +761,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
+---

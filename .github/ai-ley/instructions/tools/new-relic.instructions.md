@@ -1,15 +1,10 @@
 ---
-name: 'new-relic.instructions'
-description: 'Development guidelines and best practices for New Relic.Instructions'
-keywords: [cloud, enterprise, microservices, architecture**, implementation**, **overview**, kubernetes, observability, architecture, level]
+id: new-relic
+name: new-relic.instructions
+description: Development guidelines and best practices for New Relic.Instructions
+keywords: [cloud, enterprise, microservices, architecture, implementation, overview, kubernetes, observability, architecture, level]
+tools: [undefined]
 ---
-
-
-
-# 🚀 Enterprise New Relic - Full-Stack Observability Platform
-
-## **🏢 Level 3 Enterprise Implementation**
-
 ### **Overview**
 
 Enterprise New Relic Platform provides comprehensive full-stack observability with AI-powered insights, distributed tracing, infrastructure monitoring, and business intelligence analytics for mission-critical applications.
@@ -29,21 +24,9 @@ Enterprise New Relic Platform provides comprehensive full-stack observability wi
 
 See [example-1](./examples/new-relic/example-1.python)
 
-
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

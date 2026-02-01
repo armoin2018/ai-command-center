@@ -1,11 +1,10 @@
 ---
-name: 'Drupal 11.Instructions'
-description: 'Development guidelines and best practices for Drupal 11.Instructions'
+id: drupal-11
+name: Drupal 11.Instructions
+description: Development guidelines and best practices for Drupal 11.Instructions
 keywords: [11.instructions, api, context, example, architecture, backend, copilot, database, drupal, avoid]
+tools: [undefined]
 ---
-
-
-
 # GitHub Copilot Instructions
 
 These instructions define how GitHub Copilot should assist with this Drupal project. The goal is to ensure consistent, high-quality code generation aligned with Drupal conventions, security best practices, and our development standards.
@@ -40,7 +39,6 @@ Use this structure as a guide when creating or updating files:
 
 See [example-1](./examples/drupal-11/example-1.text)
 
-## 🧶 Patterns
 
 ### ✅ Patterns to Follow
 
@@ -121,18 +119,7 @@ See [example-1](./examples/drupal-11/example-1.text)
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.5
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

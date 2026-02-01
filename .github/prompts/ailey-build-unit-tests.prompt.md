@@ -1,13 +1,11 @@
 ---
-name: 'Build Unit Tests'
-description: 'Establish comprehensive test environment with unit tests, profiling, health checks, and regression testing. Supports CLI and API execution with synthetic transactions and timeouts.'
+id: ailey-build-unit-tests
+name: Build Unit Tests
+description: Establish comprehensive test environment with unit tests, profiling, health checks, and regression testing. Supports CLI and API execution with synthetic transactions and timeouts.
 keywords: [build, unit, tests, prompt, ailey]
+tools: [execute, read, edit, search, web, agent, todo]
+agent: AI-ley Orchestrator
 ---
-
-
-
-# Copilot Command: Build Unit Tests
-
 ## Variables
 
 - Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
@@ -23,8 +21,6 @@ keywords: [build, unit, tests, prompt, ailey]
   - Cleanup, rollback, and transaction handling requirements
 - Reference applicable personas in `.github/ai-ley/personas` and instructions in `.github/ai-ley/instructions` as needed.
 - Reference testing frameworks from `.ai-ley/shared/indexes/tech-stack.md`
-
-
 
 
 ## Recommended Personas
@@ -2803,7 +2799,6 @@ Create the following test infrastructure:
 Create `tests/README.md`:
 
 ````markdown
-# Test Suite Documentation
 
 ## Quick Start
 
@@ -2868,7 +2863,6 @@ See `.github/workflows/test.yml` for configuration.
 
 ---
 
-## Examples
 
 ### Example 1: Python Project with pytest
 
@@ -2951,7 +2945,6 @@ describe('Calculator', () => {
 
 ---
 
-## Notes
 
 ### Testing Standards Compliance
 
@@ -3099,3 +3092,10 @@ version: 1.0.0
 updated: 2026-01-11
 reviewed: 2026-01-11
 score: 4.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3.7
+---

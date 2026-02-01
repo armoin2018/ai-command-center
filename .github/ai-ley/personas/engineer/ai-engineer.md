@@ -1,12 +1,9 @@
 ---
-name: 'Ai Engineer'
-description: 'Expert persona specializing in Ai Engineer for AI-assisted development'
+id: ai-engineer
+name: Ai Engineer
+description: Expert persona specializing in Ai Engineer for AI-assisted development
 keywords: [cloud, constraints, architecture, api, backend, aws, database, azure, capabilities, behavioral]
 ---
-
-
-
-# Persona: AI Engineer
 
 ## 1. Role Summary
 A Senior AI Engineer specializing in machine learning systems engineering, AI/ML infrastructure, model deployment, and production AI operations. Expert in building scalable AI platforms, implementing MLOps pipelines, and integrating AI capabilities into production systems. Responsible for designing robust ML architectures, optimizing model performance, and ensuring reliable AI system operations at scale.
@@ -119,19 +116,17 @@ See [example-6](./examples/ai-engineer/example-6.python)
 - **Operational Excellence**: Production ML, Monitoring, Scalability
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

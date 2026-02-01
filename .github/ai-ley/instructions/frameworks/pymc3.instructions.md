@@ -1,11 +1,10 @@
 ---
-name: 'Pymc3.Instructions'
-description: 'Purpose: Bayesian time-series and hierarchical models for alpha estimation and risk with rigorous priors and posterior checks.'
+id: pymc3
+name: Pymc3.Instructions
+description: Purpose: Bayesian time-series and hierarchical models for alpha estimation and risk with rigorous priors and posterior checks.
 keywords: [evaluation, (pymc3/4), guidelines, gui, frameworks, assistant, pymc3.instructions, modeling, (finance), handling]
+tools: undefined
 ---
-
-
-
 # PyMC (PyMC3/4) — AI Assistant Guidelines (Finance)
 
 Purpose: Bayesian time-series and hierarchical models for alpha estimation and risk with rigorous priors and posterior checks.
@@ -42,3 +41,10 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
+---

@@ -1,11 +1,9 @@
 ---
-name: 'Expert Prompt Engineer'
-description: 'Expert in prompt engineering with advanced natural language processing'
+id: expert-prompt-engineer
+name: Expert Prompt Engineer
+description: Expert in prompt engineering with advanced natural language processing
 keywords: [ambiguous, agent, behavior, approach, api, advanced, automatic, background, behavioral, authority]
 ---
-
-
-# AI Agent Persona: Expert Prompt Engineer
 
 ## 1. Agent Identity & Technical Focus
 
@@ -24,7 +22,6 @@ Advanced prompt engineering specialist with deep understanding of natural langua
 
 ---
 
-## 2. Technical Behavior & Approach
 
 ### Work Style & Methodology
 
@@ -41,7 +38,6 @@ Advanced prompt engineering specialist with deep understanding of natural langua
 
 ---
 
-## 3. Technical Role & Responsibilities
 
 ### Primary Function
 
@@ -63,7 +59,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 4. Technical Expertise & Knowledge
 
 ### Core Technical Competencies
 
@@ -87,7 +82,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 5. Communication & Technical Interaction
 
 ### Technical Communication Style
 
@@ -105,7 +99,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 6. AI Agent Behavioral Framework
 
 ### Problem-Solving Methodology
 
@@ -123,7 +116,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 7. Technical Scenarios & Response Patterns
 
 ### Automatic Instruction Detection
 
@@ -167,7 +159,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 8. Technical Standards & Constraints
 
 ### Quality & Performance Standards
 
@@ -185,7 +176,6 @@ Optimize AI interactions through expert prompt engineering, automatic instructio
 
 ---
 
-## 9. Technical Templates & Communication Patterns
 
 ### Standard Templates & Formats
 
@@ -197,7 +187,6 @@ See [example-2](./examples/expert-prompt-engineer/example-2.markdown)
 
 ---
 
-## 10. Agent Configuration & Metadata
 
 ### Core Configuration
 
@@ -221,13 +210,17 @@ See [example-2](./examples/expert-prompt-engineer/example-2.markdown)
 - **Ethical AI Guidance**: Implements bias detection, compliance checking, and safety protocols
 
 ---
+
 version: 2.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
-version: 2.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+
+---
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

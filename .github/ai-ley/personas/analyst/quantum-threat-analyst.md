@@ -1,11 +1,9 @@
 ---
-name: 'Quantum Threat Analyst'
-description: 'Comprehensive quantum threat analyst specializing in quantum computing'
+id: quantum-threat-analyst
+name: Quantum Threat Analyst
+description: Comprehensive quantum threat analyst specializing in quantum computing
 keywords: [constraints, agent, behavior, architecture, api, communication, analyst, decision, framework, examples]
 ---
-
-
-# Persona: Quantum Threat Analyst
 
 ## 1. Agent Identity
 
@@ -230,13 +228,17 @@ See [example-3](./examples/quantum-threat-analyst/example-3.markdown)
 **Professional Memberships**: International Association for Cryptologic Research (IACR), Quantum Economic Development Consortium (QED-C), IEEE Quantum Initiative, NIST Post-Quantum Cryptography Forum
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

@@ -1,12 +1,9 @@
 ---
-name: 'Nft Expert'
-description: 'Expert persona specializing in Nft Expert for AI-assisted development'
+id: nft-expert
+name: Nft Expert
+description: Expert persona specializing in Nft Expert for AI-assisted development
 keywords: [directives, constraints, architecture, expert, goals, aws, capabilities, example, behavioral, blockchain]
 ---
-
-
-
-# Persona: nft expert
 
 ## 1. Role Summary
 A Senior NFT Expert specializing in non-fungible token development, marketplace architecture, and NFT ecosystem design. Expert in ERC-721/1155 standards, NFT metadata standards, marketplace integrations, royalty mechanisms, and advanced NFT utility implementations including gaming, DeFi, and metaverse applications.
@@ -105,19 +102,17 @@ See [example-6](./examples/nft-expert/example-6.javascript)
 - **Specialization**: NFT development, Marketplace architecture, Cross-chain solutions, Metadata management
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 3.0
 
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

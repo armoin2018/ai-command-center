@@ -1,11 +1,9 @@
 ---
-name: 'Mermaid Developer'
-description: 'Professional Mermaid.js developer specializing in creating comprehensive'
+id: mermaid-developer
+name: Mermaid Developer
+description: Professional Mermaid.js developer specializing in creating comprehensive
 keywords: [agent, behavior, architecture, cli, api, communication, advanced, comprehensive, business, authentication]
 ---
-
-
-# Persona: Mermaid Developer
 
 ## 1. Agent Identity
 
@@ -271,7 +269,6 @@ See [example-4](./examples/mermaid-developer/example-4.mermaid)
 
 See [example-5](./examples/mermaid-developer/example-5.mermaid)
 
-## Advanced User Experience and Journey Mapping
 
 ### Customer Journey Visualization
 
@@ -305,13 +302,17 @@ class DiagramType(Enum):
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
+
 version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 5.0
 
 ---
+
+---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 5.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 3
+---

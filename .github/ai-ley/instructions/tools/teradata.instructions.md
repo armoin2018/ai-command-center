@@ -1,14 +1,10 @@
 ---
-name: 'Teradata Enterprise Data Warehouse Instructions'
-description: 'Enterprise data warehouse guidance for Teradata Vantage MPP database system, covering advanced SQL, workload management, performance optimization, and analytics for large-scale data operations.'
+id: teradata
+name: Teradata Enterprise Data Warehouse Instructions
+description: Enterprise data warehouse guidance for Teradata Vantage MPP database system, covering advanced SQL, workload management, performance optimization, and analytics for large-scale data operations.
 keywords: [api, cloud, agent, async, architecture, authentication, avoid, cli, azure, aws]
+tools: [undefined]
 ---
-
-
-# Enterprise Teradata Vantage Data Warehouse Platform
-
-## AI Agent Implementation Guide
-
 ### Purpose
 
 Provide comprehensive enterprise-grade guidance for AI agents implementing Teradata Vantage solutions, emphasizing advanced data warehousing, MPP architecture, enterprise analytics, workload management, and governance for large-scale data operations across multi-petabyte environments.
@@ -305,13 +301,8 @@ class EnterpriseTeradataConfig:
 *Content optimized for conciseness. See source history or external references for full details.*
 
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+version: 1.0.0
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.3
 ---
-version: 1.1.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

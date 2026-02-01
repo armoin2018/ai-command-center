@@ -1,11 +1,10 @@
 ---
-name: 'Vectorbt.Instructions'
-description: 'Development guidelines and best practices for Vectorbt.Instructions'
+id: vectorbt
+name: Vectorbt.Instructions
+description: Development guidelines and best practices for Vectorbt.Instructions
 keywords: [vectorbt.instructions, testing, gui, frameworks]
+tools: [undefined]
 ---
-
-
-
 Title: vectorbt — AI Agent Backtesting Guide
 
 Scope
@@ -23,18 +22,7 @@ AI Assistant Guidelines
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

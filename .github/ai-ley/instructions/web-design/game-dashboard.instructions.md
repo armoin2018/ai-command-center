@@ -1,11 +1,10 @@
 ---
-name: 'Game Dashboard.Instructions'
-description: 'Development guidelines and best practices for Game Dashboard.Instructions'
+id: game-dashboard
+name: Game Dashboard.Instructions
+description: Development guidelines and best practices for Game Dashboard.Instructions
 keywords: [dashboard, dashboard.instructions, web design, game]
+tools: [undefined]
 ---
-
-
-
 # Game Dashboard
 
 - Gamified UI with leaderboards and avatars.
@@ -14,18 +13,7 @@ keywords: [dashboard, dashboard.instructions, web design, game]
 
 ---
 version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
+updated: 2026-01-30
+reviewed: 2026-01-30
+score: 4.4
 ---
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0
-
----
-version: 1.0.0
-updated: 2026-01-10
-reviewed: 2026-01-10
-score: 3.0

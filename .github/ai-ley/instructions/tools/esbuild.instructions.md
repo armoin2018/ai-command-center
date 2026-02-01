@@ -1,7 +1,7 @@
 ---
 name: 'Esbuild.Instructions'
 description: 'See [example-29](./examples/esbuild/example-29.'
-keywords: [api, automation, (esbuild.config.js), asset, bundle, [related, build, bundling, advanced, bundler]
+keywords: [api, automation, (esbuild.config.js), asset, bundle, related, build, bundling, advanced, bundler
 ---
 
 
