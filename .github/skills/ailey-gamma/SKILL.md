@@ -413,7 +413,7 @@ npm run rag query "product features" -o features.md
 npm run gamma create file -i features.md --theme modern
 ```
 
-### With ailey-data-converter
+### With ailey-tools-data-converter
 
 Convert data to markdown, then to presentation:
 

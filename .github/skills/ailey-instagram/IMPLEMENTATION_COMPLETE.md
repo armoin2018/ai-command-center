@@ -411,7 +411,7 @@ npm run instagram hashtags research \
 - **ailey-jira**: Track social media campaigns as issues
 - **ailey-gamma**: Create Instagram-optimized graphics
 - **ailey-facebook**: Cross-post between platforms
-- **ailey-data-converter**: Export analytics to various formats
+- **ailey-tools-data-converter**: Export analytics to various formats
 
 ---
 

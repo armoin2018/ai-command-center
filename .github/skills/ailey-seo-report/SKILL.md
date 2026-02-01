@@ -50,8 +50,8 @@ npm install
 - **Marketing Agent**: `.github/agents/ailey-marketing.agent.md` - Recommended agent for SEO workflows
 
 **Related Skills:**
-- `ailey-data-converter` - Convert report formats (JSON to CSV, etc.)
-- `ailey-image-tool` - Optimize images identified in reports
+- `ailey-tools-data-converter` - Convert report formats (JSON to CSV, etc.)
+- `ailey-tools-image` - Optimize images identified in reports
 
 **Related Prompts:**
 - `ailey-report-seo.prompt.md` - Generate SEO reports (delegates to this skill)

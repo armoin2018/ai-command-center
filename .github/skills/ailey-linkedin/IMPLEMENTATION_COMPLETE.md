@@ -289,7 +289,7 @@ npm run linkedin pages list
 
 - **ailey-jira**: Track social media campaigns as issues
 - **ailey-tag-n-rag**: Index LinkedIn posts for searchable archive
-- **ailey-data-converter**: Export content to various formats
+- **ailey-tools-data-converter**: Export content to various formats
 - **Standalone**: Professional networking automation
 
 ---

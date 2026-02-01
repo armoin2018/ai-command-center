@@ -25,7 +25,7 @@ The manage-plan skill provides complete lifecycle management for PLAN.json:
 - **Bulk**: Update or delete multiple items with queries
 
 **Integration:**
-- Leverages ailey-data-converter modules for shared functionality
+- Leverages ailey-tools-data-converter modules for shared functionality
 - Schema validation with AJV
 - Compatible with existing PLAN.json structure
 
@@ -455,17 +455,17 @@ Supported jq-style operations:
 
 ## Integration with Data Converter
 
-This skill leverages shared modules from ailey-data-converter:
+This skill leverages shared modules from ailey-tools-data-converter:
 
 ```typescript
 // Shared schema validation
-import { SchemaValidator } from '../ailey-data-converter/lib/schema';
+import { SchemaValidator } from '../ailey-tools-data-converter/lib/schema';
 
 // Shared query engine
-import { QueryExecutor } from '../ailey-data-converter/lib/query';
+import { QueryExecutor } from '../ailey-tools-data-converter/lib/query';
 
 // Shared CRUD operations
-import { CRUDOperations } from '../ailey-data-converter/lib/crud';
+import { CRUDOperations } from '../ailey-tools-data-converter/lib/crud';
 ```
 
 **Benefits:**
@@ -509,7 +509,7 @@ The tool provides clear error messages:
 
 ## Related Skills
 
-- **ailey-data-converter**: Shared modules for schema, query, CRUD operations
+- **ailey-tools-data-converter**: Shared modules for schema, query, CRUD operations
 - **ailey-index-tool**: Index management for skill discovery
 - **ailey-progress-report**: Generate progress reports from PLAN.json
 

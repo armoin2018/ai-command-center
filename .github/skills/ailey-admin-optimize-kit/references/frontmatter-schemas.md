@@ -292,7 +292,7 @@ score: 4.5
 
 ```markdown
 ---
-id: ailey-image-tool
+id: ailey-tools-image
 name: Image Manipulation Toolkit
 description: Comprehensive image processing with format conversion, animation, editing, and OCR. Use when working with images, creating animations, or extracting text from scans.
 category: media-processing

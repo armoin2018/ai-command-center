@@ -69,13 +69,13 @@ async function transcribeAudio(
 }
 
 async function extractTextFromImage(file: FileEntry): Promise<string> {
-  // TODO: Integrate with ailey-image-tool OCR
+  // TODO: Integrate with ailey-tools-image OCR
   console.warn(`Image OCR not yet implemented for: ${file.path}`);
   return `[Image content from ${file.path}]`;
 }
 
 async function extractTextFromPDF(file: FileEntry): Promise<string> {
-  // TODO: Use pdf-parse or ailey-image-tool OCR
+  // TODO: Use pdf-parse or ailey-tools-image OCR
   console.warn(`PDF extraction not yet implemented for: ${file.path}`);
   return `[PDF content from ${file.path}]`;
 }

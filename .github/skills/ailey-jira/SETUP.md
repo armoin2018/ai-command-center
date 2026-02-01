@@ -179,7 +179,7 @@ npm run sync push -- --project PROJ --dry-run
 1. Review [SKILL.md](SKILL.md) for comprehensive documentation
 2. See [jql-guide.md](references/jql-guide.md) for advanced queries
 3. Read [sync-strategies.md](references/sync-strategies.md) for sync workflows
-4. Explore integration with `ailey-data-converter` and `ailey-manage-plan`
+4. Explore integration with `ailey-tools-data-converter` and `ailey-manage-plan`
 
 ## Environment File Locations
 

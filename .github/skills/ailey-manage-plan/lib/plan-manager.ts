@@ -2,7 +2,7 @@
  * Plan Manager Library
  * 
  * Manages PLAN.json with schema evolution, CRUD operations, and jq-style queries
- * Leverages shared modules from ailey-data-converter skill
+ * Leverages shared modules from ailey-tools-data-converter skill
  */
 
 import { readFileSync, writeFileSync, existsSync, copyFileSync } from 'fs';

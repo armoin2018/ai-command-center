@@ -27,7 +27,7 @@ follow the instructions defined in the prompt
 
 [X] ailey-jira
 
-[X] update the ailey-data-converter skill to support 
+[X] update the ailey-tools-data-converter skill to support 
   - generation of schemas 
   - conversion of schemas 
   - support schema evolution 
@@ -56,14 +56,14 @@ follow the instructions defined in the prompt
 - ailey-evolve
 
 
-[X} ailey-data-converter
+[X} ailey-tools-data-converter
 
 
 
 [X] ailey-pdf-converter (image-tool)
 
 
-[X] /addSkill ailey-image-tool
+[X] /addSkill ailey-tools-image
  - Tool must have the ability to do various functions against images.  
  - Should be broken out into modular structure so other skills can leverage them
  - Utilize only MIT or CCO tooling
@@ -192,7 +192,7 @@ score: 5.0
 
 [X] ailey-discord
 
-- ailey-zapier
+
 
 - ailey-mailchimp
 
@@ -204,7 +204,11 @@ score: 5.0
 
 - ailey-zoom
 
-- ailey-youtube
+- ailey-whatsapp
+
+[R] ailey-youtube
+
+[X] ailey-threads
 
 - ailey-capcut
 
@@ -212,8 +216,31 @@ score: 5.0
 
 - ailey-meetup
 
-- ailey-threads
+- ailey-etsy
+
+- ailey-zapier
+
+- ailey-make
+
+- ailey-web-crawl
+
+- calendly
+https://developer.calendly.com/getting-started
+
+
+- Meevo
+  - https://docs.meevoapi.com/
+
+- TimeTap
+  - https://timetap.atlassian.net/wiki/spaces/TTAPI/overview
+
+- SalesForce
+
+- Twilio
+
+- vonage 
 
 Persona 
 - Operations Manager
 
+- 

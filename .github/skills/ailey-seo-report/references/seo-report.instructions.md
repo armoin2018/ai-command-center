@@ -379,8 +379,8 @@ Overall Score = (Technical × 0.25) + (Content × 0.30) +
 - `.github/ai-ley/personas/analyst/technical-analyst.md` - Performance analysis
 
 **Related Skills:**
-- `ailey-data-converter` - Convert report formats (JSON to CSV, etc.)
-- `ailey-image-tool` - Optimize images identified in reports
+- `ailey-tools-data-converter` - Convert report formats (JSON to CSV, etc.)
+- `ailey-tools-image` - Optimize images identified in reports
 
 **Related Prompts:**
 - `ailey-report-seo.prompt.md` - Generate SEO reports (redirects to this skill)

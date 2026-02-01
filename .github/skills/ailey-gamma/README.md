@@ -205,7 +205,7 @@ npm run rag query "features" -o content.md
 npm run gamma create file -i content.md
 ```
 
-### With ailey-data-converter
+### With ailey-tools-data-converter
 
 ```bash
 # Convert data to markdown

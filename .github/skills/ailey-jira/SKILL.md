@@ -330,16 +330,16 @@ npm run export -- \
 
 ## Integration
 
-### With ailey-data-converter
+### With ailey-tools-data-converter
 
-Use ailey-data-converter for advanced filtering and transformations:
+Use ailey-tools-data-converter for advanced filtering and transformations:
 
 ```bash
 # Export to JSON
 npm run export -- -j "project = PROJ" -o issues.json -f json
 
-# Use ailey-data-converter for advanced queries
-cd .github/skills/ailey-data-converter
+# Use ailey-tools-data-converter for advanced queries
+cd .github/skills/ailey-tools-data-converter
 npm run query ../ailey-jira/.rag/issues.json \
   --filter '.[] | select(.priority == "High")' \
   --output high-priority.json

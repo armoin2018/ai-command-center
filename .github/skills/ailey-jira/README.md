@@ -59,7 +59,7 @@ npm run sync pull -- -j "project = PROJ"
 ## Integration
 
 Works with:
-- **ailey-data-converter**: Advanced filtering and transformations
+- **ailey-tools-data-converter**: Advanced filtering and transformations
 - **ailey-manage-plan**: Comprehensive project management
 - **.project/PLAN.json**: Local project planning
 

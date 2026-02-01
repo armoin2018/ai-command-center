@@ -216,7 +216,7 @@ Operations:
 
 ### Intelligent Chunking
 
-**scripts/chunk-content.ts** - Chunk text with ailey-data-converter
+**scripts/chunk-content.ts** - Chunk text with ailey-tools-data-converter
 
 Strategy:
 1. Target chunk size in words
@@ -313,12 +313,12 @@ interface RAGMetadata {
 
 ## Integration
 
-### With ailey-data-converter
+### With ailey-tools-data-converter
 
 Uses the data converter skill for chunking:
 
 ```typescript
-import { chunk } from '../ailey-data-converter/scripts/chunk.ts';
+import { chunk } from '../ailey-tools-data-converter/scripts/chunk.ts';
 
 const chunks = await chunk(content, {
   size: 300,
@@ -328,12 +328,12 @@ const chunks = await chunk(content, {
 });
 ```
 
-### With ailey-image-tool
+### With ailey-tools-image
 
 Uses image tool for OCR:
 
 ```typescript
-import { ocr } from '../ailey-image-tool/scripts/ocr.ts';
+import { ocr } from '../ailey-tools-image/scripts/ocr.ts';
 
 const text = await ocr(imagePath, {
   language: 'eng',

@@ -519,13 +519,13 @@ const space = await client.getSpace('DEV');
 
 ## Integration with AI-ley Ecosystem
 
-### With ailey-image-tool
+### With ailey-tools-image
 
 Process images before uploading as attachments:
 
 ```typescript
 // 1. Optimize image
-// Use ailey-image-tool to resize/compress
+// Use ailey-tools-image to resize/compress
 
 // 2. Upload as attachment
 const attachment = await client.uploadAttachment(
@@ -539,12 +539,12 @@ import { createImageMacro } from './scripts/format-converters';
 const imageMacro = createImageMacro('optimized-image.png', 800);
 ```
 
-### With ailey-data-converter
+### With ailey-tools-data-converter
 
 Convert structured data to Confluence tables:
 
 ```typescript
-// 1. Use ailey-data-converter to read CSV/JSON
+// 1. Use ailey-tools-data-converter to read CSV/JSON
 // 2. Convert to HTML table
 // 3. Embed in Confluence page content
 ```

@@ -364,7 +364,7 @@ You can now use all Facebook commands.
 3. **ailey-gamma**: Share presentations on Facebook, create visual content
 4. **ailey-standard-email**: Email notifications for leads, social media alerts
 5. **ailey-confluence**: Document social media strategy, maintain content calendar
-6. **ailey-data-converter**: Export analytics to various formats for reporting
+6. **ailey-tools-data-converter**: Export analytics to various formats for reporting
 
 ### Workflow Automation Examples
 - Automated content publishing across Facebook and Instagram

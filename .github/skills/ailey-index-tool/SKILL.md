@@ -382,7 +382,7 @@ $ node scripts/search.ts --jq '.[] | select(.score >= 4.5) | {name, score}'
 ```bash
 $ node scripts/search.ts --type skills personas --keywords typescript --names-only
 
-ailey-data-converter
+ailey-tools-data-converter
 ailey-indexer
 typescript-expert
 backend-developer
