@@ -3,7 +3,7 @@ id: netflix-style
 name: Netflix Style.Instructions
 description: Development guidelines and best practices for Netflix Style.Instructions
 keywords: [style, web design, netflix, style.instructions]
-tools: [undefined]
+
 ---
 # Netflix Style UI
 

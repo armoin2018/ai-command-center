@@ -1,0 +1,50 @@
+{
+  "name": "ailey-tools-video",
+  "version": "1.0.0",
+  "description": "Comprehensive video processing toolkit for AI-ley - conversion, editing, captioning, manipulation, multi-file batch processing (arrays, globs), and streaming (HTTP/HTTPS, RTSP, RTMP, HLS, stdin/stdout)",
+  "main": "scripts/index.ts",
+  "scripts": {
+    "video": "tsx scripts/index.ts",
+    "test": "tsx scripts/index.ts test",
+    "test-client": "tsx scripts/test-client.ts",
+    "build": "tsc",
+    "dev": "tsx watch scripts/index.ts"
+  },
+  "keywords": [
+    "video",
+    "ffmpeg",
+    "conversion",
+    "editing",
+    "captioning",
+    "subtitles",
+    "video-processing",
+    "multimedia",
+    "ai-ley",
+    "batch-processing",
+    "streaming",
+    "rtsp",
+    "rtmp",
+    "hls",
+    "glob-patterns",
+    "multi-file",
+    "ip-camera",
+    "live-streaming"
+  ],
+  "author": "AI-ley Kit",
+  "license": "MIT",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.3",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^1.4.1",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7",
+    "axios": "^1.7.9",
+    "glob": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.26",
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

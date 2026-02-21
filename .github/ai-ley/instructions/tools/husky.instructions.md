@@ -1,9 +1,8 @@
 ---
-name: 'Husky Enterprise Git Hooks Security & Workflow Automation Platform'
-description: 'Enterprise-grade Husky platform with advanced Git hooks automation, security-focused commit validation, comprehensive policy enforcement, automated security scanning integration, enterprise workflow orchestration, and advanced developer productivity optimization for complete enterprise Git workflow management and security automation.'
-keywords: [api, content, classification:, async, alerts, database, automation, commit, detection, classification}]
+name: husky
+description: Enterprise-grade Husky platform with advanced Git hooks automation, security-focused commit validation, comprehensive policy enforcement, automated security scanning integration, enterprise workflow orchestration, and advanced developer productivity optimization for complete enterprise Git workflow management and security automation.
+keywords: [api, content, classification:, async, alerts, database, automation, commit, detection, classification, enterprise, enforcement, git, hooks, integration, monitoring, optimization, orchestration, performance, productivity, remediation, security, scanning, validation, workflow ]
 ---
-
 
 # Husky Enterprise Git Hooks Security & Workflow Automation Platform
 

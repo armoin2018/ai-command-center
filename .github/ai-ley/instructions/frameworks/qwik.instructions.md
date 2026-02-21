@@ -3,7 +3,7 @@ id: qwik
 name: Qwik.Instructions
 description: Development guidelines and best practices for Qwik.Instructions
 keywords: [common, cli, caching, concepts, assistant, actions, additional, commands, authentication, adapters]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: Qwik

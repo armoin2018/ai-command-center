@@ -3,7 +3,7 @@ id: 3d-immersive
 name: 3D Immersive.Instructions
 description: Development guidelines and best practices for 3D Immersive.Instructions
 keywords: [immersive.instructions, web design, immersive, web]
-tools: [undefined]
+
 ---
 # 3D & Immersive Web
 

@@ -3,7 +3,7 @@ id: database
 name: Database Development Instructions
 description: Comprehensive database coding and style guide with AI linting hints for database development, covering SQL best practices, schema design, performance optimization, and security standards across multiple database systems.
 keywords: [api, agent, async, development, architecture, authentication, authorization, database, cli, database.instructions]
-tools: [undefined]
+
 ---
 ### Purpose
 

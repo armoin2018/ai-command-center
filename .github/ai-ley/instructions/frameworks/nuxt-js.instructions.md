@@ -1,9 +1,8 @@
 ---
-id: nuxt-js
-name: Nuxt Js.Instructions
-description: Development guidelines and best practices for Nuxt Js.Instructions
-keywords: [api, commands, common, bundle, assistant, authentication, architecture, backend, analysis, cli]
-tools: [undefined]
+name: nuxt-js
+description: Nuxt.js Framework Instructions for AI Agents
+keywords: [nuxt-js, vue.js, server-side rendering, static site generation, full-stack framework, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 ## Framework Overview
 - **Framework Name**: Nuxt.js

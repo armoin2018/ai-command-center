@@ -3,7 +3,7 @@ id: mocha
 name: Mocha JavaScript Testing Framework Instructions
 description: Comprehensive guide for using Mocha testing framework for JavaScript
 keywords: [(tdd), performance, .mocharc.json, advanced, avoid, common, use, (.mocharc.json), test, asynchronous]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

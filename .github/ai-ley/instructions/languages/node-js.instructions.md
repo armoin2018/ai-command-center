@@ -3,7 +3,7 @@ id: node-js
 name: Node Js.Instructions
 description: Comprehensive Node.js development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, framework, async, general, gui, guidelines, architecture, conventions, features]
-tools: [undefined]
+
 ---
 # Node.js Programming Instructions
 

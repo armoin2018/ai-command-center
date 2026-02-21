@@ -1,0 +1,54 @@
+{
+  "core-utils": {
+    "defaultEnabled": true,
+    "files": [
+      ".github/skills/example-kit/scripts/utils.ts",
+      ".github/skills/example-kit/scripts/types.ts"
+    ],
+    "description": "Core utility functions and type definitions",
+    "category": "core",
+    "supportedAgentic": "*"
+  },
+  "advanced-features": {
+    "defaultEnabled": false,
+    "files": [
+      ".github/skills/example-kit/scripts/advanced.ts",
+      ".github/skills/example-kit/scripts/experimental.ts"
+    ],
+    "description": "Advanced experimental features",
+    "category": "optional",
+    "dependencies": ["core-utils"],
+    "supportedAgentic": ["copilot", "claude", "cursor"]
+  },
+  "ui-components": {
+    "defaultEnabled": true,
+    "files": [
+      ".github/skills/example-kit/ui/components.ts",
+      ".github/skills/example-kit/ui/styles.css"
+    ],
+    "description": "UI components for webview panels",
+    "category": "optional",
+    "supportedAgentic": "*"
+  },
+  "documentation": {
+    "defaultEnabled": true,
+    "files": [
+      ".github/skills/example-kit/README.md",
+      ".github/skills/example-kit/examples/USAGE.md"
+    ],
+    "description": "Documentation and usage examples",
+    "category": "optional",
+    "supportedAgentic": "*"
+  },
+  "testing-utils": {
+    "defaultEnabled": false,
+    "files": [
+      ".github/skills/example-kit/test/utils.test.ts",
+      ".github/skills/example-kit/test/fixtures.ts"
+    ],
+    "description": "Testing utilities and fixtures",
+    "category": "experimental",
+    "dependencies": ["core-utils"],
+    "supportedAgentic": "*"
+  }
+}

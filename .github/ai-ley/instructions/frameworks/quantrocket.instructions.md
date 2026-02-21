@@ -3,7 +3,7 @@ id: quantrocket
 name: Quantrocket.Instructions
 description: Purpose: Research and live trading on IBKR and other data sources via containerized services with reproducible pipelines.
 keywords: [calendars, compliance, guidelines, architecture, gui, frameworks, avoid, assistant, docker, quantrocket]
-tools: undefined
+
 ---
 # QuantRocket — AI Assistant Guidelines
 

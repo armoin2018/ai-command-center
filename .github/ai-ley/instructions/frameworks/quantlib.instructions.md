@@ -3,7 +3,7 @@ id: quantlib
 name: Quantlib.Instructions
 description: Development guidelines and best practices for Quantlib.Instructions
 keywords: [calendar, calibration, commands, common, caching, assistant, architecture, concepts, configuration, arithmetic]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: QuantLib

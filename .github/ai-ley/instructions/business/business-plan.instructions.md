@@ -3,7 +3,7 @@ id: business-plan
 name: business-plan.instructions
 description: Development guidelines and best practices for Business Plan.Instructions
 keywords: [business, plan.instructions]
-tools: [undefined]
+
 ---
 
 

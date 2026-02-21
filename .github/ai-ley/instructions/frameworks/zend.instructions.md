@@ -3,7 +3,7 @@ id: zend
 name: Zend.Instructions
 description: Development guidelines and best practices for Zend.Instructions
 keywords: [testing, security, gui, frameworks, zend.instructions, framework]
-tools: [undefined]
+
 ---
 Title: Zend Framework → Laminas Migration — AI Agent Playbook
 

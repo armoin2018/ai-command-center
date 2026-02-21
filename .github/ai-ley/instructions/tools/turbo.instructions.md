@@ -3,7 +3,7 @@ id: turbo
 name: Turbo.Instructions
 description: See [example-5](./examples/turbo/example-5.
 keywords: [advanced, build, architecture, authentication, assistant, backend, cache, avoid, ci/cd, benefits]
-tools: [undefined]
+
 ---
 `
 ---

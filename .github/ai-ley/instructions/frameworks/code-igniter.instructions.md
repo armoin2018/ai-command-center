@@ -1,7 +1,7 @@
 ---
-name: 'Code Igniter.Instructions'
-description: 'See [example-1](./examples/code-igniter/example-1.'
-keywords: [pattern, [concept, architecture, analysis, api, authorization, agents, avoid, building, authentication
+name: code-igniter
+description: CodeIgniter Framework Instructions for AI Agents
+keywords: [codeigniter, php, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

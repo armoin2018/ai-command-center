@@ -3,7 +3,7 @@ id: ldap
 name: LDAP Directory Services Security Instructions
 description: LDAP directory services security implementation guide covering centralized authentication, secure user management, access control, enterprise identity management, production deployment strategies, threat modeling, and advanced security monitoring.
 keywords: [api, (olcaccess), agent, (lightweight, access, architecture, assistant, authentication, authorization, advanced]
-tools: [undefined]
+
 ---
 ### Purpose
 

@@ -1,7 +1,7 @@
 ---
-name: 'Composer.Instructions'
-description: 'See [example-35](./examples/composer/example-35.'
-keywords: [automation, (basic, autoloading, related, authentication, cache, analysis, advanced, best-practices, cases
+name: composer
+description: Comprehensive guide for Composer PHP Package Manager, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [ composer, php, package-manager, dependency-management, autoloading, performance-optimization, security, private-repositories, version-constraints ]
 ---
 
 

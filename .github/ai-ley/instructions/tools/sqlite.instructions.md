@@ -3,7 +3,7 @@ id: sqlite
 name: SQLite Embedded Database Instructions
 description: SQLite embedded database implementation guide covering lightweight database operations, file-based storage, performance optimization, integration patterns, production deployment strategies, and advanced troubleshooting for applications requiring zero-configuration database solutions.
 keywords: [deployment, desktop, agent, applications, docker, architecture, configuration, database, avoid, cli]
-tools: [undefined]
+
 ---
 ### Purpose
 

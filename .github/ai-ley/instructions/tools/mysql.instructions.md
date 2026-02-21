@@ -3,7 +3,7 @@ id: mysql
 name: mysql.instructions
 description: Development guidelines and best practices for Mysql.Instructions
 keywords: [alerting, application, agent, platform, access, architecture, assistant, authentication, authorization, advanced]
-tools: [undefined]
+
 ---
 ### **Platform Purpose & Capabilities**
 

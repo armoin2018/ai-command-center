@@ -3,7 +3,7 @@ id: uml
 name: uml.instructions
 description: Development guidelines and best practices for Uml.Instructions
 keywords: [api, application, analytics, platform, async, uml, architecture, backend, advanced, applications]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

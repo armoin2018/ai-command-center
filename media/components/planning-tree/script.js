@@ -146,15 +146,7 @@
         }
 
         getStatusBadgeColor(status) {
-            const colors = {
-                'todo': 'secondary',
-                'ready': 'info',
-                'in-progress': 'primary',
-                'review': 'warning',
-                'done': 'success',
-                'blocked': 'danger'
-            };
-            return colors[status] || 'secondary';
+            return window.AICC?.utils?.getStatusBadgeColor(status) || 'secondary';
         }
 
         toggleNode($node) {

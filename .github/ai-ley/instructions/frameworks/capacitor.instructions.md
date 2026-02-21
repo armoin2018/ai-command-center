@@ -3,7 +3,7 @@ id: capacitor
 name: Capacitor.Instructions
 description: See [example-1](./examples/capacitor/example-1.
 keywords: [api, agent, capacitor.instructions, agents, object Object, architecture, authentication, capacitor, avoid, (capacitor.config.ts)]
-tools: [undefined]
+
 ---
 ## When to Use Capacitor
 

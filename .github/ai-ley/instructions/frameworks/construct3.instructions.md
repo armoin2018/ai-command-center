@@ -3,7 +3,7 @@ id: construct3
 name: Construct3.Instructions
 description: See [example-1](./examples/construct3/example-1.
 keywords: [cloud, agent, 5.0/5.0, architecture, api, based, agents, avoid, browser, behaviors]
-tools: [undefined]
+
 ---
 ## When to Use Construct 3
 

@@ -124,25 +124,11 @@
         }
 
         getStatusBadgeClass(status) {
-            const classes = {
-                'todo': 'bg-secondary',
-                'ready': 'bg-info',
-                'in-progress': 'bg-primary',
-                'review': 'bg-warning text-dark',
-                'done': 'bg-success',
-                'blocked': 'bg-danger'
-            };
-            return classes[status] || 'bg-secondary';
+            return window.AICC?.utils?.getStatusBadgeClass(status) || 'bg-secondary';
         }
 
         getPriorityBadgeClass(priority) {
-            const classes = {
-                'low': 'bg-secondary',
-                'medium': 'bg-info',
-                'high': 'bg-warning text-dark',
-                'critical': 'bg-danger'
-            };
-            return classes[priority] || 'bg-info';
+            return window.AICC?.utils?.getPriorityBadgeClass(priority) || 'bg-info';
         }
 
         async toggleComplete(isComplete) {

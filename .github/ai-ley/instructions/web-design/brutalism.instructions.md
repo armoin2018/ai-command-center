@@ -3,7 +3,7 @@ id: brutalism
 name: Brutalism.Instructions
 description: See [example-1](./examples/brutalism/example-1.
 keywords: [brutalist, artist, characteristics, color, brand, brutalism.instructions, assistant, avoid, cases, broken]
-tools: [undefined]
+
 ---
 ## Design Philosophy
 

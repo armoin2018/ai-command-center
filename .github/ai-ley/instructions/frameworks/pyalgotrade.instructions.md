@@ -1,9 +1,8 @@
 ---
-id: pyalgotrade
-name: Pyalgotrade.Instructions
-description: Development guidelines and best practices for Pyalgotrade.Instructions
-keywords: [testing, architecture, gui, api, frameworks, pyalgotrade.instructions, framework, performance]
-tools: [undefined]
+name: pyalgotrade
+description: PyAlgoTrade — AI Agent Trading Guide
+keywords: [pyalgotrade, trading, backtesting, event-driven, finance, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 Title: PyAlgoTrade — AI Agent Trading Guide
 

@@ -1,7 +1,7 @@
 ---
-name: 'Hardhat Ethereum Development Framework Instructions'
-description: 'Comprehensive guide for Hardhat development environment for Ethereum'
-keywords: [common, complexity, agent, pattern, [concept, analysis, use, building, assessment, avoid
+name: hardhat
+description: Hardhat Ethereum Development Framework Instructions for AI Agents
+keywords: [hardhat, ethereum, smart contracts, blockchain development, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

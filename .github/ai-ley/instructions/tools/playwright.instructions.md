@@ -1,7 +1,7 @@
 ---
-name: 'Playwright.Instructions'
-description: 'See [example-19](./examples/playwright/example-19.'
-keywords: [api, basic, browser, automation, related, authentication, best-practices, advanced, (playwright.config.ts), cases
+name: playwright
+description: Comprehensive instructions for using the Playwright end-to-end testing framework, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [api, basic, browser, automation, related, authentication, best-practices, advanced, cases ]
 ---
 
 

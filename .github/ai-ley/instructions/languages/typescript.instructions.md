@@ -3,7 +3,7 @@ id: typescript
 name: Typescript.Instructions
 description: Comprehensive TypeScript development guidelines emphasizing type safety, modern patterns, and maintainable code for AI coding assistants.
 keywords: [context, common, async, build, class, configuration, advanced, design, component, error]
-tools: [undefined]
+
 ---
 # TypeScript Programming Instructions
 

@@ -3,7 +3,7 @@ id: cvs
 name: Cvs.Instructions
 description: Development guidelines and best practices for Cvs.Instructions
 keywords: [administrative, commands, (concurrent, common, architecture, assistant, backend, avoid, cli, benefits]
-tools: [undefined]
+
 ---
 `
 ---

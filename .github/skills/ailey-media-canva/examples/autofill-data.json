@@ -1,0 +1,69 @@
+{
+  "batch_id": "social_media_posts_2024_q1",
+  "template_id": "DAGQGfBz8Qk",
+  "data": [
+    {
+      "title": "Spring Sale Announcement",
+      "variables": {
+        "headline": "Spring Sale - 40% Off",
+        "subheading": "Limited Time Offer",
+        "cta": "Shop Now",
+        "background_color": "#FFB6C1",
+        "image_url": "https://example.com/spring-sale.jpg",
+        "discount_percentage": "40",
+        "valid_until": "March 31, 2024"
+      }
+    },
+    {
+      "title": "New Product Launch",
+      "variables": {
+        "headline": "Introducing Our Latest Collection",
+        "subheading": "Discover Innovation",
+        "cta": "Learn More",
+        "background_color": "#87CEEB",
+        "image_url": "https://example.com/new-product.jpg",
+        "product_name": "Smart Widget Pro",
+        "release_date": "April 1, 2024"
+      }
+    },
+    {
+      "title": "Customer Testimonial",
+      "variables": {
+        "headline": "What Our Customers Say",
+        "quote": "Best product I've ever used! Highly recommended.",
+        "customer_name": "Jane Smith",
+        "customer_title": "CEO, Tech Corp",
+        "background_color": "#98FB98",
+        "customer_photo": "https://example.com/customer.jpg",
+        "rating": "5"
+      }
+    },
+    {
+      "title": "Event Invitation",
+      "variables": {
+        "headline": "You're Invited!",
+        "event_name": "Product Launch Event",
+        "event_date": "April 15, 2024",
+        "event_time": "6:00 PM PST",
+        "event_location": "Silicon Valley Convention Center",
+        "cta": "RSVP Now",
+        "background_color": "#DDA0DD",
+        "event_image": "https://example.com/event.jpg"
+      }
+    },
+    {
+      "title": "Weekly Tips",
+      "variables": {
+        "headline": "Tip of the Week",
+        "tip_number": "#15",
+        "tip_text": "Use keyboard shortcuts to boost productivity by 30%",
+        "background_color": "#F0E68C",
+        "icon_url": "https://example.com/lightbulb.png",
+        "category": "Productivity"
+      }
+    }
+  ],
+  "export_format": "PNG",
+  "export_quality": "high",
+  "folder_id": "F123456789"
+}

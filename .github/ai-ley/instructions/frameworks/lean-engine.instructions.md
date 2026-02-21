@@ -1,9 +1,7 @@
 ---
-id: lean-engine
-name: Lean Engine.Instructions
-description: Development guidelines and best practices for Lean Engine.Instructions
-keywords: [cloud, testing, gui, frameworks, lean, framework, engine.instructions]
-tools: [undefined]
+name: lean-engine
+description: Lean Engine Framework Instructions for AI Agents
+keywords: [lean-engine, quantconnect, algorithmic trading, backtesting, framework, guidelines, assistant, frameworks, instructions]
 ---
 Title: Lean Engine — AI Agent Trading System Guide
 

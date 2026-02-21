@@ -3,7 +3,7 @@ id: express-api
 name: Express Api.Instructions
 description: Development guidelines and best practices for Express Api.Instructions
 keywords: [async, context, architecture, api, express, avoid, example, copilot, api.instructions, follow]
-tools: [undefined]
+
 ---
 # GitHub Copilot Instructions
 

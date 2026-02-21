@@ -3,7 +3,7 @@ id: yum
 name: Yum.Instructions
 description: Development guidelines and best practices for Yum.Instructions
 keywords: [advanced, avoid, comprehensive, common, compliance, assistant, concepts, analysis, automation, benefits]
-tools: [undefined]
+
 ---
 `
 ---

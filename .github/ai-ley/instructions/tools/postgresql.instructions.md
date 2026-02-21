@@ -3,7 +3,7 @@ id: postgresql
 name: postgresql.instructions
 description: Development guidelines and best practices for Postgresql.Instructions
 keywords: [automation, application, agent, access, architecture, assistant, authentication, authorization, advanced, (sqlalchemy)]
-tools: [undefined]
+
 ---
 ### Purpose
 

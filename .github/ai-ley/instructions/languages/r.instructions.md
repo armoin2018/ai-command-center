@@ -3,7 +3,7 @@ id: r
 name: R.Instructions
 description: Development guidelines and best practices for R.Instructions
 keywords: [api, avoid, common, category, compliance, architecture, authentication, assistant, advanced, benefits]
-tools: [undefined]
+
 ---
 `
 ---

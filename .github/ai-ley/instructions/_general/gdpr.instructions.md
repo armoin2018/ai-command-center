@@ -3,7 +3,7 @@ id: gdpr
 name: Gdpr.Instructions
 description: Development guidelines and best practices for Gdpr.Instructions
 keywords: [testing, api, rest, security, gui, gdpr.instructions]
-tools: [undefined]
+
 ---
 Title: GDPR — AI Agent Compliance Guide
 

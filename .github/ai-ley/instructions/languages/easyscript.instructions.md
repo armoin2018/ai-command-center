@@ -1,9 +1,7 @@
 ---
-id: easyscript
-name: Easyscript.Instructions
-description: Purpose: Implement lightweight automation or domain-specific logic with a constrained, safe syntax. Favor clarity, determinism, and guardrails.
-keywords: [languages, (internal, easyscript, gui, guidelines, assistant, execution, model, avoid, easyscript.instructions]
-tools: undefined
+name: easyscript
+description: Guidelines for using EasyScript, a simplified scripting language designed for lightweight automation and domain-specific logic with safety and clarity in mind.
+keywords: [ easyscript, dsl, scripting, automation, safety, guidelines, best-practices ]
 ---
 # EasyScript — AI Assistant Guidelines (Internal DSL / Simplified Scripting)
 

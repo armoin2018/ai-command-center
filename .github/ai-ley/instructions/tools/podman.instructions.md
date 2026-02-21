@@ -3,7 +3,7 @@ id: podman
 name: Podman Enterprise Container Platform
 description: Enterprise Podman Container Platform - Comprehensive Level 3 daemonless, rootless container orchestration platform for enterprise-grade container deployments with advanced security frameworks, compliance automation, monitoring integration, CI/CD pipelines, multi-architecture support, enterprise networking, pod orchestration, and production-ready governance standards.
 keywords: [alerting, (cis, , .gitlab, build, enterprise, architecture, authentication, cases:**, advanced, ci.yml]
-tools: [undefined]
+
 ---
 ## 📋 Enterprise Platform Overview
 

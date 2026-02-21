@@ -3,7 +3,7 @@ id: atmos-terraform
 name: Atmos-Terraform Enterprise Infrastructure Orchestration
 description: Enterprise Atmos-Terraform infrastructure orchestration with multi-cloud
 keywords: [automation, actions, atmos, architecture, benchmark, ci/cd, advanced, azure, atmos.yaml, aws]
-tools: [undefined]
+
 ---
 ## Enterprise Overview
 

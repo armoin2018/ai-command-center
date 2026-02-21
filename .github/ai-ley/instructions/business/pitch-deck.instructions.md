@@ -3,7 +3,7 @@ id: pitch-deck
 name: pitch-deck.instructions
 description: Development guidelines and best practices for Pitch Deck.Instructions
 keywords: [business, deck.instructions, pitch]
-tools: [undefined]
+
 ---
 
 

@@ -1,10 +1,9 @@
 ---
-id: helm
-name: Enterprise Helm Kubernetes Package Manager Platform
-description: Comprehensive enterprise Helm platform for Kubernetes package management with advanced security scanning, policy enforcement, multi-environment deployments, GitOps integration, compliance automation, monitoring frameworks, and production governance. Includes enterprise security policies, vulnerability assessment, RBAC integration, secret management, multi-cluster deployments, and comprehensive governance automation for mission-critical Kubernetes applications.
-keywords: [helm,, avoid, **/charts/**,, applyto:, argocd, architecture, assistant, advanced, benefits, **/*.helm.yaml]
-tools: undefined
+name: helm
+description: Comprehensive Helm Kubernetes Package Manager instructions, including enterprise architecture, security frameworks, compliance automation, monitoring integration, multi-cluster management, best practices, common patterns, tools, quality standards, AI assistant guidelines, and GitOps workflows.
+keywords: [ helm, kubernetes, package-management, security, compliance, monitoring, multi-cluster, gitops, ci/cd, best-practices ]
 ---
+
 # 🚀 Enterprise Helm Kubernetes Package Manager Platform
 
 ## 📋 Executive Summary

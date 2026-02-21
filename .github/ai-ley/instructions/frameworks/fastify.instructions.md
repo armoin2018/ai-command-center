@@ -1,9 +1,8 @@
 ---
-id: fastify
-name: Fastify.Instructions
-description: Development guidelines and best practices for Fastify.Instructions
+name: fastify
+description: Development guidelines and best practices for Fastify
 keywords: [cloud, application, common, architecture, api, caching, authorization, assistant, commands, authentication]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: Fastify

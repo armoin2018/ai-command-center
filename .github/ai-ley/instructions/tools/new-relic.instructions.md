@@ -3,7 +3,7 @@ id: new-relic
 name: new-relic.instructions
 description: Development guidelines and best practices for New Relic.Instructions
 keywords: [cloud, enterprise, microservices, architecture, implementation, overview, kubernetes, observability, architecture, level]
-tools: [undefined]
+
 ---
 ### **Overview**
 

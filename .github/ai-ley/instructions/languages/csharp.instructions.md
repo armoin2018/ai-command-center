@@ -3,7 +3,7 @@ id: csharp
 name: Csharp.Instructions
 description: See [example-1](./examples/csharp/example-1.
 keywords: [api, async, architecture, authentication, backend, database, cli, azure, csharp.instructions, framework]
-tools: [undefined]
+
 ---
 C# Coding & Style Guide (with AI Linting Hints)
 

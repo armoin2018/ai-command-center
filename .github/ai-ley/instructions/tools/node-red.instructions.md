@@ -3,7 +3,7 @@ id: node-red
 name: Node-RED Event-Driven Automation
 description: Comprehensive instructions for using Node-RED to build event-driven automation
 keywords: [api, automation, commands, async, authorization, authentication, based, advanced, cli, cases]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

@@ -3,7 +3,7 @@ id: drupal-11
 name: Drupal 11.Instructions
 description: Development guidelines and best practices for Drupal 11.Instructions
 keywords: [11.instructions, api, context, example, architecture, backend, copilot, database, drupal, avoid]
-tools: [undefined]
+
 ---
 # GitHub Copilot Instructions
 

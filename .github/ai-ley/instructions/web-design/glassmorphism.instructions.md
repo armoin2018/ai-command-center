@@ -3,7 +3,7 @@ id: glassmorphism
 name: Glassmorphism.Instructions
 description: Development guidelines and best practices for Glassmorphism.Instructions
 keywords: [web design, glassmorphism.instructions, glassmorphism]
-tools: [undefined]
+
 ---
 # Glassmorphism
 

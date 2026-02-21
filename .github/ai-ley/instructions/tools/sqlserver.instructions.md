@@ -3,7 +3,7 @@ id: sqlserver
 name: Microsoft SQL Server Database Instructions
 description: Microsoft SQL Server enterprise database implementation guide covering T-SQL development, performance optimization, high availability, security features, integration services, and advanced database administration for enterprise applications.
 keywords: [cloud, enterprise, agent, async, gui, authentication, configuration, database, avoid, azure]
-tools: [undefined]
+
 ---
 ### Purpose
 

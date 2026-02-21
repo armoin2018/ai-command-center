@@ -3,7 +3,7 @@ id: scipy
 name: Scipy.Instructions
 description: Purpose: Optimization, statistics, and signal processing for portfolio construction and factor analysis with reproducible, bounded computations.
 keywords: [guidelines, gui, cases, frameworks, scipy.instructions, assistant, rules, scipy, (finance), optimization]
-tools: undefined
+
 ---
 # SciPy (Finance) — AI Assistant Guidelines
 

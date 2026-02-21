@@ -3,7 +3,7 @@ id: chef
 name: Chef.Instructions
 description: Development guidelines and best practices for Chef.Instructions
 keywords: [cloud, advanced, chef.instructions, compliance, architecture, assistant, ci/cd, automation, cli, berkshelf]
-tools: [undefined]
+
 ---
 ## Enterprise Overview
 

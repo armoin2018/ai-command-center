@@ -3,7 +3,7 @@ id: vectorbt
 name: Vectorbt.Instructions
 description: Development guidelines and best practices for Vectorbt.Instructions
 keywords: [vectorbt.instructions, testing, gui, frameworks]
-tools: [undefined]
+
 ---
 Title: vectorbt — AI Agent Backtesting Guide
 

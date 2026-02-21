@@ -3,7 +3,7 @@ id: ats-optimization
 name: ATS Optimization Instructions
 description: Comprehensive instructions for AI agents to analyze and optimize Applicant
 keywords: [advanced, common, algorithm, assistant, concepts, analysis, avoid, business, benefits, cases]
-tools: [undefined]
+
 ---
 ## Overview
 

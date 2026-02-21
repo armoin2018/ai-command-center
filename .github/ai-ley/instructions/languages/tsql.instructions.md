@@ -3,7 +3,7 @@ id: tsql
 name: tsql.instructions
 description: Development guidelines and best practices for Tsql.Instructions
 keywords: [languages, tsql.instructions]
-tools: [undefined]
+
 ---
 
 

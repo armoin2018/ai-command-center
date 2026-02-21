@@ -3,7 +3,7 @@ id: uikit
 name: UIKit CSS Framework Instructions
 description: Comprehensive guide for using UIKit CSS framework for modern, lightweight
 keywords: [agent, common, architecture, api, advanced, responsive, performance, use, (cdn), avoid]
-tools: [undefined]
+
 ---
 ## Framework Overview
 

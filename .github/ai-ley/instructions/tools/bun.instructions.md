@@ -1,7 +1,7 @@
 ---
-name: 'Bun.Instructions'
-description: 'See [example-32](./examples/bun/example-32.'
-keywords: [api, automation, built, building, (global, async, related, build, advanced, bun.instructions
+name: bun
+description: Comprehensive Bun JavaScript Runtime & Package Manager instructions, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [ bun, javascript, typescript, runtime, package-manager, bundler, test-runner, performance-optimization, configuration, troubleshooting ]
 ---
 
 

@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.github.io/schemas/structure.v1.schema.json",
+  "title": "AI Kit Structure Schema",
+  "description": "Schema for AI Kit structure configuration files",
+  "type": "object",
+  "required": ["name", "repo", "branch", "folderMapping"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference",
+      "x-hidden": true
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the structure schema",
+      "default": "1.0.0",
+      "x-readonly": true
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Unique kit identifier (lowercase, alphanumeric, hyphens only)",
+      "x-readonly": true,
+      "x-ui-order": 1
+    },
+    "repo": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://github\\.com/[^/]+/[^/]+(\\.git)?$",
+      "description": "GitHub repository URL",
+      "x-readonly": true,
+      "x-ui-order": 2
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Git branch to use for this kit",
+      "x-ui-order": 3
+    },
+    "refreshEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable automatic refresh based on refreshInterval",
+      "x-ui-order": 10,
+      "x-ui-group": "refresh"
+    },
+    "refreshInterval": {
+      "type": ["string", "number"],
+      "pattern": "^\\d+$",
+      "minimum": 0,
+      "description": "Refresh interval in seconds (string or number)",
+      "x-ui-order": 11,
+      "x-ui-group": "refresh"
+    },
+    "evolveEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable contribution back to source repository",
+      "x-ui-order": 20,
+      "x-ui-group": "evolution"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Path to icon file (relative to kit root)",
+      "x-readonly": true
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Brief description of the kit",
+      "x-ui-order": 4
+    },
+    "author": {
+      "type": "string",
+      "description": "Kit author or organization",
+      "x-readonly": true
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last install or update",
+      "x-hidden": true
+    },
+    "folderMapping": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/folderMappingObject"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/folderMappingObject"
+          },
+          "minItems": 1
+        }
+      ],
+      "description": "Folder mapping configuration (single object or array)",
+      "x-hidden": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "uniqueItems": true,
+      "description": "List of kit names this kit depends on",
+      "x-readonly": true
+    },
+    "additionalProperties": {
+      "type": "object",
+      "description": "Custom properties specific to this kit"
+    }
+  },
+  "definitions": {
+    "folderMappingObject": {
+      "type": "object",
+      "required": ["source", "target", "type"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Source path in the kit repository"
+        },
+        "target": {
+          "type": "string",
+          "description": "Target path in the workspace"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["folder", "file", "pattern"],
+          "description": "Type of mapping: folder (entire directory), file (single file), pattern (glob pattern)"
+        },
+        "pattern": {
+          "type": "string",
+          "description": "Glob pattern for file matching (e.g., '**/*.md', '*.ts')"
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Glob patterns to exclude from mapping"
+        },
+        "rename": {
+          "type": "object",
+          "description": "Rename rules for files",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "Regex pattern to match in filename"
+            },
+            "replacement": {
+              "type": "string",
+              "description": "Replacement string (supports $1, $2, etc. for capture groups)"
+            }
+          },
+          "required": ["pattern", "replacement"]
+        },
+        "recursionDepth": {
+          "type": "number",
+          "minimum": 0,
+          "default": -1,
+          "description": "Maximum directory depth (-1 for unlimited)"
+        },
+        "evolveEnabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable evolution for this mapping"
+        },
+        "forceReplace": {
+          "type": "boolean",
+          "default": false,
+          "description": "Force replace existing files"
+        },
+        "supportedAgentic": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": ["*"],
+              "description": "Support all agentic systems"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "copilot",
+                  "claude",
+                  "cursor",
+                  "windsurf",
+                  "codex",
+                  "gemini",
+                  "custom",
+                  "*"
+                ]
+              },
+              "uniqueItems": true,
+              "description": "List of supported agentic systems"
+            }
+          ],
+          "description": "Agentic systems this mapping supports"
+        },
+        "preserveStructure": {
+          "type": "boolean",
+          "default": true,
+          "description": "Preserve directory structure when copying"
+        },
+        "flattenStructure": {
+          "type": "boolean",
+          "default": false,
+          "description": "Flatten directory structure (copy all files to target root)"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

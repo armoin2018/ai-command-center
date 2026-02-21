@@ -3,7 +3,7 @@ id: ta-lib
 name: Ta Lib.Instructions
 description: Purpose: Compute technical indicators reliably for research/backtesting without data leakage, with correct windowing, alignment, and NaN handling.
 keywords: [(macos/linux), (technical, common, compliance, gui, guidelines, assistant, analysis, avoid, frameworks]
-tools: undefined
+
 ---
 # TA-Lib (Technical Analysis Library) — AI Assistant Guidelines
 

@@ -3,7 +3,7 @@ id: docker-compose
 name: Enterprise Docker Compose Multi-Service Orchestration Platform
 description: Comprehensive enterprise Docker Compose orchestration platform for multi-service applications with advanced security policies, secret management, network segmentation, monitoring integration, CI/CD automation, compliance frameworks, and production governance. Includes enterprise service mesh integration, distributed tracing, centralized logging, automated scaling, and comprehensive troubleshooting capabilities for mission-critical containerized applications.
 keywords: [api, application, agent, architecture, collection, advanced, cli, business, compose, compose.instructions]
-tools: [undefined]
+
 ---
 ### Enterprise Architecture Overview
 

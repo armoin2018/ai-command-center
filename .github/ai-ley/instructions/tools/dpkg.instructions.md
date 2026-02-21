@@ -3,7 +3,7 @@ id: dpkg
 name: Dpkg.Instructions
 description: DPKG (Debian Package) is the low-level package management system for Debian-based Linux distributions.
 keywords: [building, common, compliance, assistant, cloning, configuration, advanced, auditing, administration, automated]
-tools: [undefined]
+
 ---
 ## Overview
 

@@ -3,7 +3,7 @@ id: azure-arm
 name: Azure ARM Templates Enterprise Platform
 description: Enterprise Azure Resource Manager (ARM) Templates - Comprehensive Level
 keywords: [api, application, (arm), bicep, arm.instructions, architecture, authentication, advanced, azure, capabilities]
-tools: [undefined]
+
 ---
 ## 📋 Enterprise Platform Overview
 

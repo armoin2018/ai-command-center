@@ -1,7 +1,7 @@
 ---
-name: 'Gatsby.Instructions'
-description: 'See [example-1](./examples/gatsby/example-1.'
-keywords: [build, agent, pattern, architecture, analysis, api, agents, avoid, building, authentication
+name: gatsby
+description: Gatsby Framework Instructions for AI Agents
+keywords: [gatsby, react, static site generator, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

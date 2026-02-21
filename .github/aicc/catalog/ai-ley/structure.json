@@ -1,0 +1,25 @@
+{
+    "name": "ai-ley",
+    "repo": "https://github.com/armoin2018/ai-ley",
+    "branch": "dev",
+    "refreshEnabled": false,
+    "evolveEnabled": false,
+    "refreshInterval": "86400",
+    "icon": "icon.png",
+    "folderMapping": {
+        "source": ".github",
+        "target": ".github",
+        "type" : "folder",
+        "evolveEnabled": false,
+        "forceReplace": false,
+        "supportedAgentic": [
+            "copilot"
+        ]
+    },
+    "additionalProperties" : {
+
+    },
+    "dependencies": [
+        
+    ]
+}

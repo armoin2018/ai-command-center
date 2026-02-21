@@ -3,7 +3,7 @@ id: elastic-stack
 name: elastic-stack.instructions
 description: Development guidelines and best practices for Elastic Stack.Instructions
 keywords: [elastic, configuration, enterprise, analytics, intelligence, architecture, configuration, advanced, framework, framework]
-tools: [undefined]
+
 ---
 ## **📊 Advanced Search, Analytics & ML Intelligence**
 

@@ -3,7 +3,7 @@ id: retro-nostalgia
 name: Retro Nostalgia.Instructions
 description: Development guidelines and best practices for Retro Nostalgia.Instructions
 keywords: [web design, nostalgia, retro, nostalgia.instructions]
-tools: [undefined]
+
 ---
 # Retro / Nostalgia
 

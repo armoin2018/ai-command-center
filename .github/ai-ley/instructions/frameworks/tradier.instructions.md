@@ -3,7 +3,7 @@ id: tradier
 name: Tradier.Instructions
 description: Purpose: Integrate with Tradier brokerage for account data and order routing with safety, compliance, and observability.
 keywords: [compliance, guidelines, gui, api, frameworks, safety, (broker, assistant, rules, rest]
-tools: undefined
+
 ---
 # Tradier — AI Assistant Guidelines (Broker API)
 

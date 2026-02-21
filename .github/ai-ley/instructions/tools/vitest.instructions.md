@@ -1,10 +1,8 @@
 ---
-name: 'Vitest.Instructions'
-description: 'See [example-28](./examples/vitest/example-28.'
-keywords: [(basic), api, (react), automation, commands, async, related, ci/cd, advanced, cases
+name: Vitest
+description: Comprehensive instructions for using the Vitest testing framework, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [api, react, automation, commands, async, related, ci/cd, advanced, cases ]
 ---
-
-
 
 # Vitest Testing Framework Instructions
 

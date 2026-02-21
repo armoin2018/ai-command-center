@@ -3,7 +3,7 @@ id: ipfire
 name: ipfire.instructions
 description: Development guidelines and best practices for Ipfire.Instructions
 keywords: [api, cloud, automation, avoid, agent, compliance, architecture, assistant, authentication, advanced]
-tools: [undefined]
+
 ---
 ### Purpose
 

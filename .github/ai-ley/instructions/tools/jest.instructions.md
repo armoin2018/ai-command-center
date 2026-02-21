@@ -3,7 +3,7 @@ id: jest
 name: Jest.Instructions
 description: Development guidelines and best practices for Jest.Instructions
 keywords: [api, basic, assertions, async, (matchers), ci/cd, authentication, (jest.config.js), authorization, advanced]
-tools: [undefined]
+
 ---
 ## Tool Overview
 - **Tool Name**: Jest

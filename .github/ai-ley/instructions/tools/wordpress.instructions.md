@@ -3,7 +3,7 @@ id: wordpress
 name: Wordpress.Instructions
 description: Development guidelines and best practices for Wordpress.Instructions
 keywords: [api, coding, gui, architecture, authentication, database, hints), (with, guide, framework]
-tools: [undefined]
+
 ---
 # WordPress Coding & Style Guide (with AI Linting Hints)
 

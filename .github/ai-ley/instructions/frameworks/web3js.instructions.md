@@ -1,10 +1,8 @@
 ---
-name: 'Web3Js.Instructions'
-description: 'Use Web3.'
-keywords: [api, batch, account, agents, concept, architecture, backend, [pattern, analysis, avoid
+name: web3js
+description: Comprehensive Web3.js Library Instructions for AI Agents, including when to use or avoid Web3.js, framework overview, installation and setup, project structure, core concepts, best practices, common patterns, integration points, version compatibility, troubleshooting, development workflow, best practices, common patterns, log analysis, and common error messages.
+keywords: [ web3js, ethereum, blockchain, dapps, javascript, typescript, smart-contracts, wallet-integration, event-monitoring, cross-platform ]
 ---
-
-
 
 # Web3.js Library Instructions for AI Agents
 

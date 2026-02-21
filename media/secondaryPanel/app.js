@@ -16,24 +16,10 @@ class SecondaryPanelApp {
         this.expandedItems = new Set();
         this.showComponentRefs = false;
         this.filterDebounceTimer = null;
+        this.selectedItemIds = new Set();
         
-        this.statusColors = {
-            'BACKLOG': '#eab308',
-            'READY': '#f97316',
-            'IN-PROGRESS': '#14b8a6',
-            'BLOCKED': '#ff0000',
-            'REVIEW': '#3b82f6',
-            'DONE': '#22c55e',
-            'SKIP': '#9ca3af',
-            // Legacy status mapping for backwards compatibility
-            'todo': '#eab308',
-            'open': '#3b82f6',
-            'done': '#22c55e',
-            'in-progress': '#14b8a6',
-            'ready': '#f97316',
-            'error': '#ff0000',
-            'hold': '#6b7280'
-        };
+        // Status colours provided by shared actions library (window.AICC.actions)
+        this.statusColors = window.AICC?.actions?.getLookup('statusColors') || {};
         
         this.init();
     }
@@ -42,9 +28,42 @@ class SecondaryPanelApp {
      * Initialize application
      */
     init() {
+        console.log('[AIKIT] Initializing SecondaryPanelApp');
         this.setupEventListeners();
         this.setupMessageHandler();
+        this.setupModalHandlers();
         this.requestInitialData();
+    }
+    
+    /**
+     * Setup modal event handlers
+     */
+    setupModalHandlers() {
+        console.log('[AIKIT] Setting up modal handlers');
+        
+        // Modal close button
+        const closeBtn = document.getElementById('modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                console.log('[AIKIT] Modal close button clicked');
+                this.closeModal();
+            });
+        } else {
+            console.warn('[AIKIT] modal-close button not found in DOM');
+        }
+        
+        // Click outside modal to close
+        const overlay = document.getElementById('modal-overlay');
+        if (overlay) {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    console.log('[AIKIT] Modal overlay clicked, closing modal');
+                    this.closeModal();
+                }
+            });
+        } else {
+            console.warn('[AIKIT] modal-overlay not found in DOM');
+        }
     }
     
     /**
@@ -82,7 +101,12 @@ class SecondaryPanelApp {
         });
         
         document.getElementById('btn-run-next')?.addEventListener('click', () => {
-            this.sendMessage('executeAction', { command: 'aicc.ailey.runNext' });
+            if (this.selectedItemIds.size > 0) {
+                const ids = Array.from(this.selectedItemIds).join(', ');
+                this.sendMessage('executeAction', { command: 'aicc.ailey.run', args: [ids] });
+            } else {
+                this.sendMessage('executeAction', { command: 'aicc.ailey.run' });
+            }
         });
     }
     
@@ -100,31 +124,12 @@ class SecondaryPanelApp {
      * Handle messages from backend
      */
     handleMessage(message) {
-        switch (message.type) {
-            case 'init':
-                this.handleInit(message.payload);
-                break;
-            case 'panelChanged':
-                this.handlePanelChanged(message.payload);
-                break;
-            case 'agentChanged':
-                this.handleAgentChanged(message.payload);
-                break;
-            case 'mcpConfigUpdated':
-                this.handleMcpConfigUpdated(message.payload);
-                break;
-            case 'intakeFormLoaded':
-                this.renderIntakeForm(message.payload);
-                break;
-            case 'dataRefreshed':
-                this.handleDataRefreshed(message.payload);
-                break;
-            case 'settingsUpdate':
-                this.handleSettingsUpdate(message.payload);
-                break;
-            case 'error':
-                this.showError(message.payload.message);
-                break;
+        console.log('[AIKIT] Received message:', message.type, message.payload);
+        const actions = window.AICC?.actions;
+        if (actions && actions.has(`message.${message.type}`)) {
+            actions.dispatch(`message.${message.type}`, message.payload, this);
+        } else {
+            console.warn('[AIKIT] Unknown message type:', message.type);
         }
     }
     
@@ -139,6 +144,7 @@ class SecondaryPanelApp {
      * Send message to backend
      */
     sendMessage(type, payload) {
+        console.log('[AIKIT] Sending message to backend:', type, payload);
         this.vscode.postMessage({ type, payload });
     }
     
@@ -262,18 +268,12 @@ class SecondaryPanelApp {
      * Handle tab click - determines if tab is handled locally or by backend
      */
     handleTabClick(tabId) {
-        // Frontend-only tabs (handled locally)
-        const localTabs = ['intakes', 'component-catalog'];
-        
-        if (localTabs.includes(tabId)) {
+        const actions = window.AICC?.actions;
+        // Check if this is a frontend-only tab via the shared lookup
+        if (actions && actions.lookup('localTabs', tabId)) {
             this.currentPanelId = tabId;
             this.updateActiveTabs();
-            
-            if (tabId === 'intakes') {
-                this.renderIntakesPanel();
-            } else if (tabId === 'component-catalog') {
-                this.renderComponentCatalog();
-            }
+            actions.dispatch(`localTab.${tabId}`, tabId, this);
         } else {
             // Backend-managed panels
             this.switchPanel(tabId);
@@ -358,10 +358,10 @@ class SecondaryPanelApp {
      * Render current panel
      */
     renderCurrentPanel() {
-        if (this.currentPanelId === 'intakes') {
-            this.renderIntakesPanel();
-        } else if (this.currentPanelId === 'component-catalog') {
-            this.renderComponentCatalog();
+        const actions = window.AICC?.actions;
+        // Check if current panel is a frontend-only tab
+        if (actions && actions.lookup('localTabs', this.currentPanelId)) {
+            actions.dispatch(`localTab.${this.currentPanelId}`, this.currentPanelId, this);
         } else if (this.panelData.currentPanel) {
             this.renderPanel(this.panelData.currentPanel);
         } else {
@@ -373,19 +373,11 @@ class SecondaryPanelApp {
      * Render panel based on config
      */
     renderPanel(panelConfig) {
-        const bodyElement = document.querySelector('.body');
-        
-        if (panelConfig.panel.id === 'planning') {
-            bodyElement?.classList.remove('api-docs-active');
-            this.renderPlanningPanel();
-        } else if (panelConfig.panel.id === 'ai-kit-loader') {
-            bodyElement?.classList.remove('api-docs-active');
-            this.renderAIKitLoaderPanel();
-        } else if (panelConfig.panel.id === 'api-docs') {
-            bodyElement?.classList.add('api-docs-active');
-            this.renderAPIDocs();
+        const actions = window.AICC?.actions;
+        if (actions) {
+            actions.dispatchWithFallback('panel', panelConfig.panel.id, panelConfig, this);
         } else {
-            bodyElement?.classList.remove('api-docs-active');
+            // Fallback if actions library not loaded
             this.renderGenericPanel(panelConfig);
         }
     }
@@ -684,94 +676,21 @@ class SecondaryPanelApp {
         const required = field.required ? 'required' : '';
         const requiredMark = field.required ? '<span class="required-mark">*</span>' : '';
         
-        let fieldHTML = '';
+        const actions = window.AICC?.actions;
+        const renderer = actions
+            ? (payload, ctx) => actions.dispatchWithFallback('intakeField', field.type, field, fieldId, required)
+            : null;
         
-        switch (field.type) {
-            case 'text':
-            case 'email':
-            case 'url':
-                fieldHTML = `
-                    <input 
-                        type="${field.type}" 
-                        id="${fieldId}" 
-                        name="${field.name}" 
-                        placeholder="${field.placeholder || ''}"
-                        ${required}
-                        ${field.pattern ? `pattern="${field.pattern}"` : ''}
-                    />
-                `;
-                break;
-                
-            case 'textarea':
-                fieldHTML = `
-                    <textarea 
-                        id="${fieldId}" 
-                        name="${field.name}" 
-                        rows="${field.rows || 4}"
-                        placeholder="${field.placeholder || ''}"
-                        ${required}
-                    ></textarea>
-                `;
-                break;
-                
-            case 'select':
-                fieldHTML = `
-                    <select id="${fieldId}" name="${field.name}" ${required}>
-                        <option value="">-- Select --</option>
-                        ${(field.options || []).map(opt => `
-                            <option value="${opt.value || opt}">${opt.label || opt}</option>
-                        `).join('')}
-                    </select>
-                `;
-                break;
-                
-            case 'checkbox':
-                fieldHTML = `
-                    <div class="checkbox-field">
-                        <input 
-                            type="checkbox" 
-                            id="${fieldId}" 
-                            name="${field.name}" 
-                            ${required}
-                        />
-                        <label for="${fieldId}">${field.label}${requiredMark}</label>
-                    </div>
-                `;
-                return `<div class="form-field">${fieldHTML}</div>`;
-                
-            case 'radio':
-                fieldHTML = `
-                    <div class="radio-group">
-                        ${(field.options || []).map((opt, idx) => `
-                            <div class="radio-option">
-                                <input 
-                                    type="radio" 
-                                    id="${fieldId}-${idx}" 
-                                    name="${field.name}" 
-                                    value="${opt.value || opt}"
-                                    ${required && idx === 0 ? 'required' : ''}
-                                />
-                                <label for="${fieldId}-${idx}">${opt.label || opt}</label>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-                break;
-                
-            default:
-                fieldHTML = `
-                    <input 
-                        type="text" 
-                        id="${fieldId}" 
-                        name="${field.name}" 
-                        placeholder="${field.placeholder || ''}"
-                        ${required}
-                    />
-                `;
-        }
+        // Dispatch to the appropriate field renderer
+        const fieldHTML = actions && actions.has(`intakeField.${field.type}`)
+            ? actions.dispatch(`intakeField.${field.type}`, field, fieldId, required)
+            : actions
+                ? actions.dispatch('intakeField._default', field, fieldId, required)
+                : `<input type="text" id="${fieldId}" name="${field.name}" placeholder="${field.placeholder || ''}" ${required} />`;
         
+        // Checkbox has its own wrapper
         if (field.type === 'checkbox') {
-            return fieldHTML;
+            return `<div class="form-field">${fieldHTML}</div>`;
         }
         
         return `
@@ -844,7 +763,8 @@ class SecondaryPanelApp {
             'IN-PROGRESS': rawCounts['IN-PROGRESS'] || rawCounts['in-progress'] || 0,
             'BLOCKED': rawCounts['BLOCKED'] || rawCounts['blocked'] || 0,
             'REVIEW': rawCounts['REVIEW'] || rawCounts['review'] || 0,
-            'DONE': rawCounts['DONE'] || rawCounts['done'] || 0
+            'DONE': rawCounts['DONE'] || rawCounts['done'] || 0,
+            'SKIP': rawCounts['SKIP'] || rawCounts['skip'] || 0
         };
         
         const badges = Object.entries(counts).map(([status, count]) => {
@@ -981,6 +901,7 @@ class SecondaryPanelApp {
         const isExpanded = this.expandedItems.has(item.id);
         const statusColor = this.statusColors[item.status] || this.statusColors[this.normalizeStatus(item.status)] || '#6b7280';
         const hasChildren = item.children && item.children.length > 0;
+        const isChecked = this.selectedItemIds.has(item.id);
         
         return `
             <div class="accordion-item ${isExpanded ? 'expanded' : ''}" 
@@ -988,8 +909,9 @@ class SecondaryPanelApp {
                  data-id="${item.id}">
                 <div class="accordion-header" data-item-id="${item.id}">
                     ${depth > 0 ? `<span style="display:inline-block;width:${depth * 20}px;"></span>` : ''}
+                    <input type="checkbox" class="item-checkbox" data-item-id="${item.id}" ${isChecked ? 'checked' : ''} onclick="app.toggleItemSelection('${item.id}', event)" aria-label="Select ${item.projectNumber || item.id}" />
                     ${hasChildren ? `<span class="codicon codicon-chevron-right expand-icon" title="${isExpanded ? 'Collapse' : 'Expand'}" aria-label="${isExpanded ? 'Collapse item' : 'Expand item'}" aria-hidden="true"></span>` : '<span style="width:16px;display:inline-block;"></span>'}
-                    <span class="status-bullet" style="background-color:${statusColor};" title="Status: ${item.status}" aria-label="Status: ${item.status}"></span>
+                    <span class="status-bullet" style="background-color:${statusColor};" title="Status: ${item.status.toUpperCase()}" aria-label="Status: ${item.status.toUpperCase()}"></span>
                     <span class="codicon codicon-${this.getTypeIcon(item.type)} accordion-icon" title="${item.type}" aria-label="Type: ${item.type}" aria-hidden="true"></span>
                     <span class="accordion-title">
                         <span class="id" aria-label="ID: ${item.projectNumber || item.id}">${item.projectNumber || item.id}</span>
@@ -1018,6 +940,9 @@ class SecondaryPanelApp {
                     </button>
                     <button class="accordion-tab-btn" data-tab="edit" data-item-id="${item.id}" title="Edit">
                         <span class="codicon codicon-edit"></span>
+                    </button>
+                    <button class="accordion-tab-btn" data-tab="ai-settings" data-item-id="${item.id}" title="AI Settings">
+                        <span class="codicon codicon-circuit-board"></span>
                     </button>
                     <button class="accordion-tab-btn" data-tab="info" data-item-id="${item.id}" title="Info">
                         <span class="codicon codicon-info"></span>
@@ -1050,6 +975,9 @@ class SecondaryPanelApp {
                     <div class="accordion-tab-panel" data-tab="edit" data-item-id="${item.id}">
                         ${this.buildEditTab(item)}
                     </div>
+                    <div class="accordion-tab-panel" data-tab="ai-settings" data-item-id="${item.id}">
+                        ${this.buildAISettingsTab(item)}
+                    </div>
                     <div class="accordion-tab-panel" data-tab="info" data-item-id="${item.id}">
                         ${this.buildInfoTab(item)}
                     </div>
@@ -1076,7 +1004,7 @@ class SecondaryPanelApp {
     buildAccordionActions(item, statusColor) {
         const statuses = ['BACKLOG', 'READY', 'IN-PROGRESS', 'BLOCKED', 'REVIEW', 'DONE', 'SKIP'];
         const options = statuses.map(s => 
-            `<option value="${s}" ${item.status === s ? 'selected' : ''}>${s}</option>`
+            `<option value="${s}" ${item.status.toUpperCase() === s ? 'selected' : ''}>${s}</option>`
         ).join('');
         
         return `
@@ -1087,6 +1015,9 @@ class SecondaryPanelApp {
                         aria-label="Change status for ${item.projectNumber || item.id}">
                     ${options}
                 </select>
+                <button class="accordion-btn" data-action="refine" data-item-id="${item.id}" title="Refine ${item.projectNumber || item.id}" aria-label="Refine item" style="margin-left:4px;">
+                    <span class="codicon codicon-wand" aria-hidden="true"></span>
+                </button>
                 <button class="accordion-btn" data-action="run" data-item-id="${item.id}" title="Run ${item.projectNumber || item.id}" aria-label="Run item">
                     <span class="codicon codicon-play" aria-hidden="true"></span>
                 </button>
@@ -1256,18 +1187,33 @@ class SecondaryPanelApp {
     buildCommentsTab(item) {
         const comments = item.comments || [];
         
-        const commentsList = comments.length > 0 ? comments.map((comment, idx) => `
-            <div class="tab-list-item" style="flex-direction: column; align-items: flex-start; padding: 12px;">
-                <div style="display: flex; width: 100%; justify-content: space-between; margin-bottom: 6px;">
-                    <strong style="font-size: 12px;">${this.escapeHtml(comment.author || 'Unknown')}</strong>
-                    <small style="color: var(--vscode-descriptionForeground); font-size: 11px;">${comment.date ? new Date(comment.date).toLocaleString() : ''}</small>
+        const commentsList = comments.length > 0 ? comments.map((comment, idx) => {
+            const enabled = comment.enabled !== false;
+            const createdBy = comment.createdBy || comment.author || 'Unknown';
+            const createdOn = comment.createdOn || comment.date;
+            const updatedOn = comment.updatedOn;
+            const commentText = comment.comment || comment.text || '';
+            
+            return `
+            <div class="tab-list-item" style="flex-direction: column; align-items: flex-start; padding: 12px; ${!enabled ? 'opacity: 0.5;' : ''}">
+                <div style="display: flex; width: 100%; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                    <button class="tab-icon-btn" onclick="app.toggleCommentEnabled('${item.id}', ${idx})" title="${enabled ? 'Skip comment' : 'Include comment'}" style="margin-top: 2px;">
+                        <span class="codicon codicon-${enabled ? 'eye' : 'eye-closed'}"></span>
+                    </button>
+                    <div style="flex: 1;">
+                        <div style="font-size: 12px; margin-bottom: 6px;">${this.escapeHtml(commentText)}</div>
+                        <div style="font-size: 11px; color: var(--vscode-descriptionForeground);">
+                            ${this.escapeHtml(createdBy)} • ${createdOn ? new Date(createdOn).toLocaleString() : ''}
+                            ${updatedOn && updatedOn !== createdOn ? ` • Updated: ${new Date(updatedOn).toLocaleString()}` : ''}
+                        </div>
+                    </div>
+                    <button class="tab-icon-btn" onclick="app.deleteComment('${item.id}', ${idx})" title="Delete" style="margin-top: 2px;">
+                        <span class="codicon codicon-trash"></span>
+                    </button>
                 </div>
-                <div style="margin-bottom: 8px; font-size: 12px;">${this.escapeHtml(comment.text || '')}</div>
-                <button class="tab-icon-btn" onclick="app.deleteComment('${item.id}', ${idx})" title="Delete" style="align-self: flex-end;">
-                    <span class="codicon codicon-trash"></span>
-                </button>
             </div>
-        `).join('') : '<p style="color: var(--vscode-descriptionForeground); font-size: 12px;">No comments yet.</p>';
+        `;
+        }).join('') : '<p style="color: var(--vscode-descriptionForeground); font-size: 12px;">No comments yet.</p>';
         
         return `
             <div class="tab-form">
@@ -1277,6 +1223,102 @@ class SecondaryPanelApp {
                     <textarea class="tab-form-textarea" id="comment-text-${item.id}" placeholder="Write your comment here..."></textarea>
                 </div>
                 <button class="tab-btn tab-btn-primary" onclick="app.addComment('${item.id}')">Add Comment</button>
+            </div>
+        `;
+    }
+    
+    /**
+     * Build AI Settings tab
+     */
+    buildAISettingsTab(item) {
+        const instructions = item.instructions || [];
+        const personas = item.personas || [];
+        const contexts = item.contexts || [];
+        const agent = item.agent || 'AI-ley Orchestrator';
+        
+        const instructionsList = instructions.map((inst, idx) => `
+            <div class="list-builder-item">
+                <span class="list-builder-text">${this.escapeHtml(inst)}</span>
+                <button class="tab-icon-btn" onclick="app.removeListItem('${item.id}', 'instructions', ${idx})" title="Remove">
+                    <span class="codicon codicon-trash"></span>
+                </button>
+            </div>
+        `).join('');
+        
+        const personasList = personas.map((persona, idx) => `
+            <div class="list-builder-item">
+                <span class="list-builder-text">${this.escapeHtml(persona)}</span>
+                <button class="tab-icon-btn" onclick="app.removeListItem('${item.id}', 'personas', ${idx})" title="Remove">
+                    <span class="codicon codicon-trash"></span>
+                </button>
+            </div>
+        `).join('');
+        
+        const contextsList = contexts.map((ctx, idx) => `
+            <div class="list-builder-item">
+                <span class="list-builder-text">${this.escapeHtml(ctx)}</span>
+                <button class="tab-icon-btn" onclick="app.removeListItem('${item.id}', 'contexts', ${idx})" title="Remove">
+                    <span class="codicon codicon-trash"></span>
+                </button>
+            </div>
+        `).join('');
+        
+        return `
+            <div class="tab-form">
+                <div class="tab-form-group">
+                    <label class="tab-form-label">AI Agent</label>
+                    <select class="tab-form-select" id="agent-${item.id}">
+                        <option value="AI-ley Orchestrator" ${agent === 'AI-ley Orchestrator' ? 'selected' : ''}>AI-ley Orchestrator</option>
+                        <option value="AI-ley Architect" ${agent === 'AI-ley Architect' ? 'selected' : ''}>AI-ley Architect</option>
+                        <option value="AI-ley Bug Fixer" ${agent === 'AI-ley Bug Fixer' ? 'selected' : ''}>AI-ley Bug Fixer</option>
+                        <option value="AI-ley Tester" ${agent === 'AI-ley Tester' ? 'selected' : ''}>AI-ley Tester</option>
+                        <option value="AI-ley Documentation" ${agent === 'AI-ley Documentation' ? 'selected' : ''}>AI-ley Documentation</option>
+                        <option value="AI-ley Designer" ${agent === 'AI-ley Designer' ? 'selected' : ''}>AI-ley Designer</option>
+                        <option value="AI-ley DevOps" ${agent === 'AI-ley DevOps' ? 'selected' : ''}>AI-ley DevOps</option>
+                        <option value="AI-ley Security" ${agent === 'AI-ley Security' ? 'selected' : ''}>AI-ley Security</option>
+                    </select>
+                </div>
+                
+                <div class="tab-form-group">
+                    <label class="tab-form-label">Instructions</label>
+                    <div class="list-builder-container">
+                        ${instructionsList || '<p style="color: var(--vscode-descriptionForeground); font-size: 12px;">No instructions added</p>'}
+                    </div>
+                    <div class="list-builder-input-row">
+                        <input type="text" class="tab-form-input" id="instruction-input-${item.id}" placeholder="Type to search instructions..." />
+                        <button class="tab-icon-btn" onclick="app.addListItem('${item.id}', 'instructions')" title="Add">
+                            <span class="codicon codicon-add"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tab-form-group">
+                    <label class="tab-form-label">Personas</label>
+                    <div class="list-builder-container">
+                        ${personasList || '<p style="color: var(--vscode-descriptionForeground); font-size: 12px;">No personas added</p>'}
+                    </div>
+                    <div class="list-builder-input-row">
+                        <input type="text" class="tab-form-input" id="persona-input-${item.id}" placeholder="Type to search personas..." />
+                        <button class="tab-icon-btn" onclick="app.addListItem('${item.id}', 'personas')" title="Add">
+                            <span class="codicon codicon-add"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tab-form-group">
+                    <label class="tab-form-label">Context (Files/Folders)</label>
+                    <div class="list-builder-container">
+                        ${contextsList || '<p style="color: var(--vscode-descriptionForeground); font-size: 12px;">No context added</p>'}
+                    </div>
+                    <div class="list-builder-input-row">
+                        <input type="text" class="tab-form-input" id="context-input-${item.id}" placeholder="Add file or folder path..." />
+                        <button class="tab-icon-btn" onclick="app.addListItem('${item.id}', 'contexts')" title="Add">
+                            <span class="codicon codicon-add"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="tab-btn tab-btn-primary" onclick="app.saveAISettings('${item.id}')">Save AI Settings</button>
             </div>
         `;
     }
@@ -1336,7 +1378,18 @@ class SecondaryPanelApp {
         
         // Accordion headers
         document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
+            header.addEventListener('click', (e) => {
+                // Ignore clicks on interactive elements
+                if (e.target.classList.contains('item-checkbox') ||
+                    e.target.classList.contains('status-dropdown') ||
+                    e.target.classList.contains('accordion-btn') ||
+                    e.target.closest('.accordion-actions') ||
+                    e.target.closest('.status-dropdown')) {
+                    return;
+                }
+                
+                e.stopPropagation();
+                e.preventDefault();
                 this.toggleExpand(header.dataset.itemId);
             });
         });
@@ -1434,30 +1487,38 @@ class SecondaryPanelApp {
      * Handle item action
      */
     handleItemAction(action, itemId) {
-        // Expand the item if not already expanded
-        if (!this.expandedItems.has(itemId)) {
-            this.expandedItems.add(itemId);
-            this.renderCurrentPanel();
+        const actions = window.AICC?.actions;
+        if (actions && actions.has(`item.${action}`)) {
+            actions.dispatch(`item.${action}`, { itemId }, this);
+        } else {
+            console.warn('[AIKIT] Unknown item action:', action);
         }
-        
-        // Switch to the appropriate tab
-        setTimeout(() => {
-            const tabMap = {
-                'edit': 'edit',
-                'info': 'info',
-                'metadata': 'metadata',
-                'connections': 'links',
-                'repo': 'repo',
-                'comments': 'comments'
-            };
-            
-            const tabName = tabMap[action];
-            if (tabName) {
-                this.switchTab(itemId, tabName);
-            } else if (action === 'run') {
-                this.sendMessage('runItem', { itemId });
-            }
-        }, 100);
+    }
+    
+    /**
+     * Toggle item selection
+     */
+    toggleItemSelection(itemId, event) {
+        event.stopPropagation();
+        if (this.selectedItemIds.has(itemId)) {
+            this.selectedItemIds.delete(itemId);
+        } else {
+            this.selectedItemIds.add(itemId);
+        }
+        this.updateRunButtonLabel();
+        this.renderCurrentPanel();
+    }
+    
+    /**
+     * Update run button label
+     */
+    updateRunButtonLabel() {
+        const btn = document.getElementById('btn-run-next');
+        if (btn && this.selectedItemIds.size > 0) {
+            btn.textContent = `Run (${this.selectedItemIds.size})`;
+        } else if (btn) {
+            btn.textContent = 'Run Next';
+        }
     }
     
     /**
@@ -1889,6 +1950,59 @@ class SecondaryPanelApp {
     }
     
     /**
+     * Toggle comment enabled/disabled
+     */
+    toggleCommentEnabled(itemId, index) {
+        this.sendMessage('toggleCommentEnabled', { itemId, index });
+        this.pendingChanges++;
+        this.updateChangesCount();
+        setTimeout(() => this.renderCurrentPanel(), 200);
+    }
+    
+    /**
+     * Add item to list (instructions, personas, contexts)
+     */
+    addListItem(itemId, listType) {
+        const inputId = `${listType.slice(0, -1)}-input-${itemId}`;
+        const input = document.getElementById(inputId);
+        const value = input?.value?.trim();
+        
+        if (!value) return;
+        
+        this.sendMessage('addListItem', { itemId, listType, value });
+        this.pendingChanges++;
+        this.updateChangesCount();
+        
+        if (input) input.value = '';
+        setTimeout(() => this.renderCurrentPanel(), 200);
+    }
+    
+    /**
+     * Remove item from list (instructions, personas, contexts)
+     */
+    removeListItem(itemId, listType, index) {
+        this.sendMessage('removeListItem', { itemId, listType, index });
+        this.pendingChanges++;
+        this.updateChangesCount();
+        setTimeout(() => this.renderCurrentPanel(), 200);
+    }
+    
+    /**
+     * Save AI settings
+     */
+    saveAISettings(itemId) {
+        const agent = document.getElementById(`agent-${itemId}`)?.value;
+        
+        if (agent) {
+            this.sendMessage('updateItem', { itemId, field: 'agent', value: agent });
+            this.pendingChanges++;
+            this.updateChangesCount();
+        }
+        
+        setTimeout(() => this.renderCurrentPanel(), 200);
+    }
+    
+    /**
      * Show modal
      */
     showModal(title, bodyHTML) {
@@ -1927,36 +2041,524 @@ class SecondaryPanelApp {
      * Render AI Kit Loader panel
      */
     renderAIKitLoaderPanel() {
+        console.log('[AIKIT] Rendering AI Kit Loader panel');
         const content = document.getElementById('panel-content');
-        if (!content) return;
+        if (!content) {
+            console.error('[AIKIT] panel-content element not found');
+            return;
+        }
         
         const refClass = this.showComponentRefs ? 'component-ref visible' : 'component-ref';
         
         content.innerHTML = `
             <span class="${refClass}" style="top:0;left:100px;" data-ref="SEC-AIKIT-TAB">SEC-AIKIT-TAB</span>
-            <h3>AI Kit Loader</h3>
-            <p>Select a repository and branch to add AI kits to your project.</p>
-            <div class="form-group">
-                <label>AI Kit Repository</label>
-                <select class="form-control" id="aikit-repo">
-                    <option value="armoin2018/ai-ley">AI-ley Official (armoin2018/ai-ley)</option>
-                </select>
+            <div class="aikit-catalog-container">
+                <div class="catalog-grid" id="catalog-grid">
+                    <div class="loading">
+                        <span class="codicon codicon-loading codicon-modifier-spin"></span>
+                        <span>Loading AI Kits...</span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Branch</label>
-                <select class="form-control" id="aikit-branch">
-                    <option value="dev">dev</option>
-                    <option value="main">main</option>
-                </select>
-            </div>
-            <button class="footer-btn primary" id="btn-load-kits">
-                <span class="codicon codicon-cloud-download"></span> Load Kits
-            </button>
         `;
         
-        document.getElementById('btn-load-kits')?.addEventListener('click', () => {
-            this.sendMessage('loadAIKits');
+        console.log('[AIKIT] Panel HTML rendered, loading catalog...');
+        // Load available kits
+        this.loadAIKitCatalog();
+    }
+    
+    /**
+     * Load AI Kit catalog from backend
+     */
+    async loadAIKitCatalog() {
+        console.log('[AIKIT] loadAIKitCatalog() called');
+        try {
+            // Request catalog data from backend
+            console.log('[AIKIT] Sending fetchData message to backend');
+            this.sendMessage('fetchData', { 
+                endpoint: 'aikit-catalog',
+                params: {}
+            });
+            console.log('[AIKIT] fetchData message sent');
+        } catch (error) {
+            console.error('[AIKIT] Failed to load AI Kit catalog:', error);
+            this.showAIKitError('Failed to load catalog: ' + error.message);
+        }
+    }
+    
+    /**
+     * Render AI Kit catalog grid
+     */
+    renderAIKitCatalog(kits) {
+        console.log('[AIKIT] renderAIKitCatalog() called with', kits?.length || 0, 'kits');
+        const grid = document.getElementById('catalog-grid');
+        if (!grid) {
+            console.error('[AIKIT] catalog-grid element not found');
+            return;
+        }
+        
+        if (!kits || kits.length === 0) {
+            console.log('[AIKIT] No kits available, showing empty message');
+            grid.innerHTML = '<div class="empty-message">No AI Kits available</div>';
+            return;
+        }
+        
+        console.log('[AIKIT] Creating kit cards for', kits.length, 'kits');
+        grid.innerHTML = kits.map(kit => this.createKitCard(kit)).join('');
+        
+        // Add click handlers
+        const cards = grid.querySelectorAll('.kit-card');
+        console.log('[AIKIT] Adding click handlers to', cards.length, 'kit cards');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const kitId = card.dataset.kitId;
+                console.log('[AIKIT] Kit card clicked:', kitId);
+                const kit = kits.find(k => k.name === kitId);
+                if (kit) {
+                    this.openKitModal(kit);
+                } else {
+                    console.error('[AIKIT] Kit not found:', kitId);
+                }
+            });
         });
+        console.log('[AIKIT] Catalog rendering complete');
+    }
+    
+    /**
+     * Create kit card HTML
+     */
+    createKitCard(kit) {
+        const iconData = kit.iconBase64 || this.getDefaultKitIcon();
+        return `
+            <div class="kit-card" data-kit-id="${kit.name}">
+                <div class="kit-icon">
+                    <img src="${iconData}" alt="${kit.name}" />
+                </div>
+                <div class="kit-name">${kit.displayName || kit.name}</div>
+            </div>
+        `;
+    }
+    
+    /**
+     * Get default kit icon as base64
+     */
+    getDefaultKitIcon() {
+        // Default package icon as base64 SVG
+        return 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iNzUiIHZpZXdCb3g9IjAgMCA3NSA3NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNzUiIGhlaWdodD0iNzUiIHJ4PSIxMCIgZmlsbD0iIzIxMjEyMSIvPgogIDxwYXRoIGQ9Ik0zNy41IDIwTDU1IDMwVjUwTDM3LjUgNjBMMjAgNTBWMzBMMzcuNSAyMFoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTM3LjUgMjBWNjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTIwIDMwTDM3LjUgNDBMNTUgMzAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==';
+    }
+    
+    /**
+     * Open kit modal
+     */
+    openKitModal(kit) {
+        console.log('[AIKIT] Opening modal for kit:', kit.name);
+        const modal = document.getElementById('modal-overlay');
+        const modalContainer = document.getElementById('modal-container');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        if (!modal || !modalContainer || !modalTitle || !modalBody) {
+            console.error('[AIKIT] Modal elements not found');
+            return;
+        }
+        
+        // Set modal size for kit modal
+        modalContainer.style.width = '80%';
+        modalContainer.style.height = '80%';
+        
+        // Render modal header
+        const iconData = kit.iconBase64 || this.getDefaultKitIcon();
+        modalTitle.innerHTML = `
+            <div class="kit-modal-header">
+                <div class="kit-modal-icon">
+                    <img src="${iconData}" alt="${kit.name}" />
+                </div>
+                <div class="kit-modal-title">${kit.displayName || kit.name}</div>
+            </div>
+        `;
+        
+        // Render modal body with tabs
+        modalBody.innerHTML = `
+            <div class="kit-modal-tabs">
+                <div class="kit-tab-buttons">
+                    <button class="kit-tab-btn active" data-tab="settings">Settings</button>
+                    <button class="kit-tab-btn" data-tab="configuration">Configuration</button>
+                    <button class="kit-tab-btn" data-tab="components">Components</button>
+                </div>
+                <div class="kit-tab-content">
+                    <div class="kit-tab-pane active" id="tab-settings">
+                        <div class="loading">
+                            <span class="codicon codicon-loading codicon-modifier-spin"></span>
+                            <span>Loading settings...</span>
+                        </div>
+                    </div>
+                    <div class="kit-tab-pane" id="tab-configuration">
+                        <div class="loading">
+                            <span class="codicon codicon-loading codicon-modifier-spin"></span>
+                            <span>Loading configuration...</span>
+                        </div>
+                    </div>
+                    <div class="kit-tab-pane" id="tab-components">
+                        <div class="loading">
+                            <span class="codicon codicon-loading codicon-modifier-spin"></span>
+                            <span>Loading components...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kit-modal-footer">
+                <div class="footer-left">
+                    <span class="last-updated">Last Updated: ${this.formatLastUpdated(kit.lastUpdated)}</span>
+                </div>
+                <div class="footer-right">
+                    <button class="footer-btn primary" id="btn-save-kit">
+                        <span class="codicon codicon-save"></span> Save
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Setup tab switching
+        modalBody.querySelectorAll('.kit-tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const tabName = e.currentTarget.dataset.tab;
+                this.switchKitTab(tabName);
+            });
+        });
+        
+        // Setup save button
+        modalBody.querySelector('#btn-save-kit')?.addEventListener('click', () => {
+            this.saveKitSettings(kit.name);
+        });
+        
+        // Show modal
+        modal.style.display = 'flex';
+        console.log('[AIKIT] Modal displayed');
+        
+        // Load initial tab content
+        console.log('[AIKIT] Loading initial settings tab');
+        this.loadKitSettings(kit.name);
+        
+        // Store current kit
+        this.currentKit = kit;
+        console.log('[AIKIT] Current kit stored:', kit.name);
+    }
+    
+    /**
+     * Switch kit modal tab
+     */
+    switchKitTab(tabName) {
+        const modalBody = document.getElementById('modal-body');
+        if (!modalBody) return;
+        
+        // Update button states
+        modalBody.querySelectorAll('.kit-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === tabName);
+        });
+        
+        // Update pane visibility
+        modalBody.querySelectorAll('.kit-tab-pane').forEach(pane => {
+            pane.classList.toggle('active', pane.id === `tab-${tabName}`);
+        });
+        
+        // Load tab content via actions dispatch
+        if (!this.currentKit) return;
+        
+        const actions = window.AICC?.actions;
+        if (actions && actions.has(`kitTab.${tabName}`)) {
+            actions.dispatch(`kitTab.${tabName}`, this.currentKit.name, this);
+        }
+    }
+    
+    /**
+     * Load kit settings tab
+     */
+    async loadKitSettings(kitName) {
+        const pane = document.getElementById('tab-settings');
+        if (!pane) return;
+        
+        try {
+            this.sendMessage('fetchData', {
+                endpoint: 'aikit-settings',
+                params: { kitName }
+            });
+        } catch (error) {
+            console.error('Failed to load kit settings:', error);
+            pane.innerHTML = '<div class="error-message">Failed to load settings</div>';
+        }
+    }
+    
+    /**
+     * Render kit settings
+     */
+    renderKitSettings(settings, kitName) {
+        const pane = document.getElementById('tab-settings');
+        if (!pane) return;
+        
+        const isInstalled = settings.installed || false;
+        
+        pane.innerHTML = `
+            <div class="kit-settings-form">
+                ${this.renderSettingsFields(settings.schema || {}, settings.values || {})}
+                ${!isInstalled ? `
+                    <div class="form-group">
+                        <button class="footer-btn success" id="btn-install-kit">
+                            <span class="codicon codicon-cloud-download"></span> Install Kit
+                        </button>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        
+        // Setup install button
+        pane.querySelector('#btn-install-kit')?.addEventListener('click', () => {
+            this.installKit(kitName);
+        });
+    }
+    
+    /**
+     * Load kit configuration tab
+     */
+    async loadKitConfiguration(kitName) {
+        const pane = document.getElementById('tab-configuration');
+        if (!pane) return;
+        
+        try {
+            this.sendMessage('fetchData', {
+                endpoint: 'aikit-configuration',
+                params: { kitName }
+            });
+        } catch (error) {
+            console.error('Failed to load kit configuration:', error);
+            pane.innerHTML = '<div class="error-message">Failed to load configuration</div>';
+        }
+    }
+    
+    /**
+     * Render kit configuration
+     */
+    renderKitConfiguration(config, kitName) {
+        const pane = document.getElementById('tab-configuration');
+        if (!pane) return;
+        
+        pane.innerHTML = `
+            <div class="kit-config-form">
+                ${this.renderConfigFields(config.schema || {}, config.values || {})}
+            </div>
+        `;
+    }
+    
+    /**
+     * Load kit components tab
+     */
+    async loadKitComponents(kitName) {
+        const pane = document.getElementById('tab-components');
+        if (!pane) return;
+        
+        try {
+            this.sendMessage('fetchData', {
+                endpoint: 'aikit-components',
+                params: { kitName }
+            });
+        } catch (error) {
+            console.error('Failed to load kit components:', error);
+            pane.innerHTML = '<div class="error-message">Failed to load components</div>';
+        }
+    }
+    
+    /**
+     * Render kit components
+     */
+    renderKitComponents(components, installed) {
+        const pane = document.getElementById('tab-components');
+        if (!pane) return;
+        
+        pane.innerHTML = `
+            <div class="kit-components-tree">
+                ${this.renderComponentsTree(components, installed)}
+            </div>
+        `;
+        
+        // Setup component checkboxes
+        pane.querySelectorAll('.component-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const componentName = e.target.dataset.component;
+                const isChecked = e.target.checked;
+                this.toggleComponent(componentName, isChecked);
+            });
+        });
+    }
+    
+    /**
+     * Render settings fields
+     */
+    renderSettingsFields(schema, values) {
+        if (!schema.properties) return '<p>No settings available</p>';
+        
+        return Object.entries(schema.properties).map(([key, field]) => {
+            const value = values[key] || field.default || '';
+            return `
+                <div class="form-group">
+                    <label for="setting-${key}">${field.description || key}</label>
+                    ${this.renderFieldInput(key, field, value, 'setting')}
+                </div>
+            `;
+        }).join('');
+    }
+    
+    /**
+     * Render config fields
+     */
+    renderConfigFields(schema, values) {
+        if (!schema.properties) return '<p>No configuration available</p>';
+        
+        return Object.entries(schema.properties).map(([key, field]) => {
+            const value = values[key] || field.default || '';
+            return `
+                <div class="form-group">
+                    <label for="config-${key}">${field.description || key}</label>
+                    ${this.renderFieldInput(key, field, value, 'config')}
+                </div>
+            `;
+        }).join('');
+    }
+    
+    /**
+     * Render field input based on type
+     */
+    renderFieldInput(key, field, value, prefix) {
+        const actions = window.AICC?.actions;
+        if (actions) {
+            // Determine the renderer key: enum is a special case
+            const rendererKey = field.enum ? 'enum' : (field.type || '_default');
+            return actions.dispatchWithFallback('formField', rendererKey, key, field, value, prefix);
+        }
+        // Fallback if actions library not loaded
+        const id = `${prefix}-${key}`;
+        return `<input type="text" id="${id}" name="${key}" value="${value}" class="form-control" />`;
+    }
+    
+    /**
+     * Render components tree
+     */
+    renderComponentsTree(components, installed) {
+        if (!components || Object.keys(components).length === 0) {
+            return '<p>No components available</p>';
+        }
+        
+        const installedSet = new Set(installed || []);
+        
+        return Object.entries(components).map(([name, comp]) => {
+            const isInstalled = installedSet.has(name);
+            const isDefaultEnabled = comp.defaultEnabled !== false;
+            const isChecked = isInstalled || isDefaultEnabled;
+            
+            return `
+                <div class="component-item">
+                    <label>
+                        <input type="checkbox" 
+                               class="component-checkbox" 
+                               data-component="${name}" 
+                               ${isChecked ? 'checked' : ''} />
+                        <span class="component-name">${name}</span>
+                        <span class="component-files">(${comp.files?.length || 0} files)</span>
+                    </label>
+                </div>
+            `;
+        }).join('');
+    }
+    
+    /**
+     * Toggle component
+     */
+    toggleComponent(componentName, enabled) {
+        if (!this.kitComponentChanges) {
+            this.kitComponentChanges = {};
+        }
+        this.kitComponentChanges[componentName] = enabled;
+    }
+    
+    /**
+     * Install kit
+     */
+    async installKit(kitName) {
+        try {
+            this.sendMessage('executeAction', {
+                command: 'aicc.installKit',
+                args: [kitName]
+            });
+        } catch (error) {
+            console.error('Failed to install kit:', error);
+            this.showError('Failed to install kit');
+        }
+    }
+    
+    /**
+     * Save kit settings
+     */
+    async saveKitSettings(kitName) {
+        try {
+            // Collect form values
+            const settingsPane = document.getElementById('tab-settings');
+            const configPane = document.getElementById('tab-configuration');
+            
+            const settings = this.collectFormValues(settingsPane, 'setting');
+            const config = this.collectFormValues(configPane, 'config');
+            
+            this.sendMessage('saveKitSettings', {
+                kitName,
+                settings,
+                config,
+                componentChanges: this.kitComponentChanges || {}
+            });
+            
+            // Close modal
+            document.getElementById('modal-overlay').style.display = 'none';
+            
+            // Reset changes
+            this.kitComponentChanges = {};
+        } catch (error) {
+            console.error('Failed to save kit settings:', error);
+            this.showError('Failed to save settings');
+        }
+    }
+    
+    /**
+     * Collect form values
+     */
+    collectFormValues(pane, prefix) {
+        if (!pane) return {};
+        
+        const values = {};
+        pane.querySelectorAll(`[id^="${prefix}-"]`).forEach(input => {
+            const key = input.name;
+            if (input.type === 'checkbox') {
+                values[key] = input.checked;
+            } else if (input.type === 'number') {
+                values[key] = parseFloat(input.value);
+            } else {
+                values[key] = input.value;
+            }
+        });
+        
+        return values;
+    }
+    
+    /**
+     * Format last updated date
+     */
+    formatLastUpdated(timestamp) {
+        return window.AICC?.utils?.formatTimestamp(timestamp) || 'Never';
+    }
+    
+    /**
+     * Show AI Kit error
+     */
+    showAIKitError(message) {
+        const grid = document.getElementById('catalog-grid');
+        if (grid) {
+            grid.innerHTML = `<div class="error-message">${message}</div>`;
+        }
     }
     
     /**
@@ -2021,60 +2623,28 @@ class SecondaryPanelApp {
      * Utility: Get type icon
      */
     getTypeIcon(type) {
-        const icons = {
-            'epic': 'layers',
-            'story': 'bookmark',
-            'task': 'circle-outline',
-            'bug': 'bug'
-        };
-        return icons[type] || 'file';
+        return window.AICC?.utils?.getTypeIcon(type) || 'file';
     }
     
     /**
      * Utility: Get priority icon
      */
     getPriorityIcon(priority) {
-        const p = (priority || 'medium').toLowerCase();
-        const icons = {
-            'critical': `<span class="codicon codicon-flame" style="color:#ef4444;" title="Priority: Critical" aria-label="Critical priority" aria-hidden="true"></span>`,
-            'high': `<span class="codicon codicon-arrow-up" style="color:#f97316;" title="Priority: High" aria-label="High priority" aria-hidden="true"></span>`,
-            'medium': `<span class="codicon codicon-dash" style="color:#6b7280;" title="Priority: Medium" aria-label="Medium priority" aria-hidden="true"></span>`,
-            'low': `<span class="codicon codicon-arrow-down" style="color:#22c55e;" title="Priority: Low" aria-label="Low priority" aria-hidden="true"></span>`
-        };
-        return icons[p] || '';
+        return window.AICC?.utils?.getPriorityIcon(priority) || '';
     }
     
     /**
      * Utility: Normalize status (deprecated - now using uppercase directly)
      */
     normalizeStatus(status) {
-        // Legacy support - convert old lowercase to uppercase
-        const map = {
-            'backlog': 'BACKLOG',
-            'todo': 'BACKLOG',
-            'not-started': 'BACKLOG',
-            'ready': 'READY',
-            'in-progress': 'IN-PROGRESS',
-            'blocked': 'BLOCKED',
-            'error': 'BLOCKED',
-            'review': 'REVIEW',
-            'done': 'DONE',
-            'hold': 'BLOCKED',
-            'skip': 'SKIP'
-        };
-        return map[status?.toLowerCase()] || status || 'BACKLOG';
+        return window.AICC?.utils?.normalizeStatus(status) || status || 'BACKLOG';
     }
     
     /**
      * Utility: Escape HTML
      */
     escapeHtml(str) {
-        if (!str) return '';
-        return str.toString()
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;');
+        return window.AICC?.utils?.escapeHtml(str) || '';
     }
 }
 

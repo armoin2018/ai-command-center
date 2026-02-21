@@ -3,7 +3,7 @@ id: vercel
 name: Vercel Modern Web Deployment Platform Instructions
 description: Comprehensive guide for using Vercel for Next.js applications, serverless
 keywords: [api, cloud, classes, enterprise, async, architecture, configuration, deployment, cli, framework]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

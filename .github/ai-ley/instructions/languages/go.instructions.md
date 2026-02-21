@@ -3,7 +3,7 @@ id: go
 name: Go.Instructions
 description: Comprehensive Go development guidelines emphasizing idiomatic Go code, performance, and maintainability for AI coding assistants.
 keywords: [api, context, concurrency, common, async, configuration, avoid, cli, channels, conventions]
-tools: [undefined]
+
 ---
 # Go Programming Instructions
 

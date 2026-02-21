@@ -3,7 +3,7 @@ id: cordova
 name: Apache Cordova Mobile Development Framework Instructions
 description: Comprehensive guide for Apache Cordova hybrid mobile app development
 keywords: [security, async, agent, common, api, apache, performance, use, assessment, avoid]
-tools: [undefined]
+
 ---
 ## Framework Overview
 

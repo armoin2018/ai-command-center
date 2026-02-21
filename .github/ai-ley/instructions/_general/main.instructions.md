@@ -3,7 +3,7 @@ id: main
 name: Main.Instructions
 description: Core guidelines for AI agents when working on software development tasks across all languages and frameworks.
 keywords: [checklist, before, common, coding, adaptation, assistant, architecture, awareness, avoid, agnostic]
-tools: [undefined]
+
 ---
 # General AI Coding Assistant Instructions
 

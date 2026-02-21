@@ -1,7 +1,7 @@
 ---
-name: 'Neutralino.Instructions'
-description: 'See [example-1](./examples/neutralino/example-1.'
-keywords: [async, agent, pattern, [concept, architecture, analysis, api, agents, avoid, alternative:
+name: neutralino
+description: Neutralino Framework Instructions for AI Agents
+keywords: [neutralino, desktop applications, lightweight framework, web technologies, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

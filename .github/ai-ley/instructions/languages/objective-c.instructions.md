@@ -3,7 +3,7 @@ id: objective-c
 name: Objective C.Instructions
 description: Development guidelines and best practices for Objective C.Instructions
 keywords: [api, c.instructions, avoid, common, architecture, authentication, assistant, authorization, advanced, benefits]
-tools: [undefined]
+
 ---
 `
 ---

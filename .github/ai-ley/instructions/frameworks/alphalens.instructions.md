@@ -2,8 +2,8 @@
 id: alphalens
 name: Alphalens.Instructions
 description: Purpose: Evaluate predictive power of alpha factors with rigorous time alignment, forward return computation, and tearsheets.
-keywords: [alphalens, (factor, gui, cli, analysis), frameworks, avoid, assistant, alphalens.instructions, contracts]
-tools: undefined
+keywords: [alphalens, factor, gui, cli, analysis), frameworks, avoid, assistant, alphalens.instructions, contracts]
+
 ---
 # Alphalens — AI Assistant Guidelines (Factor Analysis)
 

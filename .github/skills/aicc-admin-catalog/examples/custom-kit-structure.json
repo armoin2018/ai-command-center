@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../aicc/schemas/structure.v1.schema.json",
+  "version": "1.0.0",
+  "name": "my-custom-kit",
+  "repo": "https://github.com/yourname/my-custom-kit",
+  "branch": "main",
+  "description": "Custom AI kit with templates and automation",
+  "author": "Your Name",
+  "refreshEnabled": true,
+  "refreshInterval": "86400",
+  "evolveEnabled": true,
+  "icon": "icon.png",
+  "dependencies": [
+    "ai-ley"
+  ],
+  "folderMapping": [
+    {
+      "source": ".github/prompts",
+      "target": ".github/prompts",
+      "type": "pattern",
+      "pattern": "**/*.prompt.md",
+      "exclude": [
+        "*.draft.md",
+        "**/archive/**"
+      ],
+      "recursionDepth": -1,
+      "forceReplace": false,
+      "supportedAgentic": [
+        "copilot",
+        "claude",
+        "cursor"
+      ],
+      "preserveStructure": true
+    },
+    {
+      "source": ".github/skills",
+      "target": ".github/skills",
+      "type": "folder",
+      "exclude": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/*.log"
+      ],
+      "recursionDepth": 3,
+      "forceReplace": false,
+      "supportedAgentic": "*"
+    },
+    {
+      "source": "templates",
+      "target": ".github/templates",
+      "type": "pattern",
+      "pattern": "**/*.template.*",
+      "rename": {
+        "pattern": "^(.+)\\.template\\.(.+)$",
+        "replacement": "$1.$2"
+      },
+      "supportedAgentic": [
+        "copilot"
+      ]
+    },
+    {
+      "source": "docs/README.md",
+      "target": ".github/docs/my-kit-README.md",
+      "type": "file",
+      "forceReplace": true,
+      "supportedAgentic": "*"
+    }
+  ],
+  "additionalProperties": {
+    "homepage": "https://example.com",
+    "category": "automation",
+    "tags": [
+      "templates",
+      "prompts",
+      "skills"
+    ]
+  }
+}

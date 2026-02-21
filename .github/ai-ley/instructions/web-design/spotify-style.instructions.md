@@ -3,7 +3,7 @@ id: spotify-style
 name: Spotify Style.Instructions
 description: Development guidelines and best practices for Spotify Style.Instructions
 keywords: [spotify, style, web design, style.instructions]
-tools: [undefined]
+
 ---
 # Spotify Style UI
 

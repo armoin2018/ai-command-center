@@ -3,7 +3,7 @@ id: bash
 name: Bash.Instructions
 description: Development guidelines and best practices for Bash.Instructions
 keywords: [arrays, cleanup, $(...), advanced, bash.instructions, argument, command, comments, avoid, complex]
-tools: [undefined]
+
 ---
 # GitHub Copilot Style Guide for Advanced Bash Programming
 ---

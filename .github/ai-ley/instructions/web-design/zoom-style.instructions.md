@@ -3,7 +3,7 @@ id: zoom-style
 name: Zoom Style.Instructions
 description: Development guidelines and best practices for Zoom Style.Instructions
 keywords: [style, web design, zoom, style.instructions]
-tools: [undefined]
+
 ---
 # Zoom Style UI
 

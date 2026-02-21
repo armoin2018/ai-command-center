@@ -3,7 +3,7 @@ id: php.enhanced
 name: Php.Enhanced.Instructions
 description: Development guidelines and best practices for Php.Enhanced.Instructions
 keywords: [audit, api, avoid, benchmarking, adaptation, assistant, architecture, authentication, backend, advanced]
-tools: [undefined]
+
 ---
 `
 ---

@@ -3,7 +3,7 @@ id: trading-strategy
 name: Trading Strategy.Instructions
 description: Purpose: Research and execute strategies with datasets, pipelines, and execution models while maintaining anti-leakage and auditability.
 keywords: [(python, guidelines, gui, library), library, frameworks, assistant, rules, contracts, strategy]
-tools: undefined
+
 ---
 # trading-strategy — AI Assistant Guidelines (Python library)
 

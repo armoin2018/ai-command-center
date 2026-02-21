@@ -3,7 +3,7 @@ id: forecast
 name: Business Forecasting Instructions
 description: Comprehensive business forecasting instructions for AI agents to assist
 keywords: [api, assessment, application, apply, agents, (crm), (erp), avoid, accuracy, approaches]
-tools: [undefined]
+
 ---
 ## Purpose
 

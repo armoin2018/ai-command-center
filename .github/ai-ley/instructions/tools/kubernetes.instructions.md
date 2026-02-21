@@ -3,7 +3,7 @@ id: kubernetes
 name: Kubernetes Enterprise Container Orchestration Platform
 description: Enterprise Kubernetes Container Orchestration Platform - Comprehensive Level 3 production-ready container orchestration platform with advanced security policies, network segmentation, service mesh integration, GitOps workflows, compliance automation, monitoring observability, multi-cluster management, disaster recovery, and enterprise governance standards for cloud-native applications at scale.
 keywords: [deployment, alternative, security, (crds), avoid, common, platform, deploy, (hpa), container]
-tools: [undefined]
+
 ---
 ## 🏢 Enterprise Platform Overview
 

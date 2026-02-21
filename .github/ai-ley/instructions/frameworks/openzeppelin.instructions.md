@@ -1,9 +1,8 @@
 ---
-id: openzeppelin
-name: Openzeppelin.Instructions
-description: Development guidelines and best practices for Openzeppelin.Instructions
-keywords: [testing, security, gui, frameworks, openzeppelin.instructions]
-tools: [undefined]
+name: openzeppelin
+description: OpenZeppelin — AI Agent Implementation Guide
+keywords: [openzeppelin, solidity, smart contracts, security, ethereum, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 Title: OpenZeppelin — AI Agent Implementation Guide
 

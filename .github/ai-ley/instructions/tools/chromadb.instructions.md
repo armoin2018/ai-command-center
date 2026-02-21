@@ -3,7 +3,7 @@ id: chromadb
 name: ChromaDB Enterprise Vector Database & Semantic Intelligence Platform
 description: Enterprise ChromaDB Vector Database & Semantic Intelligence Platform with comprehensive AI/ML orchestration, advanced embedding management, enterprise-grade security validation, multi-model semantic search, intelligent data governance, production-scale RAG systems, automated compliance frameworks, real-time analytics intelligence, and complete enterprise integration capabilities for mission-critical AI-powered applications and semantic data architecture.
 keywords: [api, advanced, analytics, ai/ml, enterprise, architecture, (optional), capabilities, cases, production]
-tools: [undefined]
+
 ---
 ## Platform Overview
 

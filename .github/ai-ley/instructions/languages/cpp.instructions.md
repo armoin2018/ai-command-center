@@ -3,7 +3,7 @@ id: cpp
 name: Cpp.Instructions
 description: Comprehensive C++ development guidelines for AI coding assistants, emphasizing modern C++ best practices, RAII principles, performance optimization, and maintainable code patterns.
 keywords: [context, cmake, comprehensive, concurrency, common, architecture, configuration, analysis, avoid, conventions]
-tools: [undefined]
+
 ---
 # C++ Programming Instructions
 

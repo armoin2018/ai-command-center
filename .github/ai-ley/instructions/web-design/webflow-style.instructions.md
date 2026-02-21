@@ -3,7 +3,7 @@ id: webflow-style
 name: Webflow Style.Instructions
 description: Development guidelines and best practices for Webflow Style.Instructions
 keywords: [webflow, web design, builder, style.instructions, style, web]
-tools: [undefined]
+
 ---
 # Webflow-Style Builder
 

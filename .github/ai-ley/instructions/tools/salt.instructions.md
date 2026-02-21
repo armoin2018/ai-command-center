@@ -3,7 +3,7 @@ id: salt
 name: salt.instructions
 description: Development guidelines and best practices for Salt.Instructions
 keywords: [alerting, agent, /srv/pillar/base/webserver.sls, backup, architecture, authentication, backend, avoid, /srv/salt/base/webserver/init.sls, certificate]
-tools: [undefined]
+
 ---
 ### Purpose
 

@@ -3,7 +3,7 @@ id: couchdb
 name: Enterprise CouchDB Document Database & Multi-Master Replication Platform
 description: Enterprise AI/ML-powered Apache CouchDB NoSQL Database Platform with advanced multi-master replication, distributed document intelligence, real-time sync orchestration, conflict-free collaborative editing, offline-first architecture, enterprise-grade security, automated compliance frameworks, intelligent analytics, and comprehensive operational intelligence for mission-critical distributed applications.
 keywords: [deployment, api, advanced, core, agent, platform, enterprise, advanced, complete, production]
-tools: [undefined]
+
 ---
 ### **Platform Purpose & Capabilities**
 

@@ -3,7 +3,7 @@ id: js-style-guide
 name: Js Style Guide.Instructions
 description: Development guidelines and best practices for Js Style Guide.Instructions
 keywords: [async, cli, best practices, classes, comments, based), (airbnb, arrays, (prettier), browser]
-tools: [undefined]
+
 ---
 # JavaScript Style Guide (Airbnb-based)
 

@@ -3,7 +3,7 @@ id: python
 name: Python.Instructions
 description: Modern Python development guidelines for AI coding assistants, emphasizing Python 3.9+ features, best practices, and maintainable code patterns.
 keywords: [api, asynchronous, assurance, classes, common, async, async/await, architecture, assistant, avoid]
-tools: [undefined]
+
 ---
 # Python Programming Instructions
 

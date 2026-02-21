@@ -3,7 +3,7 @@ id: nautilustrader
 name: nautilustrader.instructions
 description: Development guidelines and best practices for Nautilustrader.Instructions
 keywords: [frameworks, nautilustrader.instructions]
-tools: [undefined]
+
 ---
 
 

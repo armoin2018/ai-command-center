@@ -1,7 +1,7 @@
 ---
-name: 'Xamarin Cross-Platform Mobile Development Instructions'
-description: 'Comprehensive guide for Xamarin cross-platform mobile development with'
-keywords: [common, agent, pattern, [concept, analysis, backend, use, building, assessment, avoid
+name: xamarin
+description: Comprehensive Xamarin/.NET MAUI Cross-Platform Mobile Development Instructions, including framework overview, when to use or avoid Xamarin/MAUI, AI agent decision matrix, installation and setup, project structure, core concepts, development workflow, best practices, common patterns, log analysis, and common error messages.
+keywords: [ xamarin, .net-maui, cross-platform, mobile-development, c-sharp, xaml, enterprise-apps, native-performance, offline-capabilities, data-synchronization ]
 ---
 
 

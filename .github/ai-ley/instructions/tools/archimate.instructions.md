@@ -3,7 +3,7 @@ id: archimate
 name: ArchiMate Enterprise Architecture Modeling
 description: Comprehensive instructions for using ArchiMate to model enterprise architecture, including core concepts, diagram types, tools, and best practices for AI-assisted enterprise modeling.
 keywords: [(open, cross, common, archimate, archi, bizzdesign, architecture, archimate.instructions, concepts, (soa)]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

@@ -3,7 +3,7 @@ id: splunk
 name: splunk.instructions
 description: Development guidelines and best practices for Splunk.Instructions
 keywords: [enterprise, mobile, analytics, architecture, implementation, overview, architecture, level, performance, intelligence]
-tools: [undefined]
+
 ---
 ### **Overview**
 

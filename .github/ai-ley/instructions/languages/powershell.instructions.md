@@ -3,7 +3,7 @@ id: powershell
 name: Powershell.Instructions
 description: Development guidelines and best practices for Powershell.Instructions
 keywords: [cloud, advanced, common, assistant, architecture, analysis, avoid, azure, benefits, aws]
-tools: [undefined]
+
 ---
 `
 ---

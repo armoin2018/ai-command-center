@@ -3,7 +3,7 @@ id: storytelling-scroll
 name: Storytelling Scroll.Instructions
 description: Development guidelines and best practices for Storytelling Scroll.Instructions
 keywords: [scroll, web design, animation, storytelling, scroll.instructions]
-tools: [undefined]
+
 ---
 # Storytelling & Scroll Animation
 

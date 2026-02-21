@@ -3,7 +3,7 @@ id: php
 name: Php.Instructions
 description: Development guidelines and best practices for Php.Instructions
 keywords: [audit, api, avoid, benchmarking, adaptation, assistant, architecture, authentication, backend, advanced]
-tools: [undefined]
+
 ---
 `
 ---

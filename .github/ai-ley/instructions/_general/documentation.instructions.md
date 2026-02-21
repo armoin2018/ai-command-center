@@ -3,7 +3,7 @@ id: documentation
 name: Documentation.Instructions
 description: Development guidelines and best practices for Documentation.Instructions
 keywords: [audit, api, basic, common, checklists, architecture, assistant, avoid, cli, benefits]
-tools: [undefined]
+
 ---
 ### Fundamental Concepts
 1. **User-Centered**: Documentation should serve the needs of its intended audience first

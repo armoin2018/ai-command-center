@@ -3,7 +3,7 @@ id: alphapy
 name: Alphapy.Instructions
 description: Purpose: Build ML-based trading signals and portfolios with strict time-aware validation and risk controls.
 keywords: [alphapy.instructions, alphapy, gui, guidelines, assistant, frameworks, hygiene, (finance), modeling, backtesting]
-tools: undefined
+
 ---
 # AlphaPy (Finance) — AI Assistant Guidelines
 

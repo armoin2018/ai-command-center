@@ -3,7 +3,7 @@ id: neumorphism
 name: Neumorphism.Instructions
 description: Development guidelines and best practices for Neumorphism.Instructions
 keywords: [neumorphism.instructions, web design, neumorphism, (soft]
-tools: [undefined]
+
 ---
 # Neumorphism (Soft UI)
 

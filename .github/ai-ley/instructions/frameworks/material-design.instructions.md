@@ -1,7 +1,7 @@
 ---
-name: 'Material Design System Framework Instructions'
-description: 'Comprehensive guide for implementing Google's Material Design system'
-keywords: [assessment, avoid, application, building, agent, common, concept, use, [pattern, analysis
+name: material-design
+description: Material Design System Framework Instructions for AI Agents
+keywords: [material-design, design system, component framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

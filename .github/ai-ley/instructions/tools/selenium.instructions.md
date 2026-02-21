@@ -3,7 +3,7 @@ id: selenium
 name: Selenium Web Browser Automation Testing Instructions
 description: Comprehensive guide for using Selenium WebDriver for automated web testing,
 keywords: [api, (maven), assessment, browser, avoid, agent, use, automation, appropriate, build.gradle)]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

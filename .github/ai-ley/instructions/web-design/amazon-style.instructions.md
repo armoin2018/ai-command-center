@@ -3,7 +3,7 @@ id: amazon-style
 name: Amazon Style.Instructions
 description: Development guidelines and best practices for Amazon Style.Instructions
 keywords: [style, web design, style.instructions, amazon]
-tools: [undefined]
+
 ---
 # Amazon Style UI
 

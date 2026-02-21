@@ -3,7 +3,7 @@ id: sympy
 name: Sympy.Instructions
 description: Purpose: Use symbolic math to prototype closed-form factor definitions, constraints, and risk models with verifiable transformations.
 keywords: [sympy, guidelines, gui, cases, backend, frameworks, assistant, rules, bridge, (finance)]
-tools: undefined
+
 ---
 # SymPy (Finance) — AI Assistant Guidelines
 

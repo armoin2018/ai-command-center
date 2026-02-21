@@ -3,7 +3,7 @@ id: pfsense
 name: Enterprise pfSense Network Security Platform
 description: Enterprise-grade pfSense firewall and network security platform with advanced threat protection, zero-trust architecture implementation, automated security policy orchestration, high-availability clustering, comprehensive compliance frameworks, sophisticated VPN management, intelligent traffic analysis, automated incident response, executive security dashboards, and production-ready deployment patterns for mission-critical enterprise environments.
 keywords: [api, cloud, advanced, agent, architecture, database, avoid, azure, deploy, aws]
-tools: [undefined]
+
 ---
 ### Enterprise Mission Statement
 

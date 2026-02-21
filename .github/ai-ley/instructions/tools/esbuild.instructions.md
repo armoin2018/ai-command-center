@@ -1,10 +1,8 @@
 ---
-name: 'Esbuild.Instructions'
-description: 'See [example-29](./examples/esbuild/example-29.'
-keywords: [api, automation, (esbuild.config.js), asset, bundle, related, build, bundling, advanced, bundler
+name: esbuild
+description: Comprehensive instructions for using the esbuild JavaScript bundler, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [ bundler, javascript, typescript, build-tools, performance, optimization, configuration, plugins, troubleshooting ]
 ---
-
-
 
 # esbuild JavaScript Bundler Instructions
 

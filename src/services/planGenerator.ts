@@ -118,7 +118,7 @@ export class PlanGenerator {
     if (metadata.projectCode) {
       let counter = 1;
       for (const item of items) {
-        item.projectNumber = `${metadata.projectCode}-${String(counter).padStart(4, '0')}`;
+        // Project number is displayed using metadata.projectCode + item.id
         counter++;
       }
     }
@@ -155,8 +155,7 @@ export class PlanGenerator {
         id: `EPIC-${epicNum}`,
         type: 'epic',
         summary: dirName.replace('epic-', '').replace(/-/g, ' '),
-        status: 'BACKLOG',
-        sourcePath: epicPath
+        status: 'BACKLOG'
       };
     }
   }
@@ -171,7 +170,7 @@ export class PlanGenerator {
       const content = await this.readFile(readmePath);
       const story = this.parseMarkdownItem(content, 'story', readmePath);
       if (story) {
-        story.parent = parentId;
+        story.parentId = parentId;
       }
       return story;
     } catch {
@@ -183,8 +182,7 @@ export class PlanGenerator {
         type: 'story',
         summary: dirName.replace('story-', '').replace(/-/g, ' '),
         status: 'BACKLOG',
-        parent: parentId,
-        sourcePath: storyPath
+        parentId: parentId
       };
     }
   }
@@ -200,7 +198,7 @@ export class PlanGenerator {
       
       const item = this.parseMarkdownItem(content, type, filePath);
       if (item) {
-        item.parent = parentId;
+        item.parentId = parentId;
       }
       return item;
     } catch {
@@ -249,11 +247,12 @@ export class PlanGenerator {
         personas: metadata.personas as string[],
         sprint: metadata.sprint as string,
         milestone: metadata.milestone as string,
-        labels: metadata.labels as string[],
-        sourcePath,
+        tags: metadata.labels as string[],
         metadata: {
           createdAt: (metadata.createdAt as string) || new Date().toISOString(),
           updatedAt: (metadata.updatedAt as string) || new Date().toISOString(),
+          createdBy: (metadata.createdBy as string) || 'system',
+          updatedBy: (metadata.updatedBy as string) || 'system',
           phase: metadata.phase as string
         }
       };
@@ -291,23 +290,23 @@ export class PlanGenerator {
    */
   private normalizeStatus(status: string): PlanItemStatus {
     const statusMap: Record<string, PlanItemStatus> = {
-      'backlog': 'backlog',
-      'todo': 'backlog',
-      'not started': 'backlog',
-      'not-started': 'backlog',
-      'ready': 'ready',
-      'ready for development': 'ready',
-      'in progress': 'in-progress',
-      'in-progress': 'in-progress',
-      'active': 'in-progress',
-      'blocked': 'blocked',
-      'review': 'review',
-      'in review': 'review',
-      'testing': 'review',
-      'done': 'done',
-      'complete': 'done',
-      'completed': 'done',
-      'closed': 'done'
+      'backlog': 'BACKLOG',
+      'todo': 'BACKLOG',
+      'not started': 'BACKLOG',
+      'not-started': 'BACKLOG',
+      'ready': 'READY',
+      'ready for development': 'READY',
+      'in progress': 'IN-PROGRESS',
+      'in-progress': 'IN-PROGRESS',
+      'active': 'IN-PROGRESS',
+      'blocked': 'BLOCKED',
+      'review': 'REVIEW',
+      'in review': 'REVIEW',
+      'testing': 'REVIEW',
+      'done': 'DONE',
+      'complete': 'DONE',
+      'completed': 'DONE',
+      'closed': 'DONE'
     };
     
     return statusMap[status.toLowerCase()] || 'backlog';
@@ -318,12 +317,13 @@ export class PlanGenerator {
    */
   private calculateStatusCounts(items: PlanItem[]): StatusCounts {
     const counts: StatusCounts = {
-      backlog: 0,
-      ready: 0,
-      'in-progress': 0,
-      blocked: 0,
-      review: 0,
-      done: 0
+      BACKLOG: 0,
+      READY: 0,
+      'IN-PROGRESS': 0,
+      BLOCKED: 0,
+      REVIEW: 0,
+      DONE: 0,
+      SKIP: 0
     };
     
     for (const item of items) {
@@ -486,7 +486,7 @@ export class PlanGenerator {
     }
     
     if (filter?.parent) {
-      items = items.filter(item => item.parent === filter.parent);
+      items = items.filter(item => item.parentId === filter.parent);
     }
     
     return items;

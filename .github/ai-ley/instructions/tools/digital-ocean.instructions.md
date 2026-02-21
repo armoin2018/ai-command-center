@@ -1,7 +1,7 @@
 ---
-name: 'Digital Ocean.Instructions'
-description: 'Development guidelines and best practices for Digital Ocean.Instructions'
-keywords: [api, cloud, "digitalocean,, async, applyto:, addressed, cli, azure, benefits, aws]
+name: digital-ocean
+description: Enterprise Digital Ocean Cloud Platform instructions, including core enterprise principles, benefits, misconceptions, and comprehensive enterprise infrastructure deployment with compute, application platform, Kubernetes, databases, storage, and monitoring.
+keywords: [ digital-ocean, enterprise, cloud, infrastructure, droplets, app-platform, kubernetes, databases, storage, monitoring ]
 ---
 
 

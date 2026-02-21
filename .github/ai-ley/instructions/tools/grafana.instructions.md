@@ -3,7 +3,7 @@ id: grafana
 name: grafana.instructions
 description: Development guidelines and best practices for Grafana.Instructions
 keywords: [compose.yml, api, configuration, analytics, architecture, authentication, configuration, database, advanced, cli]
-tools: [undefined]
+
 ---
 ## **📊 Advanced Analytics & Observability Intelligence**
 

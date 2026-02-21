@@ -3,7 +3,7 @@ id: minimalist-clean
 name: Minimalist Clean.Instructions
 description: Development guidelines and best practices for Minimalist Clean.Instructions
 keywords: [web design, clean.instructions, minimalist, design, clean]
-tools: [undefined]
+
 ---
 # Minimalist / Clean Design
 

@@ -3,7 +3,7 @@ id: react-redux
 name: React Redux.Instructions
 description: Development guidelines and best practices for React Redux.Instructions
 keywords: [api, common, async, better, compliance, architecture, assistant, avoid, benefits, complex]
-tools: [undefined]
+
 ---
 `
 ---

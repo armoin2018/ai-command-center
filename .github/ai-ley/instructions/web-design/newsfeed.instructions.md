@@ -3,7 +3,7 @@ id: newsfeed
 name: Newsfeed.Instructions
 description: Development guidelines and best practices for Newsfeed.Instructions
 keywords: [newsfeed.instructions, web design]
-tools: [undefined]
+
 ---
 # News Feed
 

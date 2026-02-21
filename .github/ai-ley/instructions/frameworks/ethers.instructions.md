@@ -1,7 +1,7 @@
 ---
-name: 'Ethers.Instructions'
-description: 'Use Ethers.'
-keywords: [(v6+), api, async, concept, agents, architecture, authentication, [pattern, analysis, avoid
+name: ethers
+description: Ethers.js Library Instructions for AI Agents
+keywords: [ethersjs, ethereum, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

@@ -3,7 +3,7 @@ id: openscad
 name: Openscad.Instructions
 description: Development guidelines and best practices for Openscad.Instructions
 keywords: [openscad.instructions, languages, gui]
-tools: [undefined]
+
 ---
 Title: OpenSCAD — AI Agent Modeling Guide
 

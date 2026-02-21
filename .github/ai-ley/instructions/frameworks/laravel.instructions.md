@@ -1,7 +1,7 @@
 ---
-name: 'Laravel PHP Web Framework Instructions'
-description: 'Comprehensive guide for Laravel framework with Eloquent ORM, Artisan'
-keywords: [agent, pattern, [concept, analysis, api, authorization, use, assessment, avoid, authentication
+name: laravel
+description: Laravel PHP Web Framework Instructions for AI Agents
+keywords: [laravel, php, web framework, api development, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

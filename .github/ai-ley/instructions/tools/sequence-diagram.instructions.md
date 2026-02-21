@@ -3,7 +3,7 @@ id: sequence-diagram
 name: sequence-diagram.instructions
 description: Development guidelines and best practices for Sequence Diagram.Instructions
 keywords: [api, platform, async, capabilities, architecture, authentication, authorization, cases, advanced, sequence]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

@@ -3,7 +3,7 @@ id: lean-canvas
 name: lean-canvas.instructions
 description: Development guidelines and best practices for Lean Canvas.Instructions
 keywords: [business, lean, canvas.instructions]
-tools: [undefined]
+
 ---
 
 

@@ -3,7 +3,7 @@ id: cmmn
 name: cmmn.instructions
 description: Development guidelines and best practices for Cmmn.Instructions
 keywords: [api, cmmn, cmmn.instructions, await, platform, async, capabilities, architecture, cli, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

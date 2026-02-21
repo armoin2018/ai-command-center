@@ -3,7 +3,7 @@ id: swift
 name: Swift.Instructions
 description: Comprehensive Swift development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, concurrency, common, async, async/await, architecture, configuration, analysis, avoid]
-tools: [undefined]
+
 ---
 # Swift Programming Instructions
 

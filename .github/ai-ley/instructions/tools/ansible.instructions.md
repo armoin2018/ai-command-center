@@ -3,7 +3,7 @@ id: ansible
 name: ansible.instructions
 description: Development guidelines and best practices for Ansible.Instructions
 keywords: [api, cloud, (auditd), (host, accounting, benchmark, ansible.instructions, authentication, authorization, automation]
-tools: [undefined]
+
 ---
 ---
 agentMode: general

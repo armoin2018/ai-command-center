@@ -1,7 +1,7 @@
 ---
-name: 'Yarn.Instructions'
-description: 'See [example-12](./examples/yarn/example-12.'
-keywords: [automation, (yarn, .yarnrc, bundle, related, cache, analysis, advanced, (pnp), .yarnrc.yml
+name: yarn
+description: Comprehensive instructions for using the Yarn package manager, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [automation, yarn, .yarnrc, bundle, related, cache, analysis, advanced, pnp ]
 ---
 
 

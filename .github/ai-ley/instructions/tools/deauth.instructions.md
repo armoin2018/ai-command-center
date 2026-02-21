@@ -3,7 +3,7 @@ id: deauth
 name: deauth.instructions
 description: Development guidelines and best practices for Deauth.Instructions
 keywords: [deauth.instructions, agent, deauth, compliance, architecture, authentication, authorization, assistant, avoid, cli]
-tools: [undefined]
+
 ---
 ### Purpose
 

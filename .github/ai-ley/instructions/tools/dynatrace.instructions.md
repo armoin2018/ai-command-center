@@ -3,7 +3,7 @@ id: dynatrace
 name: dynatrace.instructions
 description: Development guidelines and best practices for Dynatrace.Instructions
 keywords: [dynatrace.instructions, cloud, application, configuration, enterprise, discovery, configuration, dynatrace, framework, automatic]
-tools: [undefined]
+
 ---
 ## **🧠 AI-Powered Full-Stack Observability & Automatic Discovery**
 

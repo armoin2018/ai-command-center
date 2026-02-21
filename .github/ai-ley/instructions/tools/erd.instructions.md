@@ -3,7 +3,7 @@ id: erd
 name: erd.instructions
 description: Development guidelines and best practices for Erd.Instructions
 keywords: [erd, components, erd.instructions, enterprise, platform, capabilities, examples, architecture, database, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

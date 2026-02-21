@@ -3,7 +3,7 @@ id: apt
 name: Apt.Instructions
 description: Development guidelines and best practices for Apt.Instructions
 keywords: [avoid, common, compliance, assistant, architecture, apt.instructions, authentication, analysis, advanced, benefits]
-tools: [undefined]
+
 ---
 `
 ---

@@ -1,10 +1,8 @@
 ---
-name: 'Rollup.Instructions'
-description: 'See [example-18](./examples/rollup/example-18.'
-keywords: [(rollup.config.js), basic, builds, automation, asset, bundle, related, build, advanced, bundler
+name: rollup
+description: Comprehensive instructions for using the Rollup JavaScript bundler, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [ builds, automation, asset, bundle, related, build, advanced, bundler]
 ---
-
-
 
 # Rollup JavaScript Bundler Instructions
 

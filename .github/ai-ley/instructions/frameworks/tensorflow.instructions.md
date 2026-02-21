@@ -3,7 +3,7 @@ id: tensorflow
 name: Tensorflow.Instructions
 description: Development guidelines and best practices for Tensorflow.Instructions
 keywords: [frameworks, tensorflow.instructions, gui]
-tools: [undefined]
+
 ---
 Title: TensorFlow (Finance) — AI Agent Modeling Guide
 

@@ -3,7 +3,7 @@ id: developer
 name: developer-general-instructions
 description: General developer instructions for AI-ley agents.
 keywords: [developer, coding-standards, clean-code, best-practices]
-tools: [undefined]
+
 ---
 # Clean Code Style Guide (based on Robert C. Martin)
 

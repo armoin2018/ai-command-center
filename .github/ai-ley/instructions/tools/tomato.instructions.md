@@ -3,7 +3,7 @@ id: tomato
 name: tomato.instructions
 description: Development guidelines and best practices for Tomato.Instructions
 keywords: [api, enterprise, agent, compliance, docker, architecture, assistant, avoid, cli, compose]
-tools: [undefined]
+
 ---
 ### Purpose
 

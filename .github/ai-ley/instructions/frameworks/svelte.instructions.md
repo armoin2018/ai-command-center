@@ -3,7 +3,7 @@ id: svelte
 name: Svelte.Instructions
 description: See [example-9](./examples/svelte/example-9.
 keywords: [api, agent, (lightweight), agents, (full, object Object, architecture, authentication, authorization, (sveltekit)]
-tools: [undefined]
+
 ---
 ## When to Use Svelte
 Use Svelte when you need:

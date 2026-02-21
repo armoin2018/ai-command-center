@@ -188,10 +188,3 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
-
----
-version: 1.0.0
-updated: 2026-01-30
-reviewed: 2026-01-30
-score: 4.5
----

@@ -3,7 +3,7 @@ id: three-js
 name: Three Js.Instructions
 description: Use Three.
 keywords: [animation, agent, architecture, api, advanced, backend, agents, avoid, camera, camera]
-tools: [undefined]
+
 ---
 ## When to Use Three.js
 

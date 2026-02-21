@@ -3,7 +3,7 @@ id: c
 name: C.Instructions
 description: Comprehensive instructions for C development with AI coding assistants, focusing on modern C best practices, memory safety, and maintainable code.
 keywords: [api, c.instructions, common, build, compiler, architecture, allocation, avoid, cli, checklist]
-tools: [undefined]
+
 ---
 # C Programming Instructions
 

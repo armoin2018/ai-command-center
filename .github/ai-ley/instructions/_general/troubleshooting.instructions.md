@@ -3,7 +3,7 @@ id: troubleshooting
 name: Troubleshooting.Instructions
 description: See [example-9](./examples/troubleshooting/example-9.
 keywords: [audit, approach, common, compliance, checklists, architecture, assistant, classification, avoid, benefits]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Software Problem Diagnosis and Resolution

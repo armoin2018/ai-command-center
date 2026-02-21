@@ -3,7 +3,7 @@ id: togaf
 name: togaf.instructions
 description: Development guidelines and best practices for Togaf.Instructions
 keywords: [components, enterprise, platform, capabilities, async, delivered:**, architecture, togaf, components, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

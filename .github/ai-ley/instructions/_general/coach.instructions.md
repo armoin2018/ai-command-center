@@ -3,7 +3,7 @@ id: coach
 name: Coach.Instructions
 description: Development guidelines and best practices for Coach.Instructions
 keywords: [cli, gui, coach.instructions]
-tools: [undefined]
+
 ---
 ## Purpose
 - Define how AI agents provide coaching: structured feedback, goals, and accountability.

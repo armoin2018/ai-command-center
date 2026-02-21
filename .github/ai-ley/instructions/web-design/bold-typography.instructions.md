@@ -3,7 +3,7 @@ id: bold-typography
 name: Bold Typography.Instructions
 description: Development guidelines and best practices for Bold Typography.Instructions
 keywords: [web design, typography, maximalism, bold, typography.instructions]
-tools: [undefined]
+
 ---
 # Bold Typography & Maximalism
 

@@ -1,10 +1,8 @@
 ---
-name: 'Pnpm.Instructions'
-description: 'See [example-28](./examples/pnpm/example-28.'
-keywords: [(pnpm, automation, commands, .npmrc, related, architecture, ci/cd, advanced, cli, cases
+name: pnpm
+description: Comprehensive instructions for using the pnpm package manager, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [automation, commands, .npmrc, related, architecture, ci/cd, advanced, cli, cases]
 ---
-
-
 
 # pnpm Package Manager Instructions
 

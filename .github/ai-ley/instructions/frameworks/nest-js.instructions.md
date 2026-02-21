@@ -3,7 +3,7 @@ id: nest-js
 name: Nest Js.Instructions
 description: See [example-1](./examples/nest-js/example-1.
 keywords: [async, agent, 4.9/5.0, architecture, api, authorization, agents, avoid, assistant, authentication]
-tools: [undefined]
+
 ---
 ## When to Use NestJS
 

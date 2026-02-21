@@ -3,7 +3,7 @@ id: angular
 name: Angular.Instructions
 description: See [example-1](./examples/angular/example-1.
 keywords: [api, agent, angular.instructions, agents, angular, object Object, object Object, architecture, avoid, 5.0/5.0]
-tools: [undefined]
+
 ---
 ## When to Use Angular
 

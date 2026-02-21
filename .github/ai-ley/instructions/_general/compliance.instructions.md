@@ -3,7 +3,7 @@ id: compliance
 name: Compliance.Instructions
 description: Development guidelines and best practices for Compliance.Instructions
 keywords: [audit, avoid, common, checklists, architecture, authorization, assistant, automation, benefits, aws]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Software Development Compliance and Regulatory Adherence

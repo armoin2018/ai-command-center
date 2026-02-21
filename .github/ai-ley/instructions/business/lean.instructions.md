@@ -3,7 +3,7 @@ id: lean
 name: lean.instructions
 description: Development guidelines and best practices for Lean.Instructions
 keywords: [lean.instructions, business]
-tools: [undefined]
+
 ---
 
 

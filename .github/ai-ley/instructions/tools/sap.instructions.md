@@ -3,7 +3,7 @@ id: sap
 name: SAP Instructions
 description: Comprehensive instruction set for using SAP, covering core functions such as navigation, data entry, module access (FI, CO, MM, SD), report generation, and transaction execution with step-by-step procedures, system tips, and typical use case workflows.
 keywords: [entry, basic, accounting, access, distribution, custom, execution, cli, controlling, error]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

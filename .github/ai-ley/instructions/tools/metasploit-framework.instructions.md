@@ -3,7 +3,7 @@ id: metasploit-framework
 name: Enterprise Metasploit Framework Security Testing Platform
 description: Enterprise-grade Metasploit Framework penetration testing platform with advanced exploit development, automated red team operations, sophisticated payload delivery systems, comprehensive post-exploitation frameworks, intelligent evasion techniques, enterprise compliance validation, threat intelligence integration, automated incident response, executive reporting dashboards, and production-ready security testing orchestration for authorized enterprise penetration testing environments.
 keywords: [api, avoid, enterprise, agent, authentication, authorization, database, advanced, cli, deploy]
-tools: [undefined]
+
 ---
 ### Enterprise Mission Statement
 

@@ -39,9 +39,9 @@ Validates panel configuration YAML files in `.github/aicc/panels/`.
 
 Validates tab configuration YAML files in `.github/aicc/tabs/`.
 
-### component.v1.schema.json
+### components.v1.schema.json
 
-Validates component configuration files.
+Validates AI Kit component bundle configuration files in `.github/aicc/catalog/{kitName}/components.json`.
 
 ## Usage
 

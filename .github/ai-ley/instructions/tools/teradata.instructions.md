@@ -3,7 +3,7 @@ id: teradata
 name: Teradata Enterprise Data Warehouse Instructions
 description: Enterprise data warehouse guidance for Teradata Vantage MPP database system, covering advanced SQL, workload management, performance optimization, and analytics for large-scale data operations.
 keywords: [api, cloud, agent, async, architecture, authentication, avoid, cli, azure, aws]
-tools: [undefined]
+
 ---
 ### Purpose
 

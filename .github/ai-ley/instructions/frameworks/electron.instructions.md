@@ -1,7 +1,7 @@
 ---
-name: 'Electron.Instructions'
-description: 'See [example-1](./examples/electron/example-1.'
-keywords: [agent, pattern, architecture, analysis, api, assurance, advanced, agents, alternative:, (modern
+name: electron
+description: Electron Framework Instructions for AI Agents
+keywords: [electron, desktop, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

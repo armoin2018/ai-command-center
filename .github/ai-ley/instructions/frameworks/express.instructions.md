@@ -1,9 +1,8 @@
 ---
-id: express
-name: Express.Instructions
-description: Use Express.
+name: express
+description: Express.js Framework Instructions for AI Agents
 keywords: [application, async, agent, 4.9/5.0, architecture, api, agents, avoid, assistant, authentication]
-tools: [undefined]
+
 ---
 ## When to Use Express.js
 

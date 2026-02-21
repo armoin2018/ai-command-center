@@ -3,7 +3,7 @@ id: ailey-orchestrator
 name: AI-ley Orchestrator
 description: Advanced orchestration agent with prompt engineering, session management, and intelligent task decomposition
 keywords: [orchestrator, prompt-engineering, session-management, task-decomposition, multi-pass, context-management, expert-optimization]
-tools: [execute, read, edit, search, web, agent, todo]
+tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'context7/*', 'agent', 'todo']
 ---
 # AI-ley Orchestrator Agent
 
@@ -263,10 +263,3 @@ version: 1.0.0
 updated: 2026-01-10
 reviewed: 2026-01-10
 score: 4.5
-
----
-version: 1.0.0
-updated: 2026-01-30
-reviewed: 2026-01-30
-score: 4.4
----

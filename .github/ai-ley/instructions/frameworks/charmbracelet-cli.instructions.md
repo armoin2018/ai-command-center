@@ -3,7 +3,7 @@ id: charmbracelet-cli
 name: Charmbracelet Cli.Instructions
 description: Development guidelines and best practices for Charmbracelet Cli.Instructions
 keywords: [cli.instructions, context, architecture, cli, api, charmbracelet, avoid, framework, copilot, follow]
-tools: [undefined]
+
 ---
 # GitHub Copilot Instructions
 

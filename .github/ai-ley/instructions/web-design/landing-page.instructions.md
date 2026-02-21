@@ -3,7 +3,7 @@ id: landing-page
 name: Landing Page.Instructions
 description: Development guidelines and best practices for Landing Page.Instructions
 keywords: [web design, page.instructions, landing, modern]
-tools: [undefined]
+
 ---
 # Modern Landing Page
 

@@ -3,7 +3,7 @@ id: gcp
 name: Google Cloud Platform (GCP) Enterprise Cloud Instructions
 description: Comprehensive guide for Google Cloud Platform development, deployment,
 keywords: [api, (powershell), account, build, authenticate, architecture, app.yaml, (gcp), already, (macos)]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

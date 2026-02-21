@@ -1,0 +1,40 @@
+{
+  "name": "ailey-com-calendly",
+  "version": "1.0.0",
+  "description": "Calendly scheduling integration with OAuth and personal access token support",
+  "type": "module",
+  "scripts": {
+    "calendly": "tsx scripts/index.ts",
+    "setup": "tsx scripts/index.ts setup",
+    "test": "tsx scripts/test-connection.ts",
+    "events": "tsx scripts/event-types.ts",
+    "scheduled": "tsx scripts/scheduled-events.ts",
+    "availability": "tsx scripts/availability.ts",
+    "users": "tsx scripts/users.ts",
+    "webhooks": "tsx scripts/webhooks.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "chalk": "^5.3.0",
+    "open": "^10.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  },
+  "keywords": [
+    "calendly",
+    "scheduling",
+    "appointments",
+    "booking",
+    "calendar",
+    "oauth",
+    "automation"
+  ],
+  "author": "AI-ley",
+  "license": "MIT"
+}

@@ -1,7 +1,7 @@
 ---
-name: 'Cypress.Instructions'
-description: 'See [example-1](./examples/cypress/example-1.'
-keywords: [api, avoid, agent, agents, related, [feature, authentication, ci/cd, automation, cases
+name: cypress
+description: Comprehensive Cypress Testing Tool instructions for AI agents, including when to use or avoid Cypress, tool overview, installation and setup, core concepts, best practices, development workflow, AI agent decision matrix, integration points, performance optimization, security considerations, quick reference, core features, common commands, workflow integration, best practices, common use cases, integration with other tools, and troubleshooting.
+keywords: [ cypress, testing, end-to-end, e2e, integration, component, api, visual, cross-browser, ci/cd, automation ]
 ---
 
 

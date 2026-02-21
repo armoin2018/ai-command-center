@@ -3,7 +3,7 @@ id: owasp
 name: Enterprise OWASP Web Application Security Platform
 description: Enterprise-grade OWASP web application security platform with advanced vulnerability assessment automation, comprehensive ASVS verification frameworks, intelligent threat modeling systems, automated penetration testing pipelines, enterprise compliance validation (PCI-DSS, OWASP Top 10, NIST), sophisticated security orchestration, executive risk dashboards, and production-ready DevSecOps integration for complete web application security operations.
 keywords: [api, automation, avoid, application, agent, apply, architecture, assistant, advanced, artifacts]
-tools: [undefined]
+
 ---
 ### Enterprise Mission Statement
 

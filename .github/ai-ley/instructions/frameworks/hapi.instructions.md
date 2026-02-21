@@ -1,9 +1,8 @@
 ---
-id: hapi
-name: Hapi.Instructions
-description: Title: hapi (Node.
-keywords: [testing, api, security, gui, hapi.instructions, frameworks]
-tools: undefined
+name: hapi
+description: Hapi (Node.js) Framework Instructions for AI Agents
+keywords: [hapi, node.js, web framework, api development, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 Title: hapi (Node.js) — AI Agent Implementation Guide
 

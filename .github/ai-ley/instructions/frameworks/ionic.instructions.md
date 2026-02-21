@@ -1,7 +1,7 @@
 ---
-name: 'Ionic.Instructions'
-description: 'See [example-1](./examples/ionic/example-1.'
-keywords: [(angular), angular, agent, pattern, architecture, analysis, api, agents, avoid, authentication
+name: ionic
+description: Ionic Framework Instructions for AI Agents
+keywords: [ionic, capacitor, hybrid mobile apps, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

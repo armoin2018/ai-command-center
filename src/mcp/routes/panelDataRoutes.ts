@@ -182,11 +182,11 @@ export class PanelDataRoutes {
       let totalTasks = 0;
       
       for (const epic of epics) {
-        const stories = items.filter((i: PlanItem) => i.parent === epic.id && i.type === 'story');
+        const stories = items.filter((i: PlanItem) => i.parentId === epic.id && i.type === 'story');
         totalStories += stories.length;
         
         for (const story of stories) {
-          const tasks = items.filter((i: PlanItem) => i.parent === story.id);
+          const tasks = items.filter((i: PlanItem) => i.parentId === story.id);
           totalTasks += tasks.length;
         }
       }

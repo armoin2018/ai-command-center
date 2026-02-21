@@ -1,10 +1,8 @@
 ---
-name: 'Pytest.Instructions'
-description: 'See [example-21](./examples/pytest/example-21.'
-keywords: [api, basic, (modern), automation, actions, async, related, ci/cd, advanced, cases
+name: pytest
+description: Comprehensive instructions for using the Pytest testing framework, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [api, basic, modern, automation, actions, async, related, ci/cd, advanced, cases ]
 ---
-
-
 
 # Pytest Testing Framework Instructions
 

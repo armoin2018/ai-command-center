@@ -3,7 +3,7 @@ id: marauder
 name: marauder.instructions
 description: Development guidelines and best practices for Marauder.Instructions
 keywords: [cloud, avoid, enterprise, agent, compliance, essentials, architecture, authorization, assistant, advanced]
-tools: [undefined]
+
 ---
 ### Purpose
 

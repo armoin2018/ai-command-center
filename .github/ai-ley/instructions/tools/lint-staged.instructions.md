@@ -3,7 +3,7 @@ id: lint-staged
 name: Lint-staged Enterprise Pre-commit Security & Quality Validation Platform
 description: Enterprise-grade Lint-staged platform with advanced pre-commit validation automation, comprehensive security scanning integration, intelligent policy enforcement, sophisticated file processing engines, enterprise workflow optimization, and advanced developer productivity analytics for complete enterprise pre-commit security and quality assurance operations.
 keywords: [api, enterprise, lint, async, performance, database, commit, optimization, overview, framework]
-tools: [undefined]
+
 ---
 ## Enterprise Platform Overview
 

@@ -3,7 +3,7 @@ id: asymmetry-brokengrid
 name: Asymmetry Brokengrid.Instructions
 description: Development guidelines and best practices for Asymmetry Brokengrid.Instructions
 keywords: [brokengrid.instructions, web design, asymmetry, broken]
-tools: [undefined]
+
 ---
 # Asymmetry & Broken Grid
 

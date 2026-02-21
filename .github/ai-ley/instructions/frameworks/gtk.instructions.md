@@ -1,7 +1,7 @@
 ---
-name: 'Gtk.Instructions'
-description: 'See [example-1](./examples/gtk/example-1.'
-keywords: [api, application, (pygobject), agent, concept, agents, alternative:, (traditional), [pattern, analysis
+name: gtk
+description: GTK Framework Instructions for AI Agents
+keywords: [gtk, gnome, desktop applications, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

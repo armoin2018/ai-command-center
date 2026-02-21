@@ -3,7 +3,7 @@ id: darkmode
 name: Darkmode.Instructions
 description: Development guidelines and best practices for Darkmode.Instructions
 keywords: [web design, darkmode.instructions, contrast]
-tools: [undefined]
+
 ---
 # Dark Mode / High-Contrast
 

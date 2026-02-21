@@ -3,7 +3,7 @@ id: ansi-sql
 name: ansi-sql.instructions
 description: Development guidelines and best practices for Ansi Sql.Instructions
 keywords: [languages, ansi, sql.instructions]
-tools: [undefined]
+
 ---
 
 

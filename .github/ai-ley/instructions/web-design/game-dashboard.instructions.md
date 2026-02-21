@@ -3,7 +3,7 @@ id: game-dashboard
 name: Game Dashboard.Instructions
 description: Development guidelines and best practices for Game Dashboard.Instructions
 keywords: [dashboard, dashboard.instructions, web design, game]
-tools: [undefined]
+
 ---
 # Game Dashboard
 

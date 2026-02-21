@@ -1,7 +1,7 @@
 ---
-name: 'Flutter.Instructions'
-description: 'See [example-1](./examples/flutter/example-1.'
-keywords: [agent, pattern, architecture, analysis, api, authorization, agents, avoid, analyze, authentication
+name: flutter
+description: Flutter Framework Instructions for AI Agents
+keywords: [flutter, dart, cross-platform, mobile development, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

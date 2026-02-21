@@ -3,7 +3,7 @@ id: plsql
 name: plsql.instructions
 description: Development guidelines and best practices for Plsql.Instructions
 keywords: [languages, plsql.instructions]
-tools: [undefined]
+
 ---
 
 

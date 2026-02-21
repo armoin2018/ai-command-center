@@ -3,7 +3,7 @@ id: cobol
 name: Cobol.Instructions
 description: Development guidelines and best practices for Cobol.Instructions
 keywords: [testing, api, languages, cobol.instructions, gui]
-tools: [undefined]
+
 ---
 Title: COBOL — AI Agent Implementation Guide
 

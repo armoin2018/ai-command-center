@@ -3,7 +3,7 @@ id: ufw
 name: ufw.instructions
 description: UFW (Uncomplicated Firewall) is a simplified interface for managing netfilter/iptables firewall rules on Linux.
 keywords: [api, (uncomplicated, avoid, assurance, agent, architecture, assistant, advanced, administration, aws]
-tools: [undefined]
+
 ---
 ### Purpose
 

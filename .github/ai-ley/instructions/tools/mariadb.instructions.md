@@ -3,7 +3,7 @@ id: mariadb
 name: Enterprise MariaDB Relational Database & High-Availability Platform
 description: Enterprise MariaDB Relational Database & High-Availability Platform with advanced clustering orchestration, intelligent performance optimization, automated failover systems, enterprise security frameworks, advanced analytics integration, real-time monitoring intelligence, automated compliance governance, and comprehensive operational excellence for mission-critical enterprise applications.
 keywords: [audit, availability, agent, platform, architecture, assistant, authentication, archiving, authorization, advanced]
-tools: [undefined]
+
 ---
 ### **Platform Purpose & Capabilities**
 

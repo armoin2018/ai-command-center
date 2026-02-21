@@ -1,7 +1,7 @@
 ---
-name: 'Vite.Instructions'
-description: 'See [example-17](./examples/vite/example-17.'
-keywords: [(basic), (hmr), api, automation, application, asset, related, analysis, advanced, (ssr)
+name: vite
+description: Comprehensive instructions for using the Vite build tool, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [ hmr, api, automation, application, asset, related, analysis, advanced, ssr ]
 ---
 
 

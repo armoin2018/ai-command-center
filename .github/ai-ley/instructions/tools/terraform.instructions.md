@@ -3,7 +3,7 @@ id: terraform
 name: Terraform Enterprise Infrastructure-as-Code Platform
 description: Enterprise Terraform infrastructure-as-code platform with advanced HCL
 keywords: [api, alerting, actions, architecture, backend, ci/cd, aws, advanced, azure, automated]
-tools: [undefined]
+
 ---
 ## 🏢 Enterprise Strategic Overview
 

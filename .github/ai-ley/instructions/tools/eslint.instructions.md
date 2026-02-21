@@ -3,7 +3,7 @@ id: eslint
 name: ESLint JavaScript Code Quality and Linting Tool Instructions
 description: Comprehensive guide for using ESLint to maintain code quality, consistency,
 keywords: [performance, avoid, (eslint, agent, common, usage, use, 9.0+), advanced, configuration]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

@@ -3,7 +3,7 @@ id: java
 name: Java.Instructions
 description: Comprehensive Java development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, context, common, completablefuture, architecture, authentication, configuration, analysis, avoid, concurrent]
-tools: [undefined]
+
 ---
 # Java Programming Instructions
 

@@ -32,3 +32,6 @@ windsurf-config.json
 .metis/
 AGENT.md
 AGENTS.md
+
+.env
+.env.local

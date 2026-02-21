@@ -3,7 +3,7 @@ id: dmn
 name: dmn.instructions
 description: Development guidelines and best practices for Dmn.Instructions
 keywords: [api, components, platform, async, capabilities, architecture, dmn, advanced, business, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

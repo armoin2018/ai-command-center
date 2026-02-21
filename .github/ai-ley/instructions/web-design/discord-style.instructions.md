@@ -3,7 +3,7 @@ id: discord-style
 name: Discord Style.Instructions
 description: Development guidelines and best practices for Discord Style.Instructions
 keywords: [discord, web design, style.instructions, style]
-tools: [undefined]
+
 ---
 # Discord Style UI
 

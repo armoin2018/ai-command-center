@@ -3,7 +3,7 @@ id: agile
 name: Agile.Instructions
 description: Development guidelines and best practices for Agile.Instructions
 keywords: [audit, checklist, agile, backlog, agile.instructions, architecture, assistant, avoid, azure, benefits]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Agile Software Development Methodologies

@@ -3,7 +3,7 @@ id: lean-startup
 name: Lean Startup Instructions
 description: Comprehensive lean startup methodology instructions for AI agents to
 keywords: [(mvp), api, assessment, accounting, apply, applications, agents, build, biotech, business]
-tools: [undefined]
+
 ---
 ## Purpose
 

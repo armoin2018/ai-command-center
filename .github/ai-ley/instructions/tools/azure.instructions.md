@@ -3,7 +3,7 @@ id: azure
 name: Microsoft Azure Enterprise Cloud Platform Instructions
 description: Enterprise-grade Microsoft Azure platform with comprehensive infrastructure management, security frameworks, cost optimization, AI services integration, and automated deployment orchestration for mission-critical cloud operations
 keywords: [(ubuntu/debian), automation, (powershell), architecture, async, overview, ai/ml, additional, architecture, advanced]
-tools: [undefined]
+
 ---
 ### **Overview**
 

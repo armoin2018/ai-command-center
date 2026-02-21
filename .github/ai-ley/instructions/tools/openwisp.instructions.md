@@ -3,7 +3,7 @@ id: openwisp
 name: openwisp.instructions
 description: Development guidelines and best practices for Openwisp.Instructions
 keywords: [api, avoid, agent, compliance, architecture, assistant, authentication, database, advanced, capabilities]
-tools: [undefined]
+
 ---
 ### Purpose
 

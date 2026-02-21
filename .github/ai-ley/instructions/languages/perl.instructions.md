@@ -3,7 +3,7 @@ id: perl
 name: Perl.Instructions
 description: Development guidelines and best practices for Perl.Instructions
 keywords: [languages, coding, gui, architecture, authentication, database, hints), (with, guide, framework]
-tools: [undefined]
+
 ---
 # Perl Coding & Style Guide (with AI Linting Hints)
 

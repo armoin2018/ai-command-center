@@ -130,10 +130,6 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         await this._updateItem(message.payload as { id: string; data: Record<string, unknown> });
         break;
         
-      case 'fetchData':
-        await this._fetchData(message.payload as { endpoint: string; params?: Record<string, unknown> });
-        break;
-        
       case 'updateStatus':
         await this._handleStatusUpdate(message.payload as { itemId: string; status: string });
         break;
@@ -206,6 +202,18 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         await this._handleDeleteComment(message.payload as { itemId: string; index: number });
         break;
         
+      case 'toggleCommentEnabled':
+        await this._handleToggleCommentEnabled(message.payload as { itemId: string; index: number });
+        break;
+        
+      case 'addListItem':
+        await this._handleAddListItem(message.payload as { itemId: string; listType: string; value: string });
+        break;
+        
+      case 'removeListItem':
+        await this._handleRemoveListItem(message.payload as { itemId: string; listType: string; index: number });
+        break;
+        
       case 'showProgressReport':
         await this._handleShowProgressReport();
         break;
@@ -216,6 +224,21 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         
       case 'submitIntake':
         await this._handleSubmitIntake(message.payload as { intakeId: string; data: Record<string, any> });
+        break;
+        
+      case 'fetchData':
+        logger.info('fetchData message received', { payload: message.payload });
+        await this._handleFetchData(message.payload as { endpoint: string; params?: Record<string, unknown> });
+        break;
+        
+      case 'saveKitSettings':
+        logger.info('saveKitSettings message received', { payload: message.payload });
+        await this._handleSaveKitSettings(message.payload as { 
+          kitName: string; 
+          settings: Record<string, unknown>; 
+          config: Record<string, unknown>; 
+          componentChanges: Record<string, boolean> 
+        });
         break;
         
       default:
@@ -515,30 +538,6 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
   }
 
   /**
-   * Fetch data from an endpoint
-   */
-  private async _fetchData(payload: { endpoint: string; params?: Record<string, unknown> }): Promise<void> {
-    // TODO: Implement MCP API calls
-    logger.info(`Fetch data: ${payload.endpoint}`);
-    
-    // For now, return mock data based on endpoint
-    let data: unknown = null;
-    
-    if (payload.endpoint.includes('status-counts')) {
-      data = this.planGenerator.getStatusCounts();
-    } else if (payload.endpoint.includes('items')) {
-      data = this.planGenerator.getPlanDocument()?.items || [];
-    }
-    
-    if (this._view) {
-      this._view.webview.postMessage({
-        type: 'dataFetched',
-        payload: { endpoint: payload.endpoint, data }
-      });
-    }
-  }
-
-  /**
    * Get the HTML content for the webview
    * Serves static HTML shell with client-side rendering
    */
@@ -548,6 +547,9 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
     // Get URIs for static resources
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'app.js')
+    );
+    const actionsUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'lib', 'actions.js')
     );
     const stylesUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'styles.css')
@@ -566,6 +568,7 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
       .replace(/{{nonce}}/g, nonce)
       .replace(/{{cspSource}}/g, webview.cspSource)
       .replace(/{{scriptUri}}/g, scriptUri.toString())
+      .replace(/{{actionsUri}}/g, actionsUri.toString())
       .replace(/{{stylesUri}}/g, stylesUri.toString())
       .replace(/{{codiconFontUri}}/g, codiconFontUri.toString());
     
@@ -697,7 +700,13 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
       
       if (item) {
         if (!item.metadata) {
-          item.metadata = {};
+          const now = new Date().toISOString();
+          item.metadata = {
+            createdAt: now,
+            updatedAt: now,
+            createdBy: 'system',
+            updatedBy: 'system'
+          };
         }
         item.metadata[payload.key] = payload.value;
         await this.planGenerator.savePlanDocument();
@@ -812,6 +821,129 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
   }
 
   /**
+   * Handle toggle comment enabled/disabled
+   */
+  private async _handleToggleCommentEnabled(payload: { itemId: string; index: number }): Promise<void> {
+    try {
+      const planDocument = this.planGenerator.getPlanDocument();
+      if (!planDocument) {
+        logger.warn('Plan document not loaded');
+        return;
+      }
+      
+      const item = planDocument.items.find(i => i.id === payload.itemId);
+      
+      if (item && item.comments && item.comments.length > payload.index) {
+        const comment = item.comments[payload.index];
+        comment.enabled = !(comment.enabled ?? true);
+        comment.updatedOn = new Date().toISOString();
+        
+        await this.planGenerator.savePlanDocument();
+        await this._refreshPlanningData();
+        logger.info('Comment enabled toggled', { 
+          itemId: payload.itemId, 
+          index: payload.index, 
+          enabled: comment.enabled 
+        });
+      }
+    } catch (error) {
+      logger.error('Error toggling comment enabled', { error: String(error) });
+    }
+  }
+
+  /**
+   * Handle add list item (instructions, personas, contexts)
+   */
+  private async _handleAddListItem(payload: { itemId: string; listType: string; value: string }): Promise<void> {
+    try {
+      const planDocument = this.planGenerator.getPlanDocument();
+      if (!planDocument) {
+        logger.warn('Plan document not loaded');
+        return;
+      }
+      
+      const item = planDocument.items.find(i => i.id === payload.itemId);
+      
+      if (item) {
+        // Type-safe property access
+        const validListTypes = ['instructions', 'personas', 'contexts'] as const;
+        type ListType = typeof validListTypes[number];
+        
+        if (!validListTypes.includes(payload.listType as ListType)) {
+          logger.warn('Invalid list type', { listType: payload.listType });
+          return;
+        }
+        
+        const listType = payload.listType as ListType;
+        
+        // Initialize array if it doesn't exist
+        if (!item[listType]) {
+          item[listType] = [];
+        }
+        
+        // Add value if not already present
+        if (!item[listType]!.includes(payload.value)) {
+          item[listType]!.push(payload.value);
+          
+          await this.planGenerator.savePlanDocument();
+          await this._refreshPlanningData();
+          logger.info('List item added', { 
+            itemId: payload.itemId, 
+            listType: payload.listType, 
+            value: payload.value 
+          });
+        }
+      }
+    } catch (error) {
+      logger.error('Error adding list item', { error: String(error) });
+    }
+  }
+
+  /**
+   * Handle remove list item (instructions, personas, contexts)
+   */
+  private async _handleRemoveListItem(payload: { itemId: string; listType: string; index: number }): Promise<void> {
+    try {
+      const planDocument = this.planGenerator.getPlanDocument();
+      if (!planDocument) {
+        logger.warn('Plan document not loaded');
+        return;
+      }
+      
+      const item = planDocument.items.find(i => i.id === payload.itemId);
+      
+      if (item) {
+        // Type-safe property access
+        const validListTypes = ['instructions', 'personas', 'contexts'] as const;
+        type ListType = typeof validListTypes[number];
+        
+        if (!validListTypes.includes(payload.listType as ListType)) {
+          logger.warn('Invalid list type', { listType: payload.listType });
+          return;
+        }
+        
+        const listType = payload.listType as ListType;
+        const list = item[listType];
+        
+        if (list && Array.isArray(list) && list.length > payload.index) {
+          const removed = list.splice(payload.index, 1);
+          
+          await this.planGenerator.savePlanDocument();
+          await this._refreshPlanningData();
+          logger.info('List item removed', { 
+            itemId: payload.itemId, 
+            listType: payload.listType, 
+            index: payload.index,
+            value: removed[0]
+          });
+        }
+      }
+    } catch (error) {
+      logger.error('Error removing list item', { error: String(error) });
+    }
+  }
+
+  /**
    * Handle show progress report
    */
   private async _handleShowProgressReport(): Promise<void> {
@@ -912,6 +1044,389 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
     } catch (error) {
       logger.error('Error submitting intake', { error: String(error) });
       vscode.window.showErrorMessage(`Failed to submit intake: ${error}`);
+    }
+  }
+
+  /**
+   * Handle fetch data for AI Kit catalog
+   */
+  private async _handleFetchData(payload: { endpoint: string; params?: Record<string, unknown> }): Promise<void> {
+    logger.info('_handleFetchData called', { endpoint: payload.endpoint, params: payload.params });
+    try {
+      const { endpoint, params } = payload;
+      
+      switch (endpoint) {
+        case 'aikit-catalog':
+          logger.info('Fetching AI Kit catalog');
+          await this._fetchAIKitCatalog();
+          break;
+          
+        case 'aikit-settings':
+          logger.info('Fetching AI Kit settings', { kitName: params?.kitName });
+          await this._fetchAIKitSettings(params?.kitName as string);
+          break;
+          
+        case 'aikit-configuration':
+          logger.info('Fetching AI Kit configuration', { kitName: params?.kitName });
+          await this._fetchAIKitConfiguration(params?.kitName as string);
+          break;
+          
+        case 'aikit-components':
+          logger.info('Fetching AI Kit components', { kitName: params?.kitName });
+          await this._fetchAIKitComponents(params?.kitName as string);
+          break;
+          
+        default:
+          logger.warn(`Unknown fetch endpoint: ${endpoint}`);
+      }
+    } catch (error) {
+      logger.error('Error fetching data', { error: String(error), endpoint: payload.endpoint });
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'error',
+          payload: { message: `Failed to fetch data: ${error}` }
+        });
+      }
+    }
+  }
+
+  /**
+   * Fetch AI Kit catalog
+   */
+  private async _fetchAIKitCatalog(): Promise<void> {
+    logger.info('_fetchAIKitCatalog started');
+    try {
+      const fs = require('fs').promises;
+      const fsSync = require('fs');
+      const path = require('path');
+      
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        logger.error('No workspace folder open');
+        throw new Error('No workspace folder open');
+      }
+      
+      const workspaceRoot = workspaceFolders[0].uri.fsPath;
+      const catalogPath = path.join(workspaceRoot, '.github', 'aicc', 'catalog');
+      logger.info('Catalog path', { catalogPath });
+      
+      const kits: any[] = [];
+      
+      if (fsSync.existsSync(catalogPath)) {
+        const kitFolders = await fs.readdir(catalogPath);
+        logger.info('Found kit folders', { count: kitFolders.length, folders: kitFolders });
+        
+        for (const kitFolder of kitFolders) {
+          const kitPath = path.join(catalogPath, kitFolder);
+          const stats = await fs.stat(kitPath);
+          
+          if (stats.isDirectory()) {
+            logger.info('Processing kit folder', { folder: kitFolder });
+            const structurePath = path.join(kitPath, 'structure.json');
+            
+            if (fsSync.existsSync(structurePath)) {
+              const structureData = await fs.readFile(structurePath, 'utf-8');
+              const structure = JSON.parse(structureData);
+              logger.info('Loaded structure', { name: structure.name || kitFolder });
+              
+              // Load icon as base64
+              let iconBase64 = null;
+              if (structure.icon) {
+                const iconPath = path.join(kitPath, structure.icon);
+                if (fsSync.existsSync(iconPath)) {
+                  const iconBuffer = await fs.readFile(iconPath);
+                  const ext = path.extname(structure.icon).toLowerCase();
+                  const mimeType = ext === '.png' ? 'image/png' : ext === '.jpg' || ext === '.jpeg' ? 'image/jpeg' : 'image/svg+xml';
+                  iconBase64 = `data:${mimeType};base64,${iconBuffer.toString('base64')}`;
+                  logger.info('Icon loaded', { kit: kitFolder, size: iconBuffer.length });
+                }
+              }
+              
+              // Check if installed
+              const myStructurePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitFolder, 'structure.json');
+              const installed = fsSync.existsSync(myStructurePath);
+              
+              kits.push({
+                name: structure.name || kitFolder,
+                displayName: structure.displayName || structure.name || kitFolder,
+                description: structure.description || '',
+                author: structure.author || '',
+                lastUpdated: structure.lastUpdated || null,
+                iconBase64,
+                installed
+              });
+              logger.info('Kit added to catalog', { name: structure.name || kitFolder, installed });
+            } else {
+              logger.warn('structure.json not found', { folder: kitFolder });
+            }
+          }
+        }
+      } else {
+        logger.warn('Catalog path does not exist', { catalogPath });
+      }
+      
+      logger.info('Sending catalog to webview', { kitCount: kits.length });
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'aikitCatalog',
+          payload: { kits }
+        });
+        logger.info('Catalog message sent to webview');
+      } else {
+        logger.error('Webview not available');
+      }
+    } catch (error) {
+      logger.error('Error fetching AI Kit catalog', { error: String(error), stack: error instanceof Error ? error.stack : undefined });
+      throw error;
+    }
+  }
+
+  /**
+   * Fetch AI Kit settings
+   */
+  private async _fetchAIKitSettings(kitName: string): Promise<void> {
+    try {
+      const fs = require('fs').promises;
+      const fsSync = require('fs');
+      const path = require('path');
+      
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error('No workspace folder open');
+      }
+      
+      const workspaceRoot = workspaceFolders[0].uri.fsPath;
+      
+      // Load structure.json schema (editable fields)
+      const structurePath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', kitName, 'structure.json');
+      const structureData = await fs.readFile(structurePath, 'utf-8');
+      const structure = JSON.parse(structureData);
+      
+      // Load installed values if they exist
+      const myStructurePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitName, 'structure.json');
+      let myStructure = {};
+      if (fsSync.existsSync(myStructurePath)) {
+        const myStructureData = await fs.readFile(myStructurePath, 'utf-8');
+        myStructure = JSON.parse(myStructureData);
+      }
+      
+      // Load schema to determine editable fields
+      const schemaPath = path.join(workspaceRoot, '.github', 'aicc', 'schemas', 'structure.v1.schema.json');
+      const schemaData = await fs.readFile(schemaPath, 'utf-8');
+      const schema = JSON.parse(schemaData);
+      
+      const installed = fsSync.existsSync(myStructurePath);
+      
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'aikitSettings',
+          payload: {
+            kitName,
+            settings: {
+              schema,
+              values: { ...structure, ...myStructure },
+              installed
+            }
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Error fetching AI Kit settings', { error: String(error), kitName });
+      throw error;
+    }
+  }
+
+  /**
+   * Fetch AI Kit configuration
+   */
+  private async _fetchAIKitConfiguration(kitName: string): Promise<void> {
+    try {
+      const fs = require('fs').promises;
+      const fsSync = require('fs');
+      const path = require('path');
+      
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error('No workspace folder open');
+      }
+      
+      const workspaceRoot = workspaceFolders[0].uri.fsPath;
+      
+      // Load config.json schema
+      const configPath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', kitName, 'config.json');
+      let configSchema = { properties: {} };
+      if (fsSync.existsSync(configPath)) {
+        const configData = await fs.readFile(configPath, 'utf-8');
+        configSchema = JSON.parse(configData);
+      }
+      
+      // Load saved config values
+      const configSavePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitName, 'config.save.json');
+      let configValues = {};
+      if (fsSync.existsSync(configSavePath)) {
+        const configData = await fs.readFile(configSavePath, 'utf-8');
+        configValues = JSON.parse(configData);
+      }
+      
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'aikitConfiguration',
+          payload: {
+            kitName,
+            config: {
+              schema: configSchema,
+              values: configValues
+            }
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Error fetching AI Kit configuration', { error: String(error), kitName });
+      throw error;
+    }
+  }
+
+  /**
+   * Fetch AI Kit components
+   */
+  private async _fetchAIKitComponents(kitName: string): Promise<void> {
+    try {
+      const fs = require('fs').promises;
+      const fsSync = require('fs');
+      const path = require('path');
+      
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error('No workspace folder open');
+      }
+      
+      const workspaceRoot = workspaceFolders[0].uri.fsPath;
+      
+      // Load components.json
+      const componentsPath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', kitName, 'components.json');
+      let components = {};
+      if (fsSync.existsSync(componentsPath)) {
+        const componentsData = await fs.readFile(componentsPath, 'utf-8');
+        components = JSON.parse(componentsData);
+      }
+      
+      // Load installed components
+      const installedPath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitName, 'components.installed.json');
+      let installed: string[] = [];
+      if (fsSync.existsSync(installedPath)) {
+        const installedData = await fs.readFile(installedPath, 'utf-8');
+        installed = JSON.parse(installedData);
+      }
+      
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'aikitComponents',
+          payload: {
+            kitName,
+            components,
+            installed
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Error fetching AI Kit components', { error: String(error), kitName });
+      throw error;
+    }
+  }
+
+  /**
+   * Handle save kit settings
+   */
+  private async _handleSaveKitSettings(payload: {
+    kitName: string;
+    settings: Record<string, unknown>;
+    config: Record<string, unknown>;
+    componentChanges: Record<string, boolean>;
+  }): Promise<void> {
+    try {
+      const fs = require('fs').promises;
+      const fsSync = require('fs');
+      const path = require('path');
+      
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      if (!workspaceFolders || workspaceFolders.length === 0) {
+        throw new Error('No workspace folder open');
+      }
+      
+      const workspaceRoot = workspaceFolders[0].uri.fsPath;
+      const myKitPath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', payload.kitName);
+      
+      // Ensure directory exists
+      if (!fsSync.existsSync(myKitPath)) {
+        fsSync.mkdirSync(myKitPath, { recursive: true });
+      }
+      
+      // Save settings (structure.json)
+      if (payload.settings && Object.keys(payload.settings).length > 0) {
+        const myStructurePath = path.join(myKitPath, 'structure.json');
+        let existingStructure = {};
+        if (fsSync.existsSync(myStructurePath)) {
+          const existingData = await fs.readFile(myStructurePath, 'utf-8');
+          existingStructure = JSON.parse(existingData);
+        }
+        
+        // Update lastUpdated timestamp
+        const updatedStructure = {
+          ...existingStructure,
+          ...payload.settings,
+          lastUpdated: new Date().toISOString()
+        };
+        
+        await fs.writeFile(myStructurePath, JSON.stringify(updatedStructure, null, 2), 'utf-8');
+      }
+      
+      // Save configuration (config.save.json)
+      if (payload.config && Object.keys(payload.config).length > 0) {
+        const configSavePath = path.join(myKitPath, 'config.save.json');
+        await fs.writeFile(configSavePath, JSON.stringify(payload.config, null, 2), 'utf-8');
+      }
+      
+      // Handle component changes
+      if (payload.componentChanges && Object.keys(payload.componentChanges).length > 0) {
+        const installedPath = path.join(myKitPath, 'components.installed.json');
+        let installed: string[] = [];
+        if (fsSync.existsSync(installedPath)) {
+          const installedData = await fs.readFile(installedPath, 'utf-8');
+          installed = JSON.parse(installedData);
+        }
+        
+        for (const [component, enabled] of Object.entries(payload.componentChanges)) {
+          if (enabled && !installed.includes(component)) {
+            installed.push(component);
+            // TODO: Install component files
+          } else if (!enabled && installed.includes(component)) {
+            installed = installed.filter(c => c !== component);
+            // TODO: Uninstall component files
+          }
+        }
+        
+        await fs.writeFile(installedPath, JSON.stringify(installed, null, 2), 'utf-8');
+      }
+      
+      logger.info('Kit settings saved', { kitName: payload.kitName });
+      
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'success',
+          payload: { message: 'Settings saved successfully' }
+        });
+      }
+      
+      // Refresh catalog
+      await this._fetchAIKitCatalog();
+    } catch (error) {
+      logger.error('Error saving kit settings', { error: String(error), kitName: payload.kitName });
+      if (this._view) {
+        this._view.webview.postMessage({
+          type: 'error',
+          payload: { message: `Failed to save settings: ${error}` }
+        });
+      }
     }
   }
 

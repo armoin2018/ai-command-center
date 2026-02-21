@@ -1,9 +1,7 @@
 ---
-id: easylanguage
-name: Easylanguage.Instructions
-description: Purpose: Author and evaluate trading strategies/indicators within broker/platform environments while preventing lookahead and ensuring reproducibility.
-keywords: [easylanguage.instructions, gui, guidelines, (tradestation/multicharts), assistant, hygiene, avoid, controls, easylanguage, backtesting]
-tools: undefined
+name: easylanguage
+description: Guidelines for using EasyLanguage, a domain-specific language for authoring trading strategies and indicators within TradeStation and MultiCharts platforms, focusing on best practices to ensure reliability, prevent lookahead bias, and maintain reproducibility.
+keywords: [ easylanguage, trading-strategies, indicators, backtesting, lookahead-bias, risk-management, best-practices ]
 ---
 # EasyLanguage — AI Assistant Guidelines (TradeStation/MultiCharts)
 

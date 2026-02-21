@@ -3,7 +3,7 @@ id: svn
 name: Svn.Instructions
 description: Development guidelines and best practices for Svn.Instructions
 keywords: [(svn), avoid, binary, asset, architecture, assistant, authentication, authorization, advanced, benefits]
-tools: [undefined]
+
 ---
 `
 ---

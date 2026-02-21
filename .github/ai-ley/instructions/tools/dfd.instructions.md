@@ -3,7 +3,7 @@ id: dfd
 name: dfd.instructions
 description: Development guidelines and best practices for Dfd.Instructions
 keywords: [components, platform, capabilities, data, architecture, authentication, database, advanced, dfd.instructions, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

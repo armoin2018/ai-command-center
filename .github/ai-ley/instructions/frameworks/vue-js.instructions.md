@@ -1,7 +1,7 @@
 ---
-name: 'Vue.js Progressive Web Framework Instructions'
-description: 'Comprehensive guide for Vue.js progressive framework with Composition'
-keywords: [agent, pattern, [concept, architecture, analysis, api, use, building, assessment, avoid
+name: vue-js
+description: Comprehensive Vue.js Progressive Web Framework Instructions, including framework overview, when to use or avoid Vue.js, AI agent decision matrix, installation and setup, project structure, core concepts, development workflow, best practices, common patterns, log analysis, and common error messages.
+keywords: [ vue-js, javascript, typescript, progressive-web-framework, single-page-applications, component-based, nuxt-js, frontend-development, reactive-binding, declarative-rendering ]
 ---
 
 

@@ -3,7 +3,7 @@ id: go-to-market
 name: go-to-market.instructions
 description: Development guidelines and best practices for Go To Market.Instructions
 keywords: [business, market.instructions]
-tools: [undefined]
+
 ---
 
 

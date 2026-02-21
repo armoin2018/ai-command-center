@@ -1,7 +1,7 @@
 ---
-name: 'Nwjs.Instructions'
-description: 'Use NW.'
-keywords: [application, agent, pattern, [concept, architecture, analysis, api, advanced, agents, alternative:
+name: nwjs
+description: NW.js Framework Instructions for AI Agents 
+keywords: [nwjs, node-webkit, desktop applications, web technologies, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

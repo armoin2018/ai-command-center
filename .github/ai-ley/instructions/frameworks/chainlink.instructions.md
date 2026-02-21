@@ -1,7 +1,7 @@
 ---
-name: 'Chainlink.Instructions'
-description: 'See [example-1](./examples/chainlink/example-1.'
-keywords: [api, (vrf), (ccip), aggregation, concept, agents, architecture, [pattern, analysis, (beta)
+name: chainlink
+description: Chainlink Framework Instructions for AI Agents
+keywords: [chainlink, oracle, smart contracts, framework, guidelines, assistant, frameworks, instructions]
 ---
 
 

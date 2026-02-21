@@ -3,7 +3,7 @@ id: enzyme
 name: Enzyme Enterprise Testing & Quality Assurance Platform
 description: Enterprise-grade Enzyme testing platform with advanced component validation, comprehensive security testing integration, intelligent quality assurance automation, enterprise test orchestration, and sophisticated compliance validation for complete enterprise testing operations.
 keywords: [assurance, enterprise, async, authentication, authorization, database, enzyme, cli, enzyme.instructions, framework]
-tools: [undefined]
+
 ---
 ## Enterprise Platform Overview
 

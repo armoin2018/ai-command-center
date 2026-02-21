@@ -3,7 +3,7 @@ id: pecl
 name: Pecl.Instructions
 description: PECL (PHP Extension Community Library) is a repository of PHP extensions written in C that provide additional functionality to the PHP language.
 keywords: [common, compliance, assistant, configuration, custom, checks, database, advanced, community, continuous]
-tools: [undefined]
+
 ---
 ## Overview
 

@@ -3,7 +3,7 @@ id: sysml
 name: sysml.instructions
 description: Development guidelines and best practices for Sysml.Instructions
 keywords: [components, automotive, sysml, await, platform, async, capabilities, architecture, aerospace, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

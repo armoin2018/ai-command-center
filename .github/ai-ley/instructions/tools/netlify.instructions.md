@@ -3,7 +3,7 @@ id: netlify
 name: Enterprise Netlify JAMstack Platform Instructions
 description: Enterprise-grade Netlify platform for JAMstack deployment, serverless functions, edge computing, team collaboration, and advanced performance optimization with comprehensive monitoring and security features
 keywords: [api, cloud, enterprise, frontend, async, example, architecture, database, cli, framework]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

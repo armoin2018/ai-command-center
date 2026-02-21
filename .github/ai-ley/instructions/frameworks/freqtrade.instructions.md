@@ -1,9 +1,8 @@
 ---
-id: freqtrade
-name: Freqtrade.Instructions
-description: Purpose: Research → backtest → dry-run → live with strict risk controls, data hygiene, and configuration versioning.
-keywords: [guidelines, gui, api, (crypto, frameworks, avoid, assistant, freqtrade, freqtrade.instructions, execution]
-tools: undefined
+name: freqtrade
+description: Freqtrade Crypto Trading Bot Instructions for AI Agents
+keywords: [freqtrade, crypto trading, bot, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 # Freqtrade — AI Assistant Guidelines (Crypto Trading Bot)
 

@@ -3,7 +3,7 @@ id: pandas
 name: Pandas.Instructions
 description: Development guidelines and best practices for Pandas.Instructions
 keywords: [frameworks, pandas.instructions, gui, testing]
-tools: [undefined]
+
 ---
 Title: pandas (Finance) — AI Agent Data Handling Guide
 

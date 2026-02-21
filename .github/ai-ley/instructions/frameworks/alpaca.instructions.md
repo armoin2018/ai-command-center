@@ -3,7 +3,7 @@ id: alpaca
 name: Alpaca.Instructions
 description: Development guidelines and best practices for Alpaca.Instructions
 keywords: [common, architecture, cli, api, alpaca, algorithmic, assistant, alpaca.instructions, commands, authentication]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: Alpaca Trading API

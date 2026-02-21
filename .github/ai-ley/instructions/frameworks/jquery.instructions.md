@@ -1,9 +1,7 @@
 ---
-id: jquery
-name: Jquery.Instructions
-description: See [example-1](./examples/jquery/example-1.
-keywords: [api, commands, common, async, bootstrap, assistant, architecture, compatibility, analysis, animations]
-tools: [undefined]
+name: jquery
+description: jQuery Framework Instructions for AI Agents
+keywords: [jquery, javascript library, dom manipulation, ajax, framework, guidelines, assistant, frameworks, instructions]
 ---
 ## Framework Overview
 

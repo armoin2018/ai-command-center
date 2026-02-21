@@ -3,7 +3,7 @@ id: git
 name: Git.Instructions
 description: Development guidelines and best practices for Git.Instructions
 keywords: [cherry, basic, commands, .gitignore, branch, branching, authentication, accidental, ci/cd, commit]
-tools: [undefined]
+
 ---
 ## Tool Overview
 - **Tool Name**: Git

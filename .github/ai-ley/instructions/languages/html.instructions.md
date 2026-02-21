@@ -3,7 +3,7 @@ id: html
 name: Html.Instructions
 description: Development guidelines and best practices for Html.Instructions
 keywords: [languages, linting, coding, async, html.instructions, gui, architecture, hints), (with, guide]
-tools: [undefined]
+
 ---
 # HTML Coding & Style Guide (with AI Linting Hints)
 

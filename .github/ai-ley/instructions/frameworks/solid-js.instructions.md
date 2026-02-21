@@ -3,7 +3,7 @@ id: solid-js
 name: Solid Js.Instructions
 description: Development guidelines and best practices for Solid Js.Instructions
 keywords: [common, architecture, cli, concepts, authorization, assistant, component, additional, commands, authentication]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: SolidJS

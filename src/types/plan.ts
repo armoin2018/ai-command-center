@@ -124,6 +124,8 @@ export interface Comment {
   createdOn: string;
   createdBy: string;
   comment: string;
+  updatedOn?: string;
+  enabled?: boolean;
 }
 
 export interface ItemMetadata {

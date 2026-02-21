@@ -3,7 +3,7 @@ id: rpm
 name: Rpm.Instructions
 description: Development guidelines and best practices for Rpm.Instructions
 keywords: [advanced, comprehensive, application, common, compliance, assistant, concepts, analysis, avoid, benefits]
-tools: [undefined]
+
 ---
 `
 ---

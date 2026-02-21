@@ -3,7 +3,7 @@ id: azure-function-app
 name: Azure Function App.Instructions
 description: Development guidelines and best practices for Azure Function App.Instructions
 keywords: [api, app.instructions, context, follow, async, example, architecture, copilot, avoid, azure]
-tools: [undefined]
+
 ---
 # GitHub Copilot Instructions
 

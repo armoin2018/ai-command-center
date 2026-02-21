@@ -46,7 +46,7 @@
 .codicon-bookmark:before { content: "\ea86"; }
 .codicon-play:before { content: "\ec0f"; }
 .codicon-question:before { content: "\eb32"; }
-.codicon-refresh:before { content: "\eabf"; }
+.codicon-refresh:before { content: "\eb37"; }
 .codicon-save:before { content: "\eb4b"; }
 .codicon-search:before { content: "\ea6d"; }
 .codicon-send:before { content: "\ec0f"; }
@@ -57,6 +57,10 @@
 .codicon-trash:before { content: "\ea81"; }
 .codicon-triangle-right:before { content: "\eb58"; }
 .codicon-warning:before { content: "\ea6c"; }
+.codicon-wand:before { content: "\ebcf"; }
+.codicon-eye:before { content: "\ea70"; }
+.codicon-eye-closed:before { content: "\ec51"; }
+.codicon-circuit-board:before { content: "\ebbc"; }
 
 /* Codicon modifiers */
 .codicon-modifier-spin {
@@ -439,6 +443,62 @@ body {
 .accordion-btn:hover {
   background: var(--vscode-toolbar-hoverBackground);
   color: var(--vscode-foreground);
+}
+
+.item-checkbox {
+  margin: 0 6px 0 0;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  accent-color: var(--vscode-button-background);
+}
+
+.item-checkbox:hover {
+  opacity: 0.8;
+}
+
+.item-checkbox:focus {
+  outline: 1px solid var(--vscode-focusBorder);
+  outline-offset: 2px;
+}
+
+.list-builder-container {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 3px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.list-builder-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  background: var(--vscode-input-background);
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.list-builder-item:last-child {
+  margin-bottom: 0;
+}
+
+.list-builder-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-builder-input-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .status-dropdown {
@@ -1226,4 +1286,304 @@ body {
   border-radius: 6px;
   padding: 24px;
   min-height: 400px;
+}
+/* AI Kit Catalog - Apple Store Style */
+.aikit-catalog-container {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.kit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.kit-card:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.kit-icon {
+  width: 75px;
+  height: 75px;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background: var(--vscode-editor-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kit-name {
+  text-align: center;
+  font-size: 12px;
+  color: var(--vscode-foreground);
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Kit Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-container {
+  background-color: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.kit-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.kit-modal-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vscode-editor-background);
+}
+
+.kit-modal-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kit-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--vscode-foreground);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--vscode-toolbar-hoverBackground);
+}
+
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kit Modal Tabs */
+.kit-modal-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+.kit-tab-buttons {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+  margin-bottom: 20px;
+}
+
+.kit-tab-btn {
+  background: none;
+  border: none;
+  color: var(--vscode-foreground);
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.kit-tab-btn:hover {
+  background-color: var(--vscode-toolbar-hoverBackground);
+}
+
+.kit-tab-btn.active {
+  border-bottom-color: var(--vscode-button-background);
+  color: var(--vscode-button-background);
+  font-weight: 600;
+}
+
+.kit-tab-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.kit-tab-pane {
+  display: none;
+}
+
+.kit-tab-pane.active {
+  display: block;
+}
+
+/* Kit Settings Form */
+.kit-settings-form,
+.kit-config-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vscode-foreground);
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--vscode-focusBorder);
+}
+
+/* Components Tree */
+.kit-components-tree {
+  max-width: 600px;
+}
+
+.component-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.component-item:last-child {
+  border-bottom: none;
+}
+
+.component-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.component-checkbox {
+  cursor: pointer;
+}
+
+.component-name {
+  font-weight: 500;
+  color: var(--vscode-foreground);
+}
+
+.component-files {
+  color: var(--vscode-descriptionForeground);
+  font-size: 12px;
+}
+
+/* Kit Modal Footer */
+.kit-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid var(--vscode-panel-border);
+  margin-top: auto;
+}
+
+.footer-left {
+  font-size: 13px;
+  color: var(--vscode-descriptionForeground);
+}
+
+.footer-right {
+  display: flex;
+  gap: 8px;
+}
+
+/* Loading and Error States */
+.loading,
+.empty-message,
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--vscode-descriptionForeground);
+  gap: 12px;
+}
+
+.error-message {
+  color: var(--vscode-errorForeground);
 }

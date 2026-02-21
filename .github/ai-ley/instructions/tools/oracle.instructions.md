@@ -3,7 +3,7 @@ id: oracle
 name: Oracle Database Instructions
 description: Comprehensive Oracle Database implementation guide covering enterprise RDBMS features, PL/SQL development, performance optimization, security, and advanced database administration for mission-critical applications.
 keywords: [oracle, rdbms, enterprise, plsql, performance, security, administration, database, sql]
-tools: [undefined]
+
 ---
 ### Purpose
 

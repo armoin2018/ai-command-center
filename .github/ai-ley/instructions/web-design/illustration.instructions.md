@@ -3,7 +3,7 @@ id: illustration
 name: Illustration.Instructions
 description: Development guidelines and best practices for Illustration.Instructions
 keywords: [web design, illustration.instructions, drawn, illustration]
-tools: [undefined]
+
 ---
 # Illustration & Hand-Drawn
 

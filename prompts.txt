@@ -155,14 +155,11 @@ score: 5.0
 
 - ailey-excel
 
-
 - ailey-word
 
 - ailey-powerpoint
 
-
 - ailey-puml
-
 
 - ailey-mermaid
 
@@ -191,8 +188,6 @@ score: 5.0
 [X] ailey-redit
 
 [X] ailey-soc-discord
-
-
 
 [X] ailey-com-mailchimp
 
@@ -238,13 +233,222 @@ https://developer.calendly.com/getting-started
 - TimeTap (atlassian)
   - https://timetap.atlassian.net/wiki/spaces/TTAPI/overview
 
-- SalesForce
+[X] SalesForce
 
 - Twilio
 
 [X] vonage 
 
-Persona 
-- Operations Manager
 
-- 
+
+
+[X] Create a schema file `.github/aicc/schemas/structure.v{{version}}.schema.json` based off of `.github/aicc/catalog/ai-ley/stucture.json`
+  - Must support folderMapping for files, folders
+  - Must support pattern based renaming of files 
+  - Must support recursion depth 
+  - Must support versioning - start with version 1 
+  - Must support dependencies that will be list of other kit names
+  - Must support "supportedAgentic" of copilot, claude, cursor, windsurf, codex, gemini, custom and "*" for all
+- Rename tab from "AI Kit Loader" to "Catalog"
+- Create a skill to manage the catalog as `.github/skills/aicc-admin-catalog`
+  - Must be able to provide list and filter of catalog items defined in:
+    - `.github/aicc/catalog/{{kitName}}` 
+    - installed or custom kits under `.my/aicc/catalog/{{kitName}}`
+  - Install Kits, this involves copying the kit folder from `.github/aicc/catalog/{{kitName}}` to `.my/aicc/catalog/{{kitName}}`
+  - adding custom kits to `.my/aicc/catalog/{{kitName}}`
+  - configuring kits based on `.my/aicc/catalog/{{kitName}}/config.json` if it exists
+    - Stores set values to `.my/aicc/catalog/{{kitName}}/config.values.json`
+  - configure:
+    - Update kit options stored in `.my/aicc/catalog/{{kitName}}/structure.json`
+      - Name, URL, Branch, icon can not be changed through the tools for existing configurations
+        - This does not apply for custom kits created in `.my/aicc/catalog/` and not existing in `.github/aicc/catalog/
+    - configuring kits features based on `.my/aicc/catalog/{{kitName}}/config.json` if it exists
+      - Stores set values to `.my/aicc/catalog/{{kitName}}/config.values.json`
+  - Install and Update a kit
+    - File copies `.github/aicc/catalog/{{kitName}}` to `.my/aicc/catalog/{{kitName}}`
+    - If Cache Exists in `~/.vscode/cache/{{kitName}}_{{branch}}`
+      - If the file exists `~/.vscode/cache/{{kitName}}_{{branch}}.lastUpdated` (in Epoch) + refreshInterval (from `.my/aicc/catalog/{{kitName}}/structure.json`) >= current Epoch and refreshEnabled = true (from `.my/aicc/catalog/{{kitName}}/structure.json`)
+        - Update the cached repo in `~/.vscode/cache/{{kitName}}_{{branch}}` using git fetch
+        - Copy the files based on the defined folder mapping and configuration based on folderMapping in `.my/aicc/catalog/{{kitName}}/structure.json`
+          - Honor rules on forcedReplace Settings and when the supportedAgentic system matches the current system (by default the vsix extension uses copilot)
+    - If Cache does not exist in `~/.vscode/cache/{{kitName}}_{{branch}}`
+      - Download the kit based on the repo and branch to `~/.vscode/cache/{{kitName}}_{{branch}}` using git clone 
+    - Updates should follow the settings stored in `.my/aicc/catalog/{{kitName}}/structure.json`
+      - If the files are from the same kit with a newer updated date, they should be replaced
+      - User modified files should be stored in the same structure as git under `.my/`
+    - Copy the files based on the defined folder mapping and configuration based on folderMapping in `.my/aicc/catalog/{{kitName}}/structure.json`
+      - Honor rules on forcedReplace Settings and when the supportedAgentic system matches the current system (by default the vsix extension uses copilot)
+    - Track all file changes per kit in `.my/aicc/catalog/{{kitName}}/manifest.json`
+  - Removal of Kits 
+    - Use the `.my/aicc/catalog/{{kitName}}/manifest.json` to surgically remove the files created by the kit
+    - Remove the kit from `.my/aicc/catalog/{{kitName}}`
+  - Evolve
+    - If evolveEnabled = true in `.my/aicc/catalog/{{kitName}}/structure.json` 
+      - User modificates should be captured under `.my` (excluding the `.my/aicc/catalog`)
+      - These can be contributed back by creating a new branch in github if allowed and contribute the updated files to the relateive `.github/` folder
+      - This process would be:
+        - copy the `~/.vscode/cache/{{kitName}}_{{branch}}` to `~/.vscode/cache/{{kitName}}_{{newBranch}}`
+        - go into `~/.vscode/cache/{{kitName}}_{{newBranch}}`, create new branch in github based on the contents of the folder 
+        - copy the files from `.my/**` to `.github/**` excluding the `.my/aicc/catalog` folder
+        - commit and sync to the newBranch and issue pull request
+
+[ ] In AI Command Center Secondary Panel, AI Kit Loader Tab
+- Apple Store like web panel for the Catalog 
+  - Buttons should be the icon sent to the ui as a base64 string
+  - the buttons should be 75px by 75px 
+  - Should have a border of 3px with rounded corners of 10px, default border color of white
+  - name below icon image 
+- On clieck opens into a modal view 
+  - 80% width and 80% height
+  - Modal should contain:
+    - Header: 
+      - Left Align: Icon image sent to the ui as a base64 string
+        - should be 50px by 50px 
+        - Rounded Corners of 10px 
+        - No Border
+      - Center Align: Name of Kit
+      - Right Align: Close Button "X"
+    - Body: 
+      - Tabs 
+        - Settings
+          - Settings are based on the editable fields defined in `.github/aicc/catalog/{{kitName}}/structure.json`
+          - Interface should load existing set values from `.my/aicc/catalog/{{kitName}}/structure.json` if it exists
+          - Install button triggers the aicc-admin-catalog skill to install the kit
+          - On Save or when the Install is completed
+            - The configuration settings from the interface are updated in `.my/aicc/catalog/{{kitName}}/structure.json`
+        - Configuration
+          - Interface should load existing set values from `.my/aicc/catalog/{{kitName}}/config.save.json` if it exists
+          - These are based on the advanced settings in `.github/aicc/catalog/{{kitName}}/config.json`
+        - Components
+          - This includes a list of bundled packages that are defined in an object { "componentName" : { "defaultEnabled" : true, "files" : [ files] }
+            - These are stored in `.github/aicc/{{kitName}}/components.json`
+            - When a component is (de)selected and saved it updates `.github/aicc/{{kitName}}/components.installed.json`
+              - removing installed components on uncheck and save
+              - installing components on check and save 
+              - changes are saved to `.github/aicc/{{kitName}}/components.json`
+    - Footer
+      - Left Aligned: Last Updated Date from `.my/aicc/catalog/{{kitName}}/structure.json`
+      - Right Align: Save that commits the changes for the modal
+  - Settings tab that exposes configuration values for the Kits
+  - Individual component/bundles selection in a tree view (add/remove)
+    - This should be structured in a path structured in the frontmatter that goes into the schema 
+
+- Update aicc-admin-catalog skill and schema in `.github/aicc/schemas/structure.v1.schema.json` to include a lastUpdated key that stores the timestamp of the last update
+- On install and update this date should be updated in `.my/aicc/catalog/{{kitName}}/structure.json`
+
+If you have any questions, clarifications, concerns or suggestions please ask or just proceed with implementation.
+
+
+[X] In the AI Command Center Secondary Panel
+- change the reload windows icon to a refresh icon 
+- move the help button all the way to the right
+
+
+[ ] In the AI Command Center Secondary Panel, In the Planning Tab
+- Status should be upper case
+- add a status of SKIP
+- add a quick filter for a status of SKIP
+- each comment should have the ability to skip.  This control should be provided through a toggle button to the left of the comment box
+- under the comment the author and the updated data should be shown below the comment box
+
+- Add checkboxes before each epic/story/task/bug 
+  - this builds a list of the id and passes it to a prompt /run {{id}}, {{id}}
+  - The run button shows the number of id's it will be running Run ( # of ids )
+- If no boxes are check the Run Next is still show but calls run prompt with no id behind it 
+- Add a magic wand icon to the left of the play button on each epic/story/task/bug that calls a prompt aicc-plan-refine {{id}}
+  - create a base prompt aicc-plan-refine that refines one or more epics/stories/tasks/bugs that are passed in as an argument {{id}}, {{id}}
+    - The story should be updated with details
+    - Ask the user questions to improve the quality of the epic/story/task/bug
+    - add instructions and personas
+    - create variables if needed 
+    - assign agent
+    - if comments are not valuable to the execution of the epic/story/task/bug the comment should be toggled to skip
+- In the tabs of an individual epic/story/task/bug add a tab for AI Settings (processor icon)
+  - must have an agent select list
+  - must have a list builder of instructions 
+    - should have an input field that provides suggestions of instructions as you time 
+    - at the end of the line it should have a plus icon to add it to the list
+    - the list item should have a trash can to remove the item on the right
+    - These items should be added to the instrucitons array for the selected story under `.project/PLAN.json`
+ - must have a list builder of personas 
+    - should have an input field that provides suggestions of personas as you time 
+    - at the end of the line it should have a plus icon to add it to the list
+    - the list item should have a trash can to remove the item on the right
+    - These items should be added to the personas array for the selected story under `.project/PLAN.json`
+ - must have a list builder of context 
+    - should have an input field that provides suggestions of context as you time 
+    - at the end of the line it should have a plus icon to add it to the list
+    - the list item should have a trash can to remove the item on the right
+    - These items should be added to the context array for the selected story under `.project/PLAN.json`
+- If any schemas or models need to be updated to account from these changes please proceed. no need to increase the versions of the schemas
+If you have any questions, clarifications, concerns or suggestions please ask or just proceed with implementation.
+
+
+
+- Reload WebViews should be a refresh button, but is a burger stack button
+- Fix/rename the intake panel 
+- Create a tab for the configuration of the skills - each skill should havea config pack
+  - should allow it to set/delete the variables at the workspace or global
+- Add Scheduler 
+
+- Remove the Tree View
+- Remove the Web View Tab
+
+- Planning Tab
+  - Comments should have a toggle to enable or disable from being sent to AI
+  - Add checkboxes to each of the rows to run multiple
+    - The Run Next button is updated to Run (# of tassk)
+    - Clicking Run should call the prompt /run
+  - Add a tab to assing the Agent, Instructions (Add/Remove List), Personas (Add/Remove List)
+  - Add Jira Configuration Panel ( Losely couple this to the enabled planning agent and their configuration rather than just Jira)
+  - Should have an ai planning wizard button next to the send 
+  - Need a revise full plan as well
+  - Add SKIP status 
+  - Add Filter button for SKIP 
+  - Create a quick status panel for the project 
+  - Remove the first summary tab in the project div 
+
+- If all setting changes are in real time, then really don't need a saveall button 
+
+- Settings button should call Aicc settings 
+
+- Integrate Help Documentation 
+  - Should give base instructions, and then tabs to shift to other installed kits 
+
+- Add a Advanced mode toggle button
+  - Move API Docs panel under this 
+  - Add codicons panel in it 
+  - Add a component catalog in it 
+  - Shows the Tags icon and the debug icon in the header 
+  - shows the scheduler tab
+
+- Add a Scheduler Tab
+  - This has a list of tasks that are scheduled 
+  - Scheduler should mave a similiar skill to manage it 
+
+
+MCP Server
+- Move MCPs to command prompts for skills 
+  - This should be an optional flag 
+  
+
+Instruction Changes 
+- Cleanup and optimizations
+- Create a complex designer structure
+
+Prompt Changes 
+- add Instructions finish, currently non-functional
+- Build design shoud use new designer structure 
+- Consolidate to Run and remove run-next
+  - This adds in 1, list or next to the detected options
+
+
+
+
+Skill Changes
+- Create the progress report - it is missing
+- Add Kafka Skill
+
+
+Swagger interface changes
+MCP Testing tool 

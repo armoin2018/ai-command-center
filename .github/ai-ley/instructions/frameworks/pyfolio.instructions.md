@@ -1,9 +1,7 @@
 ---
-id: pyfolio
-name: Pyfolio.Instructions
-description: Development guidelines and best practices for Pyfolio.Instructions
-keywords: [performance, pyfolio.instructions, gui, frameworks]
-tools: [undefined]
+name: pyfolio
+description: PyFolio — AI Agent Performance Analytics Guide 
+keywords: [pyfolio, performance analytics, risk management, finance, framework, guidelines, assistant, frameworks, instructions]
 ---
 Title: PyFolio — AI Agent Performance Analytics Guide
 

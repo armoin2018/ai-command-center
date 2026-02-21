@@ -3,7 +3,7 @@ id: nmap
 name: Enterprise Nmap Network Security Scanner Platform
 description: Enterprise-grade Nmap network discovery and security scanning framework with advanced compliance automation, threat intelligence integration, vulnerability assessment, sophisticated evasion techniques, distributed scanning orchestration, automated penetration testing workflows, SIEM integration, executive reporting, and production-ready security operations center capabilities for comprehensive cybersecurity environments.
 keywords: [api, cloud, advanced, automation, enterprise, agent, compliance, database, avoid, deploy]
-tools: [undefined]
+
 ---
 ### Enterprise Mission Statement
 

@@ -1,9 +1,7 @@
 ---
-id: hftbacktest
-name: Hftbacktest.Instructions
-description: Purpose: Ultra-fast event-driven backtests on intraday tick/LOB data with reproducibility and slippage realism.
-keywords: [realism, hftbacktest, guidelines, hftbacktest.instructions, gui, frameworks, avoid, assistant, performance, contracts]
-tools: undefined
+name: hftbacktest
+description: HFTBacktest Framework Instructions for AI Agents
+keywords: [hftbacktest, high-frequency trading, backtesting, framework, guidelines, assistant, frameworks, instructions]
 ---
 # hftbacktest — AI Assistant Guidelines
 

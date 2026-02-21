@@ -1,9 +1,7 @@
 ---
-id: koa
-name: Koa.Instructions
-description: Title: Koa (Node.
-keywords: [testing, api, security, koa.instructions, async, gui, sync, frameworks]
-tools: undefined
+name: koa
+description: Koa (Node.js) Framework Instructions for AI Agents 
+keywords: [koa, node.js, web framework, api development, framework, guidelines, assistant, frameworks, instructions]
 ---
 Title: Koa (Node.js) — AI Agent Implementation Guide
 

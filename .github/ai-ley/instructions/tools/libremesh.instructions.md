@@ -3,7 +3,7 @@ id: libremesh
 name: libremesh.instructions
 description: Development guidelines and best practices for Libremesh.Instructions
 keywords: [api, cloud, agent, compliance, architecture, authentication, assistant, avoid, compose, community]
-tools: [undefined]
+
 ---
 ### Purpose
 

@@ -3,7 +3,7 @@ id: aws
 name: Aws.Instructions
 description: Development guidelines and best practices for Aws.Instructions
 keywords: [api, application, architecture, amazon, overview, (aws), architecture, advanced, aws.instructions, aws]
-tools: [undefined]
+
 ---
 ### **Overview**
 

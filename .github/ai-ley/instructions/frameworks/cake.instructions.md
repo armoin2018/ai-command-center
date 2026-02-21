@@ -3,7 +3,7 @@ id: cake
 name: Cake.Instructions
 description: Development guidelines and best practices for Cake.Instructions
 keywords: [security, architecture, gui, api, cake.instructions, authorization, frameworks, rest, framework, authentication]
-tools: [undefined]
+
 ---
 Title: CakePHP (v5) — AI Agent Implementation Guide
 

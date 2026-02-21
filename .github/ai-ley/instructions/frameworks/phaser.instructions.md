@@ -1,9 +1,7 @@
 ---
-id: phaser
-name: Phaser.Instructions
-description: Development guidelines and best practices for Phaser.Instructions
-keywords: [mobile, gui, frameworks, web, phaser.instructions]
-tools: [undefined]
+name: phaser
+description: Phaser — AI Agent Game Dev Guide
+keywords: [phaser, game development, 2D games, web games, framework, guidelines, assistant, frameworks, instructions]
 ---
 Title: Phaser — AI Agent Game Dev Guide
 

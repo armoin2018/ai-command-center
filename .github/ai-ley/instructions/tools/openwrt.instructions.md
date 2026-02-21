@@ -3,7 +3,7 @@ id: openwrt
 name: openwrt.instructions
 description: Development guidelines and best practices for Openwrt.Instructions
 keywords: [api, automation, avoid, agent, compliance, architecture, assistant, authentication, configuration, advanced]
-tools: [undefined]
+
 ---
 ### Purpose
 

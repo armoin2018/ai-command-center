@@ -3,7 +3,7 @@ id: parcel
 name: Parcel.Instructions
 description: See [example-6](./examples/parcel/example-6.
 keywords: [(pwa), api, avoid, application, common, build, architecture, assistant, advanced, benefits]
-tools: [undefined]
+
 ---
 `
 ---

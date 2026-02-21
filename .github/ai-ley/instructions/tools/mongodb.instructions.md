@@ -3,7 +3,7 @@ id: mongodb
 name: mongodb.instructions
 description: Development guidelines and best practices for Mongodb.Instructions
 keywords: [agent, analytics, platform, async, capabilities, decision, architecture, database, advanced, cli]
-tools: [undefined]
+
 ---
 ### **Platform Purpose & Capabilities**
 

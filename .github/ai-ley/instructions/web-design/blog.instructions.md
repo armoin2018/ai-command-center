@@ -3,7 +3,7 @@ id: blog
 name: Blog.Instructions
 description: Development guidelines and best practices for Blog.Instructions
 keywords: [web design, blog.instructions, layout]
-tools: [undefined]
+
 ---
 # Blog Layout
 

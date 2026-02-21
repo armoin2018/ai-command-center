@@ -1,9 +1,8 @@
 ---
-id: bt
-name: Bt.Instructions
+name: bt
 description: Development guidelines and best practices for Bt.Instructions
 keywords: [testing, bt.instructions, gui, frameworks, framework, performance]
-tools: [undefined]
+
 ---
 Title: bt — AI Agent Portfolio Backtesting Guide
 

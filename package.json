@@ -2,7 +2,7 @@
   "name": "ai-command-center",
   "displayName": "AI Command Center",
   "description": "Centralize AI-powered development workflows with integrated planning, instruction management, and external service integrations",
-  "version": "1.1.15",
+  "version": "1.1.24",
   "publisher": "ai-command-center",
   "license": "MIT",
   "engines": {
@@ -423,14 +423,14 @@
       "activitybar": [
         {
           "id": "aicc-sidebar",
-          "title": "AI Command Center",
+          "title": "AI Command Center Sidebar",
           "icon": "$(project)"
         }
       ],
       "panel": [
         {
           "id": "aicc-panel",
-          "title": "AI Command Center",
+          "title": "AI Command Center Panel",
           "icon": "$(layers)"
         }
       ]

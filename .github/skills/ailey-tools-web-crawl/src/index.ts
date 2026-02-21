@@ -742,7 +742,7 @@ export class WebCrawler extends EventEmitter {
 
       const response = await this.axiosClient.get(robotsUrl);
       if (response.status === 200) {
-        this.robots = new RobotsParser(robotsUrl, response.data);
+        this.robots = new (RobotsParser as any)(robotsUrl, response.data);
         this.log('info', 'Loaded robots.txt');
 
         // Apply crawl delay

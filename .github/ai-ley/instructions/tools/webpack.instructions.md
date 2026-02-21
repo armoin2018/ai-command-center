@@ -1,10 +1,8 @@
 ---
-name: 'Webpack.Instructions'
-description: 'See [example-29](./examples/webpack/example-29.'
-keywords: [(basic), api, automation, application, bundle, related, build, caching, advanced, cases
+name: webpack
+description: Comprehensive instructions for using the Webpack build tool, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [web, api, automation, application, bundle, related, build, caching, advanced, cases ]
 ---
-
-
 
 # Webpack Build Tool Instructions
 

@@ -3,7 +3,7 @@ id: flipper-zero
 name: Flipper Zero Hardware Security Instructions
 description: Flipper Zero hardware security testing device guide covering multi-protocol analysis, RF testing, infrared communication, NFC/RFID research, and ethical security research within authorized laboratory environments and compliance frameworks.
 keywords: [avoid, enterprise, compliance, essentials, architecture, authorization, authentication, assistant, advanced, aws]
-tools: [undefined]
+
 ---
 ---
 

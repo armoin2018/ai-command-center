@@ -3,7 +3,7 @@ id: accessibility
 name: Accessibility.Instructions
 description: Development guidelines and best practices for Accessibility.Instructions
 keywords: [audit, api, accessibility, checklists, assistant, aws, avoid, accessibility.instructions, benefits, accessible]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Web Accessibility (a11y) and Inclusive Design

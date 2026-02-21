@@ -3,7 +3,7 @@ id: netcat
 name: Netcat Network Utility Instructions
 description: Netcat network utility guide covering TCP/UDP communication, network debugging, data transfer, port scanning, and network connectivity testing for system administration and security assessment purposes.
 keywords: [api, avoid, agent, compliance, devops, architecture, assistant, authorization, advanced, cli]
-tools: [undefined]
+
 ---
 ### Purpose
 

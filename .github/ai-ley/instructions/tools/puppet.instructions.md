@@ -3,7 +3,7 @@ id: puppet
 name: puppet.instructions
 description: Development guidelines and best practices for Puppet.Instructions
 keywords: [api, cloud, agent, common, balancer, architecture, authentication, backend, avoid, cli]
-tools: [undefined]
+
 ---
 ### Purpose
 

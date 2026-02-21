@@ -3,7 +3,7 @@ id: datadog
 name: datadog.instructions
 description: Development guidelines and best practices for Datadog.Instructions
 keywords: [compose.yml, api, application, configuration, agent, backend, configuration, database, advanced, datadog]
-tools: [undefined]
+
 ---
 ## **📊 Advanced APM & Observability Intelligence**
 

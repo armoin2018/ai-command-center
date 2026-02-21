@@ -3,7 +3,7 @@ id: react
 name: React.Instructions
 description: Development guidelines and best practices for React.Instructions
 keywords: [architecture, analysis, api, cli, authorization, (experimental), assistant, actions, commands, authentication]
-tools: [undefined]
+
 ---
 ## Framework Overview
 - **Framework Name**: React

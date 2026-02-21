@@ -3,7 +3,7 @@ id: seo-report
 name: SEO Report Analysis Instructions
 description: Comprehensive SEO analysis and audit instruction set for AI agents to
 keywords: [audit, assessment, availability, (`crawl, access, (`analyze, analyzer, architecture, analysis, cli]
-tools: [undefined]
+
 ---
 ## 1. Overview & Purpose
 

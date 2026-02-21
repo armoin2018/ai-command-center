@@ -3,7 +3,7 @@ id: kotlin
 name: Kotlin.Instructions
 description: Comprehensive Kotlin development guidelines for AI coding assistants, emphasizing modern best practices, performance optimization, and maintainable code patterns.
 keywords: [api, concurrency, common, async, cli, architecture, analysis, avoid, best-practices, clean]
-tools: [undefined]
+
 ---
 # Kotlin Programming Instructions
 

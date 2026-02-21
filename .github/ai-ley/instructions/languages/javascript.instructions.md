@@ -3,7 +3,7 @@ id: javascript
 name: Javascript.Instructions
 description: Modern JavaScript development guidelines for AI coding assistants, emphasizing ES6+ features, best practices, and maintainable code patterns.
 keywords: [context, comprehensive, asynchronous, classes, common, async, async/await, configuration, avoid, composition]
-tools: [undefined]
+
 ---
 # JavaScript Programming Instructions
 

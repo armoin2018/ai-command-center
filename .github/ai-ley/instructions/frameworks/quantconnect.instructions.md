@@ -3,7 +3,7 @@ id: quantconnect
 name: Quantconnect.Instructions
 description: Development guidelines and best practices for Quantconnect.Instructions
 keywords: [cloud, testing, gui, frameworks, framework, quantconnect.instructions, performance]
-tools: [undefined]
+
 ---
 Title: QuantConnect — AI Agent Platform Guide
 

@@ -3,7 +3,7 @@ id: opnsense
 name: OPNsense Hardened Firewall Security Instructions
 description: OPNsense hardened firewall and router platform guide covering FreeBSD-based security appliance deployment, packet filtering, VPN configuration, intrusion detection, and enterprise network security with modern web interface.
 keywords: [deployment, api, avoid, enterprise, agent, compliance, ecosystem, architecture, authentication, advanced]
-tools: [undefined]
+
 ---
 ### Purpose
 

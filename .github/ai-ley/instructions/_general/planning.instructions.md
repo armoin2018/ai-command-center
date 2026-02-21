@@ -3,7 +3,7 @@ id: planning
 name: Planning.Instructions
 description: Development guidelines and best practices for Planning.Instructions
 keywords: [audit, api, capacity, breakdown, architecture, assistant, backend, avoid, azure, benefits]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Software Project Planning and Management

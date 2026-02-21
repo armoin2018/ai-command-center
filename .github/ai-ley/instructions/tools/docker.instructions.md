@@ -3,7 +3,7 @@ id: docker
 name: Docker Enterprise Containerization Platform
 description: Enterprise Docker Containerization Platform - Comprehensive Level 3 production-ready container platform with advanced security hardening, image signing and verification, multi-architecture builds, enterprise registry management, comprehensive monitoring, CI/CD integration, compliance frameworks, runtime security, and enterprise governance standards for containerized application lifecycle management.
 keywords: [alternative, security, avoid, common, (development), platform, .dockerignore, deploy, image, production]
-tools: [undefined]
+
 ---
 ## 🏢 Enterprise Platform Overview
 

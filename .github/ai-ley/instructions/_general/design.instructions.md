@@ -3,7 +3,7 @@ id: design
 name: Design.Instructions
 description: Development guidelines and best practices for Design.Instructions
 keywords: [audit, api, avoid, (command, assistant, architecture, authentication, authorization, architectural, benefits]
-tools: [undefined]
+
 ---
 ## Overview
 - **Domain**: Software Architecture and Design Methodology

@@ -3,7 +3,7 @@ id: bpmn
 name: bpmn.instructions
 description: Development guidelines and best practices for Bpmn.Instructions
 keywords: [api, analytics, platform, async, bpmn, bpmn.instructions, architecture, authentication, automation, business]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

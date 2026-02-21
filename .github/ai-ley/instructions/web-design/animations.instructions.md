@@ -3,7 +3,7 @@ id: animations
 name: Animations.Instructions
 description: Development guidelines and best practices for Animations.Instructions
 keywords: [animations.instructions, web design, animation, website, web]
-tools: [undefined]
+
 ---
 # Animation-Rich Website
 

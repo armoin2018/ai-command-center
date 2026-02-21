@@ -3,7 +3,7 @@ id: aws-cloudformation
 name: AWS CloudFormation Enterprise Platform
 description: Enterprise AWS CloudFormation platform with advanced infrastructure as
 keywords: [cloud, cloudformation.instructions, account, architecture, configuration, advanced, cli, cloudformation, capabilities, aws]
-tools: [undefined]
+
 ---
 ## 🎯 Enterprise Overview
 

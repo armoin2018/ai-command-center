@@ -1,9 +1,8 @@
 ---
-id: godot
-name: Godot.Instructions
-description: Development guidelines and best practices for Godot.Instructions
-keywords: [behavior, considerations, common, audio, architecture, authentication, assistant, concepts, configuration, autoloads]
-tools: [undefined]
+name: godot
+description: Godot Engine Framework Instructions for AI Agents
+keywords: [godot, game engine, gdscript, 2d/3d games, framework, guidelines, assistant, frameworks, instructions]
+
 ---
 ## Framework Overview
 - **Framework Name**: Godot Engine

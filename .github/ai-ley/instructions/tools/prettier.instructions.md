@@ -3,7 +3,7 @@ id: prettier
 name: Prettier Code Formatter Instructions
 description: Comprehensive guide for using Prettier to automatically format code for
 keywords: [performance, assessment, avoid, agent, common, usage, applications, use, advanced, configuration]
-tools: [undefined]
+
 ---
 ## Tool Overview
 

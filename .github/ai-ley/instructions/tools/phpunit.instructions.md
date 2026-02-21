@@ -1,10 +1,8 @@
 ---
-name: 'Phpunit.Instructions'
-description: 'Development guidelines and best practices for Phpunit.Instructions'
-keywords: [.toolrc,, config, commands, applicable), assistant, (e.g.,, configuration, analysis, advanced, commit
+name: phpunit
+description: Comprehensive instructions for using the PHPUnit testing framework, including installation, configuration, core features, advanced functionalities, best practices, troubleshooting, and integration with other development tools.
+keywords: [config, commands, applicable, assistant, configuration, analysis, advanced, commit]
 ---
-
-
 
 # Tool Instructions Template
 

@@ -3,7 +3,7 @@ id: css
 name: Css.Instructions
 description: Development guidelines and best practices for Css.Instructions
 keywords: [(with, api, languages, coding, gui, architecture, hints), css.instructions, guide, framework]
-tools: [undefined]
+
 ---
 # CSS Coding & Style Guide (with AI Linting Hints)
 

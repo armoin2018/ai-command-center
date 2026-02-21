@@ -3,7 +3,7 @@ id: plantuml
 name: plantuml.instructions
 description: Development guidelines and best practices for Plantuml.Instructions
 keywords: [api, platform, capabilities, cicd, architecture, authentication, authorization, plantuml, azure, cases]
-tools: [undefined]
+
 ---
 ## **Platform Overview**
 

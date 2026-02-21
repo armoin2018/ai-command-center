@@ -3,7 +3,7 @@ id: rust
 name: Rust.Instructions
 description: Development guidelines and best practices for Rust.Instructions
 keywords: [api, coding, async, gui, architecture, hints), cli, (with, guide, framework]
-tools: [undefined]
+
 ---
 # Rust Coding & Style Guide (with AI Linting Hints)
 

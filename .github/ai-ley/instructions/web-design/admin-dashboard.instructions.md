@@ -3,7 +3,7 @@ id: admin-dashboard
 name: Admin Dashboard.Instructions
 description: Development guidelines and best practices for Admin Dashboard.Instructions
 keywords: [dashboard, administrative, web design, dashboard.instructions, admin]
-tools: [undefined]
+
 ---
 # Administrative Dashboard
 
