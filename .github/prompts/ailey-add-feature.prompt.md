@@ -8,7 +8,7 @@ agent: AI-ley Orchestrator
 ---
 ## Context & Resources
 
-**Variables:** All paths use mustache syntax from `.github/ai-ley/ai-ley.yaml` (e.g., `{{folders.plan}}`, `{{files.requirements}}`)
+**Variables:** All paths use mustache syntax from `.github/ai-ley/ai-ley.json` (e.g., `{{folders.plan}}`, `{{files.requirements}}`)
 
 **Expertise:** 
 - Personas: `.github/ai-ley/personas/_general/**/*.md`

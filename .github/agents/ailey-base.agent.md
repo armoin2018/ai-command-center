@@ -13,7 +13,7 @@ This is the foundational agent that defines core behaviors, variable systems, an
 
 ### Variable Sources
 
-Variables defined in `.github/ai-ley/ai-ley.yaml`, overrides in `.my/ai-ley/ai-ley.yaml`, referenced using mustache syntax: `{{folders.plan}}`, `{{files.requirements}}`, etc.
+Variables defined in `.github/ai-ley/ai-ley.json`, overrides in `.my/ai-ley/ai-ley.json`, referenced using mustache syntax: `{{folders.plan}}`, `{{files.requirements}}`, etc.
 
 ### File Organization
 

@@ -57,7 +57,7 @@ To use this agent, reference it in your chat or workflow configuration.
 
 ## Variables
 
-- Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.yaml`
+- Folders, Files and Indexes are stored in `.github/ai-ley/ai-ley.json`
 - Files and folders in this document will be referenced using the `folders`, `files`, and `indexes` variables defined in the folder structure YAML file using the mustache syntax such as `{{folders.plan}}`.
 
 ## References

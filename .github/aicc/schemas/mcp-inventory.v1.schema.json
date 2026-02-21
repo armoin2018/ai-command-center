@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.dev/schemas/mcp-inventory.v1.schema.json",
+  "title": "MCP Inventory Schema v1",
+  "description": "Schema for per-workspace MCP server inventory tracking ports, PIDs, health status, and workspace registrations. Each workspace process maintains its own copy at .my/aicc/mcp-inventory.json.",
+  "type": "object",
+  "required": ["version", "lastProbe", "portRange", "servers", "workspaces"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the MCP inventory format"
+    },
+    "lastProbe": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last health probe scan"
+    },
+    "leader": {
+      "type": "object",
+      "description": "Current MCP server leader information",
+      "required": ["workspaceId", "pid", "port", "electedAt"],
+      "properties": {
+        "workspaceId": {
+          "type": "string",
+          "description": "Unique identifier of the workspace that is the current leader"
+        },
+        "pid": {
+          "type": "integer",
+          "description": "Process ID of the leader MCP server"
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "Port the leader MCP server is listening on"
+        },
+        "electedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when the leader was elected"
+        }
+      }
+    },
+    "portRange": {
+      "type": "object",
+      "description": "Configured port range for MCP server allocation",
+      "required": ["start", "end"],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 1024,
+          "description": "First port in the allocation range"
+        },
+        "end": {
+          "type": "integer",
+          "maximum": 65535,
+          "description": "Last port in the allocation range"
+        }
+      }
+    },
+    "servers": {
+      "type": "array",
+      "description": "Array of all MCP server instances across the port range",
+      "items": {
+        "type": "object",
+        "required": ["port", "status"],
+        "properties": {
+          "port": {
+            "type": "integer",
+            "description": "Port number for this server slot"
+          },
+          "pid": {
+            "type": ["integer", "null"],
+            "description": "Process ID if a server is running on this port"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "available", "unhealthy", "stopped"],
+            "description": "Current health status of this server slot"
+          },
+          "mcpVersion": {
+            "type": "string",
+            "description": "MCP SDK version running on this port"
+          },
+          "workspaceId": {
+            "type": ["string", "null"],
+            "description": "Workspace ID that owns this server instance"
+          },
+          "workspaceName": {
+            "type": ["string", "null"],
+            "description": "Human-readable workspace name"
+          },
+          "lastHealthCheck": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of the last successful health check"
+          },
+          "startedAt": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "description": "Timestamp when this server instance was started"
+          }
+        }
+      }
+    },
+    "workspaces": {
+      "type": "array",
+      "description": "Array of all registered workspaces",
+      "items": {
+        "type": "object",
+        "required": ["workspaceId", "workspaceName", "workspacePath", "port", "version"],
+        "properties": {
+          "workspaceId": {
+            "type": "string",
+            "description": "Unique identifier for the workspace"
+          },
+          "workspaceName": {
+            "type": "string",
+            "description": "Human-readable workspace name"
+          },
+          "workspacePath": {
+            "type": "string",
+            "description": "Absolute file path to the workspace root"
+          },
+          "port": {
+            "type": "integer",
+            "description": "Port number assigned to this workspace's MCP server"
+          },
+          "version": {
+            "type": "string",
+            "description": "AICC extension version running in this workspace"
+          },
+          "deployedSkills": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "List of skill IDs deployed in this workspace"
+          },
+          "registeredAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when this workspace registered with the MCP server"
+          }
+        }
+      }
+    }
+  }
+}

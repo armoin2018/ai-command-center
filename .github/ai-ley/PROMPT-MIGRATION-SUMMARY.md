@@ -84,7 +84,7 @@ score: 4.0
 
 All variable references updated from:
 
-- `.github/ai-ley/ai-ley.yaml` → `.github/ai-ley/ai-ley.yaml`
+- `.github/ai-ley/ai-ley.json` → `.github/ai-ley/ai-ley.json`
 - `.ai-ley/shared/global-instructions.md` → `.github/ai-ley/global-instructions.md`
 - `.ai-ley/shared/personas` → `.github/ai-ley/personas`
 - `.ai-ley/shared/instructions` → `.github/ai-ley/instructions`
@@ -301,7 +301,7 @@ Prompts rated by complexity based on steps, checklists, and examples:
 ### Path References
 
 - ✅ All `.ai-ley/shared/*` references updated
-- ✅ All variable references use `.github/ai-ley/ai-ley.yaml`
+- ✅ All variable references use `.github/ai-ley/ai-ley.json`
 - ✅ All persona/instruction references point to new locations
 
 ### Recommendations
@@ -346,7 +346,7 @@ Prompts rated by complexity based on steps, checklists, and examples:
 │   └── ailey-validate.prompt.md
 │
 └── ai-ley/
-    ├── ai-ley.yaml (variable definitions)
+    ├── ai-ley.json (variable definitions)
     ├── global-instructions.md
     ├── indexes/
     │   └── prompts.md (446 lines)

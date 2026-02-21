@@ -1,0 +1,119 @@
+{
+    "name": "awesome-copilot",
+    "repo": "https://github.com/github/awesome-copilot",
+    "branch": "main",
+    "refreshEnabled": true,
+    "evolveEnabled": false,
+    "refreshInterval": "86400",
+    "icon": "icon.png",
+    "description": "Community-contributed agents, prompts, instructions, hooks, skills, and plugins to supercharge your GitHub Copilot experience.",
+    "author": "GitHub",
+    "folderMapping": [
+        {
+            "source": "agents",
+            "target": ".github/agents",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        },
+        {
+            "source": "prompts",
+            "target": ".github/prompts",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        },
+        {
+            "source": "instructions",
+            "target": ".github/instructions",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        },
+        {
+            "source": "hooks",
+            "target": ".github/hooks",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        },
+        {
+            "source": "skills",
+            "target": ".github/skills",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        },
+        {
+            "source": "plugins",
+            "target": ".github/plugins",
+            "type": "folder",
+            "evolveEnabled": false,
+            "forceReplace": false,
+            "supportedAgentic": ["copilot"]
+        }
+    ],
+    "components": {
+        "agents": {
+            "installed": true,
+            "description": "Specialized GitHub Copilot agents for enhanced workflow capabilities",
+            "files": [
+                "agents/"
+            ]
+        },
+        "prompts": {
+            "installed": true,
+            "description": "Task-specific prompts for code generation, documentation, and problem solving",
+            "files": [
+                "prompts/"
+            ]
+        },
+        "instructions": {
+            "installed": true,
+            "description": "Coding standards and best practices that apply to specific file patterns",
+            "files": [
+                "instructions/"
+            ]
+        },
+        "hooks": {
+            "installed": false,
+            "description": "Automated workflows triggered by development events (sessionStart, sessionEnd, etc.)",
+            "files": [
+                "hooks/"
+            ]
+        },
+        "skills": {
+            "installed": false,
+            "description": "Self-contained folders with instructions and bundled resources for specialized tasks",
+            "files": [
+                "skills/"
+            ]
+        },
+        "plugins": {
+            "installed": false,
+            "description": "Curated bundles of related agents, prompts, and skills organized by theme",
+            "files": [
+                "plugins/"
+            ]
+        },
+        "cookbook": {
+            "installed": false,
+            "description": "Practical copy-paste-ready code snippets and real-world examples",
+            "files": [
+                "cookbook/"
+            ]
+        }
+    },
+    "additionalProperties": {
+        "license": "MIT",
+        "stars": "21.9k",
+        "contributors": 250,
+        "topics": ["ai", "github-copilot", "prompt-engineering", "hacktoberfest"]
+    },
+    "dependencies": []
+}
