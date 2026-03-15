@@ -199,6 +199,38 @@ ${config.transport === 'https' ? 'This server uses HTTPS with self-signed certif
                     }
                 }
             },
+            '/codicons/{fileName}': {
+                get: {
+                    summary: 'Get Codicon Asset',
+                    description: 'Serves VS Code codicon CSS stylesheet and TTF font files for rendering codicon icons',
+                    operationId: 'getCodiconAsset',
+                    tags: ['Static Assets'],
+                    parameters: [
+                        {
+                            name: 'fileName',
+                            in: 'path',
+                            required: true,
+                            schema: {
+                                type: 'string',
+                                enum: ['codicon.css', 'codicon.ttf', 'codicon.svg']
+                            },
+                            description: 'Codicon asset filename'
+                        }
+                    ],
+                    responses: {
+                        '200': {
+                            description: 'Codicon asset file',
+                            content: {
+                                'text/css': { schema: { type: 'string' } },
+                                'font/ttf': { schema: { type: 'string', format: 'binary' } }
+                            }
+                        },
+                        '404': {
+                            description: 'Asset not found'
+                        }
+                    }
+                }
+            },
             '/': {
                 post: {
                     summary: 'MCP Protocol Request',

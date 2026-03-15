@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Command Center — Project Scan Report</title>
+<style>
+/* ─── Bootstrap 5.3 Dark Minimal Inline ─── */
+*,::after,::before{box-sizing:border-box}
+:root{--bs-body-bg:#1e1e2e;--bs-body-color:#cdd6f4;--bs-primary:#89b4fa;--bs-secondary:#a6adc8;--bs-success:#a6e3a1;--bs-danger:#f38ba8;--bs-warning:#f9e2af;--bs-info:#89dceb;--bs-card-bg:#313244;--bs-border-color:#45475a;--bs-nav-bg:#181825;--bs-highlight:#fab387;--bs-purple:#cba6f7;--bs-teal:#94e2d5;--bs-pink:#f5c2e7;--bs-font-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--sidebar-width:260px;--header-height:56px}
+html{font-size:14px;scroll-behavior:smooth}
+body{margin:0;font-family:var(--bs-font-sans-serif);background:var(--bs-body-bg);color:var(--bs-body-color);display:flex;flex-direction:column;min-height:100vh;line-height:1.6}
+a{color:var(--bs-primary);text-decoration:none}a:hover{text-decoration:underline}
+h1,h2,h3,h4,h5{color:#cdd6f4;font-weight:600;margin-top:0}
+h2{font-size:1.5rem;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--bs-border-color)}
+h3{font-size:1.2rem;margin-bottom:.5rem}
+p{margin:0 0 .75rem}
+code{background:#45475a;padding:2px 6px;border-radius:4px;font-size:.85rem;color:var(--bs-highlight)}
+pre{background:#181825;border:1px solid var(--bs-border-color);border-radius:8px;padding:1rem;overflow-x:auto;font-size:.82rem;color:#cdd6f4}
+
+/* ─── Layout ─── */
+.app-header{position:fixed;top:0;left:0;right:0;height:var(--header-height);background:var(--bs-nav-bg);border-bottom:1px solid var(--bs-border-color);display:flex;align-items:center;padding:0 1.5rem;z-index:1000;gap:1rem}
+.app-header h1{font-size:1.1rem;margin:0;white-space:nowrap}
+.app-header .badge{font-size:.7rem;padding:3px 8px;border-radius:12px;font-weight:500}
+.badge-primary{background:var(--bs-primary);color:#1e1e2e}
+.badge-success{background:var(--bs-success);color:#1e1e2e}
+.badge-warning{background:var(--bs-warning);color:#1e1e2e}
+.badge-danger{background:var(--bs-danger);color:#1e1e2e}
+.badge-info{background:var(--bs-info);color:#1e1e2e}
+.badge-purple{background:var(--bs-purple);color:#1e1e2e}
+.badge-teal{background:var(--bs-teal);color:#1e1e2e}
+.badge-secondary{background:#585b70;color:#cdd6f4}
+
+.sidebar{position:fixed;top:var(--header-height);left:0;width:var(--sidebar-width);height:calc(100vh - var(--header-height));background:var(--bs-nav-bg);border-right:1px solid var(--bs-border-color);overflow-y:auto;z-index:999;padding:.75rem 0}
+.sidebar a{display:flex;align-items:center;gap:8px;padding:6px 1rem;color:var(--bs-secondary);font-size:.82rem;transition:all .15s}
+.sidebar a:hover,.sidebar a.active{color:var(--bs-primary);background:rgba(137,180,250,.08);text-decoration:none}
+.sidebar a.active{border-left:3px solid var(--bs-primary);font-weight:600}
+.sidebar .nav-group{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#585b70;padding:.75rem 1rem .25rem;font-weight:700}
+
+.main-content{margin-left:var(--sidebar-width);margin-top:var(--header-height);padding:1.5rem 2rem 3rem;flex:1;max-width:1100px}
+section{margin-bottom:2.5rem;scroll-margin-top:calc(var(--header-height) + 1rem)}
+
+/* ─── Cards ─── */
+.card{background:var(--bs-card-bg);border:1px solid var(--bs-border-color);border-radius:10px;padding:1.25rem;margin-bottom:1rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem}
+.stat-card{text-align:center;padding:1rem}
+.stat-card .value{font-size:2rem;font-weight:700;line-height:1.2}
+.stat-card .label{font-size:.75rem;color:var(--bs-secondary);text-transform:uppercase;letter-spacing:.05em}
+
+/* ─── Tables ─── */
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:#181825;font-weight:600;text-align:left;padding:8px 12px;border-bottom:2px solid var(--bs-border-color);color:var(--bs-secondary);text-transform:uppercase;font-size:.72rem;letter-spacing:.04em}
+td{padding:8px 12px;border-bottom:1px solid var(--bs-border-color)}
+tr:hover td{background:rgba(137,180,250,.04)}
+
+/* ─── Severity ─── */
+.severity-critical{color:var(--bs-danger);font-weight:700}
+.severity-high{color:var(--bs-warning);font-weight:600}
+.severity-medium{color:var(--bs-highlight);font-weight:500}
+.severity-low{color:var(--bs-info)}
+.severity-info{color:var(--bs-secondary)}
+
+/* ─── Score Ring ─── */
+.score-ring{position:relative;width:120px;height:120px;margin:0 auto 1rem}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring .value{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700}
+
+/* ─── Charts ─── */
+.chart-container{position:relative;height:300px;max-width:100%}
+.chart-sm{height:200px}
+.mermaid{background:transparent!important;text-align:center;margin:1rem 0}
+
+/* ─── Accordion ─── */
+details{border:1px solid var(--bs-border-color);border-radius:8px;margin-bottom:.5rem;background:var(--bs-card-bg)}
+details summary{padding:.75rem 1rem;cursor:pointer;font-weight:600;font-size:.9rem;list-style:none;display:flex;align-items:center;gap:.5rem}
+details summary::before{content:"▶";font-size:.65rem;transition:transform .2s;color:var(--bs-secondary)}
+details[open] summary::before{transform:rotate(90deg)}
+details .detail-body{padding:0 1rem 1rem}
+
+/* ─── Progress bar ─── */
+.progress-bar{height:8px;background:#45475a;border-radius:4px;overflow:hidden;margin:.25rem 0}
+.progress-bar .fill{height:100%;border-radius:4px;transition:width .3s}
+.fill-success{background:var(--bs-success)}
+.fill-warning{background:var(--bs-warning)}
+.fill-danger{background:var(--bs-danger)}
+.fill-info{background:var(--bs-info)}
+.fill-primary{background:var(--bs-primary)}
+.fill-purple{background:var(--bs-purple)}
+
+/* ─── Pill list ─── */
+.pill-list{display:flex;flex-wrap:wrap;gap:6px;margin:.5rem 0}
+.pill{padding:3px 10px;border-radius:12px;font-size:.75rem;background:#45475a;color:#cdd6f4}
+.pill-blue{background:rgba(137,180,250,.15);color:var(--bs-primary)}
+.pill-green{background:rgba(166,227,161,.15);color:var(--bs-success)}
+.pill-orange{background:rgba(250,179,135,.15);color:var(--bs-highlight)}
+.pill-purple{background:rgba(203,166,247,.15);color:var(--bs-purple)}
+.pill-teal{background:rgba(148,226,213,.15);color:var(--bs-teal)}
+.pill-pink{background:rgba(245,194,231,.15);color:var(--bs-pink)}
+
+/* ─── Responsive ─── */
+@media(max-width:900px){.sidebar{display:none}.main-content{margin-left:0}}
+@media print{.sidebar,.app-header{display:none}.main-content{margin:0;max-width:100%}details{break-inside:avoid}details[open]{break-inside:auto}}
+
+/* ─── Timestamp ─── */
+.timestamp{font-size:.72rem;color:#585b70;text-align:right}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="app-header">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--bs-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+  <h1>AI Command Center</h1>
+  <span class="badge badge-primary">v2.0.16</span>
+  <span class="badge badge-success">Health: 82 / 100</span>
+  <span style="flex:1"></span>
+  <span class="timestamp">Scanned: 2026-02-27</span>
+</header>
+
+<!-- ═══════════════════ SIDEBAR ═══════════════════ -->
+<nav class="sidebar">
+  <div class="nav-group">Overview</div>
+  <a href="#project" class="active">📋 Project Description</a>
+  <a href="#scorecard">🎯 Scorecard</a>
+  <a href="#architecture">🏗️ Architecture</a>
+  <a href="#howto">🚀 How to Use</a>
+
+  <div class="nav-group">AI Resources</div>
+  <a href="#instructions">📚 Instruction Sets</a>
+  <a href="#personas">🎭 Personas</a>
+  <a href="#skills">🔧 Skills</a>
+  <a href="#agents">🤖 Agents</a>
+  <a href="#prompts">💬 Prompts</a>
+
+  <div class="nav-group">Analysis</div>
+  <a href="#aicc">⚡ AI Command Center</a>
+  <a href="#security">🔒 Security Scan</a>
+  <a href="#performance">⚡ Performance</a>
+  <a href="#quality">📊 Code Quality</a>
+  <a href="#docs">📖 Documentation</a>
+  <a href="#issues">🐛 Issues</a>
+
+  <div class="nav-group">Strategy</div>
+  <a href="#innovation">💡 Innovation</a>
+  <a href="#competitive">🏆 Competitive</a>
+  <a href="#pitch">📈 Pitch Deck</a>
+  <a href="#gtm">🚀 Go-to-Market</a>
+  <a href="#actions">🎯 Priority Actions</a>
+</nav>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main class="main-content">
+
+<!-- ─── 1. PROJECT DESCRIPTION ─── -->
+<section id="project">
+<h2>📋 Project Description</h2>
+<div class="card">
+  <h3>AI Command Center</h3>
+  <p>A comprehensive VS Code extension for AI-powered development workflows with integrated planning, Jira synchronization, MCP server, and a rich AI-ley kit ecosystem of agents, skills, instructions, and prompts.</p>
+  <div class="card-grid" style="margin-top:1rem">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-primary)">2.0.16</div><div class="label">Version</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">7,344</div><div class="label">Total Files</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-purple)">158K</div><div class="label">Lines of Code</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-highlight)">MIT</div><div class="label">License</div></div>
+  </div>
+  <h4 style="margin-top:1rem">Key Features</h4>
+  <div class="pill-list">
+    <span class="pill pill-blue">Hierarchical Planning</span>
+    <span class="pill pill-green">Jira Integration</span>
+    <span class="pill pill-orange">MCP Server</span>
+    <span class="pill pill-purple">22 AI Agents</span>
+    <span class="pill pill-teal">49 Skills</span>
+    <span class="pill pill-pink">274 Instructions</span>
+    <span class="pill pill-blue">90 Commands</span>
+    <span class="pill pill-green">WebView UI</span>
+    <span class="pill pill-orange">Scheduler</span>
+    <span class="pill pill-purple">49 Prompts</span>
+  </div>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h4>📦 Dependencies</h4>
+    <table>
+      <tr><td><code>@modelcontextprotocol/sdk</code></td><td>^1.25.2</td></tr>
+      <tr><td><code>axios</code></td><td>^1.6.5</td></tr>
+      <tr><td><code>js-yaml</code></td><td>^4.1.1</td></tr>
+      <tr><td><code>winston</code></td><td>^3.19.0</td></tr>
+      <tr><td><code>ws</code></td><td>^8.16.0</td></tr>
+      <tr><td><code>swagger-ui-dist</code></td><td>^5.11.0</td></tr>
+      <tr><td><code>@vscode/codicons</code></td><td>^0.0.44</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>🛠️ Dev Stack</h4>
+    <table>
+      <tr><td><code>typescript</code></td><td>^5.3.0</td></tr>
+      <tr><td><code>webpack</code></td><td>^5.90.0</td></tr>
+      <tr><td><code>eslint</code></td><td>^9.39.2</td></tr>
+      <tr><td><code>mocha</code></td><td>^11.7.5</td></tr>
+      <tr><td><code>vsce</code></td><td>^2.22.0</td></tr>
+      <tr><td>Target</td><td>ES2020 / strict</td></tr>
+      <tr><td>VS Code Engine</td><td>^1.85.0</td></tr>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ─── 2. SCORECARD ─── -->
+<section id="scorecard">
+<h2>🎯 Scorecard Summary</h2>
+<div class="card-grid">
+  <div class="card stat-card">
+    <div class="score-ring">
+      <svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="#45475a" stroke-width="8"/><circle cx="60" cy="60" r="52" fill="none" stroke="var(--bs-success)" stroke-width="8" stroke-dasharray="326.7" stroke-dashoffset="58.8" stroke-linecap="round"/></svg>
+      <div class="value" style="color:var(--bs-success)">82</div>
+    </div>
+    <div class="label">Overall Health</div>
+  </div>
+  <div class="card" style="flex:2">
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Grade</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Architecture</td><td>90/100</td><td><span class="badge badge-success">A</span></td><td>Excellent modular design</td></tr>
+        <tr><td>Type Safety</td><td>78/100</td><td><span class="badge badge-primary">B+</span></td><td>228 <code>: any</code> usages remain</td></tr>
+        <tr><td>Security</td><td>75/100</td><td><span class="badge badge-primary">B</span></td><td>CSP uses unsafe-inline for styles</td></tr>
+        <tr><td>Error Handling</td><td>88/100</td><td><span class="badge badge-success">A</span></td><td>738 try-catch blocks, strong coverage</td></tr>
+        <tr><td>Documentation</td><td>85/100</td><td><span class="badge badge-success">A</span></td><td>3,207 JSDoc blocks, 18 doc files</td></tr>
+        <tr><td>Performance</td><td>72/100</td><td><span class="badge badge-warning">B-</span></td><td>311 sync I/O calls, large files</td></tr>
+        <tr><td>Testing</td><td>60/100</td><td><span class="badge badge-warning">C</span></td><td>Test infrastructure exists, coverage gap</td></tr>
+        <tr><td>AI Ecosystem</td><td>98/100</td><td><span class="badge badge-success">A+</span></td><td>395 AI resources cataloged</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card-grid" style="margin-top:.5rem">
+  <div class="card">
+    <h4>Type Safety</h4>
+    <div class="progress-bar"><div class="fill fill-primary" style="width:78%"></div></div>
+    <small>228 <code>: any</code> out of ~4,641 type sites (95% typed)</small>
+  </div>
+  <div class="card">
+    <h4>JSDoc Coverage</h4>
+    <div class="progress-bar"><div class="fill fill-success" style="width:69%"></div></div>
+    <small>3,207 JSDoc blocks / ~4,641 functions (69%)</small>
+  </div>
+  <div class="card">
+    <h4>Error Handling</h4>
+    <div class="progress-bar"><div class="fill fill-info" style="width:72%"></div></div>
+    <small>738 try-catch / 1,026 async functions (72%)</small>
+  </div>
+</div>
+</section>
+
+<!-- ─── 3. ARCHITECTURE ─── -->
+<section id="architecture">
+<h2>🏗️ Architecture</h2>
+<div class="card">
+  <h4>System Overview</h4>
+  <div class="mermaid">
+graph TB
+    subgraph Extension["VS Code Extension (extension.ts)"]
+        CM[ConfigManager]
+        PM[PlanningManager]
+        SM[SchedulerEngine]
+        CP[ChatParticipant]
+        AK[AIKitManager]
+        IM[IntakeManager]
+    end
+    subgraph MCP["MCP Server Layer"]
+        MS[MCPServer :3000]
+        HT[HTTP Transport]
+        SEC[SecurityManager]
+        LE[LeaderElection]
+        Tools[15 Tool Modules]
+    end
+    subgraph Services["Service Layer (43 services)"]
+        SE[SmartContextEngine]
+        PE[PipelineEngine]
+        VE[VelocityEngine]
+        IS[IdeationService]
+        KB[KnowledgeBase]
+        OQ[OfflineQueue]
+        TC[TelemetryCollector]
+    end
+    subgraph Integrations["Integrations"]
+        JR[Jira Sync]
+        SL[Slack]
+        CF[Confluence]
+        SP[SharePoint]
+        TM[Teams]
+    end
+    subgraph Views["WebView UI"]
+        SPP[SecondaryPanel]
+        MP[MainPanel]
+        DP[MermaidPanel]
+        TV[TreeView]
+    end
+    Extension --> MCP
+    Extension --> Services
+    Extension --> Integrations
+    Extension --> Views
+    MCP --> Tools
+    MCP --> SEC
+  </div>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h4>Source Structure</h4>
+    <table>
+      <thead><tr><th>Directory</th><th>Purpose</th><th>Files</th></tr></thead>
+      <tbody>
+        <tr><td><code>src/</code></td><td>Extension core (9 top-level modules)</td><td>215 .ts</td></tr>
+        <tr><td><code>src/services/</code></td><td>Business logic layer</td><td>43 services</td></tr>
+        <tr><td><code>src/mcp/</code></td><td>MCP server + 15 tool modules</td><td>28 files</td></tr>
+        <tr><td><code>src/planning/</code></td><td>Planning entities &amp; managers</td><td>~15 files</td></tr>
+        <tr><td><code>src/integrations/</code></td><td>Jira, Slack, Confluence, SP, Teams</td><td>~20 files</td></tr>
+        <tr><td><code>src/views/</code></td><td>WebView providers &amp; handlers</td><td>~15 files</td></tr>
+        <tr><td><code>media/</code></td><td>Frontend JS/CSS/HTML</td><td>39 files</td></tr>
+        <tr><td><code>.github/</code></td><td>AI-ley kit resources</td><td>~1,250 files</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h4>MCP Tools (15 modules)</h4>
+    <div class="pill-list">
+      <span class="pill pill-blue">planningCrud</span>
+      <span class="pill pill-blue">bulkOperation</span>
+      <span class="pill pill-green">ideation</span>
+      <span class="pill pill-green">ideaAnalytics</span>
+      <span class="pill pill-orange">pipeline</span>
+      <span class="pill pill-orange">velocity</span>
+      <span class="pill pill-purple">knowledge</span>
+      <span class="pill pill-purple">memory</span>
+      <span class="pill pill-teal">prompt</span>
+      <span class="pill pill-teal">discovery</span>
+      <span class="pill pill-pink">skillRegistration</span>
+      <span class="pill pill-pink">health</span>
+      <span class="pill pill-blue">telemetry</span>
+      <span class="pill pill-green">confluence</span>
+      <span class="pill pill-orange">offlineQueue</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ─── 4. HOW TO USE ─── -->
+<section id="howto">
+<h2>🚀 How to Use</h2>
+<div class="card">
+  <h4>Installation</h4>
+  <pre>
+# Build from source
+./build-vsix.sh
+
+# Install the VSIX
+./install-extension.sh
+
+# Reload VS Code (Cmd+Shift+P → Developer: Reload Window)</pre>
+  <h4 style="margin-top:1rem">Quick Start</h4>
+  <ol>
+    <li>Open Command Palette → <code>AI Command Center: Create Epic</code></li>
+    <li>Configure Jira (optional) → <code>AI Command Center: Configure Jira Integration</code></li>
+    <li>Start MCP Server → <code>AI Command Center: Start MCP Server</code></li>
+    <li>Open Planning Panel → <code>AI Command Center: Open Planning Panel</code></li>
+  </ol>
+  <h4 style="margin-top:1rem">90 Available Commands</h4>
+  <div class="pill-list">
+    <span class="pill pill-blue">Planning (9)</span>
+    <span class="pill pill-green">Config (11)</span>
+    <span class="pill pill-orange">Jira (10)</span>
+    <span class="pill pill-purple">MCP (5)</span>
+    <span class="pill pill-teal">Init (5)</span>
+    <span class="pill pill-pink">File Protection (4)</span>
+    <span class="pill pill-blue">Undo (4)</span>
+    <span class="pill pill-green">Mermaid (4)</span>
+    <span class="pill pill-orange">Search (2)</span>
+    <span class="pill pill-purple">Asset Tree (3)</span>
+    <span class="pill pill-teal">AI Kit (1+)</span>
+    <span class="pill">+ 30 more</span>
+  </div>
+</div>
+</section>
+
+<!-- ─── 5. INSTRUCTION SETS ─── -->
+<section id="instructions">
+<h2>📚 Instruction Sets <span class="badge badge-purple">274</span></h2>
+<div class="card">
+  <p>Comprehensive instruction library spanning tools, frameworks, languages, web design, business, and general guidance.</p>
+  <div class="card-grid" style="margin-top:.5rem">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-primary)">111</div><div class="label">Tools</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">84</div><div class="label">Frameworks</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-highlight)">30</div><div class="label">Languages</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-purple)">26</div><div class="label">Web Design</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-teal)">13</div><div class="label">General</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-pink)">8</div><div class="label">Business</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-info)">1</div><div class="label">Games</div></div>
+  </div>
+  <details style="margin-top:1rem"><summary>Sample Instruction Categories</summary>
+  <div class="detail-body">
+    <div class="pill-list">
+      <span class="pill">docker</span><span class="pill">webpack</span><span class="pill">helm</span><span class="pill">react-redux</span>
+      <span class="pill">jest</span><span class="pill">cypress</span><span class="pill">azure</span><span class="pill">oracle</span>
+      <span class="pill">elastic-stack</span><span class="pill">chromadb</span><span class="pill">terraform</span><span class="pill">ldap</span>
+      <span class="pill">drupal-11</span><span class="pill">pfsense</span><span class="pill">nmap</span><span class="pill">togaf</span>
+      <span class="pill">archimate</span><span class="pill">sysml</span><span class="pill">dmn</span><span class="pill">sequence-diagram</span>
+    </div>
+  </div>
+  </details>
+</div>
+</section>
+
+<!-- ─── 6. PERSONAS ─── -->
+<section id="personas">
+<h2>🎭 Personas <span class="badge badge-teal">1</span></h2>
+<div class="card">
+  <p>Currently a single developer persona is defined. This is an area for growth — adding domain-specific personas (Security Analyst, Data Engineer, DevOps Lead, Product Manager) would enhance agent specialization.</p>
+  <table>
+    <thead><tr><th>Persona</th><th>File</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Developer</strong></td><td><code>developer.persona.md</code></td><td>General-purpose software developer persona</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:.75rem;padding:.5rem;background:rgba(249,226,175,.08);border-left:3px solid var(--bs-warning);border-radius:0 6px 6px 0">
+    <strong>💡 Recommendation:</strong> Create 5–10 domain-specific personas to better align agent behaviors with specialized roles (Security, Architecture, UX, Data, DevOps).
+  </div>
+</div>
+</section>
+
+<!-- ─── 7. SKILLS ─── -->
+<section id="skills">
+<h2>🔧 Skills <span class="badge badge-success">49</span></h2>
+<div class="card">
+  <p>Extensive skill library covering administration, communications, media, commerce, social, data, tools, and web integrations.</p>
+  <div class="card-grid" style="margin-top:.5rem">
+    <div class="card">
+      <h4>🔧 Admin &amp; Tools (12)</h4>
+      <div class="pill-list">
+        <span class="pill pill-blue">catalog</span><span class="pill pill-blue">manage-plan</span>
+        <span class="pill pill-blue">skill-creator</span><span class="pill pill-blue">tools-index</span>
+        <span class="pill pill-blue">tools-optimize</span><span class="pill pill-blue">scheduler</span>
+        <span class="pill pill-blue">audio</span><span class="pill pill-blue">data-converter</span>
+        <span class="pill pill-blue">image</span><span class="pill pill-blue">model</span>
+        <span class="pill pill-blue">video</span><span class="pill pill-blue">web-crawl</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>💬 Communications (11)</h4>
+      <div class="pill-list">
+        <span class="pill pill-green">calendly</span><span class="pill pill-green">email</span>
+        <span class="pill pill-green">mailchimp</span><span class="pill pill-green">outlook</span>
+        <span class="pill pill-green">salesforce</span><span class="pill pill-green">sharepoint</span>
+        <span class="pill pill-green">slack</span><span class="pill pill-green">teams</span>
+        <span class="pill pill-green">vonage</span><span class="pill pill-green">whatsapp</span>
+        <span class="pill pill-green">zoom</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>📱 Social (8)</h4>
+      <div class="pill-list">
+        <span class="pill pill-purple">discord</span><span class="pill pill-purple">facebook</span>
+        <span class="pill pill-purple">instagram</span><span class="pill pill-purple">meetup</span>
+        <span class="pill pill-purple">threads</span><span class="pill pill-purple">tiktok</span>
+        <span class="pill pill-purple">twitter</span><span class="pill pill-purple">youtube</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>🎨 Media &amp; Commerce (9)</h4>
+      <div class="pill-list">
+        <span class="pill pill-orange">canva</span><span class="pill pill-orange">capcut</span>
+        <span class="pill pill-orange">gamma</span><span class="pill pill-orange">gemini</span>
+        <span class="pill pill-orange">openai</span><span class="pill pill-orange">speechify</span>
+        <span class="pill pill-orange">amazon</span><span class="pill pill-orange">etsy</span>
+        <span class="pill pill-orange">woocommerce</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>🔗 Data &amp; Dev (9)</h4>
+      <div class="pill-list">
+        <span class="pill pill-teal">confluence</span><span class="pill pill-teal">jira</span>
+        <span class="pill pill-teal">kafka</span><span class="pill pill-teal">wordpress</span>
+        <span class="pill pill-teal">esp-manager</span><span class="pill pill-teal">translator</span>
+        <span class="pill pill-teal">rag-search</span><span class="pill pill-teal">tag-n-rag</span>
+        <span class="pill pill-teal">seo-report</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ─── 8. AGENTS ─── -->
+<section id="agents">
+<h2>🤖 Agents <span class="badge badge-info">22</span></h2>
+<div class="card">
+  <p>Specialized AI agents covering the full software development and business lifecycle.</p>
+  <div class="card-grid">
+    <div class="card">
+      <h4>🏗️ Engineering</h4>
+      <table>
+        <tr><td>Architect</td><td>System design &amp; patterns</td></tr>
+        <tr><td>Data Architect</td><td>Schema &amp; data flows</td></tr>
+        <tr><td>Data Engineer</td><td>ETL &amp; pipelines</td></tr>
+        <tr><td>DevOps</td><td>CI/CD &amp; infrastructure</td></tr>
+        <tr><td>Optimizer</td><td>Performance &amp; quality</td></tr>
+        <tr><td>Porting</td><td>Migration &amp; translation</td></tr>
+        <tr><td>Security</td><td>Vulnerability assessment</td></tr>
+        <tr><td>Tester</td><td>Test generation &amp; QA</td></tr>
+        <tr><td>Bug Fixer</td><td>Debugging specialist</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>💼 Business &amp; Creative</h4>
+      <table>
+        <tr><td>Base</td><td>Foundation behaviors</td></tr>
+        <tr><td>Brainstorm</td><td>Creative exploration</td></tr>
+        <tr><td>Collaborative Minds</td><td>Multi-perspective solving</td></tr>
+        <tr><td>Designer</td><td>UI/UX specialist</td></tr>
+        <tr><td>Documentation</td><td>Technical writing</td></tr>
+        <tr><td>Entrepreneur</td><td>Business strategy</td></tr>
+        <tr><td>Game Designer</td><td>Game mechanics</td></tr>
+        <tr><td>Leader Panel</td><td>Executive decisions</td></tr>
+        <tr><td>Marketing</td><td>Brand &amp; campaigns</td></tr>
+        <tr><td>Orchestrator</td><td>Task decomposition</td></tr>
+        <tr><td>Patent Reviewer</td><td>IP analysis</td></tr>
+        <tr><td>Planner</td><td>Project planning</td></tr>
+        <tr><td>Product Design</td><td>User-centered product</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ─── 9. PROMPTS ─── -->
+<section id="prompts">
+<h2>💬 Prompts <span class="badge badge-purple">49</span></h2>
+<div class="card">
+  <p>Workflow prompts organized by lifecycle phase.</p>
+  <div class="card-grid">
+    <div class="card">
+      <h4>🏗️ Build (14)</h4>
+      <div class="pill-list">
+        <span class="pill pill-blue">architecture</span><span class="pill pill-blue">business-plan</span>
+        <span class="pill pill-blue">design</span><span class="pill pill-blue">gtm-strategy</span>
+        <span class="pill pill-blue">launch-plan</span><span class="pill pill-blue">lean-canvas</span>
+        <span class="pill pill-blue">market-research</span><span class="pill pill-blue">marketing-strategy</span>
+        <span class="pill pill-blue">pitch-deck</span><span class="pill pill-blue">plan</span>
+        <span class="pill pill-blue">requirements</span><span class="pill pill-blue">resume</span>
+        <span class="pill pill-blue">scaffold</span><span class="pill pill-blue">unit-tests</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>🚀 Run &amp; Admin (13)</h4>
+      <div class="pill-list">
+        <span class="pill pill-green">run</span><span class="pill pill-green">run-next</span>
+        <span class="pill pill-green">run-flow</span><span class="pill pill-green">run-optimize</span>
+        <span class="pill pill-green">run-port</span><span class="pill pill-green">run-refactor</span>
+        <span class="pill pill-green">admin-assess</span><span class="pill pill-green">admin-bench</span>
+        <span class="pill pill-green">admin-health-check</span><span class="pill pill-green">admin-index</span>
+        <span class="pill pill-green">admin-repair</span><span class="pill pill-green">scan-project</span>
+        <span class="pill pill-green">document</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>📥 Add &amp; Grow (12)</h4>
+      <div class="pill-list">
+        <span class="pill pill-purple">add-agent</span><span class="pill pill-purple">add-feature</span>
+        <span class="pill pill-purple">add-flow</span><span class="pill pill-purple">add-instructions</span>
+        <span class="pill pill-purple">add-personas</span><span class="pill pill-purple">add-prompt</span>
+        <span class="pill pill-purple">add-skill</span><span class="pill pill-purple">add-all-glean</span>
+        <span class="pill pill-purple">grow-evolve</span><span class="pill pill-purple">grow-innovate</span>
+        <span class="pill pill-purple">grow-learn</span><span class="pill pill-purple">ideation</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>✅ QA &amp; Misc (10)</h4>
+      <div class="pill-list">
+        <span class="pill pill-orange">qa-audit</span><span class="pill pill-orange">qa-validate</span>
+        <span class="pill pill-orange">report-seo</span><span class="pill pill-orange">test-plan</span>
+        <span class="pill pill-orange">requirements-extract</span><span class="pill pill-orange">plan-refine</span>
+        <span class="pill pill-orange">revenue-projections</span><span class="pill pill-orange">business-dev</span>
+        <span class="pill pill-orange">registry</span><span class="pill pill-orange">intake</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ─── 10. AI COMMAND CENTER ─── -->
+<section id="aicc">
+<h2>⚡ AI Command Center Features</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-primary)">90</div><div class="label">Commands</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">43</div><div class="label">Services</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-highlight)">15</div><div class="label">MCP Tools</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-purple)">5</div><div class="label">Integrations</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-teal)">3</div><div class="label">WebView Panels</div></div>
+  </div>
+  <h4 style="margin-top:1rem">Service Layer Highlights</h4>
+  <table>
+    <thead><tr><th>Service</th><th>Lines</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>PipelineEngine</td><td>1,326</td><td>Multi-stage workflow execution</td></tr>
+      <tr><td>IdeaAnalytics</td><td>1,229</td><td>Ideation metrics &amp; scoring</td></tr>
+      <tr><td>SmartContextEngine</td><td>1,133</td><td>Intelligent file context resolution</td></tr>
+      <tr><td>GitBranchLinker</td><td>1,080</td><td>Branch-to-plan-item linking</td></tr>
+      <tr><td>VelocityEngine</td><td>1,063</td><td>Sprint velocity tracking</td></tr>
+      <tr><td>NlPlanningChatHandler</td><td>1,013</td><td>Natural language planning</td></tr>
+      <tr><td>OfflineQueue</td><td>933</td><td>Offline-first operation queue</td></tr>
+      <tr><td>KnowledgeBase</td><td>908</td><td>Persistent knowledge store</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 11. SECURITY SCAN ─── -->
+<section id="security">
+<h2>🔒 Security Scan</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Finding</th><th>Severity</th><th>Details</th><th>Recommendation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>unsafe-inline</code> in CSP</td>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>7 files use <code>'unsafe-inline'</code> for style-src. Catalog UI also uses it for script-src.</td>
+        <td>Use nonce-based style loading. Already nonce-based for scripts in main panels.</td>
+      </tr>
+      <tr>
+        <td><code>child_process</code> usage</td>
+        <td><span class="severity-low">Low</span></td>
+        <td>3 files import <code>child_process</code>: securityManager.ts (execFile for SSL), aiKitManager.ts (execFile for git), mcpHandlers.ts (execFileSync for port check).</td>
+        <td>All use <code>execFile</code>/<code>execFileSync</code> (safer than exec). ✅ Good practice.</td>
+      </tr>
+      <tr>
+        <td>Hardcoded secrets</td>
+        <td><span class="severity-info">None</span></td>
+        <td>No hardcoded passwords or API keys found in source.</td>
+        <td>✅ Using SecretStorage for API tokens. Good.</td>
+      </tr>
+      <tr>
+        <td>RegExp from user input</td>
+        <td><span class="severity-low">Low</span></td>
+        <td>6 <code>new RegExp()</code> usages. Most use controlled patterns (ID prefixes, known patterns).</td>
+        <td>Validate intakeManager.ts L310 — field pattern from config may need sanitization.</td>
+      </tr>
+      <tr>
+        <td>MCP HTTP Auth</td>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>HTTP transport supports bearer/apikey auth. Auth is optional by default.</td>
+        <td>Document that production MCP should enable auth + SSL. Add warning on startup if auth disabled.</td>
+      </tr>
+      <tr>
+        <td>Connect-src policy</td>
+        <td><span class="severity-low">Low</span></td>
+        <td>CSP allows <code>http://localhost:*</code> and <code>ws://localhost:*</code> for local MCP.</td>
+        <td>Acceptable for local development. Consider restricting port range.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 12. PERFORMANCE ─── -->
+<section id="performance">
+<h2>⚡ Performance Analysis</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-warning)">311</div><div class="label">Sync I/O Calls</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">82</div><div class="label">Debounce/setTimeout</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-info)">176</div><div class="label">Dispose/Cleanup Calls</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-danger)">29</div><div class="label">Files &gt; 500 Lines</div></div>
+  </div>
+
+  <table style="margin-top:1rem">
+    <thead><tr><th>Finding</th><th>Severity</th><th>Details</th><th>Recommendation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Sync file I/O in hot paths</td>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>311 sync I/O calls (existsSync, readFileSync, writeFileSync, etc.). Some in intakeManager, chatParticipant, configManager.</td>
+        <td>Migrate readFileSync/writeFileSync in intakeManager.ts and chatParticipant.ts to async equivalents.</td>
+      </tr>
+      <tr>
+        <td>Large source files</td>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>29 files exceed 500 lines. Top: mcpServer.ts (1,629), pipelineEngine.ts (1,326), confluenceClient.ts (1,255).</td>
+        <td>Consider splitting mcpServer.ts into handler modules. Extract confluenceClient methods into separate files.</td>
+      </tr>
+      <tr>
+        <td>Event listener management</td>
+        <td><span class="severity-low">Low</span></td>
+        <td>176 dispose/cleanup references found. VS Code disposable pattern used consistently.</td>
+        <td>✅ Good pattern. Continue using subscription arrays for cleanup.</td>
+      </tr>
+      <tr>
+        <td>Debounce usage</td>
+        <td><span class="severity-low">Low</span></td>
+        <td>82 debounce/setTimeout references. SmartContextEngine has debounce (500ms).</td>
+        <td>✅ Adequate. Verify PlanningManager auto-save interval (30ms seems very aggressive — likely should be 30,000ms).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 13. CODE QUALITY ─── -->
+<section id="quality">
+<h2>📊 Code Quality</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-warning)">228</div><div class="label"><code>: any</code> usages</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">10</div><div class="label">TODO/FIXME</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-info)">17</div><div class="label">console.log</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-primary)">3,207</div><div class="label">JSDoc Blocks</div></div>
+  </div>
+
+  <table style="margin-top:1rem">
+    <thead><tr><th>Metric</th><th>Value</th><th>Grade</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>TypeScript Strict Mode</td><td>Enabled</td><td><span class="badge badge-success">✅</span></td><td>strict, noUnusedLocals, noImplicitReturns, noFallthroughCases</td></tr>
+      <tr><td>Type Any Usage</td><td>228 / ~4,641</td><td><span class="badge badge-primary">B+</span></td><td>~5% untyped. Target &lt;100 for A grade.</td></tr>
+      <tr><td>Error Handling Ratio</td><td>738 / 1,026</td><td><span class="badge badge-success">A</span></td><td>72% of async functions have try-catch. Strong.</td></tr>
+      <tr><td>Console.log vs Logger</td><td>17 console / winston</td><td><span class="badge badge-success">A</span></td><td>Very few raw console.log. Winston logger is primary.</td></tr>
+      <tr><td>TODO/FIXME Count</td><td>10</td><td><span class="badge badge-success">A</span></td><td>Minimal tech debt markers. Clean codebase.</td></tr>
+      <tr><td>Compilation</td><td>Zero errors</td><td><span class="badge badge-success">✅</span></td><td><code>npx tsc --noEmit</code> passes cleanly.</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 14. DOCUMENTATION ─── -->
+<section id="docs">
+<h2>📖 Documentation &amp; Logging</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="stat-card card"><div class="value" style="color:var(--bs-primary)">18</div><div class="label">Doc Files</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-success)">734</div><div class="label">README Lines</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-highlight)">69%</div><div class="label">JSDoc Coverage</div></div>
+    <div class="stat-card card"><div class="value" style="color:var(--bs-purple)">6</div><div class="label">ADRs</div></div>
+  </div>
+  <table style="margin-top:1rem">
+    <thead><tr><th>Document</th><th>Status</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>README.md</td><td><span class="badge badge-success">Complete</span></td><td>734 lines — install, usage, features, API, examples</td></tr>
+      <tr><td>User Guide</td><td><span class="badge badge-success">Complete</span></td><td>docs/USER_GUIDE.md — comprehensive usage docs</td></tr>
+      <tr><td>Quick Reference</td><td><span class="badge badge-success">Complete</span></td><td>QUICK_REFERENCE.md — command cheatsheet</td></tr>
+      <tr><td>Architecture Decision Records</td><td><span class="badge badge-success">6 ADRs</span></td><td>Modular handlers, MCP transport, CSP nonce, PLAN.json, execFile</td></tr>
+      <tr><td>MCP Documentation</td><td><span class="badge badge-success">Complete</span></td><td>Overview, Setup, Quick Start, Client Connections</td></tr>
+      <tr><td>Configuration Guide</td><td><span class="badge badge-success">Complete</span></td><td>Settings, migration, presets</td></tr>
+      <tr><td>API Documentation</td><td><span class="badge badge-warning">Partial</span></td><td>Swagger UI available but MCP tool docs could be richer</td></tr>
+      <tr><td>Inline JSDoc</td><td><span class="badge badge-primary">69%</span></td><td>3,207 / ~4,641 — good but room for improvement</td></tr>
+    </tbody>
+  </table>
+  <h4 style="margin-top:1rem">Logging</h4>
+  <p>Winston logger with structured JSON output. Component-tagged log entries throughout. Only 17 raw <code>console.log</code> statements (mostly in test/webview code).</p>
+</div>
+</section>
+
+<!-- ─── 15. ISSUES ─── -->
+<section id="issues">
+<h2>🐛 Issues &amp; Technical Debt</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Priority</th><th>Issue</th><th>Location</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="severity-high">High</span></td>
+        <td>PlanningManager auto-save interval is 30ms</td>
+        <td>Extension Host logs</td>
+        <td>Likely should be 30,000ms. Constant writes could cause I/O pressure.</td>
+      </tr>
+      <tr>
+        <td><span class="severity-high">High</span></td>
+        <td>Schema validator fails on startup</td>
+        <td>Extension Host log: ENOENT panel.v1.schema.json</td>
+        <td>Schema file not bundled in VSIX. Non-blocking but produces error log.</td>
+      </tr>
+      <tr>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>Invalid tab configurations</td>
+        <td>Agent_Status.tab.yaml, All_Satus.tab.yaml</td>
+        <td>Warning on startup. "All_Satus" appears to be a typo for "All_Status".</td>
+      </tr>
+      <tr>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>Codicon font URI template not resolved</td>
+        <td>Secondary panel webview</td>
+        <td>{{codiconFontUri}} template variable not replaced — 404 on font load.</td>
+      </tr>
+      <tr>
+        <td><span class="severity-medium">Medium</span></td>
+        <td>228 <code>: any</code> type annotations</td>
+        <td>Across src/</td>
+        <td>Reduces type safety. Target reducing to &lt;100.</td>
+      </tr>
+      <tr>
+        <td><span class="severity-low">Low</span></td>
+        <td>Sync I/O in chatParticipant.ts and intakeManager.ts</td>
+        <td>chatParticipant.ts:172, intakeManager.ts:197</td>
+        <td>Could block extension host on large files.</td>
+      </tr>
+      <tr>
+        <td><span class="severity-low">Low</span></td>
+        <td>mcpServer.ts at 1,629 lines</td>
+        <td>src/mcp/mcpServer.ts</td>
+        <td>Consider decomposing into route handlers and middleware.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 16. INNOVATION ─── -->
+<section id="innovation">
+<h2>💡 Innovation Suggestions</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>#</th><th>Idea</th><th>Impact</th><th>Effort</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>AI-Powered Sprint Planning</td><td><span class="badge badge-success">High</span></td><td><span class="badge badge-warning">Medium</span></td><td>Use LLM to auto-suggest story point estimates and sprint assignments based on velocity data from VelocityEngine.</td></tr>
+      <tr><td>2</td><td>Multi-Workspace MCP Federation</td><td><span class="badge badge-success">High</span></td><td><span class="badge badge-danger">High</span></td><td>Extend LeaderElection to enable cross-workspace MCP tool sharing and distributed planning.</td></tr>
+      <tr><td>3</td><td>Visual Pipeline Builder</td><td><span class="badge badge-primary">Medium</span></td><td><span class="badge badge-warning">Medium</span></td><td>Drag-and-drop pipeline stage editor in WebView, leveraging existing PipelineEngine.</td></tr>
+      <tr><td>4</td><td>Automatic Persona Generation</td><td><span class="badge badge-primary">Medium</span></td><td><span class="badge badge-success">Low</span></td><td>Analyze project context to auto-generate domain-specific personas from the 1 existing persona.</td></tr>
+      <tr><td>5</td><td>Skill Marketplace</td><td><span class="badge badge-success">High</span></td><td><span class="badge badge-danger">High</span></td><td>Community-driven skill sharing platform. Leverage existing AIKitManager and catalog infrastructure.</td></tr>
+      <tr><td>6</td><td>Real-Time Collaboration</td><td><span class="badge badge-success">High</span></td><td><span class="badge badge-danger">High</span></td><td>Multi-user collaborative planning using CollaborativeEditing service foundation already in place.</td></tr>
+      <tr><td>7</td><td>Smart Conflict Resolution UI</td><td><span class="badge badge-primary">Medium</span></td><td><span class="badge badge-warning">Medium</span></td><td>Visual diff-merge UI for Jira sync conflicts with AI-suggested resolutions.</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 17. COMPETITIVE ─── -->
+<section id="competitive">
+<h2>🏆 Competitive Analysis</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Feature</th><th>AI Command Center</th><th>Linear</th><th>Jira + Plugins</th><th>GitHub Projects</th></tr></thead>
+    <tbody>
+      <tr><td>In-IDE Planning</td><td><span class="badge badge-success">✅ Native</span></td><td>❌ Web only</td><td>❌ Web only</td><td>❌ Web only</td></tr>
+      <tr><td>MCP AI Integration</td><td><span class="badge badge-success">✅ 15 tools</span></td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>AI Agent Ecosystem</td><td><span class="badge badge-success">✅ 22 agents</span></td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>Skill Library</td><td><span class="badge badge-success">✅ 49 skills</span></td><td>❌</td><td>Marketplace</td><td>❌</td></tr>
+      <tr><td>Jira Sync</td><td><span class="badge badge-success">✅ Bidirectional</span></td><td>Import only</td><td>✅ Native</td><td>❌</td></tr>
+      <tr><td>Offline Support</td><td><span class="badge badge-success">✅ OfflineQueue</span></td><td>Limited</td><td>❌</td><td>❌</td></tr>
+      <tr><td>Natural Language Planning</td><td><span class="badge badge-success">✅ NL Parser</span></td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>Free / Open Source</td><td><span class="badge badge-success">✅ MIT</span></td><td>Freemium</td><td>Paid</td><td>Free (limited)</td></tr>
+    </tbody>
+  </table>
+  <h4 style="margin-top:1rem">Key Differentiators</h4>
+  <div class="pill-list">
+    <span class="pill pill-green">Only IDE-native AI-powered planning tool</span>
+    <span class="pill pill-blue">Largest open-source AI agent ecosystem for VS Code</span>
+    <span class="pill pill-purple">MCP-first architecture</span>
+    <span class="pill pill-orange">274 instruction sets out-of-the-box</span>
+    <span class="pill pill-teal">Offline-first with sync</span>
+  </div>
+</div>
+</section>
+
+<!-- ─── 18. PITCH DECK ─── -->
+<section id="pitch">
+<h2>📈 Pitch Deck</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="card" style="border-left:3px solid var(--bs-primary)">
+      <h4>🎯 Problem</h4>
+      <p>Developers context-switch between IDE, browser-based project tools, and AI assistants — losing flow state and productivity.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--bs-success)">
+      <h4>💡 Solution</h4>
+      <p>AI Command Center brings planning, AI integration, and service orchestration directly into VS Code — zero context switching.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--bs-highlight)">
+      <h4>🌍 Market</h4>
+      <p><strong>TAM:</strong> 73M developers worldwide. <strong>SAM:</strong> 30M VS Code users. <strong>SOM:</strong> 2M AI-forward dev teams.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--bs-purple)">
+      <h4>📊 Traction</h4>
+      <p>395 AI resources (22 agents, 49 skills, 274 instructions, 49 prompts). 90 commands. 5 integrations. Active development with v2.0.16.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--bs-teal)">
+      <h4>🏆 Moat</h4>
+      <p>Deepest AI-ley kit ecosystem. MCP-first architecture. Growing instruction/skill library with community contribution model.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--bs-pink)">
+      <h4>💰 Model</h4>
+      <p><strong>Open Core:</strong> Free MIT-licensed extension + Premium skills/integrations + Enterprise features (SSO, audit, SLA).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ─── 19. GO-TO-MARKET ─── -->
+<section id="gtm">
+<h2>🚀 Go-to-Market Strategy</h2>
+<div class="card">
+  <div class="card-grid">
+    <div class="card">
+      <h4>Phase 1: Foundation (Q1)</h4>
+      <ul>
+        <li>Publish to VS Code Marketplace</li>
+        <li>Write 5 blog posts on AI-powered planning</li>
+        <li>Launch GitHub Discussions community</li>
+        <li>Create 3 tutorial videos</li>
+        <li>Target: 1,000 installs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Phase 2: Growth (Q2)</h4>
+      <ul>
+        <li>Launch skill marketplace (community contributions)</li>
+        <li>Partnerships with AI tool vendors</li>
+        <li>Conference talks (VS Code Day, AI DevTools)</li>
+        <li>Community skill creation program</li>
+        <li>Target: 10,000 installs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Phase 3: Scale (Q3-Q4)</h4>
+      <ul>
+        <li>Enterprise tier with SSO, audit logs, RBAC</li>
+        <li>Premium skill/integration bundles</li>
+        <li>Managed MCP hosting service</li>
+        <li>Partnership with Atlassian, GitHub</li>
+        <li>Target: 50,000 installs</li>
+      </ul>
+    </div>
+  </div>
+  <h4 style="margin-top:1rem">Pricing Strategy</h4>
+  <table>
+    <thead><tr><th>Tier</th><th>Price</th><th>Features</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Community</strong></td><td>Free</td><td>Full extension, 22 agents, planning, MCP, basic integrations</td></tr>
+      <tr><td><strong>Pro</strong></td><td>$9/mo</td><td>Premium skills, priority support, advanced analytics, custom personas</td></tr>
+      <tr><td><strong>Enterprise</strong></td><td>$29/seat/mo</td><td>SSO, RBAC, audit logs, SLA, managed MCP, dedicated support</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ─── 20. PRIORITY ACTIONS ─── -->
+<section id="actions">
+<h2>🎯 Priority Actions</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>#</th><th>Priority</th><th>Action</th><th>Category</th><th>Effort</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><span class="severity-critical">Critical</span></td><td>Fix PlanningManager auto-save interval (30ms → 30000ms)</td><td>Performance</td><td>5 min</td><td>High</td></tr>
+      <tr><td>2</td><td><span class="severity-high">High</span></td><td>Bundle panel.v1.schema.json in VSIX or handle missing gracefully</td><td>Bug Fix</td><td>30 min</td><td>Medium</td></tr>
+      <tr><td>3</td><td><span class="severity-high">High</span></td><td>Fix {{codiconFontUri}} template variable in secondary panel</td><td>Bug Fix</td><td>30 min</td><td>Medium</td></tr>
+      <tr><td>4</td><td><span class="severity-high">High</span></td><td>Fix All_Satus.tab.yaml typo → All_Status.tab.yaml</td><td>Bug Fix</td><td>5 min</td><td>Low</td></tr>
+      <tr><td>5</td><td><span class="severity-medium">Medium</span></td><td>Reduce <code>: any</code> usages from 228 to &lt;100</td><td>Type Safety</td><td>4-8 hrs</td><td>High</td></tr>
+      <tr><td>6</td><td><span class="severity-medium">Medium</span></td><td>Migrate sync I/O to async in chatParticipant.ts &amp; intakeManager.ts</td><td>Performance</td><td>2-3 hrs</td><td>Medium</td></tr>
+      <tr><td>7</td><td><span class="severity-medium">Medium</span></td><td>Split mcpServer.ts (1,629 lines) into handler modules</td><td>Maintainability</td><td>3-4 hrs</td><td>Medium</td></tr>
+      <tr><td>8</td><td><span class="severity-medium">Medium</span></td><td>Add MCP auth-disabled warning on startup</td><td>Security</td><td>30 min</td><td>Medium</td></tr>
+      <tr><td>9</td><td><span class="severity-low">Low</span></td><td>Create 5-10 domain-specific personas</td><td>AI Ecosystem</td><td>2-3 hrs</td><td>Medium</td></tr>
+      <tr><td>10</td><td><span class="severity-low">Low</span></td><td>Increase JSDoc coverage from 69% to 85%</td><td>Documentation</td><td>4-6 hrs</td><td>Low</td></tr>
+      <tr><td>11</td><td><span class="severity-low">Low</span></td><td>Replace remaining 17 console.log with Winston logger</td><td>Quality</td><td>1 hr</td><td>Low</td></tr>
+      <tr><td>12</td><td><span class="severity-low">Low</span></td><td>Publish to VS Code Marketplace</td><td>Distribution</td><td>2-3 hrs</td><td>High</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+<script>
+// ─── Sidebar active state ───
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.sidebar a');
+  const sections = document.querySelectorAll('section[id]');
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.sidebar a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -80% 0px' });
+  
+  sections.forEach(s => observer.observe(s));
+});
+</script>
+
+<!-- ─── Mermaid.js (CDN, v10) ─── -->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ 
+  startOnLoad: true, 
+  theme: 'dark',
+  themeVariables: {
+    primaryColor: '#89b4fa',
+    primaryTextColor: '#cdd6f4',
+    primaryBorderColor: '#45475a',
+    lineColor: '#a6adc8',
+    secondaryColor: '#313244',
+    tertiaryColor: '#181825',
+    background: '#1e1e2e',
+    mainBkg: '#313244',
+    nodeBorder: '#45475a',
+    clusterBkg: '#181825',
+    clusterBorder: '#45475a',
+    titleColor: '#cdd6f4',
+    edgeLabelBackground: '#313244'
+  }
+});
+</script>
+
+</body>
+</html>

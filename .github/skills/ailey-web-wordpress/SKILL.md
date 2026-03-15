@@ -1,3 +1,18 @@
+---
+id: ailey-web-wordpress
+name: WordPress Integration
+description: Comprehensive WordPress integration for managing WordPress.com and self-hosted sites with automatic tier detection, content management, media handling, plugin/theme management, user administration, and SEO/analytics.
+keywords:
+  - wordpress
+  - cms
+  - blog
+  - website
+  - content
+  - plugin
+  - theme
+  - seo
+---
+
 # WordPress Integration for AI-ley
 
 **Skill ID:** ailey-web-wordpress  

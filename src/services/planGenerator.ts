@@ -5,6 +5,7 @@
 
 import * as vscode from 'vscode';
 import * as path from 'path';
+import * as fs from 'fs';
 import * as yaml from 'js-yaml';
 import {
   PlanDocument,
@@ -15,6 +16,7 @@ import {
   PlanMetadata
 } from '../types/plan';
 import { Logger } from '../logger';
+import { PlanArchivalService } from './planArchivalService';
 
 const logger = Logger.getInstance();
 
@@ -23,6 +25,12 @@ export class PlanGenerator {
   private planDocument: PlanDocument | null = null;
   private workspaceRoot: string = '';
   private fileWatcher: vscode.FileSystemWatcher | null = null;
+
+  /**
+   * R-ARCH-020: In-memory Map<string, PlanItem> index providing O(1) lookup by ID.
+   * Rebuilt from PLAN.json on activation (loadPlanDocument / generatePlan).
+   */
+  private itemIndex: Map<string, PlanItem> = new Map();
 
   private constructor() {}
 
@@ -117,7 +125,7 @@ export class PlanGenerator {
     // Add projectNumber to each item using projectCode (e.g., AICC-0001)
     if (metadata.projectCode) {
       let counter = 1;
-      for (const item of items) {
+      for (const _item of items) {
         // Project number is displayed using metadata.projectCode + item.id
         counter++;
       }
@@ -132,6 +140,9 @@ export class PlanGenerator {
       statusCounts,
       items
     };
+    
+    // R-ARCH-020: Rebuild index
+    this.rebuildIndex();
     
     // Save PLAN.json
     await this.savePlanDocument();
@@ -368,13 +379,14 @@ export class PlanGenerator {
   /**
    * Load PLAN.json from disk
    */
-  private async loadPlanDocument(): Promise<void> {
+  public async loadPlanDocument(): Promise<void> {
     const planPath = path.join(this.workspaceRoot, '.project', 'PLAN.json');
     
     try {
       const content = await this.readFile(planPath);
       this.planDocument = JSON.parse(content);
-      logger.info(`PLAN.json loaded with ${this.planDocument?.items.length || 0} items`);
+      this.rebuildIndex();
+      logger.info(`PLAN.json loaded with ${this.planDocument?.items.length || 0} items (index: ${this.itemIndex.size} entries)`);
     } catch (error) {
       logger.warn('PLAN.json not found, generating from source files', { error: String(error) });
       // Only generate if PLAN.json doesn't exist
@@ -387,18 +399,34 @@ export class PlanGenerator {
    */
   /**
    * Save plan document to file (public for external updates)
+   * Uses atomic write: writes to .tmp then renames, with .bak backup
    */
   public async savePlanDocument(): Promise<void> {
     if (!this.planDocument) return;
     
     const planPath = path.join(this.workspaceRoot, '.project', 'PLAN.json');
+    const tmpPath = planPath + '.tmp';
+    const bakPath = planPath + '.bak';
     const content = JSON.stringify(this.planDocument, null, 2);
     
     try {
-      await vscode.workspace.fs.writeFile(
-        vscode.Uri.file(planPath),
-        Buffer.from(content, 'utf-8')
-      );
+      // Ensure directory exists
+      const dir = path.dirname(planPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      // Create backup if file exists
+      if (fs.existsSync(planPath)) {
+        fs.copyFileSync(planPath, bakPath);
+      }
+
+      // Write to temp file first
+      fs.writeFileSync(tmpPath, content, 'utf-8');
+
+      // Atomic rename
+      fs.renameSync(tmpPath, planPath);
+
       logger.info(`PLAN.json saved with ${this.planDocument.items.length} items`);
     } catch (error) {
       logger.error('Error saving PLAN.json', { error: String(error) });
@@ -406,8 +434,91 @@ export class PlanGenerator {
   }
 
   /**
+   * Update a plan item by ID.
+   * If the status transitions to DONE or SKIP, the item is automatically archived to PLAN-HISTORY.json.
+   */
+  public async updatePlanItem(
+    id: string,
+    updates: Partial<PlanItem>
+  ): Promise<PlanItem | undefined> {
+    if (!this.planDocument) return undefined;
+
+    // R-ARCH-020: O(1) lookup via Map index
+    const item = this.itemIndex.get(id);
+    if (!item) {
+      logger.warn(`updatePlanItem: item not found: ${id}`);
+      return undefined;
+    }
+    const previousStatus = item.status;
+
+    // Apply updates
+    Object.assign(item, updates);
+
+    // Update metadata timestamp
+    if (item.metadata) {
+      item.metadata.updatedAt = new Date().toISOString();
+    }
+
+    // Auto-archive on terminal status transitions
+    if (
+      updates.status &&
+      (updates.status === 'DONE' || updates.status === 'SKIP') &&
+      previousStatus !== updates.status
+    ) {
+      try {
+        const archivalService = PlanArchivalService.getInstance();
+        archivalService.initialize(this.workspaceRoot);
+        await archivalService.archiveToHistory(item, 'status-transition', previousStatus);
+        logger.info(`Item ${id} archived to history on status transition: ${previousStatus} → ${updates.status}`);
+      } catch (error) {
+        logger.error(`Failed to archive item ${id} to history`, { error: String(error) });
+      }
+    }
+
+    // Recalculate status counts
+    this.planDocument.statusCounts = this.calculateStatusCounts(this.planDocument.items);
+
+    // Save plan
+    await this.savePlanDocument();
+
+    return item;
+  }
+
+  /**
+   * Create a new plan item and add it to the plan document.
+   */
+  public async createPlanItem(item: PlanItem): Promise<PlanItem> {
+    if (!this.planDocument) {
+      throw new Error('Plan document not loaded');
+    }
+
+    // Set metadata defaults
+    if (!item.metadata) {
+      item.metadata = {
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        createdBy: 'system',
+        updatedBy: 'system'
+      };
+    }
+
+    this.planDocument.items.push(item);
+    this.itemIndex.set(item.id, item);
+
+    // Recalculate status counts
+    this.planDocument.statusCounts = this.calculateStatusCounts(this.planDocument.items);
+
+    await this.savePlanDocument();
+
+    logger.info(`Plan item created: ${item.id}`, { type: item.type, status: item.status });
+
+    return item;
+  }
+
+  /**
    * Set up file watcher for auto-regeneration
    */
+  // @ts-ignore TS6133: kept for future use (see constructor)
   private setupFileWatcher(): void {
     const epicsPattern = new vscode.RelativePattern(
       this.workspaceRoot,
@@ -495,8 +606,23 @@ export class PlanGenerator {
   /**
    * Get a single item by ID
    */
+  /**
+   * R-ARCH-020: O(1) item lookup by ID via in-memory Map index
+   */
   public getItem(id: string): PlanItem | undefined {
-    return this.planDocument?.items.find(item => item.id === id);
+    return this.itemIndex.get(id);
+  }
+
+  /**
+   * R-ARCH-020: Rebuild the in-memory Map<string, PlanItem> index from planDocument.items
+   */
+  private rebuildIndex(): void {
+    this.itemIndex.clear();
+    if (this.planDocument?.items) {
+      for (const item of this.planDocument.items) {
+        this.itemIndex.set(item.id, item);
+      }
+    }
   }
 
   /**
@@ -514,5 +640,6 @@ export class PlanGenerator {
       this.fileWatcher.dispose();
     }
     this.planDocument = null;
+    this.itemIndex.clear();
   }
 }

@@ -1,4 +1,5 @@
 import { IStory, StoryStatus, Priority, IComment, ItemType, IItemLink } from '../types';
+import { getIdPattern, getIdFormatDescription } from '../../utils/idPrefix';
 
 /**
  * Story entity class with methods for creation, validation, and persistence.
@@ -87,8 +88,8 @@ export class Story implements IStory {
             errors.push('Story title must be ≤100 characters');
         }
 
-        if (!this.id || !/^ARMOIN-\d{3}$/.test(this.id)) {
-            errors.push('Story ID must match pattern ARMOIN-XXX');
+        if (!this.id || !getIdPattern().test(this.id)) {
+            errors.push(`Story ID must match pattern ${getIdFormatDescription()}`);
         }
 
         return errors;

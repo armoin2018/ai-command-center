@@ -49,18 +49,11 @@ npm install
 
 FFmpeg is automatically installed via npm packages. For manual installation:
 
-**macOS**:
-```bash
-brew install ffmpeg
-```
-
-**Ubuntu/Debian**:
-```bash
-sudo apt install ffmpeg
-```
-
-**Windows**:
-Download from https://ffmpeg.org/download.html
+| Platform | Install Command |
+|----------|----------------|
+| **macOS** | `brew install ffmpeg` |
+| **Linux** | `sudo apt install ffmpeg` (Ubuntu/Debian) or `sudo dnf install ffmpeg` (Fedora) |
+| **Windows** | `winget install Gyan.FFmpeg` or `choco install ffmpeg` |
 
 ## Quick Start
 
@@ -1214,7 +1207,7 @@ npm run video convert -i input.mp4 -o output.mp4 \
 
 ---
 
-version: 1.0.0
-updated: 2026-02-10
-reviewed: 2026-02-10
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.8

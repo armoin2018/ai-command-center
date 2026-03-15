@@ -119,7 +119,16 @@ export class ChatParticipantManager implements vscode.Disposable {
             return;
         }
 
-        const files = fs.readdirSync(agentsPath);
+        let files: string[];
+        try {
+            files = fs.readdirSync(agentsPath);
+        } catch (error) {
+            this.logger.error('Failed to read agents directory', {
+                agentsPath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            return;
+        }
         const agentFiles = files.filter(f => f.endsWith('.agent.md'));
 
         this.logger.info('Loading agent definitions', {
@@ -158,7 +167,12 @@ export class ChatParticipantManager implements vscode.Disposable {
      * Parse an agent definition file
      */
     private async parseAgentDefinition(filePath: string): Promise<AgentDefinition> {
-        const content = fs.readFileSync(filePath, 'utf8');
+        let content: string;
+        try {
+            content = fs.readFileSync(filePath, 'utf8');
+        } catch (error) {
+            throw new Error(`Failed to read agent definition at ${filePath}: ${error instanceof Error ? error.message : String(error)}`);
+        }
         
         // Parse frontmatter (YAML between ---\n and \n---)
         const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);

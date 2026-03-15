@@ -38,7 +38,13 @@ The RAG Search skill enables powerful semantic search across RAG collections cre
 ```bash
 cd .github/skills/ailey-tools-rag-search
 npm install
+
+# macOS / Linux
 ./install.sh
+
+# Windows (PowerShell) — run the setup script via bash or manually:
+bash install.sh
+# Or if Git Bash / WSL is unavailable, run: npm run setup
 ```
 
 ## Configuration
@@ -936,8 +942,8 @@ interface SearchResult {
 - **Tag-n-RAG Skill**: [.github/skills/ailey-tools-tag-n-rag](../ailey-tools-tag-n-rag)
 
 ---
-version: 1.0.0
-updated: 2026-02-01
-reviewed: 2026-02-01
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.6
 ---

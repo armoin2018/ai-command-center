@@ -88,6 +88,8 @@ npm install
 npm run build
 ```
 
+> **Cross-Platform Note**: All dependencies install via npm and work on macOS, Linux, and Windows. On some Linux distributions, Puppeteer (used for web image scraping) may require additional system libraries — see [Puppeteer troubleshooting](https://pptr.dev/troubleshooting).
+
 ### Convert Image Format
 
 ```bash
@@ -713,8 +715,8 @@ The tool provides clear error messages:
 **Score**: 4.5
 
 ---
-version: 1.0.0
-updated: 2026-01-30
-reviewed: 2026-01-30
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.2
 ---

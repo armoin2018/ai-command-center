@@ -471,7 +471,7 @@ export class SyncEngine extends EventEmitter {
                     itemType,
                     itemId: localId,
                     jiraKey: issue.key,
-                    localVersion: await this.getLocalItem(localId, itemType),
+                    localVersion: await this.getLocalItem(localId, itemType) as SyncConflict['localVersion'],
                     remoteVersion: issue,
                     conflictingFields: ['summary', 'status', 'priority'],
                     timestamp: new Date().toISOString()
@@ -515,7 +515,7 @@ export class SyncEngine extends EventEmitter {
                 title: issue.fields.summary,
                 description: this.extractDescription(issue.fields.description),
                 priority: this.mapJiraPriority(issue.fields.priority?.name),
-                estimatedHours: issue.fields.customfield_10016 || 0
+                estimatedHours: (issue.fields.customfield_10016 as number) || 0
             });
             this.createMapping(story.id, issue.key, 'story', this.calculateHash(story), parentMapping.aiccId);
         } else if (itemType === 'task') {
@@ -574,7 +574,7 @@ export class SyncEngine extends EventEmitter {
                 title: issue.fields.summary,
                 description: this.extractDescription(issue.fields.description),
                 priority: this.mapJiraPriority(issue.fields.priority?.name),
-                estimatedHours: issue.fields.customfield_10016,
+                estimatedHours: issue.fields.customfield_10016 as number | undefined,
                 tags: issue.fields.labels
             });
             if (story) {
@@ -613,7 +613,7 @@ export class SyncEngine extends EventEmitter {
                 const local = await this.getLocalItem(conflict.itemId, conflict.itemType);
                 if (local && conflict.jiraKey) {
                     await this.jiraClient.updateIssue(conflict.jiraKey, {
-                        summary: local.name,
+                        summary: local.title || '',
                         description: local.description,
                         priority: this.mapPriority(local.priority)
                     });
@@ -621,7 +621,9 @@ export class SyncEngine extends EventEmitter {
                 conflict.resolution = 'local';
             } else if (resolution === 'remote-wins') {
                 // Pull remote changes
-                await this.updateLocalItem(conflict.itemId, conflict.itemType, conflict.remoteVersion);
+                if (conflict.remoteVersion) {
+                    await this.updateLocalItem(conflict.itemId, conflict.itemType, conflict.remoteVersion);
+                }
                 conflict.resolution = 'remote';
             }
         }
@@ -683,11 +685,20 @@ export class SyncEngine extends EventEmitter {
         return currentHash !== mapping.lastSyncedHash;
     }
 
-    private async getLocalItem(localId: string, itemType: 'epic' | 'story' | 'task'): Promise<any> {
+    private async getLocalItem(localId: string, itemType: 'epic' | 'story' | 'task'): Promise<Epic | Story | Task | null> {
         if (itemType === 'epic') {
             return await this.planningManager.getEpic(localId);
         }
-        // TODO: Add story and task retrieval when parent relationships are available
+        // Retrieve story or task using parent IDs from sync mappings
+        const mapping = this.mappings.get(localId);
+        if (!mapping) return null;
+
+        if (itemType === 'story' && mapping.parentEpicId) {
+            return await this.planningManager.getStory(mapping.parentEpicId, localId);
+        }
+        if (itemType === 'task' && mapping.parentEpicId && mapping.parentStoryId) {
+            return await this.planningManager.getTask(mapping.parentEpicId, mapping.parentStoryId, localId);
+        }
         return null;
     }
 

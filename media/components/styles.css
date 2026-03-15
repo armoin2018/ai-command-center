@@ -1,0 +1,79 @@
+:root {
+    --vscode-editor-background: #ffffff;
+    --vscode-editor-foreground: #333333;
+    --vscode-panel-border: #e0e0e0;
+    --vscode-list-hoverBackground: #f3f3f3;
+    --vscode-list-activeSelectionBackground: #0078d4;
+    --vscode-list-activeSelectionForeground: #ffffff;
+    --vscode-focusBorder: #0078d4;
+}
+
+[data-vscode-theme-kind="vscode-dark"] {
+    --vscode-editor-background: #1e1e1e;
+    --vscode-editor-foreground: #d4d4d4;
+    --vscode-panel-border: #3c3c3c;
+    --vscode-list-hoverBackground: #2a2d2e;
+    --vscode-list-activeSelectionBackground: #094771;
+    --vscode-list-activeSelectionForeground: #ffffff;
+    --vscode-focusBorder: #007fd4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--vscode-editor-background);
+    color: var(--vscode-editor-foreground);
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar {
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+#main-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 300px;
+    border-right: 1px solid var(--vscode-panel-border);
+    overflow-y: auto;
+}
+
+#content-area {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--vscode-editor-background);
+    z-index: 9999;
+}
+
+.loading-screen.hidden {
+    display: none;
+}

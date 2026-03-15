@@ -7,6 +7,7 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Logger } from '../logger';
+import { getPlatformInfo } from '../utils/platformInfo';
 
 export interface ConfigBackup {
     version: string;
@@ -55,7 +56,7 @@ export class ConfigBackupService {
                 settings,
                 metadata: {
                     vsCodeVersion: vscode.version,
-                    platform: process.platform,
+                    platform: getPlatformInfo().raw,
                     exported: new Date().toLocaleString()
                 }
             };
@@ -210,7 +211,7 @@ export class ConfigBackupService {
                 settings,
                 metadata: {
                     vsCodeVersion: vscode.version,
-                    platform: process.platform,
+                    platform: getPlatformInfo().raw,
                     exported: new Date().toLocaleString()
                 }
             };
@@ -246,11 +247,18 @@ export class ConfigBackupService {
             const files = await fs.promises.readdir(backupFolder);
             const backupFiles = files
                 .filter(f => f.startsWith('auto-backup-') && f.endsWith('.json'))
-                .map(f => ({
-                    name: f,
-                    path: path.join(backupFolder, f),
-                    mtime: fs.statSync(path.join(backupFolder, f)).mtime.getTime()
-                }))
+                .map(f => {
+                    try {
+                        return {
+                            name: f,
+                            path: path.join(backupFolder, f),
+                            mtime: fs.statSync(path.join(backupFolder, f)).mtime.getTime()
+                        };
+                    } catch {
+                        return null;
+                    }
+                })
+                .filter((f): f is NonNullable<typeof f> => f !== null)
                 .sort((a, b) => b.mtime - a.mtime); // Sort by newest first
 
             // Delete oldest backups if we exceed max
@@ -288,10 +296,17 @@ export class ConfigBackupService {
                 const files = await fs.promises.readdir(backupFolder);
                 return files
                     .filter(f => f.startsWith('auto-backup-') && f.endsWith('.json'))
-                    .map(f => ({
-                        path: path.join(backupFolder, f),
-                        date: new Date(fs.statSync(path.join(backupFolder, f)).mtime)
-                    }))
+                    .map(f => {
+                        try {
+                            return {
+                                path: path.join(backupFolder, f),
+                                date: new Date(fs.statSync(path.join(backupFolder, f)).mtime)
+                            };
+                        } catch {
+                            return null;
+                        }
+                    })
+                    .filter((f): f is NonNullable<typeof f> => f !== null)
                     .sort((a, b) => b.date.getTime() - a.date.getTime());
             } catch (error) {
                 // Backup folder doesn't exist yet

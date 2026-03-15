@@ -232,9 +232,9 @@ export class SchemaLoaderService {
             const schemaDir = path.join(this.extensionPath, '.github', 'aicc', 'schemas');
             
             // Load schema files
-            const panelSchema = await this.loadJsonSchema(path.join(schemaDir, 'panel.schema.json'));
-            const tabSchema = await this.loadJsonSchema(path.join(schemaDir, 'tab.schema.json'));
-            const componentSchema = await this.loadJsonSchema(path.join(schemaDir, 'component.schema.json'));
+            const panelSchema = await this.loadJsonSchema(path.join(schemaDir, 'panel.v1.schema.json'));
+            const tabSchema = await this.loadJsonSchema(path.join(schemaDir, 'tab.v1.schema.json'));
+            const componentSchema = await this.loadJsonSchema(path.join(schemaDir, 'components.v1.schema.json'));
             
             // Compile validators
             this.validators.set('Panel', this.ajv.compile(panelSchema));

@@ -1,3 +1,18 @@
+---
+id: ailey-media-gemini
+name: Google Gemini Image & Video Generation
+description: Comprehensive Google Gemini integration for AI-powered image and video generation using Imagen 3 and Veo 2. Create, edit, upscale images and generate videos from text prompts.
+keywords:
+  - gemini
+  - google
+  - imagen
+  - veo
+  - image-generation
+  - video-generation
+  - ai
+  - media
+---
+
 # Google Gemini Image & Video Generation Skill
 
 Comprehensive Google Gemini integration for AI-powered image and video generation using Imagen 3 and Veo 2. Create, edit, upscale images and generate videos from text prompts.

@@ -16,10 +16,60 @@
             "copilot"
         ]
     },
-    "additionalProperties" : {
-
+    "bundles": [
+        {
+            "name": "social-media",
+            "enabled": true,
+            "assets": [
+                "skills/ailey-soc-discord",
+                "skills/ailey-soc-facebook",
+                "skills/ailey-soc-instagram",
+                "skills/ailey-soc-linkedin",
+                "skills/ailey-soc-meetup",
+                "skills/ailey-soc-reddit",
+                "skills/ailey-soc-threads",
+                "skills/ailey-soc-tiktok",
+                "skills/ailey-soc-twitter",
+                "skills/ailey-soc-youtube",
+                "personas/marketing/social-media-expert.md",
+                "instructions/web-design/discord-style.instructions.md"
+            ]
+        }
+    ],
+    "configuration": {
+        "fields": [
+            {
+                "name": "buildArchitecture",
+                "label": "Build Architecture",
+                "type": "toggle",
+                "value": true
+            },
+            {
+                "name": "buildDesign",
+                "label": "Build Design",
+                "type": "toggle",
+                "value": true
+            },
+            {
+                "name": "buildSummary",
+                "label": "Build Summary",
+                "type": "toggle",
+                "value": true
+            }
+        ],
+        "actions": [
+            {
+                "actionType": "sync",
+                "conditions": [
+                    {
+                        "field": "refreshEnabled",
+                        "operator": "equals",
+                        "value": true
+                    }
+                ],
+                "command": "aicc.saveKitConfig --kit={{name}} --target=.my/aicc/catalog/{{name}}/structure.json"
+            }
+        ]
     },
-    "dependencies": [
-        
-    ]
+    "dependencies": []
 }

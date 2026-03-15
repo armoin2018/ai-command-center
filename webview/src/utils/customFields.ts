@@ -202,9 +202,13 @@ class CustomFieldsManagerClass {
                     return { valid: false, error: `Must be at most ${definition.validation.maxLength} characters` };
                 }
                 if (definition.validation?.pattern) {
-                    const regex = new RegExp(definition.validation.pattern);
-                    if (!regex.test(value)) {
-                        return { valid: false, error: definition.validation.errorMessage || 'Invalid format' };
+                    try {
+                        const regex = new RegExp(definition.validation.pattern);
+                        if (!regex.test(value)) {
+                            return { valid: false, error: definition.validation.errorMessage || 'Invalid format' };
+                        }
+                    } catch {
+                        // Invalid regex pattern — skip validation
                     }
                 }
                 if (definition.type === 'email' && !this.isValidEmail(value)) {

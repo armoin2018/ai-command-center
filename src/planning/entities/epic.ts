@@ -1,4 +1,5 @@
 import { IEpic, EpicStatus, Priority, IComment, ItemType, IItemLink } from '../types';
+import { getIdPattern, getIdFormatDescription } from '../../utils/idPrefix';
 
 /**
  * Epic entity class with methods for creation, validation, and persistence.
@@ -112,8 +113,8 @@ export class Epic implements IEpic {
             errors.push(`Invalid priority: ${this.priority}`);
         }
 
-        if (!this.id || !/^ARMOIN-\d{3}$/.test(this.id)) {
-            errors.push('Epic ID must match pattern ARMOIN-XXX');
+        if (!this.id || !getIdPattern().test(this.id)) {
+            errors.push(`Epic ID must match pattern ${getIdFormatDescription()}`);
         }
 
         return errors;

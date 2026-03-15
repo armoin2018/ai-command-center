@@ -22,7 +22,7 @@ import { logger } from '../logger';
 // Types & Interfaces
 // ============================================================================
 
-export type IntegrationType = 'jira' | 'confluence' | 'gamma' | 'github';
+export type IntegrationType = 'jira' | 'confluence' | 'gamma' | 'github' | 'teams' | 'sharepoint' | 'slack';
 
 export type IntegrationStatus = 
     | 'disconnected'

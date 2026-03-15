@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-command-center.dev/schemas/ideation.v1.schema.json",
+  "title": "Ideation Schema v1",
+  "description": "Schema for per-workspace idea capture, voting, and promotion tracking. Stored in .project/IDEAS.json.",
+  "type": "object",
+  "required": ["version", "ideas"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Schema version (semver)"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional project-level metadata",
+      "properties": {
+        "projectName": { "type": "string" },
+        "jiraProjectKey": { "type": "string" },
+        "lastSync": { "type": "string", "format": "date-time" }
+      }
+    },
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "name", "status", "tags", "votes", "createdBy", "createdAt"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^IDEA-\\d+$",
+            "description": "Unique idea identifier"
+          },
+          "type": {
+            "enum": ["Epic", "Story", "Task", "Bug"],
+            "description": "Idea classification matching PLAN.json item types for seamless clone-to-plan"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "description": "Short title of the idea"
+          },
+          "summary": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Brief one-line summary"
+          },
+          "description": {
+            "type": "string",
+            "description": "Full description with rationale and expected value"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "description": "Categorization tags — used for section grouping and filtering"
+          },
+          "status": {
+            "enum": ["draft", "proposed", "under-review", "accepted", "rejected", "implemented"],
+            "description": "Lifecycle status of the idea"
+          },
+          "votes": {
+            "type": "object",
+            "required": ["up", "down", "voters"],
+            "description": "Aggregated vote tallies and individual voter records",
+            "properties": {
+              "up": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Total upvotes (+1)"
+              },
+              "down": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Total downvotes (-1)"
+              },
+              "voters": {
+                "type": "array",
+                "description": "Individual vote records — one entry per person per idea (REQ-IDEA-085)",
+                "items": {
+                  "type": "object",
+                  "required": ["createdBy", "vote", "votedAt"],
+                  "properties": {
+                    "createdBy": {
+                      "type": "string",
+                      "description": "Identifier of the person who voted"
+                    },
+                    "vote": {
+                      "enum": [-1, 1],
+                      "description": "Vote direction: 1 = upvote, -1 = downvote"
+                    },
+                    "votedAt": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "ISO 8601 timestamp of when the vote was cast"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "comments": {
+            "type": "array",
+            "description": "Discussion thread and auto-generated vote history entries (REQ-IDEA-086)",
+            "items": {
+              "type": "object",
+              "required": ["commentId", "createdBy", "text", "createdAt"],
+              "properties": {
+                "commentId": {
+                  "type": "string",
+                  "description": "Unique comment identifier"
+                },
+                "createdBy": {
+                  "type": "string",
+                  "description": "Author of the comment"
+                },
+                "updatedBy": {
+                  "type": "string",
+                  "description": "Last editor of the comment (if edited)"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Comment body text"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "clonedToStoryId": {
+            "type": ["string", "null"],
+            "description": "Planning story ID if this idea was cloned to PLAN.json (REQ-IDEA-030)"
+          },
+          "clonedToEpicId": {
+            "type": ["string", "null"],
+            "description": "Planning epic ID if this idea was promoted to an epic (REQ-IDEA-033)"
+          },
+          "clonedToTaskId": {
+            "type": ["string", "null"],
+            "description": "Planning task ID if this idea was cloned to a task (REQ-IDEA-087)"
+          },
+          "jiraKey": {
+            "type": ["string", "null"],
+            "description": "Linked Jira issue key (e.g., PROJ-1234)"
+          },
+          "feasibilityRating": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Optional 1–5 feasibility rating (REQ-IASCORE-002)"
+          },
+          "compositeScore": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Computed composite score (REQ-IASCORE-001)"
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Identifier of the idea author"
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "Identifier of the last editor"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

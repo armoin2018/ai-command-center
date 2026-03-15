@@ -1,3 +1,17 @@
+---
+id: ailey-soc-meetup
+name: Meetup Integration Manager
+description: Comprehensive Meetup integration with account tier detection (Standard vs Pro), OAuth authentication, GraphQL API access, event management, group administration, RSVP tracking, and member engagement. Automatically detects account capabilities and provides setup instructions.
+keywords:
+  - meetup
+  - events
+  - groups
+  - rsvp
+  - social
+  - graphql
+  - oauth
+---
+
 # Meetup Integration Manager
 
 Comprehensive Meetup integration with account tier detection (Standard vs Pro), OAuth authentication, GraphQL API access, event management, group administration, RSVP tracking, and member engagement. Automatically detects account capabilities and provides setup instructions.

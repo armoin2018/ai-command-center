@@ -43,16 +43,11 @@ npm install
 
 **FFmpeg** (required for audio processing):
 
-```bash
-# macOS
-brew install ffmpeg
-
-# Ubuntu/Debian
-sudo apt install ffmpeg
-
-# Windows (via Chocolatey)
-choco install ffmpeg
-```
+| Platform | Install Command |
+|----------|----------------|
+| **macOS** | `brew install ffmpeg` |
+| **Linux** | `sudo apt install ffmpeg` (Ubuntu/Debian) or `sudo dnf install ffmpeg` (Fedora) |
+| **Windows** | `winget install ffmpeg` or `choco install ffmpeg` |
 
 **OpenAI API Key** (required for transcription):
 
@@ -602,6 +597,13 @@ npm run convert file transcript.json output.csv json csv
 # macOS
 brew install ffmpeg
 
+# Linux (Ubuntu/Debian)
+sudo apt install ffmpeg
+
+# Windows
+winget install ffmpeg
+# or: choco install ffmpeg
+
 # Verify
 npm run audio test
 ```
@@ -689,8 +691,8 @@ OpenAI Whisper pricing: $0.006 per minute
 
 ---
 
-version: 1.0.0
-updated: 2026-01-31
-reviewed: 2026-01-31
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.5
 ---

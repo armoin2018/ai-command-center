@@ -1,3 +1,17 @@
+---
+id: ailey-shop-etsy
+name: Etsy Integration
+description: Comprehensive Etsy API integration for shop management, product listing, order fulfillment, and analytics.
+keywords:
+  - etsy
+  - ecommerce
+  - shop
+  - listing
+  - order
+  - analytics
+  - handmade
+---
+
 # Etsy Integration Skill
 
 Comprehensive Etsy API integration for shop management, product listing, order fulfillment, and analytics.

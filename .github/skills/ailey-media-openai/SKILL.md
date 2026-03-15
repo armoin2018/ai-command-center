@@ -1,3 +1,17 @@
+---
+id: ailey-media-openai
+name: OpenAI DALL-E 3 & Sora Image & Video Generation
+description: Comprehensive OpenAI integration for AI-powered image and video generation using DALL-E 3 and Sora. Create photorealistic images, edit existing visuals, generate variations, and produce cinematic videos from text prompts.
+keywords:
+  - openai
+  - dalle
+  - sora
+  - image-generation
+  - video-generation
+  - ai
+  - media
+---
+
 # OpenAI DALL-E 3 & Sora Image & Video Generation Skill
 
 Comprehensive OpenAI integration for AI-powered image and video generation using DALL-E 3 and Sora. Create photorealistic images, edit existing visuals, generate variations, and produce cinematic videos from text prompts.

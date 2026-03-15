@@ -236,8 +236,13 @@ This creates:
 Alternatively, create manually:
 
 ```bash
+# macOS / Linux (bash/zsh)
 mkdir -p .github/skills/skill-name/{scripts,references,assets}
 touch .github/skills/skill-name/SKILL.md
+
+# Windows (PowerShell)
+'scripts','references','assets' | ForEach-Object { New-Item -ItemType Directory -Force -Path ".github\skills\skill-name\$_" }
+New-Item -ItemType File -Force -Path ".github\skills\skill-name\SKILL.md"
 ```
 
 For TypeScript skills, add `package.json`:
@@ -664,8 +669,8 @@ This skill references:
 **Created**: 2026-01-19
 
 ---
-version: 1.0.0
-updated: 2026-01-30
-reviewed: 2026-01-30
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.2
 ---

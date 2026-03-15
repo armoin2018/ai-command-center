@@ -1,7 +1,7 @@
 ---
 name: ailey-data-kafka
 description: Comprehensive Apache Kafka integration with automatic deployment detection (Confluent Cloud/Platform, Apache Kafka, AWS MSK), producer/consumer APIs, Schema Registry, Kafka Connect, KRaft/Zookeeper, ksqlDB, and RBAC/ACL management. Supports SASL/SCRAM, mTLS, PLAIN authentication.
-keywords: [kafka, streaming, event-driven, schema-registry, kafka-connect, ksqldb, confluent, msk, pubsub, messaging]
+keywords: [kafka, streaming, event-driven, schema-registry, kafka-connect, ksqldb, confluent, msk, pubsub, messaging, windows, linux, macos, docker]
 tools: [kafkajs, @confluentinc/kafka-javascript, @kafkajs/confluent-schema-registry, commander]
 ---
 
@@ -86,6 +86,9 @@ npm install
 #### Option A: Apache Kafka (Self-Hosted)
 
 **Download and Install:**
+
+<details><summary><strong>macOS / Linux</strong></summary>
+
 ```bash
 # Download Kafka
 wget https://downloads.apache.org/kafka/3.7.0/kafka_2.13-3.7.0.tgz
@@ -102,6 +105,53 @@ bin/kafka-server-start.sh config/kraft/server.properties
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 bin/kafka-server-start.sh config/server.properties &
 ```
+
+</details>
+
+<details><summary><strong>Windows</strong></summary>
+
+```powershell
+# Download Kafka from https://kafka.apache.org/downloads and extract the .tgz archive
+# Or use: curl -O https://downloads.apache.org/kafka/3.7.0/kafka_2.13-3.7.0.tgz
+# Extract with 7-Zip or tar (Windows 10+):
+tar -xzf kafka_2.13-3.7.0.tgz
+cd kafka_2.13-3.7.0
+
+# Start KRaft mode:
+$env:KAFKA_CLUSTER_ID = bin\windows\kafka-storage.bat random-uuid
+bin\windows\kafka-storage.bat format -t $env:KAFKA_CLUSTER_ID -c config\kraft\server.properties
+bin\windows\kafka-server-start.bat config\kraft\server.properties
+
+# OR Zookeeper mode:
+Start-Process bin\windows\zookeeper-server-start.bat -ArgumentList 'config\zookeeper.properties'
+bin\windows\kafka-server-start.bat config\server.properties
+```
+
+> **Note**: Windows uses `.bat` scripts in the `bin\windows\` directory instead of the `.sh` scripts in `bin/`.
+
+</details>
+
+<details><summary><strong>Docker (All Platforms)</strong></summary>
+
+```bash
+# Quick single-node Kafka with Docker (recommended for development)
+docker run -d --name kafka \
+  -p 9092:9092 \
+  -e KAFKA_CFG_NODE_ID=0 \
+  -e KAFKA_CFG_PROCESS_ROLES=controller,broker \
+  -e KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@localhost:9093 \
+  -e KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093 \
+  -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 \
+  -e KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER \
+  bitnami/kafka:latest
+
+# Or use Docker Compose (create docker-compose.yml):
+# See https://github.com/bitnami/containers/tree/main/bitnami/kafka
+```
+
+> **Tip**: Docker is the fastest way to get Kafka running on any platform, especially Windows.
+
+</details>
 
 **Configure AI-ley:** Create `~/.vscode/.env`, `.env`, or `.env.local`:
 ```bash
@@ -124,6 +174,9 @@ KAFKA_SSL_KEY=/path/to/client-key
 #### Option B: Confluent Platform (Self-Hosted)
 
 **Download and Install:**
+
+<details><summary><strong>macOS / Linux</strong></summary>
+
 ```bash
 # Download Confluent Platform
 wget https://packages.confluent.io/archive/7.6/confluent-7.6.0.tar.gz
@@ -133,6 +186,35 @@ cd confluent-7.6.0
 # Start all services
 bin/confluent local services start
 ```
+
+</details>
+
+<details><summary><strong>Windows</strong></summary>
+
+```powershell
+# Download from https://www.confluent.io/installation/ and extract
+# Use the Confluent CLI:
+bin\windows\confluent local services start
+
+# Or use Docker for full platform:
+docker compose -f docker-compose.yml up -d
+```
+
+> **Note**: Confluent recommends Docker or WSL for Windows development.
+
+</details>
+
+<details><summary><strong>Docker (All Platforms)</strong></summary>
+
+```bash
+# Use the Confluent all-in-one Docker Compose:
+curl -sL https://raw.githubusercontent.com/confluentinc/cp-all-in-one/7.6.0-post/cp-all-in-one-kraft/docker-compose.yml -o docker-compose.yml
+docker compose up -d
+```
+
+This starts Kafka, Schema Registry, Connect, ksqlDB, and Control Center.
+
+</details>
 
 **Configure AI-ley:**
 ```bash
@@ -914,8 +996,8 @@ See [examples/](./examples/) directory for:
 
 ---
 
-version: 1.0.0
-updated: 2026-02-01
-reviewed: 2026-02-01
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.7
 ---

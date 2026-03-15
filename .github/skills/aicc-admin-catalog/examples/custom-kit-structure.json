@@ -66,13 +66,53 @@
       "supportedAgentic": "*"
     }
   ],
-  "additionalProperties": {
-    "homepage": "https://example.com",
-    "category": "automation",
-    "tags": [
-      "templates",
-      "prompts",
-      "skills"
+  "configuration": {
+    "fields": [
+      {
+        "name": "homepage",
+        "label": "Homepage",
+        "type": "url",
+        "placeholder": "https://example.com",
+        "validation": { "required": false },
+        "helpText": "Project homepage URL",
+        "value": "https://example.com"
+      },
+      {
+        "name": "category",
+        "label": "Category",
+        "type": "select",
+        "placeholder": "Select a category",
+        "options": [
+          { "label": "Automation", "value": "automation" },
+          { "label": "Templates", "value": "templates" },
+          { "label": "Utilities", "value": "utilities" }
+        ],
+        "validation": { "required": false },
+        "helpText": "Kit category classification",
+        "value": "automation"
+      },
+      {
+        "name": "tags",
+        "label": "Tags",
+        "type": "text",
+        "placeholder": "Comma-separated tags",
+        "validation": { "required": false },
+        "helpText": "Project tags for discovery (comma-separated)",
+        "value": "templates, prompts, skills"
+      }
+    ],
+    "actions": [
+      {
+        "actionType": "sync",
+        "conditions": [
+          {
+            "field": "refreshEnabled",
+            "operator": "equals",
+            "value": true
+          }
+        ],
+        "command": "aicc.syncKit --kit={{name}} --branch={{branch}}"
+      }
     ]
   }
 }

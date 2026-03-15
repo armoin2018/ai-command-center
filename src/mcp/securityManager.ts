@@ -8,10 +8,11 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 import { promisify } from 'util';
-import { exec } from 'child_process';
+import { execFile } from 'child_process';
 import { Logger } from '../logger';
+import { getPlatformInfo } from '../utils/platformInfo';
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
 const readFileAsync = promisify(fs.readFile);
 const mkdirAsync = promisify(fs.mkdir);
 const existsAsync = promisify(fs.exists);
@@ -91,20 +92,20 @@ export class SecurityManager {
         try {
             // Check if OpenSSL is available
             try {
-                await execAsync('openssl version');
+                await execFileAsync('openssl', ['version']);
             } catch (error) {
                 throw new Error('OpenSSL not found. Please install OpenSSL to generate SSL certificates.');
             }
 
             // Generate private key (2048-bit RSA)
-            const keyCommand = `openssl genrsa -out "${keyPath}" 2048`;
-            await execAsync(keyCommand);
+            await execFileAsync('openssl', ['genrsa', '-out', keyPath, '2048']);
             this.logger.info('Generated private key', { component: 'SecurityManager' });
 
             // Generate self-signed certificate (valid for 365 days)
-            const certCommand = `openssl req -new -x509 -key "${keyPath}" -out "${certPath}" -days 365 ` +
-                `-subj "/C=US/ST=State/L=City/O=Organization/CN=${commonName}"`;
-            await execAsync(certCommand);
+            await execFileAsync('openssl', [
+                'req', '-new', '-x509', '-key', keyPath, '-out', certPath, '-days', '365',
+                '-subj', `/C=US/ST=State/L=City/O=Organization/CN=${commonName}`
+            ]);
             this.logger.info('Generated SSL certificate', { component: 'SecurityManager' });
 
             // Read the generated files
@@ -219,9 +220,9 @@ export class SecurityManager {
      * Get platform-specific instructions for trusting self-signed certificates
      */
     private getTrustInstructions(): string {
-        const platform = process.platform;
+        const { isMacOS, isWindows } = getPlatformInfo();
 
-        if (platform === 'darwin') {
+        if (isMacOS) {
             // macOS
             return `# Trust Self-Signed Certificate on macOS
 
@@ -238,7 +239,7 @@ Alternatively, use the command line:
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ${path.join(this.certDir, 'server.crt')}
 \`\`\`
 `;
-        } else if (platform === 'win32') {
+        } else if (isWindows) {
             // Windows
             return `# Trust Self-Signed Certificate on Windows
 

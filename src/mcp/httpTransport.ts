@@ -7,6 +7,7 @@
 
 import * as http from 'http';
 import * as https from 'https';
+import { Logger } from '../logger';
 
 // MCP request/response types (simplified for HTTP transport)
 export interface MCPRequest {
@@ -72,7 +73,7 @@ export class HttpTransport {
         return new Promise((resolve, reject) => {
             this.server!.listen(this.config.port, this.config.host, () => {
                 const protocol = this.config.https ? 'https' : 'http';
-                console.log(`MCP HTTP server listening on ${protocol}://${this.config.host}:${this.config.port}`);
+                Logger.getInstance().info(`MCP HTTP server listening on ${protocol}://${this.config.host}:${this.config.port}`);
                 resolve();
             });
 
@@ -150,7 +151,7 @@ export class HttpTransport {
                 res.end(JSON.stringify(mcpResponse));
 
             } catch (error) {
-                console.error('HTTP transport error:', error);
+                Logger.getInstance().error('HTTP transport error', error instanceof Error ? error : new Error(String(error)));
                 res.writeHead(500, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({
                     error: 'Internal server error',
@@ -161,13 +162,30 @@ export class HttpTransport {
     }
 
     /**
+     * Check if an origin is a localhost address
+     */
+    private isLocalhostOrigin(origin: string): boolean {
+        return /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+    }
+
+    /**
      * Handle CORS headers
+     * Defaults to localhost-only when no cors config is provided
      */
     private handleCORS(req: http.IncomingMessage, res: http.ServerResponse): void {
-        if (!this.config.cors) return;
+        const requestOrigin = req.headers.origin || '';
+
+        // If no CORS config, default to localhost-only
+        if (!this.config.cors) {
+            const isAllowed = this.isLocalhostOrigin(requestOrigin);
+            res.setHeader('Access-Control-Allow-Origin', isAllowed ? requestOrigin : '');
+            res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+            res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+            res.setHeader('Vary', 'Origin');
+            return;
+        }
 
         const { origin, credentials = false } = this.config.cors;
-        const requestOrigin = req.headers.origin || '';
 
         // Check if origin is allowed
         const isAllowed = Array.isArray(origin)
@@ -183,6 +201,8 @@ export class HttpTransport {
                 res.setHeader('Access-Control-Allow-Credentials', 'true');
             }
         }
+
+        res.setHeader('Vary', 'Origin');
     }
 
     /**

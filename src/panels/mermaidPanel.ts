@@ -257,7 +257,7 @@ export class MermaidPanelProvider {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${this.panel.webview.cspSource} https: data: blob:; style-src ${this.panel.webview.cspSource} 'unsafe-inline'; font-src ${this.panel.webview.cspSource} data:; script-src 'nonce-${nonce}' 'unsafe-eval'; connect-src ${this.panel.webview.cspSource} https:; worker-src blob:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${this.panel.webview.cspSource} https: data: blob:; style-src ${this.panel.webview.cspSource} 'unsafe-inline'; font-src ${this.panel.webview.cspSource} data:; script-src 'nonce-${nonce}'; connect-src ${this.panel.webview.cspSource} https: http://localhost:* https://localhost:* ws://localhost:* http://127.0.0.1:* https://127.0.0.1:* ws://127.0.0.1:*; frame-src http://localhost:* https://localhost:* http://127.0.0.1:* https://127.0.0.1:*; worker-src blob:;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mermaid Diagram</title>
     <style>

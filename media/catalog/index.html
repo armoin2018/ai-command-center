@@ -7,7 +7,10 @@
     content="default-src 'none'; 
     style-src ${cspSource} 'unsafe-inline'; 
     script-src ${cspSource} 'unsafe-inline'; 
-    img-src ${cspSource} data:;">
+    img-src ${cspSource} data:;
+    font-src ${cspSource} data:;
+    connect-src ${cspSource} http://localhost:* https://localhost:* ws://localhost:* http://127.0.0.1:* https://127.0.0.1:* ws://127.0.0.1:*;
+    frame-src http://localhost:* https://localhost:* http://127.0.0.1:* https://127.0.0.1:*;">
   <title>AI Kit Catalog</title>
   <link rel="stylesheet" href="${catalogCss}">
 </head>

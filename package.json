@@ -2,7 +2,7 @@
   "name": "ai-command-center",
   "displayName": "AI Command Center",
   "description": "Centralize AI-powered development workflows with integrated planning, instruction management, and external service integrations",
-  "version": "1.1.24",
+  "version": "2.0.20",
   "publisher": "ai-command-center",
   "license": "MIT",
   "engines": {
@@ -408,6 +408,52 @@
         "title": "AI Command Center: Refresh AI Kits",
         "icon": "$(sync)",
         "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.archiveItems",
+        "title": "AICC: Archive Completed Items",
+        "icon": "$(archive)",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showVelocityChart",
+        "title": "AICC: Show Velocity Chart",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showHealthDashboard",
+        "title": "AICC: Show Health Dashboard",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showPromptLeaderboard",
+        "title": "AICC: Show Prompt Leaderboard",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.searchKnowledgeBase",
+        "title": "AICC: Search Knowledge Base",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.showQueueStatus",
+        "title": "AICC: Show Queue Status",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.exportAgentMemory",
+        "title": "AICC: Export Agent Memory",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.confluencePush",
+        "title": "AICC: Push to Confluence",
+        "category": "AI Command Center"
+      },
+      {
+        "command": "aicc.confluencePull",
+        "title": "AICC: Pull from Confluence",
+        "category": "AI Command Center"
       }
     ],
     "chatParticipants": [
@@ -547,55 +593,27 @@
         "label": "Change Status"
       }
     ],
-    "keybindings": [
-      {
-        "command": "aicc.createEpic",
-        "key": "cmd+shift+e",
-        "mac": "cmd+shift+e",
-        "win": "ctrl+shift+e",
-        "linux": "ctrl+shift+e",
-        "when": "editorTextFocus || !editorFocus"
-      },
-      {
-        "command": "aicc.createStory",
-        "key": "cmd+shift+s",
-        "mac": "cmd+shift+s",
-        "win": "ctrl+shift+s",
-        "linux": "ctrl+shift+s",
-        "when": "editorTextFocus || !editorFocus"
-      },
-      {
-        "command": "aicc.createTask",
-        "key": "cmd+shift+t",
-        "mac": "cmd+shift+t",
-        "win": "ctrl+shift+t",
-        "linux": "ctrl+shift+t",
-        "when": "editorTextFocus || !editorFocus"
-      },
-      {
-        "command": "aicc.openPlanningPanel",
-        "key": "cmd+shift+p",
-        "mac": "cmd+shift+p",
-        "win": "ctrl+shift+p",
-        "linux": "ctrl+shift+p",
-        "when": "!editorFocus"
-      },
-      {
-        "command": "aicc.search.global",
-        "key": "cmd+shift+f",
-        "mac": "cmd+shift+f",
-        "win": "ctrl+shift+f",
-        "linux": "ctrl+shift+f",
-        "when": "editorTextFocus || !editorFocus"
-      }
-    ],
+    "keybindings": [],
     "configuration": {
       "title": "AI Command Center",
       "properties": {
+        "aicc.advancedMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable advanced mode to show legacy sidebar tree view, editor panel, and additional commands. When disabled (default), only the bottom panel UI is active.",
+          "order": 0
+        },
         "aicc.planPath": {
           "type": "string",
           "default": ".project/plan",
           "description": "Directory path for planning artifacts (relative to workspace root)",
+          "order": 1
+        },
+        "aicc.idPrefix": {
+          "type": "string",
+          "default": "ARMOIN",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,19}$",
+          "description": "Prefix for planning item IDs (e.g., 'ARMOIN' produces ARMOIN-001). Must start with a letter and contain only letters, digits, hyphens, or underscores (max 20 chars).",
           "order": 1
         },
         "aicc.autoSaveInterval": {
@@ -883,11 +901,27 @@
           "description": "Hostname or IP address to bind MCP server (requires aicc.mcp.localhostOnly to be false for non-localhost)",
           "order": 54
         },
+        "aicc.mcp.portRangeStart": {
+          "type": "number",
+          "default": 3100,
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "Start of port range for multi-workspace MCP leader election",
+          "order": 55
+        },
+        "aicc.mcp.portRangeEnd": {
+          "type": "number",
+          "default": 3110,
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "End of port range for multi-workspace MCP leader election",
+          "order": 56
+        },
         "aicc.mcp.websocket.enabled": {
           "type": "boolean",
           "default": false,
           "description": "Enable WebSocket transport for real-time bidirectional communication",
-          "order": 55
+          "order": 57
         },
         "aicc.mcp.websocket.port": {
           "type": "number",
@@ -930,6 +964,87 @@
           "default": false,
           "description": "Show component reference labels on UI elements (useful for development and debugging)",
           "order": 60
+        },
+        "aicc.aiKit.autoLoad.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable AI Kit auto-loading recommendations on workspace activation",
+          "order": 70
+        },
+        "aicc.aiKit.autoLoad.onActivation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Trigger auto-load detection when the extension activates",
+          "order": 71
+        },
+        "aicc.aiKit.autoLoad.defaultKits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Kit names to always recommend regardless of workspace type",
+          "order": 72
+        },
+        "aicc.aiKit.autoLoad.alwaysDismissed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Suppress auto-load recommendations permanently for this workspace",
+          "order": 73
+        },
+        "aicc.aiKit.globalCachePath": {
+          "type": "string",
+          "default": "~/.vscode/ai-ley-cache",
+          "description": "Global cache directory for AI Kit repositories (shared across workspaces)",
+          "order": 74
+        },
+        "aicc.skillHealth.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable periodic skill health monitoring probes",
+          "order": 80
+        },
+        "aicc.skillHealth.intervalMs": {
+          "type": "number",
+          "default": 300000,
+          "description": "Interval in milliseconds between health probes (default: 5 minutes)",
+          "order": 81
+        },
+        "aicc.offlineQueue.maxRetries": {
+          "type": "number",
+          "default": 5,
+          "description": "Maximum retry attempts before moving to dead-letter queue",
+          "order": 82
+        },
+        "aicc.offlineQueue.backoffBaseMs": {
+          "type": "number",
+          "default": 1000,
+          "description": "Base delay in milliseconds for exponential backoff retry",
+          "order": 83
+        },
+        "aicc.memory.maxEntries": {
+          "type": "number",
+          "default": 1000,
+          "description": "Maximum agent session memory entries before auto-pruning",
+          "order": 84
+        },
+        "aicc.memory.pruneAgeDays": {
+          "type": "number",
+          "default": 90,
+          "description": "Auto-prune memory entries older than this many days",
+          "order": 85
+        },
+        "aicc.telemetry.localEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable local-only workspace telemetry collection",
+          "order": 86
+        },
+        "aicc.velocity.autoSnapshot": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically record sprint velocity snapshots on sprint change",
+          "order": 87
         }
       }
     }
@@ -942,7 +1057,8 @@
     "copy:defaults": "mkdir -p dist/defaults && cp src/defaults/aicc.yaml dist/defaults/ 2>/dev/null || true",
     "copy:schemas": "mkdir -p dist/.github/aicc/schemas && cp -r .github/aicc/schemas/*.json dist/.github/aicc/schemas/ 2>/dev/null || true",
     "copy:swagger": "mkdir -p dist/swagger-ui && cp -r node_modules/swagger-ui-dist/*.{js,css,map,json,png} dist/swagger-ui/ 2>/dev/null || true",
-    "copy:assets": "npm run copy:defaults && npm run copy:schemas && npm run copy:swagger",
+    "copy:codicons": "mkdir -p dist/codicons && cp node_modules/@vscode/codicons/dist/codicon.css node_modules/@vscode/codicons/dist/codicon.ttf dist/codicons/ 2>/dev/null || true && cp node_modules/@vscode/codicons/dist/codicon.ttf media/secondaryPanel/codicon.ttf 2>/dev/null || true && sed '/@font-face/,/^}/d' node_modules/@vscode/codicons/dist/codicon.css > media/secondaryPanel/codicon.css 2>/dev/null || true",
+    "copy:assets": "npm run copy:defaults && npm run copy:schemas && npm run copy:swagger && npm run copy:codicons",
     "watch": "webpack --watch --mode development --config webpack.extension.config.js",
     "watch:webview": "cd webview && npm run watch",
     "pretest": "npm run compile",
@@ -954,14 +1070,17 @@
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^18.0.0",
     "@types/vscode": "^1.85.0",
     "@types/winston": "^2.4.4",
     "@types/ws": "^8.5.10",
     "@typescript-eslint/eslint-plugin": "^8.54.0",
     "@typescript-eslint/parser": "^8.54.0",
+    "@vscode/test-electron": "^2.5.2",
     "@vscode/vsce": "^2.22.0",
     "eslint": "^9.39.2",
+    "mocha": "^11.7.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.0",
     "webpack": "^5.90.0",
@@ -969,6 +1088,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",
+    "@vscode/codicons": "^0.0.44",
     "axios": "^1.6.5",
     "js-yaml": "^4.1.1",
     "swagger-ui-dist": "^5.11.0",

@@ -422,7 +422,10 @@
             // -----------------------------------------------------------------
             this.registerLookup('localTabs', {
                 'intakes':          true,
-                'component-catalog': true
+                'component-catalog': true,
+                'scheduler':        true,
+                'mcp':              true,
+                'ideation':         true
             });
         }
     }
@@ -570,11 +573,17 @@
         mcpConfigUpdated(payload, app) {
             app.handleMcpConfigUpdated(payload);
         },
+        workspaceInfo(payload, app) {
+            app.updateFooterInfo(payload);
+        },
         intakeFormLoaded(payload, app) {
             app.renderIntakeForm(payload);
         },
         dataRefreshed(payload, app) {
             app.handleDataRefreshed(payload);
+        },
+        planUpdated(payload, app) {
+            app.handlePlanUpdated(payload);
         },
         settingsUpdate(payload, app) {
             app.handleSettingsUpdate(payload);
@@ -592,12 +601,92 @@
             app.renderKitConfiguration(payload.config, payload.kitName);
         },
         aikitComponents(payload, app) {
-            console.log('[AIKIT] Rendering components for', payload.kitName);
-            app.renderKitComponents(payload.components, payload.installed);
+            console.log('[AIKIT] Rendering bundles for', payload.kitName);
+            app.renderKitComponents(payload.bundles);
         },
         error(payload, app) {
             console.error('[AIKIT] Error received:', payload.message);
             app.showError(payload.message);
+        },
+        // ── Jira messages (AICC-0081) ──
+        jiraConfigLoaded(payload, app) {
+            app.loadJiraConfig(payload);
+        },
+        jiraConfigSaved(payload, app) {
+            console.log('[AIKIT] Jira config saved');
+        },
+        jiraConnectionResult(payload, app) {
+            app.updateJiraConnectionResult(payload);
+        },
+        jiraSyncProgress(payload, app) {
+            app.updateJiraSyncStatus(payload);
+        },
+        jiraSyncComplete(payload, app) {
+            app.updateJiraSyncComplete(payload);
+        },
+        jiraProjectsLoaded(payload, app) {
+            app.loadJiraProjects(payload.projects);
+        },
+        // ── MCP messages (AICC-0085) ──
+        mcpStatusUpdate(payload, app) {
+            app.handleMcpStatusUpdate(payload);
+        },
+        mcpInventoryUpdate(payload, app) {
+            app.handleMcpInventoryUpdate(payload);
+        },
+        mcpActionError(payload, app) {
+            console.error('[AIKIT] MCP action error:', payload.error);
+        },
+        // ── MCP Port Dashboard (REQ-MPD) ──
+        mcpPortScanResult(payload, app) {
+            app.handleMcpPortScanResult(payload);
+        },
+        // ── Ideation messages (REQ-IDEA-080+) ──
+        ideationDataLoaded(payload, app) {
+            app.handleIdeationDataLoaded(payload);
+        },
+        ideationItemSaved(payload, app) {
+            app.handleIdeationItemSaved(payload);
+        },
+        ideationVoteResult(payload, app) {
+            app.handleIdeationVoteResult(payload);
+        },
+        ideationDiscoverResult(payload, app) {
+            app.handleIdeationDiscoverResult(payload);
+        },
+        // ── Scheduler Tasks (AICC-0079) ──
+        schedulerTasks(payload, app) {
+            app.handleSchedulerTasksLoaded(payload);
+        },
+        schedulerTaskAdded(payload, app) {
+            // Refresh full list after add
+            app.sendMessage('getSchedulerTasks');
+        },
+        schedulerTaskRemoved(payload, app) {
+            // Already optimistically removed from UI
+        },
+        schedulerTaskToggled(payload, app) {
+            // Already optimistically toggled in UI
+        },
+        schedulerTaskExecuted(payload, app) {
+            app.sendMessage('getSchedulerTasks');
+        },
+        // ── Ideation Jira Config (REQ-IDEA-092) ──
+        ideationJiraConfigLoaded(payload, app) {
+            app.handleIdeationJiraConfigLoaded(payload);
+        },
+        ideationJiraConfigSaved(payload, app) {
+            app.handleIdeationJiraConfigSaved(payload);
+        },
+        ideationSyncResult(payload, app) {
+            app.handleIdeationSyncResult(payload);
+        },
+        // ── Jira Sync Config (REQ-JIRACFG-015+) ──
+        jiraSyncConfigLoaded(payload, app) {
+            app.handleJiraSyncConfigLoaded(payload);
+        },
+        jiraSyncConfigSaved(payload, app) {
+            app.handleJiraSyncConfigSaved(payload);
         }
     };
 
@@ -672,6 +761,15 @@
         },
         'component-catalog'(tabId, app) {
             app.renderComponentCatalog();
+        },
+        scheduler(tabId, app) {
+            app.renderSchedulerTab();
+        },
+        mcp(tabId, app) {
+            app.renderMcpTab();
+        },
+        ideation(tabId, app) {
+            app.renderIdeationTab();
         }
     };
 
@@ -687,6 +785,7 @@
         textarea: _renderTextarea,
         select:   _renderSelect,
         checkbox: _renderCheckbox,
+        toggle:   _renderToggle,
         radio:    _renderRadio,
         _default: _renderTextInput
     };
@@ -792,6 +891,23 @@
                     ${required}
                 />
                 <label for="${fieldId}">${field.label}${requiredMark}</label>
+            </div>
+        `;
+    }
+
+    function _renderToggle(field, fieldId, required) {
+        return `
+            <div class="toggle-field">
+                <label class="toggle-switch" for="${fieldId}">
+                    <input 
+                        type="checkbox" 
+                        id="${fieldId}" 
+                        name="${field.name}" 
+                        ${required}
+                    />
+                    <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                    <span class="toggle-label-text">${field.label || ''}</span>
+                </label>
             </div>
         `;
     }

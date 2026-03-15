@@ -18,12 +18,17 @@ const appendFileAsync = promisify(fs.appendFile);
 const readdirAsync = promisify(fs.readdir);
 const mkdirAsync = promisify(fs.mkdir);
 
+/** Type guard for Node.js system errors with error codes */
+function isNodeError(err: unknown): err is NodeJS.ErrnoException {
+    return err instanceof Error && 'code' in err;
+}
+
 export interface LogEntry {
     level: 'debug' | 'info' | 'warn' | 'error';
     message: string;
     timestamp?: string;
     source?: string;
-    data?: any;
+    data?: Record<string, unknown>;
 }
 
 export interface LogEndpointConfig {
@@ -54,8 +59,8 @@ export class LogEndpoint {
                 maxFileSize: this.config.maxFileSize,
                 maxFiles: this.config.maxFiles
             });
-        } catch (error: any) {
-            this.config.logger.error('Failed to initialize log endpoint', error);
+        } catch (error: unknown) {
+            this.config.logger.error('Failed to initialize log endpoint', error instanceof Error ? error : new Error(String(error)));
             throw error;
         }
     }
@@ -83,12 +88,12 @@ export class LogEndpoint {
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ success: true, message: 'Log received' }));
 
-        } catch (error: any) {
-            this.config.logger.error('Error handling log request', error);
+        } catch (error: unknown) {
+            this.config.logger.error('Error handling log request', error instanceof Error ? error : new Error(String(error)));
             res.writeHead(500, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ 
                 error: 'Internal server error',
-                message: error.message 
+                message: error instanceof Error ? error.message : String(error) 
             }));
         }
     }
@@ -114,13 +119,13 @@ export class LogEndpoint {
     /**
      * Validate log entry structure
      */
-    private validateLogEntry(entry: any): entry is LogEntry {
+    private validateLogEntry(entry: unknown): entry is LogEntry {
+        if (!entry || typeof entry !== 'object') return false;
+        const e = entry as Record<string, unknown>;
         return (
-            entry &&
-            typeof entry === 'object' &&
-            typeof entry.level === 'string' &&
-            ['debug', 'info', 'warn', 'error'].includes(entry.level) &&
-            typeof entry.message === 'string'
+            typeof e.level === 'string' &&
+            ['debug', 'info', 'warn', 'error'].includes(e.level) &&
+            typeof e.message === 'string'
         );
     }
 
@@ -142,8 +147,8 @@ export class LogEndpoint {
         // Append to log file
         try {
             await appendFileAsync(this.currentLogFile, logLine, 'utf8');
-        } catch (error: any) {
-            this.config.logger.error('Failed to write client log', error);
+        } catch (error: unknown) {
+            this.config.logger.error('Failed to write client log', error instanceof Error ? error : new Error(String(error)));
             throw error;
         }
     }
@@ -159,10 +164,10 @@ export class LogEndpoint {
             if (stats.size >= this.config.maxFileSize) {
                 await this.rotateLogFiles();
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             // File doesn't exist yet, no rotation needed
-            if (error.code !== 'ENOENT') {
-                this.config.logger.error('Error checking log file size', error);
+            if (!isNodeError(error) || error.code !== 'ENOENT') {
+                this.config.logger.error('Error checking log file size', error instanceof Error ? error : new Error(String(error)));
             }
         }
     }
@@ -181,9 +186,9 @@ export class LogEndpoint {
             const oldestLog = path.join(this.config.logDir, `client.${this.config.maxFiles - 1}.log`);
             try {
                 await unlinkAsync(oldestLog);
-            } catch (error: any) {
+            } catch (error: unknown) {
                 // File doesn't exist, ignore
-                if (error.code !== 'ENOENT') {
+                if (!isNodeError(error) || error.code !== 'ENOENT') {
                     throw error;
                 }
             }
@@ -195,9 +200,9 @@ export class LogEndpoint {
                 
                 try {
                     await renameAsync(currentFile, nextFile);
-                } catch (error: any) {
+                } catch (error: unknown) {
                     // File doesn't exist, continue
-                    if (error.code !== 'ENOENT') {
+                    if (!isNodeError(error) || error.code !== 'ENOENT') {
                         throw error;
                     }
                 }
@@ -208,8 +213,8 @@ export class LogEndpoint {
             await renameAsync(this.currentLogFile, firstRotated);
 
             this.config.logger.info('Log rotation complete', { component: 'LogEndpoint' });
-        } catch (error: any) {
-            this.config.logger.error('Failed to rotate log files', error);
+        } catch (error: unknown) {
+            this.config.logger.error('Failed to rotate log files', error instanceof Error ? error : new Error(String(error)));
             throw error;
         }
     }
@@ -231,8 +236,8 @@ export class LogEndpoint {
                 .filter(file => file.startsWith('client.') && file.endsWith('.log'))
                 .map(file => path.join(this.config.logDir, file))
                 .sort();
-        } catch (error: any) {
-            this.config.logger.error('Failed to list log files', error);
+        } catch (error: unknown) {
+            this.config.logger.error('Failed to list log files', error instanceof Error ? error : new Error(String(error)));
             return [];
         }
     }

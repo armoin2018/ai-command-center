@@ -49,7 +49,92 @@ export interface KitStructure {
   lastUpdated?: string;
   folderMapping: FolderMapping | FolderMapping[];
   dependencies?: string[];
-  additionalProperties?: Record<string, any>;
+  bundles?: KitBundle[];
+  configuration?: KitConfiguration;
+}
+
+export interface KitBundle {
+  name: string;
+  enabled: boolean;
+  description?: string;
+  icon?: string;
+  assets: string[];
+}
+
+export type ConditionOperator =
+  | 'equals'
+  | 'not-equals'
+  | 'contains'
+  | 'not-contains'
+  | 'starts-with'
+  | 'ends-with'
+  | 'greater-than'
+  | 'less-than'
+  | 'greater-than-or-equals'
+  | 'less-than-or-equals'
+  | 'matches'
+  | 'exists'
+  | 'not-exists'
+  | 'in'
+  | 'not-in'
+  | 'is-empty'
+  | 'is-not-empty';
+
+export interface ActionCondition {
+  field: string;
+  operator: ConditionOperator;
+  value: any;
+}
+
+export type ConfigActionType =
+  | 'create'
+  | 'edit'
+  | 'delete'
+  | 'bulk-edit'
+  | 'bulk-delete'
+  | 'sync'
+  | 'import'
+  | 'export';
+
+export interface ConfigAction {
+  actionType: ConfigActionType;
+  conditions?: ActionCondition[];
+  command: string;
+  label?: string;
+  icon?: string;
+  confirmMessage?: string;
+}
+
+export interface ConfigFieldValidation {
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  min?: number;
+  max?: number;
+  pattern?: string;
+  errorMessage?: string;
+}
+
+export interface ConfigFieldOption {
+  label: string;
+  value: string;
+}
+
+export interface ConfigField {
+  name: string;
+  label: string;
+  type: 'text' | 'textarea' | 'select' | 'number' | 'checkbox' | 'toggle' | 'date' | 'email' | 'url' | 'radio';
+  placeholder?: string;
+  validation?: ConfigFieldValidation;
+  helpText?: string;
+  value?: any;
+  defaultValue?: any;
+  options?: (string | ConfigFieldOption)[];
+}
+
+export interface KitConfiguration {
+  fields?: ConfigField[];
+  actions?: ConfigAction[];
 }
 
 export interface KitConfig {

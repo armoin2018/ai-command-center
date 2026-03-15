@@ -5,6 +5,7 @@
  * Note: console.log is used intentionally here for development performance tracking.
  * These logs help measure activation time and identify bottlenecks during development.
  */
+/* eslint-disable no-console */
 export class PerformanceTracker {
     private startTime: number;
     private phases: Map<string, number> = new Map();

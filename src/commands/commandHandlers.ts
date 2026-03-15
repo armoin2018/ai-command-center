@@ -302,33 +302,58 @@ export async function showDebugPanelCommand(): Promise<void> {
 
 /**
  * Shows help information.
+ * Opens documentation in markdown preview or provides quick reference / issue links.
  */
 export async function showHelpCommand(): Promise<void> {
     const action = await vscode.window.showInformationMessage(
         'AI Command Center Help',
-        'Open Documentation',
-        'View Quick Reference',
+        'Open User Guide',
+        'Quick Start',
+        "What's New",
         'Report Issue'
     );
-    
-    if (action === 'Open Documentation') {
-        vscode.env.openExternal(vscode.Uri.parse('https://github.com/your-repo/ai-command-center#readme'));
-    } else if (action === 'View Quick Reference') {
-        const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-        if (workspaceFolder) {
-            const quickRefPath = vscode.Uri.joinPath(workspaceFolder.uri, 'QUICK_REFERENCE.md');
-            try {
-                await vscode.workspace.openTextDocument(quickRefPath);
-                await vscode.window.showTextDocument(quickRefPath);
-            } catch {
-                vscode.window.showErrorMessage('Quick Reference file not found');
-            }
-        }
+
+    const extensionPath = vscode.extensions.getExtension('ai-command-center.ai-command-center')?.extensionPath
+        ?? vscode.extensions.getExtension('bmcdonnell.ai-command-center')?.extensionPath;
+
+    if (action === 'Open User Guide') {
+        await openDocInPreview('docs/USER_GUIDE.md', extensionPath);
+    } else if (action === 'Quick Start') {
+        await openDocInPreview('docs/QUICK_START.md', extensionPath);
+    } else if (action === "What's New") {
+        await openDocInPreview('docs/WHATS_NEW.md', extensionPath);
     } else if (action === 'Report Issue') {
-        vscode.env.openExternal(vscode.Uri.parse('https://github.com/your-repo/ai-command-center/issues'));
+        vscode.env.openExternal(vscode.Uri.parse('https://github.com/armoin2018/ai-command-center/issues'));
     }
     
     logger.info('Opened help', { component: 'commandHandlers' });
+}
+
+/**
+ * Opens a documentation markdown file in the VS Code markdown preview pane.
+ * Tries the workspace folder first, then falls back to the extension path.
+ */
+async function openDocInPreview(relativePath: string, extensionPath?: string): Promise<void> {
+    // Try workspace folder first
+    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+    const candidates: vscode.Uri[] = [];
+    if (workspaceFolder) {
+        candidates.push(vscode.Uri.joinPath(workspaceFolder.uri, relativePath));
+    }
+    if (extensionPath) {
+        candidates.push(vscode.Uri.file(require('path').join(extensionPath, relativePath)));
+    }
+
+    for (const uri of candidates) {
+        try {
+            await vscode.workspace.openTextDocument(uri);
+            await vscode.commands.executeCommand('markdown.showPreview', uri);
+            return;
+        } catch {
+            // Try next candidate
+        }
+    }
+    vscode.window.showErrorMessage(`Documentation file not found: ${relativePath}`);
 }
 
 /**

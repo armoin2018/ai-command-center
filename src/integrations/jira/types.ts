@@ -28,7 +28,7 @@ export interface JiraIssue {
     self: string;
     fields: {
         summary: string;
-        description?: any;
+        description?: string | Record<string, unknown> | null;
         issuetype: {
             id: string;
             name: string;
@@ -58,7 +58,7 @@ export interface JiraIssue {
             id: string;
             key: string;
         };
-        [key: string]: any; // Custom fields
+        [key: string]: unknown; // Custom fields
     };
 }
 
@@ -84,8 +84,9 @@ export interface SyncConflict {
     itemType: 'epic' | 'story' | 'task';
     itemId: string;
     jiraKey?: string;
-    localVersion: any;
-    remoteVersion: any;
+    /** Local plan item (Epic, Story, or Task). Typed loosely to avoid circular deps. */
+    localVersion: { title?: string; description?: string; priority?: string; id: string } | null;
+    remoteVersion: JiraIssue | null;
     conflictingFields: string[];
     resolution?: 'local' | 'remote' | 'merged';
     timestamp: string;
@@ -124,8 +125,8 @@ export interface SyncTransaction {
     itemType: 'epic' | 'story' | 'task';
     itemId: string;
     jiraKey?: string;
-    data: any;
-    rollbackData?: any;
+    data: Record<string, unknown>;
+    rollbackData?: Record<string, unknown>;
     status: 'pending' | 'done' | 'failed' | 'rolled-back';
 }
 
@@ -141,8 +142,8 @@ export interface WebhookPayload {
         items: {
             field: string;
             fieldtype: string;
-            from: any;
-            to: any;
+            from: string | null;
+            to: string | null;
         }[];
     };
 }
@@ -150,6 +151,6 @@ export interface WebhookPayload {
 export interface FieldMapping {
     aiccField: string;
     jiraField: string;
-    transform?: (value: any) => any;
+    transform?: (value: unknown) => unknown;
     required: boolean;
 }

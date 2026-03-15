@@ -8,9 +8,9 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as os from 'os';
 import { promisify } from 'util';
 import { Logger } from '../logger';
+import { getPlatformInfo, getPlatformPaths } from '../utils/platformInfo';
 
 const writeFileAsync = promisify(fs.writeFile);
 const mkdirAsync = promisify(fs.mkdir);
@@ -93,23 +93,9 @@ export class MCPConfigExporter {
      */
     async exportForClaudeDesktop(): Promise<{ path: string; content: string }> {
         const connection = this.getConnectionConfig();
-        const platform = os.platform();
-        const homeDir = os.homedir();
+        const { appDataDir } = getPlatformPaths();
 
-        let configDir: string;
-        switch (platform) {
-            case 'darwin':
-                configDir = path.join(homeDir, 'Library', 'Application Support', 'Claude');
-                break;
-            case 'win32':
-                configDir = path.join(process.env.APPDATA || path.join(homeDir, 'AppData', 'Roaming'), 'Claude');
-                break;
-            case 'linux':
-                configDir = path.join(homeDir, '.config', 'Claude');
-                break;
-            default:
-                throw new Error(`Unsupported platform: ${platform}`);
-        }
+        const configDir = path.join(appDataDir, 'Claude');
 
         const configPath = path.join(configDir, 'claude_desktop_config.json');
 
@@ -193,7 +179,7 @@ export class MCPConfigExporter {
         const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
         const outputPath = workspaceFolder 
             ? path.join(workspaceFolder.uri.fsPath, 'mcp-config.json')
-            : path.join(os.homedir(), 'mcp-config.json');
+            : path.join(getPlatformInfo().homeDir, 'mcp-config.json');
 
         const content = JSON.stringify(config, null, 2);
         await writeFileAsync(outputPath, content, 'utf8');
@@ -331,7 +317,7 @@ export class MCPConfigExporter {
         const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
         const outputPath = workspaceFolder 
             ? path.join(workspaceFolder.uri.fsPath, 'openai-mcp-config.json')
-            : path.join(os.homedir(), 'openai-mcp-config.json');
+            : path.join(getPlatformInfo().homeDir, 'openai-mcp-config.json');
 
         const content = JSON.stringify(config, null, 2);
         await writeFileAsync(outputPath, content, 'utf8');

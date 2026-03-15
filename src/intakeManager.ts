@@ -145,7 +145,16 @@ export class IntakeManager implements vscode.Disposable {
             return;
         }
 
-        const files = fs.readdirSync(intakesPath);
+        let files: string[];
+        try {
+            files = fs.readdirSync(intakesPath);
+        } catch (error) {
+            this.logger.error('Failed to read intakes directory', {
+                intakesPath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            return;
+        }
         const intakeFiles = files.filter(f => f.endsWith('.intake.yaml'));
 
         this.logger.info('Loading intake definitions', {
@@ -297,10 +306,14 @@ export class IntakeManager implements vscode.Disposable {
                 }
                 
                 if (validation.pattern) {
-                    const regex = new RegExp(validation.pattern);
-                    if (!regex.test(strValue)) {
-                        errors[field.name] = validation.errorMessage || 
-                            `${field.label} format is invalid`;
+                    try {
+                        const regex = new RegExp(validation.pattern);
+                        if (!regex.test(strValue)) {
+                            errors[field.name] = validation.errorMessage || 
+                                `${field.label} format is invalid`;
+                        }
+                    } catch {
+                        // Invalid regex pattern from form definition — skip validation
                     }
                 }
             } else if (field.type === 'number') {
@@ -390,8 +403,16 @@ export class IntakeManager implements vscode.Disposable {
         const dataPath = path.join(workspacePath, this.config.dataDirectory);
 
         // Ensure data directory exists
-        if (!fs.existsSync(dataPath)) {
-            fs.mkdirSync(dataPath, { recursive: true });
+        try {
+            if (!fs.existsSync(dataPath)) {
+                fs.mkdirSync(dataPath, { recursive: true });
+            }
+        } catch (error) {
+            this.logger.error('Failed to create intake data directory', {
+                dataPath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            throw error;
         }
 
         // Generate filename: {formName}.intake.json
@@ -416,7 +437,15 @@ export class IntakeManager implements vscode.Disposable {
         submissions.push(submission);
 
         // Write back to file
-        fs.writeFileSync(filePath, JSON.stringify(submissions, null, 2), 'utf8');
+        try {
+            fs.writeFileSync(filePath, JSON.stringify(submissions, null, 2), 'utf8');
+        } catch (error) {
+            this.logger.error('Failed to write intake submission file', {
+                filePath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            throw error;
+        }
         
         this.logger.debug('Submission persisted', { filePath, count: submissions.length });
     }

@@ -1,0 +1,1590 @@
+ [fa4] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+hg @ workbench.desktop.main.js:279
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+I @ workbench.desktop.main.js:1347
+createModel @ workbench.desktop.main.js:1348
+provideTextContent @ workbench.desktop.main.js:1949
+u @ workbench.desktop.main.js:1323
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+getOrCreate @ workbench.desktop.main.js:1970
+update @ workbench.desktop.main.js:1970
+(anonymous) @ workbench.desktop.main.js:1949
+walkTokens @ workbench.desktop.main.js:399
+jr.walkTokens @ workbench.desktop.main.js:400
+updateCodeBlockTextModels @ workbench.desktop.main.js:1949
+m @ workbench.desktop.main.js:1949
+(anonymous) @ workbench.desktop.main.js:1949
+qot @ workbench.desktop.main.js:1949
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+setModel @ workbench.desktop.main.js:2092
+Tc @ workbench.desktop.main.js:2255
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (workbench.desktop.main.js:1949:45008)
+    at zXe.u (workbench.desktop.main.js:1323:22474)
+    at zXe.r (workbench.desktop.main.js:1323:21555)
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+hg @ workbench.desktop.main.js:279
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+I @ workbench.desktop.main.js:1347
+createModel @ workbench.desktop.main.js:1348
+provideTextContent @ workbench.desktop.main.js:1949
+u @ workbench.desktop.main.js:1323
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+getOrCreate @ workbench.desktop.main.js:1970
+update @ workbench.desktop.main.js:1970
+(anonymous) @ workbench.desktop.main.js:1949
+walkTokens @ workbench.desktop.main.js:399
+jr.walkTokens @ workbench.desktop.main.js:400
+updateCodeBlockTextModels @ workbench.desktop.main.js:1949
+m @ workbench.desktop.main.js:1949
+(anonymous) @ workbench.desktop.main.js:1949
+qot @ workbench.desktop.main.js:1949
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+setModel @ workbench.desktop.main.js:2092
+Tc @ workbench.desktop.main.js:2255
+   ERR [fa4] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1949:45008)
+    at zXe.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:22474)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21555)
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+hg @ workbench.desktop.main.js:279
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+I @ workbench.desktop.main.js:1347
+createModel @ workbench.desktop.main.js:1348
+provideTextContent @ workbench.desktop.main.js:1949
+u @ workbench.desktop.main.js:1323
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+getOrCreate @ workbench.desktop.main.js:1970
+update @ workbench.desktop.main.js:1970
+(anonymous) @ workbench.desktop.main.js:1949
+walkTokens @ workbench.desktop.main.js:399
+jr.walkTokens @ workbench.desktop.main.js:400
+updateCodeBlockTextModels @ workbench.desktop.main.js:1949
+m @ workbench.desktop.main.js:1949
+(anonymous) @ workbench.desktop.main.js:1949
+qot @ workbench.desktop.main.js:1949
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+setModel @ workbench.desktop.main.js:2092
+Tc @ workbench.desktop.main.js:2255
+ [146] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at aZe.u [as onModelAdded] (workbench.desktop.main.js:29:1377)
+    at new Yi (workbench.desktop.main.js:518:37446)
+    at new Exe (workbench.desktop.main.js:2004:3446)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at Axe.r (workbench.desktop.main.js:2007:6361)
+    at workbench.desktop.main.js:2007:4753
+    at NodeList.forEach (<anonymous>)
+    at Axe.walkTreeAndAnnotateReferenceLinks (workbench.desktop.main.js:2007:4133)
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+   ERR [146] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at aZe.u [as onModelAdded] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new Yi (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:37446)
+    at new Exe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2004:3446)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at Axe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:6361)
+    at vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:4753
+    at NodeList.forEach (<anonymous>)
+    at Axe.walkTreeAndAnnotateReferenceLinks (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:4133)
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+ [148] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at aZe.u [as onModelLanguageChanged] (workbench.desktop.main.js:29:1377)
+    at new Yi (workbench.desktop.main.js:518:37510)
+    at new Exe (workbench.desktop.main.js:2004:3446)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at Axe.r (workbench.desktop.main.js:2007:6361)
+    at workbench.desktop.main.js:2007:4753
+    at NodeList.forEach (<anonymous>)
+    at Axe.walkTreeAndAnnotateReferenceLinks (workbench.desktop.main.js:2007:4133)
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+   ERR [148] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at aZe.u [as onModelLanguageChanged] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new Yi (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:37510)
+    at new Exe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2004:3446)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at Axe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:6361)
+    at vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:4753
+    at NodeList.forEach (<anonymous>)
+    at Axe.walkTreeAndAnnotateReferenceLinks (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2007:4133)
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+Yi @ workbench.desktop.main.js:518
+Exe @ workbench.desktop.main.js:2004
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+r @ workbench.desktop.main.js:2007
+(anonymous) @ workbench.desktop.main.js:2007
+walkTreeAndAnnotateReferenceLinks @ workbench.desktop.main.js:2007
+x @ workbench.desktop.main.js:2023
+(anonymous) @ workbench.desktop.main.js:2023
+  INFO Started local extension host with pid 89040.
+ Unrecognized feature: 'local-network-access'.
+gb @ workbench.desktop.main.js:4167
+G$e @ workbench.desktop.main.js:4167
+vAt @ workbench.desktop.main.js:4167
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+createWebviewElement @ workbench.desktop.main.js:4167
+P @ workbench.desktop.main.js:4167
+claim @ workbench.desktop.main.js:4167
+oc @ workbench.desktop.main.js:702
+(anonymous) @ workbench.desktop.main.js:702
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+setVisible @ workbench.desktop.main.js:584
+ub @ workbench.desktop.main.js:606
+(anonymous) @ workbench.desktop.main.js:606
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+I @ workbench.desktop.main.js:1365
+add @ workbench.desktop.main.js:1365
+sb @ workbench.desktop.main.js:1365
+N @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+bufferChangeEvents @ workbench.desktop.main.js:1368
+Q @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+registerViews2 @ workbench.desktop.main.js:581
+p @ workbench.desktop.main.js:702
+(anonymous) @ workbench.desktop.main.js:702
+d @ workbench.desktop.main.js:506
+acceptUsers @ workbench.desktop.main.js:506
+Mb @ workbench.desktop.main.js:3919
+Jb @ workbench.desktop.main.js:3919
+nb @ workbench.desktop.main.js:3918
+ An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+mountTo @ workbench.desktop.main.js:4167
+P @ workbench.desktop.main.js:4167
+claim @ workbench.desktop.main.js:4167
+oc @ workbench.desktop.main.js:702
+(anonymous) @ workbench.desktop.main.js:702
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+setVisible @ workbench.desktop.main.js:584
+ub @ workbench.desktop.main.js:606
+(anonymous) @ workbench.desktop.main.js:606
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+I @ workbench.desktop.main.js:1365
+add @ workbench.desktop.main.js:1365
+sb @ workbench.desktop.main.js:1365
+N @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+bufferChangeEvents @ workbench.desktop.main.js:1368
+Q @ workbench.desktop.main.js:1365
+(anonymous) @ workbench.desktop.main.js:1365
+C @ workbench.desktop.main.js:29
+D @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+registerViews2 @ workbench.desktop.main.js:581
+p @ workbench.desktop.main.js:702
+(anonymous) @ workbench.desktop.main.js:702
+d @ workbench.desktop.main.js:506
+acceptUsers @ workbench.desktop.main.js:506
+Mb @ workbench.desktop.main.js:3919
+Jb @ workbench.desktop.main.js:3919
+nb @ workbench.desktop.main.js:3918
+ Overwriting grammar scope name to file mapping for scope source.python.
+Old grammar file: file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/extensions/python/syntaxes/MagicPython.tmLanguage.json.
+New grammar file: file:///Users/blainemcdonnell/~/.workshop/extensions/ms-python.vscode-pylance-2026.1.1/grammars/PylancePython.tmLanguage
+register @ workbench.desktop.main.js:1366
+cWs @ workbench.desktop.main.js:1368
+U @ workbench.desktop.main.js:1368
+ Overwriting grammar scope name to file mapping for scope source.yaml.
+Old grammar file: file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/extensions/yaml/syntaxes/yaml.tmLanguage.json.
+New grammar file: file:///Users/blainemcdonnell/~/.workshop/extensions/redhat.vscode-yaml-1.20.0/syntaxes/yaml.tmLanguage.json
+register @ workbench.desktop.main.js:1366
+cWs @ workbench.desktop.main.js:1368
+U @ workbench.desktop.main.js:1368
+  INFO MCP Registry configured: https://api.mcp.github.com
+   ERR [Extension Host] (node:89040) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+Uxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [Extension Host] (node:89040) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+   ERR [Extension Host] (node:89040) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+Uxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [Extension Host] (node:89040) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+  INFO Settings Sync: Account status changed from uninitialized to unavailable
+ [Extension Host] [2026-02-21 20:21:46] info: AI Command Center: Starting activation...
+ [Extension Host] [2026-02-21 20:21:46] info: Configuration loaded with hierarchy {"component":"ConfigManager","planPath":".project/plan","logLevel":"info","healthScore":95,"hierarchySources":[]}
+ [Extension Host] [2026-02-21 20:21:46] info: Configuration commands registered {"component":"ConfigCommands","commandCount":11}
+ [Extension Host] [2026-02-21 20:21:46] info: Configuration watcher started {"component":"ConfigWatcher","watchedPaths":["/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/src/defaults/aicc.json"]}
+ [Extension Host] [2026-02-21 20:21:46] info: Evolution Tracker created {"component":"EvolutionTracker","historyPath":".project/history"}
+ [Extension Host] [2026-02-21 20:21:46] info: PlanningManager initialized with Evolution Tracker and Collaborative Editing {"component":"PlanningManager","workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+ Extension Host
+ [2026-02-21 20:21:46] info: AI Command Center: Starting activation...
+[2026-02-21 20:21:46] info: Configuration loaded with hierarchy {"component":"ConfigManager","planPath":".project/plan","logLevel":"info","healthScore":95,"hierarchySources":[]}
+[2026-02-21 20:21:46] info: Configuration commands registered {"component":"ConfigCommands","commandCount":11}
+[2026-02-21 20:21:46] info: Configuration watcher started {"component":"ConfigWatcher","watchedPaths":["/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/src/defaults/aicc.json"]}
+[2026-02-21 20:21:46] info: Evolution Tracker created {"component":"EvolutionTracker","historyPath":".project/history"}
+[2026-02-21 20:21:46] info: PlanningManager initialized with Evolution Tracker and Collaborative Editing {"component":"PlanningManager","workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+
+ [Extension Host] [2026-02-21 20:21:47] info: Planning structure initialized {"component":"WorkspaceManager","planPath":"/Users/blainemcdonnell/git/ai-command-center/.project/plan"}
+ [Extension Host] [2026-02-21 20:21:47] info: Evolution Tracker initialized {"component":"EvolutionTracker","historyPath":".project/history","flushInterval":5000}
+ [Extension Host] [2026-02-21 20:21:47] info: Auto-save started {"component":"PlanningManager","intervalMs":30}
+ [Extension Host] [2026-02-21 20:21:47] info: Planning structure initialized {"component":"PlanningManager"}
+ [Extension Host] [2026-02-21 20:21:47] info: Planning commands registered {"count":9}
+ [Extension Host] [2026-02-21 20:21:47] info: Initializing Panel Loader Service
+ Extension Host
+ [2026-02-21 20:21:47] info: Planning structure initialized {"component":"WorkspaceManager","planPath":"/Users/blainemcdonnell/git/ai-command-center/.project/plan"}
+[2026-02-21 20:21:47] info: Evolution Tracker initialized {"component":"EvolutionTracker","historyPath":".project/history","flushInterval":5000}
+[2026-02-21 20:21:47] info: Auto-save started {"component":"PlanningManager","intervalMs":30}
+[2026-02-21 20:21:47] info: Planning structure initialized {"component":"PlanningManager"}
+[2026-02-21 20:21:47] info: Planning commands registered {"count":9}
+[2026-02-21 20:21:47] info: Initializing Panel Loader Service
+
+marketplace.visualstudio.com/_apis/public/gallery/vscode/ai-command-center/ai-command-center/latest:1  Failed to load resource: the server responded with a status of 404 ()
+api.github.com/copilot/mcp_registry:1  Failed to load resource: the server responded with a status of 404 ()
+   ERR Failed to fetch MCP registry providers Server returned 404
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+I @ workbench.desktop.main.js:1370
+ [Extension Host] [2026-02-21 20:21:48] info: Panel Loader initialized with 3 panels
+ [Extension Host] [2026-02-21 20:21:48] info: Initializing Tab Loader Service
+ [Extension Host] [2026-02-21 20:21:48] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/Agent_Status.tab.yaml
+ [Extension Host] [2026-02-21 20:21:48] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/All_Satus.tab.yaml
+ [Extension Host] [2026-02-21 20:21:48] info: Tab Loader initialized with 3 tabs
+ [Extension Host] [2026-02-21 20:21:48] info: Initializing Intake Loader Service
+ [Extension Host] [2026-02-21 20:21:48] info: Intake Loader initialized with 2 intakes
+ [Extension Host] [2026-02-21 20:21:48] info: Initializing Plan Generator
+ [Extension Host] [2026-02-21 20:21:48] info: PLAN.json loaded with 490 items (index: 490 entries)
+ [Extension Host] [2026-02-21 20:21:48] info: Plan Generator initialized - using PLAN.json as source of truth
+ [Extension Host] [2026-02-21 20:21:48] info: PLAN.json file watcher established
+ [Extension Host] [2026-02-21 20:21:48] info: SchedulerEngine initialized with 0 persisted task(s)
+ [Extension Host] [2026-02-21 20:21:48] info: SchedulerEngine started
+ [Extension Host] [2026-02-21 20:21:48] error: Failed to initialize schema validators {"error":"Error: ENOENT: no such file or directory, open '/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/.github/aicc/schemas/panel.v1.schema.json'"}
+ [Extension Host] [2026-02-21 20:21:48] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+ [Extension Host] [2026-02-21 20:21:48] info: Elected as MCP leader {"component":"LeaderElection","port":3100,"workspaceId":"ws-89040-1771726908961"}
+ [Extension Host] [2026-02-21 20:21:48] info: MCP Server running at http://localhost:3000 {"transport":"http","port":3000,"host":"localhost"}
+ [Extension Host] [2026-02-21 20:21:48] info: JiraIntegrationManager created {"component":"JiraIntegrationManager"}
+ [Extension Host] [2026-02-21 20:21:48] info: Jira integration disabled {"component":"JiraIntegrationManager"}
+ [Extension Host] [2026-02-21 20:21:48] info: Jira commands registered {"component":"JiraCommands"}
+ [Extension Host] [2026-02-21 20:21:48] info: AgentDetector initialized {"pollingInterval":30000,"watchedExtensions":["GitHub.copilot-chat"]}
+ [Extension Host] [2026-02-21 20:21:48] info: Agent status changed {"previous":[],"current":["GitHub.copilot-chat"]}
+ [Extension Host] [2026-02-21 20:21:48] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":false}]}
+ [Extension Host] [2026-02-21 20:21:48] info: ChatParticipantManager initializing {"participantId":"aicc.agent","agentsDirectory":".github/agents"}
+ [Extension Host] [2026-02-21 20:21:48] info: Loading agent definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/agents","fileCount":22}
+ [Extension Host] [2026-02-21 20:21:48] info: Agent definitions loaded {"count":22,"agents":["ailey-architect","ailey-base","ailey-brainstorm","ailey-bugfixer","ailey-collaborative-minds","ailey-data-architect","ailey-data-engineer","ailey-designer","ailey-devops","ailey-documentation","ailey-entrepreneur","ailey-game-designer","ailey-leader-panel","ailey-marketing","ailey-optimizer","ailey-orchestrator","ailey-patent-reviewer","ailey-planner","ailey-porting","ailey-product-design","ailey-security","ailey-tester"]}
+ [Extension Host] [2026-02-21 20:21:48] info: Chat participant registered {"id":"aicc.agent"}
+ [Extension Host] [2026-02-21 20:21:48] info: ChatParticipantManager initialized {"agentCount":22}
+ [Extension Host] [2026-02-21 20:21:48] info: AIKitManager initialized {"cacheBasePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/cache","globalCachePath":"/Users/blainemcdonnell/.vscode/ai-ley-cache","enableAutoUpdate":false}
+ [Extension Host] [2026-02-21 20:21:48] info: Auto-load configured {"enabled":false,"defaultKits":[],"onActivation":true}
+ [Extension Host] [2026-02-21 20:21:48] info: IntakeManager initialized {"intakesDirectory":".github/aicc/intakes","dataDirectory":".project"}
+ [Extension Host] [2026-02-21 20:21:48] info: Loading intake definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/aicc/intakes","fileCount":2}
+ [Extension Host] [2026-02-21 20:21:48] info: Intake definitions loaded {"count":2,"intakes":["bug-report","feature-request"]}
+ [Extension Host] [2026-02-21 20:21:48] info: IntakeManager initialized {"intakeCount":2}
+ [Extension Host] [2026-02-21 20:21:48] info: Version Override System initialized {"component":"VersionOverrideSystem","configPath":"/Users/blainemcdonnell/git/ai-command-center/.project/config/instruction-sources.json"}
+ [Extension Host] [2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/logs","maxFileSize":10485760,"maxFiles":5}
+ [Extension Host] [2026-02-21 20:21:49] info: MCP Server starting with HTTP {"component":"MCPServer","host":"localhost","port":3000}
+ [Extension Host] [2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/logs","maxFileSize":10485760,"maxFiles":5}
+ [Extension Host] [2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"MCPServer"}
+ [Extension Host] [2026-02-21 20:21:49] info: MCP Server listening on http://localhost:3000 {"component":"MCPServer"}
+ [Extension Host] [2026-02-21 20:21:49] info: MCP Server started successfully {"component":"MCPManager","transport":"http","port":3000,"host":"localhost"}
+ [Extension Host] [2026-02-21 20:21:49] info: Connection state changed {"component":"ConnectionManager","previousState":"disconnected","newState":"connected","attempts":0}
+ [Extension Host] [2026-02-21 20:21:49] info: MCP connection state transition {"component":"MCPManager","previousState":"disconnected","newState":"connected","attempts":0}
+ [Extension Host] [2026-02-21 20:21:49] info: Leader set in inventory {"component":"MCPInventoryManager","workspaceId":"ws-89040-1771726908961","port":3100}
+ [Extension Host] [2026-02-21 20:21:49] info: Workspace registered in inventory {"component":"MCPInventoryManager","workspaceId":"ws-89040-1771726908961"}
+ [Extension Host] [2026-02-21 20:21:49] info: Inventory health scanner started {"component":"MCPInventoryManager","intervalMs":30000}
+ [Extension Host] [2026-02-21 20:21:49] info: Inventory file watcher started {"component":"MCPInventoryManager","filePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/mcp-inventory.json"}
+ [Extension Host] [2026-02-21 20:21:49] info: Source configuration loaded {"component":"VersionOverrideSystem","sourceCount":1}
+ Extension Host
+ [2026-02-21 20:21:48] info: Panel Loader initialized with 3 panels
+[2026-02-21 20:21:48] info: Initializing Tab Loader Service
+[2026-02-21 20:21:48] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/Agent_Status.tab.yaml
+[2026-02-21 20:21:48] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/All_Satus.tab.yaml
+[2026-02-21 20:21:48] info: Tab Loader initialized with 3 tabs
+[2026-02-21 20:21:48] info: Initializing Intake Loader Service
+[2026-02-21 20:21:48] info: Intake Loader initialized with 2 intakes
+[2026-02-21 20:21:48] info: Initializing Plan Generator
+[2026-02-21 20:21:48] info: PLAN.json loaded with 490 items (index: 490 entries)
+[2026-02-21 20:21:48] info: Plan Generator initialized - using PLAN.json as source of truth
+[2026-02-21 20:21:48] info: PLAN.json file watcher established
+[2026-02-21 20:21:48] info: SchedulerEngine initialized with 0 persisted task(s)
+[2026-02-21 20:21:48] info: SchedulerEngine started
+[2026-02-21 20:21:48] error: Failed to initialize schema validators {"error":"Error: ENOENT: no such file or directory, open '/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/.github/aicc/schemas/panel.v1.schema.json'"}
+[2026-02-21 20:21:48] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+[2026-02-21 20:21:48] info: Elected as MCP leader {"component":"LeaderElection","port":3100,"workspaceId":"ws-89040-1771726908961"}
+[2026-02-21 20:21:48] info: MCP Server running at http://localhost:3000 {"transport":"http","port":3000,"host":"localhost"}
+[2026-02-21 20:21:48] info: JiraIntegrationManager created {"component":"JiraIntegrationManager"}
+[2026-02-21 20:21:48] info: Jira integration disabled {"component":"JiraIntegrationManager"}
+[2026-02-21 20:21:48] info: Jira commands registered {"component":"JiraCommands"}
+[2026-02-21 20:21:48] info: AgentDetector initialized {"pollingInterval":30000,"watchedExtensions":["GitHub.copilot-chat"]}
+[2026-02-21 20:21:48] info: Agent status changed {"previous":[],"current":["GitHub.copilot-chat"]}
+[2026-02-21 20:21:48] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":false}]}
+[2026-02-21 20:21:48] info: ChatParticipantManager initializing {"participantId":"aicc.agent","agentsDirectory":".github/agents"}
+[2026-02-21 20:21:48] info: Loading agent definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/agents","fileCount":22}
+[2026-02-21 20:21:48] info: Agent definitions loaded {"count":22,"agents":["ailey-architect","ailey-base","ailey-brainstorm","ailey-bugfixer","ailey-collaborative-minds","ailey-data-architect","ailey-data-engineer","ailey-designer","ailey-devops","ailey-documentation","ailey-entrepreneur","ailey-game-designer","ailey-leader-panel","ailey-marketing","ailey-optimizer","ailey-orchestrator","ailey-patent-reviewer","ailey-planner","ailey-porting","ailey-product-design","ailey-security","ailey-tester"]}
+[2026-02-21 20:21:48] info: Chat participant registered {"id":"aicc.agent"}
+[2026-02-21 20:21:48] info: ChatParticipantManager initialized {"agentCount":22}
+[2026-02-21 20:21:48] info: AIKitManager initialized {"cacheBasePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/cache","globalCachePath":"/Users/blainemcdonnell/.vscode/ai-ley-cache","enableAutoUpdate":false}
+[2026-02-21 20:21:48] info: Auto-load configured {"enabled":false,"defaultKits":[],"onActivation":true}
+[2026-02-21 20:21:48] info: IntakeManager initialized {"intakesDirectory":".github/aicc/intakes","dataDirectory":".project"}
+[2026-02-21 20:21:48] info: Loading intake definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/aicc/intakes","fileCount":2}
+[2026-02-21 20:21:48] info: Intake definitions loaded {"count":2,"intakes":["bug-report","feature-request"]}
+[2026-02-21 20:21:48] info: IntakeManager initialized {"intakeCount":2}
+[2026-02-21 20:21:48] info: Version Override System initialized {"component":"VersionOverrideSystem","configPath":"/Users/blainemcdonnell/git/ai-command-center/.project/config/instruction-sources.json"}
+[2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/logs","maxFileSize":10485760,"maxFiles":5}
+[2026-02-21 20:21:49] info: MCP Server starting with HTTP {"component":"MCPServer","host":"localhost","port":3000}
+[2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/logs","maxFileSize":10485760,"maxFiles":5}
+[2026-02-21 20:21:49] info: Client log endpoint initialized {"component":"MCPServer"}
+[2026-02-21 20:21:49] info: MCP Server listening on http://localhost:3000 {"component":"MCPServer"}
+[2026-02-21 20:21:49] info: MCP Server started successfully {"component":"MCPManager","transport":"http","port":3000,"host":"localhost"}
+[2026-02-21 20:21:49] info: Connection state changed {"component":"ConnectionManager","previousState":"disconnected","newState":"connected","attempts":0}
+[2026-02-21 20:21:49] info: MCP connection state transition {"component":"MCPManager","previousState":"disconnected","newState":"connected","attempts":0}
+[2026-02-21 20:21:49] info: Leader set in inventory {"component":"MCPInventoryManager","workspaceId":"ws-89040-1771726908961","port":3100}
+[2026-02-21 20:21:49] info: Workspace registered in inventory {"component":"MCPInventoryManager","workspaceId":"ws-89040-1771726908961"}
+[2026-02-21 20:21:49] info: Inventory health scanner started {"component":"MCPInventoryManager","intervalMs":30000}
+[2026-02-21 20:21:49] info: Inventory file watcher started {"component":"MCPInventoryManager","filePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/mcp-inventory.json"}
+[2026-02-21 20:21:49] info: Source configuration loaded {"component":"VersionOverrideSystem","sourceCount":1}
+
+ [Extension Host] [2026-02-21 20:21:49] info: Instructions refreshed from source {"component":"VersionOverrideSystem","sourceId":"local-default","version":"local","fileCount":1250}
+ [Extension Host] [2026-02-21 20:21:49] info: All sources refreshed {"component":"VersionOverrideSystem"}
+ [Extension Host] [2026-02-21 20:21:49] info: Version Override System ready {"component":"VersionOverrideSystem","sourceCount":1}
+ [Extension Host] [2026-02-21 20:21:49] info: Asset Tree Map commands registered
+ [Extension Host] [2026-02-21 20:21:49] info: Synthetic Test commands registered
+ [Extension Host] [2026-02-21 20:21:49] info: PlanArchivalService initialized {"workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+ [Extension Host] [2026-02-21 20:21:49] info: OfflineQueue initialized (0 items, online=true) {"component":"OfflineQueue"}
+ [Extension Host] [2026-02-21 20:21:49] info: AgentSessionMemory initialized (0 entries) {"component":"AgentSessionMemory"}
+ [Extension Host] [2026-02-21 20:21:49] info: KnowledgeBase initialized (0 entries) at /Users/blainemcdonnell/.aicc/knowledge {"component":"KnowledgeBase"}
+ [Extension Host] [2026-02-21 20:21:49] info: PromptEffectivenessTracker initialized (0 usages) {"component":"PromptEffectivenessTracker"}
+ [Extension Host] [2026-02-21 20:21:49] info: SkillHealthMonitor: initialized with 300000ms interval {"component":"SkillHealthMonitor"}
+ [Extension Host] [2026-02-21 20:21:49] info: IdeationService initialized {"component":"IdeationService"}
+ [Extension Host] [2026-02-21 20:21:49] info: IdeaAnalytics initialized {"component":"IdeaAnalytics"}
+ [Extension Host] [2026-02-21 20:21:49] info: Initializing Smart Context Engine {"component":"SmartContextEngine","minScore":5,"maxResults":15,"debounceMs":500}
+ [Extension Host] [2026-02-21 20:21:49] info: Smart Context Engine initialized {"component":"SmartContextEngine"}
+ [Extension Host] [2026-02-21 20:21:49] info: GitBranchLinker created {"component":"GitBranchLinker"}
+ [Extension Host] [2026-02-21 20:21:49] info: GitBranchLinker initialised {"component":"GitBranchLinker","repoCount":1,"existingLinks":0}
+ [Extension Host] [2026-02-21 20:21:49] info: NlPlanningParser initialized {"component":"NlPlanningParser"}
+ [Extension Host] [2026-02-21 20:21:49] info: NlPlanningChatHandler initialized {"component":"NlPlanningChatHandler"}
+ [Extension Host] [2026-02-21 20:21:49] info: AI Command Center: Activation complete
+ [Extension Host] [2026-02-21 20:21:49] info: Secondary Panel WebView initialized
+ [Extension Host] [2026-02-21 20:21:49] info: Component registry initialized with 10 components
+ [Extension Host] [2026-02-21 20:21:49] info: PanelRenderer initialized
+ Extension Host
+ [2026-02-21 20:21:49] info: Instructions refreshed from source {"component":"VersionOverrideSystem","sourceId":"local-default","version":"local","fileCount":1250}
+[2026-02-21 20:21:49] info: All sources refreshed {"component":"VersionOverrideSystem"}
+[2026-02-21 20:21:49] info: Version Override System ready {"component":"VersionOverrideSystem","sourceCount":1}
+[2026-02-21 20:21:49] info: Asset Tree Map commands registered
+[2026-02-21 20:21:49] info: Synthetic Test commands registered
+[2026-02-21 20:21:49] info: PlanArchivalService initialized {"workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+[2026-02-21 20:21:49] info: OfflineQueue initialized (0 items, online=true) {"component":"OfflineQueue"}
+[2026-02-21 20:21:49] info: AgentSessionMemory initialized (0 entries) {"component":"AgentSessionMemory"}
+[2026-02-21 20:21:49] info: KnowledgeBase initialized (0 entries) at /Users/blainemcdonnell/.aicc/knowledge {"component":"KnowledgeBase"}
+[2026-02-21 20:21:49] info: PromptEffectivenessTracker initialized (0 usages) {"component":"PromptEffectivenessTracker"}
+[2026-02-21 20:21:49] info: SkillHealthMonitor: initialized with 300000ms interval {"component":"SkillHealthMonitor"}
+[2026-02-21 20:21:49] info: IdeationService initialized {"component":"IdeationService"}
+[2026-02-21 20:21:49] info: IdeaAnalytics initialized {"component":"IdeaAnalytics"}
+[2026-02-21 20:21:49] info: Initializing Smart Context Engine {"component":"SmartContextEngine","minScore":5,"maxResults":15,"debounceMs":500}
+[2026-02-21 20:21:49] info: Smart Context Engine initialized {"component":"SmartContextEngine"}
+[2026-02-21 20:21:49] info: GitBranchLinker created {"component":"GitBranchLinker"}
+[2026-02-21 20:21:49] info: GitBranchLinker initialised {"component":"GitBranchLinker","repoCount":1,"existingLinks":0}
+[2026-02-21 20:21:49] info: NlPlanningParser initialized {"component":"NlPlanningParser"}
+[2026-02-21 20:21:49] info: NlPlanningChatHandler initialized {"component":"NlPlanningChatHandler"}
+[2026-02-21 20:21:49] info: AI Command Center: Activation complete
+[2026-02-21 20:21:49] info: Secondary Panel WebView initialized
+[2026-02-21 20:21:49] info: Component registry initialized with 10 components
+[2026-02-21 20:21:49] info: PanelRenderer initialized
+
+   ERR chatParticipant must be declared in package.json: claude-code
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+$onUnexpectedError @ workbench.desktop.main.js:568
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [12d] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+wb @ workbench.desktop.main.js:1323
+KCe @ workbench.desktop.main.js:1323
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+W @ workbench.desktop.main.js:3876
+resolve @ workbench.desktop.main.js:3876
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+y @ workbench.desktop.main.js:542
+$tryOpenDocument @ workbench.desktop.main.js:542
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (workbench.desktop.main.js:29:1377)
+    at KCe.wb (workbench.desktop.main.js:1323:9407)
+    at new KCe (workbench.desktop.main.js:1323:9275)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at cDt.W (workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (workbench.desktop.main.js:3876:6173)
+    at zXe.r (workbench.desktop.main.js:1323:21473)
+    at zXe.f (workbench.desktop.main.js:1323:21086)
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+wb @ workbench.desktop.main.js:1323
+KCe @ workbench.desktop.main.js:1323
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+W @ workbench.desktop.main.js:3876
+resolve @ workbench.desktop.main.js:3876
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+y @ workbench.desktop.main.js:542
+$tryOpenDocument @ workbench.desktop.main.js:542
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+   ERR [12d] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at KCe.wb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9407)
+    at new KCe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9275)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at cDt.W (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6173)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21473)
+    at zXe.f (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21086)
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+check @ workbench.desktop.main.js:27
+u @ workbench.desktop.main.js:29
+wb @ workbench.desktop.main.js:1323
+KCe @ workbench.desktop.main.js:1323
+o @ workbench.desktop.main.js:1406
+createInstance @ workbench.desktop.main.js:1406
+W @ workbench.desktop.main.js:3876
+resolve @ workbench.desktop.main.js:3876
+r @ workbench.desktop.main.js:1323
+f @ workbench.desktop.main.js:1323
+acquire @ workbench.desktop.main.js:27
+acquire @ workbench.desktop.main.js:27
+createModelReference @ workbench.desktop.main.js:1323
+y @ workbench.desktop.main.js:542
+$tryOpenDocument @ workbench.desktop.main.js:542
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+ [Extension Host] [2026-02-21 20:22:18] info: Agent status changed {"previous":["GitHub.copilot-chat"],"current":["GitHub.copilot-chat"]}
+ [Extension Host] [2026-02-21 20:22:18] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":true}]}
+ Extension Host
+ [2026-02-21 20:22:18] info: Agent status changed {"previous":["GitHub.copilot-chat"],"current":["GitHub.copilot-chat"]}
+[2026-02-21 20:22:18] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":true}]}
+
+ [Extension Host] [2026-02-21 20:22:19] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+ [Extension Host] [2026-02-21 20:22:19] info: Inventory changed on disk {"component":"MCPManager"}
+ [Extension Host] [2026-02-21 20:22:19] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+ [Extension Host] [2026-02-21 20:22:19] info: Inventory changed on disk {"component":"MCPManager"}
+ Extension Host
+ [2026-02-21 20:22:19] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+[2026-02-21 20:22:19] info: Inventory changed on disk {"component":"MCPManager"}
+[2026-02-21 20:22:19] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+[2026-02-21 20:22:19] info: Inventory changed on disk {"component":"MCPManager"}
+
+  WARN SettingsEditor2: Settings not included in settingsLayout.ts: extensions.requestTimeout, github.copilot.chat.agent.terminal.allowList, github.copilot.chat.agent.terminal.denyList, terminal.integrated.developer.devMode, terminal.integrated.developer.ptyHost.latency, terminal.integrated.developer.ptyHost.startupDelay, chat.statusWidget.sku
+warn @ workbench.desktop.main.js:38
+warn @ workbench.desktop.main.js:38
+warn @ workbench.desktop.main.js:3871
+hd @ workbench.desktop.main.js:1386
+setInput @ workbench.desktop.main.js:1386
+  INFO [perf] Render performance baseline is 21ms
+ Overwriting grammar scope name to file mapping for scope source.python.
+Old grammar file: file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/extensions/python/syntaxes/MagicPython.tmLanguage.json.
+New grammar file: file:///Users/blainemcdonnell/~/.workshop/extensions/ms-python.vscode-pylance-2026.1.1/grammars/PylancePython.tmLanguage
+register @ textMateTokenization…er.workerMain.js:26
+ Overwriting grammar scope name to file mapping for scope source.yaml.
+Old grammar file: file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/extensions/yaml/syntaxes/yaml.tmLanguage.json.
+New grammar file: file:///Users/blainemcdonnell/~/.workshop/extensions/redhat.vscode-yaml-1.20.0/syntaxes/yaml.tmLanguage.json
+register @ textMateTokenization…er.workerMain.js:26
+   ERR Webview.loadLocalResource - Error using fileReader. requestUri=file:///Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/media/secondaryPanel/%7B%7BcodiconFontUri%7D%7D, resourceToLoad=file:///Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.7/media/secondaryPanel/%7B%7BcodiconFontUri%7D%7D
+error @ workbench.desktop.main.js:38
+ [1b6] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at YWi.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41309)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+check @ workbench.desktop.main.js:27
+   ERR [1b6] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at YWi.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41309)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+error @ workbench.desktop.main.js:38
+ [fa4] potential listener LEAK detected, having 192 listeners already. MOST frequent listener (71):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (workbench.desktop.main.js:1949:45008)
+    at zXe.u (workbench.desktop.main.js:1323:22474)
+    at zXe.r (workbench.desktop.main.js:1323:21555)
+check @ workbench.desktop.main.js:27
+   ERR [fa4] potential listener LEAK detected, having 192 listeners already. MOST frequent listener (71):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1949:45008)
+    at zXe.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:22474)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21555)
+error @ workbench.desktop.main.js:38
+ [12d] potential listener LEAK detected, having 215 listeners already. MOST frequent listener (51):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (workbench.desktop.main.js:29:1377)
+    at KCe.wb (workbench.desktop.main.js:1323:9407)
+    at new KCe (workbench.desktop.main.js:1323:9275)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at cDt.W (workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (workbench.desktop.main.js:3876:6173)
+    at zXe.r (workbench.desktop.main.js:1323:21473)
+    at zXe.f (workbench.desktop.main.js:1323:21086)
+check @ workbench.desktop.main.js:27
+   ERR [12d] potential listener LEAK detected, having 215 listeners already. MOST frequent listener (51):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at KCe.wb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9407)
+    at new KCe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9275)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at cDt.W (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6173)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21473)
+    at zXe.f (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21086)
+error @ workbench.desktop.main.js:38
+ [1b6] potential listener LEAK detected, having 255 listeners already. MOST frequent listener (40):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at YWi.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41309)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at new ZDe (workbench.desktop.main.js:2246:76832)
+check @ workbench.desktop.main.js:27
+   ERR [1b6] potential listener LEAK detected, having 255 listeners already. MOST frequent listener (40):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at YWi.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41309)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at new ZDe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2246:76832)
+error @ workbench.desktop.main.js:38
+ [fa4] potential listener LEAK detected, having 261 listeners already. MOST frequent listener (71):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (workbench.desktop.main.js:1949:45008)
+    at zXe.u (workbench.desktop.main.js:1323:22474)
+    at zXe.r (workbench.desktop.main.js:1323:21555)
+check @ workbench.desktop.main.js:27
+   ERR [fa4] potential listener LEAK detected, having 261 listeners already. MOST frequent listener (71):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:888)
+    at Kot.provideTextContent (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1949:45008)
+    at zXe.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:22474)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21555)
+error @ workbench.desktop.main.js:38
+ [042] potential listener LEAK detected, having 400 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at pZe.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41378)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+check @ workbench.desktop.main.js:27
+   ERR [042] potential listener LEAK detected, having 400 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at pZe.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41378)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+error @ workbench.desktop.main.js:38
+ [03f] potential listener LEAK detected, having 200 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (workbench.desktop.main.js:29:1377)
+    at RE.g (workbench.desktop.main.js:31:15842)
+    at RE.addObserver (workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (workbench.desktop.main.js:29:1565)
+    at new hg (workbench.desktop.main.js:279:30711)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+check @ workbench.desktop.main.js:27
+   ERR [03f] potential listener LEAK detected, having 200 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at RE.g (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:15842)
+    at RE.addObserver (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1565)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:30711)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+error @ workbench.desktop.main.js:38
+   ERR [UriError]: Scheme contains illegal characters.: Error: [UriError]: Scheme contains illegal characters.
+    at m8 (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:64420)
+    at new ud (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:67800)
+    at new Jr (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:69238)
+    at ud.revive (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:69015)
+    at A2.call (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:91:106730)
+    at Uf.s (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:14882)
+    at Uf.q (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:14405)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:13807)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.D (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2398)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2615)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:5389)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2546)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:5573)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2546)
+    at W (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:7839)
+    at IpcMainImpl.i (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:36:10842)
+    at IpcMainImpl.emit (node:events:519:28)
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:106626)
+    at Session.emit (node:events:519:28)
+error @ workbench.desktop.main.js:38
+ [1b6] potential listener LEAK detected, having 340 listeners already. MOST frequent listener (83):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at YWi.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41309)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+check @ workbench.desktop.main.js:27
+   ERR [1b6] potential listener LEAK detected, having 340 listeners already. MOST frequent listener (83):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at YWi.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41309)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+error @ workbench.desktop.main.js:38
+ [fa4] potential listener LEAK detected, having 346 listeners already. MOST frequent listener (86):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:870)
+    at new ZDe (workbench.desktop.main.js:2246:76832)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+check @ workbench.desktop.main.js:27
+   ERR [fa4] potential listener LEAK detected, having 346 listeners already. MOST frequent listener (86):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:870)
+    at new ZDe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2246:76832)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+error @ workbench.desktop.main.js:38
+ [03f] potential listener LEAK detected, having 298 listeners already. MOST frequent listener (99):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (workbench.desktop.main.js:29:1377)
+    at RE.g (workbench.desktop.main.js:31:15842)
+    at RE.addObserver (workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (workbench.desktop.main.js:29:1565)
+    at new hg (workbench.desktop.main.js:279:30711)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+check @ workbench.desktop.main.js:27
+   ERR [03f] potential listener LEAK detected, having 298 listeners already. MOST frequent listener (99):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at RE.g (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:15842)
+    at RE.addObserver (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1565)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:30711)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+error @ workbench.desktop.main.js:38
+ [12d] potential listener LEAK detected, having 301 listeners already. MOST frequent listener (137):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (workbench.desktop.main.js:29:1377)
+    at KCe.wb (workbench.desktop.main.js:1323:9407)
+    at new KCe (workbench.desktop.main.js:1323:9275)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at cDt.W (workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (workbench.desktop.main.js:3876:6173)
+    at zXe.r (workbench.desktop.main.js:1323:21473)
+    at zXe.f (workbench.desktop.main.js:1323:21086)
+check @ workbench.desktop.main.js:27
+   ERR [12d] potential listener LEAK detected, having 301 listeners already. MOST frequent listener (137):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at KCe.wb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9407)
+    at new KCe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9275)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at cDt.W (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6173)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21473)
+    at zXe.f (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21086)
+error @ workbench.desktop.main.js:38
+ [1b6] potential listener LEAK detected, having 427 listeners already. MOST frequent listener (127):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at YWi.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41309)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at new ZDe (workbench.desktop.main.js:2246:76832)
+check @ workbench.desktop.main.js:27
+   ERR [1b6] potential listener LEAK detected, having 427 listeners already. MOST frequent listener (127):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at YWi.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41309)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at new ZDe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2246:76832)
+error @ workbench.desktop.main.js:38
+ [fa4] potential listener LEAK detected, having 433 listeners already. MOST frequent listener (130):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:870)
+    at new ZDe (workbench.desktop.main.js:2246:76832)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+check @ workbench.desktop.main.js:27
+   ERR [fa4] potential listener LEAK detected, having 433 listeners already. MOST frequent listener (130):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:870)
+    at new ZDe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:2246:76832)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+error @ workbench.desktop.main.js:38
+ [12c] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeFilesAssociation] (workbench.desktop.main.js:29:1377)
+    at KCe.wb (workbench.desktop.main.js:1323:9348)
+    at new KCe (workbench.desktop.main.js:1323:9275)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at cDt.W (workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (workbench.desktop.main.js:3876:6173)
+    at zXe.r (workbench.desktop.main.js:1323:21473)
+    at zXe.f (workbench.desktop.main.js:1323:21086)
+check @ workbench.desktop.main.js:27
+   ERR [12c] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeFilesAssociation] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at KCe.wb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9348)
+    at new KCe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9275)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at cDt.W (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6173)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21473)
+    at zXe.f (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21086)
+error @ workbench.desktop.main.js:38
+ [042] potential listener LEAK detected, having 590 listeners already. MOST frequent listener (96):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at pZe.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41378)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+check @ workbench.desktop.main.js:27
+   ERR [042] potential listener LEAK detected, having 590 listeners already. MOST frequent listener (96):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at pZe.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41378)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+error @ workbench.desktop.main.js:38
+ [03f] potential listener LEAK detected, having 398 listeners already. MOST frequent listener (199):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (workbench.desktop.main.js:29:1377)
+    at RE.g (workbench.desktop.main.js:31:15842)
+    at RE.addObserver (workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (workbench.desktop.main.js:29:1565)
+    at new hg (workbench.desktop.main.js:279:30711)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+check @ workbench.desktop.main.js:27
+   ERR [03f] potential listener LEAK detected, having 398 listeners already. MOST frequent listener (199):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at RE.u [as i] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at RE.g (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:15842)
+    at RE.addObserver (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:31:1641)
+    at Object.onWillAddFirstListener (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:10093)
+    at oKe.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1565)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:30711)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+error @ workbench.desktop.main.js:38
+  WARN [LM] No provider registered for vendor groq
+warn @ workbench.desktop.main.js:38
+warn @ workbench.desktop.main.js:38
+warn @ workbench.desktop.main.js:3871
+r @ workbench.desktop.main.js:518
+   ERR [LM] Error resolving language models for vendor aitk-foundry-local: 
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+(anonymous) @ workbench.desktop.main.js:518
+ [Extension Host] [2026-02-21 20:26:49] info: Pruned stale workspaces from inventory {"component":"MCPInventoryManager","removed":1}
+ Extension Host
+ [2026-02-21 20:26:49] info: Pruned stale workspaces from inventory {"component":"MCPInventoryManager","removed":1}
+
+ [Extension Host] [2026-02-21 20:26:49] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+ [Extension Host] [2026-02-21 20:26:49] info: Inventory changed on disk {"component":"MCPManager"}
+ [Extension Host] [2026-02-21 20:26:49] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+ [Extension Host] [2026-02-21 20:26:49] info: Inventory changed on disk {"component":"MCPManager"}
+ Extension Host
+ [2026-02-21 20:26:49] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+[2026-02-21 20:26:49] info: Inventory changed on disk {"component":"MCPManager"}
+[2026-02-21 20:26:49] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+[2026-02-21 20:26:49] info: Inventory changed on disk {"component":"MCPManager"}
+
+ [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/node_modules/@xterm/addon-ligatures/lib/addon-ligatures.js:1  Failed to load resource: net::ERR_FILE_NOT_FOUND
+   ERR An unknown error occurred. Please consult the log for more details.
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:38
+error @ workbench.desktop.main.js:3871
+oc @ workbench.desktop.main.js:3868
+(anonymous) @ workbench.desktop.main.js:3868
+onUnexpectedError @ workbench.desktop.main.js:7
+vt @ workbench.desktop.main.js:7
+(anonymous) @ workbench.desktop.main.js:3868
+ [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ workbench.desktop.main.js:537
+$logExtensionHostMessage @ workbench.desktop.main.js:537
+S @ workbench.desktop.main.js:3912
+Q @ workbench.desktop.main.js:3912
+M @ workbench.desktop.main.js:3912
+L @ workbench.desktop.main.js:3912
+(anonymous) @ workbench.desktop.main.js:3912
+C @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:29
+fire @ workbench.desktop.main.js:571
+l.onmessage @ workbench.desktop.main.js:3923
+marketplace.visualstudio.com/_apis/public/gallery/vscode/ai-command-center/ai-command-center/latest:1  Failed to load resource: the server responded with a status of 404 ()
+  INFO Started local extension host with pid 93553.
+marketplace.visualstudio.com/_apis/public/gallery/vscode/ai-command-center/ai-command-center/latest:1  Failed to load resource: the server responded with a status of 404 ()
+   ERR [UriError]: Scheme contains illegal characters.: Error: [UriError]: Scheme contains illegal characters.
+    at m8 (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:64420)
+    at new ud (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:67800)
+    at new Jr (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:69238)
+    at ud.revive (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:69015)
+    at A2.call (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:91:106730)
+    at Uf.s (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:14882)
+    at Uf.q (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:14405)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:31:13807)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.D (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2398)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2615)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:5389)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2546)
+    at oa.value (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:5573)
+    at P.C (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2328)
+    at P.fire (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:30:2546)
+    at W (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:28:7839)
+    at IpcMainImpl.i (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/main.js:36:10842)
+    at IpcMainImpl.emit (node:events:519:28)
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:106626)
+    at Session.emit (node:events:519:28)
+error @ workbench.desktop.main.js:38
+   ERR [Extension Host] (node:93553) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+error @ workbench.desktop.main.js:38
+ [Extension Host] (node:93553) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Code Helper (Plugin) --trace-deprecation ...` to show where the warning was created)
+jxs @ workbench.desktop.main.js:537
+   ERR [Extension Host] (node:93553) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+error @ workbench.desktop.main.js:38
+ [Extension Host] (node:93553) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+jxs @ workbench.desktop.main.js:537
+ [Extension Host] [2026-02-21 20:30:31] info: AI Command Center: Starting activation...
+ [Extension Host] [2026-02-21 20:30:31] info: Configuration loaded with hierarchy {"component":"ConfigManager","planPath":".project/plan","logLevel":"info","healthScore":95,"hierarchySources":[]}
+ [Extension Host] [2026-02-21 20:30:31] info: Configuration commands registered {"component":"ConfigCommands","commandCount":11}
+ [Extension Host] [2026-02-21 20:30:31] info: Configuration watcher started {"component":"ConfigWatcher","watchedPaths":["/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/src/defaults/aicc.json"]}
+ Extension Host
+ [2026-02-21 20:30:31] info: AI Command Center: Starting activation...
+[2026-02-21 20:30:31] info: Configuration loaded with hierarchy {"component":"ConfigManager","planPath":".project/plan","logLevel":"info","healthScore":95,"hierarchySources":[]}
+[2026-02-21 20:30:31] info: Configuration commands registered {"component":"ConfigCommands","commandCount":11}
+[2026-02-21 20:30:31] info: Configuration watcher started {"component":"ConfigWatcher","watchedPaths":["/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/src/defaults/aicc.json"]}
+
+   ERR chatParticipant must be declared in package.json: claude-code
+error @ workbench.desktop.main.js:38
+ [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ workbench.desktop.main.js:537
+ [GitHub.copilot-chat]e is not iterable
+
+TypeError: e is not iterable
+	at H0e.setItems (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:17214)
+	at nl._computeFn (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16945)
+	at nl._recompute (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:9193)
+	at nl.get (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:8527)
+	at nl.reportChanges (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:497)
+	at G0e.endUpdate (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16727)
+	at j1t (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16445)
+	at nl.recomputeInitiallyAndOnChange (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:1092)
+	at Bv.init (vscode-file://vscode-app/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:2387:1822)
+$onExtensionRuntimeError @ workbench.desktop.main.js:568
+ Error: e is not iterable
+
+TypeError: e is not iterable
+	at H0e.setItems (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:17214)
+	at nl._computeFn (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16945)
+	at nl._recompute (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:9193)
+	at nl.get (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:8527)
+	at nl.reportChanges (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:497)
+	at G0e.endUpdate (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16727)
+	at j1t (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:16445)
+	at nl.recomputeInitiallyAndOnChange (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:938:1092)
+	at Bv.init (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:2387:1822)
+	at Timeout._onTimeout (/Users/blainemcdonnell/~/.workshop/extensions/github.copilot-chat-0.36.2/dist/extension.js:900:12)
+	at listOnTimeout (node:internal/timers:588:17)
+	at process.processTimers (node:internal/timers:523:7)
+$onExtensionRuntimeError @ workbench.desktop.main.js:568
+   ERR An unknown error occurred. Please consult the log for more details.
+error @ workbench.desktop.main.js:38
+ [fa4] potential listener LEAK detected, having 497 listeners already. MOST frequent listener (168):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (workbench.desktop.main.js:29:1377)
+    at new hg (workbench.desktop.main.js:279:31555)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at aZe.I (workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (workbench.desktop.main.js:1348:870)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+    at KCe.H (workbench.desktop.main.js:518:27030)
+    at KCe.Gb (workbench.desktop.main.js:1323:13443)
+check @ workbench.desktop.main.js:27
+   ERR [fa4] potential listener LEAK detected, having 497 listeners already. MOST frequent listener (168):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at _4e.u [as onDidChange] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new hg (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:279:31555)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at aZe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1347:1910)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:870)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+    at KCe.H (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27030)
+    at KCe.Gb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:13443)
+error @ workbench.desktop.main.js:38
+ [1b6] potential listener LEAK detected, having 498 listeners already. MOST frequent listener (171):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at YWi.u (workbench.desktop.main.js:29:1377)
+    at new v9e (workbench.desktop.main.js:501:41309)
+    at a (workbench.desktop.main.js:501:39749)
+    at Nce.value (workbench.desktop.main.js:501:39991)
+    at D.C (workbench.desktop.main.js:29:2349)
+    at D (workbench.desktop.main.js:29:2419)
+    at D.fire (workbench.desktop.main.js:29:2637)
+    at aZe.createModel (workbench.desktop.main.js:1348:907)
+    at KCe.I (workbench.desktop.main.js:518:27138)
+check @ workbench.desktop.main.js:27
+   ERR [1b6] potential listener LEAK detected, having 498 listeners already. MOST frequent listener (171):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at YWi.u (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at new v9e (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:41309)
+    at a (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39749)
+    at Nce.value (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:501:39991)
+    at D.C (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2349)
+    at D (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2419)
+    at D.fire (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:2637)
+    at aZe.createModel (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1348:907)
+    at KCe.I (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:518:27138)
+error @ workbench.desktop.main.js:38
+ [Extension Host] [2026-02-21 20:30:40] info: Evolution Tracker created {"component":"EvolutionTracker","historyPath":".project/history"}
+ [Extension Host] [2026-02-21 20:30:40] info: PlanningManager initialized with Evolution Tracker and Collaborative Editing {"component":"PlanningManager","workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+ [Extension Host] [2026-02-21 20:30:40] info: Planning structure initialized {"component":"WorkspaceManager","planPath":"/Users/blainemcdonnell/git/ai-command-center/.project/plan"}
+ [Extension Host] [2026-02-21 20:30:40] info: Evolution Tracker initialized {"component":"EvolutionTracker","historyPath":".project/history","flushInterval":5000}
+ [Extension Host] [2026-02-21 20:30:40] info: Auto-save started {"component":"PlanningManager","intervalMs":30}
+ [Extension Host] [2026-02-21 20:30:40] info: Planning structure initialized {"component":"PlanningManager"}
+ [Extension Host] [2026-02-21 20:30:40] info: Planning commands registered {"count":9}
+ [Extension Host] [2026-02-21 20:30:40] info: Initializing Panel Loader Service
+ [Extension Host] [2026-02-21 20:30:40] info: Panel Loader initialized with 3 panels
+ [Extension Host] [2026-02-21 20:30:40] info: Initializing Tab Loader Service
+ [Extension Host] [2026-02-21 20:30:40] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/Agent_Status.tab.yaml
+ [Extension Host] [2026-02-21 20:30:40] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/All_Satus.tab.yaml
+ [Extension Host] [2026-02-21 20:30:40] info: Tab Loader initialized with 3 tabs
+ [Extension Host] [2026-02-21 20:30:40] info: Initializing Intake Loader Service
+ [Extension Host] [2026-02-21 20:30:40] info: Intake Loader initialized with 2 intakes
+ [Extension Host] [2026-02-21 20:30:40] info: Initializing Plan Generator
+ [Extension Host] [2026-02-21 20:30:40] info: PLAN.json loaded with 490 items (index: 490 entries)
+ [Extension Host] [2026-02-21 20:30:40] info: Plan Generator initialized - using PLAN.json as source of truth
+ [Extension Host] [2026-02-21 20:30:40] info: PLAN.json file watcher established
+ An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+mountTo @ workbench.desktop.main.js:4167
+ [Extension Host] [2026-02-21 20:30:40] info: SchedulerEngine initialized with 0 persisted task(s)
+ [Extension Host] [2026-02-21 20:30:40] info: SchedulerEngine started
+ [Extension Host] [2026-02-21 20:30:40] error: Failed to initialize schema validators {"error":"Error: ENOENT: no such file or directory, open '/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/.github/aicc/schemas/panel.v1.schema.json'"}
+ [Extension Host] [2026-02-21 20:30:40] info: Created certificate directory {"component":"SecurityManager","path":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/certificates"}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+ [Extension Host] [2026-02-21 20:30:40] info: Elected as MCP leader {"component":"LeaderElection","port":3100,"workspaceId":"ws-93553-1771727440862"}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP Server running at http://localhost:3000 {"transport":"http","port":3000,"host":"localhost"}
+ [Extension Host] [2026-02-21 20:30:40] info: JiraIntegrationManager created {"component":"JiraIntegrationManager"}
+ [Extension Host] [2026-02-21 20:30:40] info: Jira integration disabled {"component":"JiraIntegrationManager"}
+ [Extension Host] [2026-02-21 20:30:40] info: Jira commands registered {"component":"JiraCommands"}
+ [Extension Host] [2026-02-21 20:30:40] info: AgentDetector initialized {"pollingInterval":30000,"watchedExtensions":["GitHub.copilot-chat"]}
+ [Extension Host] [2026-02-21 20:30:40] info: Agent status changed {"previous":[],"current":["GitHub.copilot-chat"]}
+ [Extension Host] [2026-02-21 20:30:40] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":true}]}
+ [Extension Host] [2026-02-21 20:30:40] info: ChatParticipantManager initializing {"participantId":"aicc.agent","agentsDirectory":".github/agents"}
+ [Extension Host] [2026-02-21 20:30:40] info: Loading agent definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/agents","fileCount":22}
+ [Extension Host] [2026-02-21 20:30:40] info: Agent definitions loaded {"count":22,"agents":["ailey-architect","ailey-base","ailey-brainstorm","ailey-bugfixer","ailey-collaborative-minds","ailey-data-architect","ailey-data-engineer","ailey-designer","ailey-devops","ailey-documentation","ailey-entrepreneur","ailey-game-designer","ailey-leader-panel","ailey-marketing","ailey-optimizer","ailey-orchestrator","ailey-patent-reviewer","ailey-planner","ailey-porting","ailey-product-design","ailey-security","ailey-tester"]}
+ [Extension Host] [2026-02-21 20:30:40] info: Chat participant registered {"id":"aicc.agent"}
+ [Extension Host] [2026-02-21 20:30:40] info: ChatParticipantManager initialized {"agentCount":22}
+ [Extension Host] [2026-02-21 20:30:40] info: AIKitManager initialized {"cacheBasePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/cache","globalCachePath":"/Users/blainemcdonnell/.vscode/ai-ley-cache","enableAutoUpdate":false}
+ [Extension Host] [2026-02-21 20:30:40] info: Auto-load configured {"enabled":false,"defaultKits":[],"onActivation":true}
+ [Extension Host] [2026-02-21 20:30:40] info: IntakeManager initialized {"intakesDirectory":".github/aicc/intakes","dataDirectory":".project"}
+ [Extension Host] [2026-02-21 20:30:40] info: Loading intake definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/aicc/intakes","fileCount":2}
+ [Extension Host] [2026-02-21 20:30:40] info: Intake definitions loaded {"count":2,"intakes":["bug-report","feature-request"]}
+ [Extension Host] [2026-02-21 20:30:40] info: IntakeManager initialized {"intakeCount":2}
+ [Extension Host] [2026-02-21 20:30:40] info: Version Override System initialized {"component":"VersionOverrideSystem","configPath":"/Users/blainemcdonnell/git/ai-command-center/.project/config/instruction-sources.json"}
+ [Extension Host] [2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/logs","maxFileSize":10485760,"maxFiles":5}
+ [Extension Host] [2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"MCPServer"}
+ [Extension Host] [2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/logs","maxFileSize":10485760,"maxFiles":5}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP Server starting with HTTP {"component":"MCPServer","host":"localhost","port":3000}
+ [Extension Host] [2026-02-21 20:30:40] info: Source configuration loaded {"component":"VersionOverrideSystem","sourceCount":1}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP Server listening on http://localhost:3000 {"component":"MCPServer"}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP Server started successfully {"component":"MCPManager","transport":"http","port":3000,"host":"localhost"}
+ [Extension Host] [2026-02-21 20:30:40] info: Connection state changed {"component":"ConnectionManager","previousState":"disconnected","newState":"connected","attempts":0}
+ [Extension Host] [2026-02-21 20:30:40] info: MCP connection state transition {"component":"MCPManager","previousState":"disconnected","newState":"connected","attempts":0}
+ [Extension Host] [2026-02-21 20:30:40] info: Leader set in inventory {"component":"MCPInventoryManager","workspaceId":"ws-93553-1771727440862","port":3100}
+ [Extension Host] [2026-02-21 20:30:40] info: Workspace registered in inventory {"component":"MCPInventoryManager","workspaceId":"ws-93553-1771727440862"}
+ [Extension Host] [2026-02-21 20:30:40] info: Inventory health scanner started {"component":"MCPInventoryManager","intervalMs":30000}
+ [Extension Host] [2026-02-21 20:30:40] info: Inventory file watcher started {"component":"MCPInventoryManager","filePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/mcp-inventory.json"}
+ [12d] potential listener LEAK detected, having 379 listeners already. MOST frequent listener (216):
+check @ workbench.desktop.main.js:27
+ Error
+    at n5i.create (workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (workbench.desktop.main.js:29:1377)
+    at KCe.wb (workbench.desktop.main.js:1323:9407)
+    at new KCe (workbench.desktop.main.js:1323:9275)
+    at NRt.o (workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (workbench.desktop.main.js:1406:1077)
+    at cDt.W (workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (workbench.desktop.main.js:3876:6173)
+    at zXe.r (workbench.desktop.main.js:1323:21473)
+    at zXe.f (workbench.desktop.main.js:1323:21086)
+check @ workbench.desktop.main.js:27
+   ERR [12d] potential listener LEAK detected, having 379 listeners already. MOST frequent listener (216):: Error
+    at n5i.create (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:27:12074)
+    at Ije.u [as onDidChangeReadonly] (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:29:1377)
+    at KCe.wb (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9407)
+    at new KCe (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:9275)
+    at NRt.o (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1580)
+    at NRt.createInstance (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1406:1077)
+    at cDt.W (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6473)
+    at cDt.resolve (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:3876:6173)
+    at zXe.r (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21473)
+    at zXe.f (vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js:1323:21086)
+error @ workbench.desktop.main.js:38
+ Extension Host
+ [2026-02-21 20:30:40] info: Evolution Tracker created {"component":"EvolutionTracker","historyPath":".project/history"}
+[2026-02-21 20:30:40] info: PlanningManager initialized with Evolution Tracker and Collaborative Editing {"component":"PlanningManager","workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+[2026-02-21 20:30:40] info: Planning structure initialized {"component":"WorkspaceManager","planPath":"/Users/blainemcdonnell/git/ai-command-center/.project/plan"}
+[2026-02-21 20:30:40] info: Evolution Tracker initialized {"component":"EvolutionTracker","historyPath":".project/history","flushInterval":5000}
+[2026-02-21 20:30:40] info: Auto-save started {"component":"PlanningManager","intervalMs":30}
+[2026-02-21 20:30:40] info: Planning structure initialized {"component":"PlanningManager"}
+[2026-02-21 20:30:40] info: Planning commands registered {"count":9}
+[2026-02-21 20:30:40] info: Initializing Panel Loader Service
+[2026-02-21 20:30:40] info: Panel Loader initialized with 3 panels
+[2026-02-21 20:30:40] info: Initializing Tab Loader Service
+[2026-02-21 20:30:40] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/Agent_Status.tab.yaml
+[2026-02-21 20:30:40] warn: Invalid tab configuration in /Users/blainemcdonnell/git/ai-command-center/.github/aicc/tabs/All_Satus.tab.yaml
+[2026-02-21 20:30:40] info: Tab Loader initialized with 3 tabs
+[2026-02-21 20:30:40] info: Initializing Intake Loader Service
+[2026-02-21 20:30:40] info: Intake Loader initialized with 2 intakes
+[2026-02-21 20:30:40] info: Initializing Plan Generator
+[2026-02-21 20:30:40] info: PLAN.json loaded with 490 items (index: 490 entries)
+[2026-02-21 20:30:40] info: Plan Generator initialized - using PLAN.json as source of truth
+[2026-02-21 20:30:40] info: PLAN.json file watcher established
+[2026-02-21 20:30:40] info: SchedulerEngine initialized with 0 persisted task(s)
+[2026-02-21 20:30:40] info: SchedulerEngine started
+[2026-02-21 20:30:40] error: Failed to initialize schema validators {"error":"Error: ENOENT: no such file or directory, open '/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/.github/aicc/schemas/panel.v1.schema.json'"}
+[2026-02-21 20:30:40] info: Created certificate directory {"component":"SecurityManager","path":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/certificates"}
+[2026-02-21 20:30:40] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":0}
+[2026-02-21 20:30:40] info: Elected as MCP leader {"component":"LeaderElection","port":3100,"workspaceId":"ws-93553-1771727440862"}
+[2026-02-21 20:30:40] info: MCP Server running at http://localhost:3000 {"transport":"http","port":3000,"host":"localhost"}
+[2026-02-21 20:30:40] info: JiraIntegrationManager created {"component":"JiraIntegrationManager"}
+[2026-02-21 20:30:40] info: Jira integration disabled {"component":"JiraIntegrationManager"}
+[2026-02-21 20:30:40] info: Jira commands registered {"component":"JiraCommands"}
+[2026-02-21 20:30:40] info: AgentDetector initialized {"pollingInterval":30000,"watchedExtensions":["GitHub.copilot-chat"]}
+[2026-02-21 20:30:40] info: Agent status changed {"previous":[],"current":["GitHub.copilot-chat"]}
+[2026-02-21 20:30:40] info: Agent status changed {"agents":[{"id":"github-copilot-chat","name":"GitHub Copilot Chat","isActive":true}]}
+[2026-02-21 20:30:40] info: ChatParticipantManager initializing {"participantId":"aicc.agent","agentsDirectory":".github/agents"}
+[2026-02-21 20:30:40] info: Loading agent definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/agents","fileCount":22}
+[2026-02-21 20:30:40] info: Agent definitions loaded {"count":22,"agents":["ailey-architect","ailey-base","ailey-brainstorm","ailey-bugfixer","ailey-collaborative-minds","ailey-data-architect","ailey-data-engineer","ailey-designer","ailey-devops","ailey-documentation","ailey-entrepreneur","ailey-game-designer","ailey-leader-panel","ailey-marketing","ailey-optimizer","ailey-orchestrator","ailey-patent-reviewer","ailey-planner","ailey-porting","ailey-product-design","ailey-security","ailey-tester"]}
+[2026-02-21 20:30:40] info: Chat participant registered {"id":"aicc.agent"}
+[2026-02-21 20:30:40] info: ChatParticipantManager initialized {"agentCount":22}
+[2026-02-21 20:30:40] info: AIKitManager initialized {"cacheBasePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/cache","globalCachePath":"/Users/blainemcdonnell/.vscode/ai-ley-cache","enableAutoUpdate":false}
+[2026-02-21 20:30:40] info: Auto-load configured {"enabled":false,"defaultKits":[],"onActivation":true}
+[2026-02-21 20:30:40] info: IntakeManager initialized {"intakesDirectory":".github/aicc/intakes","dataDirectory":".project"}
+[2026-02-21 20:30:40] info: Loading intake definitions {"directory":"/Users/blainemcdonnell/git/ai-command-center/.github/aicc/intakes","fileCount":2}
+[2026-02-21 20:30:40] info: Intake definitions loaded {"count":2,"intakes":["bug-report","feature-request"]}
+[2026-02-21 20:30:40] info: IntakeManager initialized {"intakeCount":2}
+[2026-02-21 20:30:40] info: Version Override System initialized {"component":"VersionOverrideSystem","configPath":"/Users/blainemcdonnell/git/ai-command-center/.project/config/instruction-sources.json"}
+[2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/logs","maxFileSize":10485760,"maxFiles":5}
+[2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"MCPServer"}
+[2026-02-21 20:30:40] info: Client log endpoint initialized {"component":"LogEndpoint","logDir":"/Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/logs","maxFileSize":10485760,"maxFiles":5}
+[2026-02-21 20:30:40] info: MCP Server starting with HTTP {"component":"MCPServer","host":"localhost","port":3000}
+[2026-02-21 20:30:40] info: Source configuration loaded {"component":"VersionOverrideSystem","sourceCount":1}
+[2026-02-21 20:30:40] info: MCP Server listening on http://localhost:3000 {"component":"MCPServer"}
+[2026-02-21 20:30:40] info: MCP Server started successfully {"component":"MCPManager","transport":"http","port":3000,"host":"localhost"}
+[2026-02-21 20:30:40] info: Connection state changed {"component":"ConnectionManager","previousState":"disconnected","newState":"connected","attempts":0}
+[2026-02-21 20:30:40] info: MCP connection state transition {"component":"MCPManager","previousState":"disconnected","newState":"connected","attempts":0}
+[2026-02-21 20:30:40] info: Leader set in inventory {"component":"MCPInventoryManager","workspaceId":"ws-93553-1771727440862","port":3100}
+[2026-02-21 20:30:40] info: Workspace registered in inventory {"component":"MCPInventoryManager","workspaceId":"ws-93553-1771727440862"}
+[2026-02-21 20:30:40] info: Inventory health scanner started {"component":"MCPInventoryManager","intervalMs":30000}
+[2026-02-21 20:30:40] info: Inventory file watcher started {"component":"MCPInventoryManager","filePath":"/Users/blainemcdonnell/~/.workshop/User/globalStorage/ai-command-center.ai-command-center/mcp-inventory.json"}
+
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Instructions refreshed from source {"component":"VersionOverrideSystem","sourceId":"local-default","version":"local","fileCount":1250}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: All sources refreshed {"component":"VersionOverrideSystem"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Version Override System ready {"component":"VersionOverrideSystem","sourceCount":1}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Asset Tree Map commands registered
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Synthetic Test commands registered
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: PlanArchivalService initialized {"workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: OfflineQueue initialized (0 items, online=true) {"component":"OfflineQueue"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: AgentSessionMemory initialized (0 entries) {"component":"AgentSessionMemory"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: KnowledgeBase initialized (0 entries) at /Users/blainemcdonnell/.aicc/knowledge {"component":"KnowledgeBase"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: PromptEffectivenessTracker initialized (0 usages) {"component":"PromptEffectivenessTracker"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: SkillHealthMonitor: initialized with 300000ms interval {"component":"SkillHealthMonitor"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: IdeationService initialized {"component":"IdeationService"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: IdeaAnalytics initialized {"component":"IdeaAnalytics"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Initializing Smart Context Engine {"component":"SmartContextEngine","minScore":5,"maxResults":15,"debounceMs":500}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Smart Context Engine initialized {"component":"SmartContextEngine"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: GitBranchLinker created {"component":"GitBranchLinker"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: GitBranchLinker initialised {"component":"GitBranchLinker","repoCount":1,"existingLinks":0}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: NlPlanningParser initialized {"component":"NlPlanningParser"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: NlPlanningChatHandler initialized {"component":"NlPlanningChatHandler"}
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: AI Command Center: Activation complete
+index.html?id=96e5d623-92a4-417a-b8f8-fcffc7beb1ce&parentId=1&origin=a064681c-54b6-443d-95ac-61e274786b17&swVersion=4&extensionId=ai-command-center.ai-command-center&platform=electron&vscode-resource-base-authority=vscode-resource.vscode-cdn.net&parentOrigin=vscode-file%3A%2F%2Fvscode-app&purpose=webviewView:1060 Unrecognized feature: 'local-network-access'.
+(anonymous) @ index.html?id=96e5d623-92a4-417a-b8f8-fcffc7beb1ce&parentId=1&origin=a064681c-54b6-443d-95ac-61e274786b17&swVersion=4&extensionId=ai-command-center.ai-command-center&platform=electron&vscode-resource-base-authority=vscode-resource.vscode-cdn.net&parentOrigin=vscode-file%3A%2F%2Fvscode-app&purpose=webviewView:1060
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Secondary Panel WebView initialized
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: Component registry initialized with 10 components
+console.ts:139 [Extension Host] [2026-02-21 20:30:41] info: PanelRenderer initialized
+actions.js:884 [Actions] Shared actions library initialised – 57 handlers, 11 lookup maps
+log.ts:460   ERR Webview.loadLocalResource - Error using fileReader. requestUri=file:///Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/media/secondaryPanel/%7B%7BcodiconFontUri%7D%7D, resourceToLoad=file:///Users/blainemcdonnell/~/.workshop/extensions/ai-command-center.ai-command-center-2.0.8/media/secondaryPanel/%7B%7BcodiconFontUri%7D%7D
+error @ log.ts:460
+%7B%7BcodiconFontUri%7D%7D:1  Failed to load resource: the server responded with a status of 404 ()
+app.js:62 [AIKIT] Initializing SecondaryPanelApp
+app.js:182 [AIKIT] Setting up modal handlers
+app.js:287 [AIKIT] Sending message to backend: ready undefined
+app.js:267 [AIKIT] Received message: init Object
+app.js:267 [AIKIT] Received message: workspaceInfo Object
+app.js:267 [AIKIT] Received message: init Object
+localProcessExtensionHost.ts:281 Extension Host
+localProcessExtensionHost.ts:282 [2026-02-21 20:30:41] info: Instructions refreshed from source {"component":"VersionOverrideSystem","sourceId":"local-default","version":"local","fileCount":1250}
+[2026-02-21 20:30:41] info: All sources refreshed {"component":"VersionOverrideSystem"}
+[2026-02-21 20:30:41] info: Version Override System ready {"component":"VersionOverrideSystem","sourceCount":1}
+[2026-02-21 20:30:41] info: Asset Tree Map commands registered
+[2026-02-21 20:30:41] info: Synthetic Test commands registered
+[2026-02-21 20:30:41] info: PlanArchivalService initialized {"workspaceRoot":"/Users/blainemcdonnell/git/ai-command-center"}
+[2026-02-21 20:30:41] info: OfflineQueue initialized (0 items, online=true) {"component":"OfflineQueue"}
+[2026-02-21 20:30:41] info: AgentSessionMemory initialized (0 entries) {"component":"AgentSessionMemory"}
+[2026-02-21 20:30:41] info: KnowledgeBase initialized (0 entries) at /Users/blainemcdonnell/.aicc/knowledge {"component":"KnowledgeBase"}
+[2026-02-21 20:30:41] info: PromptEffectivenessTracker initialized (0 usages) {"component":"PromptEffectivenessTracker"}
+[2026-02-21 20:30:41] info: SkillHealthMonitor: initialized with 300000ms interval {"component":"SkillHealthMonitor"}
+[2026-02-21 20:30:41] info: IdeationService initialized {"component":"IdeationService"}
+[2026-02-21 20:30:41] info: IdeaAnalytics initialized {"component":"IdeaAnalytics"}
+[2026-02-21 20:30:41] info: Initializing Smart Context Engine {"component":"SmartContextEngine","minScore":5,"maxResults":15,"debounceMs":500}
+[2026-02-21 20:30:41] info: Smart Context Engine initialized {"component":"SmartContextEngine"}
+[2026-02-21 20:30:41] info: GitBranchLinker created {"component":"GitBranchLinker"}
+[2026-02-21 20:30:41] info: GitBranchLinker initialised {"component":"GitBranchLinker","repoCount":1,"existingLinks":0}
+[2026-02-21 20:30:41] info: NlPlanningParser initialized {"component":"NlPlanningParser"}
+[2026-02-21 20:30:41] info: NlPlanningChatHandler initialized {"component":"NlPlanningChatHandler"}
+[2026-02-21 20:30:41] info: AI Command Center: Activation complete
+[2026-02-21 20:30:41] info: Secondary Panel WebView initialized
+[2026-02-21 20:30:41] info: Component registry initialized with 10 components
+[2026-02-21 20:30:41] info: PanelRenderer initialized
+
+console.ts:139 [Extension Host] ApplicationInsights:Sender Array(2)
+jxs @ console.ts:139
+console.ts:139 [Extension Host] [2026-02-21 20:31:11] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+console.ts:139 [Extension Host] [2026-02-21 20:31:11] info: Inventory changed on disk {"component":"MCPManager"}
+console.ts:139 [Extension Host] [2026-02-21 20:31:11] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+console.ts:139 [Extension Host] [2026-02-21 20:31:11] info: Inventory changed on disk {"component":"MCPManager"}
+localProcessExtensionHost.ts:281 Extension Host
+localProcessExtensionHost.ts:282 [2026-02-21 20:31:11] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+[2026-02-21 20:31:11] info: Inventory changed on disk {"component":"MCPManager"}
+[2026-02-21 20:31:11] info: MCP inventory loaded {"component":"MCPInventoryManager","workspaces":1}
+[2026-02-21 20:31:11] info: Inventory changed on disk {"component":"MCPManager"}
+
+app.js:287 [AIKIT] Sending message to backend: executeAction Object

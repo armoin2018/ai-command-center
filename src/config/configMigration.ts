@@ -22,12 +22,17 @@ interface ConfigVersion {
 
 /**
  * Migration script interface.
+ * Config shape varies across versions — using Record<string, any> is intentional
+ * to allow ergonomic property access during schema transformations.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- migration config shape is version-dependent
+type MigrationConfig = Record<string, any>;
+
 interface MigrationScript {
     fromVersion: string;
     toVersion: string;
-    migrate: (config: any) => any;
-    rollback?: (config: any) => any;
+    migrate: (config: MigrationConfig) => MigrationConfig;
+    rollback?: (config: MigrationConfig) => MigrationConfig;
 }
 
 /**
@@ -80,7 +85,7 @@ export class ConfigMigration {
         migrations.set('0.1.0-0.2.0', {
             fromVersion: '0.1.0',
             toVersion: '0.2.0',
-            migrate: (config: any) => {
+            migrate: (config: MigrationConfig) => {
                 // Move server settings to mcp section
                 if (config.server) {
                     config.mcp = {
@@ -92,7 +97,7 @@ export class ConfigMigration {
                 }
                 return config;
             },
-            rollback: (config: any) => {
+            rollback: (config: MigrationConfig) => {
                 // Move mcp settings back to server section
                 if (config.mcp) {
                     config.server = {
@@ -110,7 +115,7 @@ export class ConfigMigration {
         migrations.set('0.2.0-0.3.0', {
             fromVersion: '0.2.0',
             toVersion: '0.3.0',
-            migrate: (config: any) => {
+            migrate: (config: MigrationConfig) => {
                 // Rename integration fields
                 if (config.integrations?.jira?.username) {
                     config.integrations.jira.email = config.integrations.jira.username;
@@ -132,7 +137,7 @@ export class ConfigMigration {
         migrations.set('0.3.0-1.0.0', {
             fromVersion: '0.3.0',
             toVersion: '1.0.0',
-            migrate: (config: any) => {
+            migrate: (config: MigrationConfig) => {
                 // Rename mcp.protocol to mcp.transport
                 if (config.mcp?.protocol && !config.mcp?.transport) {
                     config.mcp.transport = config.mcp.protocol;
@@ -147,7 +152,7 @@ export class ConfigMigration {
                 }
                 return config;
             },
-            rollback: (config: any) => {
+            rollback: (config: MigrationConfig) => {
                 // Rename mcp.transport back to mcp.protocol
                 if (config.mcp?.transport && !config.mcp?.protocol) {
                     config.mcp.protocol = config.mcp.transport;
@@ -342,7 +347,7 @@ export class ConfigMigration {
     /**
      * Validate configuration compatibility.
      */
-    async validateCompatibility(config: any): Promise<{
+    async validateCompatibility(config: MigrationConfig): Promise<{
         compatible: boolean;
         warnings: string[];
         suggestedActions: string[];

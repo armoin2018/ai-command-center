@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src {{cspSource}} 'unsafe-inline'; script-src {{cspSource}} 'unsafe-inline' 'unsafe-eval'; font-src {{cspSource}} data:; img-src {{cspSource}} data:; connect-src {{cspSource}} http://localhost:* https://localhost:* ws://localhost:*; frame-src http://localhost:* https://localhost:*;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src {{cspSource}} 'unsafe-inline'; script-src {{cspSource}} 'nonce-{{nonce}}'; font-src {{cspSource}} data:; img-src {{cspSource}} data:; connect-src {{cspSource}} http://localhost:* https://localhost:* ws://localhost:* http://127.0.0.1:* https://127.0.0.1:* ws://127.0.0.1:*; frame-src http://localhost:* https://localhost:* http://127.0.0.1:* https://127.0.0.1:*;">
   <title>AI Command Center - Secondary Panel</title>
   <style>
-    /* Codicon font - must be inline for placeholder replacement */
     @font-face {
       font-family: "codicon";
       font-display: block;
       src: url("{{codiconFontUri}}") format("truetype");
     }
   </style>
+  <link rel="stylesheet" href="{{codiconCssUri}}">
   <link rel="stylesheet" href="{{stylesUri}}">
 </head>
 <body>
@@ -26,17 +26,20 @@
   <div class="header ref-container">
     <span class="header-title">AI Command Center</span>
     <span class="header-version" id="app-version"></span>
+    <button class="header-btn" id="btn-dev-toggle" title="Show Developer Tabs" style="color:#ef4444">
+      <span class="codicon codicon-eye-closed" id="dev-toggle-icon"></span>
+    </button>
     <div class="header-actions">
       <button class="header-btn" id="btn-settings" title="Settings">
         <span class="codicon codicon-settings-gear"></span>
       </button>
-      <button class="header-btn" id="btn-toggle-refs" title="Toggle Component References">
+      <button class="header-btn" id="btn-toggle-refs" title="Toggle Component References" data-dev-btn="true">
         <span class="codicon codicon-tag"></span>
       </button>
-      <button class="header-btn" id="btn-debug" title="Debug">
+      <button class="header-btn" id="btn-debug" title="Debug" data-dev-btn="true">
         <span class="codicon codicon-bug"></span>
       </button>
-      <button class="header-btn" id="btn-refresh" title="Reload Webviews">
+      <button class="header-btn" id="btn-refresh" title="Reload Webviews" data-dev-btn="true">
         <span class="codicon codicon-refresh"></span>
       </button>
       <button class="header-btn" id="btn-help" title="Help">
@@ -72,6 +75,15 @@
       <option value="reviewer">Reviewer</option>
       <option value="tester">Tester</option>
     </select>
+    <div class="footer-center">
+      <span class="footer-workspace" id="footer-workspace-info">
+        <span class="codicon codicon-server-environment"></span>
+        <span id="footer-ws-name">—</span>:<span id="footer-mcp-port">—</span>
+      </span>
+      <span class="footer-health disconnected" id="footer-health-indicator" title="MCP Disconnected">
+        <span class="codicon codicon-circle-filled"></span>
+      </span>
+    </div>
     <div class="footer-actions">
       <button class="footer-btn success" id="btn-save-all" title="Save All Changes">
         <span class="codicon codicon-save"></span>
@@ -97,7 +109,7 @@
     </div>
   </div>
   
-  <script src="{{actionsUri}}"></script>
-  <script src="{{scriptUri}}"></script>
+  <script nonce="{{nonce}}" src="{{actionsUri}}"></script>
+  <script nonce="{{nonce}}" src="{{scriptUri}}"></script>
 </body>
 </html>

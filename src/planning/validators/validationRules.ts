@@ -42,7 +42,9 @@ export const isValidUrl = (value: string): boolean => {
 };
 
 export const isValidId = (value: string, prefix: string): boolean => {
-    const pattern = new RegExp(`^${prefix}-\\d{3}$`);
+    // Sanitize prefix to prevent ReDoS — only allow alphanumeric + hyphen
+    const safePrefix = prefix.replace(/[^a-zA-Z0-9-]/g, '');
+    const pattern = new RegExp(`^${safePrefix}-\\d{3}$`);
     return pattern.test(value);
 };
 

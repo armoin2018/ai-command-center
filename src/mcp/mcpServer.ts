@@ -21,13 +21,34 @@ import {
 import { PlanningManager } from '../planning/planningManager';
 import { Logger } from '../logger';
 import { Priority } from '../planning/types';
+import { Epic } from '../planning/entities/epic';
+import { Story } from '../planning/entities/story';
+import { Task } from '../planning/entities/task';
+import { EpicNode, StoryNode, TaskNode } from '../planning/treeBuilder/planningTree';
 import { PROMPT_TEMPLATES, renderPrompt } from './promptTemplates';
 import { MCPCache, RequestBatcher } from './mcpCache';
 import { SecurityManager } from './securityManager';
+import { AIKitLoaderService } from '../services/aiKitLoader';
 import { WebSocketTransport } from './transports/webSocketTransport';
 import { LogEndpoint } from './endpoints/logEndpoint';
+import { CodiconsEndpoint, setCodiconsExtensionPath } from './endpoints/codiconsEndpoint';
 import { SwaggerEndpoint } from './swagger';
 import { PanelDataRoutes } from './routes/panelDataRoutes';
+import { WorkspaceRegistration } from './leaderElection';
+
+/** Flat planning item with type discriminator for API responses */
+interface FlatPlanningItem {
+    id: string;
+    type: string;
+    parentId?: string;
+    title?: string;
+    description?: string;
+    status?: string;
+    priority?: string;
+    storyPoints?: number;
+    tags?: string[];
+    [key: string]: unknown;
+}
 
 export type TransportType = 'stdio' | 'http' | 'https' | 'websocket';
 
@@ -37,6 +58,8 @@ export interface MCPServerConfig {
     host?: string;
     securityManager?: SecurityManager;
     extensionPath?: string;
+    /** Extension version (e.g. '2.0.10'). Included in /health and validated on registration. */
+    version?: string;
 }
 
 export class MCPServer {
@@ -51,8 +74,11 @@ export class MCPServer {
     private securityManager: SecurityManager | null = null;
     private logEndpoint: LogEndpoint | null = null;
     private swaggerEndpoint: SwaggerEndpoint | null = null;
+    private codiconsEndpoint: CodiconsEndpoint | null = null;
     private extensionPath: string | null = null;
     private panelDataRoutes: PanelDataRoutes | null = null;
+    private startTime: number = Date.now();
+    private registeredWorkspaces: WorkspaceRegistration[] = [];
 
     constructor(planningManager: PlanningManager, logger: Logger, config: MCPServerConfig = { transport: 'stdio' }) {
         this.planningManager = planningManager;
@@ -102,8 +128,8 @@ export class MCPServer {
                 });
                 await this.logEndpoint.initialize();
                 this.logger.info('Client log endpoint initialized', { component: 'MCPServer' });
-            } catch (error: any) {
-                this.logger.error('Failed to initialize log endpoint', error);
+            } catch (error: unknown) {
+                this.logger.error('Failed to initialize log endpoint', error instanceof Error ? error : new Error(String(error)));
             }
         }
     }
@@ -151,7 +177,7 @@ export class MCPServer {
 
             // Batch requests for the same resource
             return this.batcher.batch(cacheKey, async () => {
-                let response: any = null;
+                let response: { contents: Array<{ uri: string; mimeType: string; text: string }> } | null = null;
 
                 if (uri === 'aicc://planning/tree') {
                     const tree = await this.planningManager.rebuildTree();
@@ -501,7 +527,7 @@ export class MCPServer {
                         if (!args) throw new Error('Missing arguments');
                         const epic = await this.planningManager.updateEpic(
                             args.id as string,
-                            args.updates as any
+                            args.updates as Partial<Epic>
                         );
                         if (!epic) throw new Error('Epic not found');
                         return {
@@ -542,10 +568,11 @@ export class MCPServer {
                         if (!args) throw new Error('Missing arguments');
                         const { query, type, status, priority } = args;
                         const tree = await this.planningManager.rebuildTree();
-                        const results: any[] = [];
+                        const results: FlatPlanningItem[] = [];
 
                         // Recursive search function
-                        const searchNode = (node: any, nodeType: string) => {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any -- tree nodes have varying shapes
+                        const searchNode = (node: Record<string, any>, nodeType: string) => {
                             const matchesQuery = 
                                 node.name?.toLowerCase().includes((query as string).toLowerCase()) ||
                                 node.description?.toLowerCase().includes((query as string).toLowerCase());
@@ -554,21 +581,21 @@ export class MCPServer {
                             const matchesPriority = !priority || node.priority === priority;
 
                             if (matchesQuery && matchesType && matchesStatus && matchesPriority) {
-                                results.push({ ...node, type: nodeType });
+                                results.push({ ...node, type: nodeType } as FlatPlanningItem);
                             }
 
                             // Search children
                             if (nodeType === 'epic' && node.stories) {
-                                node.stories.forEach((story: any) => searchNode(story, 'story'));
+                                node.stories.forEach((story: StoryNode) => searchNode(story, 'story'));
                             }
                             if (nodeType === 'story' && node.tasks) {
-                                node.tasks.forEach((task: any) => searchNode(task, 'task'));
+                                node.tasks.forEach((task: TaskNode) => searchNode(task, 'task'));
                             }
                         };
 
                         // Search all epics
                         const treeEpics = tree.getAllEpics();
-                        treeEpics.forEach((epic: any) => searchNode(epic, 'epic'));
+                        treeEpics.forEach((epic: EpicNode) => searchNode(epic, 'epic'));
 
                         return {
                             content: [
@@ -589,12 +616,12 @@ export class MCPServer {
                         if (!args) throw new Error('Missing arguments');
                         const { type, id, status } = args;
 
-                        let updated: any;
+                        let updated: Epic | null;
                         switch (type) {
                             case 'epic':
                                 updated = await this.planningManager.updateEpic(
                                     id as string,
-                                    { status: status as any }
+                                    { status: status as unknown as import('../planning/types').EpicStatus }
                                 );
                                 break;
                             case 'story':
@@ -623,9 +650,9 @@ export class MCPServer {
                     case 'bulk_create_stories': {
                         if (!args) throw new Error('Missing arguments');
                         const { epicId, stories } = args;
-                        const created: any[] = [];
+                        const created: Story[] = [];
                         
-                        for (const storyData of stories as any[]) {
+                        for (const storyData of stories as Array<{ name: string; description: string; storyPoints?: number; priority?: string }>) {
                             const story = await this.planningManager.createStory(
                                 epicId as string,
                                 {
@@ -651,9 +678,9 @@ export class MCPServer {
                     case 'bulk_create_tasks': {
                         if (!args) throw new Error('Missing arguments');
                         const { epicId, storyId, tasks } = args;
-                        const created: any[] = [];
+                        const created: Task[] = [];
                         
-                        for (const taskData of tasks as any[]) {
+                        for (const taskData of tasks as Array<{ name: string; description: string }>) {
                             const task = await this.planningManager.createTask(
                                 epicId as string,
                                 storyId as string,
@@ -794,13 +821,13 @@ export class MCPServer {
                     default:
                         throw new Error(`Unknown tool: ${name}`);
                 }
-            } catch (error: any) {
-                this.logger.error(`MCP tool error: ${name}`, error);
+            } catch (error: unknown) {
+                this.logger.error(`MCP tool error: ${name}`, error instanceof Error ? error : new Error(String(error)));
                 return {
                     content: [
                         {
                             type: 'text',
-                            text: `Error: ${error.message}`,
+                            text: `Error: ${error instanceof Error ? error.message : String(error)}`,
                         },
                     ],
                     isError: true,
@@ -863,6 +890,12 @@ export class MCPServer {
             setExtensionPath(this.extensionPath);
         }
 
+        // Initialize Codicons endpoint for font/CSS serving
+        this.codiconsEndpoint = new CodiconsEndpoint(this.logger);
+        if (this.extensionPath) {
+            setCodiconsExtensionPath(this.extensionPath);
+        }
+
         // Create HTTP request handler
         const requestHandler = this.createHttpRequestHandler();
 
@@ -920,10 +953,13 @@ export class MCPServer {
     private createHttpRequestHandler(): (req: http.IncomingMessage, res: http.ServerResponse) => void {
         return async (req, res) => {
             try {
-                // Set CORS headers for browser access
-                res.setHeader('Access-Control-Allow-Origin', '*');
+                // Set CORS headers — localhost-only
+                const requestOrigin = req.headers.origin || '';
+                const isLocalhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin);
+                res.setHeader('Access-Control-Allow-Origin', isLocalhost ? requestOrigin : '');
                 res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
                 res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                res.setHeader('Vary', 'Origin');
 
                 // Handle CORS preflight
                 if (req.method === 'OPTIONS') {
@@ -932,16 +968,79 @@ export class MCPServer {
                     return;
                 }
 
-                // Health check endpoint
+                // Health check endpoint (AICC-0191: enriched for multi-workspace)
                 if (req.method === 'GET' && req.url === '/health') {
                     res.writeHead(200, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ status: 'ok', server: 'ai-command-center-mcp' }));
+                    res.end(JSON.stringify({
+                        status: 'ok',
+                        role: 'leader',
+                        server: 'ai-command-center-mcp',
+                        version: this.config.version ?? '0.0.0',
+                        uptime: Math.floor((Date.now() - this.startTime) / 1000),
+                        workspaces: this.registeredWorkspaces,
+                        pid: process.pid,
+                        port: this.config.port ?? null,
+                    }));
+                    return;
+                }
+
+                // ── AICC-0195: Workspace registration API endpoints ──
+                if (req.method === 'POST' && req.url === '/workspaces/register') {
+                    const body = await this.parseRequestBody(req);
+                    const ws: WorkspaceRegistration = JSON.parse(body);
+
+                    // Reject workspaces running a different extension version
+                    const serverVersion = this.config.version ?? '0.0.0';
+                    if (ws.version && ws.version !== serverVersion) {
+                        this.logger.warn('Workspace registration rejected: version mismatch', {
+                            component: 'MCPServer',
+                            workspaceId: ws.id,
+                            workspaceVersion: ws.version,
+                            serverVersion,
+                        });
+                        res.writeHead(409, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({
+                            status: 'error',
+                            error: 'version_mismatch',
+                            message: `Server is running v${serverVersion}, workspace is running v${ws.version}`,
+                            serverVersion,
+                        }));
+                        return;
+                    }
+
+                    this.registerWorkspace(ws);
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ status: 'ok', workspaces: this.registeredWorkspaces }));
+                    return;
+                }
+
+                if (req.method === 'GET' && req.url === '/workspaces') {
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ workspaces: this.registeredWorkspaces }));
+                    return;
+                }
+
+                // DELETE /workspaces/:id
+                const wsDeleteMatch = req.url?.match(/^\/workspaces\/([^/]+)$/);
+                if (req.method === 'DELETE' && wsDeleteMatch) {
+                    const wsId = decodeURIComponent(wsDeleteMatch[1]);
+                    this.unregisterWorkspace(wsId);
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ status: 'ok', workspaces: this.registeredWorkspaces }));
                     return;
                 }
 
                 // Swagger UI and OpenAPI endpoints
                 if (this.swaggerEndpoint && req.url && (req.url.startsWith('/api-docs') || req.url.startsWith('/swagger-ui/') || req.url === '/openapi.json')) {
                     const handled = await this.swaggerEndpoint.handleRequest(req, res);
+                    if (handled) {
+                        return;
+                    }
+                }
+
+                // Codicons endpoint — serves codicon CSS & font files
+                if (this.codiconsEndpoint && req.url?.startsWith('/codicons/')) {
+                    const handled = await this.codiconsEndpoint.handleRequest(req, res);
                     if (handled) {
                         return;
                     }
@@ -1004,12 +1103,12 @@ export class MCPServer {
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify(response));
 
-            } catch (error: any) {
-                this.logger.error('HTTP request handler error', error);
+            } catch (error: unknown) {
+                this.logger.error('HTTP request handler error', error instanceof Error ? error : new Error(String(error)));
                 res.writeHead(500, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({
                     error: 'Internal server error',
-                    message: error.message
+                    message: error instanceof Error ? error.message : String(error)
                 }));
             }
         };
@@ -1051,7 +1150,7 @@ export class MCPServer {
         });
     }
 
-    private async handleMCPRequest(request: any): Promise<any> {
+    private async handleMCPRequest(request: { id: string | number; method: string; params?: unknown }): Promise<{ jsonrpc: string; id: string | number; result: unknown }> {
         // This is a simplified router - in production, you'd route based on request.method
         // to the appropriate handler registered with the MCP server
         return {
@@ -1092,6 +1191,42 @@ export class MCPServer {
         this.logger.info('MCP Server stopped', { component: 'MCPServer' });
     }
 
+    // ── AICC-0191 / AICC-0195: Workspace registration helpers ──
+
+    /**
+     * Register (or update) a workspace in the in-memory list.
+     */
+    registerWorkspace(ws: WorkspaceRegistration): void {
+        const idx = this.registeredWorkspaces.findIndex((w) => w.id === ws.id);
+        if (idx >= 0) {
+            this.registeredWorkspaces[idx] = ws;
+        } else {
+            this.registeredWorkspaces.push(ws);
+        }
+        this.logger.info('Workspace registered with MCP server', {
+            component: 'MCPServer',
+            workspaceId: ws.id,
+        });
+    }
+
+    /**
+     * Remove a workspace by ID from the in-memory list.
+     */
+    unregisterWorkspace(id: string): void {
+        this.registeredWorkspaces = this.registeredWorkspaces.filter((w) => w.id !== id);
+        this.logger.info('Workspace unregistered from MCP server', {
+            component: 'MCPServer',
+            workspaceId: id,
+        });
+    }
+
+    /**
+     * Return a snapshot of all currently registered workspaces.
+     */
+    getRegisteredWorkspaces(): WorkspaceRegistration[] {
+        return [...this.registeredWorkspaces];
+    }
+
     /**
      * Get WebSocket transport for broadcasting updates
      */
@@ -1102,7 +1237,7 @@ export class MCPServer {
     /**
      * Broadcast update to WebSocket clients
      */
-    broadcastUpdate(resource: string, data: any): void {
+    broadcastUpdate(resource: string, data: unknown): void {
         if (this.wsTransport) {
             this.wsTransport.broadcastUpdate(resource, data);
         }
@@ -1281,18 +1416,18 @@ export class MCPServer {
             res.writeHead(404, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ success: false, error: 'Planning API endpoint not found' }));
             
-        } catch (error: any) {
-            this.logger.error('Planning API error', error);
+        } catch (error: unknown) {
+            this.logger.error('Planning API error', error instanceof Error ? error : new Error(String(error)));
             res.writeHead(500, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: false, error: error.message }));
+            res.end(JSON.stringify({ success: false, error: error instanceof Error ? error.message : String(error) }));
         }
     }
 
     /**
      * Get all planning items (epics, stories, tasks)
      */
-    private async getAllPlanningItems(): Promise<any[]> {
-        const allItems: any[] = [];
+    private async getAllPlanningItems(): Promise<FlatPlanningItem[]> {
+        const allItems: FlatPlanningItem[] = [];
         
         const epics = await this.planningManager.listEpics();
         for (const epic of epics) {
@@ -1315,7 +1450,7 @@ export class MCPServer {
     /**
      * Get a specific planning item by ID
      */
-    private async getPlanningItem(itemId: string): Promise<any | null> {
+    private async getPlanningItem(itemId: string): Promise<FlatPlanningItem | null> {
         // Try to find as epic
         const epic = await this.planningManager.getEpic(itemId);
         if (epic) return { ...epic, type: 'epic' };
@@ -1339,7 +1474,7 @@ export class MCPServer {
     /**
      * Update a planning item by ID
      */
-    private async updatePlanningItem(itemId: string, updates: any): Promise<any | null> {
+    private async updatePlanningItem(itemId: string, updates: Record<string, unknown>): Promise<Epic | Story | Task | null> {
         // Try to update as epic
         const epic = await this.planningManager.getEpic(itemId);
         if (epic) {
@@ -1425,8 +1560,8 @@ export class MCPServer {
             
             // GET /api/ai-kits/available - List available kits from selected repo
             if (req.method === 'GET' && url.startsWith('/api/ai-kits/available')) {
-                // TODO: Fetch inventory.yaml from selected repo
-                const kits: any[] = [];
+                const kitLoader = AIKitLoaderService.getInstance();
+                const kits = await kitLoader.getAvailableKits();
                 
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ success: true, data: kits }));
@@ -1435,8 +1570,8 @@ export class MCPServer {
             
             // GET /api/ai-kits/installed - List installed kits
             if (req.method === 'GET' && url === '/api/ai-kits/installed') {
-                // TODO: Scan installed kits from workspace
-                const installed: any[] = [];
+                const kitLoader = AIKitLoaderService.getInstance();
+                const installed = kitLoader.getInstalledKits();
                 
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ success: true, data: installed }));
@@ -1448,17 +1583,18 @@ export class MCPServer {
                 const body = await this.parseRequestBody(req);
                 const { kitId, targetSystem, repo } = JSON.parse(body);
                 
-                // TODO: Implement kit installation
-                this.logger.info('Installing AI Kit', { kitId, targetSystem, repo });
+                const kitLoader = AIKitLoaderService.getInstance();
+                const repoConfig = kitLoader.getRepositories().find(r => r.id === repo || r.url === repo);
+                const repoUrl = repoConfig?.url || repo;
+                const branch = repoConfig?.branch || 'dev';
                 
-                res.writeHead(200, { 'Content-Type': 'application/json' });
+                this.logger.info('Installing AI Kit', { kitId, targetSystem, repo: repoUrl });
+                const result = await kitLoader.installKit(kitId, repoUrl, branch, targetSystem);
+                
+                res.writeHead(result.success ? 200 : 400, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ 
-                    success: true, 
-                    data: { 
-                        kitId, 
-                        installed: true,
-                        message: 'Kit installation initiated'
-                    } 
+                    success: result.success, 
+                    data: result
                 }));
                 return;
             }
@@ -1468,17 +1604,14 @@ export class MCPServer {
             if (req.method === 'DELETE' && uninstallMatch) {
                 const kitId = uninstallMatch[1];
                 
-                // TODO: Implement kit uninstallation
+                const kitLoader = AIKitLoaderService.getInstance();
                 this.logger.info('Uninstalling AI Kit', { kitId });
+                const result = await kitLoader.uninstallKit(kitId);
                 
-                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.writeHead(result.success ? 200 : 400, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ 
-                    success: true, 
-                    data: { 
-                        kitId, 
-                        uninstalled: true,
-                        message: 'Kit uninstalled'
-                    } 
+                    success: result.success, 
+                    data: result
                 }));
                 return;
             }
@@ -1487,10 +1620,10 @@ export class MCPServer {
             res.writeHead(404, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ success: false, error: 'AI Kit API endpoint not found' }));
             
-        } catch (error: any) {
-            this.logger.error('AI Kit API error', error);
+        } catch (error: unknown) {
+            this.logger.error('AI Kit API error', error instanceof Error ? error : new Error(String(error)));
             res.writeHead(500, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: false, error: error.message }));
+            res.end(JSON.stringify({ success: false, error: error instanceof Error ? error.message : String(error) }));
         }
     }
 }

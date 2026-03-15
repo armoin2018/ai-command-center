@@ -275,21 +275,42 @@ export class JiraClient {
 
     /**
      * Search issues with JQL
+     * Uses POST /rest/api/3/search/jql (migrated from deprecated /search per CHANGE-2046)
+     * @see https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/#api-rest-api-3-search-jql-post
      */
     async searchIssues(
         jql: string,
-        options?: { maxResults?: number; startAt?: number }
+        options?: { maxResults?: number; nextPageToken?: string }
     ): Promise<JiraIssue[]> {
         try {
-            const response = await this.retryRequest(() =>
-                this.client.post('/search', {
-                    jql,
-                    maxResults: options?.maxResults || 100,
-                    startAt: options?.startAt || 0
-                })
-            );
+            const allIssues: JiraIssue[] = [];
+            let nextPageToken: string | undefined = options?.nextPageToken;
+            const maxResults = options?.maxResults || 100;
 
-            return response.data.issues;
+            do {
+                const requestBody: Record<string, unknown> = {
+                    jql,
+                    maxResults
+                };
+                if (nextPageToken) {
+                    requestBody.nextPageToken = nextPageToken;
+                }
+
+                const response = await this.retryRequest(() =>
+                    this.client.post('/search/jql', requestBody)
+                );
+
+                const issues = response.data.issues || [];
+                allIssues.push(...issues);
+
+                // Use cursor-based pagination; stop if last page
+                nextPageToken = response.data.nextPageToken;
+                if (response.data.isLast !== false) {
+                    break;
+                }
+            } while (nextPageToken);
+
+            return allIssues;
         } catch (error) {
             logger.error('Failed to search issues', { jql, error });
             return [];

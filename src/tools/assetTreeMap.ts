@@ -147,7 +147,28 @@ export class AssetTreeMapGenerator {
      * Recursively scan directory
      */
     private async scanDirectory(dirPath: string, rootPath: string): Promise<AssetInfo> {
-        const stats = fs.statSync(dirPath);
+        let stats: fs.Stats;
+        try {
+            stats = fs.statSync(dirPath);
+        } catch (error) {
+            this.logger.error('Failed to stat directory', {
+                path: dirPath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            return {
+                name: path.basename(dirPath),
+                path: dirPath,
+                relativePath: path.relative(rootPath, dirPath) || '.',
+                type: 'directory',
+                category: 'other',
+                size: 0,
+                sizeFormatted: '0 B',
+                extension: '',
+                lastModified: new Date(),
+                isDirectory: true,
+                children: []
+            };
+        }
         const relativePath = path.relative(rootPath, dirPath);
         const name = path.basename(dirPath);
 
@@ -208,7 +229,28 @@ export class AssetTreeMapGenerator {
      * Scan individual file
      */
     private async scanFile(filePath: string, rootPath: string): Promise<AssetInfo> {
-        const stats = fs.statSync(filePath);
+        let stats: fs.Stats;
+        try {
+            stats = fs.statSync(filePath);
+        } catch (error) {
+            this.logger.error('Failed to stat file', {
+                path: filePath,
+                error: error instanceof Error ? error.message : String(error)
+            });
+            const ext = path.extname(filePath).toLowerCase();
+            return {
+                name: path.basename(filePath),
+                path: filePath,
+                relativePath: path.relative(rootPath, filePath),
+                type: this.getFileType(ext, path.basename(filePath)),
+                category: 'other',
+                size: 0,
+                sizeFormatted: '0 B',
+                extension: ext,
+                lastModified: new Date(),
+                isDirectory: false
+            };
+        }
         const relativePath = path.relative(rootPath, filePath);
         const ext = path.extname(filePath).toLowerCase();
         const name = path.basename(filePath);

@@ -112,9 +112,16 @@
       "description": "List of kit names this kit depends on",
       "x-readonly": true
     },
-    "additionalProperties": {
-      "type": "object",
-      "description": "Custom properties specific to this kit"
+    "bundles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/bundleObject"
+      },
+      "description": "Optional bundles of grouped assets that can be enabled/disabled together"
+    },
+    "configuration": {
+      "$ref": "#/definitions/configurationObject",
+      "description": "Kit configuration with form fields and automated actions"
     }
   },
   "definitions": {
@@ -214,6 +221,204 @@
           "type": "boolean",
           "default": false,
           "description": "Flatten directory structure (copy all files to target root)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "bundleObject": {
+      "type": "object",
+      "required": ["name", "enabled", "assets"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Unique bundle identifier (lowercase, alphanumeric, hyphens)"
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether the bundle is enabled by default"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Brief description of what this bundle provides"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Codicon icon name for visual representation"
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Paths to assets included in this bundle (e.g., 'skills/ailey-soc-discord', 'personas/marketing/social-media-expert.md')"
+        }
+      },
+      "additionalProperties": false
+    },
+    "configurationObject": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/configFieldObject"
+          },
+          "description": "Configuration form fields rendered in the Configuration tab"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/configActionObject"
+          },
+          "description": "Automated actions triggered by conditions"
+        }
+      },
+      "additionalProperties": false
+    },
+    "configFieldObject": {
+      "type": "object",
+      "required": ["name", "label", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Field identifier used as the form input name"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable label displayed above the input"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["text", "textarea", "select", "number", "checkbox", "toggle", "date", "email", "url", "radio"],
+          "description": "Input type determining the rendered control"
+        },
+        "placeholder": {
+          "type": "string",
+          "description": "Placeholder text shown inside the input. Supports mustache templates (e.g., {{name}})"
+        },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "required": { "type": "boolean", "default": false },
+            "minLength": { "type": "integer", "minimum": 0 },
+            "maxLength": { "type": "integer", "minimum": 0 },
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "pattern": { "type": "string", "description": "Regex pattern for validation" },
+            "errorMessage": { "type": "string", "description": "Custom error message on validation failure" }
+          },
+          "additionalProperties": false,
+          "description": "Validation constraints for the field"
+        },
+        "helpText": {
+          "type": "string",
+          "description": "Help text displayed below the input"
+        },
+        "value": {
+          "description": "Default value for the field. Supports mustache templates (e.g., {{branch}})"
+        },
+        "defaultValue": {
+          "description": "Alias for value — default value for the field"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "required": ["label", "value"],
+                "properties": {
+                  "label": { "type": "string" },
+                  "value": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "description": "Options for select and radio field types"
+        }
+      },
+      "additionalProperties": false
+    },
+    "configActionObject": {
+      "type": "object",
+      "required": ["actionType", "command"],
+      "properties": {
+        "actionType": {
+          "type": "string",
+          "enum": ["create", "edit", "delete", "bulk-edit", "bulk-delete", "sync", "import", "export"],
+          "description": "Action type from the common AICC action library"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/conditionObject"
+          },
+          "description": "All conditions must be met for the action to be available"
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Command to execute. Supports mustache-style field references (e.g., {{name}}, {{branch}})"
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional display label for the action button"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Optional codicon icon name for the action button"
+        },
+        "confirmMessage": {
+          "type": "string",
+          "description": "Optional confirmation prompt before execution. Supports mustache templates"
+        }
+      },
+      "additionalProperties": false
+    },
+    "conditionObject": {
+      "type": "object",
+      "required": ["field", "operator", "value"],
+      "properties": {
+        "field": {
+          "type": "string",
+          "description": "Field name or dot-path to evaluate (e.g., 'refreshEnabled', 'branch')"
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "equals",
+            "not-equals",
+            "contains",
+            "not-contains",
+            "starts-with",
+            "ends-with",
+            "greater-than",
+            "less-than",
+            "greater-than-or-equals",
+            "less-than-or-equals",
+            "matches",
+            "exists",
+            "not-exists",
+            "in",
+            "not-in",
+            "is-empty",
+            "is-not-empty"
+          ],
+          "description": "Comparison operator for the condition"
+        },
+        "value": {
+          "description": "Value to compare against. Type depends on the operator"
         }
       },
       "additionalProperties": false

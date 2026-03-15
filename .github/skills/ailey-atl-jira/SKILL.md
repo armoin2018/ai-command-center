@@ -238,6 +238,88 @@ The skill automatically works with plan schemas in `.github/aicc/schemas/plan.v*
 }
 ```
 
+## Configuration Management
+
+### Unified Config File: `.my/aicc/jira-config.save.json`
+
+All Jira configuration (connection, sync strategy, filters, and query parameters) is persisted in a single unified file: `.my/aicc/jira-config.save.json`. The API token is **not** stored in this file — it is kept in VS Code SecretStorage for security.
+
+**File Format:**
+```json
+{
+  "enabled": true,
+  "baseUrl": "https://your-domain.atlassian.net",
+  "email": "you@example.com",
+  "projectKey": "PROJ",
+  "syncStrategy": "pull",
+  "conflictResolution": "remote-wins",
+  "autoSync": false,
+  "syncInterval": 30,
+  "issueTypeFilters": { "epic": true, "story": true, "task": true, "bug": true },
+  "statusFilter": ["To Do", "In Progress"],
+  "assigneeFilter": "currentUser()",
+  "sprintFilter": "openSprints()",
+  "labelsFilter": ["backend", "security"],
+  "dateRange": "-7d",
+  "jql": "component = Frontend",
+  "lastUpdated": "2026-02-01T12:00:00.000Z"
+}
+```
+
+**Field Reference:**
+
+| Field | Type | Description |
+|---|---|---|
+| `enabled` | boolean | Whether Jira integration is active |
+| `baseUrl` | string | Jira Cloud instance URL |
+| `email` | string | Atlassian account email |
+| `projectKey` | string | Jira project key (e.g., PROJ) |
+| `syncStrategy` | string | `push`, `pull`, or `bidirectional` |
+| `conflictResolution` | string | `local-wins`, `remote-wins`, `manual`, or `merge` |
+| `autoSync` | boolean | Enable automatic scheduled sync |
+| `syncInterval` | number | Auto-sync interval in minutes |
+| `issueTypeFilters` | object | Which issue types to include (`epic`, `story`, `task`, `bug`) |
+| `statusFilter` | string[] | Status values to include (e.g., `To Do`, `In Progress`, `Done`) |
+| `assigneeFilter` | string | JQL assignee expression |
+| `sprintFilter` | string | JQL sprint expression |
+| `labelsFilter` | string[] | Labels to filter by |
+| `dateRange` | string | JQL date expression for `updated >=` |
+| `jql` | string | Custom JQL appended to generated query |
+
+### Profile Support: Planning & Ideation
+
+The unified config file supports the **Planning** panel Jira integration. The **Ideation** panel has its own config in `.my/aicc/ideation.json` (managed by the ideation handlers).
+
+Both profiles share the same Jira connection credentials (base URL, email, API token) but can have different:
+- Project keys
+- Sync strategies and intervals
+- Issue type and status filters
+- Query parameters (assignee, sprint, labels, JQL)
+
+### Configuration Commands
+
+**Save configuration** (from VS Code secondary panel or programmatically):
+```
+Message: saveJiraConfig
+Payload: { baseUrl, email, apiToken, projectKey, ... }
+Storage: .my/aicc/jira-config.save.json + SecretStorage (token)
+```
+
+**Load configuration**:
+```
+Message: getJiraConfig
+Response: jiraConfigLoaded (full config with token from SecretStorage)
+```
+
+**Filter-Aware Sync**: When sync is triggered, the saved filters (issue types, statuses, assignee, sprint, labels, date range, custom JQL) are used to construct the JQL query sent to Jira. This ensures only relevant issues are fetched.
+
+### Migration from VS Code Settings
+
+Previous versions stored Jira config in `settings.json` under `aicc.jira.*`. The new system:
+1. Reads from `.my/aicc/jira-config.save.json` first (primary)
+2. Falls back to `vscode.workspace.getConfiguration('aicc.jira')` if file doesn't exist
+3. On first save, migrates to file-based storage automatically
+
 ## Scripts
 
 ### jira-client.ts

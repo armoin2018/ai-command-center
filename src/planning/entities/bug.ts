@@ -1,4 +1,5 @@
 import { IBug, TaskStatus, Priority, IComment, ItemType, IItemLink } from '../types';
+import { getIdPattern, getIdFormatDescription } from '../../utils/idPrefix';
 
 /**
  * Bug entity class with methods for creation, validation, and persistence.
@@ -87,8 +88,8 @@ export class Bug implements IBug {
             errors.push('Bug title must be ≤100 characters');
         }
 
-        if (!this.id || !/^ARMOIN-\d{3}$/.test(this.id)) {
-            errors.push('Bug ID must match pattern ARMOIN-XXX');
+        if (!this.id || !getIdPattern().test(this.id)) {
+            errors.push(`Bug ID must match pattern ${getIdFormatDescription()}`);
         }
 
         if (!this.description || this.description.trim().length === 0) {

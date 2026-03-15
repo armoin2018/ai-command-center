@@ -1,5 +1,13 @@
 {
     "chat.tools.terminal.autoApprove": {
         "npm run audio": true
-    }
+    },
+    "aicc.jira.baseUrl": "https://armoin2018.atlassian.net/",
+    "aicc.jira.email": "blaine@armoin.com",
+    "aicc.jira.projectKey": "AICC",
+    "aicc.jira.enabled": true,
+    "aicc.jira.syncStrategy": "bidirectional",
+    "aicc.jira.conflictResolution": "remote-wins",
+    "aicc.jira.autoSync": true,
+    "aicc.jira.syncInterval": 30
 }

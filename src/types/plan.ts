@@ -103,7 +103,7 @@ export interface PlanItem {
   // Context & Resources
   contexts?: string[];
   links?: string[];
-  variables?: Record<string, any>;
+  variables?: Record<string, unknown>;
   
   // Acceptance Criteria
   acceptanceCriteria?: string;
@@ -111,6 +111,9 @@ export interface PlanItem {
   // Comments
   comments?: Comment[];
   
+  // External Integration
+  projectNumber?: string; // External key (e.g., Jira issue key)
+
   // Metadata
   metadata?: ItemMetadata;
 }

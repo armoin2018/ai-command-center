@@ -8,10 +8,31 @@
 import * as vscode from 'vscode';
 import { Logger } from '../logger';
 
+export interface PlanConfigItem {
+    id: string;
+    name?: string;
+    type?: string;
+    status?: string;
+    priority?: string;
+    storyPoints?: number;
+    description?: string;
+    tags?: string[];
+    epicId?: string;
+    storyId?: string;
+    dependencies?: string[];
+}
+
+export interface PlanConfigInput {
+    epics?: PlanConfigItem[];
+    stories?: PlanConfigItem[];
+    tasks?: PlanConfigItem[];
+    [key: string]: unknown;
+}
+
 export interface ValidationRule {
     name: string;
     severity: 'error' | 'warning' | 'info';
-    validate: (config: any) => ValidationResult;
+    validate: (config: PlanConfigInput) => ValidationResult;
 }
 
 export interface ValidationResult {
@@ -135,7 +156,7 @@ export class ConfigValidator {
     /**
      * Validate configuration against all rules
      */
-    async validate(config: any): Promise<ValidationReport> {
+    async validate(config: PlanConfigInput): Promise<ValidationReport> {
         const errors: ValidationError[] = [];
         const warnings: ValidationError[] = [];
         const info: ValidationError[] = [];
@@ -179,7 +200,7 @@ export class ConfigValidator {
     /**
      * Validate required fields
      */
-    private validateRequiredFields(config: any): ValidationResult {
+    private validateRequiredFields(config: PlanConfigInput): ValidationResult {
         const requiredFields = ['epics'];
         
         for (const field of requiredFields) {
@@ -198,7 +219,7 @@ export class ConfigValidator {
     /**
      * Validate circular dependencies
      */
-    private validateCircularDependencies(config: any): ValidationResult {
+    private validateCircularDependencies(config: PlanConfigInput): ValidationResult {
         const epics = config.epics || [];
         const visited = new Set<string>();
         const recursionStack = new Set<string>();
@@ -216,7 +237,7 @@ export class ConfigValidator {
             recursionStack.add(id);
 
             for (const depId of dependencies) {
-                const epic = epics.find((e: any) => e.id === depId);
+                const epic = epics.find((e: PlanConfigItem) => e.id === depId);
                 if (epic && hasCycle(depId, epic.dependencies || [])) {
                     return true;
                 }
@@ -242,9 +263,9 @@ export class ConfigValidator {
     /**
      * Validate dependency existence
      */
-    private validateDependencyExistence(config: any): ValidationResult {
+    private validateDependencyExistence(config: PlanConfigInput): ValidationResult {
         const epics = config.epics || [];
-        const epicIds = new Set(epics.map((e: any) => e.id));
+        const epicIds = new Set(epics.map((e: PlanConfigItem) => e.id));
 
         for (const epic of epics) {
             if (epic.dependencies) {
@@ -266,7 +287,7 @@ export class ConfigValidator {
     /**
      * Validate story points
      */
-    private validateStoryPoints(config: any): ValidationResult {
+    private validateStoryPoints(config: PlanConfigInput): ValidationResult {
         const items = this.getAllItems(config);
 
         for (const item of items) {
@@ -297,7 +318,7 @@ export class ConfigValidator {
     /**
      * Validate priority values
      */
-    private validatePriority(config: any): ValidationResult {
+    private validatePriority(config: PlanConfigInput): ValidationResult {
         const validPriorities = ['low', 'medium', 'high', 'critical'];
         const items = this.getAllItems(config);
 
@@ -317,7 +338,7 @@ export class ConfigValidator {
     /**
      * Validate status values
      */
-    private validateStatus(config: any): ValidationResult {
+    private validateStatus(config: PlanConfigInput): ValidationResult {
         const validStatuses = ['todo', 'in-progress', 'done', 'pending'];
         const items = this.getAllItems(config);
 
@@ -337,7 +358,7 @@ export class ConfigValidator {
     /**
      * Validate tags
      */
-    private validateTags(config: any): ValidationResult {
+    private validateTags(config: PlanConfigInput): ValidationResult {
         const items = this.getAllItems(config);
 
         for (const item of items) {
@@ -368,13 +389,13 @@ export class ConfigValidator {
     /**
      * Validate hierarchy consistency
      */
-    private validateHierarchy(config: any): ValidationResult {
+    private validateHierarchy(config: PlanConfigInput): ValidationResult {
         const epics = config.epics || [];
         const stories = config.stories || [];
         const tasks = config.tasks || [];
 
-        const epicIds = new Set(epics.map((e: any) => e.id));
-        const storyIds = new Set(stories.map((s: any) => s.id));
+        const epicIds = new Set(epics.map((e: PlanConfigItem) => e.id));
+        const storyIds = new Set(stories.map((s: PlanConfigItem) => s.id));
 
         // Validate story epic references
         for (const story of stories) {
@@ -404,7 +425,7 @@ export class ConfigValidator {
     /**
      * Validate description length
      */
-    private validateDescriptionLength(config: any): ValidationResult {
+    private validateDescriptionLength(config: PlanConfigInput): ValidationResult {
         const items = this.getAllItems(config);
         const maxLength = 5000;
 
@@ -424,7 +445,7 @@ export class ConfigValidator {
     /**
      * Validate duplicate IDs
      */
-    private validateDuplicateIds(config: any): ValidationResult {
+    private validateDuplicateIds(config: PlanConfigInput): ValidationResult {
         const allIds = new Set<string>();
         const items = this.getAllItems(config);
 
@@ -445,12 +466,13 @@ export class ConfigValidator {
     /**
      * Get all items from config
      */
-    private getAllItems(config: any): any[] {
-        const items: any[] = [];
+    private getAllItems(config: PlanConfigInput): (PlanConfigItem & { type: string })[] {
+        const items: (PlanConfigItem & { type: string })[] = [];
         
-        ['epics', 'stories', 'tasks'].forEach(type => {
-            if (config[type]) {
-                items.push(...config[type].map((item: any) => ({ ...item, type: type.slice(0, -1) })));
+        (['epics', 'stories', 'tasks'] as const).forEach(type => {
+            const arr = config[type] as PlanConfigItem[] | undefined;
+            if (arr) {
+                items.push(...arr.map((item: PlanConfigItem) => ({ ...item, type: type.slice(0, -1) })));
             }
         });
 

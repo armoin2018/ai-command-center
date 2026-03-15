@@ -170,7 +170,11 @@ tsx scripts/convert.ts -i data.json.gz -o data.yaml -f json -t yaml --input-comp
 Read from stdin, write to stdout:
 
 ```bash
+# macOS / Linux
 cat data.json | tsx scripts/convert.ts --stdin --stdout --from json --to yaml > data.yaml
+
+# Windows (PowerShell)
+Get-Content data.json | tsx scripts/convert.ts --stdin --stdout --from json --to yaml > data.yaml
 ```
 
 ### URL Input
@@ -672,8 +676,8 @@ await crud.update('.items[] | select(.id == "AICC-001")', { status: 'IN-PROGRESS
 2.0.0
 
 ---
-version: 1.0.0
-updated: 2026-01-30
-reviewed: 2026-01-30
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.2
 ---

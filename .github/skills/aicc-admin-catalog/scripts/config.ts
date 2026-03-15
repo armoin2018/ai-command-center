@@ -34,7 +34,9 @@ export function getConfig(): CatalogConfig {
     agenticSystem: (process.env.AGENTIC_SYSTEM as AgenticSystem) || 'copilot',
     gitCacheDir: process.env.GIT_CACHE_DIR 
       ? path.resolve(process.env.GIT_CACHE_DIR.replace('~', os.homedir()))
-      : path.join(os.homedir(), '.vscode', 'cache'),
+      : (process.platform === 'win32'
+        ? path.join(process.env.APPDATA || path.join(os.homedir(), 'AppData', 'Roaming'), 'vscode-cache')
+        : path.join(os.homedir(), '.vscode', 'cache')),
     maxRetryAttempts: parseInt(process.env.MAX_RETRY_ATTEMPTS || '3'),
     retryBackoffBase: parseInt(process.env.RETRY_BACKOFF_BASE || '2'),
     maxBackoffTime: parseInt(process.env.MAX_BACKOFF_TIME || '30'),

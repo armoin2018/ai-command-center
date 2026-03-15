@@ -5,6 +5,75 @@ All notable changes to the AI Command Center extension will be documented in thi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-02-21
+
+### 🚀 v2.0.0 — Major Feature Release (Sprints 15–30)
+
+This release represents a major evolution of AI Command Center from a planning panel into a full-spectrum AI-powered project management platform with 40+ MCP tools, a skills engine, analytics, and deep integrations.
+
+#### 📊 Planning System
+- **Velocity Engine** — Sprint velocity calculation, historical tracking, and trend analysis
+- **Burndown Charts** — Real-time burndown visualization with ideal-line comparison
+- **Sprint Forecasting** — AI-assisted completion predictions based on velocity history
+- **Plan History & Archival** — Version-controlled plan snapshots with restore capability
+- **Natural Language Planning** — Create epics, stories, and tasks from plain-English descriptions
+- **Git Branch Auto-Linking** — Automatically associate git branches with plan items by naming convention
+
+#### 🧩 AI Kit Platform
+- **Component System** — Modular UI components (epic-card, filter-bar, planning-tree, story-list, task-card, toolbar)
+- **Config Forms** — Dynamic configuration forms generated from kit manifests
+- **Global Caching** — Cross-workspace AI Kit cache (`~/.vscode/ai-ley-cache`) for faster loads
+- **Manifests** — Standardized kit manifests with auto-load recommendations and workspace detection
+
+#### 🔧 MCP Tools (40+ Tools)
+- **Full CRUD Surface** — Create, read, update, delete, list, move, link, search across all plan entities
+- **Resource Discovery** — Discover agents, skills, personas, and instructions dynamically
+- **Bulk Operations** — Batch status updates, reparenting, and cascade deletes
+- **Velocity & Forecasting Tools** — Metrics retrieval, burndown data, completion forecasting, sprint recording
+- **Idea Analytics Tools** — Scoring, duplicate detection, enrichment suggestions, trend analysis, lifecycle rules
+- **Prompt Tracking Tools** — Usage tracking, outcome updates, effectiveness scoring, leaderboard
+- **Offline Queue Tools** — Queue stats, drain, dead-letter inspection, retry
+- **Agent Memory Tools** — Store, recall, export, prune, and summarize session memory
+- **Knowledge Base Tools** — Store, search, deduplicate, summarize, and export cross-workspace knowledge
+- **Confluence Tools** — Page retrieval, search, push, pull, and bidirectional sync
+- **Skill Registration Tools** — Auto-discover, register, list registrations, index retrieval
+- **Pipeline Tools** — Run pipelines, list definitions, inspect runs
+- **Telemetry Tools** — Summary, event listing, custom event tracking
+- **Ideation Tools** — Full idea lifecycle: create, update, delete, list, vote, comment, promote, retrieve
+
+#### ⚡ Skills Platform
+- **Skill-to-MCP Factory** — Convert any skill definition into an MCP tool automatically
+- **Skill Pipelines** — Chain skills into multi-step automation pipelines with data flow
+- **Skill Health Monitoring** — Periodic health probes with configurable intervals and status reporting
+- **Skill Registration Manager** — Auto-discovery and registration of skills from workspace and kits
+- **Offline-First Queue** — Exponential-backoff retry queue with dead-letter handling for failed operations
+
+#### 🔗 Integrations
+- **Confluence Client** — Full Confluence Cloud integration (get, search, push, pull, sync)
+- **Jira Sync Enhancements** — Bidirectional sync with conflict resolution strategies (local-wins, remote-wins, manual, merge)
+- **Reactive Event Bus** — Publish/subscribe event system for cross-component communication
+
+#### 📈 Analytics
+- **Workspace Telemetry** — Local-only telemetry collection for workspace activity insights
+- **Prompt Effectiveness Scoring** — Track prompt usage and outcomes to surface highest-performing prompts
+- **Idea Analytics & AI Enrichment** — Score ideas, detect duplicates, surface trends, and suggest enrichments
+
+#### 🤖 AI Services
+- **Agent Session Memory** — Persistent memory store with auto-pruning (configurable max entries and age)
+- **Cross-Workspace Knowledge Base** — Shared knowledge store with semantic search and deduplication
+- **Smart Context Engine** — Intelligent context assembly for AI agent interactions
+
+#### ✅ Quality
+- **172 Unit & Integration Tests** — Comprehensive test coverage across all modules
+- **0 TypeScript Errors** — Full strict-mode compliance with zero compiler errors
+
+#### 🎨 UI Polish
+- **Dashboard Commands** — Velocity charts, health dashboards, prompt leaderboard, knowledge base search, queue status, memory export
+- **Settings Registration** — All new features fully registered in VS Code settings with ordered grouping
+- **Queue Status Bar** — Real-time offline queue status indicator in the VS Code status bar
+
+---
+
 ## [1.0.43] - 2026-01-11
 
 ### 🐛 Bug Fixes - Duplicate ID Registration

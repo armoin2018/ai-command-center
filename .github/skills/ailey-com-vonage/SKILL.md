@@ -1,3 +1,18 @@
+---
+id: ailey-com-vonage
+name: Vonage Communications API Integration
+description: Comprehensive Vonage integration for SMS, voice calls, number verification, and messaging with automatic account tier detection, webhook security, and multi-channel support.
+keywords:
+  - vonage
+  - sms
+  - voice
+  - messaging
+  - verification
+  - api
+  - integration
+  - webhook
+---
+
 # Vonage Communications API Integration
 
 **Skill ID:** ailey-com-vonage  

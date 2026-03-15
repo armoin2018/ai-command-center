@@ -37,7 +37,13 @@ The Tools Model skill provides:
 ```bash
 cd .github/skills/ailey-tools-model
 npm install
+
+# macOS / Linux
 ./install.sh
+
+# Windows (PowerShell) — run the setup script via bash or manually:
+bash install.sh
+# Or if Git Bash / WSL is unavailable, run: npm run setup
 ```
 
 ## Quick Start
@@ -79,7 +85,11 @@ npm install
 Copy `.env.example` to `.env` and configure:
 
 ```bash
+# macOS / Linux
 cp .env.example .env
+
+# Windows (PowerShell)
+Copy-Item .env.example .env
 ```
 
 **For API Rendering (Optional):**
@@ -1007,8 +1017,8 @@ docker run -d -p 8080:8080 plantuml/plantuml-server:jetty
 
 ---
 
-version: 1.0.0
-updated: 2026-02-01
-reviewed: 2026-02-01
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.8
 ---

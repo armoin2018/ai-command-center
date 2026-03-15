@@ -109,11 +109,58 @@
             ]
         }
     },
-    "additionalProperties": {
-        "license": "MIT",
-        "stars": "21.9k",
-        "contributors": 250,
-        "topics": ["ai", "github-copilot", "prompt-engineering", "hacktoberfest"]
+    "configuration": {
+        "fields": [
+            {
+                "name": "license",
+                "label": "License",
+                "type": "text",
+                "placeholder": "e.g., MIT, Apache-2.0",
+                "validation": { "required": false },
+                "helpText": "Software license identifier",
+                "value": "MIT"
+            },
+            {
+                "name": "stars",
+                "label": "GitHub Stars",
+                "type": "text",
+                "placeholder": "e.g., 1.5k",
+                "validation": { "required": false },
+                "helpText": "Approximate star count on GitHub",
+                "value": "21.9k"
+            },
+            {
+                "name": "contributors",
+                "label": "Contributors",
+                "type": "number",
+                "placeholder": "Number of contributors",
+                "validation": { "required": false, "min": 0 },
+                "helpText": "Number of project contributors",
+                "value": 250
+            },
+            {
+                "name": "topics",
+                "label": "Topics",
+                "type": "text",
+                "placeholder": "Comma-separated topics",
+                "validation": { "required": false },
+                "helpText": "Project topics/tags (comma-separated)",
+                "value": "ai, github-copilot, prompt-engineering, hacktoberfest"
+            }
+        ],
+        "actions": [
+            {
+                "actionType": "sync",
+                "conditions": [
+                    {
+                        "field": "refreshEnabled",
+                        "operator": "equals",
+                        "value": true
+                    }
+                ],
+                "command": "aicc.syncKit --kit={{name}} --branch={{branch}}"
+            }
+        ]
     },
     "dependencies": []
 }

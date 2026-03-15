@@ -68,4 +68,15 @@ export const COMMAND_IDS = {
     INSTALL_AI_KIT: 'aicc.installAIKit',
     UNINSTALL_AI_KIT: 'aicc.uninstallAIKit',
     REFRESH_AI_KITS: 'aicc.refreshAIKits',
+    // Archival commands
+    ARCHIVE_ITEMS: 'aicc.archiveItems',
+    // Dashboard commands
+    SHOW_VELOCITY_CHART: 'aicc.showVelocityChart',
+    SHOW_HEALTH_DASHBOARD: 'aicc.showHealthDashboard',
+    SHOW_PROMPT_LEADERBOARD: 'aicc.showPromptLeaderboard',
+    SEARCH_KNOWLEDGE_BASE: 'aicc.searchKnowledgeBase',
+    SHOW_QUEUE_STATUS: 'aicc.showQueueStatus',
+    EXPORT_AGENT_MEMORY: 'aicc.exportAgentMemory',
+    CONFLUENCE_PUSH: 'aicc.confluencePush',
+    CONFLUENCE_PULL: 'aicc.confluencePull',
 } as const;

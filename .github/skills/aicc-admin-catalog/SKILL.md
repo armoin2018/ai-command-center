@@ -366,6 +366,8 @@ Contribute changes back to kit repositories:
 AGENTIC_SYSTEM=copilot
 
 # Git cache directory
+# macOS / Linux: ~/.vscode/cache
+# Windows: %USERPROFILE%\.vscode\cache (or $HOME\.vscode\cache in PowerShell)
 GIT_CACHE_DIR=~/.vscode/cache
 
 # Retry configuration
@@ -411,8 +413,13 @@ ssh-add ~/.ssh/id_rsa
 Clear cache manually if corrupted:
 
 ```bash
+# macOS / Linux
 rm -rf ~/.vscode/cache/kitname_branch
 rm ~/.vscode/cache/kitname_branch.lastUpdated
+
+# Windows (PowerShell)
+Remove-Item -Recurse -Force "$HOME\.vscode\cache\kitname_branch"
+Remove-Item -Force "$HOME\.vscode\cache\kitname_branch.lastUpdated"
 ```
 
 ### Schema Validation Errors
@@ -514,8 +521,8 @@ npm run catalog list -- --verbose > kits.txt
 
 ---
 
-version: 1.0.0
-updated: 2026-02-04
-reviewed: 2026-02-04
+version: 1.1.0
+updated: 2026-03-03
+reviewed: 2026-03-03
 score: 4.7
 ---

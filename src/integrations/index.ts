@@ -21,3 +21,12 @@ export {
 
 // Jira Integration
 export * from './jira';
+
+// Microsoft Teams Integration
+export * from './teams';
+
+// SharePoint Online Integration
+export * from './sharepoint';
+
+// Slack Integration
+export * from './slack';

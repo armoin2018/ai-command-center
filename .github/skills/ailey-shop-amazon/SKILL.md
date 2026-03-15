@@ -1,3 +1,18 @@
+---
+id: ailey-shop-amazon
+name: Amazon Selling Partner API Integration
+description: Comprehensive Amazon SP-API integration for product listing, order management, inventory tracking, advertising, and customer engagement. Supports both personal seller and professional business use cases.
+keywords:
+  - amazon
+  - sp-api
+  - ecommerce
+  - product
+  - order
+  - inventory
+  - advertising
+  - fba
+---
+
 # Amazon Selling Partner API Integration Skill
 
 Comprehensive Amazon SP-API integration for product listing, order management, inventory tracking, advertising, and customer engagement. Supports both personal seller and professional business use cases.

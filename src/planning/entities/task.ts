@@ -1,4 +1,5 @@
 import { ITask, TaskStatus, Priority, IComment, ItemType, IItemLink } from '../types';
+import { getIdPattern, getIdFormatDescription } from '../../utils/idPrefix';
 
 /**
  * Task entity class with methods for creation, validation, and persistence.
@@ -87,8 +88,8 @@ export class Task implements ITask {
             errors.push('Task title must be ≤100 characters');
         }
 
-        if (!this.id || !/^ARMOIN-\d{3}$/.test(this.id)) {
-            errors.push('Task ID must match pattern ARMOIN-XXX');
+        if (!this.id || !getIdPattern().test(this.id)) {
+            errors.push(`Task ID must match pattern ${getIdFormatDescription()}`);
         }
 
         return errors;
