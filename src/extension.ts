@@ -20,6 +20,7 @@ import { AgentDetector } from './agentDetector';
 import { ChatParticipantManager } from './chatParticipant';
 import { AIKitManager } from './aiKitManager';
 import { IntakeManager } from './intakeManager';
+import { KitBootstrapService } from './services/kitBootstrap';
 import { RealTimeUpdateSystem } from './services/realTimeUpdateSystem';
 import { VersionOverrideSystem } from './services/versionOverrideSystem';
 import { WorkspaceIdentityDetector } from './services/workspaceIdentity';
@@ -394,6 +395,37 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         });
         disposables.push(aiKitManager);
         tracker.markPhase('AI Kit manager initialization');
+
+        // ── Kit Bootstrap: first-load catalog copy, repo clone/fetch, and kit install ──
+        try {
+            const kitBootstrap = new KitBootstrapService(workspaceRoot);
+            // Run bootstrap in background with progress notification
+            vscode.window.withProgress(
+                {
+                    location: vscode.ProgressLocation.Window,
+                    title: 'AI Kit Bootstrap'
+                },
+                async (progress) => {
+                    const results = await kitBootstrap.bootstrapAllKits(progress);
+                    for (const r of results) {
+                        if (r.errors.length > 0) {
+                            logger.warn('Kit bootstrap had errors', { kit: r.kitName, errors: r.errors });
+                        } else {
+                            logger.info('Kit bootstrapped', {
+                                kit: r.kitName,
+                                catalogCopied: r.catalogCopied,
+                                repoCloned: r.repoCloned,
+                                repoUpdated: r.repoUpdated,
+                                filesInstalled: r.filesInstalled
+                            });
+                        }
+                    }
+                }
+            );
+        } catch (err) {
+            logger.warn('Kit bootstrap failed', { error: err instanceof Error ? err.message : String(err) });
+        }
+        tracker.markPhase('Kit bootstrap');
 
         // AI Kit Auto-Load (AICC-0098 / AICC-0274)
         const aiKitAutoLoadConfig = vscode.workspace.getConfiguration('aicc.aiKit.autoLoad');

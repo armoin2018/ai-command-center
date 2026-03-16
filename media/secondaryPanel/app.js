@@ -2642,9 +2642,18 @@ class SecondaryPanelApp {
      */
     createKitCard(kit) {
         const iconData = kit.iconBase64 || this.getDefaultKitIcon();
+        // Border colour class: blue=default, green=installed, white=not-installed, red=error
+        let borderClass = '';
+        if (kit.installStatus === 'error') {
+            borderClass = ' kit-border-error';
+        } else if (kit.installStatus === 'default') {
+            borderClass = ' kit-border-default';
+        } else if (kit.installStatus === 'installed') {
+            borderClass = ' kit-border-installed';
+        }
         return `
             <div class="kit-card" data-kit-id="${kit.name}">
-                <div class="kit-icon">
+                <div class="kit-icon${borderClass}">
                     <img src="${iconData}" alt="${kit.name}" />
                 </div>
                 <div class="kit-name">${kit.displayName || kit.name}</div>
@@ -2809,12 +2818,57 @@ class SecondaryPanelApp {
         if (!pane) return;
         
         const isInstalled = settings.installed || false;
+        const topLevelFields = settings.topLevelFields || [];
+        const configFields = settings.configFields || [];
+        
+        // Group top-level fields
+        const groups = {};
+        const ungrouped = [];
+        for (const field of topLevelFields) {
+            if (field.group) {
+                if (!groups[field.group]) groups[field.group] = [];
+                groups[field.group].push(field);
+            } else {
+                ungrouped.push(field);
+            }
+        }
+        
+        // Render top-level fields
+        const topLevelHtml = ungrouped.map(f => this.renderSettingsField(f, 'setting')).join('');
+        
+        // Render grouped fields
+        const groupLabels = { refresh: 'Refresh Settings', evolution: 'Evolution Settings' };
+        const groupsHtml = Object.entries(groups).map(([groupName, fields]) => `
+            <div class="settings-group">
+                <h4 class="settings-group-heading">
+                    <span class="codicon codicon-${groupName === 'refresh' ? 'sync' : 'git-pull-request'}"></span>
+                    ${groupLabels[groupName] || groupName}
+                </h4>
+                ${fields.map(f => this.renderSettingsField(f, 'setting')).join('')}
+            </div>
+        `).join('');
+        
+        // Render configuration fields section
+        let configFieldsHtml = '';
+        if (configFields.length > 0) {
+            const fieldsHtml = configFields.map(f => this.renderSettingsField(f, 'kitcfg')).join('');
+            configFieldsHtml = `
+                <div class="settings-group">
+                    <h4 class="settings-group-heading">
+                        <span class="codicon codicon-settings-gear"></span> Kit Configuration
+                    </h4>
+                    ${fieldsHtml}
+                </div>
+            `;
+        }
         
         pane.innerHTML = `
             <div class="kit-settings-form">
-                ${this.renderSettingsFields(settings.schema || {}, settings.values || {})}
+                ${topLevelHtml}
+                ${groupsHtml}
+                ${configFieldsHtml}
                 ${!isInstalled ? `
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: 16px;">
                         <button class="footer-btn success" id="btn-install-kit">
                             <span class="codicon codicon-cloud-download"></span> Install Kit
                         </button>
@@ -2827,6 +2881,74 @@ class SecondaryPanelApp {
         pane.querySelector('#btn-install-kit')?.addEventListener('click', () => {
             this.installKit(kitName);
         });
+    }
+    
+    /**
+     * Render a single settings field based on its type
+     */
+    renderSettingsField(field, prefix) {
+        const fieldId = `${prefix}-${field.name}`;
+        const label = field.label || field.name;
+        const value = field.value ?? '';
+        const isReadonly = field.readonly === true;
+        const helpText = field.helpText ? `<span class="field-help-text">${this.escapeHtml(field.helpText)}</span>` : '';
+        
+        let inputHtml = '';
+        
+        switch (field.type) {
+            case 'toggle':
+            case 'checkbox': {
+                const checked = value === true || value === 'true' ? 'checked' : '';
+                const disabled = isReadonly ? 'disabled' : '';
+                inputHtml = `
+                    <div class="toggle-field">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="${fieldId}" name="${field.name}" ${checked} ${disabled} />
+                            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                            <span class="toggle-label-text">${this.escapeHtml(label)}</span>
+                        </label>
+                    </div>
+                    ${helpText}
+                `;
+                // Toggles have their label inline; skip the outer label
+                return `<div class="form-group">${inputHtml}</div>`;
+            }
+            case 'number': {
+                const ro = isReadonly ? 'readonly' : '';
+                inputHtml = `<input type="number" id="${fieldId}" name="${field.name}" value="${this.escapeHtml(String(value))}" class="form-control" ${ro} />`;
+                break;
+            }
+            case 'select': {
+                const options = (field.options || []).map(opt => {
+                    const optVal = typeof opt === 'object' ? opt.value : opt;
+                    const optLabel = typeof opt === 'object' ? opt.label : opt;
+                    const selected = String(optVal) === String(value) ? 'selected' : '';
+                    return `<option value="${this.escapeHtml(String(optVal))}" ${selected}>${this.escapeHtml(String(optLabel))}</option>`;
+                }).join('');
+                const dis = isReadonly ? 'disabled' : '';
+                inputHtml = `<select id="${fieldId}" name="${field.name}" class="form-control" ${dis}>${options}</select>`;
+                break;
+            }
+            case 'textarea': {
+                const ro = isReadonly ? 'readonly' : '';
+                inputHtml = `<textarea id="${fieldId}" name="${field.name}" class="form-control" rows="3" ${ro}>${this.escapeHtml(String(value))}</textarea>`;
+                break;
+            }
+            default: { // text, email, url, date
+                const ro = isReadonly ? 'readonly' : '';
+                const placeholder = field.placeholder ? `placeholder="${this.escapeHtml(field.placeholder)}"` : '';
+                inputHtml = `<input type="${field.type || 'text'}" id="${fieldId}" name="${field.name}" value="${this.escapeHtml(String(value))}" class="form-control" ${ro} ${placeholder} />`;
+                break;
+            }
+        }
+        
+        return `
+            <div class="form-group">
+                <label for="${fieldId}">${this.escapeHtml(label)}</label>
+                ${inputHtml}
+                ${helpText}
+            </div>
+        `;
     }
     
     /**
@@ -3242,7 +3364,10 @@ class SecondaryPanelApp {
             
             const settings = this.collectFormValues(settingsPane, 'setting');
             
-            // Collect config values from both old and new format
+            // Collect kit configuration field values (from Settings tab, prefixed kitcfg-)
+            const configFieldValues = this.collectFormValues(settingsPane, 'kitcfg');
+            
+            // Collect config values from both old and new format (Configuration tab)
             const config = {
                 ...this.collectFormValues(configPane, 'config'),
                 ...this.collectFormValues(configPane, 'config-field')
@@ -3252,6 +3377,7 @@ class SecondaryPanelApp {
                 kitName,
                 settings,
                 config,
+                configFieldValues,
                 componentChanges: this.kitComponentChanges || {},
                 bundleChanges: this.kitBundleChanges || {}
             });

@@ -1,7 +1,7 @@
 {
     "name": "ai-ley",
-    "repo": "https://github.com/armoin2018/ai-ley",
-    "branch": "dev",
+    "repo": "https://github.com/armoin2018/ai-command-center",
+    "branch": "main",
     "refreshEnabled": false,
     "evolveEnabled": false,
     "refreshInterval": "86400",

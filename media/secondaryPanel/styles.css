@@ -1328,6 +1328,19 @@ body {
   justify-content: center;
 }
 
+/* Kit border colours by install status */
+.kit-icon.kit-border-default {
+  border-color: #3b82f6; /* blue – default / shipped kit */
+}
+
+.kit-icon.kit-border-installed {
+  border-color: #22c55e; /* green – user-installed kit */
+}
+
+.kit-icon.kit-border-error {
+  border-color: #ef4444; /* red – install error */
+}
+
 .kit-icon img {
   width: 100%;
   height: 100%;
@@ -1513,6 +1526,46 @@ body {
 .form-control:focus {
   outline: none;
   border-color: var(--vscode-focusBorder);
+}
+
+.form-control[readonly] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Settings Group Sections */
+.settings-group {
+  margin: 20px 0;
+  padding: 12px 16px;
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 6px;
+  background: var(--vscode-editor-background);
+}
+
+.settings-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vscode-foreground);
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.settings-group-heading .codicon {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Field Help Text */
+.field-help-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--vscode-descriptionForeground);
+  font-style: italic;
 }
 
 /* Components Tree */

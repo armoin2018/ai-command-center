@@ -124,10 +124,28 @@ export async function fetchAIKitCatalog(ctx: HandlerContext): Promise<void> {
                 }
               }
               
-              // Check if installed
+              // Check if installed (exists under .my/)
               const myStructurePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitFolder, 'structure.json');
               const installed = fsSync.existsSync(myStructurePath);
-              
+
+              // Kits found in .github/aicc/catalog/ are default (ship with the extension)
+              const isDefault = true;
+
+              // Check for bootstrap error marker
+              const errorMarkerPath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitFolder, '.bootstrap-error');
+              const hasError = fsSync.existsSync(errorMarkerPath);
+
+              // Determine install status for UI border colour
+              // blue = default installed, green = user installed, white = not installed, red = error
+              let installStatus: 'default' | 'installed' | 'not-installed' | 'error' = 'not-installed';
+              if (hasError) {
+                installStatus = 'error';
+              } else if (installed && isDefault) {
+                installStatus = 'default';
+              } else if (installed) {
+                installStatus = 'installed';
+              }
+
               kits.push({
                 name: structure.name || kitFolder,
                 displayName: structure.displayName || structure.name || kitFolder,
@@ -135,9 +153,11 @@ export async function fetchAIKitCatalog(ctx: HandlerContext): Promise<void> {
                 author: structure.author || '',
                 lastUpdated: structure.lastUpdated || null,
                 iconBase64,
-                installed
+                installed,
+                isDefault,
+                installStatus
               });
-              logger.info('Kit added to catalog', { name: structure.name || kitFolder, installed });
+              logger.info('Kit added to catalog', { name: structure.name || kitFolder, installed, installStatus });
             } else {
               logger.warn('structure.json not found', { folder: kitFolder });
             }
@@ -169,34 +189,102 @@ export async function fetchAIKitSettings(ctx: HandlerContext, kitName: string): 
       
       const workspaceRoot = workspaceFolders[0].uri.fsPath;
       
-      const structurePath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', kitName, 'structure.json');
-      const structureData = await fs.readFile(structurePath, 'utf-8');
-      const structure = JSON.parse(structureData);
-      
-      const myStructurePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitName, 'structure.json');
-      let myStructure = {};
-      if (fsSync.existsSync(myStructurePath)) {
-        const myStructureData = await fs.readFile(myStructurePath, 'utf-8');
-        myStructure = JSON.parse(myStructureData);
+      // Load base structure from .github/
+      const basePath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', kitName, 'structure.json');
+      let baseStructure: Record<string, any> = {};
+      if (fsSync.existsSync(basePath)) {
+        const baseData = await fs.readFile(basePath, 'utf-8');
+        baseStructure = JSON.parse(baseData);
       }
       
-      const schemaPath = path.join(workspaceRoot, '.github', 'aicc', 'schemas', 'structure.v1.schema.json');
-      const schemaData = await fs.readFile(schemaPath, 'utf-8');
-      const schema = JSON.parse(schemaData);
-      
+      // Load user override from .my/ (installed kits)
+      const myStructurePath = path.join(workspaceRoot, '.my', 'aicc', 'catalog', kitName, 'structure.json');
+      let myStructure: Record<string, any> = {};
       const installed = fsSync.existsSync(myStructurePath);
+      if (installed) {
+        const myData = await fs.readFile(myStructurePath, 'utf-8');
+        myStructure = JSON.parse(myData);
+      }
+      
+      // Merge: .my/ overrides .github/ values
+      const merged = { ...baseStructure, ...myStructure };
+      
+      // Load schema for reference
+      const schemaPath = path.join(workspaceRoot, '.github', 'aicc', 'schemas', 'structure.v1.schema.json');
+      let schema: Record<string, any> = { properties: {} };
+      if (fsSync.existsSync(schemaPath)) {
+        const schemaData = await fs.readFile(schemaPath, 'utf-8');
+        schema = JSON.parse(schemaData);
+      }
+      
+      // Build top-level editable properties from the schema
+      // These are the structure.json root-level fields the user can edit
+      const topLevelFields: any[] = [];
+      if (schema.properties) {
+        const orderedProps = Object.entries(schema.properties)
+          .map(([key, prop]: [string, any]) => ({ key, ...prop }))
+          .filter(p => !p['x-hidden'])
+          .sort((a, b) => (a['x-ui-order'] ?? 999) - (b['x-ui-order'] ?? 999));
+        
+        for (const prop of orderedProps) {
+          const isReadonly = prop['x-readonly'] === true;
+          const fieldType = resolveSchemaFieldType(prop);
+          topLevelFields.push({
+            name: prop.key,
+            label: prop.description || prop.key,
+            type: fieldType,
+            value: merged[prop.key] ?? prop.default ?? '',
+            readonly: isReadonly,
+            group: prop['x-ui-group'] || null
+          });
+        }
+      }
+      
+      // Extract configuration.fields from structure.json
+      const baseConfigFields: any[] = baseStructure.configuration?.fields || [];
+      const myConfigFields: any[] = myStructure.configuration?.fields || [];
+      
+      // Merge configuration field values: .my/ values override base defaults
+      const myConfigValues: Record<string, any> = {};
+      for (const f of myConfigFields) {
+        myConfigValues[f.name] = f.value;
+      }
+      
+      const configFields = baseConfigFields.map((field: any) => ({
+        ...field,
+        value: myConfigValues[field.name] ?? field.value ?? field.defaultValue ?? ''
+      }));
       
       ctx.postMessage({
         type: 'aikitSettings',
         payload: {
           kitName,
-          settings: { schema, values: { ...structure, ...myStructure }, installed }
+          settings: {
+            schema,
+            values: merged,
+            installed,
+            topLevelFields,
+            configFields
+          }
         }
       });
     } catch (error) {
       logger.error('Error fetching AI Kit settings', { error: String(error), kitName });
       throw error;
     }
+}
+
+/** Resolve a JSON Schema property type to a form field type */
+function resolveSchemaFieldType(prop: Record<string, any>): string {
+    if (prop.type === 'boolean') return 'toggle';
+    if (prop.type === 'number' || prop.type === 'integer') return 'number';
+    if (prop.enum) return 'select';
+    if (Array.isArray(prop.type)) {
+      // e.g. ["string", "number"] — use text
+      if (prop.type.includes('boolean')) return 'toggle';
+      if (prop.type.includes('number') || prop.type.includes('integer')) return 'number';
+    }
+    return 'text';
 }
 
 /** Fetch AI Kit configuration */
@@ -342,6 +430,7 @@ export async function handleSaveKitSettings(ctx: HandlerContext, payload: {
     kitName: string;
     settings: Record<string, unknown>;
     config: Record<string, unknown>;
+    configFieldValues?: Record<string, unknown>;
     componentChanges: Record<string, boolean>;
     bundleChanges?: Record<string, boolean>;
 }): Promise<void> {
@@ -361,23 +450,47 @@ export async function handleSaveKitSettings(ctx: HandlerContext, payload: {
         fsSync.mkdirSync(myKitPath, { recursive: true });
       }
       
-      // Save settings (structure.json)
+      // Save settings (top-level structure.json properties + configuration.fields)
+      const myStructurePath = path.join(myKitPath, 'structure.json');
+      let existingStructure: Record<string, any> = {};
+      if (fsSync.existsSync(myStructurePath)) {
+        const existingData = await fs.readFile(myStructurePath, 'utf-8');
+        existingStructure = JSON.parse(existingData);
+      }
+      
+      // Merge top-level editable properties
       if (payload.settings && Object.keys(payload.settings).length > 0) {
-        const myStructurePath = path.join(myKitPath, 'structure.json');
-        let existingStructure: Record<string, any> = {};
-        if (fsSync.existsSync(myStructurePath)) {
-          const existingData = await fs.readFile(myStructurePath, 'utf-8');
-          existingStructure = JSON.parse(existingData);
+        Object.assign(existingStructure, payload.settings);
+      }
+      
+      // Merge configuration field values into structure.json's configuration.fields
+      if (payload.configFieldValues && Object.keys(payload.configFieldValues).length > 0) {
+        // Load base configuration fields from .github/ to preserve full field definitions
+        const basePath = path.join(workspaceRoot, '.github', 'aicc', 'catalog', payload.kitName, 'structure.json');
+        let baseConfigFields: any[] = [];
+        if (fsSync.existsSync(basePath)) {
+          const baseData = await fs.readFile(basePath, 'utf-8');
+          const baseStructure = JSON.parse(baseData);
+          baseConfigFields = baseStructure.configuration?.fields || [];
         }
         
-        const updatedStructure = {
-          ...existingStructure,
-          ...payload.settings,
-          lastUpdated: new Date().toISOString()
-        };
+        // Build updated fields list with user values
+        const updatedFields = baseConfigFields.map((field: any) => {
+          const userVal = (payload.configFieldValues as Record<string, unknown>)[field.name];
+          if (userVal !== undefined) {
+            return { ...field, value: userVal };
+          }
+          return field;
+        });
         
-        await fs.writeFile(myStructurePath, JSON.stringify(updatedStructure, null, 2), 'utf-8');
+        if (!existingStructure.configuration) {
+          existingStructure.configuration = {};
+        }
+        existingStructure.configuration.fields = updatedFields;
       }
+      
+      existingStructure.lastUpdated = new Date().toISOString();
+      await fs.writeFile(myStructurePath, JSON.stringify(existingStructure, null, 2), 'utf-8');
       
       // Save configuration (config.save.json)
       if (payload.config && Object.keys(payload.config).length > 0) {
