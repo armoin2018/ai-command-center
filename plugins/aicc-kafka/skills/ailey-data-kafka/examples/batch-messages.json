@@ -1,0 +1,29 @@
+[
+  {
+    "key": "user-1",
+    "value": {
+      "id": 1,
+      "username": "alice",
+      "email": "alice@example.com",
+      "action": "login"
+    }
+  },
+  {
+    "key": "user-2",
+    "value": {
+      "id": 2,
+      "username": "bob",
+      "email": "bob@example.com",
+      "action": "signup"
+    }
+  },
+  {
+    "key": "user-3",
+    "value": {
+      "id": 3,
+      "username": "charlie",
+      "email": "charlie@example.com",
+      "action": "login"
+    }
+  }
+]

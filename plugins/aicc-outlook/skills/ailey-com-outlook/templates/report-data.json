@@ -1,0 +1,24 @@
+{
+  "reportTitle": "Q1 2026 Business Review",
+  "period": "January - March 2026",
+  "recipientName": "Executive Team",
+  "reportType": "Quarterly Business Report",
+  "revenue": "$1.2M",
+  "customers": "150",
+  "growth": "25",
+  "highlights": [
+    "Launched new product line with 500+ signups in first month",
+    "Expanded to 3 new markets",
+    "Customer satisfaction score increased to 4.8/5.0",
+    "Successfully closed Series A funding round"
+  ],
+  "actionItems": [
+    "Finalize Q2 product roadmap",
+    "Hire 5 additional engineers",
+    "Expand marketing budget by 30%",
+    "Prepare for international expansion"
+  ],
+  "senderName": "Alex Johnson",
+  "senderTitle": "Chief Financial Officer",
+  "contactEmail": "finance@acme.com"
+}

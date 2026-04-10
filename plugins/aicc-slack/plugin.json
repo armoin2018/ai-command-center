@@ -1,0 +1,19 @@
+{
+  "name": "aicc-slack",
+  "version": "1.0.0",
+  "description": "Comprehensive Slack integration with workspace tier detection, OAuth authentication, channel management, message operations, file sharing, interactive components (modals, blocks, shortcuts), slash commands, event subscriptions, and workflow automation. Supports Bot Token and User Token scopes with automatic workspace tier detection and feature availability mapping.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "slack",
+    "messaging",
+    "channels"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

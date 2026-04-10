@@ -6,7 +6,6 @@
  */
 
 import { SchemaLoaderService, PanelSchema, TabSchema } from './schemaLoader';
-import { ComponentRegistry } from './componentRegistry';
 import { Logger } from '../logger';
 
 const logger = Logger.getInstance();
@@ -26,11 +25,9 @@ export interface RenderContext {
 export class PanelRenderer {
     private static instance: PanelRenderer;
     private schemaLoader: SchemaLoaderService;
-    private componentRegistry: ComponentRegistry;
 
     private constructor(extensionPath: string) {
         this.schemaLoader = SchemaLoaderService.getInstance(extensionPath);
-        this.componentRegistry = ComponentRegistry.getInstance(extensionPath);
     }
 
     /**
@@ -50,7 +47,6 @@ export class PanelRenderer {
      * Initialize renderer
      */
     public async initialize(): Promise<void> {
-        await this.componentRegistry.initialize();
         logger.info('PanelRenderer initialized');
     }
 
@@ -227,22 +223,6 @@ export class PanelRenderer {
         html += `<div class="tab-content" data-tab-id="${tab.metadata.id}">`;
         html += `<span class="${refClass}" style="top:0;left:100px;" data-ref="TAB-${tab.metadata.id.toUpperCase()}">${tab.metadata.name}</span>`;
         
-        // Render components
-        if (tab.spec.components && tab.spec.components.length > 0) {
-            for (const componentRef of tab.spec.components) {
-                const componentHtml = this.componentRegistry.render(
-                    componentRef.componentId,
-                    componentRef.props || {},
-                    context
-                );
-                
-                if (componentHtml) {
-                    html += componentHtml;
-                } else {
-                    logger.warn(`Component not found: ${componentRef.componentId}`);
-                }
-            }
-        }
         
         html += '</div>';
         return html;

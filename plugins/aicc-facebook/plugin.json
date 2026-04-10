@@ -1,0 +1,19 @@
+{
+  "name": "aicc-facebook",
+  "version": "1.0.0",
+  "description": "Comprehensive Facebook integration for personal and business features via Graph API. Manage posts, photos, friends, groups, events, pages, ads, analytics, Instagram, leads, and messenger. Use when posting to Facebook, managing business pages, running ad campaigns, analyzing social media performance, or integrating Facebook/Instagram into workflows.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "facebook",
+    "social-media",
+    "meta"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ailey-atl-twilio",
+  "version": "1.0.0",
+  "description": "AI-ley Twilio skill — SMS, Voice, Verify & Phone Number management",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "twilio": "tsx scripts/index.ts",
+    "setup": "tsx scripts/index.ts setup",
+    "auth": "tsx scripts/index.ts auth",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.0",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0",
+    "@types/node": "^20.0.0"
+  }
+}

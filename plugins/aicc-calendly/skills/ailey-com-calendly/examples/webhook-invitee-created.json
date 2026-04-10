@@ -1,0 +1,39 @@
+{
+  "event": "invitee.created",
+  "time": "2026-01-30T15:30:00.000000Z",
+  "payload": {
+    "cancel_url": "https://calendly.com/cancellations/XXXXXXXXXX",
+    "created_at": "2026-01-30T15:30:00.000000Z",
+    "email": "client@example.com",
+    "event": "https://api.calendly.com/scheduled_events/EVENTID",
+    "name": "John Doe",
+    "new_invitee": null,
+    "no_show": null,
+    "old_invitee": null,
+    "payment": null,
+    "questions_and_answers": [
+      {
+        "answer": "Discuss new project requirements",
+        "position": 0,
+        "question": "What is the primary topic you'd like to discuss?"
+      }
+    ],
+    "reconfirmation": null,
+    "reschedule_url": "https://calendly.com/reschedulings/XXXXXXXXXX",
+    "rescheduled": false,
+    "routing_form_submission": null,
+    "status": "active",
+    "text_reminder_number": null,
+    "timezone": "America/New_York",
+    "tracking": {
+      "utm_campaign": null,
+      "utm_source": null,
+      "utm_medium": null,
+      "utm_content": null,
+      "utm_term": null,
+      "salesforce_uuid": null
+    },
+    "updated_at": "2026-01-30T15:30:00.000000Z",
+    "uri": "https://api.calendly.com/scheduled_events/EVENTID/invitees/INVITEEID"
+  }
+}

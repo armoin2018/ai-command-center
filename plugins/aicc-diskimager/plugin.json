@@ -1,0 +1,22 @@
+{
+  "name": "aicc-diskimager",
+  "version": "1.0.0",
+  "description": "Comprehensive disk imaging toolkit for creating, duplicating, and cloning disk images across drives and SD cards with safety-enforced cloning.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "disk",
+    "image",
+    "clone",
+    "dd",
+    "sdcard",
+    "backup"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

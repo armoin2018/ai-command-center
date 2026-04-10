@@ -34,6 +34,7 @@ import { LogEndpoint } from './endpoints/logEndpoint';
 import { CodiconsEndpoint, setCodiconsExtensionPath } from './endpoints/codiconsEndpoint';
 import { SwaggerEndpoint } from './swagger';
 import { PanelDataRoutes } from './routes/panelDataRoutes';
+import { HelpEndpoint } from './helpEndpoint';
 import { WorkspaceRegistration } from './leaderElection';
 
 /** Flat planning item with type discriminator for API responses */
@@ -75,6 +76,7 @@ export class MCPServer {
     private logEndpoint: LogEndpoint | null = null;
     private swaggerEndpoint: SwaggerEndpoint | null = null;
     private codiconsEndpoint: CodiconsEndpoint | null = null;
+    private helpEndpoint: HelpEndpoint | null = null;
     private extensionPath: string | null = null;
     private panelDataRoutes: PanelDataRoutes | null = null;
     private startTime: number = Date.now();
@@ -863,7 +865,7 @@ export class MCPServer {
 
     private async startHttp(useHttps: boolean): Promise<void> {
         const port = this.config.port || (useHttps ? 3001 : 3000);
-        const host = this.config.host || 'localhost';
+        const host = this.config.host || '127.0.0.1';
 
         // Validate localhost-only configuration if security manager is available
         if (this.securityManager) {
@@ -894,6 +896,11 @@ export class MCPServer {
         this.codiconsEndpoint = new CodiconsEndpoint(this.logger);
         if (this.extensionPath) {
             setCodiconsExtensionPath(this.extensionPath);
+        }
+
+        // Initialize Help Documentation endpoint (REQ-HELP-001)
+        if (this.extensionPath) {
+            this.helpEndpoint = new HelpEndpoint(this.logger, this.extensionPath);
         }
 
         // Create HTTP request handler
@@ -953,10 +960,11 @@ export class MCPServer {
     private createHttpRequestHandler(): (req: http.IncomingMessage, res: http.ServerResponse) => void {
         return async (req, res) => {
             try {
-                // Set CORS headers — localhost-only
+                // Set CORS headers — localhost and vscode-webview origins only
                 const requestOrigin = req.headers.origin || '';
-                const isLocalhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin);
-                res.setHeader('Access-Control-Allow-Origin', isLocalhost ? requestOrigin : '');
+                const isAllowedOrigin = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(requestOrigin)
+                    || /^vscode-webview:\/\//.test(requestOrigin);
+                res.setHeader('Access-Control-Allow-Origin', isAllowedOrigin ? requestOrigin : '');
                 res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
                 res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
                 res.setHeader('Vary', 'Origin');
@@ -1057,6 +1065,14 @@ export class MCPServer {
                     return;
                 }
 
+                // Help documentation portal and API (REQ-HELP-001 – REQ-HELP-004)
+                if (this.helpEndpoint && req.url && (req.url.startsWith('/help') || req.url.startsWith('/api/help/'))) {
+                    const handled = await this.helpEndpoint.handleRequest(req, res);
+                    if (handled) {
+                        return;
+                    }
+                }
+
                 // Panel data REST endpoints (separation of concerns)
                 if (req.url?.startsWith('/mcp/panels/') || req.url?.startsWith('/mcp/planning/')) {
                     if (this.panelDataRoutes) {
@@ -1127,7 +1143,7 @@ export class MCPServer {
 
     private async startWebSocket(): Promise<void> {
         const port = this.config.port || 3001;
-        const host = this.config.host || 'localhost';
+        const host = this.config.host || '127.0.0.1';
 
         // Validate localhost-only configuration if security manager is available
         if (this.securityManager) {

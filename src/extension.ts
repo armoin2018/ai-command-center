@@ -37,6 +37,7 @@ import {
 } from './activation/toolsRegistration';
 import { registerSecondaryPanelCommands, registerSearchAndToolCommands } from './activation/panelRegistration';
 import { registerArchivalCommands, registerSprintServices } from './activation/archivalRegistration';
+import * as fs from 'fs';
 // Extension lifecycle tracking
 let extensionActivated = false;
 let disposables: vscode.Disposable[] = [];
@@ -68,6 +69,99 @@ function updateStatusBar(): void {
     } else {
         statusBarItem.text = `$(file-code) No instructions`;
         statusBarItem.tooltip = 'No active instruction sources\nClick to add sources';
+    }
+}
+
+/**
+ * Silently ensure required workspace directories exist.
+ * Creates `.project` and `.my` directory trees if missing;
+ * suppresses errors if they already exist.
+ */
+function ensureWorkspaceDirectories(workspaceRoot: string, log: Logger): void {
+    const dirs = [
+        path.join(workspaceRoot, '.project'),
+        path.join(workspaceRoot, '.project', 'plan'),
+        path.join(workspaceRoot, '.project', 'plan', 'epics'),
+        path.join(workspaceRoot, '.project', 'plan', 'sprints'),
+        path.join(workspaceRoot, '.project', 'plan', 'templates'),
+        path.join(workspaceRoot, '.project', 'config'),
+        path.join(workspaceRoot, '.my'),
+        path.join(workspaceRoot, '.my', 'aicc'),
+        path.join(workspaceRoot, '.my', 'aicc', 'catalog'),
+    ];
+
+    for (const dir of dirs) {
+        try {
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+                log.info('Created workspace directory', { dir });
+            }
+        } catch {
+            // Suppress — directory may have been created by another process
+        }
+    }
+}
+
+/**
+ * Ensure the workspace `.gitignore` has the required entries.
+ *
+ * Always present  : `.my/`, `.env`, `.env.local`
+ * Conditionally present: `.github/` — added by default, BUT removed when
+ *   `.my/plugin.lock` exists (plugin-development mode is active).
+ */
+function ensureGitignoreEntries(workspaceRoot: string, log: Logger): void {
+    const gitignorePath = path.join(workspaceRoot, '.gitignore');
+    const pluginLockPath = path.join(workspaceRoot, '.my', 'plugin.lock');
+    const isPluginDev = fs.existsSync(pluginLockPath);
+
+    const alwaysIgnored = ['.my/', '.env', '.env.local'];
+    const conditionallyIgnored = ['.github/'];
+
+    let lines: string[] = [];
+    try {
+        if (fs.existsSync(gitignorePath)) {
+            lines = fs.readFileSync(gitignorePath, 'utf8').split('\n');
+        }
+    } catch {
+        // start with an empty file
+    }
+
+    let changed = false;
+
+    // Ensure always-present entries
+    for (const entry of alwaysIgnored) {
+        const bare = entry.replace(/\/$/, '');
+        if (!lines.some(l => l.trim() === entry || l.trim() === bare)) {
+            lines.push(entry);
+            changed = true;
+        }
+    }
+
+    if (isPluginDev) {
+        // Plugin-dev active: remove .github from gitignore so it's tracked
+        const before = lines.length;
+        lines = lines.filter(l => !l.trim().match(/^\.github\/?$/));
+        if (lines.length !== before) {
+            changed = true;
+        }
+    } else {
+        // Normal mode: ensure .github is ignored
+        for (const entry of conditionallyIgnored) {
+            const bare = entry.replace(/\/$/, '');
+            if (!lines.some(l => l.trim() === entry || l.trim() === bare)) {
+                lines.push(entry);
+                changed = true;
+            }
+        }
+    }
+
+    if (changed) {
+        try {
+            fs.writeFileSync(gitignorePath, lines.join('\n'), 'utf8');
+            log.info('Updated .gitignore', { isPluginDev });
+        } catch (e) {
+            log.warn('Failed to update .gitignore', { error: String(e) });
+        }
     }
 }
 
@@ -108,6 +202,12 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         // Initialize planning manager
         const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || context.extensionPath;
         const advancedMode = vscode.workspace.getConfiguration('aicc').get<boolean>('advancedMode', false);
+
+        // ── Pre-flight: silently ensure .project and .my directories exist ──
+        ensureWorkspaceDirectories(workspaceRoot, logger);
+        // ── Ensure .gitignore has required entries (plugin.lock-aware) ──
+        ensureGitignoreEntries(workspaceRoot, logger);
+        tracker.markPhase('Workspace directory pre-flight');
 
         // --- Version detection & "What's New" notification (AICC-0204 / AICC-0206) ---
         const currentVersion: string = context.extension.packageJSON.version;
@@ -512,6 +612,14 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         await versionOverrideSystem.initialize();
         disposables.push(versionOverrideSystem);
         tracker.markPhase('Version override system initialization');
+
+        // Initialize VSIX Version Upgrade Checker (REQ-VUPG-001)
+        const { VersionUpgradeChecker } = await import('./services/versionUpgradeChecker');
+        const upgradeChecker = new VersionUpgradeChecker(workspaceRoot);
+        upgradeChecker.start();
+        await upgradeChecker.checkForUpgrade();
+        disposables.push(upgradeChecker);
+        tracker.markPhase('VSIX version upgrade checker');
 
         // AICC-0512: Instruction count status bar removed
         // AICC-0513: Keep statusBarItem for internal use but don't show it

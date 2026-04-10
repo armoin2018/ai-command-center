@@ -1,0 +1,20 @@
+{
+  "name": "aicc-calendly",
+  "version": "1.0.0",
+  "description": "Comprehensive Calendly integration with tier detection, OAuth/Personal Access Token authentication, event management, scheduling, webhooks, and analytics. Use when managing Calendly events, automating scheduling, analyzing booking performance, or integrating Calendly workflows.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "calendly",
+    "scheduling",
+    "appointments",
+    "events"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

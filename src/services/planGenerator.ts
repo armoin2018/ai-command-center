@@ -388,7 +388,7 @@ export class PlanGenerator {
       this.rebuildIndex();
       logger.info(`PLAN.json loaded with ${this.planDocument?.items.length || 0} items (index: ${this.itemIndex.size} entries)`);
     } catch (error) {
-      logger.warn('PLAN.json not found, generating from source files', { error: String(error) });
+      logger.info('PLAN.json not found, generating from source files (expected on first run)');
       // Only generate if PLAN.json doesn't exist
       await this.generatePlan();
     }

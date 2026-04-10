@@ -63,6 +63,13 @@ export class MCPManager extends EventEmitter {
                 component: 'MCPManager',
             });
             await this.start();
+
+            // Register self in inventory so the MCP tab shows this workspace even in stdio mode
+            this.inventoryManager = new MCPInventoryManager(this.logger, this.globalStoragePath);
+            await this.inventoryManager.load();
+            const ws = this.createSelfRegistration(undefined);
+            this.inventoryManager.registerWorkspace(ws);
+
             return;
         }
 

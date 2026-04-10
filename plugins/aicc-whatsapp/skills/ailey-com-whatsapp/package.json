@@ -1,0 +1,49 @@
+{
+  "name": "@ailey/com-whatsapp",
+  "version": "1.0.0",
+  "description": "WhatsApp Business API integration for AI-ley with account tier detection and comprehensive messaging capabilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "send": "node dist/cli.js send",
+    "media": "node dist/cli.js media",
+    "template": "node dist/cli.js template",
+    "webhook": "node dist/cli.js webhook",
+    "business": "node dist/cli.js business",
+    "message": "node dist/cli.js message",
+    "contact": "node dist/cli.js contact",
+    "diagnose": "node dist/cli.js diagnose",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "whatsapp",
+    "messaging",
+    "api",
+    "business",
+    "ai-ley",
+    "integration",
+    "automation"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

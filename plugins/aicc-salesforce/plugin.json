@@ -1,0 +1,19 @@
+{
+  "name": "aicc-salesforce",
+  "version": "1.0.0",
+  "description": "Comprehensive Salesforce CRM integration with automatic edition detection, OAuth authentication, SOQL queries, Bulk API, and complete object management. Supports Developer, Professional, Enterprise, Unlimited, and Performance editions with adaptive feature sets.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "salesforce",
+    "crm",
+    "sales"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "aicc-youtube",
+  "version": "1.0.0",
+  "description": "Comprehensive YouTube integration with quota tier detection, OAuth authentication, video upload/management, analytics, live streaming, comment engagement, and automatic API quota monitoring. Adapts features based on YouTube API quota allocation (10,000 free daily, custom quotas). Use when managing YouTube content, automating uploads, analyzing performance, managing live streams, or checking API capabilities.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "youtube",
+    "google",
+    "video",
+    "streaming"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

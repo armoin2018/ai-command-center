@@ -1,0 +1,24 @@
+{
+  "name": "aicc-mysql-developer",
+  "version": "1.0.0",
+  "description": "MySQL development agent plugin with schema design, query optimization, indexing strategies, stored procedures, replication, backup/recovery, and database security best practices.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "mysql",
+    "mariadb",
+    "sql",
+    "database",
+    "schema",
+    "indexing",
+    "optimization",
+    "replication"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

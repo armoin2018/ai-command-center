@@ -1,0 +1,19 @@
+{
+  "name": "aicc-threads",
+  "version": "1.0.0",
+  "description": "Comprehensive Threads integration with account type detection, OAuth authentication, post publishing (text/images/videos/carousels), analytics, engagement management, and automatic API tier detection. Adapts features based on account type (Personal, Creator, Business). Use when managing Threads content, automating posts, analyzing performance, or engaging with audiences.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "threads",
+    "social-media",
+    "meta"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

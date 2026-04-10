@@ -1,0 +1,19 @@
+{
+  "name": "aicc-whatsapp",
+  "version": "1.0.0",
+  "description": "Comprehensive WhatsApp Business API integration with account tier detection, message automation, media handling, and webhook support. Supports Cloud (Standard/Business) and on-premises (Enterprise) deployments with automatic tier detection and feature availability mapping.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "whatsapp",
+    "messaging",
+    "business"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

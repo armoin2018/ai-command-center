@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Configuration",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Configuration ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Configuration name"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "maxRetries": {"type": "integer"},
+        "timeout": {"type": "integer"}
+      },
+      "required": ["enabled"]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "name", "settings"]
+}

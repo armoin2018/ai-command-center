@@ -1,0 +1,18 @@
+{
+  "name": "aicc-capcut",
+  "version": "1.0.0",
+  "description": "Comprehensive CapCut integration for video creation, editing, and publishing. Includes automatic account tier detection (Free, Pro, Business), setup instructions, and AI-ley configuration guidance. Manage projects, edit videos, access templates, effects, and music library.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "capcut",
+    "video-editing"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "aicc-zoom",
+  "version": "1.0.0",
+  "description": "Comprehensive Zoom API integration with account tier detection, meeting management, user administration, recording management, and webinar capabilities. Supports JWT and OAuth authentication with automatic tier detection and feature availability mapping.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "zoom",
+    "video",
+    "meetings"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

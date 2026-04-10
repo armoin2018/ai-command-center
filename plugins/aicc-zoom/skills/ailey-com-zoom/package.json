@@ -1,0 +1,50 @@
+{
+  "name": "@ailey/com-zoom",
+  "version": "1.0.0",
+  "description": "Zoom API integration for AI-ley with account tier detection and comprehensive meeting management capabilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "meeting": "node dist/cli.js meeting",
+    "user": "node dist/cli.js user",
+    "recording": "node dist/cli.js recording",
+    "webinar": "node dist/cli.js webinar",
+    "report": "node dist/cli.js report",
+    "webhook": "node dist/cli.js webhook",
+    "diagnose": "node dist/cli.js diagnose",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "zoom",
+    "meeting",
+    "video",
+    "conference",
+    "api",
+    "ai-ley",
+    "integration",
+    "automation"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0",
+    "@types/jsonwebtoken": "^9.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

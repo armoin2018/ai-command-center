@@ -1,0 +1,118 @@
+{
+  "$schema": "../../../aicc/schemas/structure.v1.schema.json",
+  "version": "1.0.0",
+  "name": "my-custom-kit",
+  "repo": "https://github.com/yourname/my-custom-kit",
+  "branch": "main",
+  "description": "Custom AI kit with templates and automation",
+  "author": "Your Name",
+  "refreshEnabled": true,
+  "refreshInterval": "86400",
+  "evolveEnabled": true,
+  "icon": "icon.png",
+  "dependencies": [
+    "ai-ley"
+  ],
+  "folderMapping": [
+    {
+      "source": ".github/prompts",
+      "target": ".github/prompts",
+      "type": "pattern",
+      "pattern": "**/*.prompt.md",
+      "exclude": [
+        "*.draft.md",
+        "**/archive/**"
+      ],
+      "recursionDepth": -1,
+      "forceReplace": false,
+      "supportedAgentic": [
+        "copilot",
+        "claude",
+        "cursor"
+      ],
+      "preserveStructure": true
+    },
+    {
+      "source": ".github/skills",
+      "target": ".github/skills",
+      "type": "folder",
+      "exclude": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/*.log"
+      ],
+      "recursionDepth": 3,
+      "forceReplace": false,
+      "supportedAgentic": "*"
+    },
+    {
+      "source": "templates",
+      "target": ".github/templates",
+      "type": "pattern",
+      "pattern": "**/*.template.*",
+      "rename": {
+        "pattern": "^(.+)\\.template\\.(.+)$",
+        "replacement": "$1.$2"
+      },
+      "supportedAgentic": [
+        "copilot"
+      ]
+    },
+    {
+      "source": "docs/README.md",
+      "target": ".github/docs/my-kit-README.md",
+      "type": "file",
+      "forceReplace": true,
+      "supportedAgentic": "*"
+    }
+  ],
+  "configuration": {
+    "fields": [
+      {
+        "name": "homepage",
+        "label": "Homepage",
+        "type": "url",
+        "placeholder": "https://example.com",
+        "validation": { "required": false },
+        "helpText": "Project homepage URL",
+        "value": "https://example.com"
+      },
+      {
+        "name": "category",
+        "label": "Category",
+        "type": "select",
+        "placeholder": "Select a category",
+        "options": [
+          { "label": "Automation", "value": "automation" },
+          { "label": "Templates", "value": "templates" },
+          { "label": "Utilities", "value": "utilities" }
+        ],
+        "validation": { "required": false },
+        "helpText": "Kit category classification",
+        "value": "automation"
+      },
+      {
+        "name": "tags",
+        "label": "Tags",
+        "type": "text",
+        "placeholder": "Comma-separated tags",
+        "validation": { "required": false },
+        "helpText": "Project tags for discovery (comma-separated)",
+        "value": "templates, prompts, skills"
+      }
+    ],
+    "actions": [
+      {
+        "actionType": "sync",
+        "conditions": [
+          {
+            "field": "refreshEnabled",
+            "operator": "equals",
+            "value": true
+          }
+        ],
+        "command": "aicc.syncKit --kit={{name}} --branch={{branch}}"
+      }
+    ]
+  }
+}

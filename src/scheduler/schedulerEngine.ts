@@ -31,6 +31,15 @@ export interface TaskThrottleConfig {
 /**
  * A single scheduled task definition
  */
+export interface TaskError {
+  message: string;
+  timestamp: string;
+  actionId?: string;
+}
+
+/** Maximum number of errors retained per task (FIFO) */
+const MAX_TASK_ERRORS = 10;
+
 export interface ScheduledTask {
   id: string;
   name: string;
@@ -43,6 +52,8 @@ export interface ScheduledTask {
   lastRun: string | null;
   lastResult: 'success' | 'error' | null;
   lastError: string | null;
+  /** Rolling error history, capped at MAX_TASK_ERRORS (oldest rolled off) */
+  errors?: TaskError[];
   nextRun: string | null;
   createdAt: string;
   throttle?: TaskThrottleConfig;
@@ -460,11 +471,27 @@ export class SchedulerEngine {
       const result = await ActionRegistry.getInstance().execute(task.actionId, task.params);
       task.lastRun = new Date().toISOString();
       task.lastResult = result.success ? 'success' : 'error';
-      task.lastError = result.success ? null : (result.error || 'Unknown error');
+      if (result.success) {
+        task.lastError = null;
+        task.errors = [];
+      } else {
+        const errorMsg = result.error || 'Unknown error';
+        task.lastError = errorMsg;
+        if (!task.errors) { task.errors = []; }
+        task.errors.push({ message: errorMsg, timestamp: new Date().toISOString(), actionId: task.actionId });
+        if (task.errors.length > MAX_TASK_ERRORS) {
+          task.errors = task.errors.slice(-MAX_TASK_ERRORS);
+        }
+      }
     } catch (err: any) {
       task.lastRun = new Date().toISOString();
       task.lastResult = 'error';
       task.lastError = err.message;
+      if (!task.errors) { task.errors = []; }
+      task.errors.push({ message: err.message, timestamp: new Date().toISOString(), actionId: task.actionId });
+      if (task.errors.length > MAX_TASK_ERRORS) {
+        task.errors = task.errors.slice(-MAX_TASK_ERRORS);
+      }
     } finally {
       this.executionStartTimes.delete(task.id);
       this.recordExecution(task.id);
@@ -499,8 +526,14 @@ export class SchedulerEngine {
     if (!task) { return; }
 
     // Mark as error
+    const stuckMsg = 'Task exceeded maximum execution time and was marked as stuck';
     task.lastResult = 'error';
-    task.lastError = 'Task exceeded maximum execution time and was marked as stuck';
+    task.lastError = stuckMsg;
+    if (!task.errors) { task.errors = []; }
+    task.errors.push({ message: stuckMsg, timestamp: new Date().toISOString(), actionId: task.actionId });
+    if (task.errors.length > MAX_TASK_ERRORS) {
+      task.errors = task.errors.slice(-MAX_TASK_ERRORS);
+    }
     task.enabled = false; // Disable to prevent further runs
 
     // Remove from execution tracking

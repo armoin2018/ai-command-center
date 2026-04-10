@@ -1,0 +1,20 @@
+{
+  "name": "aicc-confluence",
+  "version": "1.0.0",
+  "description": "Confluence integration with CRUD operations, document conversion (Markdown/Word/PDF to/from Confluence), content export, and CQL query support. Use when managing Confluence pages, converting documents, exporting content, or querying documentation.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "confluence",
+    "atlassian",
+    "documentation",
+    "wiki"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

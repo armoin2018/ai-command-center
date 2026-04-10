@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ailey-tools-seo-report": {
+      "command": "node",
+      "args": [
+        ".github/skills/ailey-tools-seo-report/scripts/mcp-server.js"
+      ],
+      "disabled": false,
+      "alwaysAllow": []
+    }
+  }
+}

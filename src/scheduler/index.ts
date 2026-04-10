@@ -7,6 +7,7 @@ export { SchedulerEngine } from './schedulerEngine';
 export type {
   ScheduledTask,
   ScheduleType,
+  TaskError,
   TaskThrottleConfig
 } from './schedulerEngine';
 

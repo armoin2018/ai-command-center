@@ -1,0 +1,39 @@
+{
+  "name": "ailey-media-speechify",
+  "version": "1.0.0",
+  "description": "Speechify text-to-speech integration for AI-ley toolkit",
+  "main": "scripts/index.ts",
+  "scripts": {
+    "speechify": "tsx scripts/index.ts",
+    "test": "tsx scripts/index.ts test",
+    "test-client": "tsx scripts/test-client.ts",
+    "build": "tsc",
+    "dev": "tsx watch scripts/index.ts"
+  },
+  "keywords": [
+    "speechify",
+    "text-to-speech",
+    "tts",
+    "audio",
+    "voice",
+    "narration",
+    "audiobook",
+    "ai-ley"
+  ],
+  "author": "AI-ley Kit",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7",
+    "form-data": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

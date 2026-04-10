@@ -671,6 +671,13 @@
         schedulerTaskExecuted(payload, app) {
             app.sendMessage('getSchedulerTasks');
         },
+        schedulerTaskRestarted(payload, app) {
+            app.sendMessage('getSchedulerTasks');
+        },
+        // ── Component Catalog (AICC-0535) ──
+        componentsLoaded(payload, app) {
+            app.handleComponentsLoaded(payload);
+        },
         // ── Ideation Jira Config (REQ-IDEA-092) ──
         ideationJiraConfigLoaded(payload, app) {
             app.handleIdeationJiraConfigLoaded(payload);

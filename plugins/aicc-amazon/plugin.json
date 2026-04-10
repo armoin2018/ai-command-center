@@ -1,0 +1,19 @@
+{
+  "name": "aicc-amazon",
+  "version": "1.0.0",
+  "description": "Comprehensive Amazon SP-API integration for product listing, order management, inventory tracking, advertising, and customer engagement. Supports both personal seller and professional business use cases.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "amazon",
+    "ecommerce",
+    "marketplace"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

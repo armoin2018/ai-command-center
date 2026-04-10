@@ -229,9 +229,35 @@ spec:
           - id: "epic-1"
             type: "epic"
             status: "in-progress"
+            statusColor: "#3b82f6"
+            typeIcon: "telescope"
             priority: "high"
+            priorityIcon: "🔴"
             summary: "Implement Schema UI"
+            description: "Build the schema-driven UI framework for component rendering."
             projectNumber: "E-001"
+            expanded: true
             children: ["story-1", "story-2"]
+          - id: "story-1"
+            type: "story"
+            status: "done"
+            statusColor: "#22c55e"
+            typeIcon: "bookmark"
+            priority: "medium"
+            priorityIcon: "🟡"
+            summary: "Component Registry"
+            description: "Create a registry to load and manage component schemas."
+            projectNumber: "S-001"
+          - id: "story-2"
+            type: "story"
+            status: "todo"
+            statusColor: "#6b7280"
+            typeIcon: "bookmark"
+            priority: "low"
+            summary: "Template Renderer"
+            description: "Build the Handlebars-style template rendering engine."
+            projectNumber: "S-002"
+        showActions: true
+        depth: 0
       code: |
         <accordion-list items="{{planItems}}" expandedItems="{{expanded}}"></accordion-list>

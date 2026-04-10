@@ -1,0 +1,21 @@
+{
+  "name": "aicc-outlook",
+  "version": "1.0.0",
+  "description": "Send, read, and manage Outlook/Office 365 emails with attachments and templates. Create and manage calendar events, search contacts, organize folders and rules. Uses Microsoft Graph API. Automatically provides setup instructions when connection fails.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "outlook",
+    "office365",
+    "microsoft",
+    "email",
+    "calendar"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

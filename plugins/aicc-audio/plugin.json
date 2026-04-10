@@ -1,0 +1,21 @@
+{
+  "name": "aicc-audio",
+  "version": "1.0.0",
+  "description": "Comprehensive audio processing toolkit with format conversion (mp3, wav, flac, etc.), transcription via OpenAI Whisper, video audio extraction, silence-based slicing, and audio manipulation.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "audio",
+    "transcription",
+    "whisper",
+    "ffmpeg",
+    "conversion"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

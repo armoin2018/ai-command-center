@@ -1,0 +1,22 @@
+{
+  "name": "aicc-image",
+  "version": "1.0.0",
+  "description": "Comprehensive image manipulation toolkit with format conversion, animation creation/slicing, editing, metadata extraction, OCR text extraction, web image scraping, and SVG template processing.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "image",
+    "ocr",
+    "svg",
+    "conversion",
+    "editing",
+    "animation"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

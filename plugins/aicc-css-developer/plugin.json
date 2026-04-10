@@ -1,0 +1,24 @@
+{
+  "name": "aicc-css-developer",
+  "version": "1.0.0",
+  "description": "CSS development agent plugin with coding standards, design patterns, responsive layouts, animations, CSS Grid/Flexbox, custom properties, and modern CSS best practices.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "responsive",
+    "flexbox",
+    "grid",
+    "animations",
+    "styling"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "aicc-rag",
+  "version": "1.0.0",
+  "description": "RAG (Retrieval Augmented Generation) toolkit for indexing content into ChromaDB collections and searching them with semantic search, tag-based filtering, multi-RAG joining, and Google grounding.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "rag",
+    "chromadb",
+    "semantic-search",
+    "vector-search",
+    "indexing",
+    "knowledge-base"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

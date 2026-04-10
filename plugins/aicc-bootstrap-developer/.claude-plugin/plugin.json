@@ -1,0 +1,25 @@
+{
+  "name": "aicc-bootstrap-developer",
+  "version": "1.0.0",
+  "description": "Bootstrap development agent plugin with component patterns, responsive grid system, utility classes, theming, SCSS customization, and accessibility best practices.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "ui",
+    "responsive",
+    "components",
+    "grid",
+    "scss",
+    "theming",
+    "accessibility"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+",
+    "aicc-css-developer:1.0.0+"
+  ]
+}

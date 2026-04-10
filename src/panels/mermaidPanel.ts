@@ -350,26 +350,29 @@ export class MermaidPanelProvider {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+    startOnLoad: false,
+    theme: document.body.classList.contains('vscode-dark') ? 'dark' : 'default',
+    securityLevel: 'loose',
+    fontFamily: 'var(--vscode-font-family)'
+});
+window.__mermaid = mermaid;
+window.dispatchEvent(new Event('mermaid-ready'));
+    </script>
     <script nonce="${nonce}">
         const vscode = acquireVsCodeApi();
         let currentZoom = 1.0;
         let isDragging = false;
         let startX, startY, scrollLeft, scrollTop;
 
-        // Initialize Mermaid
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: document.body.classList.contains('vscode-dark') ? 'dark' : 'default',
-            securityLevel: 'loose',
-            fontFamily: 'var(--vscode-font-family)'
-        });
-
         // Render diagram
         const diagramSource = ${JSON.stringify(diagramSource)};
         
         async function renderDiagram() {
             try {
+                const mermaid = window.__mermaid;
                 const element = document.getElementById('mermaid');
                 element.textContent = diagramSource;
                 
@@ -388,7 +391,11 @@ export class MermaidPanelProvider {
             }
         }
 
-        renderDiagram();
+        if (window.__mermaid) {
+            renderDiagram();
+        } else {
+            window.addEventListener('mermaid-ready', () => renderDiagram());
+        }
 
         // Zoom controls
         function updateZoom(zoom) {

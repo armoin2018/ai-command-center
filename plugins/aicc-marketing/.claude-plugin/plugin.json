@@ -1,0 +1,24 @@
+{
+  "name": "aicc-marketing",
+  "version": "1.0.0",
+  "description": "Marketing toolkit with strategist agent, personas, SEO reporting, go-to-market planning, market research, and business development commands for the AI-ley framework",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "branding",
+    "campaigns",
+    "seo",
+    "go-to-market",
+    "market-research",
+    "business-development",
+    "strategy"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

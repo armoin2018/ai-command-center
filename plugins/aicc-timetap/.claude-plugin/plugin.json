@@ -1,0 +1,19 @@
+{
+  "name": "aicc-timetap",
+  "version": "1.0.0",
+  "description": "Comprehensive TimeTap appointment scheduling integration with account tier detection, API Key/session token authentication, appointment management, client management, staff management, services, locations, availability, webhooks, and reporting. Use when managing TimeTap appointments, automating scheduling workflows, managing clients or staff, checking availability, or integrating TimeTap into applications.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "timetap",
+    "scheduling",
+    "appointments"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

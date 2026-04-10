@@ -1,0 +1,50 @@
+{
+  "type": "record",
+  "name": "Order",
+  "namespace": "com.example",
+  "fields": [
+    {
+      "name": "order_id",
+      "type": "string",
+      "doc": "Unique order identifier"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "doc": "User who placed the order"
+    },
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "OrderItem",
+          "fields": [
+            {"name": "product_id", "type": "string"},
+            {"name": "quantity", "type": "int"},
+            {"name": "price", "type": "double"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "total_amount",
+      "type": "double",
+      "doc": "Total order amount"
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "OrderStatus",
+        "symbols": ["PENDING", "CONFIRMED", "SHIPPED", "DELIVERED", "CANCELLED"]
+      }
+    },
+    {
+      "name": "created_at",
+      "type": "long",
+      "doc": "Order creation timestamp"
+    }
+  ]
+}

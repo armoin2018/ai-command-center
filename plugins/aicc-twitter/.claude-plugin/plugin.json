@@ -1,0 +1,19 @@
+{
+  "name": "aicc-twitter",
+  "version": "1.0.0",
+  "description": "Comprehensive X (Twitter) integration with tier detection (Free, Basic, Pro, Enterprise), posting, search, streaming, and analytics. Automatically detects API tier and adapts features with cost warnings.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "x",
+    "social-media"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

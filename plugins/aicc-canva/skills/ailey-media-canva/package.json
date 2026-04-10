@@ -1,0 +1,46 @@
+{
+  "name": "ailey-media-canva",
+  "version": "1.0.0",
+  "description": "Canva integration for design management, asset operations, and automated content creation",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "canva": "tsx scripts/index.ts",
+    "setup": "tsx scripts/index.ts setup",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "designs": "tsx scripts/index.ts designs",
+    "assets": "tsx scripts/index.ts assets",
+    "folders": "tsx scripts/index.ts folders",
+    "exports": "tsx scripts/index.ts exports",
+    "brand": "tsx scripts/index.ts brand",
+    "autofill": "tsx scripts/index.ts autofill"
+  },
+  "keywords": [
+    "canva",
+    "design",
+    "graphics",
+    "automation",
+    "api",
+    "media",
+    "templates",
+    "brand-kit",
+    "export",
+    "ai-ley"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "form-data": "^4.0.0",
+    "open": "^10.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

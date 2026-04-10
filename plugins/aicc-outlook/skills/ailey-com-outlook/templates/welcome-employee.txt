@@ -1,0 +1,29 @@
+Subject: Welcome to {{companyName}}, {{name}}!
+
+Dear {{name}},
+
+Welcome aboard! We're excited to have you join our team as {{jobTitle}}.
+
+YOUR ACCOUNT DETAILS
+====================
+Username: {{username}}
+Email: {{email}}
+Start Date: {{startDate}}
+
+NEXT STEPS
+==========
+1. Check your email for login credentials
+2. Complete the onboarding checklist
+3. Set up your workspace
+4. Meet your team on {{startDate}}
+
+Access the employee portal: {{portalUrl}}
+
+If you have any questions, please reach out to HR at {{hrEmail}}.
+
+Best regards,
+{{managerName}}
+{{managerTitle}}
+
+---
+© 2026 {{companyName}}. All rights reserved.

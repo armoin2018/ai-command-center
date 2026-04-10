@@ -36,6 +36,9 @@
       <button class="header-btn" id="btn-toggle-refs" title="Toggle Component References" data-dev-btn="true">
         <span class="codicon codicon-tag"></span>
       </button>
+      <button class="header-btn" id="btn-plugin-dev" title="Plugin Dev Mode (enables .github tracking)" data-dev-btn="true">
+        <span class="codicon codicon-plug" id="plugin-dev-icon"></span>
+      </button>
       <button class="header-btn" id="btn-debug" title="Debug" data-dev-btn="true">
         <span class="codicon codicon-bug"></span>
       </button>
@@ -109,7 +112,23 @@
     </div>
   </div>
   
+  <!-- MVC Library Bundles — loaded for component catalog demos (AICC-0535) -->
+  <script nonce="{{nonce}}" src="{{libraryLoaderUri}}"></script>
+  <script nonce="{{nonce}}" src="{{bootstrapBundleUri}}"></script>
+  <script nonce="{{nonce}}" src="{{utilsBundleUri}}"></script>
+  <script nonce="{{nonce}}" src="{{componentLoaderUri}}"></script>
+
   <script nonce="{{nonce}}" src="{{actionsUri}}"></script>
   <script nonce="{{nonce}}" src="{{scriptUri}}"></script>
+  <script nonce="{{nonce}}" src="{{schedulerTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{jiraTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{mcpTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{ideationTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{apiDocsTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{intakesTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{aiKitTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{planningTabUri}}"></script>
+  <script nonce="{{nonce}}" src="{{componentCatalogTabUri}}"></script>
+  <!-- helpTab.js removed (REQ-HEDP-004) — help is now in its own editor panel -->
 </body>
 </html>

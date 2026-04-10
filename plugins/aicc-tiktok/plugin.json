@@ -1,0 +1,19 @@
+{
+  "name": "aicc-tiktok",
+  "version": "1.0.0",
+  "description": "Comprehensive TikTok integration with multi-tier API access support, OAuth authentication, video upload/management, analytics, comment engagement, and automatic tier detection. Adapts features dynamically based on account API access level (Login Kit, Display API, Content Posting API, Marketing API). Use when managing TikTok content, automating uploads, analyzing performance, engaging with audiences, or checking API capabilities.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "tiktok",
+    "social-media",
+    "video"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

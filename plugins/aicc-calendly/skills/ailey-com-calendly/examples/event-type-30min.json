@@ -1,0 +1,24 @@
+{
+  "name": "30 Minute Meeting",
+  "duration": 30,
+  "kind": "solo",
+  "scheduling_url": "https://calendly.com/your-username/30min",
+  "slug": "30min",
+  "color": "#0069ff",
+  "description_plain": "Book a 30-minute meeting to discuss your project",
+  "description_html": "<p>Book a 30-minute meeting to discuss your project</p>",
+  "internal_note": "Standard consultation call",
+  "pooling_type": null,
+  "type": "StandardEventType",
+  "custom_questions": [
+    {
+      "name": "What is the primary topic you'd like to discuss?",
+      "type": "string",
+      "position": 0,
+      "enabled": true,
+      "required": true,
+      "answer_choices": [],
+      "include_other": false
+    }
+  ]
+}

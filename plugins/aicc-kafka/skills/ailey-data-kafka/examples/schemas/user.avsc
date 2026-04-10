@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "com.example",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int",
+      "doc": "User ID"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "doc": "Username"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "Email address"
+    },
+    {
+      "name": "created_at",
+      "type": "long",
+      "doc": "Creation timestamp in milliseconds"
+    },
+    {
+      "name": "active",
+      "type": "boolean",
+      "default": true,
+      "doc": "Whether the user is active"
+    }
+  ]
+}

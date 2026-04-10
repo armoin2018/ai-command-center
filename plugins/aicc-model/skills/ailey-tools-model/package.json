@@ -1,0 +1,59 @@
+{
+  "name": "ailey-tools-model",
+  "version": "1.0.0",
+  "description": "Mermaid and PlantUML diagram generation, translation, and optional API-based rendering",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "generate": "node dist/cli.js generate",
+    "convert": "node dist/cli.js convert",
+    "parse": "node dist/cli.js parse",
+    "render": "node dist/cli.js render",
+    "validate": "node dist/cli.js validate",
+    "template": "node dist/cli.js template",
+    "batch": "node dist/cli.js batch",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "keywords": [
+    "mermaid",
+    "plantuml",
+    "diagram",
+    "uml",
+    "flowchart",
+    "sequence-diagram",
+    "class-diagram",
+    "er-diagram",
+    "gantt",
+    "converter",
+    "generator",
+    "visualization",
+    "ai-ley"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "dotenv": "^16.0.3",
+    "inquirer": "^9.2.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^9.0.0",
+    "papaparse": "^5.4.0",
+    "chevrotain": "^11.0.0",
+    "fs-extra": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/inquirer": "^9.0.0",
+    "@types/js-yaml": "^4.0.0",
+    "@types/papaparse": "^5.3.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

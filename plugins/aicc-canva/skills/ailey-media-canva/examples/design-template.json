@@ -1,0 +1,52 @@
+{
+  "design_type": "presentation",
+  "title": "Q1 Sales Report",
+  "description": "Quarterly sales performance presentation",
+  "width": 1920,
+  "height": 1080,
+  "pages": [
+    {
+      "title": "Cover Slide",
+      "elements": [
+        {
+          "type": "text",
+          "content": "Q1 2024 Sales Report",
+          "font": "Montserrat",
+          "size": 72,
+          "color": "#1a1a1a",
+          "position": { "x": 960, "y": 400 }
+        },
+        {
+          "type": "text",
+          "content": "Company Name",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#666666",
+          "position": { "x": 960, "y": 600 }
+        }
+      ]
+    },
+    {
+      "title": "Key Metrics",
+      "elements": [
+        {
+          "type": "text",
+          "content": "Key Performance Indicators",
+          "font": "Montserrat",
+          "size": 48,
+          "color": "#1a1a1a",
+          "position": { "x": 960, "y": 150 }
+        },
+        {
+          "type": "chart",
+          "chart_type": "bar",
+          "data": "{{revenue_data}}",
+          "position": { "x": 300, "y": 400 },
+          "size": { "width": 800, "height": 500 }
+        }
+      ]
+    }
+  ],
+  "brand_template": true,
+  "autofill_enabled": true
+}

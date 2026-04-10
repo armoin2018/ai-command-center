@@ -1,0 +1,20 @@
+{
+  "name": "aicc-twilio",
+  "version": "1.0.0",
+  "description": "Comprehensive Twilio integration for SMS, MMS, voice calls, phone number management, verification, and messaging with automatic account tier detection, webhook security, and multi-channel support. Use when sending SMS/MMS messages, making voice calls, verifying phone numbers, managing Twilio phone numbers, setting up webhooks, or analyzing usage.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "twilio",
+    "sms",
+    "voice",
+    "messaging"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

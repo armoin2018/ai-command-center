@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; background: white; }
+    .header { background: #28a745; color: white; padding: 20px; text-align: center; }
+    .content { padding: 30px; }
+    .event-details { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px; }
+    .detail-row { margin: 10px 0; }
+    .label { font-weight: bold; color: #666; }
+    .button { background: #28a745; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
+    .footer { background: #f8f9fa; padding: 15px; text-align: center; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📅 Calendar Invitation</h1>
+    </div>
+    
+    <div class="content">
+      <p>Dear {{attendeeName}},</p>
+      
+      <p>You're invited to:</p>
+      
+      <h2>{{eventTitle}}</h2>
+      
+      <div class="event-details">
+        <div class="detail-row">
+          <span class="label">📅 Date:</span> {{eventDate}}
+        </div>
+        <div class="detail-row">
+          <span class="label">🕐 Time:</span> {{eventTime}}
+        </div>
+        <div class="detail-row">
+          <span class="label">⏱️ Duration:</span> {{duration}}
+        </div>
+        <div class="detail-row">
+          <span class="label">📍 Location:</span> {{location}}
+        </div>
+        {{#if isOnline}}
+        <div class="detail-row">
+          <span class="label">💻 Join Online:</span> <a href="{{meetingUrl}}">Click to join Teams meeting</a>
+        </div>
+        {{/if}}
+      </div>
+      
+      <h3>Agenda</h3>
+      <ul>
+        {{#each agendaItems}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      
+      {{#if preparation}}
+      <h3>Please Prepare</h3>
+      <p>{{preparation}}</p>
+      {{/if}}
+      
+      <p style="text-align: center;">
+        <a href="{{acceptUrl}}" class="button">Accept Invitation</a>
+      </p>
+      
+      <p>Looking forward to seeing you there!</p>
+      
+      <p>Best regards,<br>
+      {{organizerName}}<br>
+      {{organizerTitle}}</p>
+    </div>
+    
+    <div class="footer">
+      <p>To decline or propose a new time, please reply to this email.</p>
+    </div>
+  </div>
+</body>
+</html>

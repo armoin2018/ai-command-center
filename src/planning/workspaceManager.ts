@@ -445,7 +445,7 @@ export class WorkspaceManager {
         try {
             const planExists = await this.fileExists(this.planFilePath);
             if (!planExists) {
-                this.logger.warn('PLAN.json not found', {
+                this.logger.info('PLAN.json not found (expected on first run)', {
                     component: 'WorkspaceManager',
                     path: this.planFilePath
                 });

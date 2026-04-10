@@ -1,0 +1,19 @@
+{
+  "name": "aicc-meetup",
+  "version": "1.0.0",
+  "description": "Comprehensive Meetup integration with account tier detection (Standard vs Pro), OAuth authentication, GraphQL API access, event management, group administration, RSVP tracking, and member engagement. Automatically detects account capabilities and provides setup instructions.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "meetup",
+    "events",
+    "community"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

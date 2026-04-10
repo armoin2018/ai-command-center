@@ -1,0 +1,24 @@
+{
+  "name": "aicc-game-development",
+  "version": "1.0.0",
+  "description": "Game development toolkit with game designer agent, game developer personas (JavaScript, Lua, mobile, Unity, NFT), and game design instructions including base6 framework and game dashboard patterns",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "game-development",
+    "game-design",
+    "unity",
+    "lua",
+    "mobile-game",
+    "mechanics",
+    "player-experience",
+    "nft-game"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

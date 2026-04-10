@@ -35,6 +35,7 @@ export async function handleAddSchedulerTask(ctx: HandlerContext, payload: Sched
         lastRun: null,
         lastResult: null,
         lastError: null,
+        errors: [],
         nextRun: null,
         createdAt: new Date().toISOString(),
         throttle: payload.throttle
@@ -77,5 +78,19 @@ export async function handleExecuteSchedulerTask(ctx: HandlerContext, payload: {
       ctx.postMessage({ type: 'schedulerTaskExecuted', payload: { id: payload.id, task } });
     } catch (error) {
       logger.error('Error executing scheduler task', { error: String(error) });
+    }
+}
+
+/** Restart a scheduled task (disable → re-enable to reset timers and clear errors) */
+export async function handleRestartSchedulerTask(ctx: HandlerContext, payload: { id: string }): Promise<void> {
+    try {
+      const engine = SchedulerEngine.getInstance();
+      // Disable then re-enable to reset scheduling timers
+      engine.toggleTask(payload.id, false);
+      engine.toggleTask(payload.id, true);
+      const task = engine.getTask(payload.id);
+      ctx.postMessage({ type: 'schedulerTaskRestarted', payload: { id: payload.id, task } });
+    } catch (error) {
+      logger.error('Error restarting scheduler task', { error: String(error) });
     }
 }

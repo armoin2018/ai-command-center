@@ -1,0 +1,22 @@
+{
+  "name": "ailey-admin-tools-index",
+  "version": "1.0.0",
+  "description": "Search and query AI-ley index files with multiple output formats",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "search": "node dist/search.js",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@types/node": "^22.0.0",
+    "commander": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "typescript": "^5.3.3"
+  }
+}

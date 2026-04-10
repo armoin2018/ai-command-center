@@ -1,0 +1,844 @@
+{
+  "name": "aicc-marketplace",
+  "owner": {
+    "name": "AI Command Center",
+    "email": "ai-command-center@ai-ley.dev"
+  },
+  "metadata": {
+    "description": "AI-ley Kit plugin marketplace \u2014 modular AI agent capabilities for VS Code Copilot and Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "aicc-amazon",
+      "source": "./aicc-amazon",
+      "description": "Comprehensive Amazon SP-API integration for product listing, order management, inventory tracking, advertising, and customer engagement. Supports both personal seller and professional business use cases.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "amazon",
+        "ecommerce",
+        "marketplace"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-calendly",
+      "source": "./aicc-calendly",
+      "description": "Comprehensive Calendly integration with tier detection, OAuth/Personal Access Token authentication, event management, scheduling, webhooks, and analytics. Use when managing Calendly events, automating scheduling, analyzing booking performance, or integrating Calendly workflows.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "calendly",
+        "scheduling",
+        "appointments",
+        "events"
+      ],
+      "category": "scheduling"
+    },
+    {
+      "name": "aicc-canva",
+      "source": "./aicc-canva",
+      "description": "Comprehensive Canva integration with tier detection, OAuth authentication, design management, asset operations, brand kit access, exports, and automated content creation. Use when creating designs, managing assets, exporting content, or automating design workflows.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "canva",
+        "design",
+        "graphics"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-capcut",
+      "source": "./aicc-capcut",
+      "description": "Comprehensive CapCut integration for video creation, editing, and publishing. Includes automatic account tier detection (Free, Pro, Business), setup instructions, and AI-ley configuration guidance. Manage projects, edit videos, access templates, effects, and music library.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "capcut",
+        "video-editing"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-confluence",
+      "source": "./aicc-confluence",
+      "description": "Confluence integration with CRUD operations, document conversion (Markdown/Word/PDF to/from Confluence), content export, and CQL query support. Use when managing Confluence pages, converting documents, exporting content, or querying documentation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "confluence",
+        "atlassian",
+        "documentation",
+        "wiki"
+      ],
+      "category": "integrations"
+    },
+    {
+      "name": "aicc-admin",
+      "source": "./aicc-admin",
+      "description": "Administration toolkit for the AI-ley framework with catalog management, plan management, skill/plugin creation, resource indexing, optimization, health checks, and benchmarking.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Armoin, LLC",
+        "email": "blaine@armoin.com"
+      },
+      "license": "MIT",
+      "keywords": [
+        "admin",
+        "catalog",
+        "indexing",
+        "optimization",
+        "skill-creator",
+        "plugin-creator",
+        "plan-management",
+        "health-check"
+      ],
+      "category": "foundation"
+    },
+    {
+      "name": "aicc-core",
+      "source": "./aicc-core",
+      "description": "Foundation plugin with base agents, prompts, personas, scheduler, and instructions for the AI-ley framework",
+      "version": "1.0.0",
+      "author": {
+        "name": "Armoin, LLC",
+        "email": "blaine@armoin.com"
+      },
+      "license": "MIT",
+      "keywords": [
+        "ai-ley",
+        "agents",
+        "foundation",
+        "orchestrator",
+        "planner",
+        "prompts",
+        "scheduler"
+      ],
+      "category": "foundation"
+    },
+    {
+      "name": "aicc-audio",
+      "source": "./aicc-audio",
+      "description": "Comprehensive audio processing toolkit with format conversion (mp3, wav, flac, etc.), transcription via OpenAI Whisper, video audio extraction, silence-based slicing, and audio manipulation.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["audio", "transcription", "whisper", "ffmpeg", "conversion"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-bootstrap-developer",
+      "source": "./aicc-bootstrap-developer",
+      "description": "Bootstrap development agent plugin with component patterns, responsive grid system, utility classes, theming, SCSS customization, and accessibility best practices.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["bootstrap", "ui", "responsive", "components", "grid", "scss", "theming"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-business",
+      "source": "./aicc-business",
+      "description": "Business strategy toolkit with agents, personas, and commands for business plans, lean canvases, pitch decks, revenue projections, and innovation analysis.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["business", "strategy", "entrepreneur", "finance", "lean-canvas", "pitch-deck", "revenue", "leadership", "innovation"],
+      "category": "foundation"
+    },
+    {
+      "name": "aicc-css-developer",
+      "source": "./aicc-css-developer",
+      "description": "CSS development agent plugin with coding standards, design patterns, responsive layouts, animations, CSS Grid/Flexbox, custom properties, and modern CSS best practices.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["css", "sass", "scss", "responsive", "flexbox", "grid", "animations"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-data-converter",
+      "source": "./aicc-data-converter",
+      "description": "Convert files between data formats (JSON, YAML, XML, CSV, TSV, Parquet, Avro, ORC, Thrift) with schema generation/conversion/evolution, CRUD operations, jq-style queries, compression, streaming, and chunking support.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["data", "converter", "json", "yaml", "xml", "csv", "parquet"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-diskimager",
+      "source": "./aicc-diskimager",
+      "description": "Comprehensive disk imaging toolkit for creating, duplicating, and cloning disk images across drives and SD cards with safety-enforced cloning.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["disk", "image", "clone", "dd", "sdcard", "backup"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-esp-manager",
+      "source": "./aicc-esp-manager",
+      "description": "Comprehensive ESP32/ESP8266 device management toolkit with USB serial flashing, OTA Wi-Fi updates, mDNS device discovery, health monitoring, and bulk operations across device fleets.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["esp32", "esp8266", "firmware", "flash", "ota", "iot"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-image",
+      "source": "./aicc-image",
+      "description": "Comprehensive image manipulation toolkit with format conversion, animation creation/slicing, editing, metadata extraction, OCR text extraction, web image scraping, and SVG template processing.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["image", "ocr", "svg", "conversion", "editing", "animation"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-model",
+      "source": "./aicc-model",
+      "description": "Generate, translate, and optionally render Mermaid and PlantUML diagrams with natural language processing, bidirectional conversion, and API-based rendering.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["mermaid", "plantuml", "diagram", "uml", "flowchart", "visualization"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-rag",
+      "source": "./aicc-rag",
+      "description": "RAG (Retrieval Augmented Generation) toolkit for indexing content into ChromaDB collections and searching them with semantic search, tag-based filtering, multi-RAG joining, and Google grounding.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["rag", "chromadb", "semantic-search", "vector-search", "indexing", "knowledge-base"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-seo-report",
+      "source": "./aicc-seo-report",
+      "description": "Comprehensive SEO analysis and reporting tool with interactive HTML, Markdown, and JSON reports covering technical SEO, performance, and content analysis.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["seo", "audit", "web-crawler", "performance", "core-web-vitals"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-translator",
+      "source": "./aicc-translator",
+      "description": "Comprehensive offline-first language translation toolkit with local translation via Argos Translate or LibreTranslate, batch file translation, auto-detect source language, and 30+ language pairs.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["translate", "translation", "language", "argos", "i18n", "localize"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-video",
+      "source": "./aicc-video",
+      "description": "Comprehensive video processing toolkit with format conversion, speed adjustment, captioning, cropping, resizing, audio muxing/demuxing, splitting, joining, filters, effects, and streaming support.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["video", "ffmpeg", "conversion", "editing", "subtitles", "streaming"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-web-crawl",
+      "source": "./aicc-web-crawl",
+      "description": "Advanced web crawler with depth control, pattern filtering, parallelization, authentication, and resource limits. Crawl websites, download files, and build sitemaps.",
+      "version": "1.0.0",
+      "author": { "name": "AI Command Center" },
+      "license": "MIT",
+      "keywords": ["web-crawler", "spider", "scraper", "download", "sitemap"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-discord",
+      "source": "./aicc-discord",
+      "description": "Comprehensive Discord bot with intent detection, slash commands, event handlers, and moderation tools. Automatically detects Gateway intent level and adapts features. Includes verification guidance for 75+ server bots.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "discord",
+        "bots",
+        "community"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-email",
+      "source": "./aicc-email",
+      "description": "Send, read, and manage emails using standard protocols (IMAP, SMTP, POP3). Works with Gmail, Yahoo, Outlook.com, and custom email servers. Includes template support, bulk operations, attachment handling, and folder management. Automatically provides setup instructions on connection failure.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "email",
+        "imap",
+        "smtp",
+        "messaging"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-etsy",
+      "source": "./aicc-etsy",
+      "description": "Comprehensive Etsy API integration for shop management, product listing, order fulfillment, and analytics.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "etsy",
+        "ecommerce",
+        "handmade"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-flow",
+      "source": "./aicc-flow",
+      "description": "Workflow automation toolkit for building and running PlantUML-based flow diagrams that chain AI-ley prompts into multi-step pipelines.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["flow", "workflow", "automation", "plantuml", "pipeline", "orchestration"],
+      "category": "foundation"
+    },
+    {
+      "name": "aicc-facebook",
+      "source": "./aicc-facebook",
+      "description": "Comprehensive Facebook integration for personal and business features via Graph API. Manage posts, photos, friends, groups, events, pages, ads, analytics, Instagram, leads, and messenger. Use when posting to Facebook, managing business pages, running ad campaigns, analyzing social media performance, or integrating Facebook/Instagram into workflows.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "facebook",
+        "social-media",
+        "meta"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-game-development",
+      "source": "./aicc-game-development",
+      "description": "Game development toolkit with game designer agent, game developer personas (JavaScript, Lua, mobile, Unity, NFT), and game design instructions including base6 framework and game dashboard patterns.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["game-development", "game-design", "unity", "lua", "mobile-game", "mechanics", "player-experience"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-gamma",
+      "source": "./aicc-gamma",
+      "description": "Create presentations, PowerPoints, PDFs, and websites using Gamma AI. Convert markdown or text files into professional presentations with themes, export to PPTX/PDF, and manage projects. Use when asked to create presentations with Gamma or convert content to slides.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "gamma",
+        "presentations",
+        "slides"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-gemini",
+      "source": "./aicc-gemini",
+      "description": "Comprehensive Google Gemini integration for AI-powered image and video generation using Imagen 3 and Veo 2. Create, edit, upscale images and generate videos from text prompts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "gemini",
+        "google",
+        "ai",
+        "images",
+        "video"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-instagram",
+      "source": "./aicc-instagram",
+      "description": "Comprehensive Instagram integration for business and personal content management, engagement, analytics, hashtag research, and shopping via Graph API. Publish photos/videos/carousels/reels/stories, manage comments/mentions, track insights/demographics, research hashtags, and manage product catalogs. Use when publishing to Instagram, managing content, analyzing performance, researching hashtags, or integrating Instagram commerce.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "instagram",
+        "social-media",
+        "meta"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-jira",
+      "source": "./aicc-jira",
+      "description": "Jira integration with CRUD operations, bulk CSV import/export, bidirectional plan synchronization, and JQL query support. Use when managing Jira issues, syncing with project plans, or performing bulk operations on Jira data.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "jira",
+        "atlassian",
+        "project-management",
+        "issues"
+      ],
+      "category": "integrations"
+    },
+    {
+      "name": "aicc-kafka",
+      "source": "./aicc-kafka",
+      "description": "Comprehensive Apache Kafka integration with automatic deployment detection (Confluent Cloud/Platform, Apache Kafka, AWS MSK), producer/consumer APIs, Schema Registry, Kafka Connect, KRaft/Zookeeper, ksqlDB, and RBAC/ACL management. Supports SASL/SCRAM, mTLS, PLAIN authentication.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "kafka",
+        "streaming",
+        "data",
+        "events"
+      ],
+      "category": "data"
+    },
+    {
+      "name": "aicc-linkedin",
+      "source": "./aicc-linkedin",
+      "description": "AI-ley skill plugin",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "linkedin",
+        "social-media",
+        "professional"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-mailchimp",
+      "source": "./aicc-mailchimp",
+      "description": "Comprehensive Mailchimp integration for email marketing campaigns, subscriber management, automation workflows, and analytics. Includes automatic account tier detection (Free/Standard/Pro/Premium), setup instructions, and AI-ley configuration guidance. Use when managing email campaigns, subscriber lists, marketing automation, or analyzing email performance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "mailchimp",
+        "email-marketing",
+        "campaigns"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-marketing",
+      "source": "./aicc-marketing",
+      "description": "Marketing toolkit with strategist agent, personas, SEO reporting, go-to-market planning, market research, and business development commands for the AI-ley framework",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["marketing", "branding", "campaigns", "seo", "go-to-market", "market-research", "strategy"],
+      "category": "foundation"
+    },
+    {
+      "name": "aicc-meetup",
+      "source": "./aicc-meetup",
+      "description": "Comprehensive Meetup integration with account tier detection (Standard vs Pro), OAuth authentication, GraphQL API access, event management, group administration, RSVP tracking, and member engagement. Automatically detects account capabilities and provides setup instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "meetup",
+        "events",
+        "community"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-openai",
+      "source": "./aicc-openai",
+      "description": "Comprehensive OpenAI integration for AI-powered image and video generation using DALL-E 3 and Sora. Create photorealistic images, edit existing visuals, generate variations, and produce cinematic videos from text prompts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "openai",
+        "dall-e",
+        "sora",
+        "ai",
+        "images"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-mysql-developer",
+      "source": "./aicc-mysql-developer",
+      "description": "MySQL development agent plugin with schema design, query optimization, indexing strategies, stored procedures, replication, backup/recovery, and database security best practices.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["mysql", "mariadb", "sql", "database", "schema", "indexing", "optimization"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-outlook",
+      "source": "./aicc-outlook",
+      "description": "Send, read, and manage Outlook/Office 365 emails with attachments and templates. Create and manage calendar events, search contacts, organize folders and rules. Uses Microsoft Graph API. Automatically provides setup instructions when connection fails.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "outlook",
+        "office365",
+        "microsoft",
+        "email",
+        "calendar"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-php-developer",
+      "source": "./aicc-php-developer",
+      "description": "PHP development agent plugin with coding standards, OOP patterns, framework best practices, testing with PHPUnit, security hardening, and performance optimization.",
+      "version": "1.0.0",
+      "author": { "name": "Armoin, LLC", "email": "blaine@armoin.com" },
+      "license": "MIT",
+      "keywords": ["php", "laravel", "symfony", "phpunit", "composer", "oop", "psr"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "aicc-reddit",
+      "source": "./aicc-reddit",
+      "description": "AI-ley skill plugin",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "reddit",
+        "social-media",
+        "community"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-salesforce",
+      "source": "./aicc-salesforce",
+      "description": "Comprehensive Salesforce CRM integration with automatic edition detection, OAuth authentication, SOQL queries, Bulk API, and complete object management. Supports Developer, Professional, Enterprise, Unlimited, and Performance editions with adaptive feature sets.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "salesforce",
+        "crm",
+        "sales"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-sharepoint",
+      "source": "./aicc-sharepoint",
+      "description": "SharePoint Online integration for document library management, list operations, site provisioning, page creation, and search via Microsoft Graph API and SharePoint REST API. Supports site-scoped and tenant-scoped operations with delegated and application permissions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "sharepoint",
+        "microsoft",
+        "documents"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-slack",
+      "source": "./aicc-slack",
+      "description": "Comprehensive Slack integration with workspace tier detection, OAuth authentication, channel management, message operations, file sharing, interactive components (modals, blocks, shortcuts), slash commands, event subscriptions, and workflow automation. Supports Bot Token and User Token scopes with automatic workspace tier detection and feature availability mapping.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "slack",
+        "messaging",
+        "channels"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-speechify",
+      "source": "./aicc-speechify",
+      "description": "Convert text to natural speech using Speechify API with 200+ voices in 60+ languages. Generate audiobooks, narrate documents, create podcasts, and produce audio content from text files (MD, TXT, PDF, DOCX). Use when converting text to audio, creating audiobooks, narrating documentation, generating podcast audio, or producing accessible audio content.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "speechify",
+        "text-to-speech",
+        "audio"
+      ],
+      "category": "media"
+    },
+    {
+      "name": "aicc-teams",
+      "source": "./aicc-teams",
+      "description": "Microsoft Teams integration with channel management, chat messaging, meeting scheduling, file sharing, and adaptive card support via Microsoft Graph API. Supports personal, team, and organizational scopes with delegated and application permissions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "teams",
+        "microsoft",
+        "messaging",
+        "meetings"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-threads",
+      "source": "./aicc-threads",
+      "description": "Comprehensive Threads integration with account type detection, OAuth authentication, post publishing (text/images/videos/carousels), analytics, engagement management, and automatic API tier detection. Adapts features based on account type (Personal, Creator, Business). Use when managing Threads content, automating posts, analyzing performance, or engaging with audiences.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "threads",
+        "social-media",
+        "meta"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-tiktok",
+      "source": "./aicc-tiktok",
+      "description": "Comprehensive TikTok integration with multi-tier API access support, OAuth authentication, video upload/management, analytics, comment engagement, and automatic tier detection. Adapts features dynamically based on account API access level (Login Kit, Display API, Content Posting API, Marketing API). Use when managing TikTok content, automating uploads, analyzing performance, engaging with audiences, or checking API capabilities.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "tiktok",
+        "social-media",
+        "video"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-timetap",
+      "source": "./aicc-timetap",
+      "description": "Comprehensive TimeTap appointment scheduling integration with account tier detection, API Key/session token authentication, appointment management, client management, staff management, services, locations, availability, webhooks, and reporting. Use when managing TimeTap appointments, automating scheduling workflows, managing clients or staff, checking availability, or integrating TimeTap into applications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "timetap",
+        "scheduling",
+        "appointments"
+      ],
+      "category": "scheduling"
+    },
+    {
+      "name": "aicc-twilio",
+      "source": "./aicc-twilio",
+      "description": "Comprehensive Twilio integration for SMS, MMS, voice calls, phone number management, verification, and messaging with automatic account tier detection, webhook security, and multi-channel support. Use when sending SMS/MMS messages, making voice calls, verifying phone numbers, managing Twilio phone numbers, setting up webhooks, or analyzing usage.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "twilio",
+        "sms",
+        "voice",
+        "messaging"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-twitter",
+      "source": "./aicc-twitter",
+      "description": "Comprehensive X (Twitter) integration with tier detection (Free, Basic, Pro, Enterprise), posting, search, streaming, and analytics. Automatically detects API tier and adapts features with cost warnings.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "twitter",
+        "x",
+        "social-media"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-vonage",
+      "source": "./aicc-vonage",
+      "description": "Comprehensive Vonage integration for SMS, voice calls, number verification, and messaging with automatic account tier detection, webhook security, and multi-channel support.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "vonage",
+        "sms",
+        "voice",
+        "messaging"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-whatsapp",
+      "source": "./aicc-whatsapp",
+      "description": "Comprehensive WhatsApp Business API integration with account tier detection, message automation, media handling, and webhook support. Supports Cloud (Standard/Business) and on-premises (Enterprise) deployments with automatic tier detection and feature availability mapping.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "whatsapp",
+        "messaging",
+        "business"
+      ],
+      "category": "communications"
+    },
+    {
+      "name": "aicc-woocommerce",
+      "source": "./aicc-woocommerce",
+      "description": "Comprehensive WooCommerce integration for e-commerce store management, product catalog, order processing, customer management, payments, shipping, and analytics. Includes automatic account tier detection (Self-Hosted, WooCommerce.com), setup instructions, and AI-ley configuration guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "woocommerce",
+        "ecommerce",
+        "wordpress"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-wordpress",
+      "source": "./aicc-wordpress",
+      "description": "Comprehensive WordPress integration for managing WordPress.com and self-hosted sites with automatic tier detection, content management, media handling, plugin/theme management, user administration, and SEO/analytics. Includes WordPress development agent, coding standards, PHP persona, and command prompts for posts, pages, media, plugins, themes, users, comments, and custom development.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Armoin, LLC",
+        "email": "blaine@armoin.com"
+      },
+      "license": "MIT",
+      "keywords": [
+        "wordpress",
+        "cms",
+        "web",
+        "php",
+        "themes",
+        "plugins",
+        "gutenberg",
+        "rest-api",
+        "woocommerce",
+        "blog"
+      ],
+      "category": "commerce"
+    },
+    {
+      "name": "aicc-youtube",
+      "source": "./aicc-youtube",
+      "description": "Comprehensive YouTube integration with quota tier detection, OAuth authentication, video upload/management, analytics, live streaming, comment engagement, and automatic API quota monitoring. Adapts features based on YouTube API quota allocation (10,000 free daily, custom quotas). Use when managing YouTube content, automating uploads, analyzing performance, managing live streams, or checking API capabilities.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "youtube",
+        "google",
+        "video",
+        "streaming"
+      ],
+      "category": "social"
+    },
+    {
+      "name": "aicc-zoom",
+      "source": "./aicc-zoom",
+      "description": "Comprehensive Zoom API integration with account tier detection, meeting management, user administration, recording management, and webinar capabilities. Supports JWT and OAuth authentication with automatic tier detection and feature availability mapping.",
+      "version": "1.0.0",
+      "author": {
+        "name": "AI Command Center"
+      },
+      "license": "MIT",
+      "keywords": [
+        "zoom",
+        "video",
+        "meetings"
+      ],
+      "category": "communications"
+    }
+  ]
+}

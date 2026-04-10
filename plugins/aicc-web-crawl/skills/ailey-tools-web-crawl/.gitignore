@@ -1,0 +1,44 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Crawled Data
+crawled/
+downloads/
+output/
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+*.cache
+.puppeteer_cache/
+
+# Screenshots
+screenshots/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml

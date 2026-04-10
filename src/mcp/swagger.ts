@@ -151,8 +151,7 @@ export class SwaggerEndpoint {
             }
 
             res.writeHead(200, {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'Content-Type': 'application/json'
             });
             res.end(this.cachedSpec);
             return true;
@@ -167,14 +166,14 @@ export class SwaggerEndpoint {
                 const filePath = path.join(swaggerPath, fileName);
                 
                 // Only serve files from swagger-ui-dist directory (prevent directory traversal)
-                const normalizedPath = path.normalize(filePath);
-                if (!normalizedPath.startsWith(swaggerPath)) {
+                const normalizedPath = path.resolve(filePath);
+                if (!normalizedPath.startsWith(path.resolve(swaggerPath))) {
                     res.writeHead(403, { 'Content-Type': 'text/plain' });
                     res.end('Forbidden');
                     return true;
                 }
 
-                const content = fs.readFileSync(normalizedPath);
+                const content = await fs.promises.readFile(normalizedPath);
                 const ext = path.extname(fileName);
                 const contentTypes: Record<string, string> = {
                     '.js': 'application/javascript',
@@ -186,8 +185,7 @@ export class SwaggerEndpoint {
                 };
 
                 res.writeHead(200, {
-                    'Content-Type': contentTypes[ext] || 'application/octet-stream',
-                    'Access-Control-Allow-Origin': '*'
+                    'Content-Type': contentTypes[ext] || 'application/octet-stream'
                 });
                 res.end(content);
                 return true;
@@ -214,8 +212,7 @@ export class SwaggerEndpoint {
             }
 
             res.writeHead(200, {
-                'Content-Type': 'text/html',
-                'Access-Control-Allow-Origin': '*'
+                'Content-Type': 'text/html'
             });
             res.end(this.cachedHTML);
             return true;

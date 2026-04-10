@@ -1,0 +1,43 @@
+{
+  "name": "ailey-shop-etsy",
+  "version": "1.0.0",
+  "description": "Etsy API integration skill for AI-ley",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "detect": "node dist/cli.js detect",
+    "auth": "node dist/cli.js auth",
+    "shop": "node dist/cli.js shop",
+    "product": "node dist/cli.js product",
+    "order": "node dist/cli.js order",
+    "analytics": "node dist/cli.js analytics",
+    "review": "node dist/cli.js review",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "etsy",
+    "ecommerce",
+    "shop",
+    "integration",
+    "api",
+    "ai-ley"
+  ],
+  "author": "AI-ley",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "aicc-wordpress",
+  "version": "1.0.0",
+  "description": "Comprehensive WordPress integration for managing WordPress.com and self-hosted sites with automatic tier detection, content management, media handling, plugin/theme management, user administration, and SEO/analytics.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "cms",
+    "web",
+    "php",
+    "themes",
+    "plugins",
+    "gutenberg",
+    "rest-api",
+    "woocommerce",
+    "blog"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+",
+    "aicc-php-developer:1.0.0+",
+    "aicc-mysql-developer:1.0.0+",
+    "aicc-bootstrap-developer:1.0.0+"
+  ]
+}

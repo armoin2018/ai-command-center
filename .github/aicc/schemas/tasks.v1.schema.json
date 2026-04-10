@@ -132,6 +132,8 @@
               },
               "errors": {
                 "type": "array",
+                "maxItems": 10,
+                "description": "Rolling error history, capped at 10 entries (oldest rolled off). Cleared on successful execution.",
                 "items": {
                   "type": "object",
                   "properties": {

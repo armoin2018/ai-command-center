@@ -1,0 +1,45 @@
+{
+  "name": "ailey-data-kafka",
+  "version": "1.0.0",
+  "description": "Apache Kafka integration with producer/consumer, Schema Registry, Kafka Connect, ksqlDB, and cluster management",
+  "type": "module",
+  "scripts": {
+    "kafka": "tsx scripts/index.ts",
+    "produce": "tsx scripts/producer.ts",
+    "consume": "tsx scripts/consumer.ts",
+    "topic": "tsx scripts/topic-manager.ts",
+    "group": "tsx scripts/consumer-group.ts",
+    "schema": "tsx scripts/schema-registry.ts",
+    "connect": "tsx scripts/kafka-connect.ts",
+    "ksql": "tsx scripts/ksqldb.ts",
+    "acl": "tsx scripts/acl-manager.ts",
+    "rbac": "tsx scripts/rbac-manager.ts",
+    "cluster": "tsx scripts/cluster-manager.ts",
+    "test": "tsx scripts/test-connection.ts"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "avsc": "^5.7.7",
+    "protobufjs": "^7.2.6",
+    "axios": "^1.6.7",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  },
+  "keywords": [
+    "kafka",
+    "streaming",
+    "event-driven",
+    "schema-registry",
+    "kafka-connect",
+    "ksqldb",
+    "confluent"
+  ],
+  "author": "AI-ley",
+  "license": "MIT"
+}

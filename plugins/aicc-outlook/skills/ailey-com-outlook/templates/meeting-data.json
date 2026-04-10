@@ -1,0 +1,21 @@
+{
+  "attendeeName": "Team",
+  "eventTitle": "Q1 Planning Session",
+  "eventDate": "Monday, February 15, 2026",
+  "eventTime": "10:00 AM - 12:00 PM PST",
+  "duration": "2 hours",
+  "location": "Conference Room A (or join online)",
+  "isOnline": true,
+  "meetingUrl": "https://teams.microsoft.com/l/meetup-join/...",
+  "agendaItems": [
+    "Review Q4 2025 results and lessons learned",
+    "Discuss Q1 2026 objectives and key results (OKRs)",
+    "Resource allocation and budget planning",
+    "Team roadmap and milestone planning",
+    "Q&A and open discussion"
+  ],
+  "preparation": "Please review the Q4 retrospective document and come prepared with your team's Q1 objectives.",
+  "acceptUrl": "outlook:accept-invitation",
+  "organizerName": "Sarah Chen",
+  "organizerTitle": "VP of Product"
+}

@@ -1,0 +1,8 @@
+{
+  "hooks": [
+    {
+      "type": "SessionStart",
+      "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/setup.js"
+    }
+  ]
+}

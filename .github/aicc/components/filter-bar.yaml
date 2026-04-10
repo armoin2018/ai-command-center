@@ -118,8 +118,10 @@ spec:
       description: Simple filter with all features
       props:
         placeholder: "Search items..."
+        value: ""
         showCaseToggle: true
         showRefresh: true
+        caseInsensitive: true
       code: |
         <filter-bar 
           placeholder="Search items..."

@@ -1,0 +1,59 @@
+{
+  "name": "@ailey/com-mailchimp",
+  "version": "1.0.0",
+  "description": "Comprehensive Mailchimp email marketing integration for AI-ley with account tier detection, API key authentication, campaign management, and analytics",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mailchimp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "setup": "ts-node src/cli.ts setup",
+    "detect": "ts-node src/cli.ts detect",
+    "auth": "ts-node src/cli.ts auth",
+    "list": "ts-node src/cli.ts list",
+    "subscriber": "ts-node src/cli.ts subscriber",
+    "campaign": "ts-node src/cli.ts campaign",
+    "automation": "ts-node src/cli.ts automation",
+    "analytics": "ts-node src/cli.ts analytics",
+    "report": "ts-node src/cli.ts report",
+    "diagnose": "ts-node src/cli.ts diagnose",
+    "test": "echo \"No tests configured yet\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/md5": "^2.3.2",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.1"
+  },
+  "keywords": [
+    "mailchimp",
+    "email",
+    "marketing",
+    "automation",
+    "campaigns",
+    "subscribers",
+    "analytics",
+    "ai-ley",
+    "integration"
+  ],
+  "author": "AI-ley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-command-center.git",
+    "directory": ".github/skills/ailey-com-mailchimp"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "aicc-esp-manager",
+  "version": "1.0.0",
+  "description": "Comprehensive ESP32/ESP8266 device management toolkit with USB serial flashing, OTA Wi-Fi updates, mDNS device discovery, health monitoring, and bulk operations across device fleets.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "esp32",
+    "esp8266",
+    "firmware",
+    "flash",
+    "ota",
+    "iot"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

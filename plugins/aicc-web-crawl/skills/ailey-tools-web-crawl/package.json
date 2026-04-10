@@ -1,0 +1,51 @@
+{
+  "name": "ailey-tools-web-crawl",
+  "version": "1.0.0",
+  "description": "Advanced web crawler with depth control, filtering, parallelization, and authentication",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "setup": "node dist/cli.js setup",
+    "crawl": "node dist/cli.js crawl",
+    "sitemap": "node dist/cli.js sitemap",
+    "download": "node dist/cli.js download",
+    "spider": "node dist/cli.js spider",
+    "diagnose": "node dist/cli.js diagnose"
+  },
+  "keywords": [
+    "web-crawler",
+    "spider",
+    "scraper",
+    "download",
+    "sitemap",
+    "parallel",
+    "puppeteer",
+    "ai-ley"
+  ],
+  "author": "AI-ley Kit",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.6.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.3.1",
+    "p-queue": "^8.0.1",
+    "url-pattern": "^1.0.3",
+    "mime-types": "^2.1.35",
+    "filesize": "^10.1.0",
+    "robots-parser": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/mime-types": "^2.1.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

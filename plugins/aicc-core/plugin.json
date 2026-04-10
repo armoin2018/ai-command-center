@@ -1,0 +1,21 @@
+{
+  "name": "aicc-core",
+  "version": "1.0.0",
+  "description": "Foundation plugin with base agents, prompts, personas, scheduler, and instructions for the AI-ley framework",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "ai-ley",
+    "agents",
+    "foundation",
+    "orchestrator",
+    "planner",
+    "prompts",
+    "scheduler"
+  ],
+  "dependencies": []
+}

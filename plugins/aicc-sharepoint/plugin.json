@@ -1,0 +1,19 @@
+{
+  "name": "aicc-sharepoint",
+  "version": "1.0.0",
+  "description": "SharePoint Online integration for document library management, list operations, site provisioning, page creation, and search via Microsoft Graph API and SharePoint REST API. Supports site-scoped and tenant-scoped operations with delegated and application permissions.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "sharepoint",
+    "microsoft",
+    "documents"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

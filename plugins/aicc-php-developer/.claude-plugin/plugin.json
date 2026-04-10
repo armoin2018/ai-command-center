@@ -1,0 +1,24 @@
+{
+  "name": "aicc-php-developer",
+  "version": "1.0.0",
+  "description": "PHP development agent plugin with coding standards, OOP patterns, framework best practices, testing with PHPUnit, security hardening, and performance optimization.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "laravel",
+    "symfony",
+    "phpunit",
+    "composer",
+    "oop",
+    "psr",
+    "security"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

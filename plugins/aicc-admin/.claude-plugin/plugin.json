@@ -1,0 +1,24 @@
+{
+  "name": "aicc-admin",
+  "version": "1.0.0",
+  "description": "Administration toolkit for the AI-ley framework with catalog management, plan management, skill/plugin creation, resource indexing, optimization, health checks, and benchmarking.",
+  "author": {
+    "name": "Armoin, LLC",
+    "email": "blaine@armoin.com"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": [
+    "admin",
+    "catalog",
+    "indexing",
+    "optimization",
+    "skill-creator",
+    "plugin-creator",
+    "plan-management",
+    "health-check"
+  ],
+  "dependencies": [
+    "aicc-core:1.0.0+"
+  ]
+}

@@ -15,6 +15,7 @@
 
 import * as vscode from 'vscode';
 import * as path from 'path';
+import * as fs from 'fs';
 import { PanelLoaderService } from '../services/panelLoader';
 import { TabLoaderService } from '../services/tabLoader';
 import { IntakeLoaderService } from '../services/intakeLoader';
@@ -35,6 +36,7 @@ import * as jiraHandlers from './secondaryPanel/jiraHandlers';
 import * as mcpHandlers from './secondaryPanel/mcpHandlers';
 import * as aikitHandlers from './secondaryPanel/aikitHandlers';
 import * as intakeHandlers from './secondaryPanel/intakeHandlers';
+import * as componentCatalogHandlers from './secondaryPanel/componentCatalogHandlers';
 
 const logger = Logger.getInstance();
 
@@ -244,6 +246,58 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         }
         break;
 
+      // -- Plugin Development Mode ------------------------------------
+      case 'setPluginDev': {
+        const pluginPayload = message.payload as { enabled: boolean };
+        const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+        if (workspaceRoot) {
+          const pluginLockPath = path.join(workspaceRoot, '.my', 'plugin.lock');
+          const gitignorePath = path.join(workspaceRoot, '.gitignore');
+          if (pluginPayload.enabled) {
+            // Write plugin.lock — signals to gitignore logic that .github should be untracked
+            try {
+              fs.writeFileSync(pluginLockPath, `plugin-dev-mode\n${new Date().toISOString()}\n`, 'utf8');
+            } catch (e) {
+              logger.warn('Failed to write plugin.lock', { error: String(e) });
+            }
+            // Remove .github from .gitignore so it is tracked during plugin dev
+            if (fs.existsSync(gitignorePath)) {
+              try {
+                const lines = fs.readFileSync(gitignorePath, 'utf8').split('\n');
+                const filtered = lines.filter(l => !l.trim().match(/^\.github\/?$/));
+                if (filtered.length !== lines.length) {
+                  fs.writeFileSync(gitignorePath, filtered.join('\n'), 'utf8');
+                }
+              } catch (e) {
+                logger.warn('Failed to update .gitignore for plugin dev mode', { error: String(e) });
+              }
+            }
+          } else {
+            // Remove plugin.lock
+            if (fs.existsSync(pluginLockPath)) {
+              try { fs.unlinkSync(pluginLockPath); } catch { /* ignore */ }
+            }
+            // Add .github back to .gitignore
+            if (fs.existsSync(gitignorePath)) {
+              try {
+                const lines = fs.readFileSync(gitignorePath, 'utf8').split('\n');
+                if (!lines.some(l => l.trim().match(/^\.github\/?$/))) {
+                  lines.push('.github/');
+                  fs.writeFileSync(gitignorePath, lines.join('\n'), 'utf8');
+                }
+              } catch (e) {
+                logger.warn('Failed to restore .gitignore after disabling plugin dev mode', { error: String(e) });
+              }
+            }
+          }
+          if (this._context) {
+            await this._context.workspaceState.update('aicc.pluginDevEnabled', pluginPayload.enabled);
+          }
+          logger.info(`Plugin dev mode ${pluginPayload.enabled ? 'enabled' : 'disabled'}`);
+        }
+        break;
+      }
+
       // -- Planning ---------------------------------------------------
       case 'updateStatus':
         await planningHandlers.handleStatusUpdate(ctx, message.payload as any);
@@ -346,6 +400,14 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
       case 'executeSchedulerTask':
         await schedulerHandlers.handleExecuteSchedulerTask(ctx, message.payload as any);
         break;
+      case 'restartSchedulerTask':
+        await schedulerHandlers.handleRestartSchedulerTask(ctx, message.payload as any);
+        break;
+
+      // -- Component Catalog (AICC-0535) -------------------------------
+      case 'getComponents':
+        await componentCatalogHandlers.handleGetComponents(ctx);
+        break;
 
       // -- Jira Configuration (AICC-0081) -----------------------------
       case 'getJiraConfig':
@@ -382,6 +444,9 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         break;
       case 'getMcpPortScan':
         await mcpHandlers.handleGetMcpPortScan(ctx);
+        break;
+      case 'fetchOpenApiSpec':
+        await mcpHandlers.handleFetchOpenApiSpec(ctx, message.payload as any);
         break;
 
       // -- Ideation (REQ-IDEA-080+) -----------------------------------
@@ -489,6 +554,7 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
       port: mcpConfig.get<number>('port', 3000)
     };
     const devModeEnabled = this._context?.workspaceState.get<boolean>('aicc.devModeEnabled', false) ?? false;
+    const pluginDevEnabled = this._context?.workspaceState.get<boolean>('aicc.pluginDevEnabled', false) ?? false;
     const platform = getPlatformInfoForWebview();
 
     this._view.webview.postMessage({
@@ -505,6 +571,7 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
         version,
         mcpConfig: mcpData,
         devModeEnabled,
+        pluginDevEnabled,
         platform
       }
     });
@@ -640,6 +707,49 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
     const actionsUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this._extensionUri, 'media', 'lib', 'actions.js')
     );
+    const schedulerTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'schedulerTab.js')
+    );
+    const jiraTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'jiraTab.js')
+    );
+    const mcpTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'mcpTab.js')
+    );
+    const ideationTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'ideationTab.js')
+    );
+    const apiDocsTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'apiDocsTab.js')
+    );
+    const intakesTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'intakesTab.js')
+    );
+    const aiKitTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'aiKitTab.js')
+    );
+    const planningTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'planningTab.js')
+    );
+    const componentCatalogTabUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'modules', 'componentCatalogTab.js')
+    );
+    // helpTabUri removed (REQ-HEDP-004) — help is now in its own editor panel
+
+    // MVC library bundles — required for component catalog demos (AICC-0535)
+    const libraryLoaderUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'lib', 'libraryLoader.js')
+    );
+    const bootstrapBundleUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'webview', 'bootstrap.bundle.js')
+    );
+    const utilsBundleUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'webview', 'utils.bundle.js')
+    );
+    const componentLoaderUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'lib', 'componentLoader.js')
+    );
+
     const stylesUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this._extensionUri, 'media', 'secondaryPanel', 'styles.css')
     );
@@ -668,6 +778,19 @@ export class SecondaryPanelProvider implements vscode.WebviewViewProvider {
       .replace(/{{cspSource}}/g, webview.cspSource)
       .replace(/{{scriptUri}}/g, scriptUri.toString())
       .replace(/{{actionsUri}}/g, actionsUri.toString())
+      .replace(/{{schedulerTabUri}}/g, schedulerTabUri.toString())
+      .replace(/{{jiraTabUri}}/g, jiraTabUri.toString())
+      .replace(/{{mcpTabUri}}/g, mcpTabUri.toString())
+      .replace(/{{ideationTabUri}}/g, ideationTabUri.toString())
+      .replace(/{{apiDocsTabUri}}/g, apiDocsTabUri.toString())
+      .replace(/{{intakesTabUri}}/g, intakesTabUri.toString())
+      .replace(/{{aiKitTabUri}}/g, aiKitTabUri.toString())
+      .replace(/{{planningTabUri}}/g, planningTabUri.toString())
+      .replace(/{{componentCatalogTabUri}}/g, componentCatalogTabUri.toString())
+      .replace(/{{libraryLoaderUri}}/g, libraryLoaderUri.toString())
+      .replace(/{{bootstrapBundleUri}}/g, bootstrapBundleUri.toString())
+      .replace(/{{utilsBundleUri}}/g, utilsBundleUri.toString())
+      .replace(/{{componentLoaderUri}}/g, componentLoaderUri.toString())
       .replace(/{{stylesUri}}/g, stylesUri.toString())
       .replace(/{{codiconFontUri}}/g, codiconFontUri.toString())
       .replace(/{{codiconCssUri}}/g, codiconCssUri.toString());

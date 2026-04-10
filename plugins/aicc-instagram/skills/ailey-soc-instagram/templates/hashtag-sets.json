@@ -1,0 +1,259 @@
+{
+  "fitness": {
+    "general": [
+      "fitness",
+      "health",
+      "wellness",
+      "workout",
+      "exercise",
+      "fitfam",
+      "fitspo",
+      "motivation",
+      "healthy",
+      "lifestyle"
+    ],
+    "specific": [
+      "weightlifting",
+      "cardio",
+      "yoga",
+      "crossfit",
+      "running",
+      "cycling",
+      "pilates",
+      "hiit",
+      "bodybuilding",
+      "calisthenics"
+    ],
+    "results": [
+      "transformation",
+      "beforeandafter",
+      "progress",
+      "results",
+      "goals",
+      "gainz",
+      "shredded",
+      "fitnessmotivation"
+    ]
+  },
+  "food": {
+    "general": [
+      "food",
+      "foodie",
+      "instafood",
+      "foodporn",
+      "yummy",
+      "delicious",
+      "foodstagram",
+      "foodphotography",
+      "homemade",
+      "cooking"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian",
+      "keto",
+      "paleo",
+      "glutenfree",
+      "healthy",
+      "organic",
+      "plantbased",
+      "cleaneating"
+    ],
+    "cuisine": [
+      "italian",
+      "mexican",
+      "asian",
+      "mediterranean",
+      "indian",
+      "japanese",
+      "thai",
+      "chinese"
+    ]
+  },
+  "fashion": {
+    "general": [
+      "fashion",
+      "style",
+      "ootd",
+      "fashionista",
+      "instafashion",
+      "outfitoftheday",
+      "fashionblogger",
+      "styleinspo",
+      "lookbook"
+    ],
+    "categories": [
+      "streetstyle",
+      "vintage",
+      "casual",
+      "formal",
+      "luxury",
+      "sustainable",
+      "mensfashion",
+      "womensfashion"
+    ],
+    "accessories": [
+      "shoes",
+      "sneakers",
+      "bags",
+      "jewelry",
+      "watches",
+      "sunglasses"
+    ]
+  },
+  "travel": {
+    "general": [
+      "travel",
+      "wanderlust",
+      "instatravel",
+      "travelgram",
+      "explore",
+      "adventure",
+      "travelphotography",
+      "vacation",
+      "traveling"
+    ],
+    "types": [
+      "backpacking",
+      "luxury",
+      "roadtrip",
+      "solotravel",
+      "grouptravel",
+      "digitalnomad",
+      "workation"
+    ],
+    "destinations": [
+      "beach",
+      "mountains",
+      "city",
+      "countryside",
+      "island",
+      "desert",
+      "tropics"
+    ]
+  },
+  "business": {
+    "general": [
+      "business",
+      "entrepreneur",
+      "startup",
+      "smallbusiness",
+      "businessowner",
+      "hustle",
+      "success",
+      "leadership",
+      "innovation"
+    ],
+    "marketing": [
+      "marketing",
+      "branding",
+      "socialmedia",
+      "contentmarketing",
+      "digitalmarketing",
+      "advertising",
+      "growth"
+    ],
+    "motivation": [
+      "motivation",
+      "inspiration",
+      "mindset",
+      "goals",
+      "productivity",
+      "grind",
+      "bossbabe",
+      "girlboss"
+    ]
+  },
+  "photography": {
+    "general": [
+      "photography",
+      "photographer",
+      "photo",
+      "photooftheday",
+      "picoftheday",
+      "instagood",
+      "beautiful",
+      "art"
+    ],
+    "types": [
+      "portrait",
+      "landscape",
+      "nature",
+      "wildlife",
+      "street",
+      "wedding",
+      "macro",
+      "architecture"
+    ],
+    "equipment": [
+      "canon",
+      "nikon",
+      "sony",
+      "fujifilm",
+      "lightroom",
+      "photoshop",
+      "vsco"
+    ]
+  },
+  "beauty": {
+    "general": [
+      "beauty",
+      "makeup",
+      "skincare",
+      "beautyblogger",
+      "makeuptutorial",
+      "cosmetics",
+      "beautytips",
+      "glam"
+    ],
+    "specific": [
+      "eyeshadow",
+      "lipstick",
+      "foundation",
+      "mascara",
+      "eyeliner",
+      "blush",
+      "highlighter"
+    ],
+    "skincare": [
+      "skincareroutine",
+      "cleanbeauty",
+      "antiaging",
+      "acne",
+      "moisturizer",
+      "serum",
+      "sunscreen"
+    ]
+  },
+  "pets": {
+    "general": [
+      "pets",
+      "petsofinstagram",
+      "petstagram",
+      "insta pets",
+      "cute",
+      "adorable",
+      "love"
+    ],
+    "dogs": [
+      "dog",
+      "dogs",
+      "dogsofinstagram",
+      "dogstagram",
+      "puppy",
+      "puppylove",
+      "doglife",
+      "doglover"
+    ],
+    "cats": [
+      "cat",
+      "cats",
+      "catsofinstagram",
+      "catstagram",
+      "kitten",
+      "catlife",
+      "catlover",
+      "meow"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "John Doe",
+  "companyName": "Acme Corporation",
+  "jobTitle": "Senior Software Engineer",
+  "username": "jdoe",
+  "email": "john.doe@acme.com",
+  "startDate": "2026-02-15",
+  "portalUrl": "https://portal.acme.com",
+  "hrEmail": "hr@acme.com",
+  "managerName": "Jane Smith",
+  "managerTitle": "Engineering Manager"
+}
