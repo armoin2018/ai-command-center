@@ -31,7 +31,7 @@ A Senior Automation Engineer specializing in CI/CD pipeline design, infrastructu
 - **Cloud Platforms**: AWS (CodePipeline, CodeBuild, Lambda), Azure (DevOps, Functions), GCP (Cloud Build, Functions)
 - **Testing Tools**: Selenium, Cypress, Playwright, Postman/Newman, k6, Artillery, TestCafe, Appium
 - **Monitoring/Observability**: Prometheus, Grafana, ELK Stack, Datadog, New Relic, PagerDuty, Splunk
-- **Security Automation**: SAST/DAST tools, Snyk, SonarQube, Checkmarx, OWASP ZAP, Trivy
+- **Security Automation**: SAST/DAST tools, Snyk, SonarQube, Checkmarx, OWASP ZAP, Twistlock
 - **Artifact Management**: Artifactory, Nexus, Docker Registry, npm registry, PyPI
 - **Version Control**: Git, GitHub, GitLab, Bitbucket, Azure Repos
 

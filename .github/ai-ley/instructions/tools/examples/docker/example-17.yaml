@@ -37,17 +37,34 @@ jobs:
             -v ${{ github.workspace }}/test-results:/app/test-results 
             ${{ env.IMAGE_NAME }}:test npm test
 
-      - name: Run security scan
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ env.IMAGE_NAME }}:test
-          format: 'sarif'
-          output: 'trivy-results.sarif'
+      - name: Download Twistlock scanner
+        run: |
+          curl -fsSL "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}/api/v1/util/twistcli" -o twistcli
+          chmod +x twistcli
 
-      - name: Upload security scan results
-        uses: github/codeql-action/upload-sarif@v2
+      - name: Run Twistlock image scan
+        run: |
+          ./twistcli images scan \
+            --address "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}" \
+            --user "${{ secrets.PRISMA_CLOUD_USER }}" \
+            --password "${{ secrets.PRISMA_CLOUD_PASSWORD }}" \
+            --details --ci \
+            --output-file twistlock-results.json \
+            "${{ env.IMAGE_NAME }}:test"
+
+      - name: Upload Twistlock scan results
+        uses: actions/upload-artifact@v4
         with:
-          sarif_file: 'trivy-results.sarif'
+          name: twistlock-scan-results
+          path: twistlock-results.json
+
+      - name: Run Snyk container scan
+        uses: snyk/actions/docker@v1
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: ${{ env.IMAGE_NAME }}:test
+          args: --severity-threshold=high
 
   build-and-push:
     needs: test

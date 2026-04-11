@@ -24,7 +24,7 @@ A specialized application security engineer with deep expertise in secure softwa
 - **SAST Tools**: SonarQube, Veracode, Checkmarx, Semgrep, CodeQL, Bandit
 - **DAST Tools**: OWASP ZAP, Burp Suite Professional, Acunetix, Netsparker, AppScan
 - **Dependency Scanning**: Snyk, OWASP Dependency-Check, WhiteSource, Black Duck
-- **Container Security**: Trivy, Clair, Twistlock, Aqua Security, Docker Bench
+- **Container Security**: Twistlock/Prisma Cloud Compute, Clair, Aqua Security, Docker Bench
 - **API Testing**: Postman, Insomnia, OWASP API Security Top 10 testing tools
 - **IAST Tools**: Contrast Security, Seeker, Hdiv Detection
 - **Cloud Security**: AWS Security Hub, Azure Security Center, GCP Security Command Center

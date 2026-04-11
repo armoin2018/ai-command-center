@@ -48,31 +48,30 @@ compose-lint:
 # Security Scanning Stage
 security-scan-images:
   stage: security-scan
-  image: aquasec/trivy:latest
+  image: alpine:3.20
   services:
     - docker:20.10.16-dind
   variables:
-    TRIVY_NO_PROGRESS: "true"
-    TRIVY_CACHE_DIR: ".trivycache/"
-  cache:
-    paths:
-      - .trivycache/
+    TWISTCLI_PATH: "/tmp/twistcli"
   script:
+    - apk add --no-cache curl ca-certificates yq
+    - curl -fsSL "$PRISMA_CLOUD_CONSOLE_URL/api/v1/util/twistcli" -o "$TWISTCLI_PATH"
+    - chmod +x "$TWISTCLI_PATH"
     - echo "🔒 Scanning Docker images for vulnerabilities..."
     - |
       for service in $(docker-compose config --services); do
         image=$(docker-compose config | yq eval ".services.$service.image" -)
         if [ "$image" != "null" ]; then
           echo "Scanning $service image: $image"
-          trivy image --exit-code 0 --severity HIGH,CRITICAL --format json --output "$service-scan.json" "$image"
-          trivy image --exit-code 1 --severity CRITICAL "$image"
+          "$TWISTCLI_PATH" images scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+            --user "$PRISMA_CLOUD_USER" \
+            --password "$PRISMA_CLOUD_PASSWORD" \
+            --details --ci --output-file "$service-scan.json" "$image"
         fi
       done
     - echo "✅ Security scanning completed"
   artifacts:
     when: always
-    reports:
-      container_scanning: "*-scan.json"
     paths:
       - "*-scan.json"
     expire_in: 1 week

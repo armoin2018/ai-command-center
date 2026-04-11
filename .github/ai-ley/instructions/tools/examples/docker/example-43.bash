@@ -33,12 +33,6 @@ database:
   max_idle_conns: 100
   max_open_conns: 900
 data_volume: /data
-trivy:
-  ignore_unfixed: false
-  skip_update: false
-  offline_scan: false
-  security_check: vuln
-  insecure: false
 jobservice:
   max_job_workers: 10
 notification:
@@ -54,8 +48,8 @@ log:
 _version: 2.9.0
 HARBOR_EOF
 
-# Install Harbor with security scanning
-./install.sh --with-trivy --with-chartmuseum
+# Install Harbor and use Twistlock for external registry scanning
+./install.sh --with-chartmuseum
 EOF
 
 chmod +x harbor-setup.sh

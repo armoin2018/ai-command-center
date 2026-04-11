@@ -70,18 +70,26 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@master
-      with:
-        scan-type: 'fs'
-        scan-ref: '.'
-        format: 'sarif'
-        output: 'trivy-results.sarif'
+    - name: Download Twistlock scanner
+      run: |
+        curl -fsSL "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}/api/v1/util/twistcli" -o twistcli
+        chmod +x twistcli
 
-    - name: Upload Trivy scan results
-      uses: github/codeql-action/upload-sarif@v3
+    - name: Run Twistlock repository scan
+      run: |
+        ./twistcli coderepo scan \
+          --address "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}" \
+          --user "${{ secrets.PRISMA_CLOUD_USER }}" \
+          --password "${{ secrets.PRISMA_CLOUD_PASSWORD }}" \
+          --details \
+          --output-file twistlock-results.json \
+          .
+
+    - name: Upload Twistlock scan results
+      uses: actions/upload-artifact@v4
       with:
-        sarif_file: 'trivy-results.sarif'
+        name: twistlock-scan-results
+        path: twistlock-results.json
 
   build:
     name: Build and Push Image

@@ -53,7 +53,7 @@ jobs:
           tflint
 
       - name: Checkov Security Scan
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@v12
         with:
           directory: terraform/
           framework: terraform
@@ -67,7 +67,7 @@ jobs:
           sarif_file: checkov-results.sarif
 
       - name: Terrascan Security Scan
-        uses: tenable/terrascan-action@main
+        uses: tenable/terrascan-action@v1
         with:
           iac_type: terraform
           iac_dir: terraform/

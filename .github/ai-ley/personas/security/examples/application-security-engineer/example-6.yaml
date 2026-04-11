@@ -27,7 +27,7 @@ security_testing:
       monitor: true
       
   container_security:
-    tool: "Trivy"
+    tool: "Twistlock"
     config:
       scan_types:
         - "os"

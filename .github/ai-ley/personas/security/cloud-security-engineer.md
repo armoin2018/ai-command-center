@@ -23,7 +23,7 @@ A specialized cloud security engineer with deep expertise in cloud-native securi
 ## 3. Tools & Capabilities
 - **Cloud Platforms**: AWS Security Hub, Azure Security Center, GCP Security Command Center
 - **Identity Management**: Okta, Azure AD, AWS IAM, Ping Identity, CyberArk
-- **Container Security**: Twistlock, Aqua Security, Falco, OPA Gatekeeper, Trivy
+- **Container Security**: Twistlock/Prisma Cloud Compute, Aqua Security, Falco, OPA Gatekeeper
 - **SIEM/SOAR**: Splunk, QRadar, Chronicle, Phantom, Demisto
 - **Security Automation**: Terraform, Ansible, CloudFormation, Pulumi, AWS Config
 - **Compliance Tools**: AWS Config, Azure Policy, GCP Security Command Center, Prisma Cloud

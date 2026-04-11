@@ -97,10 +97,9 @@ before_script:
     podman login --username $CI_REGISTRY_USER --password $CI_REGISTRY_PASSWORD $REGISTRY
 
     # Setup security scanning
-    if ! command -v trivy &> /dev/null; then
-      wget -qO- https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add -
-      echo deb https://aquasecurity.github.io/trivy-repo/deb focal main | tee -a /etc/apt/sources.list.d/trivy.list
-      apt-get update && apt-get install -y trivy
+    if ! command -v twistcli &> /dev/null; then
+      curl -fsSL "$PRISMA_CLOUD_CONSOLE_URL/api/v1/util/twistcli" -o /usr/local/bin/twistcli
+      chmod +x /usr/local/bin/twistcli
     fi
 
 # Security scanning stage
@@ -108,7 +107,11 @@ container-scan:
   stage: security-scan
   script:
         echo "Scanning base images for vulnerabilities..."
-      trivy image --exit-code 1 --severity HIGH,CRITICAL $BASE_IMAGE || {
+      twistcli images scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+        --user "$PRISMA_CLOUD_USER" \
+        --password "$PRISMA_CLOUD_PASSWORD" \
+        --details --ci --output-file gl-container-scanning-report.json \
+        $BASE_IMAGE || {
         echo "Base image contains high/critical vulnerabilities"
         exit 1
       }
@@ -181,8 +184,10 @@ test-containers:
         echo "Running comprehensive container tests..."
 
       # Security compliance tests
-      podman run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-        aquasec/trivy:latest image --format json --output security-report.json \
+      twistcli images scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+        --user "$PRISMA_CLOUD_USER" \
+        --password "$PRISMA_CLOUD_PASSWORD" \
+        --details --ci --output-file security-report.json \
         $REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA-amd64
 
       # Functional tests
@@ -238,14 +243,23 @@ security-validation:
         echo "Performing advanced security validation..."
 
       # Container image security scan
-      trivy image --format json --output trivy-report.json \
+      twistcli images scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+        --user "$PRISMA_CLOUD_USER" \
+        --password "$PRISMA_CLOUD_PASSWORD" \
+        --details --ci --output-file twistlock-report.json \
         $REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA-amd64
 
-      # Check for secrets in image
-      trivy fs --format json --output trivy-fs-report.json .
+      # Check the checked-out repository for code and IaC issues
+      twistcli coderepo scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+        --user "$PRISMA_CLOUD_USER" \
+        --password "$PRISMA_CLOUD_PASSWORD" \
+        --details --output-file twistlock-coderepo-report.json .
 
-      # Vulnerability database update
-      trivy image --download-db-only
+      # Optional Snyk pass for package and container vulnerability coverage
+      if command -v snyk &> /dev/null; then
+        snyk container test $REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA-amd64 --severity-threshold=high
+        snyk test --severity-threshold=high
+      fi
 
       # Policy validation with OPA
       if command -v opa &> /dev/null; then

@@ -111,7 +111,7 @@ check_image_scanning() {
     local message="Image scanning not automated"
 
     # Check if we have vulnerability scanning tools
-    if command -v trivy >/dev/null 2>&1 || command -v grype >/dev/null 2>&1; then
+    if command -v twistcli >/dev/null 2>&1 || command -v grype >/dev/null 2>&1; then
         result="PASS"
         message="Vulnerability scanning tools available"
     fi

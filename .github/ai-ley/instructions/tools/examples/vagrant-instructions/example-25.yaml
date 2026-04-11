@@ -97,19 +97,35 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 🔍 Run Trivy Vulnerability Scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          scan-type: 'fs'
-          scan-ref: 'vagrant-enterprise/'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
+      - name: 🔍 Download Twistlock Scanner
+        run: |
+          curl -fsSL "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}/api/v1/util/twistcli" -o twistcli
+          chmod +x twistcli
 
-      - name: 📤 Upload Trivy Results
-        uses: github/codeql-action/upload-sarif@v2
+      - name: 🔍 Run Twistlock Repository Scan
+        run: |
+          ./twistcli coderepo scan \
+            --address "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}" \
+            --user "${{ secrets.PRISMA_CLOUD_USER }}" \
+            --password "${{ secrets.PRISMA_CLOUD_PASSWORD }}" \
+            --details \
+            --output-file twistlock-results.json \
+            vagrant-enterprise/
+
+      - name: 📤 Upload Twistlock Results
+        uses: actions/upload-artifact@v4
         if: always()
         with:
-          sarif_file: 'trivy-results.sarif'
+          name: twistlock-results
+          path: twistlock-results.json
+
+      - name: 🔐 Run Snyk IaC scan
+        uses: snyk/actions/iac@v1
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: --severity-threshold=high vagrant-enterprise/
 
       - name: 🔐 SAST with Semgrep
         uses: returntocorp/semgrep-action@v1
@@ -134,7 +150,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 💾 Free Disk Space
-        uses: jlumbroso/free-disk-space@main
+        uses: jlumbroso/free-disk-space@v1
         with:
           tool-cache: false
           android: true

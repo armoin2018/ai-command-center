@@ -44,12 +44,16 @@ pipeline {
                     steps {
                         script {
                             sh '''
+                                curl -fsSL "$PRISMA_CLOUD_CONSOLE_URL/api/v1/util/twistcli" -o twistcli
+                                chmod +x twistcli
                                 docker-compose config --services | while read service; do
                                     image=$(docker-compose config | yq eval ".services.$service.image" -)
                                     if [ "$image" != "null" ]; then
                                         echo "Scanning $service: $image"
-                                        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-                                            aquasec/trivy:latest image --exit-code 0 --severity HIGH,CRITICAL "$image"
+                                        ./twistcli images scan --address "$PRISMA_CLOUD_CONSOLE_URL" \
+                                            --user "$PRISMA_CLOUD_USER" \
+                                            --password "$PRISMA_CLOUD_PASSWORD" \
+                                            --details --ci "$image"
                                     fi
                                 done
                             '''

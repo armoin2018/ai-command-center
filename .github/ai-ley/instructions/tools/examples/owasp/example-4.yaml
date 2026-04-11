@@ -96,15 +96,23 @@ services:
       - security-siem
 
   # Vulnerability Scanner
-  trivy-scanner:
-    image: aquasec/trivy:latest
-    container_name: trivy-vulnerability-scanner
+  twistlock-scanner:
+    image: alpine:3.20
+    container_name: twistlock-vulnerability-scanner
+    environment:
+      - PRISMA_CLOUD_CONSOLE_URL=${PRISMA_CLOUD_CONSOLE_URL}
+      - PRISMA_CLOUD_USER=${PRISMA_CLOUD_USER}
+      - PRISMA_CLOUD_PASSWORD=${PRISMA_CLOUD_PASSWORD}
     volumes:
       - ./src:/workspace:ro
-      - ./trivy-cache:/root/.cache/trivy
       - ./vulnerability-reports:/reports
-    command: |
-      filesystem --format json --output /reports/trivy-report.json /workspace
+    command: >
+      /bin/sh -c "apk add --no-cache curl ca-certificates &&
+      curl -fsSL ${PRISMA_CLOUD_CONSOLE_URL}/api/v1/util/twistcli -o /tmp/twistcli &&
+      chmod +x /tmp/twistcli &&
+      /tmp/twistcli coderepo scan --address ${PRISMA_CLOUD_CONSOLE_URL}
+      --user ${PRISMA_CLOUD_USER} --password ${PRISMA_CLOUD_PASSWORD}
+      --details --output-file /reports/twistlock-report.json /workspace"
     networks:
       - security_network
 

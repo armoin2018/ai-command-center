@@ -29,7 +29,7 @@ See [example-1](./examples/docker/example-1.mermaid)
 - **Container Engine**: Docker Engine 24.0+ with BuildKit and rootless support
 - **Build System**: Advanced BuildKit with multi-stage, multi-platform capabilities
 - **Registry**: Harbor enterprise registry with vulnerability scanning and RBAC
-- **Security Scanning**: Trivy, Clair, Snyk integration with policy enforcement
+- **Security Scanning**: Twistlock (Prisma Cloud Compute), Clair, Snyk integration with policy enforcement
 - **Image Signing**: Cosign/Sigstore with keyless signing and verification
 - **Runtime Security**: Falco, Sysdig with real-time threat detection
 - **Monitoring**: Prometheus ecosystem with comprehensive container metrics
@@ -205,7 +205,7 @@ See [example-18](./examples/docker/example-18.json)
 
 - **Run as non-root user** - Create and use dedicated application users
 - **Use official images** - Trust verified base images from official repositories
-- **Scan images for vulnerabilities** - Regular security scanning with tools like Trivy
+- **Scan images for vulnerabilities** - Regular security scanning with tools like Twistlock (Prisma Cloud Compute)
 - **Implement read-only filesystems** - Prevent runtime modifications
 - **Use secrets management** - Never embed secrets in images
 - **Apply security policies** - Use security contexts and capabilities
@@ -283,7 +283,7 @@ See [example-27](./examples/docker/example-27.dockerfile)
 ### Security Best Practices
 
 - **Use official base images** - Trust verified images from official repositories
-- **Scan images regularly** - Use tools like Trivy, Clair, or Snyk for vulnerability scanning
+- **Scan images regularly** - Use tools like Twistlock (Prisma Cloud Compute), Clair, or Snyk for vulnerability scanning
 - **Run as non-root** - Create dedicated users with minimal privileges
 
 *Content optimized for conciseness. See source history or external references for full details.*

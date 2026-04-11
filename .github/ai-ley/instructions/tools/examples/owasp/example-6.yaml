@@ -58,11 +58,14 @@ jobs:
       - name: Container security scan
         run: |
           # Scan container images for vulnerabilities
-          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-            -v $PWD:/tmp/app \
-            aquasec/trivy:latest \
-            image --format json \
-            --output /tmp/app/trivy-report.json \
+          curl -fsSL "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}/api/v1/util/twistcli" -o twistcli
+          chmod +x twistcli
+          ./twistcli images scan \
+            --address "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}" \
+            --user "${{ secrets.PRISMA_CLOUD_USER }}" \
+            --password "${{ secrets.PRISMA_CLOUD_PASSWORD }}" \
+            --details --ci \
+            --output-file twistlock-report.json \
             ${{ github.repository }}:latest
 
       - name: Dynamic Application Security Testing (DAST)
@@ -93,7 +96,7 @@ jobs:
           name: security-reports
           path: |
             dependency-check-report/
-            trivy-report.json
+            twistlock-report.json
             zap-report.*
             compliance-report.json
 

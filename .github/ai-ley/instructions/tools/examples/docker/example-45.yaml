@@ -60,20 +60,35 @@ jobs:
       - name: Load image for scanning
         run: docker load -i /tmp/image.tar
 
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ steps.meta.outputs.tags }}
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          severity: 'CRITICAL,HIGH'
-          exit-code: 1
+      - name: Download Twistlock scanner
+        run: |
+          curl -fsSL "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}/api/v1/util/twistcli" -o twistcli
+          chmod +x twistcli
 
-      - name: Upload Trivy scan results
-        uses: github/codeql-action/upload-sarif@v2
+      - name: Run Twistlock image scan
+        run: |
+          ./twistcli images scan \
+            --address "${{ secrets.PRISMA_CLOUD_CONSOLE_URL }}" \
+            --user "${{ secrets.PRISMA_CLOUD_USER }}" \
+            --password "${{ secrets.PRISMA_CLOUD_PASSWORD }}" \
+            --details --ci \
+            --output-file twistlock-results.json \
+            "${{ steps.meta.outputs.tags }}"
+
+      - name: Upload Twistlock scan results
+        uses: actions/upload-artifact@v4
         if: always()
         with:
-          sarif_file: 'trivy-results.sarif'
+          name: twistlock-scan-results
+          path: twistlock-results.json
+
+      - name: Run Snyk container scan
+        uses: snyk/actions/docker@v1
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: ${{ steps.meta.outputs.tags }}
+          args: --severity-threshold=high
 
       - name: Push image to staging
         if: github.ref == 'refs/heads/develop'
